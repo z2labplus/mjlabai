@@ -2,62 +2,81 @@
 
 ## Current stage
 
-Project setup / rule-load verification.
+P3 / baseline reproducibility audit.
+
+Current funnel focus:
+
+```text
+Mortal = F1 Reproduce blocked
+```
 
 ## AI role
 
-Rule follower + project documentation assistant.
+Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Verify that the AI has loaded project rules before any project execution begins.
+Verify whether the first local baseline candidate can be installed, built, run on a minimal sample and described well enough to later enter the unified evaluation interface.
+
+This stage supports the north-star target by creating a reproducible baseline and engineering reference before any supervised learning, RL, search or LuckyJ validation work begins.
 
 ## Inputs
 
-- AGENTS.md
-- docs/00_HANDOFF.md
-- docs/00_DOCS_INDEX.md
-- docs/10_next/10_NEXT.md
+- `AGENTS.md`
+- `docs/00_HANDOFF.md`
+- `docs/00_DOCS_INDEX.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md`
+- `docs/04_rl_selfplay/04G_ALGORITHM_RACING_FUNNEL.md`
+- `docs/05_evaluation/05G_RACING_FUNNEL_EVALUATION.md`
+- `docs/07_development_execution/07G_RACING_FUNNEL_EXECUTION_TASK.md`
 
 ## Do
 
-- Read the required project rules.
-- State the current stage and current next task.
-- State the north-star target.
-- Wait for the user to enter the goal-and-benchmark stage after rule-load passes.
+- Execute only the first unchecked task in `docs/10_next/10_NEXT.md`.
+- Check repository accessibility, license, dependencies, build path, model artifacts, minimal sample run, input/output schema and logging ability.
+- Record commit/version, local environment results and blockers.
+- Keep candidate promotion tied to documented evidence.
 
 ## Do not
 
-- Do not write code.
-- Do not create model/training scripts.
-- Do not design a full architecture yet.
-- Do not scrape data.
-- Do not create Tenhou automation or integration.
-- Do not modify files during the rule-load test.
+- Do not train models.
+- Do not tune hyperparameters.
+- Do not start self-play.
+- Do not connect to real Tenhou.
+- Do not create platform automation, scraping, evasion or account tooling.
+- Do not claim strength improvement from reproducibility checks.
+- Do not promote Mortal to F2 until F1 blockers are resolved and a minimal inference sample runs or a clearly reproducible local plan is validated.
 
 ## Task boundary
 
-Only confirm rules and readiness until the rule-load test passes.
+F1 is an audit stage only. It may inspect external source repositories and local dependencies, but it must not create project source code or training scripts.
 
 ## Output files
 
-None during rule-load test. After the user enters the next stage, update goal-and-benchmark files according to `10_NEXT.md`.
-
-## Acceptance criteria
-
-- AI can summarize the north-star target.
-- AI can identify the current stage.
-- AI can identify what is forbidden.
-- AI can identify the first task in `docs/10_next/10_NEXT.md`.
-
-## Document sync requirements
-
-After any real task completes, update:
+After a real P3/F1 task, update:
 
 - `docs/10_next/10_NEXT.md`
 - `docs/09_governance/09_CHANGELOG.md`
 - `docs/00_HANDOFF.md`
 
+If the task changes candidate status or records audit evidence, update:
+
+- `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+
+If a blocker or project risk is discovered, update:
+
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+## Acceptance criteria
+
+- The current stage and candidate funnel stage are explicit.
+- License and dependency notes are recorded.
+- Minimal run result is recorded as pass/fail/blocked.
+- Input/output and logging viability are noted.
+- The next lowest-cost action is recorded in `docs/10_next/10_NEXT.md`.
+
 ## Only next step
 
-Run rule-load verification, then create the goal-and-benchmark stage contract and first minimal benchmark-definition task.
+Decide Mortal F1 continuation path: provide a lawful trained model artifact with version, usage constraints and checksum, or pause Mortal as runnable baseline and select the next F1 baseline.

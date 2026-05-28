@@ -1,5 +1,45 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v0.8
+
+- Added `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md` as the current technical execution charter.
+- Shifted the project framing from internal-paper-first to technical-plan-first; papers are future outcome summaries.
+- Clarified Web ChatGPT Pro vs local Codex App responsibilities.
+- Reaffirmed Git + docs as the only source of truth.
+- Recorded the current main route: Suphx-style SL+RL, Tenhou stable dan / pt EV reward, ACH-inspired policy improvement, risk model/search and baseline racing funnel.
+- Clarified that LuckyJ is the target benchmark, not a direct full-reproduction object.
+- Added `docs/09_governance/09_DECISION_RECORD.md` and recorded DR-0001.
+- Updated docs index, handoff, next, evidence and risk notes.
+
+## 2026-05-28 — v0.7
+
+- Attempted to resolve Mortal F1 local reproducibility blockers without training, tuning, self-play or Tenhou integration.
+- Retrieved and checksummed Mortal source tarball for commit `0cff2b52982be5b1163aa9a62fb01f03ce91e0d2` through explicit host resolution.
+- Confirmed normal system DNS and normal `git clone` are still unreliable.
+- Confirmed Python 3.12 is available, but PyTorch is missing; Rust/Cargo and Docker remain unavailable.
+- Recorded that Homebrew Rust metadata lookup is blocked by `formulae.brew.sh` DNS failure.
+- Retrieved and checksummed the README-linked model-release gist metadata; recorded that official trained model parameters are not currently planned for public release.
+- Left Mortal at F1 Reproduce blocked and updated `10_NEXT.md` to require a lawful trained model artifact decision before further Mortal runnable-baseline work.
+- Updated development backlog so the blocker-resolution task is blocked on model artifact availability and the continuation decision is the planned next task.
+
+## 2026-05-28 — v0.6
+
+- Completed Mortal F1 initial reproducibility audit without training, tuning, self-play or Tenhou integration.
+- Recorded that Mortal source/docs are inspectable through the GitHub connector at commit `0cff2b52982be5b1163aa9a62fb01f03ce91e0d2`.
+- Recorded Mortal code license, dependency/build path, Docker/mjai inference path, input/output notes and logging metadata.
+- Recorded local blockers: GitHub DNS failure, missing Rust/Cargo, missing Docker/conda/torch and missing model artifact.
+- Kept Mortal at F1 Reproduce blocked and updated `10_NEXT.md` to resolve blockers before any F2 adapter work.
+- Updated development backlog statuses and added the Mortal F1 blocker-resolution task.
+- Updated the stage task contract from rule-load verification to P3 baseline reproducibility audit.
+
+## 2026-05-28 — v0.5
+
+- Added the P0-P12 project roadmap to `07A_MILESTONES.md`.
+- Clarified that P0/P1/P2 are basically established and the project is preparing to enter P3 baseline reproducibility audit.
+- Updated handoff and next task so Mortal F1 reproducibility audit is the current execution step.
+- Replaced the stale `templates/prompts/09_ALGORITHM_RACING_FUNNEL.md` reference with `docs/07_development_execution/07G_RACING_FUNNEL_EXECUTION_TASK.md`.
+- Recorded the stale template-path issue as a mitigated documentation risk.
+
 ## 2026-05-28 — v0.4
 
 - Added racing-funnel mechanism for algorithm selection.

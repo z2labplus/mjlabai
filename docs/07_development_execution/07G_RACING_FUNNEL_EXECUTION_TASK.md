@@ -51,7 +51,8 @@
 当前建议下一步：
 
 ```text
-执行 Mortal F1 reproducibility audit：
-只验证安装、运行最小样例、输入输出接口、日志能力和 license。
+决定 Mortal F1 continuation path：
+如果能提供合法 trained model artifact，则记录来源/version/usage/checksum 后继续最小 mjai 推理样例；
+如果不能提供，则暂停 Mortal runnable baseline，并选择下一个 baseline 做 F1。
 不训练，不调参，不接入真实平台。
 ```

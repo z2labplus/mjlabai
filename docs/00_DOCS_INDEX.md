@@ -13,6 +13,7 @@ This file explains where each project document lives.
 - `08_experiment_analysis`: experiment log, model cards, algorithm candidate cards, failure cases and weekly review.
 - `09_governance`: evidence, changelog, risk, compliance, glossary and stage contract.
 - `10_next`: the only next task.
+- `12_technical_plan`: current technical execution plan; technical plan is the active execution charter, while papers are future summaries.
 
 ## Critical governance files
 
@@ -23,7 +24,14 @@ docs/09_governance/09_EVIDENCE_LOG.md
 docs/09_governance/09_RISK_REGISTER.md
 docs/09_governance/09_PLATFORM_COMPLIANCE.md
 docs/09_governance/09_UPDATE_PROTOCOL.md
+docs/09_governance/09_DECISION_RECORD.md
 docs/10_next/10_NEXT.md
+```
+
+## Technical plan files
+
+```text
+docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 ```
 
 ## Algorithm discovery and racing-funnel files
