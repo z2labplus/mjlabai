@@ -1,5 +1,14 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v0.9
+
+- Completed the Mortal F1 continuation decision.
+- Paused Mortal as a runnable baseline because no lawful, verifiable and usable trained model artifact is currently available.
+- Recorded that unknown `mortal.pth`, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files must not be used.
+- Kept Mortal as a source-code, mjai-interface, methodology and engineering reference.
+- Moved the next baseline F1 path to Akochan reproducibility audit without starting the Akochan audit in this task.
+- Updated next-task, handoff, decision, risk, stage-contract, technical-plan, candidate-table, development-backlog and candidate-role docs.
+
 ## 2026-05-29 — v0.8
 
 - Added `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md` as the current technical execution charter.

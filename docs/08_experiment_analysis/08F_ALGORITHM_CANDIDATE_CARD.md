@@ -72,7 +72,7 @@ Tenhou 目标一致性 /25：
 |---|---|---|---|
 | LuckyJ | Target benchmark | Target line / F7 validation reference | Continue evidence verification; do not implement. |
 | Suphx | Methodology blueprint | ReferenceOnly + module decomposition | Create experiment cards for SL, self-play RL, GRP, oracle guiding, runtime adaptation. |
-| Mortal | First local baseline candidate | F1 -> F2 | Reproducibility audit, then adapter/legal-action test. |
+| Mortal | Source-code, mjai-interface, methodology and engineering reference | F1 paused as runnable baseline / ReferenceOnly | Re-open F1 only if a lawful, verifiable and usable trained model artifact is provided with version/tag, usage constraints and checksum. |
 | Archer | High-potential baseline candidate | F1 | Verify claims, weights/logs, build path and protocol. |
-| Akochan | Secondary baseline / reviewer | F1 | Build/self-match feasibility check. |
+| Akochan | Next baseline F1 candidate / reviewer | F1 next | Repository, license, dependencies/build path, artifact requirements, minimal documented run viability and I/O/logging fit. |
 | Kanachan | Data/model architecture reference | F0/F1 | Review schema/model ideas for Tenhou transfer. |

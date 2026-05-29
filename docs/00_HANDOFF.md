@@ -29,7 +29,8 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 The project is in P3 baseline reproducibility audit.
-Mortal F1 is currently blocked by local reproducibility prerequisites.
+Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
+Akochan F1 reproducibility audit is the next baseline path.
 ```
 
 ## Current methodology
@@ -77,9 +78,9 @@ Roles:
 
 - LuckyJ: final benchmark target, not implementation seed.
 - Suphx: main methodology blueprint, split into reproducible modules.
-- Mortal: first local reproducible baseline candidate.
+- Mortal: paused as a runnable baseline; retained as source-code, mjai-interface, methodology and engineering reference.
 - Archer: high-potential Tenhou baseline candidate requiring verification.
-- Akochan: secondary baseline and reviewer.
+- Akochan: next baseline F1 reproducibility candidate and reviewer.
 - Kanachan: data/model architecture reference; not direct Tenhou baseline until adapted.
 
 Main technical route:
@@ -111,12 +112,15 @@ Latest Mortal F1 audit summary:
 - Normal `git clone` still failed; local `rustc`, `cargo`, `docker`, `conda` and PyTorch were not available.
 - Official gist evidence says there is currently no plan to release trained model parameters.
 - Minimal inference sample was not run; Mortal must remain at F1 Reproduce blocked.
+- Current project decision: because there is no lawful, verifiable and usable Mortal trained model artifact, Mortal is paused as a runnable baseline.
+- Do not use unknown `mortal.pth`, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
+- Mortal remains useful as source-code, mjai-interface, methodology and engineering reference.
 
 Current expected direction:
 
 ```text
-Decide whether a lawful Mortal trained model artifact can be provided.
-If not, pause Mortal as a runnable baseline and move the next baseline F1 audit to Akochan.
+Run Akochan F1 reproducibility audit as the next baseline path.
+Do not start F2 adapter work for Mortal unless a lawful, verifiable and usable Mortal trained model artifact is provided and F1 is re-opened.
 ```
 
 ## Do not forget

@@ -7,7 +7,8 @@ P3 / baseline reproducibility audit.
 Current funnel focus:
 
 ```text
-Mortal = F1 Reproduce blocked
+Mortal = F1 paused as runnable baseline / ReferenceOnly
+Akochan = next F1 reproducibility audit
 ```
 
 ## AI role
@@ -46,7 +47,8 @@ This stage supports the north-star target by creating a reproducible baseline an
 - Do not connect to real Tenhou.
 - Do not create platform automation, scraping, evasion or account tooling.
 - Do not claim strength improvement from reproducibility checks.
-- Do not promote Mortal to F2 until F1 blockers are resolved and a minimal inference sample runs or a clearly reproducible local plan is validated.
+- Do not use unknown `mortal.pth`, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
+- Do not promote Mortal to F2 unless a lawful, verifiable and usable trained model artifact is provided and Mortal F1 is re-opened with source, version/tag, usage constraints and checksum.
 
 ## Task boundary
 
@@ -79,4 +81,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Decide Mortal F1 continuation path: provide a lawful trained model artifact with version, usage constraints and checksum, or pause Mortal as runnable baseline and select the next F1 baseline.
+Run Akochan F1 reproducibility audit as the next baseline path.

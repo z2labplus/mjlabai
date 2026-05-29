@@ -26,8 +26,8 @@ Use this table for every candidate algorithm or framework.
 |---|---|---|---|---|---|---|---|
 | LuckyJ | Closed target system | Tencent Mahjong AI; likely uses advanced imperfect-information RL ideas including ACH-related work. | Reported Tenhou 10 dan and stable rank 10.68. | High | Low | Use as target benchmark; collect all public metrics and table of required surpass conditions. | Target to beat, not implementation seed. |
 | Suphx | Research system | SL foundation + self-play RL + global reward prediction + oracle guiding + optional run-time policy adaptation. | Reported Tenhou 10 dan and stable rank 8.74; low fourth-place and deal-in rates. | High | Medium | Reproduce the training/eval decomposition: SL policy, Tenhou stable-dan estimator, GRP, oracle-guided ablation. | Main research route. |
-| Mortal | Open-source baseline | Fast Rust riichi AI powered by deep RL; mjai-compatible ecosystem. | Public open-source project; usable for review/play tools. | Medium-High | High | Build locally, run fixed log review, run self-play/benchmark adapter. | First local baseline candidate. |
-| Akochan | Open-source baseline | C++ Japanese Mahjong AI with self-match workflow and mjai-compatible components. | Public open-source repo; supports self-match against versions. | Medium | Medium | Build locally, run self-match, compare selected positions with Mortal. | Secondary baseline. |
+| Mortal | Open-source baseline / reference | Fast Rust riichi AI powered by deep RL; mjai-compatible ecosystem. | Public open-source project; usable for review/play tools, but no lawful, verifiable and usable trained model artifact is currently available. | Medium-High | Low for runnable baseline; Medium as source reference | Keep as source-code, mjai-interface, methodology and engineering reference. Re-open F1 only if a lawful artifact with version/tag, usage constraints and checksum is provided. | Paused as runnable baseline; reference only. |
+| Akochan | Open-source baseline | C++ Japanese Mahjong AI with self-match workflow and mjai-compatible components. | Public open-source repo; supports self-match against versions. | Medium | Medium | Run F1 reproducibility audit: repository access, license, dependencies/build path, artifact requirements, minimal documented run viability and I/O/logging fit. | Next baseline F1 candidate. |
 | Kanachan | Open-source framework | Mahjong Soul-oriented data/annotation/training framework; emphasizes large-scale data and expressive models. | Public repo targets beating NAGA/Suphx; designed around Mahjong Soul records. | Medium | Medium | Inspect schema, convert concepts to Tenhou-compatible feature/training design. | Research reference, not direct Tenhou baseline yet. |
 | Archer | Open-source/development framework | Top-tier Mahjong AI framework with Tenhou/Majsoul tooling focus. | Repo claims reaching Tenhou 10 dan on Phoenix. | High | Medium | Build or inspect release; check whether evaluation logs/weights/protocol are reproducible. | Baseline candidate after verification. |
 
@@ -53,12 +53,13 @@ score = 0.25*TenhouFit + 0.20*StrengthEvidence + 0.20*Reproducibility
 
 ## Current priority order
 
-1. Build the evaluation harness first.
-2. Use Mortal as the first local baseline if it builds cleanly.
+1. Complete P3/F1 reproducibility audits before adapter, training or evaluation-harness implementation.
+2. Run Akochan F1 reproducibility audit as the next baseline path.
 3. Use Suphx as the main algorithmic blueprint.
 4. Use LuckyJ as the target threshold.
 5. Verify Archer claim before depending on it.
-6. Use Akochan and Kanachan as comparative references.
+6. Keep Mortal as source-code, mjai-interface, methodology and engineering reference unless a lawful trained model artifact re-opens F1.
+7. Use Kanachan as a comparative data/model reference.
 
 ## Do not do
 
@@ -75,9 +76,9 @@ score = 0.25*TenhouFit + 0.20*StrengthEvidence + 0.20*Reproducibility
 |---|---|---|---|
 | LuckyJ | Target line | 固定 10.68 稳定段位作为验收线；继续补证据。 | 它是要超过的目标，不是实现起点。 |
 | Suphx | Methodology blueprint / ReferenceOnly + module decomposition | 把 GRP、oracle guiding、runtime adaptation 拆成可复现实验卡。 | 公开方法价值高，但不能直接作为本地 baseline。 |
-| Mortal | F1 Reproduce blocked | 如果能提供合法、可记录来源/version/checksum 的 trained model artifact，则继续补 Rust/Cargo/PyTorch 并重跑官方 mjai 样例；否则暂停 Mortal runnable baseline，转向 Akochan F1。 | 源码 tarball 已获取并校验，但官方 gist 表明没有公开模型参数计划；不得推进 F2。 |
+| Mortal | F1 paused as runnable baseline / ReferenceOnly | 不使用来路不明的 `mortal.pth`、`*.pth`、`*.pt`、`checkpoint` 或 `snapshot`。只有在提供合法、可校验、可使用且记录 version/tag、usage constraints 和 checksum 的 trained model artifact 后，才可重新打开 F1。 | 源码 tarball 已获取并校验，但没有可用 trained model artifact；Mortal 仅保留为源码、mjai 接口、方法论和工程参考，不得推进 F2。 |
 | Archer | Watch -> Reproduce | 验证 Tenhou 10 dan claim、build、weights、日志和协议。 | 潜在价值高，但证据和复现性需要先核验。 |
-| Akochan | Watch -> Reproduce | 本地构建与 self-match 检查，作为第二 baseline。 | 可作为对照和局面评审工具。 |
+| Akochan | F1 Reproduce next | 执行 F1 reproducibility audit：仓库可访问性、license、依赖/构建路径、模型或 artifact 要求、最小官方样例或文档化运行可行性、I/O schema 和日志适配性。 | Mortal runnable baseline 已暂停；Akochan 是下一条最低成本 baseline F1 路径。 |
 | Kanachan | Watch / ReferenceOnly | 研究 schema、数据流程、模型结构能否迁移到 Tenhou。 | 更偏 Mahjong Soul 与大数据/模型工程参考。 |
 
 ## v0.4 Resource rule
@@ -140,4 +141,31 @@ Mortal F1 is blocked.
 Do not promote Mortal to F2.
 The next decision is whether a lawful trained Mortal model artifact can be provided.
 If not, Mortal should be paused as a runnable baseline and the next F1 audit should move to another baseline such as Akochan.
+```
+
+## 2026-05-29 Mortal F1 continuation decision
+
+Decision:
+
+```text
+No lawful, verifiable and usable Mortal trained model artifact is currently available.
+Mortal is paused as a runnable baseline.
+Mortal remains a source-code, mjai-interface, methodology and engineering reference.
+The next baseline F1 path moves to Akochan reproducibility audit.
+```
+
+Artifact rule:
+
+```text
+Do not use unknown mortal.pth, *.pth, *.pt, checkpoint or snapshot files.
+Any future Mortal artifact must record source, version/tag, usage constraints and checksum before F1 can be re-opened.
+```
+
+Consequence:
+
+```text
+Do not promote Mortal to F2.
+Do not start an adapter for Mortal.
+Do not claim Mortal runnable strength in this project.
+Run Akochan F1 only as the next separate task.
 ```

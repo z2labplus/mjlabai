@@ -29,7 +29,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 
 ```text
 P3 / baseline reproducibility audit.
-Mortal = F1 Reproduce blocked.
+Mortal = F1 paused as runnable baseline / ReferenceOnly.
+Akochan = next F1 reproducibility audit.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -154,15 +155,14 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 - 不声称模型超过任何 baseline。
 - 不把 LuckyJ 当作可直接复现对象。
 - 不跳过 baseline racing funnel。
+- 不使用来路不明的 `mortal.pth`、`*.pth`、`*.pt`、`checkpoint` 或 `snapshot` 文件。
 
-## Current Next Decision
+## Current Next Task
 
-当前 `10_NEXT` 的下一步仍是 Mortal F1 continuation decision：
+当前 `10_NEXT` 的下一步是 Akochan F1 reproducibility audit：
 
 ```text
-Either provide a lawful, documented Mortal trained model artifact,
-or pause Mortal as a runnable baseline and move the next baseline F1 audit to Akochan.
+Run Akochan F1 reproducibility audit as the next baseline path.
 ```
 
-在该决策完成前，不进入 Mortal F2 adapter。
-
+Mortal runnable baseline 已暂停，因为当前没有合法、可校验、可使用的 trained model artifact。Mortal 仍保留为源码、mjai 接口、方法论和工程参考。除非未来先补齐 artifact 来源、version/tag、usage constraints 和 checksum 并重新打开 F1，否则不进入 Mortal F2 adapter。

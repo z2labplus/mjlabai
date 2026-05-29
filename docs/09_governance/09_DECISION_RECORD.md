@@ -60,3 +60,50 @@ Status:
 Accepted
 ```
 
+## 2026-05-29 — DR-0002 — Pause Mortal Runnable Baseline and Move F1 Path to Akochan
+
+Decision:
+
+```text
+Pause Mortal as a runnable baseline because the project currently has no lawful, verifiable and usable Mortal trained model artifact.
+Keep Mortal as source-code, mjai-interface, methodology and engineering reference.
+Move the next baseline F1 reproducibility audit path to Akochan.
+```
+
+Context:
+
+- Mortal source and selected docs were inspected during F1, but the official mjai inference path requires a trained model artifact.
+- No model version/tag, usage constraints or checksum can currently be recorded for a usable Mortal trained model artifact.
+- Official evidence already recorded in the project says trained Mortal parameters are not currently planned for public release.
+- The project must not use unknown `mortal.pth`, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
+
+Rationale:
+
+- F1 requires reproducibility evidence, including artifact provenance, usage constraints and checksum before local inference results can be trusted.
+- Using unknown model files would create reproducibility, license, safety and governance risk.
+- Keeping Mortal as a reference preserves useful mjai/interface and engineering lessons without pretending it is a runnable baseline.
+- Akochan is the next lowest-cost baseline F1 path already listed in the racing funnel.
+
+Consequences:
+
+- Mortal is not promoted to F2.
+- Mortal runnable-baseline work stays paused unless a lawful, verifiable and usable trained model artifact is provided later.
+- Any future Mortal artifact must be verified in F1 before adapter work or evaluation work begins.
+- `docs/10_next/10_NEXT.md` now points to Akochan F1 reproducibility audit as the single next task.
+- This decision does not start the Akochan audit and does not authorize training, model downloads, real Tenhou access or platform automation.
+
+Linked docs:
+
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md`
+
+Status:
+
+```text
+Accepted
+```
