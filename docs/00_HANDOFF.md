@@ -50,9 +50,9 @@ The P5 legal-action / invalid-action metric specification is defined in `docs/05
 The P5 action canonicalization schema for legal-action metric fixtures is defined in `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`.
 The synthetic legal-action metric fixture schema smoke test is implemented in `tests/eval/test_legal_action_fixture_schema_smoke.py` against `tests/fixtures/eval/legal_action_metric_smoke.json`; it validates fixture shape only and does not calculate legal/invalid rates or implement an evaluator.
 The P5 legal-action metric synthetic evaluator boundary is defined in `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`: future implementation may use only project-authored synthetic/local fixtures, current `dahai` scope and strict matching; it must preserve explicit count/rate denominator rules and all-false safety flags, and must not use real Tenhou, real haifu, external logs, platform data, model code, third-party binaries, training, self-play or league paths.
-The P5 synthetic legal-action metric evaluator is implemented for the project-authored fixture only in `src/mjlabai/eval/legal_action_metric.py`, with tests in `tests/eval/test_legal_action_metric.py`. It computes the current synthetic fixture as `legal=1`, `invalid=1`, `missing=1`, `parse_failure=0`, `skipped=1`, `evaluated=3`, and rates `1/3`, `1/3`, `1/3`, `0.0`. It also maps the result into `OfflineEvaluationResultEnvelope` with all safety flags false and synthetic-only warnings. This is legality diagnostic infrastructure only, not a broad evaluator, canonicalizer, legal-action checker, CLI, league, runner, model-output path, Tenhou integration or strength evidence.
+The P5 synthetic legal-action metric evaluator is implemented for the project-authored fixture only in `src/mjlabai/eval/legal_action_metric.py`, with tests in `tests/eval/test_legal_action_metric.py`. The fixture now includes an explicit synthetic `parse_failure` record that keeps `action_type = "dahai"` and uses `tsumogiri: null` only to exercise the current strict parse-failure branch. It computes the current synthetic fixture as `legal=1`, `invalid=1`, `missing=1`, `parse_failure=1`, `skipped=1`, `evaluated=4`, and rates `1/4`, `1/4`, `1/4`, `1/4`. It also maps the result into `OfflineEvaluationResultEnvelope` with all safety flags false and synthetic-only warnings. This is legality diagnostic infrastructure only, not a broad evaluator, canonicalizer, legal-action checker, CLI, league, runner, model-output path, Tenhou integration or strength evidence.
 P5 overall is not complete.
-The next project task is to add a P5 synthetic parse-failure legal-action fixture case and evaluator smoke coverage.
+The next project task is to review P5 legal-action synthetic evaluator coverage and define the next P5-only evaluation task.
 ```
 
 ## Current methodology
@@ -141,8 +141,8 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Add P5 synthetic parse-failure legal-action fixture case and evaluator smoke coverage.
-Do not expand beyond synthetic fixture smoke coverage into training, self-play, league evaluation, Tenhou integration, artifact upload, broad adapter work or P6-P12.
+Review P5 legal-action synthetic evaluator coverage and define the next P5-only evaluation task.
+Do not expand beyond P5 documentation review into training, self-play, league evaluation, Tenhou integration, artifact upload, broad adapter work or P6-P12.
 ```
 
 Latest Akochan F1 audit summary:

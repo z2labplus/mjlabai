@@ -35,18 +35,18 @@ class LegalActionMetricTests(unittest.TestCase):
         result = evaluate_synthetic_legal_action_fixture(_load_fixture())
 
         self.assertIsInstance(result, LegalActionMetricResult)
-        self.assertEqual(result.total_record_count, 4)
+        self.assertEqual(result.total_record_count, 5)
         self.assertEqual(result.legal_action_count, 1)
         self.assertEqual(result.invalid_action_count, 1)
         self.assertEqual(result.missing_action_count, 1)
-        self.assertEqual(result.parse_failure_count, 0)
+        self.assertEqual(result.parse_failure_count, 1)
         self.assertEqual(result.skipped_count, 1)
-        self.assertEqual(result.evaluated_decision_count, 3)
+        self.assertEqual(result.evaluated_decision_count, 4)
         self.assertTrue(result.invariant_holds)
-        self.assertAlmostEqual(result.legal_action_rate, 1 / 3)
-        self.assertAlmostEqual(result.invalid_action_rate, 1 / 3)
-        self.assertAlmostEqual(result.missing_action_rate, 1 / 3)
-        self.assertEqual(result.parse_failure_rate, 0.0)
+        self.assertAlmostEqual(result.legal_action_rate, 1 / 4)
+        self.assertAlmostEqual(result.invalid_action_rate, 1 / 4)
+        self.assertAlmostEqual(result.missing_action_rate, 1 / 4)
+        self.assertAlmostEqual(result.parse_failure_rate, 1 / 4)
 
     def test_skipped_no_legal_actions_is_not_in_denominator(self) -> None:
         fixture = _minimal_fixture(
@@ -154,19 +154,19 @@ class LegalActionMetricTests(unittest.TestCase):
             "synthetic-legal-action-fixture-evaluator",
         )
         self.assertEqual(envelope.dataset_or_fixture_id, FIXTURE_ID)
-        self.assertEqual(envelope.sample_size, 3)
+        self.assertEqual(envelope.sample_size, 4)
         self.assertEqual(envelope.safety.high_risk_flag_names(), ())
 
         metric_values = {metric.metric_name: metric.value for metric in envelope.metrics}
         self.assertEqual(metric_values["legal_action_count"], 1)
         self.assertEqual(metric_values["invalid_action_count"], 1)
         self.assertEqual(metric_values["missing_action_count"], 1)
-        self.assertEqual(metric_values["parse_failure_count"], 0)
+        self.assertEqual(metric_values["parse_failure_count"], 1)
         self.assertEqual(metric_values["skipped_count"], 1)
-        self.assertAlmostEqual(metric_values["legal_action_rate"], 1 / 3)
-        self.assertAlmostEqual(metric_values["invalid_action_rate"], 1 / 3)
-        self.assertAlmostEqual(metric_values["missing_action_rate"], 1 / 3)
-        self.assertEqual(metric_values["parse_failure_rate"], 0.0)
+        self.assertAlmostEqual(metric_values["legal_action_rate"], 1 / 4)
+        self.assertAlmostEqual(metric_values["invalid_action_rate"], 1 / 4)
+        self.assertAlmostEqual(metric_values["missing_action_rate"], 1 / 4)
+        self.assertAlmostEqual(metric_values["parse_failure_rate"], 1 / 4)
 
         warning_text = " ".join(envelope.warnings)
         for expected_word in REQUIRED_WARNING_WORDS:

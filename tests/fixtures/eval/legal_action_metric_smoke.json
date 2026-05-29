@@ -104,6 +104,43 @@
     },
     {
       "decision_id": "synthetic-legal-action-0004",
+      "actor": 0,
+      "ruleset": "tenhou_four_player",
+      "room": "phoenix",
+      "matching_mode": "strict",
+      "expected_future_outcome": "parse_failure",
+      "proposed_action": {
+        "schema_version": "canonical_action_v0.1",
+        "actor": 0,
+        "action_type": "dahai",
+        "tile": "5m",
+        "tsumogiri": null,
+        "raw_action": {
+          "type": "dahai",
+          "actor": 0,
+          "pai": "5m",
+          "tsumogiri": null
+        }
+      },
+      "legal_actions": [
+        {
+          "schema_version": "canonical_action_v0.1",
+          "actor": 0,
+          "action_type": "dahai",
+          "tile": "5m",
+          "tsumogiri": true,
+          "raw_action": {
+            "type": "dahai",
+            "actor": 0,
+            "pai": "5m",
+            "tsumogiri": true
+          }
+        }
+      ],
+      "source_note": "Synthetic fixture only; not Tenhou data; not a real haifu; not model strength evidence."
+    },
+    {
+      "decision_id": "synthetic-legal-action-0005",
       "actor": 3,
       "ruleset": "tenhou_four_player",
       "room": "phoenix",

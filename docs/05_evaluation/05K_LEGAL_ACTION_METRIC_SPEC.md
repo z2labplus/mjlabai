@@ -220,6 +220,7 @@ The fixture is synthetic-only and contains future outcome labels for:
 - `legal`.
 - `invalid`.
 - `missing_action`.
+- `parse_failure`.
 - `skipped_no_legal_actions`.
 
 These labels are not evaluator output.
@@ -262,20 +263,22 @@ Scope:
 - `raw_action`, `metadata` and `action_id` are ignored for equality.
 - `expected_future_outcome` is not used to compute results.
 
+The current fixture includes an explicit synthetic `parse_failure` record. That record keeps `action_type = "dahai"` and uses `tsumogiri: null` only to exercise the current strict evaluator parse-failure branch. It does not add support for unknown/null `tsumogiri`, relaxed matching or broader action types.
+
 The current fixture produces:
 
 ```text
-total_record_count = 4
+total_record_count = 5
 legal_action_count = 1
 invalid_action_count = 1
 missing_action_count = 1
-parse_failure_count = 0
+parse_failure_count = 1
 skipped_count = 1
-evaluated_decision_count = 3
-legal_action_rate = 1 / 3
-invalid_action_rate = 1 / 3
-missing_action_rate = 1 / 3
-parse_failure_rate = 0.0
+evaluated_decision_count = 4
+legal_action_rate = 1 / 4
+invalid_action_rate = 1 / 4
+missing_action_rate = 1 / 4
+parse_failure_rate = 1 / 4
 ```
 
 The evaluator is still not:

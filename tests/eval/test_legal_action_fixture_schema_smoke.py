@@ -9,6 +9,7 @@ EXPECTED_OUTCOMES = {
     "legal",
     "invalid",
     "missing_action",
+    "parse_failure",
     "skipped_no_legal_actions",
 }
 
@@ -75,6 +76,12 @@ class LegalActionFixtureSchemaSmokeTest(unittest.TestCase):
         if record["expected_future_outcome"] == "missing_action":
             self.assertIsNone(proposed_action)
             self.assertGreater(len(legal_actions), 0)
+        if record["expected_future_outcome"] == "parse_failure":
+            self.assertIsNotNone(proposed_action)
+            self.assertGreater(len(legal_actions), 0)
+            self.assertEqual(proposed_action["schema_version"], "canonical_action_v0.1")
+            self.assertEqual(proposed_action["action_type"], "dahai")
+            self.assertIsNone(proposed_action["tsumogiri"])
         if record["expected_future_outcome"] == "skipped_no_legal_actions":
             self.assertEqual(legal_actions, [])
 

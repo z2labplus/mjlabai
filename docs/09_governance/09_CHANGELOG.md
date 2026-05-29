@@ -1,5 +1,46 @@
 # 09_CHANGELOG
 
+## 2026-05-30 — v2.19
+
+- Added explicit P5 synthetic parse-failure coverage to the project-authored legal-action metric fixture.
+- Updated `tests/fixtures/eval/legal_action_metric_smoke.json` with a fifth synthetic record:
+  - `expected_future_outcome = "parse_failure"`.
+  - `proposed_action` remains in the current `dahai` fixture shape.
+  - `proposed_action.tsumogiri = null` intentionally exercises the strict evaluator parse-failure branch.
+  - `legal_actions` remains a non-empty valid strict `dahai` action list.
+- Updated `tests/eval/test_legal_action_fixture_schema_smoke.py` so schema smoke coverage includes:
+  - `legal`.
+  - `invalid`.
+  - `missing_action`.
+  - `parse_failure`.
+  - `skipped_no_legal_actions`.
+- Updated `tests/eval/test_legal_action_metric.py` expected project-fixture counts and envelope metrics:
+  - `total_record_count = 5`.
+  - `legal_action_count = 1`.
+  - `invalid_action_count = 1`.
+  - `missing_action_count = 1`.
+  - `parse_failure_count = 1`.
+  - `skipped_count = 1`.
+  - `evaluated_decision_count = 4`.
+  - `legal_action_rate = 1/4`.
+  - `invalid_action_rate = 1/4`.
+  - `missing_action_rate = 1/4`.
+  - `parse_failure_rate = 1/4`.
+- Updated P5 docs and governance records to state that the parse-failure case is branch coverage only:
+  - not an expansion beyond `dahai` + strict matching.
+  - not support for unknown/null `tsumogiri` in canonical matching.
+  - not model-strength evidence.
+  - not Tenhou evidence.
+  - not a LuckyJ 10.68 comparison.
+- No canonicalizer, broad evaluator, legal-action checker, CLI, file ingestion, league, runner, model code, training, tuning, self-play, Tenhou connection, external-log reader or platform-data reader was added.
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_legal_action_metric.py`: 6 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_result.py`: 16 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_envelope_smoke.py`: 1 test passed.
+- Set the next P5-only task to `Review P5 legal-action synthetic evaluator coverage and define next P5-only evaluation task.`
+
 ## 2026-05-29 — v2.18
 
 - Implemented the P5 synthetic legal-action metric evaluator for the project-authored fixture only.

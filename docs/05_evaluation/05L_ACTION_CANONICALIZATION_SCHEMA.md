@@ -350,11 +350,12 @@ The corresponding shape-only smoke test is:
 tests/eval/test_legal_action_fixture_schema_smoke.py
 ```
 
-The fixture contains four project-authored synthetic records labeled for future evaluator scenarios:
+The fixture contains project-authored synthetic records labeled for evaluator scenarios:
 
 - `legal`.
 - `invalid`.
 - `missing_action`.
+- `parse_failure`.
 - `skipped_no_legal_actions`.
 
 `expected_future_outcome` is only a fixture label. The smoke test does not calculate legal/invalid outcomes, does not compare canonical equality and does not implement an evaluator.
@@ -373,6 +374,8 @@ It uses this document's current minimum boundary only:
 - `strict` matching.
 - `actor`, `action_type`, `tile` and `tsumogiri` equality.
 - `raw_action`, `metadata` and `action_id` ignored for equality.
+
+The synthetic `parse_failure` fixture case still uses `action_type = "dahai"` and only sets `tsumogiri` to `null` on the proposed action to verify the strict evaluator's parse-failure branch. That does not make unknown/null `tsumogiri` a supported strict comparison input.
 
 It does not implement a production canonicalizer. It does not support reach, chi, pon, kan, hora, ryukyoku, red-five normalization, tile notation conversion or relaxed discard matching.
 

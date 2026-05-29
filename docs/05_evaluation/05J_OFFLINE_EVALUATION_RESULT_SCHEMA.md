@@ -106,6 +106,8 @@ docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md
 
 That boundary says legal-action synthetic evaluator output should enter `OfflineEvaluationResultEnvelope` with `evaluation_stage = "P5"` and `evaluation_type = "legal_action_metric"`, all safety flags false for synthetic-only smoke runs, explicit fixture/reproducibility metadata and warnings that the result is synthetic-only, not Tenhou data and not model-strength evidence. The current helper `build_synthetic_legal_action_metric_envelope(...)` implements this mapping only for the project-authored synthetic fixture result.
 
+After the parse-failure fixture coverage update, the synthetic legal-action fixture envelope records `sample_size = 4`, because the skipped empty-`legal_actions` record is excluded from `evaluated_decision_count`. Current metric values include one legal action, one invalid action, one missing action, one parse failure and one skipped record, with all four evaluated rates equal to `1/4`.
+
 ## Result Envelope
 
 The envelope type is:

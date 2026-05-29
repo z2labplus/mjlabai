@@ -8,6 +8,15 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-05-30 — Synthetic legal-action parse-failure coverage risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The synthetic `parse_failure` fixture case is mistaken for expanded action support or a canonicalizer. | Evaluation / Scope | Medium-High | Medium | Docs state the case uses `dahai` plus `tsumogiri = null` only to exercise the strict parse-failure branch; current supported scope remains `dahai` + strict matching. | Open |
+| Null or unknown `tsumogiri` is accidentally treated as acceptable strict matching input. | Evaluation / Data Quality | Medium-High | Medium | Evaluator tests expect the project fixture to count the null-`tsumogiri` record as `parse_failure`, not legal or invalid. | Mitigated in tests |
+| Fixture labels such as `expected_future_outcome = parse_failure` are mistaken for evaluator output or model predictions. | Governance / Evaluation | Medium-High | Medium | Existing tests verify labels are not used for computation; docs repeat labels are future expectations only. | Mitigated in implementation |
+| Synthetic legality diagnostics are overclaimed as Tenhou evidence, model strength evidence or LuckyJ 10.68 comparison. | Evaluation / Governance | High | Medium | Evidence log, docs and envelope warnings state synthetic-only, not Tenhou, not real haifu, not model strength evidence and not LuckyJ comparison. | Open |
+
 ## 2026-05-29 — Synthetic legal-action metric evaluator risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
