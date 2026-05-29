@@ -152,10 +152,11 @@ Current implementation status:
 - `tests/fixtures/eval/stable_dan_placements_smoke.json` is a project-authored synthetic 100-record placement fixture (`30/30/20/20`) used only for code-path smoke testing.
 - `tests/eval/test_stable_dan_report_smoke.py` verifies the CLI-free path from synthetic placements to placement aggregation, deterministic point estimate, bootstrap CI, threshold comparison, report schema and JSON serialization.
 - `docs/05_evaluation/05H_STABLE_DAN_EVALUATION_API.md` documents the API-only usage path from synthetic placement records to a serialized report.
+- `docs/05_evaluation/05I_STABLE_DAN_GROUNDWORK_REVIEW.md` records that the stable-dan evaluation subtrack is complete for the current P5 scope.
 - `fourth_count == 0` is undefined and raises `StableDanUndefinedError`; do not report infinite stable dan.
 - Bootstrap resamples with `fourth_count == 0` are recorded as undefined; if all resamples are undefined, `StableDanBootstrapUndefinedError` is raised.
 - The synthetic smoke fixture is not model-strength evidence, Tenhou data, an external log, a league result or a LuckyJ comparison claim.
-- The next required evaluation-foundation task is to review P5 stable-dan evaluation groundwork completion and define the next P5-only evaluation task.
+- P5 overall is still in progress. The next required evaluation-foundation task is to define the P5 offline evaluation metric registry and result envelope schema.
 
 ### Level 5 — Promotion gate
 

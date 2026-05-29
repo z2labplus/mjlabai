@@ -203,3 +203,11 @@
 | Documentation examples drift from the actual Python API signature. | Documentation / Engineering | Medium | Medium | The API doc was written against the current `build_stable_dan_evaluation_report(...)` signature and notes that model/dataset metadata is not yet part of the report schema. | Open |
 | API documentation is mistaken for an endorsement to build CLI or ingestion tooling. | Scope | Medium-High | Medium | Docs explicitly say API-only, no CLI, no file ingestion path, no league and no Tenhou integration. | Open |
 | Synthetic example documentation is mistaken for strength evidence. | Evaluation / Governance | High | Medium | Docs label the fixture as synthetic only and repeat that point estimate, bootstrap, threshold and report examples are not model-strength evidence. | Open |
+
+## 2026-05-29 — Stable-dan groundwork review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Stable-dan subtrack current-scope completion is mistaken for full P5 completion. | Governance / Planning | High | Medium | `05I_STABLE_DAN_GROUNDWORK_REVIEW.md` explicitly says only the stable-dan subtrack is complete and P5 overall remains open. | Open |
+| Stable-dan groundwork completion is mistaken for model-strength or LuckyJ evidence. | Evaluation / Governance | High | Medium | The review document repeats that there are no real model samples, no Tenhou ranked results and no final LuckyJ proof. | Open |
+| The next metric-registry task expands into league, training or external-data ingestion. | Scope | High | Medium | `10_NEXT.md` limits the next task to P5 offline metric registry and result envelope schema; no league, training, self-play, Tenhou or P6-P12. | Open |

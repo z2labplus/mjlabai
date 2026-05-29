@@ -8,6 +8,45 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — P5 stable-dan evaluation groundwork review
+
+- Type: internal governance review evidence.
+- Stage: P5 evaluation foundation.
+- Added document:
+  - `docs/05_evaluation/05I_STABLE_DAN_GROUNDWORK_REVIEW.md`.
+- Review verdict:
+  - Stable-dan evaluation groundwork is complete for the current P5 scope.
+  - P5 overall is not complete.
+- Completion basis:
+  - deterministic room-specific stable-dan calculator.
+  - bootstrap confidence interval.
+  - LuckyJ `10.68` threshold comparison helper.
+  - sample-size guardrails and reporting schema.
+  - placement-count aggregation helper.
+  - CLI-free synthetic placement smoke fixture.
+  - stable-dan evaluation API documentation.
+- Limits:
+  - Not model-strength evidence.
+  - Not a real Tenhou ranked result.
+  - No real model game samples.
+  - No league harness.
+  - No replay parser or haifu ingestion.
+  - No real Tenhou data or platform connection.
+  - No final LuckyJ `10.68` proof.
+- Next task:
+  - `Define P5 offline evaluation metric registry and result envelope schema.`
+- Guardrails:
+  - No code change.
+  - No tests added.
+  - No CLI.
+  - No training.
+  - No tuning.
+  - No self-play, match or league command.
+  - No real Tenhou connection.
+  - No Tenhou account, platform data, external log, external haifu, scraping, automation, evasion or anti-detection logic.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+
 ### 2026-05-29 — Stable-dan evaluation API documentation
 
 - Type: internal documentation evidence for evaluation API usage.

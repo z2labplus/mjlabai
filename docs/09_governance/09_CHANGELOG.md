@@ -1,5 +1,23 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.11
+
+- Reviewed P5 stable-dan evaluation groundwork completion.
+- Added `docs/05_evaluation/05I_STABLE_DAN_GROUNDWORK_REVIEW.md`.
+- Marked stable-dan evaluation groundwork as complete for the current P5 scope.
+- Explicitly kept P5 overall open.
+- Recorded current stable-dan completion basis:
+  - deterministic stable-dan calculator.
+  - bootstrap confidence interval.
+  - LuckyJ `10.68` threshold comparison helper.
+  - sample-size guardrails and report schema.
+  - placement-count aggregation helper.
+  - CLI-free synthetic smoke fixture.
+  - stable-dan evaluation API documentation.
+- Recorded current limits: no model-strength evidence, no real Tenhou ranked result, no real model game samples, no league harness, no replay parser, no real Tenhou data and no final LuckyJ proof.
+- Set the next P5-only task to `Define P5 offline evaluation metric registry and result envelope schema.`
+- No code, tests, CLI, file ingestion path, league harness, match runner, training, self-play, Tenhou connection or external-data reader was added.
+
 ## 2026-05-29 — v2.10
 
 - Added stable-dan evaluation API documentation.

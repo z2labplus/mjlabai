@@ -45,6 +45,7 @@ docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md
 docs/05_evaluation/05F_ALGORITHM_SELECTION_BENCHMARK.md
 docs/05_evaluation/05G_RACING_FUNNEL_EVALUATION.md
 docs/05_evaluation/05H_STABLE_DAN_EVALUATION_API.md
+docs/05_evaluation/05I_STABLE_DAN_GROUNDWORK_REVIEW.md
 docs/07_development_execution/07E_ALGORITHM_DISCOVERY_WORKFLOW.md
 docs/07_development_execution/07F_ALGORITHM_TABLE_BUILD_TASK.md
 docs/07_development_execution/07G_RACING_FUNNEL_EXECUTION_TASK.md

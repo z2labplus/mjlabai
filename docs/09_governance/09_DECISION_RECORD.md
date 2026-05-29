@@ -14,6 +14,49 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-05-29 — DR-0020 — Stable-Dan Groundwork Current-Scope Complete, P5 Remains Open
+
+Decision:
+
+```text
+Mark stable-dan evaluation groundwork complete for the current P5 scope.
+Keep P5 overall open.
+Set the next P5-only task to define the offline evaluation metric registry and result envelope schema.
+```
+
+Context:
+
+- Stable-dan calculator, bootstrap CI, LuckyJ threshold helper, reporting guardrails, placement aggregation, synthetic smoke fixture and API documentation are all implemented or documented.
+- The current stable-dan chain uses only synthetic/local offline placement inputs.
+- The project still lacks a broader metric registry and shared result envelope for future P5 evaluation outputs.
+
+Rationale:
+
+- The stable-dan subtrack has enough current-scope infrastructure to stop adding local stable-dan pieces before defining how P5 results should be packaged consistently.
+- P5 cannot close until other evaluation outputs, such as legal-action rate, invalid-action rate, latency, command status and reproducibility metadata, share a common reporting shape.
+- The next task must remain P5-only and must not become league execution, training, self-play, real Tenhou integration or P6-P12 work.
+
+Consequences:
+
+- `docs/05_evaluation/05I_STABLE_DAN_GROUNDWORK_REVIEW.md` records the stable-dan current-scope completion verdict.
+- `docs/10_next/10_NEXT.md` now points to `Define P5 offline evaluation metric registry and result envelope schema.`
+- Stable-dan synthetic fixtures, reports and docs remain code-path / statistics infrastructure, not model-strength or LuckyJ proof.
+
+Linked docs:
+
+- `docs/05_evaluation/05I_STABLE_DAN_GROUNDWORK_REVIEW.md`
+- `docs/05_evaluation/05H_STABLE_DAN_EVALUATION_API.md`
+- `docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0019 — Stable-Dan API Examples Must Match Implemented Schema
 
 Decision:

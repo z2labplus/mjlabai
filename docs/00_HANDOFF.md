@@ -28,21 +28,24 @@ Current stage interpretation:
 
 ```text
 P0 / P1 / P2 are basically established.
-The project is in P3 baseline reproducibility audit.
+P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
+The active project work is P5 evaluation groundwork.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
 Akochan F1 is Conditional Pass after successful Ubuntu GitHub Actions build/minimal-run evidence, with license and local macOS build limits still open.
 Akochan F2 task definition is complete.
 Minimal Akochan F2 wrapper skeleton is implemented and passes fake-executable smoke tests.
 Akochan F2 fixed-sample real-exe wrapper validation has passed: workflow run `26629344590` at commit `29f5e1ed19407d169f85524e05438ac8938d2dc2` built `ai_src/libai.so`, root `libai.so` and `system.exe`; fake wrapper tests passed 14 tests; real `legal_action` and real `mjai_log` wrapper tests both passed.
 This is fixed-sample wrapper/integration evidence only. It is not Akochan strength evidence, not mjlabai strength evidence, and not authorization for broad adapter work, self-play, match, training or Tenhou integration.
-The project has moved to evaluation groundwork: the deterministic Tenhou stable-dan calculator from room-specific formulas is implemented and tested.
+The project is now in P5 evaluation groundwork. The deterministic Tenhou stable-dan calculator from room-specific formulas is implemented and tested.
 The stable-dan bootstrap confidence interval is implemented and tested with percentile empirical multinomial resampling.
 The stable-dan threshold comparison helper is implemented and tested with LuckyJ stable dan `10.68` as the default target line.
 The stable-dan reporting schema and minimum sample-size guardrails are implemented and tested.
 The placement-count aggregation helper is implemented and tested for offline stable-dan evaluation inputs.
 The CLI-free stable-dan evaluation report smoke fixture is implemented and tested from synthetic placement inputs.
 The stable-dan evaluation API documentation is added with example usage from synthetic placements.
-The next project task is to review P5 stable-dan evaluation groundwork completion and define the next P5-only evaluation task.
+The stable-dan evaluation groundwork subtrack is complete for the current P5 scope.
+P5 overall is not complete.
+The next project task is to define the P5 offline evaluation metric registry and result envelope schema.
 ```
 
 ## Current methodology
@@ -131,8 +134,8 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review P5 stable-dan evaluation groundwork completion and define the next P5-only evaluation task.
-Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload or broad adapter work.
+Define P5 offline evaluation metric registry and result envelope schema.
+Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload, broad adapter work or P6-P12.
 ```
 
 Latest Akochan F1 audit summary:

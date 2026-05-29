@@ -2,7 +2,7 @@
 
 ## Current stage
 
-P3 baseline reproducibility audit closeout, moving to P5 evaluation foundation.
+P5 evaluation foundation.
 
 Current focus:
 
@@ -16,7 +16,9 @@ Stable-dan reporting schema = minimum sample-size guardrails and report schema i
 Stable-dan placement aggregation = offline placement-count helper implemented and tested
 Stable-dan report smoke fixture = CLI-free synthetic placement fixture implemented and tested
 Stable-dan evaluation API docs = synthetic placement example added
-Next = P5 evaluation foundation: review stable-dan groundwork completion and define next P5-only task
+Stable-dan evaluation groundwork = complete for current P5 scope
+P5 overall = still in progress
+Next = P5 offline evaluation metric registry and result envelope schema
 ```
 
 ## AI role
@@ -25,7 +27,7 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Close the current baseline fixed-sample wrapper evidence and begin the evaluation metric foundation needed to compare future candidates.
+Build the evaluation metric foundation needed to compare future candidates before any training, self-play, league or real Tenhou work.
 
 This supports the north-star target by pairing reproducible baseline/interface evidence with Tenhou-oriented metrics before any supervised learning, RL, search or LuckyJ validation work begins.
 
@@ -87,7 +89,7 @@ The CLI-free stable-dan report smoke fixture is a synthetic-only code-path test.
 
 The stable-dan evaluation API documentation is an API-only guide. It must not become a CLI, league harness, file ingestion system, training path, self-play path or real Tenhou integration.
 
-The next evaluation-foundation task may review P5 stable-dan evaluation groundwork completion and define the next P5-only task, but it must not jump to P6-P12 or claim model strength.
+The stable-dan evaluation groundwork subtrack is complete for current P5 scope. P5 overall is still open. The next evaluation-foundation task may define a P5 offline metric registry and result envelope schema, but it must not jump to league execution, P6-P12 or model-strength claims.
 
 ## Output files
 
@@ -116,4 +118,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review P5 stable-dan evaluation groundwork completion and define the next P5-only evaluation task.
+Define P5 offline evaluation metric registry and result envelope schema.
