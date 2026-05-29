@@ -9,7 +9,8 @@ Current focus:
 ```text
 Mortal = F1 paused as runnable baseline / ReferenceOnly
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence
-Next = P5 evaluation foundation: Tenhou stable-dan calculator from room-specific formulas
+Stable-dan calculator = deterministic point estimate implemented and tested
+Next = P5 evaluation foundation: bootstrap confidence interval for stable-dan estimate
 ```
 
 ## AI role
@@ -66,7 +67,9 @@ F1 is an audit stage only. It may inspect external source repositories and local
 
 F2 may create only the documented minimal wrapper skeleton for fixed `legal_action` / `mjai_log` samples. F2 must keep Akochan source and binaries outside this repository and must not become training, self-play, Tenhou integration or platform automation.
 
-The next evaluation-foundation task may implement a Tenhou stable-dan calculator, but it must remain an offline metric utility and must not become training, self-play, league execution or real Tenhou integration.
+The Tenhou stable-dan calculator is an offline metric utility. It must remain separate from training, self-play, league execution and real Tenhou integration.
+
+The next evaluation-foundation task may add bootstrap confidence intervals around the stable-dan estimate, but it must not become a league harness or model-strength claim by itself.
 
 ## Output files
 
@@ -95,4 +98,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement Tenhou stable-dan calculator from room-specific formulas.
+Add bootstrap confidence interval for stable-dan estimate.

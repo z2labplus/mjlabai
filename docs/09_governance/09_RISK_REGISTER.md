@@ -146,3 +146,11 @@
 | Fixed-sample wrapper validation is mistaken for Akochan or mjlabai strength evidence. | Evaluation / Governance | High | Medium | Label run `26629344590` as fixed-sample integration evidence only; require F3+ offline/evaluation evidence before any strength claim. | Open |
 | Akochan is expanded into broader evaluator/reviewer integration without rechecking license boundaries. | License / Scope | High | Medium | Keep Akochan at private/internal audit boundary; create a separate task and require Web/legal review before modification, redistribution, commercial use or public release. | Open |
 | GitHub Actions Node.js 20 deprecation warning later breaks the workflow even though current F2 validation passed. | Infrastructure / Maintenance | Medium | Medium | Track workflow action/runtime updates; warning does not affect run `26629344590` but should be addressed before relying on repeated CI. | Open |
+
+## 2026-05-29 — Stable-dan calculator risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| A deterministic stable-dan point estimate is mistaken for statistically reliable strength evidence. | Evaluation / Governance | High | Medium | Label the calculator as point-estimate infrastructure only; require bootstrap confidence intervals and sample-size reporting before comparing against LuckyJ. | Open |
+| `fourth_count == 0` is misreported as infinite or superior strength. | Evaluation | High | Medium | Calculator raises `StableDanUndefinedError` when `fourth_count` is zero. | Mitigated in implementation |
+| Room aliases or weights are applied to the wrong Tenhou room. | Evaluation | Medium-High | Medium | Canonicalize supported room aliases and expose formula weights in `StableDanResult` for audit. | Open |

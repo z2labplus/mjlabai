@@ -26,7 +26,8 @@
 | Rerun Akochan F2 real-exe workflow after allowlisted mixed parser fix | 04/06/07/09 | P0 | Allowlisted mixed stdout parser fix | Manual workflow logs show whether real `legal_action` and real `mjai_log` wrapper tests both pass; no artifact upload | Done: run `26629344590` succeeded; fixed-sample wrapper validation passed |
 | Kanachan transfer review | 02/03/04 | P1 | candidate table stable | schema/model/data ideas mapped to Tenhou transfer risks | Planned |
 | Suphx method decomposition | 03/04/05 | P0 | evaluation harness draft | SL, self-play RL, GRP, oracle guiding and runtime adaptation experiment cards created | Planned |
-| Implement Tenhou stable-dan calculator | 05 | P0 | metric spec | room-specific formulas and bootstrap requirement documented/tested | Planned: current next |
+| Implement Tenhou stable-dan calculator | 05 | P0 | metric spec | room-specific formulas and bootstrap requirement documented/tested | Done: deterministic point estimate implemented and tested |
+| Add bootstrap confidence interval for stable-dan estimate | 05 | P0 | stable-dan calculator | bootstrap CI reports uncertainty and does not allow LuckyJ comparison from point estimate alone | Planned: current next |
 | Create tiny benchmark harness | 05/06 | P0 | adapter spec | legal action rate, latency, fixed-position decisions and result table recorded | Planned |
 | Define replay schema | 02 | P0 | benchmark metrics stable | `02B_REPLAY_SCHEMA.md` filled | Planned |
 | Build legal action reconstruction test | 02 | P0 | schema | test plan exists | Planned |

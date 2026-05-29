@@ -8,6 +8,46 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — Tenhou stable-dan calculator implementation
+
+- Type: internal implementation / local test evidence for evaluation metric infrastructure.
+- Stage: P5 evaluation foundation.
+- Source formula: Tenhou official manual four-player dan-equivalent / stable-dan formulas as recorded in the task prompt and project docs.
+- Implemented code:
+  - `src/mjlabai/eval/stable_dan.py`.
+  - `src/mjlabai/eval/__init__.py`.
+  - `tests/eval/test_stable_dan.py`.
+- Supported rooms and aliases:
+  - general / ippan.
+  - upper / joukyu.
+  - expert / tokujou.
+  - phoenix / houou.
+- Formula weights:
+  - general: first=20, second=10.
+  - upper: first=40, second=10.
+  - expert: first=50, second=20.
+  - phoenix: first=60, second=30.
+- API:
+  - `calculate_stable_dan(first_count, second_count, third_count, fourth_count, room)`.
+  - `placement_rates(first_count, second_count, third_count, fourth_count)`.
+  - `StableDanResult`.
+  - `StableDanUndefinedError`.
+- Local validation:
+  - `python3 -m unittest tests/eval/test_stable_dan.py`: 9 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+- Guardrails:
+  - No training.
+  - No tuning.
+  - No self-play, match or league command.
+  - No real Tenhou connection.
+  - No platform automation, scraping, account tooling, evasion or anti-detection logic.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+- Limitations:
+  - This is a deterministic point estimate only.
+  - Bootstrap confidence intervals are not implemented in this task and remain the next step.
+  - Stable dan is an evaluation metric, not model-strength evidence by itself.
+  - `fourth_count == 0` is undefined and raises `StableDanUndefinedError`; it must not be reported as infinite or superior strength.
+
 ### 2026-05-29 — Akochan F2 fixed-sample real-exe wrapper validation passed
 
 - Type: external CI run evidence / fixed-sample wrapper integration evidence.

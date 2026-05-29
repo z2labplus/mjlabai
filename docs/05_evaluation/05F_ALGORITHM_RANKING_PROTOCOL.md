@@ -76,6 +76,18 @@ Run enough games with seat rotation and seed control. Report:
 
 Use the Tenhou formula for the target room.
 
+For four-player ippan/general-style stable dan:
+
+```text
+stable_dan = ((first_count * 20 + second_count * 10) / fourth_count - 20) / 10
+```
+
+For four-player joukyu/upper-style stable dan:
+
+```text
+stable_dan = ((first_count * 40 + second_count * 10) / fourth_count - 20) / 10
+```
+
 For four-player phoenix-style stable dan:
 
 ```text
@@ -89,6 +101,12 @@ stable_dan = ((first_count * 50 + second_count * 20) / fourth_count - 20) / 10
 ```
 
 Always report bootstrap confidence intervals. A model does not beat LuckyJ unless the lower confidence bound is above the required threshold or the project explicitly marks the result as provisional.
+
+Current implementation status:
+
+- `src/mjlabai/eval/stable_dan.py` implements deterministic point estimates for general/ippan, upper/joukyu, expert/tokujou and phoenix/houou.
+- `fourth_count == 0` is undefined and raises `StableDanUndefinedError`; do not report infinite stable dan.
+- Bootstrap confidence intervals are the next required evaluation-foundation task.
 
 ### Level 5 — Promotion gate
 

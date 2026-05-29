@@ -1,5 +1,24 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.4
+
+- Implemented the Tenhou stable-dan calculator as the next P5 evaluation-foundation task.
+- Added `src/mjlabai/eval/stable_dan.py` and `src/mjlabai/eval/__init__.py`.
+- Added `tests/eval/test_stable_dan.py`.
+- Implemented deterministic four-player room-specific formulas for:
+  - general / ippan: first=20, second=10.
+  - upper / joukyu: first=40, second=10.
+  - expert / tokujou: first=50, second=20.
+  - phoenix / houou: first=60, second=30.
+- Added `StableDanResult`, `StableDanUndefinedError`, `calculate_stable_dan(...)` and `placement_rates(...)`.
+- Recorded placement counts, placement rates, total games, formula name, formula weights and source note in calculator output.
+- `fourth_count == 0` now raises `StableDanUndefinedError`; the calculator does not fabricate infinite strength.
+- Local validation passed:
+  - `python3 -m unittest tests/eval/test_stable_dan.py`: 9 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+- This is deterministic metric infrastructure only, not a training result, league result, self-play result or Tenhou connection.
+- Set the next task to `Add bootstrap confidence interval for stable-dan estimate.`
+
 ## 2026-05-29 — v2.3
 
 - Closed the Akochan F2 fixed-sample real-exe wrapper validation task.

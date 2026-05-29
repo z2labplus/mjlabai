@@ -14,6 +14,49 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-05-29 — DR-0013 — Treat Stable Dan as Point Estimate Until Bootstrap CI Exists
+
+Decision:
+
+```text
+Implement Tenhou room-specific stable-dan as a deterministic point estimate now.
+Do not use it as statistically reliable strength evidence until bootstrap confidence intervals and sample-size reporting are added.
+```
+
+Context:
+
+- The project has closed Akochan F2 fixed-sample wrapper validation and moved into P5 evaluation groundwork.
+- The north-star target is stable dan above LuckyJ 10.68, so stable-dan calculation must become a first-class project metric before training or league work.
+- The current task implements the room-specific official formula but explicitly excludes bootstrap CI.
+
+Rationale:
+
+- A deterministic point estimate is needed before uncertainty estimation.
+- `fourth_count == 0` can make the formula undefined, so the calculator must refuse to fabricate infinite strength.
+- The project must keep metric infrastructure separate from model-strength claims.
+
+Consequences:
+
+- `calculate_stable_dan(...)` supports general/ippan, upper/joukyu, expert/tokujou and phoenix/houou aliases.
+- `StableDanResult` exposes counts, rates, formula weights and source note for auditability.
+- `StableDanUndefinedError` is raised when `fourth_count == 0`.
+- The next task is bootstrap confidence intervals for the stable-dan estimate.
+
+Linked docs:
+
+- `src/mjlabai/eval/stable_dan.py`
+- `tests/eval/test_stable_dan.py`
+- `docs/10_next/10_NEXT.md`
+- `docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0011 — Allow Only the Known Akochan mjai_log Status Line in Mixed Stdout
 
 Decision:
