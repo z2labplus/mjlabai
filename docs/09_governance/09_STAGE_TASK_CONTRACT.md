@@ -14,7 +14,8 @@ Stable-dan bootstrap CI = percentile empirical multinomial bootstrap implemented
 Stable-dan threshold helper = LuckyJ 10.68 lower-bound comparison implemented and tested
 Stable-dan reporting schema = minimum sample-size guardrails and report schema implemented and tested
 Stable-dan placement aggregation = offline placement-count helper implemented and tested
-Next = P5 evaluation foundation: CLI-free stable-dan report smoke fixture from placement inputs
+Stable-dan report smoke fixture = CLI-free synthetic placement fixture implemented and tested
+Next = P5 evaluation foundation: stable-dan evaluation API documentation with synthetic placement example
 ```
 
 ## AI role
@@ -81,7 +82,9 @@ The stable-dan reporting schema is an offline statistics reporting utility. It m
 
 The stable-dan placement aggregation helper is an offline evaluation input utility. It accepts only explicit placement values and whitelisted aliases; it must not become a league harness, real Tenhou ingestion path or model-strength claim by itself.
 
-The next evaluation-foundation task may add a CLI-free stable-dan report smoke fixture from placement inputs, but it must not become a CLI, league harness, training path, self-play path or real Tenhou integration.
+The CLI-free stable-dan report smoke fixture is a synthetic-only code-path test. It must not be interpreted as model-strength evidence, Tenhou evidence, a league result or a LuckyJ comparison claim.
+
+The next evaluation-foundation task may add stable-dan evaluation API documentation with example usage from synthetic placements, but it must not become a CLI, league harness, file ingestion system, training path, self-play path or real Tenhou integration.
 
 ## Output files
 
@@ -110,4 +113,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Add CLI-free stable-dan evaluation report smoke fixture from placement inputs.
+Add stable-dan evaluation API documentation with example usage from synthetic placements.

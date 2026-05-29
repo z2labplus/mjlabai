@@ -187,3 +187,11 @@
 | Placement aggregation helper is mistaken for a league harness or real Tenhou ingestion path. | Scope / Compliance | High | Medium | Document helper as offline input preparation only; it does not read accounts, platform data, logs, Tenhou, league or match runner outputs. | Open |
 | Bad placement records are silently skipped, biasing stable-dan counts. | Evaluation / Data Quality | High | Medium | Missing keys, invalid records and invalid placements raise clear errors instead of being skipped. | Mitigated in implementation |
 | Aggregated placement counts are used as strength evidence without bootstrap, threshold and sample-size report context. | Evaluation / Governance | High | Medium | Require composition with stable-dan calculator, bootstrap CI, threshold helper and reporting schema before any threshold review. | Open |
+
+## 2026-05-29 — Stable-dan smoke fixture risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Synthetic smoke fixture output is mistaken for a model result or LuckyJ evidence. | Evaluation / Governance | High | Medium | Fixture and docs label it as synthetic-only code-path validation; report notes still say not model-strength evidence and not a Tenhou ranked result. | Open |
+| A smoke test becomes a hidden CLI, file-ingestion path or league harness. | Scope | Medium-High | Medium | Keep the smoke test under `tests/`; it reads only the checked-in synthetic fixture and writes no output files. | Mitigated in implementation |
+| The 100-record synthetic sample is treated as threshold-review ready. | Evaluation / Governance | High | Medium | Test asserts `can_enter_threshold_review=False` because the sample is below the project-internal `1000` game threshold-review minimum. | Mitigated in implementation |

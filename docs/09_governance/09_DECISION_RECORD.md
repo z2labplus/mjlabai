@@ -14,6 +14,49 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-05-29 — DR-0018 — Stable-Dan Smoke Fixtures Must Be Synthetic and CLI-Free
+
+Decision:
+
+```text
+Stable-dan report smoke fixtures may validate API composition only from project-authored synthetic placement inputs.
+They must not become CLI tools, league harnesses, external log readers, Tenhou ingestion paths or strength evidence.
+```
+
+Context:
+
+- Placement aggregation, stable-dan calculator, bootstrap CI, threshold helper and report schema are implemented.
+- The next validation need is an end-to-end code path smoke test from placement records to report serialization.
+- The project must avoid implying that a synthetic fixture is a model, Tenhou or LuckyJ result.
+
+Rationale:
+
+- A smoke fixture catches API integration regressions without introducing platform, data-rights or training scope.
+- Keeping the path CLI-free avoids prematurely creating ingestion/user-facing tooling.
+- The synthetic-only boundary makes the test safe and auditable.
+
+Consequences:
+
+- `tests/fixtures/eval/stable_dan_placements_smoke.json` is synthetic-only and project-authored.
+- `tests/eval/test_stable_dan_report_smoke.py` verifies aggregation, point estimate, bootstrap, threshold comparison, report schema and JSON serialization.
+- The smoke fixture can support developer confidence in the evaluation code path but cannot support model-strength, Tenhou or LuckyJ claims.
+- The next task is stable-dan evaluation API documentation with example usage from synthetic placements.
+
+Linked docs:
+
+- `tests/fixtures/eval/stable_dan_placements_smoke.json`
+- `tests/eval/test_stable_dan_report_smoke.py`
+- `docs/10_next/10_NEXT.md`
+- `docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0017 — Stable-Dan Placement Aggregation Accepts Only Explicit Placements
 
 Decision:

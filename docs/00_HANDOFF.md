@@ -40,7 +40,8 @@ The stable-dan bootstrap confidence interval is implemented and tested with perc
 The stable-dan threshold comparison helper is implemented and tested with LuckyJ stable dan `10.68` as the default target line.
 The stable-dan reporting schema and minimum sample-size guardrails are implemented and tested.
 The placement-count aggregation helper is implemented and tested for offline stable-dan evaluation inputs.
-The next project task is to add a CLI-free stable-dan evaluation report smoke fixture from placement inputs.
+The CLI-free stable-dan evaluation report smoke fixture is implemented and tested from synthetic placement inputs.
+The next project task is to add stable-dan evaluation API documentation with example usage from synthetic placements.
 ```
 
 ## Current methodology
@@ -129,7 +130,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Add CLI-free stable-dan evaluation report smoke fixture from placement inputs.
+Add stable-dan evaluation API documentation with example usage from synthetic placements.
 Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload or broad adapter work.
 ```
 

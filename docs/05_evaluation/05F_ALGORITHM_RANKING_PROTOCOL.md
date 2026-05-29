@@ -149,9 +149,12 @@ Current implementation status:
 - `build_stable_dan_evaluation_report(...)` produces an offline report schema with point estimate, CI, threshold outcome and sample-size assessment.
 - `aggregate_placement_counts(...)` and `aggregate_placement_records(...)` convert offline placement inputs into validated first/second/third/fourth counts.
 - `calculate_stable_dan_from_placements(...)` composes placement aggregation with the deterministic stable-dan calculator only.
+- `tests/fixtures/eval/stable_dan_placements_smoke.json` is a project-authored synthetic 100-record placement fixture (`30/30/20/20`) used only for code-path smoke testing.
+- `tests/eval/test_stable_dan_report_smoke.py` verifies the CLI-free path from synthetic placements to placement aggregation, deterministic point estimate, bootstrap CI, threshold comparison, report schema and JSON serialization.
 - `fourth_count == 0` is undefined and raises `StableDanUndefinedError`; do not report infinite stable dan.
 - Bootstrap resamples with `fourth_count == 0` are recorded as undefined; if all resamples are undefined, `StableDanBootstrapUndefinedError` is raised.
-- The next required evaluation-foundation task is a CLI-free stable-dan evaluation report smoke fixture from placement inputs.
+- The synthetic smoke fixture is not model-strength evidence, Tenhou data, an external log, a league result or a LuckyJ comparison claim.
+- The next required evaluation-foundation task is stable-dan evaluation API documentation with example usage from synthetic placements.
 
 ### Level 5 — Promotion gate
 

@@ -1,5 +1,29 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.9
+
+- Added CLI-free stable-dan evaluation report smoke fixture from placement inputs.
+- Added `tests/fixtures/eval/stable_dan_placements_smoke.json`.
+  - Project-authored synthetic fixture only.
+  - 100 records: `first=30`, `second=30`, `third=20`, `fourth=20`.
+  - Not Tenhou data, not an external haifu/log, not a league result and not a model result.
+- Added `tests/eval/test_stable_dan_report_smoke.py`.
+- Smoke path verifies:
+  - `aggregate_placement_records(...)`.
+  - deterministic phoenix stable dan point estimate `11.5`.
+  - `bootstrap_stable_dan_ci(...)`.
+  - `compare_stable_dan_to_threshold(...)`.
+  - `build_stable_dan_evaluation_report(...)`.
+  - `StableDanEvaluationReport.to_dict()` JSON serialization.
+- The smoke report can be reported under current sample-size guardrails but cannot enter threshold review because `total_games=100` is below the project-internal threshold-review minimum of `1000`.
+- Local validation passed:
+  - `python3 -m unittest tests/eval/test_stable_dan_report_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_placement_counts.py`: 18 tests passed.
+  - `python3 -m unittest tests/eval/test_stable_dan.py`: 45 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+- No CLI, file ingestion path, league harness, match runner, training, self-play, Tenhou connection or external-data reader was added.
+- Set the next task to `Add stable-dan evaluation API documentation with example usage from synthetic placements.`
+
 ## 2026-05-29 — v2.8
 
 - Added placement-count aggregation helper for stable-dan evaluation inputs.

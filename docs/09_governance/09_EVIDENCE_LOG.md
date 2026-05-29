@@ -8,6 +8,52 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — CLI-free stable-dan report smoke fixture implementation
+
+- Type: internal implementation / local smoke-test evidence for evaluation reporting infrastructure.
+- Stage: P5 evaluation foundation.
+- Implemented files:
+  - `tests/fixtures/eval/stable_dan_placements_smoke.json`.
+  - `tests/eval/test_stable_dan_report_smoke.py`.
+- Fixture properties:
+  - Project-authored synthetic placement records only.
+  - 100 records.
+  - `first_count=30`.
+  - `second_count=30`.
+  - `third_count=20`.
+  - `fourth_count=20`.
+  - Not Tenhou data.
+  - Not real platform data.
+  - Not an external haifu/log.
+  - Not a model, league, training or self-play result.
+- Smoke path covered:
+  - load synthetic placement records.
+  - aggregate placements with `aggregate_placement_records(...)`.
+  - calculate deterministic phoenix stable dan point estimate `11.5`.
+  - estimate bootstrap CI with fixed seed.
+  - compare against LuckyJ stable dan threshold through the existing threshold helper.
+  - build `StableDanEvaluationReport`.
+  - serialize `report.to_dict()` with `json.dumps(...)`.
+- Local validation:
+  - `python3 -m unittest tests/eval/test_stable_dan_report_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_placement_counts.py`: 18 tests passed.
+  - `python3 -m unittest tests/eval/test_stable_dan.py`: 45 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+  - `git diff --check`: passed.
+- Guardrails:
+  - No CLI was implemented.
+  - No training.
+  - No tuning.
+  - No self-play, match or league command.
+  - No real Tenhou connection.
+  - No Tenhou account, platform data, external log, external haifu, scraping, automation, evasion or anti-detection logic.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+- Limitations:
+  - This is code-path validation only, not model-strength evidence.
+  - The 100-game synthetic fixture meets report minimum but not threshold-review minimum; it cannot support a LuckyJ claim.
+  - The next task is documentation of stable-dan evaluation API usage from synthetic placements.
+
 ### 2026-05-29 — Stable-dan placement-count aggregation helper implementation
 
 - Type: internal implementation / local test evidence for evaluation input infrastructure.
