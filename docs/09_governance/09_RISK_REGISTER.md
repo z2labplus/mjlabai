@@ -86,3 +86,13 @@
 | GitHub workflow syntax/context errors can block F1 before any Ubuntu build starts. | Infrastructure / Governance | Medium | Medium | Record failed workflow run IDs, fix workflow validation issues locally, and do not count failed validation runs as build evidence. | Mitigated by fix and successful run `26617347785` |
 | GitHub Actions `actions/checkout@v4` currently emits a Node.js 20 deprecation warning. | Infrastructure / Maintenance | Medium | Medium | Track the warning and update workflow action/runtime before GitHub removes Node.js 20 support. | Open |
 | Akochan F1 evidence is Ubuntu-runner evidence, not local macOS reproducibility. | Reproducibility | Medium | High | Treat F1 as Conditional Pass; keep local macOS build blocked unless Docker or verified Homebrew LLVM/Boost/OpenMP is added later. | Open |
+
+## 2026-05-29 — Akochan F2 interface risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| F2 wrapper accidentally vendors or stores Akochan source, `system.exe`, `libai.so`, `params/` or third-party build artifacts. | License / Governance | High | Medium | Keep wrapper-only boundary; use external path or GitHub Actions temporary directory; add checks that fail if third-party artifacts are added to the repository. | Open |
+| F2 implementation drifts from fixed samples into self-play, match, training or real Tenhou commands. | Scope / Compliance | High | Medium | Limit next task to fixed `legal_action` and `mjai_log` samples; audit log must record training/self-play/Tenhou flags as false. | Open |
+| Akochan custom license is misunderstood as a standard open-source license. | License / Compliance | High | High | Keep private/internal audit only; require license review or author permission before modification, redistribution, commercial use or public release. | Open |
+| Legal-action checker output is mistaken for playing strength evidence. | Evaluation | Medium-High | Medium | Label F2 as interface/legal-action only; do not claim model strength without F3+ evaluation evidence. | Open |
+| Wrapper output schema may over-normalize and lose raw mjai/Akochan fields. | Engineering | Medium | Medium | Preserve raw output in `raw` and require parseable JSON plus output hashes. | Open |

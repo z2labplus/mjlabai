@@ -31,6 +31,7 @@ P0 / P1 / P2 are basically established.
 The project is in P3 baseline reproducibility audit.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
 Akochan F1 is Conditional Pass after successful Ubuntu GitHub Actions build/minimal-run evidence, with license and local macOS build limits still open.
+Akochan F2 task definition is complete; no adapter code has been written yet.
 ```
 
 ## Current methodology
@@ -80,7 +81,7 @@ Roles:
 - Suphx: main methodology blueprint, split into reproducible modules.
 - Mortal: paused as a runnable baseline; retained as source-code, mjai-interface, methodology and engineering reference.
 - Archer: high-potential Tenhou baseline candidate requiring verification.
-- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, next step is defining F2 interface/legal-action adapter boundaries.
+- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, F2 task definition complete, next step is a minimal wrapper skeleton for fixed samples.
 - Kanachan: data/model architecture reference; not direct Tenhou baseline until adapted.
 
 Main technical route:
@@ -119,8 +120,8 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define the Akochan F2 interface/legal-action adapter task.
-Do not write adapter code until the F2 task boundary, state/action mapping, log schema and license guardrails are documented.
+Implement minimal Akochan F2 wrapper skeleton for fixed legal_action/mjai_log samples under the documented no-vendor, no-training, no-Tenhou constraints.
+Do not exceed the wrapper skeleton scope.
 ```
 
 Latest Akochan F1 audit summary:
@@ -187,6 +188,18 @@ Corrected GitHub Actions run review:
 - Guardrails: no training, tuning, self-play, Tenhou connection, adapter work, artifact upload or third-party vendoring.
 - New risk note: GitHub emitted a Node.js 20 deprecation warning for `actions/checkout@v4`; this is workflow maintenance risk, not an Akochan F1 blocker.
 - F1 conclusion: Conditional Pass. Akochan can move to F2 task definition, but custom license limits and Ubuntu-only build evidence must remain documented.
+
+Akochan F2 task definition:
+
+- Added `docs/07_development_execution/07J_AKOCHAN_F2_INTERFACE_TASK.md`.
+- Defined Akochan roles for F2: legal-action checker, mjai/log reviewer and baseline/reviewer candidate.
+- Defined the interface boundary: Akochan source, `system.exe`, `libai.so`, `params/` and third-party build artifacts must not enter this repository.
+- Future wrapper should call an external path or a GitHub Actions temporary build path.
+- Defined draft mapping for mjai events: `start_game`, `start_kyoku`, `tsumo`, `dahai`, `chi`, `pon`, `kan`, `reach`, `hora`, `ryukyoku`, `end_kyoku`.
+- Defined draft normalized internal action schema for `legal_action` outputs.
+- Defined mandatory audit-log fields: tool name, external repo/commit, build environment, command, input/output hashes, exit code, stdout/stderr summaries, elapsed time and flags proving no training/self-play/Tenhou command was run.
+- Reaffirmed license guardrails: private/internal audit only; no source modification, redistribution, commercial use or public release without review/permission.
+- No adapter code was written in the F2 definition task.
 
 ## Do not forget
 

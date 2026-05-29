@@ -60,6 +60,52 @@ Status:
 Accepted
 ```
 
+## 2026-05-29 — DR-0006 — Define Akochan F2 as Wrapper-Only Fixed-Sample Interface Task
+
+Decision:
+
+```text
+Akochan F2 begins as a wrapper-only fixed-sample interface/legal-action task.
+The next implementation may create a minimal wrapper skeleton, but must not vendor Akochan source or binaries, train, self-play, connect to Tenhou or exceed fixed legal_action/mjai_log samples.
+```
+
+Context:
+
+- Akochan F1 is Conditional Pass based on GitHub Actions run `26617347785`.
+- The project still has custom-license restrictions and local macOS build limitations.
+- The next step needs a precise F2 boundary before any adapter code is written.
+
+Rationale:
+
+- The racing funnel allows increasing scope only after prior evidence, but F2 must remain narrower than evaluation or strength claims.
+- A wrapper-only boundary preserves license hygiene and keeps third-party source/binaries outside this repository.
+- Fixed `legal_action` and `mjai_log` samples are enough to prove interface viability without self-play, training or Tenhou integration.
+
+Consequences:
+
+- `docs/07_development_execution/07J_AKOCHAN_F2_INTERFACE_TASK.md` is the controlling F2 task specification.
+- Future F2 implementation must record audit logs with external repo/commit, command, hashes, elapsed time and explicit no-training/no-self-play/no-Tenhou flags.
+- Future F2 implementation must preserve raw Akochan output and normalize only parseable JSON.
+- License review or author permission remains required before modification, redistribution, commercial use, public release or treating Akochan as a mjlabai-owned component.
+
+Linked docs:
+
+- `docs/07_development_execution/07J_AKOCHAN_F2_INTERFACE_TASK.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0005 — Promote Akochan to F1 Conditional Pass on Ubuntu Evidence
 
 Decision:

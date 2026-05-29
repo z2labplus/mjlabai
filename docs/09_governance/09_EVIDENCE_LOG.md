@@ -311,3 +311,22 @@ Internal governance decisions that affect execution should also be noted here, b
   - This is successful Ubuntu build/minimal-run evidence for Akochan F1.
   - It is not strength evidence and does not imply Tenhou performance.
   - F1 status is Conditional Pass because custom license restrictions and local macOS build failure remain unresolved.
+
+## 2026-05-29 — Akochan F2 interface task definition
+
+- Type: internal governance / task specification.
+- Candidate: Akochan.
+- Funnel stage after task: F2 task defined; implementation not started.
+- Primary document: `docs/07_development_execution/07J_AKOCHAN_F2_INTERFACE_TASK.md`.
+- Basis:
+  - Akochan F1 Conditional Pass from GitHub Actions run `26617347785`.
+  - Existing license audit says current use should stay private/internal and source modification, redistribution, commercial use and public release need review or permission.
+- Specification facts:
+  - F2 role is limited to legal-action checker, mjai/log reviewer and baseline/reviewer candidate.
+  - The wrapper boundary forbids storing Akochan source, `system.exe`, `libai.so`, `params/`, third-party binaries, unknown weights or build artifacts in this repository.
+  - Future implementation may call an external Akochan path or a GitHub Actions temporary build path.
+  - Draft mjai event mapping includes `start_game`, `start_kyoku`, `tsumo`, `dahai`, `chi`, `pon`, `kan`, `reach`, `hora`, `ryukyoku` and `end_kyoku`.
+  - Future wrapper calls must record tool name, external repo/commit, build environment, command, input/output hashes, exit code, stdout/stderr summaries, elapsed time, no-training/no-self-play/no-Tenhou flags, license note and reproducibility note.
+- Evidence status:
+  - This is task-definition evidence, not model-strength evidence.
+  - No adapter code, training, tuning, self-play, Tenhou connection or third-party artifact storage occurred.

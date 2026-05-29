@@ -8,7 +8,7 @@ Current funnel focus:
 
 ```text
 Mortal = F1 paused as runnable baseline / ReferenceOnly
-Akochan = F1 Conditional Pass on Ubuntu GitHub Actions build/minimal-run evidence
+Akochan = F2 task defined after F1 Conditional Pass on Ubuntu GitHub Actions build/minimal-run evidence
 ```
 
 ## AI role
@@ -49,16 +49,19 @@ This stage supports the north-star target by creating a reproducible baseline an
 - Do not claim strength improvement from reproducibility checks.
 - Do not use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
-- Do not write F2 adapter code before the F2 task boundary, state/action mapping, log schema and license guardrails are documented.
+- Do not exceed the documented Akochan F2 wrapper skeleton boundary: fixed `legal_action` / `mjai_log` samples only until later evidence justifies more.
+- Do not vendor or store Akochan source, `system.exe`, `libai.so`, `params/`, third-party binaries or unknown artifacts in this repository.
 - Do not promote Mortal to F2 unless a lawful, verifiable and usable trained model artifact is provided and Mortal F1 is re-opened with source, version/tag, usage constraints and checksum.
 
 ## Task boundary
 
 F1 is an audit stage only. It may inspect external source repositories and local dependencies, but it must not create project source code or training scripts.
 
+F2 may create only the documented minimal wrapper skeleton for fixed `legal_action` / `mjai_log` samples. F2 must keep Akochan source and binaries outside this repository and must not become training, self-play, Tenhou integration or platform automation.
+
 ## Output files
 
-After a real P3/F1 task, update:
+After a real P3/F1/F2 task, update:
 
 - `docs/10_next/10_NEXT.md`
 - `docs/09_governance/09_CHANGELOG.md`
@@ -83,4 +86,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Define Akochan F2 interface/legal-action adapter task.
+Implement minimal Akochan F2 wrapper skeleton for fixed legal_action/mjai_log samples under the documented no-vendor, no-training, no-Tenhou constraints.

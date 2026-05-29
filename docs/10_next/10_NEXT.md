@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Define Akochan F2 interface/legal-action adapter task.
+- [ ] Implement minimal Akochan F2 wrapper skeleton for fixed legal_action/mjai_log samples under the documented no-vendor, no-training, no-Tenhou constraints.
 
 Current execution charter:
 
@@ -23,7 +23,9 @@ Limits:
 - Do not create platform automation, scraping, evasion or account tooling.
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
-- Do not write an adapter or enter F2 before F1 minimal build/run evidence exists.
+- Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
+- For the next implementation, only write the minimal wrapper skeleton for fixed `legal_action` / `mjai_log` samples and the required audit-log schema.
+- Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not modify unrelated files.
 
 ## Completed
@@ -37,12 +39,14 @@ Limits:
 - [x] 2026-05-29 Added manual GitHub Actions workflow `Akochan F1 Build Audit`: `.github/workflows/akochan-f1-build-audit.yml` provides an Ubuntu Linux runner path for the fixed Akochan commit, installs build dependencies inside the runner, clones Akochan in the runner temp directory, attempts `Makefile_Linux` builds, and only if `system.exe` exists attempts minimal non-training `legal_action` and `mjai_log` samples. This does not by itself pass F1; Akochan remains F1 Blocked until a workflow run succeeds and evidence is reviewed.
 - [x] 2026-05-29 Reviewed first GitHub Actions workflow run: run `26615920289` failed during workflow validation before any Ubuntu build because `runner.temp` was used in job-level `env`. The workflow was corrected to configure `AKOCHAN_DIR` and `SUMMARY_FILE` through `$GITHUB_ENV`; no Akochan build or minimal sample evidence was produced by the failed run.
 - [x] 2026-05-29 Ran corrected GitHub Actions workflow `Akochan F1 Build Audit`: run `26617347785` at commit `b6b69e08fd009052cb3bbd16c779ac6e2139591b` succeeded on `ubuntu-latest`; `ai_src/libai.so`, root `libai.so` and `system.exe` were generated; both minimal non-training samples succeeded: `legal_action` and `mjai_log haifu_log_sample.json 0 2`. Akochan F1 is upgraded to Conditional Pass because reproducibility is proven on Ubuntu, while custom license and local macOS build limits remain.
+- [x] 2026-05-29 Defined Akochan F2 interface/legal-action adapter task in `docs/07_development_execution/07J_AKOCHAN_F2_INTERFACE_TASK.md`: documented wrapper-only boundary, state/action mapping draft, audit log schema, license guardrails, F2 acceptance criteria and failure conditions. No adapter code was written.
 
 ## Backlog
 
 - [ ] Apply F0-F7 stage labels to Suphx / LuckyJ / Mortal / Akochan / Kanachan / Archer inside `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md` if any evidence changes.
 - [ ] If a lawful, verifiable and usable Mortal trained model artifact is provided later, re-open Mortal F1 artifact verification before any F2 adapter task.
-- [ ] Define Akochan F2 interface/legal-action adapter task: specify state/action mapping, legal-action checker boundary, log schema, wrapper-only integration constraints and license guardrails before writing adapter code.
+- [x] Define Akochan F2 interface/legal-action adapter task: specify state/action mapping, legal-action checker boundary, log schema, wrapper-only integration constraints and license guardrails before writing adapter code.
+- [ ] Implement minimal Akochan F2 wrapper skeleton for fixed legal_action/mjai_log samples under the documented no-vendor, no-training, no-Tenhou constraints.
 - [ ] Verify Archer evidence before treating it as a strong Tenhou baseline.
 - [ ] Inspect Kanachan schema/model ideas for Tenhou transfer value.
 - [ ] Decompose Suphx into reproducible experiment cards: SL policy, self-play RL, global reward prediction, oracle guiding, runtime adaptation.

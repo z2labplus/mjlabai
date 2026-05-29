@@ -30,7 +30,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 ```text
 P3 / baseline reproducibility audit.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
-Akochan = F1 Conditional Pass on Ubuntu GitHub Actions build/minimal-run evidence.
+Akochan = F2 task defined after F1 Conditional Pass on Ubuntu GitHub Actions build/minimal-run evidence.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -157,14 +157,14 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 - 不跳过 baseline racing funnel。
 - 不使用来路不明的 model weights、`*.pth`、`*.pt`、`checkpoint` 或 `snapshot` 文件。
 - 不把第三方源码 vendor/copy 进本仓库。
-- 不在 F1 最小 build/run 证据完成前进入 F2 adapter。
+- 不超过 Akochan F2 wrapper skeleton 边界；不保存第三方源码、二进制、`params/` 或未知 artifact。
 
 ## Current Next Task
 
-当前 `10_NEXT` 的下一步是定义 Akochan F2 任务边界：
+当前 `10_NEXT` 的下一步是实现最小 Akochan F2 wrapper skeleton：
 
 ```text
-Define Akochan F2 interface/legal-action adapter task.
+Implement minimal Akochan F2 wrapper skeleton for fixed legal_action/mjai_log samples under the documented no-vendor, no-training, no-Tenhou constraints.
 ```
 
 Mortal runnable baseline 已暂停，因为当前没有合法、可校验、可使用的 trained model artifact。Mortal 仍保留为源码、mjai 接口、方法论和工程参考。除非未来先补齐 artifact 来源、version/tag、usage constraints 和 checksum 并重新打开 F1，否则不进入 Mortal F2 adapter。
@@ -173,4 +173,4 @@ Akochan F1 审计已完成，当前结论为 Conditional Pass：仓库公开且 
 
 Conditional 的原因：Akochan license 是 custom Japanese usage agreement，修改、再分发、商业或公开发布仍需要复审/许可；本机 macOS build 仍未通过，当前可复现证据来自 Ubuntu GitHub Actions runner。
 
-下一步只定义 F2 interface/legal-action adapter task，不直接写 adapter，不训练，不调参，不自我对弈，不接入 Tenhou。
+F2 task definition 已写入 `docs/07_development_execution/07J_AKOCHAN_F2_INTERFACE_TASK.md`。下一步允许的实现范围只包括固定 `legal_action` / `mjai_log` 样例的最小 wrapper skeleton 与审计日志 schema；仍然不训练、不调参、不自我对弈、不接入 Tenhou、不 vendor 第三方源码或二进制。

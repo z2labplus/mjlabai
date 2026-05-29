@@ -1,5 +1,16 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v1.5
+
+- Added `docs/07_development_execution/07J_AKOCHAN_F2_INTERFACE_TASK.md`.
+- Defined the Akochan F2 interface/legal-action adapter task without writing adapter code.
+- Documented Akochan's F2 roles: legal-action checker, mjai/log reviewer and baseline/reviewer candidate.
+- Defined wrapper-only boundaries: no Akochan source, `system.exe`, `libai.so`, `params/`, third-party binaries or build artifacts may enter this repository.
+- Added draft mjai event mapping, normalized action schema, audit-log schema, F2 acceptance criteria and F2 failure conditions.
+- Reaffirmed custom-license guardrails: private/internal audit only until license review or permission clears broader use.
+- Set the next task to implement a minimal Akochan F2 wrapper skeleton for fixed `legal_action` / `mjai_log` samples under no-vendor, no-training and no-Tenhou constraints.
+- Updated next, handoff, docs index, evidence, risk, candidate-table, backlog, stage-contract, technical-plan and decision docs.
+
 ## 2026-05-29 — v1.4
 
 - Triggered the corrected manual GitHub Actions workflow `Akochan F1 Build Audit`.
