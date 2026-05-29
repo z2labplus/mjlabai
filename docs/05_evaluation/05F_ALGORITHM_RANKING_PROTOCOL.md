@@ -158,6 +158,8 @@ Current implementation status:
 - `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md` defines legal-action and invalid-action metric denominators, parse-failure and missing-action handling, skipped-record rules, canonical action matching principles and result-envelope mapping.
 - `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md` defines canonical action fields, minimum `dahai` fixture scope, strict matching, future relaxed matching boundary, legal-action fixture shape and action outcome mapping.
 - `tests/fixtures/eval/legal_action_metric_smoke.json` and `tests/eval/test_legal_action_fixture_schema_smoke.py` validate a project-authored synthetic legal-action fixture shape with future labels for `legal`, `invalid`, `missing_action` and `skipped_no_legal_actions`.
+- `src/mjlabai/eval/legal_action_metric.py` implements a narrow synthetic-only legal-action metric evaluator for the project-authored fixture. It supports only strict `dahai` comparison over actor/action_type/tile/tsumogiri and builds an `OfflineEvaluationResultEnvelope` with all-false safety flags.
+- `tests/eval/test_legal_action_metric.py` verifies the current fixture counts/rates, denominator invariant, skipped/missing behavior, parse-failure counting through inline synthetic records, that `expected_future_outcome` is not used for computation and that the envelope warnings remain synthetic-only.
 - `fourth_count == 0` is undefined and raises `StableDanUndefinedError`; do not report infinite stable dan.
 - Bootstrap resamples with `fourth_count == 0` are recorded as undefined; if all resamples are undefined, `StableDanBootstrapUndefinedError` is raised.
 - The synthetic smoke fixture is not model-strength evidence, Tenhou data, an external log, a league result or a LuckyJ comparison claim.
@@ -211,7 +213,22 @@ The current minimum canonical fixture scope is `dahai` only. Default matching mo
 
 The current synthetic legal-action fixture smoke test validates schema shape only. It does not calculate `legal_action_rate`, calculate `invalid_action_rate`, implement canonical equality or implement an evaluator.
 
-Before any legal-action evaluator implementation, `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md` defines a synthetic evaluator boundary: only project-authored synthetic/local fixtures, current `dahai` scope, strict matching, explicit count/rate denominator rules and all-false safety flags are allowed. That boundary is not an evaluator implementation and cannot be used as model-strength or LuckyJ comparison evidence.
+The first implemented legal-action evaluator is synthetic-only and fixture-only. It computes the current project fixture as:
+
+```text
+legal_action_count = 1
+invalid_action_count = 1
+missing_action_count = 1
+parse_failure_count = 0
+skipped_count = 1
+evaluated_decision_count = 3
+legal_action_rate = 1 / 3
+invalid_action_rate = 1 / 3
+missing_action_rate = 1 / 3
+parse_failure_rate = 0.0
+```
+
+It must not be used as model-strength or LuckyJ comparison evidence. It does not implement a broad evaluator, canonicalizer, legal-action checker, CLI, league, runner, model-output path, Tenhou integration or external-data ingestion.
 
 ### Level 5 — Promotion gate
 

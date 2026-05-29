@@ -1,5 +1,49 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.18
+
+- Implemented the P5 synthetic legal-action metric evaluator for the project-authored fixture only.
+- Added `src/mjlabai/eval/legal_action_metric.py`.
+- Added exports in `src/mjlabai/eval/__init__.py`.
+- Added `tests/eval/test_legal_action_metric.py`.
+- Updated `src/mjlabai/eval/offline_result.py` registry definitions for implemented synthetic legal-action count/rate metrics:
+  - `evaluated_decision_count`.
+  - `legal_action_count`.
+  - `invalid_action_count`.
+  - `missing_action_count`.
+  - `parse_failure_count`.
+  - `skipped_count`.
+  - `missing_action_rate`.
+  - `parse_failure_rate`.
+- The evaluator accepts an in-memory fixture mapping only; it does not add CLI or file-ingestion support.
+- Current supported scope remains:
+  - project-authored synthetic fixture only.
+  - strict `dahai` matching only.
+  - actor/action_type/tile/tsumogiri comparison only.
+  - `raw_action`, metadata and `action_id` ignored for equality.
+- Current fixture result:
+  - `legal_action_count = 1`.
+  - `invalid_action_count = 1`.
+  - `missing_action_count = 1`.
+  - `parse_failure_count = 0`.
+  - `skipped_count = 1`.
+  - `evaluated_decision_count = 3`.
+  - `legal_action_rate = 1/3`.
+  - `invalid_action_rate = 1/3`.
+  - `missing_action_rate = 1/3`.
+  - `parse_failure_rate = 0.0`.
+- Added envelope helper `build_synthetic_legal_action_metric_envelope(...)` with all-false safety flags and synthetic-only warnings.
+- Added decision record `DR-0025`.
+- Tests confirm `expected_future_outcome` labels are not used for computation.
+- No broad evaluator, canonicalizer, legal-action checker, CLI, file ingestion, league, runner, model code, training, tuning, self-play, Tenhou connection, external-log reader or platform-data reader was added.
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_legal_action_metric.py`: 6 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_result.py`: 16 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_envelope_smoke.py`: 1 test passed.
+- Set the next P5-only task to `Add P5 synthetic parse-failure legal-action fixture case and evaluator smoke coverage.`
+
 ## 2026-05-29 — v2.17
 
 - Defined the P5 legal-action metric synthetic evaluator boundary before implementation.

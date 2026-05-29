@@ -33,6 +33,14 @@ class OfflineResultTests(unittest.TestCase):
         self.assertIn("stable_dan_sample_size_status", names)
         self.assertIn("legal_action_rate", names)
         self.assertIn("invalid_action_rate", names)
+        self.assertIn("evaluated_decision_count", names)
+        self.assertIn("legal_action_count", names)
+        self.assertIn("invalid_action_count", names)
+        self.assertIn("missing_action_count", names)
+        self.assertIn("parse_failure_count", names)
+        self.assertIn("skipped_count", names)
+        self.assertIn("missing_action_rate", names)
+        self.assertIn("parse_failure_rate", names)
         self.assertIn("command_exit_code", names)
         self.assertIn("latency_ms", names)
         self.assertIn("parse_success_rate", names)
@@ -44,6 +52,15 @@ class OfflineResultTests(unittest.TestCase):
         self.assertIsInstance(definition, EvaluationMetricDefinition)
         self.assertEqual(definition.metric_unit, "dan")
         self.assertTrue(definition.higher_is_better)
+
+    def test_legal_action_metric_registry_directions(self):
+        count_definition = get_metric_definition("evaluated_decision_count")
+        self.assertEqual(count_definition.metric_unit, "count")
+        self.assertIsNone(count_definition.higher_is_better)
+
+        missing_rate_definition = get_metric_definition("missing_action_rate")
+        self.assertEqual(missing_rate_definition.metric_unit, "rate")
+        self.assertFalse(missing_rate_definition.higher_is_better)
 
     def test_unknown_metric_definition_raises(self):
         with self.assertRaises(ValueError):

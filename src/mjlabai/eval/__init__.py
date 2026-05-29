@@ -40,6 +40,11 @@ from mjlabai.eval.offline_result import (
     get_metric_definition,
     list_metric_definitions,
 )
+from mjlabai.eval.legal_action_metric import (
+    LegalActionMetricResult,
+    build_synthetic_legal_action_metric_envelope,
+    evaluate_synthetic_legal_action_fixture,
+)
 
 __all__ = [
     "DEFAULT_MAX_UNDEFINED_RATE_FOR_STABLE_DAN_REPORT",
@@ -49,6 +54,7 @@ __all__ = [
     "DEFAULT_MIN_TOTAL_GAMES_FOR_THRESHOLD_REVIEW",
     "LUCKYJ_STABLE_DAN_THRESHOLD",
     "EvaluationMetricDefinition",
+    "LegalActionMetricResult",
     "OfflineCommandStatus",
     "OfflineConfidenceInterval",
     "OfflineEvaluationMetricValue",
@@ -69,10 +75,12 @@ __all__ = [
     "aggregate_placement_records",
     "bootstrap_and_compare_stable_dan_threshold",
     "bootstrap_stable_dan_ci",
+    "build_synthetic_legal_action_metric_envelope",
     "build_stable_dan_evaluation_report",
     "calculate_stable_dan_from_placements",
     "calculate_stable_dan",
     "compare_stable_dan_to_threshold",
+    "evaluate_synthetic_legal_action_fixture",
     "get_metric_definition",
     "list_metric_definitions",
     "placement_rates",

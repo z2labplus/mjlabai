@@ -437,14 +437,89 @@ _METRIC_DEFINITIONS: tuple[EvaluationMetricDefinition, ...] = (
         display_name="Legal Action Rate",
         metric_unit="rate",
         higher_is_better=True,
-        description="Fraction of selected actions that are legal.",
+        description=(
+            "Fraction of evaluated decision records whose parseable proposed "
+            "action matches a legal action; legality diagnostic only."
+        ),
     ),
     EvaluationMetricDefinition(
         metric_name="invalid_action_rate",
         display_name="Invalid Action Rate",
         metric_unit="rate",
         higher_is_better=False,
-        description="Fraction of selected actions that are illegal or rejected.",
+        description=(
+            "Fraction of evaluated decision records whose parseable proposed "
+            "action does not match any legal action."
+        ),
+    ),
+    EvaluationMetricDefinition(
+        metric_name="evaluated_decision_count",
+        display_name="Evaluated Decision Count",
+        metric_unit="count",
+        higher_is_better=None,
+        description=(
+            "Number of non-skipped decision records with non-empty legal actions."
+        ),
+    ),
+    EvaluationMetricDefinition(
+        metric_name="legal_action_count",
+        display_name="Legal Action Count",
+        metric_unit="count",
+        higher_is_better=None,
+        description="Count of evaluated records whose proposed action is legal.",
+    ),
+    EvaluationMetricDefinition(
+        metric_name="invalid_action_count",
+        display_name="Invalid Action Count",
+        metric_unit="count",
+        higher_is_better=None,
+        description="Count of evaluated records whose proposed action is invalid.",
+    ),
+    EvaluationMetricDefinition(
+        metric_name="missing_action_count",
+        display_name="Missing Action Count",
+        metric_unit="count",
+        higher_is_better=None,
+        description=(
+            "Count of evaluated records with non-empty legal actions and no "
+            "proposed action."
+        ),
+    ),
+    EvaluationMetricDefinition(
+        metric_name="parse_failure_count",
+        display_name="Parse Failure Count",
+        metric_unit="count",
+        higher_is_better=None,
+        description=(
+            "Count of evaluated records whose proposed action cannot be parsed "
+            "within the supported schema boundary."
+        ),
+    ),
+    EvaluationMetricDefinition(
+        metric_name="skipped_count",
+        display_name="Skipped Count",
+        metric_unit="count",
+        higher_is_better=None,
+        description="Count of records excluded before metric evaluation.",
+    ),
+    EvaluationMetricDefinition(
+        metric_name="missing_action_rate",
+        display_name="Missing Action Rate",
+        metric_unit="rate",
+        higher_is_better=False,
+        description=(
+            "Fraction of evaluated decision records with no proposed action."
+        ),
+    ),
+    EvaluationMetricDefinition(
+        metric_name="parse_failure_rate",
+        display_name="Parse Failure Rate",
+        metric_unit="rate",
+        higher_is_better=False,
+        description=(
+            "Fraction of evaluated decision records whose proposed action could "
+            "not be parsed within the supported schema boundary."
+        ),
     ),
     EvaluationMetricDefinition(
         metric_name="command_exit_code",

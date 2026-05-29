@@ -8,6 +8,58 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — P5 synthetic legal-action metric evaluator
+
+- Type: internal implementation / unit-test evidence.
+- Stage: P5 evaluation foundation.
+- Added implementation:
+  - `src/mjlabai/eval/legal_action_metric.py`.
+- Added tests:
+  - `tests/eval/test_legal_action_metric.py`.
+- Decision record:
+  - `docs/09_governance/09_DECISION_RECORD.md` entry `DR-0025`.
+- Synthetic fixture:
+  - `tests/fixtures/eval/legal_action_metric_smoke.json`.
+- Scope:
+  - project-authored synthetic fixture only.
+  - in-memory fixture mapping only.
+  - strict `dahai` matching only.
+  - compare `actor`, `action_type`, `tile` and `tsumogiri`.
+  - ignore `raw_action`, metadata and `action_id` for equality.
+- Current fixture result:
+  - `total_record_count = 4`.
+  - `legal_action_count = 1`.
+  - `invalid_action_count = 1`.
+  - `missing_action_count = 1`.
+  - `parse_failure_count = 0`.
+  - `skipped_count = 1`.
+  - `evaluated_decision_count = 3`.
+  - `legal_action_rate = 1/3`.
+  - `invalid_action_rate = 1/3`.
+  - `missing_action_rate = 1/3`.
+  - `parse_failure_rate = 0.0`.
+- Envelope mapping:
+  - `evaluation_stage = "P5"`.
+  - `evaluation_type = "legal_action_metric"`.
+  - `sample_size = evaluated_decision_count`.
+  - all safety flags false.
+  - warnings include synthetic-only, not Tenhou data, not real haifu, not model strength evidence and not LuckyJ 10.68 comparison.
+- Local validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_legal_action_metric.py`: 6 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_result.py`: 16 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_envelope_smoke.py`: 1 test passed.
+- Guardrails:
+  - This is not model-strength evidence.
+  - This is not Tenhou ranked evidence.
+  - This is not LuckyJ 10.68 comparison evidence.
+  - No broad evaluator was implemented.
+  - No canonicalizer was implemented.
+  - No legal-action checker or rule engine was implemented.
+  - No CLI, file ingestion, league, runner, training, tuning, self-play, real Tenhou connection, external-log reader or platform-data reader was added.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+
 ### 2026-05-29 — P5 legal-action metric synthetic evaluator boundary
 
 - Type: internal documentation / implementation-boundary evidence.

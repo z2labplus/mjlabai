@@ -232,6 +232,66 @@ The smoke test validates JSON shape, strict `dahai` canonical action shape and s
 - implement an evaluator.
 - read Tenhou data, external logs or platform data.
 
+## Synthetic Evaluator Implementation
+
+The first narrow synthetic evaluator is implemented in:
+
+```text
+src/mjlabai/eval/legal_action_metric.py
+```
+
+The corresponding tests are:
+
+```text
+tests/eval/test_legal_action_metric.py
+```
+
+Implemented API:
+
+- `LegalActionMetricResult`.
+- `evaluate_synthetic_legal_action_fixture(fixture)`.
+- `build_synthetic_legal_action_metric_envelope(...)`.
+
+Scope:
+
+- input is an in-memory project-authored synthetic fixture mapping.
+- default fixture is `tests/fixtures/eval/legal_action_metric_smoke.json`.
+- current action support is only `dahai`.
+- current matching mode is only `strict`.
+- strict comparison uses only `actor`, `action_type`, `tile` and `tsumogiri`.
+- `raw_action`, `metadata` and `action_id` are ignored for equality.
+- `expected_future_outcome` is not used to compute results.
+
+The current fixture produces:
+
+```text
+total_record_count = 4
+legal_action_count = 1
+invalid_action_count = 1
+missing_action_count = 1
+parse_failure_count = 0
+skipped_count = 1
+evaluated_decision_count = 3
+legal_action_rate = 1 / 3
+invalid_action_rate = 1 / 3
+missing_action_rate = 1 / 3
+parse_failure_rate = 0.0
+```
+
+The evaluator is still not:
+
+- a broad evaluator.
+- a canonicalizer.
+- a rule engine.
+- a legal-action checker.
+- a CLI.
+- a file ingestion path.
+- a league or runner.
+- a model output evaluator.
+- Tenhou integration.
+- model-strength evidence.
+- LuckyJ 10.68 comparison evidence.
+
 ## P5 Synthetic Evaluator Boundary Before Implementation
 
 This section defines the minimum future boundary for a synthetic legal-action metric evaluator before any implementation is written.
@@ -522,9 +582,19 @@ Recommended metric names:
 
 Current registry status:
 
-- `legal_action_rate` and `invalid_action_rate` already exist as placeholder registry names.
-- Additional count/rate names above are specification-level recommendations for the next registry update task.
-- This document does not implement metric calculation.
+- `legal_action_rate` and `invalid_action_rate` now have registry definitions used by the synthetic fixture evaluator.
+- The synthetic evaluator task added registry definitions for:
+  - `evaluated_decision_count`.
+  - `legal_action_count`.
+  - `invalid_action_count`.
+  - `missing_action_count`.
+  - `parse_failure_count`.
+  - `skipped_count`.
+  - `missing_action_rate`.
+  - `parse_failure_rate`.
+- Count metrics are descriptive and have `higher_is_better = null`.
+- `missing_action_rate` and `parse_failure_rate` have `higher_is_better = false`.
+- These metrics are implemented only for the project-authored synthetic fixture boundary. They are not broad evaluator metrics yet.
 
 Recommended envelope fields:
 
@@ -575,11 +645,10 @@ Any true flag must be explicitly audited in a future task.
 Future P5 tasks may implement:
 
 - synthetic fixture based legal-action metric smoke tests.
-- a narrow synthetic legal-action metric evaluator for `tests/fixtures/eval/legal_action_metric_smoke.json` only.
+- a synthetic parse-failure fixture case and smoke coverage for the existing narrow evaluator.
 - fixed decision records with hand-authored `legal_actions`.
 - parser and canonicalizer unit tests.
 - offline envelope smoke tests for legal-action metrics.
-- registry additions for legal-action count/rate metric names.
 
 Future tasks still must not directly implement:
 
@@ -592,12 +661,13 @@ Future tasks still must not directly implement:
 
 ## Verification
 
-This is a documentation-only specification task.
+Current implementation verification:
 
 Run:
 
 ```bash
 git diff --check
+python3 -m unittest tests/eval/test_legal_action_metric.py
 ```
 
-No Python test is required for this document-only task.
+The implemented synthetic evaluator remains limited to project-authored synthetic fixtures and does not read real Tenhou, real haifu, external logs, platform data or model outputs.

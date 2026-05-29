@@ -41,8 +41,16 @@ Current metric names:
 | `stable_dan_ci_upper` | `dan` | true | bootstrap CI exists |
 | `stable_dan_threshold_outcome` | `category` | null | threshold helper exists |
 | `stable_dan_sample_size_status` | `category` | null | sample-size guardrail exists |
-| `legal_action_rate` | `rate` | true | placeholder definition only |
-| `invalid_action_rate` | `rate` | false | placeholder definition only |
+| `legal_action_rate` | `rate` | true | implemented for synthetic legal-action fixture only |
+| `invalid_action_rate` | `rate` | false | implemented for synthetic legal-action fixture only |
+| `evaluated_decision_count` | `count` | null | implemented for synthetic legal-action fixture only |
+| `legal_action_count` | `count` | null | implemented for synthetic legal-action fixture only |
+| `invalid_action_count` | `count` | null | implemented for synthetic legal-action fixture only |
+| `missing_action_count` | `count` | null | implemented for synthetic legal-action fixture only |
+| `parse_failure_count` | `count` | null | implemented for synthetic legal-action fixture only |
+| `skipped_count` | `count` | null | implemented for synthetic legal-action fixture only |
+| `missing_action_rate` | `rate` | false | implemented for synthetic legal-action fixture only |
+| `parse_failure_rate` | `rate` | false | implemented for synthetic legal-action fixture only |
 | `command_exit_code` | `exit_code` | false | schema field only |
 | `latency_ms` | `ms` | false | schema field only |
 | `parse_success_rate` | `rate` | true | placeholder definition only |
@@ -50,7 +58,15 @@ Current metric names:
 
 The stable-dan metrics have existing calculators or helpers.
 
-The legal-action, invalid-action, parse-success, latency and wrapper-smoke metrics are registry definitions for later P5 evaluators. They are not complete evaluation systems yet.
+The legal-action count/rate metrics are implemented only for the project-authored synthetic fixture boundary in:
+
+```text
+src/mjlabai/eval/legal_action_metric.py
+```
+
+That evaluator is not a broad evaluator, canonicalizer, rule engine, CLI, league, runner, model-output evaluator, Tenhou connector or strength proof. It reads no external logs or real platform data.
+
+The parse-success, latency and wrapper-smoke metrics remain registry definitions for later P5 evaluators. They are not complete evaluation systems yet.
 
 The legal-action / invalid-action metric specification is documented in:
 
@@ -88,20 +104,7 @@ The future synthetic legal-action evaluator boundary is documented in:
 docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md
 ```
 
-That boundary says future legal-action synthetic evaluator output should enter `OfflineEvaluationResultEnvelope` with `evaluation_stage = "P5"` and `evaluation_type = "legal_action_metric"`, all safety flags false for synthetic-only smoke runs, explicit fixture/reproducibility metadata and warnings that the result is synthetic-only, not Tenhou data and not model-strength evidence. This schema document still does not implement that evaluator.
-
-Future registry additions may include:
-
-- `evaluated_decision_count`.
-- `legal_action_count`.
-- `invalid_action_count`.
-- `parse_failure_count`.
-- `missing_action_count`.
-- `skipped_count`.
-- `parse_failure_rate`.
-- `missing_action_rate`.
-
-Those names should not be used as implemented metrics until a later task updates the registry and adds tests.
+That boundary says legal-action synthetic evaluator output should enter `OfflineEvaluationResultEnvelope` with `evaluation_stage = "P5"` and `evaluation_type = "legal_action_metric"`, all safety flags false for synthetic-only smoke runs, explicit fixture/reproducibility metadata and warnings that the result is synthetic-only, not Tenhou data and not model-strength evidence. The current helper `build_synthetic_legal_action_metric_envelope(...)` implements this mapping only for the project-authored synthetic fixture result.
 
 ## Result Envelope
 

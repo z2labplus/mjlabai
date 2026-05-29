@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-05-29 — Synthetic legal-action metric evaluator risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Synthetic legal-action rates are mistaken for model strength, Tenhou evidence or LuckyJ comparison. | Evaluation / Governance | High | Medium | Result warnings, docs and evidence log state synthetic-only, not Tenhou, not real haifu, not model strength evidence and not LuckyJ 10.68 comparison. | Open |
+| The narrow fixture evaluator is expanded into broad file ingestion, model-output evaluation, CLI, runner or league behavior. | Scope / Engineering | High | Medium | Current implementation accepts an in-memory fixture mapping only; `10_NEXT` restricts the next task to synthetic parse-failure fixture coverage. | Open |
+| Strict `dahai` comparison is treated as a full canonicalizer. | Engineering / Evaluation | Medium-High | Medium | Docs and tests state current comparison is only actor/action_type/tile/tsumogiri; no reach/calls/kans/red-five/tile-normalization support exists. | Open |
+| `expected_future_outcome` labels leak into evaluator logic. | Evaluation / Test Quality | Medium-High | Low-Medium | Unit test mutates labels and verifies computed counts/rates do not change. | Mitigated in implementation |
+| Zero-denominator cases fabricate `0.0` or `1.0` rates. | Evaluation / Data Quality | High | Low | `LegalActionMetricResult` requires all rates to be `None` when `evaluated_decision_count == 0`. | Mitigated in implementation |
+
 ## 2026-05-28 — v0.4 algorithm racing-funnel risks
 
 | Risk | Severity | Mitigation |

@@ -359,6 +359,23 @@ The fixture contains four project-authored synthetic records labeled for future 
 
 `expected_future_outcome` is only a fixture label. The smoke test does not calculate legal/invalid outcomes, does not compare canonical equality and does not implement an evaluator.
 
+## Current Synthetic Evaluator Use
+
+The first narrow evaluator using this schema is:
+
+```text
+src/mjlabai/eval/legal_action_metric.py
+```
+
+It uses this document's current minimum boundary only:
+
+- `dahai` actions.
+- `strict` matching.
+- `actor`, `action_type`, `tile` and `tsumogiri` equality.
+- `raw_action`, `metadata` and `action_id` ignored for equality.
+
+It does not implement a production canonicalizer. It does not support reach, chi, pon, kan, hora, ryukyoku, red-five normalization, tile notation conversion or relaxed discard matching.
+
 The current minimum action type remains:
 
 ```text

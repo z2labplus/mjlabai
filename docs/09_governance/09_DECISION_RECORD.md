@@ -58,6 +58,49 @@ Status:
 Accepted
 ```
 
+## 2026-05-29 — DR-0025 — Implement Synthetic Legal-Action Evaluator Only Inside Fixture Boundary
+
+Decision:
+
+```text
+Implement the first P5 legal-action metric evaluator only for the project-authored synthetic fixture boundary, with strict dahai comparison and no broad evaluator, canonicalizer, file ingestion, CLI, model or Tenhou coupling.
+```
+
+Context:
+
+- Legal-action metric denominators are defined.
+- Canonical `dahai` fixture schema is defined.
+- The synthetic evaluator boundary is documented.
+- The project-authored fixture `tests/fixtures/eval/legal_action_metric_smoke.json` exists and has shape-only smoke coverage.
+
+Rationale:
+
+- The project needs one executable legality-diagnostic path before broader fixed-position evaluation work.
+- The first implementation must prove the denominator, skipped/missing/parse categories and envelope mapping without reading real data or connecting to models/tools.
+- `expected_future_outcome` must remain a test label, not an input to evaluator logic.
+
+Consequences:
+
+- `src/mjlabai/eval/legal_action_metric.py` implements `evaluate_synthetic_legal_action_fixture(...)`, `LegalActionMetricResult` and `build_synthetic_legal_action_metric_envelope(...)`.
+- The evaluator compares only strict `dahai` fields: actor, action type, tile and tsumogiri.
+- The current fixture yields `legal=1`, `invalid=1`, `missing=1`, `parse_failure=0`, `skipped=1`, `evaluated=3`.
+- No canonicalizer, broad evaluator, legal-action checker, CLI, file ingestion, league, runner, model code, training, self-play, Tenhou connection or external-data ingestion was added.
+
+Linked docs:
+
+- `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`
+- `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`
+- `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0023 — Define Canonical Action Fixture Schema Before Smoke Tests
 
 Decision:
