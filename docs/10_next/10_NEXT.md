@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and real `mjai_log` wrapper tests both pass after allowlisted mixed stdout parser support.
+- [ ] Implement Tenhou stable-dan calculator from room-specific formulas.
 
 Current execution charter:
 
@@ -24,7 +24,8 @@ Limits:
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
-- For the next step, rerun only the manual `Akochan F2 Wrapper Real Exe Audit` workflow after the allowlisted mixed stdout parser fix.
+- For the next step, implement only the Tenhou stable-dan calculator from room-specific formulas.
+- Keep the implementation tied to evaluation metrics; do not expand into league, training, self-play or real Tenhou integration.
 - Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
 - Do not modify unrelated files.
@@ -49,6 +50,7 @@ Limits:
 - [x] 2026-05-29 Fixed Akochan F2 strict JSON stream parser: wrapper now supports single JSON value, JSON Lines, concatenated JSON values and pretty-printed multi-record JSON streams; it preserves `raw_stdout`, exposes `parsed_records`, records `parse_warnings`, and raises bounded diagnostics instead of accepting partial parses. Local fake tests passed 12 tests and local real-exe tests skipped 2 tests as expected without real Akochan.
 - [x] 2026-05-29 Reran manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit`: run `26628128871` at commit `9f51aff1ab403e8053ab71fe1db7587bf7af01cf` built Akochan successfully, fake wrapper tests passed 12 tests and real `legal_action` passed. Real `mjai_log` reached stdout parsing and exposed a mixed stdout shape: JSON records, the known non-JSON status line `calculating review`, then JSON review output.
 - [x] 2026-05-29 Fixed Akochan F2 allowlisted mixed stdout parser: wrapper now supports single JSON value, JSON Lines, concatenated JSON values, pretty-printed multi-record JSON streams and mixed stdout with the single allowlisted non-JSON status line `calculating review`; it records `skipped_non_json_lines`, preserves `raw_stdout`, `parsed_records` and `parse_warnings`, and still rejects unknown non-JSON lines or partial parses. Local fake tests passed 14 tests and local real-exe tests skipped 2 tests as expected without real Akochan.
+- [x] 2026-05-29 Closed Akochan F2 fixed-sample real-exe wrapper validation: workflow run `26629344590` at commit `29f5e1ed19407d169f85524e05438ac8938d2dc2` succeeded; Ubuntu runner built `ai_src/libai.so`, root `libai.so` and `system.exe`; fake wrapper tests passed 14 tests; real `system.exe legal_action` and real `system.exe mjai_log` wrapper tests both passed. This is fixed-sample wrapper/integration evidence only, not Akochan or mjlabai strength evidence.
 
 ## Backlog
 
@@ -63,7 +65,7 @@ Limits:
 - [x] Fix Akochan F2 real-exe `mjai_log` stdout parsing failure: real `mjai_log` now launches with `AKOCHAN_WORKING_DIR`, but wrapper parsing fails with `JSONDecodeError: Extra data`; improve diagnostics and parse the real multi-record stdout shape, then rerun `Akochan F2 Wrapper Real Exe Audit`.
 - [x] Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and real `mjai_log` wrapper tests both pass after strict JSON stream parser support.
 - [x] Fix Akochan F2 real-exe `mjai_log` mixed stdout parser: allow exactly `calculating review` as a skipped non-JSON status line, preserve `skipped_non_json_lines`, and keep unknown non-JSON residue as failure.
-- [ ] Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and real `mjai_log` wrapper tests both pass after allowlisted mixed stdout parser support.
+- [x] Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and real `mjai_log` wrapper tests both pass after allowlisted mixed stdout parser support.
 - [ ] Verify Archer evidence before treating it as a strong Tenhou baseline.
 - [ ] Inspect Kanachan schema/model ideas for Tenhou transfer value.
 - [ ] Decompose Suphx into reproducible experiment cards: SL policy, self-play RL, global reward prediction, oracle guiding, runtime adaptation.

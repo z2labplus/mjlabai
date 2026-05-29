@@ -28,9 +28,10 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P3 / baseline reproducibility audit.
+P3 baseline reproducibility audit closeout; moving to P5 evaluation foundation.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
-Akochan = F2 wrapper skeleton implemented; real-executable workflow/test path added; cwd/runtime blocker mitigated; allowlisted mixed stdout parser fix implemented locally; workflow rerun pending.
+Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
+Next = implement Tenhou stable-dan calculator from room-specific formulas.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -161,10 +162,10 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 
 ## Current Next Task
 
-当前 `10_NEXT` 的下一步是重跑真实外部 `system.exe` wrapper workflow，验证 allowlisted mixed stdout parser 是否解除 `mjai_log` stdout blocker：
+当前 `10_NEXT` 的下一步是实现评测地基中的稳定段位计算器：
 
 ```text
-Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and real `mjai_log` wrapper tests both pass after allowlisted mixed stdout parser support.
+Implement Tenhou stable-dan calculator from room-specific formulas.
 ```
 
 Mortal runnable baseline 已暂停，因为当前没有合法、可校验、可使用的 trained model artifact。Mortal 仍保留为源码、mjai 接口、方法论和工程参考。除非未来先补齐 artifact 来源、version/tag、usage constraints 和 checksum 并重新打开 F1，否则不进入 Mortal F2 adapter。
@@ -179,4 +180,4 @@ F2 task definition 已写入 `docs/07_development_execution/07J_AKOCHAN_F2_INTER
 
 首个 workflow run `26621536548` 已复审：构建、fake wrapper tests 和真实 `legal_action` wrapper test 通过；真实 `mjai_log` wrapper test 失败，因为 Akochan 运行时需要从 process working directory 读取 `setup_mjai.json`。
 
-本地 wrapper cwd 边界已修复：`AkochanWrapper` 支持显式 `working_dir`、`AKOCHAN_WORKING_DIR` 和默认 `Path(system_exe).resolve().parent`；`subprocess.run` 使用 `cwd=self.working_dir`；audit log 记录 `working_dir`。workflow run `26623247276` 证明 `setup_mjai.json` blocker 已消失，真实 `legal_action` 继续通过，但真实 `mjai_log` stdout 触发 `JSONDecodeError: Extra data`。workflow run `26628128871` 进一步证明 strict JSON stream parser 能解析前段 JSON records，但真实 stdout 还包含白名单状态行 `calculating review` 和后续 JSON review output。本地 parser 现在已支持 single JSON、JSON Lines、concatenated JSON values、pretty-printed multi-record JSON stream，以及只跳过 exactly `calculating review` 的 allowlisted mixed stdout；unknown non-JSON line 和 partial parse 仍必须失败。下一步只允许重跑该 GitHub Actions workflow 并复审日志；仍然不训练、不调参、不自我对弈、不接入 Tenhou、不 vendor 或上传第三方源码、二进制、`params/` 或未知 artifact。
+本地 wrapper cwd 边界已修复：`AkochanWrapper` 支持显式 `working_dir`、`AKOCHAN_WORKING_DIR` 和默认 `Path(system_exe).resolve().parent`；`subprocess.run` 使用 `cwd=self.working_dir`；audit log 记录 `working_dir`。workflow run `26623247276` 证明 `setup_mjai.json` blocker 已消失，真实 `legal_action` 继续通过，但真实 `mjai_log` stdout 触发 `JSONDecodeError: Extra data`。workflow run `26628128871` 进一步证明 strict JSON stream parser 能解析前段 JSON records，但真实 stdout 还包含白名单状态行 `calculating review` 和后续 JSON review output。本地 parser 已支持 single JSON、JSON Lines、concatenated JSON values、pretty-printed multi-record JSON stream，以及只跳过 exactly `calculating review` 的 allowlisted mixed stdout；unknown non-JSON line 和 partial parse 仍必须失败。workflow run `26629344590` 已成功验证该路径：Ubuntu runner 成功构建 `ai_src/libai.so`、root `libai.so` 和 `system.exe`，fake wrapper tests 14 tests passed，real `legal_action` 和 real `mjai_log` 均通过。该证据只说明 fixed-sample wrapper/integration 可行，不是 Akochan 或 mjlabai 强度证据。下一步只允许实现 Tenhou stable-dan calculator 这一评测地基任务；仍然不训练、不调参、不自我对弈、不接入 Tenhou、不 vendor 或上传第三方源码、二进制、`params/` 或未知 artifact。

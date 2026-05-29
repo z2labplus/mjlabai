@@ -1,5 +1,22 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.3
+
+- Closed the Akochan F2 fixed-sample real-exe wrapper validation task.
+- Recorded GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` run `26629344590`.
+- Run `26629344590` executed at commit `29f5e1ed19407d169f85524e05438ac8938d2dc2` with commit message `Support Akochan mixed stdout parsing`.
+- Workflow result and job result were both success.
+- Confirmed Ubuntu runner built `ai_src/libai.so`, root `libai.so` and `system.exe`.
+- Confirmed fake wrapper tests passed 14 tests.
+- Confirmed real external `system.exe legal_action` wrapper test passed.
+- Confirmed real external `system.exe mjai_log` wrapper test passed.
+- Confirmed allowlisted mixed stdout parser passed real workflow validation.
+- Recorded that this is fixed-sample wrapper/integration evidence only, not Akochan strength evidence and not mjlabai strength evidence.
+- Recorded that no training, tuning, self-play, match, Tenhou connection, third-party vendoring, binary storage or artifact upload occurred.
+- Recorded that Akochan custom license remains a blocker for modification, redistribution, commercial use or public release without review/permission.
+- Recorded GitHub Actions Node.js 20 deprecation warning as workflow maintenance risk, not an F2 validation blocker.
+- Set the next task to `Implement Tenhou stable-dan calculator from room-specific formulas.`
+
 ## 2026-05-29 — v2.2
 
 - Fixed the Akochan F2 real-exe `mjai_log` mixed stdout parser blocker exposed by workflow run `26628128871`.

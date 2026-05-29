@@ -8,6 +8,58 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — Akochan F2 fixed-sample real-exe wrapper validation passed
+
+- Type: external CI run evidence / fixed-sample wrapper integration evidence.
+- Candidate: Akochan.
+- Funnel stage after run: F1 Conditional Pass; F2 fixed-sample wrapper validation passed.
+- Workflow file: `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml`.
+- Workflow name: `Akochan F2 Wrapper Real Exe Audit`.
+- Workflow run URL: `https://github.com/z2labplus/mjlabai/actions/runs/26629344590`.
+- Workflow run ID: `26629344590`.
+- Job ID: `78473984726`.
+- mjlabai commit: `29f5e1ed19407d169f85524e05438ac8938d2dc2`.
+- Commit message: `Support Akochan mixed stdout parsing`.
+- Akochan repository: `https://github.com/critter-mj/akochan.git`.
+- Akochan commit: `53188a0b926fbab38177f88c3cd87d554cf412af`.
+- Runner: GitHub-hosted `ubuntu-latest`.
+- Run result: success.
+- Job result: success.
+- Successful steps:
+  - Checkout mjlabai.
+  - Configure runner temp paths.
+  - Set up Python.
+  - Install Ubuntu build dependencies.
+  - Clone Akochan at audited commit.
+  - Build `ai_src/libai.so`.
+  - Build root `libai.so`.
+  - Build `system.exe`.
+  - Install mjlabai package.
+  - Run fake wrapper smoke tests: 14 tests passed.
+  - Configure real wrapper environment with runner-temp `AKOCHAN_SYSTEM_EXE`, `AKOCHAN_WORKING_DIR` and `AKOCHAN_MJAI_LOG_SAMPLE`.
+  - Run real `system.exe` wrapper tests: 2 tests passed.
+- Real wrapper test result:
+  - `legal_action`: passed against real runner-temp `system.exe`.
+  - `mjai_log`: passed against real runner-temp `system.exe`.
+- Parser evidence:
+  - The allowlisted mixed stdout parser has now been verified by a real GitHub Actions workflow run.
+  - The only allowlisted non-JSON status line remains exactly `calculating review`.
+- Guardrails confirmed:
+  - No training.
+  - No tuning.
+  - No self-play, match or league command.
+  - No real Tenhou connection.
+  - No platform automation, scraping, account tooling, evasion or anti-detection logic.
+  - No unknown model weights.
+  - No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
+  - No GitHub Actions artifact was uploaded.
+- Limitations:
+  - This is fixed-sample wrapper/integration evidence only.
+  - This is not Akochan playing-strength evidence.
+  - This is not mjlabai playing-strength evidence.
+  - Akochan custom license remains a constraint before modification, redistribution, commercial use or public release.
+  - GitHub Actions reported a Node.js 20 deprecation warning for used actions; this is workflow maintenance risk and does not affect this F2 validation result.
+
 ### 2026-05-29 — Akochan F2 allowlisted mixed stdout parser fix
 
 - Type: internal implementation / local test evidence.

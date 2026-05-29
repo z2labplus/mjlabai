@@ -60,6 +60,58 @@ Status:
 Accepted
 ```
 
+## 2026-05-29 — DR-0012 — Close Akochan F2 Fixed-Sample Wrapper Validation and Move to Stable-Dan Metric Work
+
+Decision:
+
+```text
+Treat Akochan as F1 Conditional Pass with F2 fixed-sample real-exe wrapper validation passed.
+Do not treat this as strength evidence.
+Set the next task to implement the Tenhou stable-dan calculator from room-specific formulas.
+```
+
+Context:
+
+- GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` run `26629344590` succeeded.
+- The run used mjlabai commit `29f5e1ed19407d169f85524e05438ac8938d2dc2`.
+- Ubuntu runner built `ai_src/libai.so`, root `libai.so` and `system.exe`.
+- Fake wrapper tests passed 14 tests.
+- Real external `system.exe legal_action` wrapper test passed.
+- Real external `system.exe mjai_log` wrapper test passed.
+- No third-party source, binary, `params/` or build artifact was stored or uploaded.
+
+Rationale:
+
+- F2 fixed-sample wrapper validation has enough evidence to close this narrow integration task.
+- The project still lacks the evaluation metric foundation needed to compare future candidates in Tenhou terms.
+- Stable dan is part of the north-star target and should be implemented before broader model comparison or strength claims.
+
+Consequences:
+
+- Akochan remains an interface/reviewer candidate, not a proved strength baseline.
+- Broader Akochan evaluator/reviewer integration requires a separate task and license boundary review.
+- `docs/10_next/10_NEXT.md` now points to the Tenhou stable-dan calculator task.
+- No training, self-play, match, league, real Tenhou integration or platform automation is authorized by this decision.
+
+Linked docs:
+
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+- `docs/07_development_execution/07J_AKOCHAN_F2_INTERFACE_TASK.md`
+- `docs/07_development_execution/07B_TASK_BACKLOG.md`
+- `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0008 — Validate Akochan F2 Wrapper Through Temporary GitHub Actions Real-Exe Workflow
 
 Decision:

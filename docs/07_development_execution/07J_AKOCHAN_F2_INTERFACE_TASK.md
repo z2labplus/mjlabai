@@ -329,8 +329,15 @@ Real-executable validation path status on 2026-05-29:
   - fake wrapper tests passed 12 tests,
   - real `legal_action` passed,
   - real `mjai_log` produced JSON records, the known non-JSON status line `calculating review`, then JSON review output.
-- The allowlisted mixed stdout parser fix has now been implemented locally.
-- The next evidence step is rerunning the manual workflow and reviewing whether real `mjai_log` passes.
+- Workflow rerun `26629344590` at commit `29f5e1ed19407d169f85524e05438ac8938d2dc2` showed:
+  - workflow result and job result were success,
+  - Ubuntu runner built `ai_src/libai.so`, root `libai.so` and `system.exe`,
+  - fake wrapper tests passed 14 tests,
+  - real `legal_action` passed,
+  - real `mjai_log` passed,
+  - no third-party source, binary, `params/` or build artifact was uploaded.
+- F2 fixed-sample real-exe wrapper validation is now passed.
+- This remains fixed-sample wrapper/integration evidence only, not strength evidence.
 
 ## H. F2 Failure Conditions
 
@@ -352,7 +359,7 @@ F2 implementation must fail or stop if:
 Recommended next `docs/10_next/10_NEXT.md` first task:
 
 ```text
-Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and real `mjai_log` wrapper tests both pass after allowlisted mixed stdout parser support.
+Implement Tenhou stable-dan calculator from room-specific formulas.
 ```
 
 Reason:
@@ -360,10 +367,9 @@ Reason:
 - F1 has Conditional Pass evidence from Ubuntu GitHub Actions run `26617347785`.
 - The F2 interface boundary, state/action mapping, audit log schema and license guardrails are now defined.
 - The minimal wrapper skeleton passed fake-executable smoke tests.
-- The real-executable workflow/test path exists.
-- The first real-exe workflow run proved `legal_action` compatibility but exposed an `mjai_log` runtime cwd blocker.
-- The cwd boundary fix has been validated far enough to remove the `setup_mjai.json` failure.
-- The allowlisted mixed stdout parser fix is implemented locally; the remaining evidence gap is rerunning real `mjai_log` for fixed samples, still under no-vendor, no-training and no-Tenhou constraints.
+- The real-executable workflow/test path passed on fixed samples in run `26629344590`.
+- The next project bottleneck is evaluation metric grounding, beginning with Tenhou stable-dan calculation.
+- Further Akochan evaluator/reviewer integration should be a separate task and must keep no-vendor, no-training, no-Tenhou and license guardrails.
 
 Review note:
 

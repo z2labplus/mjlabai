@@ -2,13 +2,14 @@
 
 ## Current stage
 
-P3 / baseline reproducibility audit.
+P3 baseline reproducibility audit closeout, moving to P5 evaluation foundation.
 
-Current funnel focus:
+Current focus:
 
 ```text
 Mortal = F1 paused as runnable baseline / ReferenceOnly
-Akochan = F2 wrapper skeleton implemented; real-executable workflow/test path added; cwd/runtime blocker mitigated; allowlisted mixed stdout parser fix implemented locally; workflow rerun pending
+Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence
+Next = P5 evaluation foundation: Tenhou stable-dan calculator from room-specific formulas
 ```
 
 ## AI role
@@ -17,9 +18,9 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Verify whether the first local baseline candidate can be installed, built, run on a minimal sample and described well enough to later enter the unified evaluation interface.
+Close the current baseline fixed-sample wrapper evidence and begin the evaluation metric foundation needed to compare future candidates.
 
-This stage supports the north-star target by creating a reproducible baseline and engineering reference before any supervised learning, RL, search or LuckyJ validation work begins.
+This supports the north-star target by pairing reproducible baseline/interface evidence with Tenhou-oriented metrics before any supervised learning, RL, search or LuckyJ validation work begins.
 
 ## Inputs
 
@@ -51,11 +52,11 @@ This stage supports the north-star target by creating a reproducible baseline an
 - Do not vendor or copy third-party source into this repository.
 - Do not exceed the documented Akochan F2 wrapper boundary: fixed `legal_action` / `mjai_log` samples only until later evidence justifies more.
 - Treat fake-executable wrapper tests as implementation smoke tests only, not real Akochan compatibility or strength evidence.
-- Treat the new real-exe workflow definition as a validation path only until a manual workflow run succeeds and logs are reviewed.
+- Treat Akochan run `26629344590` as fixed-sample wrapper/integration evidence only, not strength evidence.
 - Treat workflow run `26621536548` as partial F2 evidence: real `legal_action` passed, but real `mjai_log` remained blocked by `setup_mjai.json` working-directory handling.
 - Treat workflow run `26623247276` as partial F2 evidence: cwd handling is improved and real `legal_action` passed, but real `mjai_log` remained blocked by stdout parsing.
 - Treat workflow run `26628128871` as partial F2 evidence: strict JSON stream parsing improved diagnostics, but real `mjai_log` exposed mixed stdout with the known status line `calculating review`.
-- Treat the allowlisted mixed stdout parser fix as local implementation evidence only until `Akochan F2 Wrapper Real Exe Audit` is rerun and logs are reviewed.
+- Treat workflow run `26629344590` as closing the fixed-sample real-exe wrapper validation task: fake tests passed 14 tests, real `legal_action` passed and real `mjai_log` passed.
 - Do not vendor or store Akochan source, `system.exe`, `libai.so`, `params/`, third-party binaries or unknown artifacts in this repository.
 - Do not promote Mortal to F2 unless a lawful, verifiable and usable trained model artifact is provided and Mortal F1 is re-opened with source, version/tag, usage constraints and checksum.
 
@@ -64,6 +65,8 @@ This stage supports the north-star target by creating a reproducible baseline an
 F1 is an audit stage only. It may inspect external source repositories and local dependencies, but it must not create project source code or training scripts.
 
 F2 may create only the documented minimal wrapper skeleton for fixed `legal_action` / `mjai_log` samples. F2 must keep Akochan source and binaries outside this repository and must not become training, self-play, Tenhou integration or platform automation.
+
+The next evaluation-foundation task may implement a Tenhou stable-dan calculator, but it must remain an offline metric utility and must not become training, self-play, league execution or real Tenhou integration.
 
 ## Output files
 
@@ -92,4 +95,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and real `mjai_log` wrapper tests both pass after allowlisted mixed stdout parser support.
+Implement Tenhou stable-dan calculator from room-specific formulas.

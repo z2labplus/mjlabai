@@ -23,10 +23,10 @@
 | Fix Akochan F2 real-exe mjai_log stdout parser | 04/06/07/09 | P0 | Run `26623247276` | Wrapper preserves raw output, improves diagnostics and parses real multi-record `mjai_log` stdout shape; workflow rerun passes/fails with updated evidence | Done locally: strict JSON stream parser tests passed |
 | Rerun Akochan F2 real-exe workflow after strict parser fix | 04/06/07/09 | P0 | Strict JSON stream parser fix | Manual workflow logs show whether real `legal_action` and real `mjai_log` wrapper tests both pass; no artifact upload | Done: run `26628128871`; real `mjai_log` exposed `calculating review` mixed stdout |
 | Fix Akochan F2 real-exe mjai_log allowlisted mixed stdout parser | 04/06/07/09 | P0 | Run `26628128871` | Wrapper parses JSON records plus exactly the allowlisted `calculating review` status line, records skipped lines and still rejects unknown non-JSON residue | Done locally: allowlisted mixed stdout parser tests passed |
-| Rerun Akochan F2 real-exe workflow after allowlisted mixed parser fix | 04/06/07/09 | P0 | Allowlisted mixed stdout parser fix | Manual workflow logs show whether real `legal_action` and real `mjai_log` wrapper tests both pass; no artifact upload | Planned: current next |
+| Rerun Akochan F2 real-exe workflow after allowlisted mixed parser fix | 04/06/07/09 | P0 | Allowlisted mixed stdout parser fix | Manual workflow logs show whether real `legal_action` and real `mjai_log` wrapper tests both pass; no artifact upload | Done: run `26629344590` succeeded; fixed-sample wrapper validation passed |
 | Kanachan transfer review | 02/03/04 | P1 | candidate table stable | schema/model/data ideas mapped to Tenhou transfer risks | Planned |
 | Suphx method decomposition | 03/04/05 | P0 | evaluation harness draft | SL, self-play RL, GRP, oracle guiding and runtime adaptation experiment cards created | Planned |
-| Implement Tenhou stable-dan calculator | 05 | P0 | metric spec | room-specific formulas and bootstrap requirement documented/tested | Planned |
+| Implement Tenhou stable-dan calculator | 05 | P0 | metric spec | room-specific formulas and bootstrap requirement documented/tested | Planned: current next |
 | Create tiny benchmark harness | 05/06 | P0 | adapter spec | legal action rate, latency, fixed-position decisions and result table recorded | Planned |
 | Define replay schema | 02 | P0 | benchmark metrics stable | `02B_REPLAY_SCHEMA.md` filled | Planned |
 | Build legal action reconstruction test | 02 | P0 | schema | test plan exists | Planned |

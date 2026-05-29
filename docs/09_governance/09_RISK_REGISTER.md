@@ -110,31 +110,39 @@
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
 |---|---|---|---|---|---|
-| The real-exe workflow definition is mistaken for successful real `system.exe` compatibility evidence before it is run. | Governance / Evaluation | High | Medium | Keep `10_NEXT` focused on manually running the workflow and reviewing run ID/logs before promoting F2 status. | Open |
+| The real-exe workflow definition is mistaken for successful real `system.exe` compatibility evidence before it is run. | Governance / Evaluation | High | Medium | Keep candidate status tied to successful run IDs and logs. | Mitigated by successful run `26629344590` for fixed-sample wrapper validation |
 | Workflow logs could expose too much third-party build output or sample stdout. | Governance | Low-Medium | Medium | Write only short summaries to GitHub Step Summary and do not upload artifacts. | Open |
 | GitHub Actions temporary build succeeds but local macOS remains unable to run real Akochan. | Reproducibility | Medium | High | Treat evidence as Ubuntu-runner compatibility only; keep local macOS build limits documented. | Open |
-| Real `mjai_log` stdout may be newline-delimited JSON or another multi-record JSON stream rather than a single JSON document. | Engineering | Medium | Medium | Wrapper now supports strict JSON stream parsing for JSON Lines, concatenated JSON values and pretty multi-record JSON streams; rerun workflow to verify. | Mitigation implemented locally; workflow rerun pending |
+| Real `mjai_log` stdout may be newline-delimited JSON, another multi-record JSON stream or an allowlisted mixed stream rather than a single JSON document. | Engineering | Medium | Medium | Wrapper supports strict JSON streams plus exactly the allowlisted `calculating review` status line. | Mitigated by successful run `26629344590` |
 | The workflow accidentally persists third-party source or binaries. | License / Governance | High | Low | Use runner temp directories only and do not configure artifact upload or caches for Akochan outputs. | Open |
-| Akochan `system.exe` depends on runtime config files such as `setup_mjai.json` being visible from the process working directory. | Engineering / Reproducibility | Medium-High | High | Wrapper now uses explicit `working_dir`, `AKOCHAN_WORKING_DIR` or default executable directory as subprocess cwd; rerun the real-exe workflow to verify. | Mitigation implemented locally; workflow rerun pending |
+| Akochan `system.exe` depends on runtime config files such as `setup_mjai.json` being visible from the process working directory. | Engineering / Reproducibility | Medium-High | High | Wrapper uses explicit `working_dir`, `AKOCHAN_WORKING_DIR` or default executable directory as subprocess cwd; workflow sets runner-temp `AKOCHAN_WORKING_DIR`. | Mitigated by successful runs `26623247276` and `26629344590` |
 
 ## 2026-05-29 — Akochan F2 working-directory fix risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
 |---|---|---|---|---|---|
-| Local fake tests may pass while real Akochan still needs additional runtime files or cwd assumptions beyond `setup_mjai.json`. | Engineering / Reproducibility | Medium | Medium | Rerun `Akochan F2 Wrapper Real Exe Audit` against the Ubuntu-built real `system.exe` and record the run ID/logs before closing F2 real-exe compatibility. | Open |
+| Local fake tests may pass while real Akochan still needs additional runtime files or cwd assumptions beyond `setup_mjai.json`. | Engineering / Reproducibility | Medium | Medium | Rerun `Akochan F2 Wrapper Real Exe Audit` against the Ubuntu-built real `system.exe` and record the run ID/logs before closing F2 real-exe compatibility. | Mitigated for fixed samples by successful run `26629344590` |
 | `AKOCHAN_WORKING_DIR` could point to a directory that does not match the audited executable or commit. | Reproducibility / Governance | Medium | Medium | Require explicit environment setup in workflow, record `working_dir` in every audit log, and keep external commit/build environment in the audit record. | Open |
 
 ## 2026-05-29 — Akochan F2 real mjai_log parser risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
 |---|---|---|---|---|---|
-| Real `mjai_log` stdout is multi-record or mixed-format output that the current wrapper parser cannot represent. | Engineering / Reproducibility | Medium-High | High | Parser now preserves raw stdout, records parsed records and warnings, supports strict JSON streams and raises bounded diagnostics on residue; rerun the workflow before claiming real `mjai_log` compatibility. | Mitigation implemented locally; workflow rerun pending |
-| Parser fixes could silently discard non-JSON lines that matter for reproducibility or debugging. | Governance / Engineering | Medium | Medium | Strict parser rejects partial parses and reports bounded stdout summaries, stdout SHA256, failure position and parsed-record count; keep raw stdout on success. | Mitigation implemented locally; workflow rerun pending |
+| Real `mjai_log` stdout is multi-record or mixed-format output that the current wrapper parser cannot represent. | Engineering / Reproducibility | Medium-High | High | Parser preserves raw stdout, records parsed records and warnings, supports strict JSON streams plus exactly `calculating review`, and raises bounded diagnostics on residue. | Mitigated for fixed samples by successful run `26629344590` |
+| Parser fixes could silently discard non-JSON lines that matter for reproducibility or debugging. | Governance / Engineering | Medium | Medium | Strict parser rejects partial parses and unknown non-JSON lines, reports bounded stdout summaries, stdout SHA256, failure position and parsed-record count; keep raw stdout on success. | Mitigated for fixed samples by successful run `26629344590`; keep open for broader outputs |
 
 ## 2026-05-29 — Akochan F2 allowlisted mixed stdout parser risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
 |---|---|---|---|---|---|
-| Allowlisting a non-JSON `mjai_log` status line could accidentally hide unexpected runtime output. | Governance / Engineering | Medium-High | Medium | Only the exact line `calculating review` is allowlisted; every other non-JSON line still raises `AkochanOutputParseError` with bounded diagnostics and stdout SHA256. | Mitigation implemented locally; workflow rerun pending |
+| Allowlisting a non-JSON `mjai_log` status line could accidentally hide unexpected runtime output. | Governance / Engineering | Medium-High | Medium | Only the exact line `calculating review` is allowlisted; every other non-JSON line still raises `AkochanOutputParseError` with bounded diagnostics and stdout SHA256. | Mitigated for fixed samples by successful run `26629344590`; keep open for broader outputs |
 | The real `mjai_log` output may contain additional known status lines not covered by local fake tests. | Engineering / Reproducibility | Medium | Medium | Rerun the real-exe workflow and add only specific, reviewed status lines if logs prove they are necessary and safe. | Open |
-| Local parser tests may pass while the real GitHub Actions output still has an unmodeled stdout shape. | Reproducibility | Medium | Medium | Keep `10_NEXT` on the manual `Akochan F2 Wrapper Real Exe Audit` rerun and require run ID/log review before closing F2 real-exe compatibility. | Open |
+| Local parser tests may pass while the real GitHub Actions output still has an unmodeled stdout shape. | Reproducibility | Medium | Medium | Require run ID/log review before closing F2 real-exe compatibility. | Mitigated by successful run `26629344590` for fixed samples |
+
+## 2026-05-29 — Akochan F2 closeout risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Fixed-sample wrapper validation is mistaken for Akochan or mjlabai strength evidence. | Evaluation / Governance | High | Medium | Label run `26629344590` as fixed-sample integration evidence only; require F3+ offline/evaluation evidence before any strength claim. | Open |
+| Akochan is expanded into broader evaluator/reviewer integration without rechecking license boundaries. | License / Scope | High | Medium | Keep Akochan at private/internal audit boundary; create a separate task and require Web/legal review before modification, redistribution, commercial use or public release. | Open |
+| GitHub Actions Node.js 20 deprecation warning later breaks the workflow even though current F2 validation passed. | Infrastructure / Maintenance | Medium | Medium | Track workflow action/runtime updates; warning does not affect run `26629344590` but should be addressed before relying on repeated CI. | Open |

@@ -33,9 +33,9 @@ Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usa
 Akochan F1 is Conditional Pass after successful Ubuntu GitHub Actions build/minimal-run evidence, with license and local macOS build limits still open.
 Akochan F2 task definition is complete.
 Minimal Akochan F2 wrapper skeleton is implemented and passes fake-executable smoke tests.
-The real external `system.exe` validation path exists and the first workflow run was reviewed; it failed only at the real `mjai_log` wrapper test because Akochan expected `setup_mjai.json` in the process working directory.
-The wrapper working-directory boundary has now been fixed locally: explicit `working_dir`, `AKOCHAN_WORKING_DIR` and default `Path(system_exe).resolve().parent` are supported, subprocess calls use that cwd, and audit logs record it.
-The follow-up workflow run confirmed the `setup_mjai.json` cwd blocker is gone, but real `mjai_log` stdout then exposed mixed output: JSON records, the known non-JSON status line `calculating review`, then JSON review output. The wrapper parser now supports strict JSON streams plus that single allowlisted status line, records `skipped_non_json_lines`, and is ready for workflow rerun.
+Akochan F2 fixed-sample real-exe wrapper validation has passed: workflow run `26629344590` at commit `29f5e1ed19407d169f85524e05438ac8938d2dc2` built `ai_src/libai.so`, root `libai.so` and `system.exe`; fake wrapper tests passed 14 tests; real `legal_action` and real `mjai_log` wrapper tests both passed.
+This is fixed-sample wrapper/integration evidence only. It is not Akochan strength evidence, not mjlabai strength evidence, and not authorization for broad adapter work, self-play, match, training or Tenhou integration.
+The next project task moves to evaluation groundwork: implement the Tenhou stable-dan calculator from room-specific formulas.
 ```
 
 ## Current methodology
@@ -85,7 +85,7 @@ Roles:
 - Suphx: main methodology blueprint, split into reproducible modules.
 - Mortal: paused as a runnable baseline; retained as source-code, mjai-interface, methodology and engineering reference.
 - Archer: high-potential Tenhou baseline candidate requiring verification.
-- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, minimal F2 wrapper skeleton implemented for fixed samples, real-executable validation workflow/test path added, first real-exe workflow run failed on the `mjai_log` cwd/runtime boundary, wrapper cwd handling has been fixed and rerun, allowlisted mixed stdout parser support is implemented locally, and the next step is rerunning the manual real-exe workflow without expanding scope.
+- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions; F2 fixed-sample wrapper validation passed through real-exe workflow run `26629344590`. It remains an interface/reviewer candidate, not a strength baseline. Any broader evaluator/reviewer integration must be a separate task with license boundary review.
 - Kanachan: data/model architecture reference; not direct Tenhou baseline until adapted.
 
 Main technical route:
@@ -124,7 +124,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and real `mjai_log` wrapper tests both pass after allowlisted mixed stdout parser support.
+Implement Tenhou stable-dan calculator from room-specific formulas.
 Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload or broad adapter work.
 ```
 
@@ -216,6 +216,35 @@ Akochan F2 wrapper skeleton:
 - Added `tests/fixtures/akochan/fake_system_exe.py` as a test substitute only. It is not Akochan and is not model-strength evidence.
 - Local smoke test `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 14 tests after the allowlisted mixed stdout parser fix.
 - No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
+
+Akochan F2 fixed-sample real-exe wrapper validation closeout:
+
+- Workflow: `Akochan F2 Wrapper Real Exe Audit`.
+- Run URL: `https://github.com/z2labplus/mjlabai/actions/runs/26629344590`.
+- Commit: `29f5e1ed19407d169f85524e05438ac8938d2dc2`.
+- Commit message: `Support Akochan mixed stdout parsing`.
+- Result: success.
+- Job result: success.
+- Successful evidence:
+  - Ubuntu runner built `ai_src/libai.so`.
+  - Ubuntu runner built root `libai.so`.
+  - Ubuntu runner built `system.exe`.
+  - Fake wrapper tests passed 14 tests.
+  - Real `system.exe legal_action` wrapper test passed.
+  - Real `system.exe mjai_log` wrapper test passed.
+  - Allowlisted mixed stdout parser was verified by the real workflow.
+- Guardrails:
+  - No training.
+  - No tuning.
+  - No self-play, match or league command.
+  - No real Tenhou connection.
+  - No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary or build artifact was stored or uploaded.
+- Interpretation:
+  - Akochan status is F1 Conditional Pass plus F2 fixed-sample wrapper validation passed.
+  - This is not playing-strength evidence.
+  - This does not make Akochan a mainline baseline or prove mjlabai strength.
+  - Akochan custom license still restricts modification, redistribution, commercial use and public release.
+  - GitHub Actions reported a Node.js 20 deprecation warning; this is workflow maintenance risk and does not affect the F2 validation result.
 
 Akochan F2 real executable validation path:
 
@@ -349,8 +378,25 @@ Akochan F2 allowlisted mixed stdout parser fix:
 - Local tests:
   - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
   - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped as expected without real Akochan.
-- Current evidence gap:
-  - The manual workflow must be rerun to verify real `mjai_log` compatibility after allowlisted mixed stdout parser support.
+- Real workflow validation:
+  - Workflow run `26629344590` verified real `legal_action` and real `mjai_log` wrapper tests both pass after allowlisted mixed stdout parser support.
+
+Fourth Akochan F2 real executable workflow run:
+
+- Run URL: `https://github.com/z2labplus/mjlabai/actions/runs/26629344590`.
+- Commit: `29f5e1ed19407d169f85524e05438ac8938d2dc2`.
+- Result: success.
+- Successful evidence:
+  - Ubuntu runner built `ai_src/libai.so`.
+  - Ubuntu runner built root `libai.so`.
+  - Ubuntu runner built `system.exe`.
+  - Fake wrapper tests passed 14 tests.
+  - Real `legal_action` wrapper test passed.
+  - Real `mjai_log` wrapper test passed.
+- Interpretation:
+  - Akochan F2 fixed-sample real-exe wrapper validation is complete.
+  - This is fixed-sample integration evidence only, not strength evidence.
+  - Further evaluator/reviewer integration must be a separate scoped task with license guardrails.
 
 ## Do not forget
 
@@ -358,5 +404,5 @@ Akochan F2 allowlisted mixed stdout parser fix:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- P3 is an audit stage: do not train, tune, self-play or connect to real Tenhou.
+- Current next work is evaluation groundwork: do not train, tune, self-play or connect to real Tenhou.
 - Technical decisions from Web ChatGPT Pro must be written into Git + docs before becoming project facts.
