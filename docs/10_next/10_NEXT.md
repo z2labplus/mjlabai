@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Define P5 action canonicalization schema for legal-action metric fixtures.
+- [ ] Add synthetic legal-action metric fixture schema smoke test.
 
 Current execution charter:
 
@@ -24,7 +24,7 @@ Limits:
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
-- For the next step, define the P5 action canonicalization schema for legal-action metric fixtures.
+- For the next step, add a synthetic legal-action metric fixture schema smoke test.
 - Keep the implementation tied to evaluation metrics; do not expand into league, training, self-play or real Tenhou integration.
 - Use only offline synthetic/local placement inputs; do not read Tenhou accounts, online platforms or external logs.
 - Do not add CLI, file ingestion, league harness, external-data readers or new model code unless the first unchecked task explicitly authorizes a lightweight schema-only code change.
@@ -64,6 +64,7 @@ Limits:
 - [x] 2026-05-29 Defined P5 offline evaluation metric registry and result envelope schema: added `src/mjlabai/eval/offline_result.py`, exports, unit tests and `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`. The schema records metric values, confidence intervals, command-status summaries, reproducibility metadata, safety flags, warnings and evidence references. It does not implement CLI, league, runner, training, self-play, Tenhou access or external-data ingestion.
 - [x] 2026-05-29 Added offline evaluation envelope smoke fixture for synthetic stable-dan report: added `tests/eval/test_offline_envelope_smoke.py`, which starts from the project-authored synthetic placement fixture, builds a stable-dan report, wraps it in `OfflineEvaluationResultEnvelope`, validates required stable-dan metrics, reproducibility metadata, all-false safety flags and JSON serialization. No helper, CLI, league, runner, training, self-play, Tenhou access or external-data ingestion was added.
 - [x] 2026-05-29 Defined P5 legal-action and invalid-action metric specification: added `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`, defining decision records, legal/proposed actions, denominator rules, legal/invalid/parse-failure/missing/skipped counts, canonical matching principles, result-envelope mapping and guardrails. No evaluator, legal-action checker, CLI, league, runner, training, self-play, Tenhou access, external-log reader or platform-data reader was added.
+- [x] 2026-05-29 Defined P5 action canonicalization schema for legal-action metric fixtures: added `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`, defining canonical action fields, current minimum `dahai` fixture scope, strict matching, future relaxed matching boundary, legal-action fixture shape, outcome mapping, edge cases and result-envelope mapping. No canonicalizer, evaluator, CLI, league, runner, training, self-play, Tenhou access, external-log reader or platform-data reader was added.
 
 ## Backlog
 
@@ -93,6 +94,7 @@ Limits:
 - [x] Define P5 offline evaluation metric registry and result envelope schema.
 - [x] Add offline evaluation envelope smoke fixture for synthetic stable-dan report.
 - [x] Define P5 legal-action and invalid-action metric specification.
-- [ ] Define P5 action canonicalization schema for legal-action metric fixtures.
+- [x] Define P5 action canonicalization schema for legal-action metric fixtures.
+- [ ] Add synthetic legal-action metric fixture schema smoke test.
 - [ ] Create tiny benchmark harness for legal action rate, latency and fixed-position decisions.
 - [ ] Update `09_EVIDENCE_LOG.md` whenever new external evidence is added.

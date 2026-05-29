@@ -205,6 +205,12 @@ This task defines the vocabulary only. It does not implement code.
 
 Canonical matching compares structured action fields, not raw text.
 
+The action canonicalization schema is defined in:
+
+```text
+docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md
+```
+
 Recommended canonical action fields:
 
 - `actor`.
@@ -341,6 +347,7 @@ Any true flag must be explicitly audited in a future task.
 
 Future P5 tasks may implement:
 
+- synthetic legal-action metric fixture schema smoke tests.
 - synthetic fixture based legal-action metric smoke tests.
 - fixed decision records with hand-authored `legal_actions`.
 - parser and canonicalizer unit tests.

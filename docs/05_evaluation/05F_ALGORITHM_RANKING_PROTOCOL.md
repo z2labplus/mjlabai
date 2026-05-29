@@ -156,11 +156,12 @@ Current implementation status:
 - `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md` defines the offline metric registry and result envelope schema for future P5 outputs.
 - `tests/eval/test_offline_envelope_smoke.py` verifies that a synthetic stable-dan report can be represented in the offline result envelope.
 - `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md` defines legal-action and invalid-action metric denominators, parse-failure and missing-action handling, skipped-record rules, canonical action matching principles and result-envelope mapping.
+- `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md` defines canonical action fields, minimum `dahai` fixture scope, strict matching, future relaxed matching boundary, legal-action fixture shape and action outcome mapping.
 - `fourth_count == 0` is undefined and raises `StableDanUndefinedError`; do not report infinite stable dan.
 - Bootstrap resamples with `fourth_count == 0` are recorded as undefined; if all resamples are undefined, `StableDanBootstrapUndefinedError` is raised.
 - The synthetic smoke fixture is not model-strength evidence, Tenhou data, an external log, a league result or a LuckyJ comparison claim.
 - `src/mjlabai/eval/offline_result.py` defines `EvaluationMetricDefinition`, `OfflineEvaluationMetricValue`, `OfflineConfidenceInterval`, `OfflineCommandStatus`, `OfflineReproducibilityMetadata`, `OfflineEvaluationSafetyFlags` and `OfflineEvaluationResultEnvelope`.
-- P5 overall is still in progress. The next required evaluation-foundation task is to define a canonical action schema for legal-action metric fixtures before implementing broader evaluator logic.
+- P5 overall is still in progress. The next required evaluation-foundation task is to add a synthetic legal-action metric fixture schema smoke test before implementing broader evaluator logic.
 
 ### Legal-action / invalid-action metrics
 
@@ -204,6 +205,8 @@ Skipped records do not enter the denominator, but must be reported through `skip
 `legal_action_rate + invalid_action_rate` is not required to equal `1.0`, because parse failures and missing actions are separate outcomes.
 
 High `legal_action_rate` and low `invalid_action_rate` show only basic output legality. They are not LuckyJ comparison evidence and not proof of strong mahjong decisions.
+
+The current minimum canonical fixture scope is `dahai` only. Default matching mode is `strict`: actor, action type, tile and known `tsumogiri` fields must match, while `raw_action` and metadata are preserved for audit but ignored for equality.
 
 ### Level 5 — Promotion gate
 

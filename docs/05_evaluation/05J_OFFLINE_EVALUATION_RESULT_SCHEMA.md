@@ -60,6 +60,14 @@ docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md
 
 That specification defines the denominator, parse-failure handling, missing-action handling, skipped-record handling, canonical matching principles and result-envelope mapping. It does not implement an evaluator.
 
+The action canonicalization schema for legal-action metric fixtures is documented in:
+
+```text
+docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md
+```
+
+That schema defines canonical action fields, current minimum `dahai` fixture scope, strict matching, future relaxed matching boundaries and fixture shape. It does not implement a canonicalizer.
+
 Future registry additions may include:
 
 - `evaluated_decision_count`.

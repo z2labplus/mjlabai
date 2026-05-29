@@ -1,5 +1,42 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.15
+
+- Defined the P5 action canonicalization schema for legal-action metric fixtures.
+- Added `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`.
+- Updated `docs/00_DOCS_INDEX.md` to include the new schema document.
+- Defined canonical action fields:
+  - `schema_version`.
+  - `action_id`.
+  - `actor`.
+  - `action_type`.
+  - `tile`.
+  - `tsumogiri`.
+  - `called_tile`.
+  - `consumed_tiles`.
+  - `target`.
+  - `source`.
+  - `reach_declared`.
+  - `kan_type`.
+  - `raw_action`.
+  - `metadata`.
+- Recorded current minimum fixture scope:
+  - `current_minimum_supported_action_type = dahai`.
+- Defined strict `dahai` matching:
+  - actor must match.
+  - action type must match.
+  - tile must match.
+  - known `tsumogiri` must match.
+  - unknown/null `tsumogiri` must not be guessed.
+  - `raw_action` and `metadata` are ignored for equality.
+- Documented future `relaxed_discard_tile` mode as a non-default, not-yet-implemented mode that must be recorded in result envelopes if ever used.
+- Defined minimum legal-action fixture shape for `proposed_action` and `legal_actions`.
+- Recorded edge cases for reach, chi/pon, kan, hora/ryukyoku, red fives and tile notation mismatch.
+- No canonicalizer, evaluator, legal-action checker, Python schema/dataclass, CLI, league harness, match runner, training, tuning, self-play, Tenhou connection, external-log reader or platform-data reader was added.
+- Validation:
+  - `git diff --check`: passed.
+- Set the next P5-only task to `Add synthetic legal-action metric fixture schema smoke test.`
+
 ## 2026-05-29 — v2.14
 
 - Defined the P5 legal-action and invalid-action metric specification.

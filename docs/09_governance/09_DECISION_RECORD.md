@@ -14,6 +14,48 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-05-29 — DR-0023 — Define Canonical Action Fixture Schema Before Smoke Tests
+
+Decision:
+
+```text
+Define a documentation-only canonical action schema for P5 legal-action metric fixtures before adding fixture smoke tests or evaluator code.
+```
+
+Context:
+
+- Legal-action and invalid-action metric denominators are defined.
+- The next P5 task needs synthetic fixtures whose `proposed_action` and `legal_actions` can be compared structurally.
+- Without a canonical action schema, fixture authors could encode actions inconsistently and make legality metrics unreliable.
+
+Rationale:
+
+- A shared canonical action object makes later fixture smoke tests auditable.
+- Keeping the current minimum scope to `dahai` reduces ambiguity before calls, reach and kan edge cases are implemented.
+- Strict matching as the default prevents relaxed behavior from silently changing legal-action rates.
+- Preserving `raw_action` and `metadata` for audit while excluding them from equality keeps reproducibility without polluting matching.
+
+Consequences:
+
+- `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md` defines canonical action fields, strict `dahai` matching, future relaxed matching, fixture shape, edge cases and envelope mapping.
+- No canonicalizer, evaluator, legal-action checker, Python schema/dataclass, CLI, league, runner, training, self-play or Tenhou integration was implemented.
+- The next P5-only task is to add a synthetic legal-action metric fixture schema smoke test.
+
+Linked docs:
+
+- `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`
+- `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`
+- `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0022 — Define Legal-Action Metrics Before Evaluator Implementation
 
 Decision:

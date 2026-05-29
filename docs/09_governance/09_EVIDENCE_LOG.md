@@ -8,6 +8,48 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — P5 action canonicalization schema for legal-action fixtures
+
+- Type: internal documentation / schema-specification evidence.
+- Stage: P5 evaluation foundation.
+- Added schema document:
+  - `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`.
+- Schema covers:
+  - canonical action object fields.
+  - `raw_action` and `metadata` audit-only relationship to canonical equality.
+  - current minimum `dahai` fixture scope.
+  - strict `dahai` matching rules.
+  - future `relaxed_discard_tile` matching boundary.
+  - legal-action fixture shape for `proposed_action` and `legal_actions`.
+  - outcome mapping to `05K_LEGAL_ACTION_METRIC_SPEC.md`.
+  - edge cases for reach, chi/pon, kan, hora/ryukyoku, red fives and tile notation mismatch.
+  - offline result envelope mapping.
+- Minimum fixture scope:
+  - `current_minimum_supported_action_type = dahai`.
+- Default matching mode:
+  - `strict`.
+- Local validation:
+  - `git diff --check`: passed.
+- Guardrails:
+  - No canonicalizer was implemented.
+  - No evaluator was implemented.
+  - No legal-action checker was implemented.
+  - No Python schema or dataclass was added.
+  - No CLI.
+  - No league harness.
+  - No match runner.
+  - No training.
+  - No tuning.
+  - No self-play.
+  - No real Tenhou connection.
+  - No Tenhou account, platform data, external log, external haifu, scraping, automation, evasion or anti-detection logic.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+- Limitations:
+  - This is a schema document only.
+  - It is not executable canonicalization logic.
+  - It is not model-strength evidence and not a LuckyJ comparison claim.
+
 ### 2026-05-29 — P5 legal-action / invalid-action metric specification
 
 - Type: internal documentation / metric-specification evidence.

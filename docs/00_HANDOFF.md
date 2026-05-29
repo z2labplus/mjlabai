@@ -47,8 +47,9 @@ The stable-dan evaluation groundwork subtrack is complete for the current P5 sco
 The P5 offline evaluation metric registry and result envelope schema are implemented and documented.
 The offline evaluation envelope smoke test now verifies that a synthetic stable-dan report can be represented as an `OfflineEvaluationResultEnvelope`.
 The P5 legal-action / invalid-action metric specification is defined in `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`.
+The P5 action canonicalization schema for legal-action metric fixtures is defined in `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`.
 P5 overall is not complete.
-The next project task is to define the P5 action canonicalization schema for legal-action metric fixtures.
+The next project task is to add a synthetic legal-action metric fixture schema smoke test.
 ```
 
 ## Current methodology
@@ -137,7 +138,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define P5 action canonicalization schema for legal-action metric fixtures.
+Add synthetic legal-action metric fixture schema smoke test.
 Do not expand into evaluator implementation, training, self-play, league evaluation, Tenhou integration, artifact upload, broad adapter work or P6-P12.
 ```
 

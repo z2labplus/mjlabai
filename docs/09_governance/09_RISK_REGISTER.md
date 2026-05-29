@@ -235,4 +235,13 @@
 | `legal_action_rate` is mistaken for model-strength evidence. | Evaluation / Governance | High | Medium | `05K_LEGAL_ACTION_METRIC_SPEC.md` states that legality is necessary but not sufficient and cannot support LuckyJ comparison by itself. | Open |
 | Parse failures or missing actions are incorrectly counted as invalid actions without explicit mode. | Evaluation / Metric Definition | Medium-High | Medium | The spec separates `invalid_action_count`, `parse_failure_count` and `missing_action_count`; strict-mode changes must be explicit future work. | Open |
 | Skipped records silently hide denominator problems. | Evaluation / Data Quality | Medium-High | Medium | The spec requires skipped records to be excluded from denominator but reported through `skipped_count` and skipped categories. | Open |
-| Canonical action matching is implemented inconsistently across future fixtures. | Engineering / Evaluation | Medium-High | Medium | Next task is to define a canonical action schema for legal-action metric fixtures before evaluator implementation. | Open |
+| Canonical action matching is implemented inconsistently across future fixtures. | Engineering / Evaluation | Medium-High | Medium | `05L_ACTION_CANONICALIZATION_SCHEMA.md` now defines canonical fields and strict `dahai` matching before evaluator implementation. | Mitigated for schema; fixture smoke test remains open |
+
+## 2026-05-29 — Action canonicalization schema risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The schema is mistaken for an implemented canonicalizer. | Scope / Engineering | Medium-High | Medium | `05L_ACTION_CANONICALIZATION_SCHEMA.md` explicitly says it is documentation only and no parser/canonicalizer was implemented. | Open |
+| Strict matching rejects valid future representations when `tsumogiri` or tile notation differs across tools. | Evaluation / Compatibility | Medium | Medium | The schema records strict mode as default and leaves relaxed modes / tile normalization as explicit future tasks. | Open |
+| Future fixture authors use real Tenhou or external logs as shortcut data. | Compliance / Data | High | Medium | The schema says the first fixture must be synthetic/local only; no Tenhou, external logs, platform data or strength evidence. | Open |
+| Edge cases such as reach, calls, kans and red fives are underspecified for implementation. | Evaluation / Engineering | Medium | Medium | The schema records them as future edge cases; next tasks should start with minimal `dahai` fixture smoke tests before broader actions. | Open |
