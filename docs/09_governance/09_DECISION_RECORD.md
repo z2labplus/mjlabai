@@ -14,6 +14,56 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-05-29 — DR-0007 — Implement Akochan F2 Skeleton as Fixed-Command Python Wrapper
+
+Decision:
+
+```text
+Implement the first Akochan F2 skeleton as a minimal Python wrapper with only two fixed methods:
+run_legal_action(input_json) and run_mjai_log(log_path, actor=0, mode=2).
+Use fake-executable smoke tests first, then validate against a real external Ubuntu-built system.exe in a later task.
+```
+
+Context:
+
+- Akochan F1 is Conditional Pass based on GitHub Actions run `26617347785`.
+- `docs/07_development_execution/07J_AKOCHAN_F2_INTERFACE_TASK.md` defines the no-vendor, no-training, no-Tenhou wrapper boundary.
+- The repository previously had no Python package structure.
+- F2 needs wrapper behavior, audit-log schema and fixed-sample smoke tests before any real external binary validation.
+
+Rationale:
+
+- A small Python wrapper fits the project's future evaluation tooling while keeping Akochan source and binaries outside the repository.
+- Fixed methods avoid unrestricted command execution.
+- Fake-executable tests prove wrapper parsing, normalization and audit logging without requiring real Akochan binaries or third-party artifacts.
+
+Consequences:
+
+- `pyproject.toml` and `src/mjlabai` define the initial minimal Python package.
+- `AkochanWrapper` requires an explicit executable path or `AKOCHAN_SYSTEM_EXE`.
+- The wrapper preserves raw stdout, parses JSON, normalizes mjai-style `dahai` actions and records the required audit-log fields.
+- `tests/fixtures/akochan/fake_system_exe.py` is a test substitute only, not Akochan and not strength evidence.
+- The next task must validate the wrapper against a real externally built `system.exe` without uploading or saving third-party binaries or artifacts.
+
+Linked docs:
+
+- `src/mjlabai/adapters/akochan_wrapper.py`
+- `tests/adapters/test_akochan_wrapper.py`
+- `docs/07_development_execution/07J_AKOCHAN_F2_INTERFACE_TASK.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0001 — Technical Plan Becomes Execution Charter
 
 Decision:

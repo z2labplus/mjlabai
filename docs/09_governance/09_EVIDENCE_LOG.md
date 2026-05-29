@@ -330,3 +330,38 @@ Internal governance decisions that affect execution should also be noted here, b
 - Evidence status:
   - This is task-definition evidence, not model-strength evidence.
   - No adapter code, training, tuning, self-play, Tenhou connection or third-party artifact storage occurred.
+
+## 2026-05-29 — Akochan F2 wrapper skeleton smoke-test result
+
+- Type: internal implementation / smoke-test evidence.
+- Candidate: Akochan.
+- Funnel stage after task: F2 wrapper skeleton implemented; real external `system.exe` validation still pending.
+- Primary code:
+  - `pyproject.toml`.
+  - `src/mjlabai/adapters/akochan_wrapper.py`.
+  - `tests/adapters/test_akochan_wrapper.py`.
+  - `tests/fixtures/akochan/legal_action_minimal.json`.
+  - `tests/fixtures/akochan/mjai_log_minimal.jsonl`.
+  - `tests/fixtures/akochan/fake_system_exe.py`.
+- Test command:
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`
+- Test result:
+  - 4 tests passed.
+- Wrapper facts:
+  - Supports only `run_legal_action(input_json)` and `run_mjai_log(log_path, actor=0, mode=2)`.
+  - Calls a real external executable only through explicit `system_exe` argument or `AKOCHAN_SYSTEM_EXE`.
+  - Does not expose free-form command execution.
+  - Preserves raw stdout, parses JSON, normalizes mjai-style `dahai` actions and returns parse warnings when output shape is unknown.
+  - Records audit logs with tool name, external repo, external commit, build environment, command, input hash, output hash, exit code, stdout summary, stderr summary, elapsed time, license note, reproducibility note and explicit `training_related=false`, `self_play_related=false`, `tenhou_related=false`.
+- Fixture facts:
+  - `legal_action_minimal.json` and `mjai_log_minimal.jsonl` are synthetic project fixtures.
+  - `fake_system_exe.py` is a test substitute used only to verify wrapper behavior.
+  - The fake executable is not Akochan and is not strength evidence.
+- Guardrails confirmed:
+  - No real Akochan build was run in this task.
+  - No training, tuning, self-play, match, league or real Tenhou command was run.
+  - No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
+- Evidence status:
+  - This is wrapper behavior evidence only.
+  - It is not evidence of Akochan playing strength, Tenhou performance or real external `system.exe` compatibility.
+  - Next evidence should come from running the wrapper against a real externally built Akochan `system.exe` in a temporary GitHub Actions Ubuntu environment without uploading third-party binaries or artifacts.

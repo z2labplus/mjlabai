@@ -31,7 +31,8 @@ P0 / P1 / P2 are basically established.
 The project is in P3 baseline reproducibility audit.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
 Akochan F1 is Conditional Pass after successful Ubuntu GitHub Actions build/minimal-run evidence, with license and local macOS build limits still open.
-Akochan F2 task definition is complete; no adapter code has been written yet.
+Akochan F2 task definition is complete.
+Minimal Akochan F2 wrapper skeleton is implemented and passes fake-executable smoke tests, but it has not yet been run against real Akochan `system.exe`.
 ```
 
 ## Current methodology
@@ -81,7 +82,7 @@ Roles:
 - Suphx: main methodology blueprint, split into reproducible modules.
 - Mortal: paused as a runnable baseline; retained as source-code, mjai-interface, methodology and engineering reference.
 - Archer: high-potential Tenhou baseline candidate requiring verification.
-- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, F2 task definition complete, next step is a minimal wrapper skeleton for fixed samples.
+- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, minimal F2 wrapper skeleton implemented for fixed samples, next step is real external `system.exe` validation without storing third-party artifacts.
 - Kanachan: data/model architecture reference; not direct Tenhou baseline until adapted.
 
 Main technical route:
@@ -120,8 +121,8 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Implement minimal Akochan F2 wrapper skeleton for fixed legal_action/mjai_log samples under the documented no-vendor, no-training, no-Tenhou constraints.
-Do not exceed the wrapper skeleton scope.
+Run Akochan F2 wrapper against real GitHub Actions Ubuntu-built system.exe for fixed legal_action/mjai_log samples, without uploading third-party binaries or artifacts.
+Do not expand into training, self-play, league evaluation, Tenhou integration or broad adapter work.
 ```
 
 Latest Akochan F1 audit summary:
@@ -200,6 +201,18 @@ Akochan F2 task definition:
 - Defined mandatory audit-log fields: tool name, external repo/commit, build environment, command, input/output hashes, exit code, stdout/stderr summaries, elapsed time and flags proving no training/self-play/Tenhou command was run.
 - Reaffirmed license guardrails: private/internal audit only; no source modification, redistribution, commercial use or public release without review/permission.
 - No adapter code was written in the F2 definition task.
+
+Akochan F2 wrapper skeleton:
+
+- Added a minimal Python package under `src/mjlabai`.
+- Implemented `AkochanWrapper.run_legal_action(input_json)` and `AkochanWrapper.run_mjai_log(log_path, actor=0, mode=2)`.
+- The wrapper accepts a real external `system.exe` path only through an explicit constructor argument or `AKOCHAN_SYSTEM_EXE`.
+- The wrapper exposes only the two fixed subcommands: `legal_action` and `mjai_log`; it does not provide free-form command execution.
+- Added audit-log dataclasses with required fields: tool name, external repo/commit, build environment, command, input/output hashes, exit code, stdout/stderr summaries, elapsed time and explicit no-training/no-self-play/no-Tenhou flags.
+- Added a synthetic fixed `legal_action` fixture and a tiny synthetic mjai-log fixture.
+- Added `tests/fixtures/akochan/fake_system_exe.py` as a test substitute only. It is not Akochan and is not model-strength evidence.
+- Local smoke test `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 4 tests.
+- No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
 
 ## Do not forget
 

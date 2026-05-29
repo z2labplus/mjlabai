@@ -17,7 +17,7 @@ North-star link:
 This task supports the LuckyJ 10.68 target by defining a controlled baseline/reviewer interface before any training, league evaluation or Tenhou-like strength claim.
 ```
 
-This document defines the next task only. It does not implement an adapter.
+This document first defined the F2 task boundary. It now also records the result of the first minimal wrapper-skeleton implementation.
 
 ## A. F2 Goal
 
@@ -282,6 +282,19 @@ Future F2 implementation acceptance criteria:
 - No third-party source, binary, weight or unknown artifact is stored in this repository.
 - No build artifact is uploaded.
 
+Implementation status on 2026-05-29:
+
+- Minimal wrapper skeleton implemented in `src/mjlabai/adapters/akochan_wrapper.py`.
+- Supported wrapper methods:
+  - `run_legal_action(input_json)`.
+  - `run_mjai_log(log_path, actor=0, mode=2)`.
+- Wrapper executable path must be explicit through constructor argument or `AKOCHAN_SYSTEM_EXE`.
+- Wrapper exposes no free-form command execution API.
+- Synthetic fixtures and a fake executable were added under `tests/fixtures/akochan/`.
+- The fake executable is a test substitute only; it is not Akochan and is not strength evidence.
+- Local test command `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 4 tests.
+- No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
+
 ## H. F2 Failure Conditions
 
 F2 implementation must fail or stop if:
@@ -302,14 +315,15 @@ F2 implementation must fail or stop if:
 Recommended next `docs/10_next/10_NEXT.md` first task:
 
 ```text
-Implement minimal Akochan F2 wrapper skeleton for fixed legal_action/mjai_log samples under the documented no-vendor, no-training, no-Tenhou constraints.
+Run Akochan F2 wrapper against real GitHub Actions Ubuntu-built system.exe for fixed legal_action/mjai_log samples, without uploading third-party binaries or artifacts.
 ```
 
 Reason:
 
 - F1 has Conditional Pass evidence from Ubuntu GitHub Actions run `26617347785`.
 - The F2 interface boundary, state/action mapping, audit log schema and license guardrails are now defined.
-- The next implementation can stay narrow, private/internal and non-training.
+- The minimal wrapper skeleton passed fake-executable smoke tests.
+- The next evidence gap is real external `system.exe` compatibility for fixed samples, still under no-vendor, no-training and no-Tenhou constraints.
 
 Review note:
 

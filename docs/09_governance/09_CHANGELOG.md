@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v1.6
+
+- Implemented the minimal Akochan F2 wrapper skeleton for fixed `legal_action` / `mjai_log` samples.
+- Added minimal Python package structure under `src/mjlabai` and project metadata in `pyproject.toml`.
+- Added `AkochanWrapper.run_legal_action(input_json)` and `AkochanWrapper.run_mjai_log(log_path, actor=0, mode=2)`.
+- Added audit-log dataclasses that record external repo/commit, build environment, command, input/output hashes, exit code, stdout/stderr summaries, elapsed time and explicit no-training/no-self-play/no-Tenhou flags.
+- Added synthetic test fixtures and `tests/fixtures/akochan/fake_system_exe.py` as a test substitute only; it is not Akochan and is not strength evidence.
+- Added unit/smoke tests for JSON parsing, `dahai` normalization, audit logs, environment-variable executable path support and non-JSON stdout failure handling.
+- Verified `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 4 tests.
+- Confirmed no Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
+- Set the next task to run the wrapper against a real GitHub Actions Ubuntu-built external `system.exe` for fixed samples without uploading third-party binaries or artifacts.
+
 ## 2026-05-29 — v1.5
 
 - Added `docs/07_development_execution/07J_AKOCHAN_F2_INTERFACE_TASK.md`.

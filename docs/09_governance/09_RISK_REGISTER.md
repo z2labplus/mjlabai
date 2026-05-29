@@ -96,3 +96,12 @@
 | Akochan custom license is misunderstood as a standard open-source license. | License / Compliance | High | High | Keep private/internal audit only; require license review or author permission before modification, redistribution, commercial use or public release. | Open |
 | Legal-action checker output is mistaken for playing strength evidence. | Evaluation | Medium-High | Medium | Label F2 as interface/legal-action only; do not claim model strength without F3+ evaluation evidence. | Open |
 | Wrapper output schema may over-normalize and lose raw mjai/Akochan fields. | Engineering | Medium | Medium | Preserve raw output in `raw` and require parseable JSON plus output hashes. | Open |
+
+## 2026-05-29 — Akochan F2 wrapper skeleton risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Fake-executable smoke tests are mistaken for real Akochan compatibility or strength evidence. | Evaluation / Governance | High | Medium | Document fake executable as a test substitute only; require a separate run against real externally built `system.exe` before claiming real compatibility. | Open |
+| The wrapper can call an external executable path, so a wrong local path could point to an unaudited binary. | Reproducibility / Security | Medium-High | Medium | Require explicit `system_exe` or `AKOCHAN_SYSTEM_EXE`, record external commit/build environment in audit logs, and avoid unknown binaries or artifacts. | Open |
+| Real Ubuntu-built `system.exe` may produce output that differs from the fake executable shape. | Engineering | Medium | Medium | Preserve raw stdout, keep parse warnings, and make the next task a fixed-sample real `system.exe` validation without artifact upload. | Open |
+| The initial wrapper skeleton may be expanded too quickly into broad adapter, match, league or Tenhou integration work. | Scope / Compliance | High | Medium | Keep `10_NEXT` on the single real fixed-sample validation step; no self-play, match, training or Tenhou commands. | Open |
