@@ -306,7 +306,10 @@ Real-executable validation path status on 2026-05-29:
 - Local validation:
   - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 4 tests passed.
   - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped as expected.
-- The workflow has not yet been run, so real `system.exe` compatibility evidence is still pending.
+- First workflow run `26621536548` was run and reviewed.
+- Real `legal_action` wrapper test passed against the Ubuntu-built `system.exe`.
+- Real `mjai_log` wrapper test failed because `system.exe` could not load `setup_mjai.json` from the mjlabai checkout working directory.
+- The next wrapper fix should set subprocess `cwd` to the external executable directory by default, or support an explicitly supplied external working directory.
 
 ## H. F2 Failure Conditions
 
@@ -328,7 +331,7 @@ F2 implementation must fail or stop if:
 Recommended next `docs/10_next/10_NEXT.md` first task:
 
 ```text
-Run the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether the wrapper succeeds against real Ubuntu-built system.exe for fixed legal_action/mjai_log samples.
+Fix Akochan F2 real-exe wrapper failure: run external `system.exe` with working directory set to the executable directory so `setup_mjai.json` is visible, then rerun `Akochan F2 Wrapper Real Exe Audit`.
 ```
 
 Reason:
@@ -337,7 +340,8 @@ Reason:
 - The F2 interface boundary, state/action mapping, audit log schema and license guardrails are now defined.
 - The minimal wrapper skeleton passed fake-executable smoke tests.
 - The real-executable workflow/test path exists.
-- The next evidence gap is an actual workflow run proving or disproving real external `system.exe` compatibility for fixed samples, still under no-vendor, no-training and no-Tenhou constraints.
+- The first real-exe workflow run proved `legal_action` compatibility but exposed an `mjai_log` runtime cwd blocker.
+- The next evidence gap is fixing and rerunning `mjai_log` compatibility for fixed samples, still under no-vendor, no-training and no-Tenhou constraints.
 
 Review note:
 

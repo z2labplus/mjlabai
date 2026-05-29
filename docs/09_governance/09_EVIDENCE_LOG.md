@@ -407,3 +407,49 @@ Internal governance decisions that affect execution should also be noted here, b
   - This is evidence that the real-executable validation path exists.
   - It is not yet evidence that the wrapper works against real `system.exe`; that requires a successful manual workflow run and log review.
   - It is not strength evidence and does not imply Tenhou performance.
+
+## 2026-05-29 — Akochan F2 real executable workflow run failure
+
+- Type: external CI run evidence / wrapper-runtime blocker.
+- Candidate: Akochan.
+- Funnel stage after run: F2 real-exe validation partially passed; `mjai_log` compatibility blocked by process working directory.
+- Workflow file: `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml`.
+- Workflow run URL: `https://github.com/z2labplus/mjlabai/actions/runs/26621536548`.
+- Workflow run ID: `26621536548`.
+- Job ID: `78448413023`.
+- mjlabai commit: `7d58f969367d3e51c57d859dbfb9433f1ca898a1`.
+- Akochan repository: `https://github.com/critter-mj/akochan.git`.
+- Akochan commit: `53188a0b926fbab38177f88c3cd87d554cf412af`.
+- Runner: GitHub-hosted `ubuntu-latest`, image `ubuntu-24.04`.
+- Run result: failure.
+- Successful steps:
+  - Checkout mjlabai.
+  - Configure runner temp paths.
+  - Record audit scope.
+  - Set up Python 3.12.
+  - Install Ubuntu build dependencies.
+  - Clone Akochan at audited commit.
+  - Build `ai_src/libai.so`.
+  - Build root `system.exe`.
+  - Install mjlabai package.
+  - Run fake wrapper smoke tests.
+- Real wrapper test result:
+  - `legal_action`: passed against real runner-temp `system.exe`.
+  - `mjai_log`: failed.
+- Failure detail:
+  - `AkochanWrapperError: Akochan command failed with exit code -6: error:load_json_from_file setup_mjai.json`.
+  - `system.exe: ../share/include.cpp:39: json11::Json load_json_from_file(const std::string&): Assertion false failed.`
+- Interpretation:
+  - The wrapper launched external `system.exe` while the current working directory was the mjlabai checkout.
+  - Akochan expects runtime files such as `setup_mjai.json` to be loadable from the process working directory.
+  - The next fix should set subprocess `cwd` to the external executable directory by default, or support an explicit external working directory.
+- Guardrails confirmed:
+  - No training.
+  - No tuning.
+  - No self-play, match or league command.
+  - No real Tenhou connection.
+  - No third-party source, binary, params or build artifact upload.
+- Evidence status:
+  - This is real `legal_action` wrapper compatibility evidence.
+  - This is not successful real `mjai_log` wrapper compatibility evidence.
+  - This is not model-strength evidence and does not imply Tenhou performance.

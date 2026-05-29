@@ -33,7 +33,7 @@ Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usa
 Akochan F1 is Conditional Pass after successful Ubuntu GitHub Actions build/minimal-run evidence, with license and local macOS build limits still open.
 Akochan F2 task definition is complete.
 Minimal Akochan F2 wrapper skeleton is implemented and passes fake-executable smoke tests.
-The real external `system.exe` validation path now exists, but its GitHub Actions workflow has not yet been run and reviewed.
+The real external `system.exe` validation path exists and the first workflow run was reviewed; it failed only at the real `mjai_log` wrapper test because Akochan expected `setup_mjai.json` in the process working directory.
 ```
 
 ## Current methodology
@@ -83,7 +83,7 @@ Roles:
 - Suphx: main methodology blueprint, split into reproducible modules.
 - Mortal: paused as a runnable baseline; retained as source-code, mjai-interface, methodology and engineering reference.
 - Archer: high-potential Tenhou baseline candidate requiring verification.
-- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, minimal F2 wrapper skeleton implemented for fixed samples, real-executable validation workflow/test path added, next step is running and reviewing that workflow without storing third-party artifacts.
+- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, minimal F2 wrapper skeleton implemented for fixed samples, real-executable validation workflow/test path added, first real-exe workflow run failed on the `mjai_log` cwd/runtime boundary, next step is fixing that boundary without expanding scope.
 - Kanachan: data/model architecture reference; not direct Tenhou baseline until adapted.
 
 Main technical route:
@@ -122,7 +122,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Run the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether the wrapper succeeds against real Ubuntu-built system.exe for fixed legal_action/mjai_log samples.
+Fix Akochan F2 real-exe wrapper failure: run external `system.exe` with working directory set to the executable directory so `setup_mjai.json` is visible, then rerun `Akochan F2 Wrapper Real Exe Audit`.
 Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload or broad adapter work.
 ```
 
@@ -230,8 +230,32 @@ Akochan F2 real executable validation path:
   - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 4 tests passed.
   - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped, as expected without a real external executable.
 - The wrapper parser now also accepts JSON Lines output, which may be needed for real `mjai_log` stdout.
-- This workflow has not yet been run, so it is not yet real `system.exe` compatibility evidence.
+- First workflow run `26621536548` was run and reviewed; it failed only at the real `mjai_log` wrapper test because `system.exe` could not load `setup_mjai.json` from the current working directory.
 - The workflow does not upload artifacts; any Akochan clone/build output remains in the temporary GitHub runner.
+
+First Akochan F2 real executable workflow run:
+
+- Run URL: `https://github.com/z2labplus/mjlabai/actions/runs/26621536548`.
+- Commit: `7d58f969367d3e51c57d859dbfb9433f1ca898a1`.
+- Result: failure.
+- Successful evidence:
+  - Akochan source cloned at `53188a0b926fbab38177f88c3cd87d554cf412af`.
+  - `ai_src/libai.so`, root `libai.so` and `system.exe` built successfully.
+  - Fake wrapper smoke tests passed.
+  - Real `legal_action` wrapper test passed.
+- Failed evidence:
+  - Real `mjai_log` wrapper test failed.
+- Failure detail:
+  - `AkochanWrapperError: Akochan command failed with exit code -6: error:load_json_from_file setup_mjai.json`.
+  - `system.exe` asserted while loading `setup_mjai.json`.
+- Interpretation:
+  - The wrapper called external `system.exe` from the mjlabai checkout working directory.
+  - Akochan expects runtime config files such as `setup_mjai.json` to be visible from the process working directory.
+  - Next fix should set the subprocess working directory to the executable directory or an explicitly provided external working directory.
+- Evidence status:
+  - This is real `legal_action` wrapper compatibility evidence.
+  - This is not successful real `mjai_log` wrapper compatibility evidence.
+  - This is not strength evidence.
 
 ## Do not forget
 

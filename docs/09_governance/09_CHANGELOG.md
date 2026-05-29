@@ -1,5 +1,16 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v1.8
+
+- Triggered manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit`.
+- Run `26621536548` executed at commit `7d58f969367d3e51c57d859dbfb9433f1ca898a1`.
+- Confirmed the workflow built Akochan successfully in the temporary Ubuntu runner: `ai_src/libai.so`, root `libai.so` and `system.exe` were generated.
+- Confirmed fake wrapper smoke tests passed in the workflow.
+- Confirmed real `legal_action` wrapper test passed against the Ubuntu-built `system.exe`.
+- Recorded real `mjai_log` wrapper test failure: `system.exe` could not load `setup_mjai.json` because the wrapper launched it from the mjlabai checkout working directory.
+- Set the next task to fix the real-exe cwd/runtime boundary, then rerun the workflow.
+- Reaffirmed that this is interface/runtime evidence only, not strength evidence, and no third-party source, binary, params or build artifact was uploaded.
+
 ## 2026-05-29 — v1.7
 
 - Added `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml`.
