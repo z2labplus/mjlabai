@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Add stable-dan threshold comparison helper for LuckyJ 10.68 using bootstrap lower bound.
+- [ ] Add minimum sample-size and reporting schema for stable-dan evaluation results.
 
 Current execution charter:
 
@@ -24,7 +24,7 @@ Limits:
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
-- For the next step, add only a stable-dan threshold comparison helper that uses the bootstrap lower bound for LuckyJ 10.68.
+- For the next step, add only a minimum sample-size and reporting schema for stable-dan evaluation results.
 - Keep the implementation tied to evaluation metrics; do not expand into league, training, self-play or real Tenhou integration.
 - Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
@@ -53,6 +53,7 @@ Limits:
 - [x] 2026-05-29 Closed Akochan F2 fixed-sample real-exe wrapper validation: workflow run `26629344590` at commit `29f5e1ed19407d169f85524e05438ac8938d2dc2` succeeded; Ubuntu runner built `ai_src/libai.so`, root `libai.so` and `system.exe`; fake wrapper tests passed 14 tests; real `system.exe legal_action` and real `system.exe mjai_log` wrapper tests both passed. This is fixed-sample wrapper/integration evidence only, not Akochan or mjlabai strength evidence.
 - [x] 2026-05-29 Implemented Tenhou stable-dan calculator from room-specific formulas: added deterministic four-player stable-dan point estimates for general/ippan, upper/joukyu, expert/tokujou and phoenix/houou rooms; records placement counts/rates and formula metadata; `fourth_count == 0` raises `StableDanUndefinedError` instead of fabricating infinite strength. Local validation passed `python3 -m unittest tests/eval/test_stable_dan.py` with 9 tests and `python3 -m unittest tests/adapters/test_akochan_wrapper.py` with 14 tests.
 - [x] 2026-05-29 Added stable-dan bootstrap confidence interval: implemented percentile empirical multinomial bootstrap over observed placement counts, records point estimate, bounds, confidence level, bootstrap count, successful resamples, undefined resamples and undefined rate. Undefined resamples with zero fourth-place count are skipped and reported; if all resamples are undefined, `StableDanBootstrapUndefinedError` is raised. Local validation passed `python3 -m unittest tests/eval/test_stable_dan.py` with 21 tests and `python3 -m unittest tests/adapters/test_akochan_wrapper.py` with 14 tests.
+- [x] 2026-05-29 Added stable-dan threshold comparison helper for LuckyJ 10.68: implemented `LUCKYJ_STABLE_DAN_THRESHOLD`, `compare_stable_dan_to_threshold(...)`, `bootstrap_and_compare_stable_dan_threshold(...)` and `StableDanThresholdComparison`. Clear pass now requires bootstrap `lower_bound > threshold` and acceptable `undefined_rate`; point estimate alone cannot clear the threshold. Local validation passed `python3 -m unittest tests/eval/test_stable_dan.py` with 32 tests and `python3 -m unittest tests/adapters/test_akochan_wrapper.py` with 14 tests.
 
 ## Backlog
 
@@ -73,6 +74,7 @@ Limits:
 - [ ] Decompose Suphx into reproducible experiment cards: SL policy, self-play RL, global reward prediction, oracle guiding, runtime adaptation.
 - [x] Implement Tenhou stable-dan calculator from room-specific formulas.
 - [x] Add bootstrap confidence interval for stable-dan estimate.
-- [ ] Add stable-dan threshold comparison helper for LuckyJ 10.68 using bootstrap lower bound.
+- [x] Add stable-dan threshold comparison helper for LuckyJ 10.68 using bootstrap lower bound.
+- [ ] Add minimum sample-size and reporting schema for stable-dan evaluation results.
 - [ ] Create tiny benchmark harness for legal action rate, latency and fixed-position decisions.
 - [ ] Update `09_EVIDENCE_LOG.md` whenever new external evidence is added.

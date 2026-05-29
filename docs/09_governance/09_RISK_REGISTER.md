@@ -162,3 +162,11 @@
 | Bootstrap lower/upper bounds are mistaken for proof that a model beats LuckyJ without an explicit threshold decision rule. | Evaluation / Governance | High | Medium | Next task is a threshold comparison helper using the bootstrap lower bound against LuckyJ 10.68. | Open |
 | High undefined-resample rate makes the CI unstable or misleading. | Evaluation | Medium-High | Medium | `StableDanBootstrapResult` reports `undefined_resamples` and `undefined_rate`; docs require treating high undefined rate as unreliable. | Open |
 | Bootstrap resamples with zero fourth-place count are silently converted to infinite stable dan. | Evaluation | High | Low | Implementation skips and counts undefined resamples; if all resamples are undefined, it raises `StableDanBootstrapUndefinedError`. | Mitigated in implementation |
+
+## 2026-05-29 — Stable-dan threshold comparison risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| A helper outcome of `clear_pass` is treated as a full model-strength claim without sample-size and reporting context. | Evaluation / Governance | High | Medium | Next task defines minimum sample-size and reporting schema before project-level LuckyJ comparison claims. | Open |
+| Point estimate above LuckyJ 10.68 is mistaken for a threshold pass. | Evaluation | High | Medium | Helper returns `point_estimate_only` with `clears_threshold=False` when lower bound does not exceed threshold. | Mitigated in implementation |
+| High undefined rate is ignored when threshold lower bound looks strong. | Evaluation | Medium-High | Medium | Helper returns `unreliable` and `clears_threshold=False` when `undefined_rate > max_undefined_rate`. | Mitigated in implementation |

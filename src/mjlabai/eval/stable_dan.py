@@ -59,6 +59,30 @@ class StableDanBootstrapResult:
     source_note: str
 
 
+@dataclass(frozen=True)
+class StableDanThresholdComparison:
+    threshold: float
+    point_estimate: float
+    lower_bound: float
+    upper_bound: float
+    confidence_level: float
+    n_bootstrap: int
+    successful_resamples: int
+    undefined_resamples: int
+    undefined_rate: float
+    max_undefined_rate: float
+    clears_threshold: bool
+    point_estimate_above_threshold: bool
+    lower_bound_above_threshold: bool
+    upper_bound_below_threshold: bool
+    reliable: bool
+    outcome: str
+    explanation: str
+    source_note: str
+
+
+LUCKYJ_STABLE_DAN_THRESHOLD = 10.68
+
 _FORMULAS_BY_CANONICAL_ROOM: Mapping[str, StableDanFormula] = MappingProxyType(
     {
         "general": StableDanFormula("general", first_weight=20, second_weight=10),
@@ -98,6 +122,11 @@ SOURCE_NOTE = (
 BOOTSTRAP_SOURCE_NOTE = (
     "Percentile empirical multinomial bootstrap over observed placement counts; "
     "undefined resamples with zero fourth-place count are skipped and reported."
+)
+
+THRESHOLD_SOURCE_NOTE = (
+    "Stable-dan threshold comparison uses bootstrap lower bound, not point "
+    "estimate alone; default threshold is LuckyJ stable dan 10.68."
 )
 
 
@@ -272,6 +301,110 @@ def bootstrap_stable_dan_ci(
     )
 
 
+def compare_stable_dan_to_threshold(
+    bootstrap_result: StableDanBootstrapResult,
+    *,
+    threshold: float = LUCKYJ_STABLE_DAN_THRESHOLD,
+    max_undefined_rate: float = 0.05,
+) -> StableDanThresholdComparison:
+    """Compare a stable-dan bootstrap CI against a target threshold."""
+
+    if not isinstance(bootstrap_result, StableDanBootstrapResult):
+        raise TypeError("bootstrap_result must be a StableDanBootstrapResult")
+    threshold_value = _validate_finite_number(threshold, "threshold")
+    max_undefined_rate_value = _validate_rate(
+        max_undefined_rate, "max_undefined_rate"
+    )
+    if bootstrap_result.lower_bound > bootstrap_result.upper_bound:
+        raise ValueError("bootstrap_result lower_bound must be <= upper_bound")
+
+    point_estimate = bootstrap_result.point_estimate.stable_dan
+    point_estimate_above_threshold = point_estimate > threshold_value
+    lower_bound_above_threshold = bootstrap_result.lower_bound > threshold_value
+    upper_bound_below_threshold = bootstrap_result.upper_bound <= threshold_value
+    reliable = bootstrap_result.undefined_rate <= max_undefined_rate_value
+
+    if not reliable:
+        outcome = "unreliable"
+        clears_threshold = False
+        explanation = (
+            "undefined bootstrap resample rate is too high; do not claim "
+            "threshold pass even if point estimate or CI bound looks good"
+        )
+    elif lower_bound_above_threshold:
+        outcome = "clear_pass"
+        clears_threshold = True
+        explanation = "bootstrap lower bound exceeds threshold"
+    elif upper_bound_below_threshold:
+        outcome = "clear_fail"
+        clears_threshold = False
+        explanation = "even upper bound does not exceed threshold"
+    elif point_estimate_above_threshold:
+        outcome = "point_estimate_only"
+        clears_threshold = False
+        explanation = (
+            "point estimate exceeds threshold, but bootstrap lower bound does "
+            "not; cannot claim clear pass"
+        )
+    else:
+        outcome = "inconclusive"
+        clears_threshold = False
+        explanation = "confidence interval overlaps threshold"
+
+    return StableDanThresholdComparison(
+        threshold=threshold_value,
+        point_estimate=point_estimate,
+        lower_bound=bootstrap_result.lower_bound,
+        upper_bound=bootstrap_result.upper_bound,
+        confidence_level=bootstrap_result.confidence_level,
+        n_bootstrap=bootstrap_result.n_bootstrap,
+        successful_resamples=bootstrap_result.successful_resamples,
+        undefined_resamples=bootstrap_result.undefined_resamples,
+        undefined_rate=bootstrap_result.undefined_rate,
+        max_undefined_rate=max_undefined_rate_value,
+        clears_threshold=clears_threshold,
+        point_estimate_above_threshold=point_estimate_above_threshold,
+        lower_bound_above_threshold=lower_bound_above_threshold,
+        upper_bound_below_threshold=upper_bound_below_threshold,
+        reliable=reliable,
+        outcome=outcome,
+        explanation=explanation,
+        source_note=THRESHOLD_SOURCE_NOTE,
+    )
+
+
+def bootstrap_and_compare_stable_dan_threshold(
+    first_count: int,
+    second_count: int,
+    third_count: int,
+    fourth_count: int,
+    room: str,
+    *,
+    threshold: float = LUCKYJ_STABLE_DAN_THRESHOLD,
+    n_bootstrap: int = 10000,
+    confidence_level: float = 0.95,
+    seed: int | None = None,
+    max_undefined_rate: float = 0.05,
+) -> StableDanThresholdComparison:
+    """Bootstrap stable dan and compare it against a target threshold."""
+
+    bootstrap_result = bootstrap_stable_dan_ci(
+        first_count=first_count,
+        second_count=second_count,
+        third_count=third_count,
+        fourth_count=fourth_count,
+        room=room,
+        n_bootstrap=n_bootstrap,
+        confidence_level=confidence_level,
+        seed=seed,
+    )
+    return compare_stable_dan_to_threshold(
+        bootstrap_result,
+        threshold=threshold,
+        max_undefined_rate=max_undefined_rate,
+    )
+
+
 def _resolve_formula(room: str) -> StableDanFormula:
     if not isinstance(room, str):
         raise ValueError("room must be a string")
@@ -280,6 +413,22 @@ def _resolve_formula(room: str) -> StableDanFormula:
         supported = ", ".join(sorted(_ROOM_ALIASES))
         raise ValueError(f"unknown room {room!r}; supported rooms: {supported}")
     return _FORMULAS_BY_CANONICAL_ROOM[canonical_room]
+
+
+def _validate_finite_number(value: float, name: str) -> float:
+    if not isinstance(value, (int, float)) or isinstance(value, bool):
+        raise ValueError(f"{name} must be a finite number")
+    number = float(value)
+    if not math.isfinite(number):
+        raise ValueError(f"{name} must be a finite number")
+    return number
+
+
+def _validate_rate(value: float, name: str) -> float:
+    rate = _validate_finite_number(value, name)
+    if not 0 <= rate <= 1:
+        raise ValueError(f"{name} must be in [0, 1]")
+    return rate
 
 
 def _linear_quantile(sorted_values: list[float], q: float) -> float:

@@ -1,5 +1,23 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.6
+
+- Added a stable-dan threshold comparison helper for the LuckyJ 10.68 target line.
+- Extended `src/mjlabai/eval/stable_dan.py` with:
+  - `LUCKYJ_STABLE_DAN_THRESHOLD = 10.68`.
+  - `StableDanThresholdComparison`.
+  - `compare_stable_dan_to_threshold(...)`.
+  - `bootstrap_and_compare_stable_dan_threshold(...)`.
+- Clear pass now requires `bootstrap_result.lower_bound > threshold` and `undefined_rate <= max_undefined_rate`.
+- If point estimate exceeds the threshold but bootstrap lower bound does not, the outcome is `point_estimate_only` and `clears_threshold=False`.
+- If undefined bootstrap resample rate is too high, the outcome is `unreliable` and `clears_threshold=False`.
+- Added threshold comparison tests for clear pass, point-estimate-only, clear fail, inconclusive, unreliable, custom threshold, invalid inputs and the bootstrap-and-compare helper.
+- Local validation passed:
+  - `python3 -m unittest tests/eval/test_stable_dan.py`: 32 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+- This is evaluation statistics infrastructure only, not model-strength evidence, training, self-play, league execution or Tenhou integration.
+- Set the next task to `Add minimum sample-size and reporting schema for stable-dan evaluation results.`
+
 ## 2026-05-29 — v2.5
 
 - Added bootstrap confidence intervals for the Tenhou stable-dan estimate.

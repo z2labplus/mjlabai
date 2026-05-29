@@ -14,6 +14,49 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-05-29 — DR-0015 — Stable-Dan Threshold Pass Requires Bootstrap Lower Bound
+
+Decision:
+
+```text
+Stable-dan threshold comparison defaults to LuckyJ stable dan 10.68.
+A clear pass requires bootstrap lower_bound > threshold and acceptable undefined_rate.
+Point estimate alone must never set clears_threshold=True.
+```
+
+Context:
+
+- Stable-dan point estimate and bootstrap CI are implemented.
+- The project target is stable dan above LuckyJ 10.68.
+- Without a helper, callers may accidentally compare only the point estimate and overclaim strength.
+
+Rationale:
+
+- Lower-bound comparison is more conservative than point-estimate comparison.
+- High undefined bootstrap rate means the interval is unreliable even if the lower bound looks strong.
+- Encoding the outcomes in one helper makes future reports easier to audit.
+
+Consequences:
+
+- `compare_stable_dan_to_threshold(...)` returns `clear_pass`, `point_estimate_only`, `clear_fail`, `unreliable` or `inconclusive`.
+- `bootstrap_and_compare_stable_dan_threshold(...)` combines bootstrap CI and threshold comparison.
+- The next task is minimum sample-size and reporting schema for stable-dan evaluation results before using helper output for project-level LuckyJ claims.
+
+Linked docs:
+
+- `src/mjlabai/eval/stable_dan.py`
+- `tests/eval/test_stable_dan.py`
+- `docs/10_next/10_NEXT.md`
+- `docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0014 — Require Bootstrap Lower-Bound Logic Before LuckyJ Stable-Dan Claims
 
 Decision:

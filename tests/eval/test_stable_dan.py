@@ -12,11 +12,16 @@ if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
 from mjlabai.eval.stable_dan import (  # noqa: E402
+    LUCKYJ_STABLE_DAN_THRESHOLD,
     StableDanBootstrapResult,
     StableDanBootstrapUndefinedError,
+    StableDanResult,
+    StableDanThresholdComparison,
     StableDanUndefinedError,
+    bootstrap_and_compare_stable_dan_threshold,
     bootstrap_stable_dan_ci,
     calculate_stable_dan,
+    compare_stable_dan_to_threshold,
     placement_rates,
 )
 
@@ -185,6 +190,185 @@ class StableDanBootstrapTest(unittest.TestCase):
             "all resamples had fourth_count equal to zero",
         ):
             bootstrap_stable_dan_ci(1, 0, 0, 1, "phoenix", n_bootstrap=1, seed=4)
+
+
+class StableDanThresholdComparisonTest(unittest.TestCase):
+    def make_bootstrap_result(
+        self,
+        *,
+        point_estimate: float,
+        lower_bound: float,
+        upper_bound: float,
+        undefined_rate: float = 0.0,
+    ) -> StableDanBootstrapResult:
+        base_point = calculate_stable_dan(30, 30, 20, 20, "phoenix")
+        point = StableDanResult(
+            room=base_point.room,
+            stable_dan=point_estimate,
+            total_games=base_point.total_games,
+            first_count=base_point.first_count,
+            second_count=base_point.second_count,
+            third_count=base_point.third_count,
+            fourth_count=base_point.fourth_count,
+            first_rate=base_point.first_rate,
+            second_rate=base_point.second_rate,
+            third_rate=base_point.third_rate,
+            fourth_rate=base_point.fourth_rate,
+            formula_name=base_point.formula_name,
+            formula_weights=base_point.formula_weights,
+            source_note=base_point.source_note,
+        )
+        n_bootstrap = 100
+        undefined_resamples = round(undefined_rate * n_bootstrap)
+        return StableDanBootstrapResult(
+            point_estimate=point,
+            confidence_level=0.95,
+            lower_bound=lower_bound,
+            upper_bound=upper_bound,
+            n_bootstrap=n_bootstrap,
+            successful_resamples=n_bootstrap - undefined_resamples,
+            undefined_resamples=undefined_resamples,
+            undefined_rate=undefined_resamples / n_bootstrap,
+            room="phoenix",
+            method="test",
+            seed=1,
+            quantile_method="test",
+            source_note="test",
+        )
+
+    def test_clear_pass_requires_lower_bound_above_threshold(self) -> None:
+        comparison = compare_stable_dan_to_threshold(
+            self.make_bootstrap_result(
+                point_estimate=11.8,
+                lower_bound=10.9,
+                upper_bound=12.4,
+            )
+        )
+
+        self.assertIsInstance(comparison, StableDanThresholdComparison)
+        self.assertTrue(comparison.clears_threshold)
+        self.assertEqual(comparison.outcome, "clear_pass")
+        self.assertTrue(comparison.lower_bound_above_threshold)
+
+    def test_point_estimate_only_does_not_clear_threshold(self) -> None:
+        comparison = compare_stable_dan_to_threshold(
+            self.make_bootstrap_result(
+                point_estimate=11.2,
+                lower_bound=10.5,
+                upper_bound=11.8,
+            )
+        )
+
+        self.assertFalse(comparison.clears_threshold)
+        self.assertEqual(comparison.outcome, "point_estimate_only")
+        self.assertTrue(comparison.point_estimate_above_threshold)
+        self.assertFalse(comparison.lower_bound_above_threshold)
+
+    def test_clear_fail_when_upper_bound_does_not_exceed_threshold(self) -> None:
+        comparison = compare_stable_dan_to_threshold(
+            self.make_bootstrap_result(
+                point_estimate=9.7,
+                lower_bound=8.9,
+                upper_bound=10.68,
+            )
+        )
+
+        self.assertFalse(comparison.clears_threshold)
+        self.assertEqual(comparison.outcome, "clear_fail")
+        self.assertTrue(comparison.upper_bound_below_threshold)
+
+    def test_inconclusive_when_ci_overlaps_threshold(self) -> None:
+        comparison = compare_stable_dan_to_threshold(
+            self.make_bootstrap_result(
+                point_estimate=10.2,
+                lower_bound=9.7,
+                upper_bound=11.1,
+            )
+        )
+
+        self.assertFalse(comparison.clears_threshold)
+        self.assertEqual(comparison.outcome, "inconclusive")
+
+    def test_high_undefined_rate_is_unreliable(self) -> None:
+        comparison = compare_stable_dan_to_threshold(
+            self.make_bootstrap_result(
+                point_estimate=12.0,
+                lower_bound=11.0,
+                upper_bound=13.0,
+                undefined_rate=0.06,
+            )
+        )
+
+        self.assertFalse(comparison.clears_threshold)
+        self.assertFalse(comparison.reliable)
+        self.assertEqual(comparison.outcome, "unreliable")
+
+    def test_threshold_can_be_overridden(self) -> None:
+        comparison = compare_stable_dan_to_threshold(
+            self.make_bootstrap_result(
+                point_estimate=9.0,
+                lower_bound=8.0,
+                upper_bound=9.5,
+            ),
+            threshold=7.5,
+        )
+
+        self.assertEqual(comparison.threshold, 7.5)
+        self.assertTrue(comparison.clears_threshold)
+
+    def test_invalid_max_undefined_rate_raises_value_error(self) -> None:
+        with self.assertRaisesRegex(ValueError, "max_undefined_rate must be"):
+            compare_stable_dan_to_threshold(
+                self.make_bootstrap_result(
+                    point_estimate=11.0,
+                    lower_bound=10.0,
+                    upper_bound=12.0,
+                ),
+                max_undefined_rate=1.1,
+            )
+
+    def test_invalid_threshold_raises_value_error(self) -> None:
+        with self.assertRaisesRegex(ValueError, "threshold must be"):
+            compare_stable_dan_to_threshold(
+                self.make_bootstrap_result(
+                    point_estimate=11.0,
+                    lower_bound=10.0,
+                    upper_bound=12.0,
+                ),
+                threshold=math.inf,
+            )
+
+    def test_invalid_bootstrap_result_type_raises_type_error(self) -> None:
+        with self.assertRaisesRegex(
+            TypeError,
+            "bootstrap_result must be a StableDanBootstrapResult",
+        ):
+            compare_stable_dan_to_threshold(object())
+
+    def test_lower_bound_above_upper_bound_raises_value_error(self) -> None:
+        with self.assertRaisesRegex(ValueError, "lower_bound must be <= upper_bound"):
+            compare_stable_dan_to_threshold(
+                self.make_bootstrap_result(
+                    point_estimate=11.0,
+                    lower_bound=12.0,
+                    upper_bound=10.0,
+                )
+            )
+
+    def test_bootstrap_and_compare_helper_returns_comparison(self) -> None:
+        comparison = bootstrap_and_compare_stable_dan_threshold(
+            30,
+            30,
+            20,
+            20,
+            "phoenix",
+            threshold=LUCKYJ_STABLE_DAN_THRESHOLD,
+            n_bootstrap=200,
+            seed=14,
+        )
+
+        self.assertIsInstance(comparison, StableDanThresholdComparison)
+        self.assertEqual(comparison.threshold, LUCKYJ_STABLE_DAN_THRESHOLD)
 
 
 if __name__ == "__main__":

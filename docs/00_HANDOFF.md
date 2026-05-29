@@ -37,7 +37,8 @@ Akochan F2 fixed-sample real-exe wrapper validation has passed: workflow run `26
 This is fixed-sample wrapper/integration evidence only. It is not Akochan strength evidence, not mjlabai strength evidence, and not authorization for broad adapter work, self-play, match, training or Tenhou integration.
 The project has moved to evaluation groundwork: the deterministic Tenhou stable-dan calculator from room-specific formulas is implemented and tested.
 The stable-dan bootstrap confidence interval is implemented and tested with percentile empirical multinomial resampling.
-The next project task is to add a stable-dan threshold comparison helper for LuckyJ 10.68 using the bootstrap lower bound.
+The stable-dan threshold comparison helper is implemented and tested with LuckyJ stable dan `10.68` as the default target line.
+The next project task is to add minimum sample-size and reporting schema for stable-dan evaluation results.
 ```
 
 ## Current methodology
@@ -126,7 +127,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Add stable-dan threshold comparison helper for LuckyJ 10.68 using bootstrap lower bound.
+Add minimum sample-size and reporting schema for stable-dan evaluation results.
 Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload or broad adapter work.
 ```
 

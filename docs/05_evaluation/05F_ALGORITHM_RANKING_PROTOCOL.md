@@ -115,13 +115,22 @@ Stable-dan CI reporting must include:
 
 Undefined bootstrap resamples occur when the resampled fourth-place count is zero. They must be skipped and reported, not converted into infinite stable dan. If undefined rate is high, treat the interval as unreliable until more games are available.
 
+Stable-dan threshold comparison against LuckyJ 10.68 must use the bootstrap lower bound:
+
+- `clear_pass` only when lower bound is greater than `10.68` and undefined rate is acceptable.
+- `point_estimate_only` when point estimate is greater than `10.68` but lower bound is not; do not claim a clear pass.
+- `clear_fail` when even upper bound does not exceed `10.68`.
+- `unreliable` when undefined resample rate is too high.
+- `inconclusive` when confidence interval overlaps the threshold.
+
 Current implementation status:
 
 - `src/mjlabai/eval/stable_dan.py` implements deterministic point estimates for general/ippan, upper/joukyu, expert/tokujou and phoenix/houou.
 - `bootstrap_stable_dan_ci(...)` implements percentile empirical multinomial bootstrap confidence intervals using Python standard library only.
+- `compare_stable_dan_to_threshold(...)` compares bootstrap CI results against LuckyJ stable dan `10.68` using lower-bound logic.
 - `fourth_count == 0` is undefined and raises `StableDanUndefinedError`; do not report infinite stable dan.
 - Bootstrap resamples with `fourth_count == 0` are recorded as undefined; if all resamples are undefined, `StableDanBootstrapUndefinedError` is raised.
-- The next required evaluation-foundation task is a LuckyJ 10.68 threshold comparison helper using the bootstrap lower bound.
+- The next required evaluation-foundation task is minimum sample-size and reporting schema for stable-dan evaluation results.
 
 ### Level 5 — Promotion gate
 

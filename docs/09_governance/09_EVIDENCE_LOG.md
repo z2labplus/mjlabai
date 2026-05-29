@@ -8,6 +8,42 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — Stable-dan LuckyJ threshold comparison helper implementation
+
+- Type: internal implementation / local test evidence for evaluation statistics infrastructure.
+- Stage: P5 evaluation foundation.
+- Implemented code:
+  - `src/mjlabai/eval/stable_dan.py`.
+  - `src/mjlabai/eval/__init__.py`.
+  - `tests/eval/test_stable_dan.py`.
+- API:
+  - `LUCKYJ_STABLE_DAN_THRESHOLD = 10.68`.
+  - `compare_stable_dan_to_threshold(bootstrap_result, *, threshold=10.68, max_undefined_rate=0.05)`.
+  - `bootstrap_and_compare_stable_dan_threshold(...)`.
+  - `StableDanThresholdComparison`.
+- Decision logic:
+  - `clear_pass`: bootstrap lower bound exceeds threshold and undefined rate is acceptable.
+  - `point_estimate_only`: point estimate exceeds threshold but bootstrap lower bound does not; cannot claim clear pass.
+  - `clear_fail`: even upper bound does not exceed threshold.
+  - `unreliable`: undefined bootstrap resample rate is above the configured maximum.
+  - `inconclusive`: confidence interval overlaps threshold.
+- Local validation:
+  - `python3 -m unittest tests/eval/test_stable_dan.py`: 32 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+  - `git diff --check`: passed.
+- Guardrails:
+  - No training.
+  - No tuning.
+  - No self-play, match or league command.
+  - No real Tenhou connection.
+  - No platform automation, scraping, account tooling, evasion or anti-detection logic.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+- Limitations:
+  - This helper is a statistical reporting tool, not model-strength evidence by itself.
+  - A real claim against LuckyJ still needs enough sample size, complete reporting metadata and a documented evaluation context.
+  - The next task is to define minimum sample-size and reporting schema before using this helper for project-level claims.
+
 ### 2026-05-29 — Stable-dan bootstrap confidence interval implementation
 
 - Type: internal implementation / local test evidence for evaluation statistics infrastructure.
