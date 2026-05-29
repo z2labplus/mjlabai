@@ -570,16 +570,86 @@ Workflow guardrails:
 Current F1 status:
 
 ```text
-Akochan remains F1 Blocked.
-Adding the workflow is not build/run evidence by itself.
-F1 can be reconsidered only after a manual workflow run succeeds and the logs are reviewed.
+Superseded by successful run `26617347785` below.
+At workflow-addition time, Akochan still had no build/run evidence.
 ```
 
 Next required task:
 
 ```text
-Run the corrected manual GitHub Actions workflow `Akochan F1 Build Audit`,
-then review whether Ubuntu build produces `system.exe` and runs at least one minimal non-training sample.
+Superseded by corrected run review below.
+```
+
+## K. 2026-05-29 Corrected GitHub Actions Run Review
+
+Run:
+
+```text
+https://github.com/z2labplus/mjlabai/actions/runs/26617347785
+```
+
+Run metadata:
+
+| Item | Value |
+|---|---|
+| mjlabai commit | `b6b69e08fd009052cb3bbd16c779ac6e2139591b` |
+| Akochan commit | `53188a0b926fbab38177f88c3cd87d554cf412af` |
+| Runner | GitHub-hosted `ubuntu-latest` |
+| Job ID | `78435750229` |
+| Duration | 2m31s |
+| Result | Success |
+
+Build result:
+
+| Check | Result |
+|---|---|
+| Install Ubuntu dependencies | Success |
+| Clone fixed Akochan commit | Success |
+| Inspect non-training entry points | Success |
+| `cd ai_src && make -f Makefile_Linux` | Success |
+| `ai_src/libai.so` | Generated |
+| root `libai.so` | Generated |
+| root `make -f Makefile_Linux` | Success |
+| `system.exe` | Generated |
+
+Minimal non-training run result:
+
+| Sample | Result | Output summary |
+|---|---|---|
+| `legal_action` with minimal JSON | Success | Emitted legal `dahai` actions. |
+| `mjai_log haifu_log_sample.json 0 2` | Success | Emitted parsed mjai/log JSON output. |
+
+Guardrails observed:
+
+- No training.
+- No tuning.
+- No self-play or match task.
+- No real Tenhou connection.
+- No adapter/F2 code.
+- No third-party source, binary or build artifact upload.
+
+Warnings:
+
+- GitHub emitted a Node.js 20 deprecation warning for `actions/checkout@v4`. This is workflow maintenance risk, not a blocker for this F1 run.
+- Boost emitted global placeholder deprecation notes during compile. This did not block the build.
+
+F1 gate conclusion:
+
+```text
+Conditional Pass
+```
+
+Reason:
+
+- Akochan now has reproducible Ubuntu build evidence.
+- `system.exe` was generated.
+- At least one minimal non-training sample succeeded; in this run both `legal_action` and `mjai_log` succeeded.
+- The result is conditional because the custom license still restricts modification/redistribution/commercial/public release, and local macOS build remains blocked.
+
+Next required task:
+
+```text
+Define Akochan F2 interface/legal-action adapter task.
 ```
 
 ## J. 2026-05-29 First GitHub Actions Run Review
@@ -621,13 +691,12 @@ SUMMARY_FILE=${RUNNER_TEMP}/akochan_f1_summary.txt
 Current F1 status:
 
 ```text
-Akochan remains F1 Blocked.
+Superseded by successful run `26617347785` above.
 The first workflow run produced only workflow-validation evidence, not build/minimal-run evidence.
 ```
 
 Next required task:
 
 ```text
-Run the corrected manual GitHub Actions workflow `Akochan F1 Build Audit`,
-then review whether Ubuntu build produces `system.exe` and runs at least one minimal non-training sample.
+Superseded by corrected run review above.
 ```

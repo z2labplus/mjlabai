@@ -8,7 +8,7 @@ Current funnel focus:
 
 ```text
 Mortal = F1 paused as runnable baseline / ReferenceOnly
-Akochan = F1 Blocked on local build/toolchain
+Akochan = F1 Conditional Pass on Ubuntu GitHub Actions build/minimal-run evidence
 ```
 
 ## AI role
@@ -49,7 +49,7 @@ This stage supports the north-star target by creating a reproducible baseline an
 - Do not claim strength improvement from reproducibility checks.
 - Do not use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
-- Do not enter F2 before F1 minimal build/run evidence exists.
+- Do not write F2 adapter code before the F2 task boundary, state/action mapping, log schema and license guardrails are documented.
 - Do not promote Mortal to F2 unless a lawful, verifiable and usable trained model artifact is provided and Mortal F1 is re-opened with source, version/tag, usage constraints and checksum.
 
 ## Task boundary
@@ -83,4 +83,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Run the manual GitHub Actions workflow `Akochan F1 Build Audit`, then review whether Ubuntu build produces `system.exe` and runs at least one minimal non-training sample.
+Define Akochan F2 interface/legal-action adapter task.

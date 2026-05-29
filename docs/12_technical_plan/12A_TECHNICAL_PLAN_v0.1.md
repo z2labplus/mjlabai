@@ -30,7 +30,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 ```text
 P3 / baseline reproducibility audit.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
-Akochan = F1 Blocked on local build/toolchain.
+Akochan = F1 Conditional Pass on Ubuntu GitHub Actions build/minimal-run evidence.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -161,16 +161,16 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 
 ## Current Next Task
 
-当前 `10_NEXT` 的下一步是解决 Akochan F1 blocker：
+当前 `10_NEXT` 的下一步是定义 Akochan F2 任务边界：
 
 ```text
-Run the manual GitHub Actions workflow `Akochan F1 Build Audit`, then review whether Ubuntu build produces system.exe and runs at least one minimal non-training sample.
+Define Akochan F2 interface/legal-action adapter task.
 ```
 
 Mortal runnable baseline 已暂停，因为当前没有合法、可校验、可使用的 trained model artifact。Mortal 仍保留为源码、mjai 接口、方法论和工程参考。除非未来先补齐 artifact 来源、version/tag、usage constraints 和 checksum 并重新打开 F1，否则不进入 Mortal F2 adapter。
 
-Akochan F1 审计已完成但结论为 Blocked：仓库公开且 JSON/mjai/log/legal-action 入口有价值，未发现外部神经网络权重需求，但本机 macOS ARM 构建失败，尚无 `system.exe` 和最小运行证据。因此不能进入 Akochan F2。
+Akochan F1 审计已完成，当前结论为 Conditional Pass：仓库公开且 JSON/mjai/log/legal-action 入口有价值，未发现外部神经网络权重需求；修正后的 GitHub Actions Ubuntu workflow run `26617347785` 成功生成 `libai.so` 和 `system.exe`，并跑通最小 `legal_action` 与 `mjai_log haifu_log_sample.json 0 2` 样例。
 
-最新 blocker-resolution attempt 仍为 Blocked：Docker 不可用，native Linux 不可用，本地 macOS Homebrew 路径缺少可用 LLVM/Boost/OpenMP；未生成 `libai.so` 或 `system.exe`，因此没有运行最小样例。
+Conditional 的原因：Akochan license 是 custom Japanese usage agreement，修改、再分发、商业或公开发布仍需要复审/许可；本机 macOS build 仍未通过，当前可复现证据来自 Ubuntu GitHub Actions runner。
 
-已新增手动 GitHub Actions workflow `.github/workflows/akochan-f1-build-audit.yml` 作为 Ubuntu supported build environment。该 workflow 只是下一轮 F1 证据获取路径；在实际 workflow run 成功前，Akochan 仍为 F1 Blocked。
+下一步只定义 F2 interface/legal-action adapter task，不直接写 adapter，不训练，不调参，不自我对弈，不接入 Tenhou。

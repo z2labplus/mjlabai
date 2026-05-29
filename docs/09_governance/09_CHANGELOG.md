@@ -1,5 +1,16 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v1.4
+
+- Triggered the corrected manual GitHub Actions workflow `Akochan F1 Build Audit`.
+- Run `26617347785` succeeded at commit `b6b69e08fd009052cb3bbd16c779ac6e2139591b`.
+- Confirmed Ubuntu build generated `ai_src/libai.so`, root `libai.so` and `system.exe`.
+- Confirmed both minimal non-training samples succeeded: `legal_action` and `mjai_log haifu_log_sample.json 0 2`.
+- Upgraded Akochan F1 from Blocked to Conditional Pass, limited to Ubuntu GitHub Actions evidence and subject to custom-license restrictions.
+- Set the next task to define the Akochan F2 interface/legal-action adapter task; no adapter code was written.
+- Recorded the GitHub Actions Node.js 20 deprecation warning for `actions/checkout@v4` as workflow maintenance risk.
+- Updated next, handoff, evidence, risk, candidate-table, audit, backlog, stage-contract, technical-plan and decision docs.
+
 ## 2026-05-29 — v1.3
 
 - Reviewed the first `Akochan F1 Build Audit` GitHub Actions run.

@@ -60,6 +60,55 @@ Status:
 Accepted
 ```
 
+## 2026-05-29 — DR-0005 — Promote Akochan to F1 Conditional Pass on Ubuntu Evidence
+
+Decision:
+
+```text
+Akochan F1 is promoted from Blocked to Conditional Pass based on successful Ubuntu GitHub Actions build and minimal non-training samples.
+The next task is to define the Akochan F2 interface/legal-action adapter task, not to write adapter code yet.
+```
+
+Context:
+
+- The first workflow run failed validation because job-level `env` used an unsupported `runner.temp` context.
+- The workflow was corrected to configure temporary paths through `$GITHUB_ENV`.
+- Corrected run `26617347785` succeeded on `ubuntu-latest`.
+- The run generated `ai_src/libai.so`, root `libai.so` and `system.exe`.
+- Minimal `legal_action` and `mjai_log haifu_log_sample.json 0 2` samples both succeeded.
+- The custom Akochan license remains restrictive for modification, redistribution, commercial use and public release.
+- Local macOS build remains blocked.
+
+Rationale:
+
+- F1 requires reproducible build/minimal-run evidence, not model strength.
+- The Ubuntu runner evidence is enough to stop treating Akochan as build-blocked.
+- Remaining license and local-platform limitations mean this should be Conditional Pass rather than full unqualified Pass.
+
+Consequences:
+
+- `docs/10_next/10_NEXT.md` now points to defining the Akochan F2 interface/legal-action adapter task.
+- F2 task definition must specify wrapper-only integration boundaries, state/action mapping, legal-action checker scope, decision log schema and license guardrails.
+- Do not train, tune, self-play, connect to Tenhou or claim Akochan strength from this F1 result.
+- Do not redistribute Akochan source/binaries or modify AI-part source without license review or permission.
+
+Linked docs:
+
+- `.github/workflows/akochan-f1-build-audit.yml`
+- `docs/07_development_execution/07I_AKOCHAN_F1_REPRO_AUDIT.md`
+- `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0004 — Use Manual GitHub Actions Ubuntu Runner for Akochan F1 Build Evidence
 
 Decision:

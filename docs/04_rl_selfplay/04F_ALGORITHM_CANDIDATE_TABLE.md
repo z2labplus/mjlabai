@@ -27,7 +27,7 @@ Use this table for every candidate algorithm or framework.
 | LuckyJ | Closed target system | Tencent Mahjong AI; likely uses advanced imperfect-information RL ideas including ACH-related work. | Reported Tenhou 10 dan and stable rank 10.68. | High | Low | Use as target benchmark; collect all public metrics and table of required surpass conditions. | Target to beat, not implementation seed. |
 | Suphx | Research system | SL foundation + self-play RL + global reward prediction + oracle guiding + optional run-time policy adaptation. | Reported Tenhou 10 dan and stable rank 8.74; low fourth-place and deal-in rates. | High | Medium | Reproduce the training/eval decomposition: SL policy, Tenhou stable-dan estimator, GRP, oracle-guided ablation. | Main research route. |
 | Mortal | Open-source baseline / reference | Fast Rust riichi AI powered by deep RL; mjai-compatible ecosystem. | Public open-source project; usable for review/play tools, but no lawful, verifiable and usable trained model artifact is currently available. | Medium-High | Low for runnable baseline; Medium as source reference | Keep as source-code, mjai-interface, methodology and engineering reference. Re-open F1 only if a lawful artifact with version/tag, usage constraints and checksum is provided. | Paused as runnable baseline; reference only. |
-| Akochan | Open-source baseline / reviewer candidate | C++ Japanese Mahjong AI with self-match, JSON/mjai/log review and legal-action related components. | Public repo; F1 audit found promising entry points but local build failed before minimal run. | Medium | Medium for source inspection; Low until build blocker is resolved | Provide a supported Docker Linux or verified local LLVM/Boost/OpenMP environment, then build and run minimal `legal_action` and/or `mjai_log` sample. | F1 Blocked; do not enter F2 yet. |
+| Akochan | Open-source baseline / reviewer candidate | C++ Japanese Mahjong AI with self-match, JSON/mjai/log review and legal-action related components. | Public repo; Ubuntu GitHub Actions F1 run generated `system.exe` and passed minimal `legal_action` plus `mjai_log` samples. | Medium | Medium-High for Ubuntu build/minimal-run; Low for local macOS build | Define F2 interface/legal-action adapter task with wrapper-only boundary, state/action mapping, log schema and license guardrails. | F1 Conditional Pass; define F2 task next. |
 | Kanachan | Open-source framework | Mahjong Soul-oriented data/annotation/training framework; emphasizes large-scale data and expressive models. | Public repo targets beating NAGA/Suphx; designed around Mahjong Soul records. | Medium | Medium | Inspect schema, convert concepts to Tenhou-compatible feature/training design. | Research reference, not direct Tenhou baseline yet. |
 | Archer | Open-source/development framework | Top-tier Mahjong AI framework with Tenhou/Majsoul tooling focus. | Repo claims reaching Tenhou 10 dan on Phoenix. | High | Medium | Build or inspect release; check whether evaluation logs/weights/protocol are reproducible. | Baseline candidate after verification. |
 
@@ -54,7 +54,7 @@ score = 0.25*TenhouFit + 0.20*StrengthEvidence + 0.20*Reproducibility
 ## Current priority order
 
 1. Complete P3/F1 reproducibility audits before adapter, training or evaluation-harness implementation.
-2. Provide a supported Akochan build environment and rerun minimal JSON/log sample.
+2. Define Akochan F2 interface/legal-action adapter task after F1 Conditional Pass.
 3. Use Suphx as the main algorithmic blueprint.
 4. Use LuckyJ as the target threshold.
 5. Verify Archer claim before depending on it.
@@ -78,7 +78,7 @@ score = 0.25*TenhouFit + 0.20*StrengthEvidence + 0.20*Reproducibility
 | Suphx | Methodology blueprint / ReferenceOnly + module decomposition | 把 GRP、oracle guiding、runtime adaptation 拆成可复现实验卡。 | 公开方法价值高，但不能直接作为本地 baseline。 |
 | Mortal | F1 paused as runnable baseline / ReferenceOnly | 不使用来路不明的 `mortal.pth`、`*.pth`、`*.pt`、`checkpoint` 或 `snapshot`。只有在提供合法、可校验、可使用且记录 version/tag、usage constraints 和 checksum 的 trained model artifact 后，才可重新打开 F1。 | 源码 tarball 已获取并校验，但没有可用 trained model artifact；Mortal 仅保留为源码、mjai 接口、方法论和工程参考，不得推进 F2。 |
 | Archer | Watch -> Reproduce | 验证 Tenhou 10 dan claim、build、weights、日志和协议。 | 潜在价值高，但证据和复现性需要先核验。 |
-| Akochan | F1 Blocked | 提供 Docker Linux 或已验证的本地 LLVM/Boost/OpenMP 构建环境，然后重跑 build 与最小 `legal_action` / `mjai_log` 样例。 | 仓库公开且 I/O surface 有价值；Docker 不可用，本机缺少可用 Homebrew LLVM/Boost/OpenMP，尚无最小运行证据；不得进入 F2。 |
+| Akochan | F1 Conditional Pass | 定义 F2 interface/legal-action adapter task：先写清状态/动作映射、wrapper-only 边界、日志 schema、license guardrails，再决定是否写 adapter。 | Ubuntu GitHub Actions run `26617347785` 成功生成 `libai.so` 和 `system.exe`，并跑通最小 `legal_action` 与 `mjai_log`；但 license 仍有限制，本机 macOS build 仍未通过。 |
 | Kanachan | Watch / ReferenceOnly | 研究 schema、数据流程、模型结构能否迁移到 Tenhou。 | 更偏 Mahjong Soul 与大数据/模型工程参考。 |
 
 ## v0.4 Resource rule
@@ -226,4 +226,37 @@ Next lowest-cost action:
 ```text
 Provide a supported build environment with Docker Linux or verified local LLVM/Boost/OpenMP,
 then rebuild Akochan and run minimal legal_action and/or mjai_log sample.
+```
+
+## 2026-05-29 Akochan F1 GitHub Actions build/minimal-run result
+
+Conclusion:
+
+```text
+Conditional Pass
+```
+
+Evidence:
+
+- Workflow run: `https://github.com/z2labplus/mjlabai/actions/runs/26617347785`.
+- mjlabai commit: `b6b69e08fd009052cb3bbd16c779ac6e2139591b`.
+- Akochan commit: `53188a0b926fbab38177f88c3cd87d554cf412af`.
+- Runner: GitHub-hosted `ubuntu-latest`.
+- `cd ai_src && make -f Makefile_Linux`: success.
+- `ai_src/libai.so` and root `libai.so`: generated.
+- root `make -f Makefile_Linux`: success.
+- `system.exe`: generated.
+- `legal_action` minimal JSON sample: success.
+- `mjai_log haifu_log_sample.json 0 2`: success.
+
+Remaining constraints:
+
+- This is Ubuntu-runner reproducibility evidence; local macOS build remains blocked.
+- Akochan has a custom license. Keep current use private/research-only until license review or permission clears broader use.
+- This is not strength evidence and does not imply Tenhou performance.
+
+Next lowest-cost action:
+
+```text
+Define Akochan F2 interface/legal-action adapter task.
 ```

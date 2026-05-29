@@ -30,7 +30,7 @@ Current stage interpretation:
 P0 / P1 / P2 are basically established.
 The project is in P3 baseline reproducibility audit.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
-Akochan F1 is currently blocked by local build/toolchain prerequisites.
+Akochan F1 is Conditional Pass after successful Ubuntu GitHub Actions build/minimal-run evidence, with license and local macOS build limits still open.
 ```
 
 ## Current methodology
@@ -80,7 +80,7 @@ Roles:
 - Suphx: main methodology blueprint, split into reproducible modules.
 - Mortal: paused as a runnable baseline; retained as source-code, mjai-interface, methodology and engineering reference.
 - Archer: high-potential Tenhou baseline candidate requiring verification.
-- Akochan: next baseline/reviewer candidate; F1 blocked until build and minimal JSON/log sample run.
+- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, next step is defining F2 interface/legal-action adapter boundaries.
 - Kanachan: data/model architecture reference; not direct Tenhou baseline until adapted.
 
 Main technical route:
@@ -119,8 +119,8 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Run the corrected manual GitHub Actions workflow `Akochan F1 Build Audit`, then review whether Ubuntu build produces system.exe and runs at least one minimal non-training sample.
-Do not start F2 adapter work for Akochan until F1 minimal build/run evidence exists.
+Define the Akochan F2 interface/legal-action adapter task.
+Do not write adapter code until the F2 task boundary, state/action mapping, log schema and license guardrails are documented.
 ```
 
 Latest Akochan F1 audit summary:
@@ -165,7 +165,7 @@ GitHub Actions support added:
 - The workflow installs Ubuntu build dependencies inside the temporary runner, clones `critter-mj/akochan` into the runner temp directory, checks out the requested commit, attempts `cd ai_src && make -f Makefile_Linux` and then `make -f Makefile_Linux` at the root.
 - If `system.exe` is generated and `run_minimal_samples` is true, it runs only minimal non-training samples: `legal_action` and `mjai_log haifu_log_sample.json 0 2`.
 - The workflow does not upload third-party source, `system.exe`, binaries or build artifacts.
-- Akochan remains F1 Blocked until an actual workflow run succeeds and the evidence is reviewed.
+- This workflow support entry was superseded by successful run `26617347785`, which moved Akochan to F1 Conditional Pass.
 
 First GitHub Actions run review:
 
@@ -174,6 +174,19 @@ First GitHub Actions run review:
 - Cause: `.github/workflows/akochan-f1-build-audit.yml` used `runner.temp` inside job-level `env`, which GitHub did not accept at lines 27 and 28.
 - Local fix: `AKOCHAN_DIR` and `SUMMARY_FILE` are now configured in a runtime shell step via `$GITHUB_ENV`; the final summary step has a fallback if the summary file was not created.
 - Evidence impact: no `system.exe`, `legal_action` or `mjai_log` evidence was produced by the failed run. Akochan remains F1 Blocked.
+
+Corrected GitHub Actions run review:
+
+- Run URL: `https://github.com/z2labplus/mjlabai/actions/runs/26617347785`.
+- Commit: `b6b69e08fd009052cb3bbd16c779ac6e2139591b`.
+- Result: success on `ubuntu-latest`.
+- Generated: `ai_src/libai.so`, root `libai.so` and `system.exe`.
+- Minimal samples:
+  - `legal_action`: success; emitted legal `dahai` JSON actions.
+  - `mjai_log haifu_log_sample.json 0 2`: success; emitted parsed mjai/log JSON output.
+- Guardrails: no training, tuning, self-play, Tenhou connection, adapter work, artifact upload or third-party vendoring.
+- New risk note: GitHub emitted a Node.js 20 deprecation warning for `actions/checkout@v4`; this is workflow maintenance risk, not an Akochan F1 blocker.
+- F1 conclusion: Conditional Pass. Akochan can move to F2 task definition, but custom license limits and Ubuntu-only build evidence must remain documented.
 
 ## Do not forget
 

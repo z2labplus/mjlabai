@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Run the corrected manual GitHub Actions workflow `Akochan F1 Build Audit`, then review whether Ubuntu build produces `system.exe` and runs at least one minimal non-training sample.
+- [ ] Define Akochan F2 interface/legal-action adapter task.
 
 Current execution charter:
 
@@ -36,12 +36,13 @@ Limits:
 - [x] 2026-05-29 Akochan F1 blocker-resolution attempt: Docker was unavailable, native Linux was unavailable, and the macOS Homebrew build path lacked usable LLVM/Boost/OpenMP files. Official MacOS and Linux Makefile attempts in `/tmp/mjlabai_akochan_build_audit` failed before producing `libai.so` or `system.exe`, so no minimal `legal_action`, `legal_action_log_all`, `mjai_log` or `stats_mjai` sample was run. Akochan remains F1 Blocked.
 - [x] 2026-05-29 Added manual GitHub Actions workflow `Akochan F1 Build Audit`: `.github/workflows/akochan-f1-build-audit.yml` provides an Ubuntu Linux runner path for the fixed Akochan commit, installs build dependencies inside the runner, clones Akochan in the runner temp directory, attempts `Makefile_Linux` builds, and only if `system.exe` exists attempts minimal non-training `legal_action` and `mjai_log` samples. This does not by itself pass F1; Akochan remains F1 Blocked until a workflow run succeeds and evidence is reviewed.
 - [x] 2026-05-29 Reviewed first GitHub Actions workflow run: run `26615920289` failed during workflow validation before any Ubuntu build because `runner.temp` was used in job-level `env`. The workflow was corrected to configure `AKOCHAN_DIR` and `SUMMARY_FILE` through `$GITHUB_ENV`; no Akochan build or minimal sample evidence was produced by the failed run.
+- [x] 2026-05-29 Ran corrected GitHub Actions workflow `Akochan F1 Build Audit`: run `26617347785` at commit `b6b69e08fd009052cb3bbd16c779ac6e2139591b` succeeded on `ubuntu-latest`; `ai_src/libai.so`, root `libai.so` and `system.exe` were generated; both minimal non-training samples succeeded: `legal_action` and `mjai_log haifu_log_sample.json 0 2`. Akochan F1 is upgraded to Conditional Pass because reproducibility is proven on Ubuntu, while custom license and local macOS build limits remain.
 
 ## Backlog
 
 - [ ] Apply F0-F7 stage labels to Suphx / LuckyJ / Mortal / Akochan / Kanachan / Archer inside `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md` if any evidence changes.
 - [ ] If a lawful, verifiable and usable Mortal trained model artifact is provided later, re-open Mortal F1 artifact verification before any F2 adapter task.
-- [ ] If Akochan F1 passes after build/minimal-run blocker resolution, define Akochan F2 interface/legal-action adapter task.
+- [ ] Define Akochan F2 interface/legal-action adapter task: specify state/action mapping, legal-action checker boundary, log schema, wrapper-only integration constraints and license guardrails before writing adapter code.
 - [ ] Verify Archer evidence before treating it as a strong Tenhou baseline.
 - [ ] Inspect Kanachan schema/model ideas for Tenhou transfer value.
 - [ ] Decompose Suphx into reproducible experiment cards: SL policy, self-play RL, global reward prediction, oracle guiding, runtime adaptation.

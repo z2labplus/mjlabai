@@ -273,3 +273,41 @@ Internal governance decisions that affect execution should also be noted here, b
   - This is evidence of a workflow-definition blocker and its local correction.
   - It is not evidence that Akochan F1 passed.
   - Akochan remains F1 Blocked until a corrected workflow run produces `system.exe` and at least one minimal non-training sample succeeds.
+
+## 2026-05-29 — Akochan F1 corrected GitHub Actions build/minimal-run success
+
+- Candidate: Akochan.
+- Funnel stage after run: F1 Conditional Pass.
+- Workflow file: `.github/workflows/akochan-f1-build-audit.yml`.
+- Workflow run URL: `https://github.com/z2labplus/mjlabai/actions/runs/26617347785`.
+- Workflow run ID: `26617347785`.
+- Job ID: `78435750229`.
+- mjlabai commit: `b6b69e08fd009052cb3bbd16c779ac6e2139591b`.
+- Akochan repository: `https://github.com/critter-mj/akochan.git`.
+- Akochan commit: `53188a0b926fbab38177f88c3cd87d554cf412af`.
+- Runner: GitHub-hosted `ubuntu-latest`.
+- Duration: 2m31s.
+- Dependency install step:
+  - Installed inside temporary runner: `build-essential`, `git`, `make`, `g++`, `libboost-all-dev`, `libgomp1`.
+- Build results:
+  - `cd ai_src && make -f Makefile_Linux`: success.
+  - Generated `ai_src/libai.so` and root `libai.so`.
+  - Root `make -f Makefile_Linux`: success.
+  - Generated `system.exe`.
+- Minimal non-training samples:
+  - `./system.exe legal_action <minimal JSON>`: success; emitted legal `dahai` actions, including discards for `1s`, `1m`, `2m`, `3m`, `6m`, `7m`, `1p`, `4p`, `7p`, `8p`, `6s` and `W`.
+  - `./system.exe mjai_log haifu_log_sample.json 0 2`: success; emitted parsed JSON output beginning with `{"aka_flag": true, "kyoku_first": 4, "names": [], "type": "start_game"}`.
+- Guardrails confirmed:
+  - No training.
+  - No tuning.
+  - No self-play or match task.
+  - No real Tenhou connection.
+  - No adapter/F2 code.
+  - No third-party source, binary or build artifact upload.
+- Warnings:
+  - GitHub emitted a Node.js 20 deprecation warning for `actions/checkout@v4`; this is workflow maintenance risk, not an F1 run blocker.
+  - Build logs include Boost global placeholder deprecation notes; this did not block the build.
+- Evidence status:
+  - This is successful Ubuntu build/minimal-run evidence for Akochan F1.
+  - It is not strength evidence and does not imply Tenhou performance.
+  - F1 status is Conditional Pass because custom license restrictions and local macOS build failure remain unresolved.
