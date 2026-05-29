@@ -14,6 +14,49 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-05-29 — DR-0021 — Use a Shared Offline Evaluation Result Envelope for P5 Outputs
+
+Decision:
+
+```text
+Define a shared P5 offline evaluation metric registry and result envelope schema.
+Use the schema to record, not generate, offline evaluation outputs.
+```
+
+Context:
+
+- Stable-dan reporting is implemented and documented.
+- Akochan wrapper audit results and future fixed-position evaluations need compatible result packaging.
+- P5 still lacks shared metric names, command status, reproducibility metadata, safety flags and evidence-reference fields.
+
+Rationale:
+
+- A shared envelope prevents each evaluator from inventing incompatible output fields.
+- Metric definitions can exist before every metric calculator exists, as long as placeholder metrics are labeled clearly.
+- The envelope must remain schema-only so it does not become a league harness, runner, CLI, training path or Tenhou connector.
+
+Consequences:
+
+- `src/mjlabai/eval/offline_result.py` defines the registry and envelope dataclasses.
+- `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md` documents fields, guardrails and a synthetic example.
+- The next P5-only task is an offline envelope smoke fixture for a synthetic stable-dan report.
+- This is not model-strength evidence and not a LuckyJ comparison claim.
+
+Linked docs:
+
+- `src/mjlabai/eval/offline_result.py`
+- `tests/eval/test_offline_result.py`
+- `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0020 — Stable-Dan Groundwork Current-Scope Complete, P5 Remains Open
 
 Decision:

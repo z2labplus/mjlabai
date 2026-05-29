@@ -29,6 +29,17 @@ from mjlabai.eval.placement_counts import (
     aggregate_placement_records,
     calculate_stable_dan_from_placements,
 )
+from mjlabai.eval.offline_result import (
+    EvaluationMetricDefinition,
+    OfflineCommandStatus,
+    OfflineConfidenceInterval,
+    OfflineEvaluationMetricValue,
+    OfflineEvaluationResultEnvelope,
+    OfflineEvaluationSafetyFlags,
+    OfflineReproducibilityMetadata,
+    get_metric_definition,
+    list_metric_definitions,
+)
 
 __all__ = [
     "DEFAULT_MAX_UNDEFINED_RATE_FOR_STABLE_DAN_REPORT",
@@ -37,6 +48,13 @@ __all__ = [
     "DEFAULT_MIN_TOTAL_GAMES_FOR_STABLE_DAN_REPORT",
     "DEFAULT_MIN_TOTAL_GAMES_FOR_THRESHOLD_REVIEW",
     "LUCKYJ_STABLE_DAN_THRESHOLD",
+    "EvaluationMetricDefinition",
+    "OfflineCommandStatus",
+    "OfflineConfidenceInterval",
+    "OfflineEvaluationMetricValue",
+    "OfflineEvaluationResultEnvelope",
+    "OfflineEvaluationSafetyFlags",
+    "OfflineReproducibilityMetadata",
     "ROOM_FORMULAS",
     "StableDanBootstrapResult",
     "StableDanBootstrapUndefinedError",
@@ -55,5 +73,7 @@ __all__ = [
     "calculate_stable_dan_from_placements",
     "calculate_stable_dan",
     "compare_stable_dan_to_threshold",
+    "get_metric_definition",
+    "list_metric_definitions",
     "placement_rates",
 ]

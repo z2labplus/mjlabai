@@ -44,8 +44,9 @@ The placement-count aggregation helper is implemented and tested for offline sta
 The CLI-free stable-dan evaluation report smoke fixture is implemented and tested from synthetic placement inputs.
 The stable-dan evaluation API documentation is added with example usage from synthetic placements.
 The stable-dan evaluation groundwork subtrack is complete for the current P5 scope.
+The P5 offline evaluation metric registry and result envelope schema are implemented and documented.
 P5 overall is not complete.
-The next project task is to define the P5 offline evaluation metric registry and result envelope schema.
+The next project task is to add an offline evaluation envelope smoke fixture for a synthetic stable-dan report.
 ```
 
 ## Current methodology
@@ -134,7 +135,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define P5 offline evaluation metric registry and result envelope schema.
+Add offline evaluation envelope smoke fixture for synthetic stable-dan report.
 Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload, broad adapter work or P6-P12.
 ```
 

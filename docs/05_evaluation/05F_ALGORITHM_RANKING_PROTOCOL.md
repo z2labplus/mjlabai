@@ -153,10 +153,12 @@ Current implementation status:
 - `tests/eval/test_stable_dan_report_smoke.py` verifies the CLI-free path from synthetic placements to placement aggregation, deterministic point estimate, bootstrap CI, threshold comparison, report schema and JSON serialization.
 - `docs/05_evaluation/05H_STABLE_DAN_EVALUATION_API.md` documents the API-only usage path from synthetic placement records to a serialized report.
 - `docs/05_evaluation/05I_STABLE_DAN_GROUNDWORK_REVIEW.md` records that the stable-dan evaluation subtrack is complete for the current P5 scope.
+- `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md` defines the offline metric registry and result envelope schema for future P5 outputs.
 - `fourth_count == 0` is undefined and raises `StableDanUndefinedError`; do not report infinite stable dan.
 - Bootstrap resamples with `fourth_count == 0` are recorded as undefined; if all resamples are undefined, `StableDanBootstrapUndefinedError` is raised.
 - The synthetic smoke fixture is not model-strength evidence, Tenhou data, an external log, a league result or a LuckyJ comparison claim.
-- P5 overall is still in progress. The next required evaluation-foundation task is to define the P5 offline evaluation metric registry and result envelope schema.
+- `src/mjlabai/eval/offline_result.py` defines `EvaluationMetricDefinition`, `OfflineEvaluationMetricValue`, `OfflineConfidenceInterval`, `OfflineCommandStatus`, `OfflineReproducibilityMetadata`, `OfflineEvaluationSafetyFlags` and `OfflineEvaluationResultEnvelope`.
+- P5 overall is still in progress. The next required evaluation-foundation task is to add an offline evaluation envelope smoke fixture for a synthetic stable-dan report.
 
 ### Level 5 — Promotion gate
 

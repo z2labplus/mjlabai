@@ -8,6 +8,62 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — P5 offline evaluation result envelope schema
+
+- Type: internal implementation / schema-test evidence.
+- Stage: P5 evaluation foundation.
+- Added code:
+  - `src/mjlabai/eval/offline_result.py`.
+  - exports in `src/mjlabai/eval/__init__.py`.
+- Added tests:
+  - `tests/eval/test_offline_result.py`.
+- Added documentation:
+  - `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`.
+- Registry metrics:
+  - `stable_dan_point_estimate`.
+  - `stable_dan_ci_lower`.
+  - `stable_dan_ci_upper`.
+  - `stable_dan_threshold_outcome`.
+  - `stable_dan_sample_size_status`.
+  - `legal_action_rate`.
+  - `invalid_action_rate`.
+  - `command_exit_code`.
+  - `latency_ms`.
+  - `parse_success_rate`.
+  - `wrapper_smoke_success`.
+- Result envelope fields cover:
+  - evaluation id/stage/type.
+  - model or tool id.
+  - dataset or fixture id.
+  - room/ruleset.
+  - metric values.
+  - sample size.
+  - confidence interval.
+  - command status.
+  - latency.
+  - reproducibility metadata.
+  - safety flags.
+  - warnings.
+  - evidence references.
+- Local validation:
+  - `python3 -m unittest tests/eval/test_offline_result.py`: 15 tests passed.
+  - `git diff --check`: passed.
+- Guardrails:
+  - No CLI.
+  - No league harness.
+  - No match runner.
+  - No training.
+  - No tuning.
+  - No self-play.
+  - No real Tenhou connection.
+  - No Tenhou account, platform data, external log, external haifu, scraping, automation, evasion or anti-detection logic.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+- Limitations:
+  - Legal-action rate, invalid-action rate, parse-success rate and latency are registry/schema definitions only.
+  - The schema records results produced elsewhere; it does not generate evaluation results.
+  - This is not model-strength evidence or a LuckyJ comparison claim.
+
 ### 2026-05-29 — P5 stable-dan evaluation groundwork review
 
 - Type: internal governance review evidence.

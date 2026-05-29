@@ -1,5 +1,30 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.12
+
+- Defined P5 offline evaluation metric registry and result envelope schema.
+- Added `src/mjlabai/eval/offline_result.py`.
+- Exported offline result schema APIs from `src/mjlabai/eval/__init__.py`.
+- Added `tests/eval/test_offline_result.py`.
+- Added `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`.
+- Registered metric names:
+  - `stable_dan_point_estimate`
+  - `stable_dan_ci_lower`
+  - `stable_dan_ci_upper`
+  - `stable_dan_threshold_outcome`
+  - `stable_dan_sample_size_status`
+  - `legal_action_rate`
+  - `invalid_action_rate`
+  - `command_exit_code`
+  - `latency_ms`
+  - `parse_success_rate`
+  - `wrapper_smoke_success`
+- Added schema dataclasses for metric values, confidence intervals, command status summaries, reproducibility metadata, safety flags and offline result envelopes.
+- Confirmed the schema records results only; it does not run commands, read external data, train models, self-play, run league or connect to Tenhou.
+- Local validation passed:
+  - `python3 -m unittest tests/eval/test_offline_result.py`: 15 tests passed.
+- Set the next P5-only task to `Add offline evaluation envelope smoke fixture for synthetic stable-dan report.`
+
 ## 2026-05-29 — v2.11
 
 - Reviewed P5 stable-dan evaluation groundwork completion.

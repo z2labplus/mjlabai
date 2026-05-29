@@ -211,3 +211,11 @@
 | Stable-dan subtrack current-scope completion is mistaken for full P5 completion. | Governance / Planning | High | Medium | `05I_STABLE_DAN_GROUNDWORK_REVIEW.md` explicitly says only the stable-dan subtrack is complete and P5 overall remains open. | Open |
 | Stable-dan groundwork completion is mistaken for model-strength or LuckyJ evidence. | Evaluation / Governance | High | Medium | The review document repeats that there are no real model samples, no Tenhou ranked results and no final LuckyJ proof. | Open |
 | The next metric-registry task expands into league, training or external-data ingestion. | Scope | High | Medium | `10_NEXT.md` limits the next task to P5 offline metric registry and result envelope schema; no league, training, self-play, Tenhou or P6-P12. | Open |
+
+## 2026-05-29 — Offline evaluation result envelope schema risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Registry placeholder metrics are mistaken for implemented evaluators. | Evaluation / Governance | Medium-High | Medium | `05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md` labels legal-action, invalid-action, parse-success and latency metrics as schema placeholders unless separate evaluator tasks implement them. | Open |
+| Result envelope is mistaken for a runner or evidence generator. | Scope | High | Medium | The schema records results only; docs and tests confirm it does not run commands, read data, train, self-play, league or connect to Tenhou. | Open |
+| High-risk safety flags are ignored in downstream reports. | Governance | Medium | Medium | Envelope preserves safety flags and adds warnings when high-risk flags are true. | Open |
