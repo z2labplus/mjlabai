@@ -281,6 +281,16 @@ missing_action_rate = 1 / 4
 parse_failure_rate = 1 / 4
 ```
 
+The current synthetic evaluator coverage review is recorded in:
+
+```text
+docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md
+```
+
+That review concludes the minimum outcome coverage is complete only for the
+current P5 synthetic-only `dahai` + strict scope. It is not model-strength
+evidence, Tenhou ranked evidence or LuckyJ comparison evidence.
+
 The evaluator is still not:
 
 - a broad evaluator.
@@ -398,6 +408,7 @@ The current fixture contains these labels:
 legal
 invalid
 missing_action
+parse_failure
 skipped_no_legal_actions
 ```
 
@@ -417,6 +428,7 @@ Expected future smoke expectations for the current fixture, without implementing
 - one `legal` label.
 - one `invalid` label.
 - one `missing_action` label.
+- one `parse_failure` label.
 - one `skipped_no_legal_actions` label.
 - `evaluated_decision_count` should exclude the skipped empty-`legal_actions` record.
 

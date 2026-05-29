@@ -8,6 +8,66 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-30 — P5 legal-action synthetic evaluator coverage review
+
+- Type: internal documentation / review-gate evidence.
+- Stage: P5 evaluation foundation.
+- Added review document:
+  - `docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md`.
+- Reviewed evidence sources:
+  - `tests/fixtures/eval/legal_action_metric_smoke.json`.
+  - `tests/eval/test_legal_action_fixture_schema_smoke.py`.
+  - `src/mjlabai/eval/legal_action_metric.py`.
+  - `tests/eval/test_legal_action_metric.py`.
+  - `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`.
+  - `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`.
+  - `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`.
+- Coverage conclusion:
+  - minimum outcome coverage is complete only for the current P5 synthetic-only `dahai` + strict scope.
+  - covered labels are `legal`, `invalid`, `missing_action`, `parse_failure` and `skipped_no_legal_actions`.
+- Current fixture result:
+  - `total_record_count = 5`.
+  - `evaluated_decision_count = 4`.
+  - `legal_action_count = 1`.
+  - `invalid_action_count = 1`.
+  - `missing_action_count = 1`.
+  - `parse_failure_count = 1`.
+  - `skipped_count = 1`.
+  - `legal_action_rate = 1/4`.
+  - `invalid_action_rate = 1/4`.
+  - `missing_action_rate = 1/4`.
+  - `parse_failure_rate = 1/4`.
+- Evidence grade:
+  - P5 synthetic fixture / evaluator smoke evidence only.
+- Not evidence of:
+  - model strength.
+  - Tenhou ranked performance.
+  - LuckyJ 10.68 comparison.
+  - policy quality.
+  - real-game legality.
+  - complete action-space coverage.
+  - candidate promotion.
+- Local validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_legal_action_metric.py`: 6 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_result.py`: 16 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_envelope_smoke.py`: 1 test passed.
+- Guardrails:
+  - No production code.
+  - No evaluator logic changes.
+  - No canonicalizer.
+  - No broad evaluator.
+  - No legal-action checker or rule engine.
+  - No CLI or file ingestion.
+  - No benchmark harness implementation.
+  - No league, runner, match harness, training, tuning, self-play or real Tenhou connection.
+  - No Tenhou account, platform data, external log, external haifu, scraping, automation, evasion or anti-detection logic.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+- Next task:
+  - Define P5 tiny benchmark harness boundary for legal-action rate, latency and fixed-position decisions before implementation.
+
 ### 2026-05-30 — P5 synthetic legal-action parse-failure fixture coverage
 
 - Type: internal fixture / unit-test evidence.

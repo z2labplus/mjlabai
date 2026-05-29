@@ -49,6 +49,7 @@ docs/05_evaluation/05I_STABLE_DAN_GROUNDWORK_REVIEW.md
 docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md
 docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md
 docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md
+docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md
 docs/07_development_execution/07E_ALGORITHM_DISCOVERY_WORKFLOW.md
 docs/07_development_execution/07F_ALGORITHM_TABLE_BUILD_TASK.md
 docs/07_development_execution/07G_RACING_FUNNEL_EXECUTION_TASK.md
@@ -56,6 +57,11 @@ docs/07_development_execution/07I_AKOCHAN_F1_REPRO_AUDIT.md
 docs/07_development_execution/07J_AKOCHAN_F2_INTERFACE_TASK.md
 docs/08_experiment_analysis/08F_ALGORITHM_CANDIDATE_CARD.md
 ```
+
+`docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md`
+is the P5 legal-action synthetic evaluator coverage review. It records current
+synthetic-only `dahai` + strict coverage and is not model-strength evidence,
+Tenhou ranked evidence or LuckyJ comparison evidence.
 
 ## Current rule
 

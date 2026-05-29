@@ -1,5 +1,43 @@
 # 09_CHANGELOG
 
+## 2026-05-30 — v2.20
+
+- Reviewed the P5 legal-action synthetic evaluator coverage.
+- Added `docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md`.
+- The review records that current minimum outcome coverage is complete only for the P5 synthetic-only `dahai` + strict scope:
+  - `legal`.
+  - `invalid`.
+  - `missing_action`.
+  - `parse_failure`.
+  - `skipped_no_legal_actions`.
+- Current fixture counts/rates remain:
+  - `total_record_count = 5`.
+  - `evaluated_decision_count = 4`.
+  - `legal_action_count = 1`.
+  - `invalid_action_count = 1`.
+  - `missing_action_count = 1`.
+  - `parse_failure_count = 1`.
+  - `skipped_count = 1`.
+  - `legal_action_rate = 1/4`.
+  - `invalid_action_rate = 1/4`.
+  - `missing_action_rate = 1/4`.
+  - `parse_failure_rate = 1/4`.
+- Updated `docs/00_DOCS_INDEX.md` to include the review document.
+- Added cross-references from:
+  - `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`.
+  - `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`.
+  - `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`.
+  - `docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md`.
+- Updated handoff, stage contract, backlog, technical plan and `10_NEXT`.
+- Set the next P5-only task to `Define P5 tiny benchmark harness boundary for legal-action rate, latency and fixed-position decisions before implementation.`
+- No production code, evaluator logic, canonicalizer, broad evaluator, legal-action checker, CLI, benchmark harness implementation, file ingestion, league, runner, model code, training, tuning, self-play, Tenhou connection, external-log reader or platform-data reader was added.
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_legal_action_metric.py`: 6 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_result.py`: 16 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_envelope_smoke.py`: 1 test passed.
+
 ## 2026-05-30 — v2.19
 
 - Added explicit P5 synthetic parse-failure coverage to the project-authored legal-action metric fixture.

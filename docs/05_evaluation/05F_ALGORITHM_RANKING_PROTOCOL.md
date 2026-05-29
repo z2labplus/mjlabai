@@ -230,6 +230,16 @@ parse_failure_rate = 1 / 4
 
 The parse-failure fixture case uses `dahai` with `tsumogiri: null` only to exercise the strict evaluator's parse-failure branch; it does not expand action scope or support unknown/null `tsumogiri` for matching. It must not be used as model-strength or LuckyJ comparison evidence. It does not implement a broad evaluator, canonicalizer, legal-action checker, CLI, league, runner, model-output path, Tenhou integration or external-data ingestion.
 
+The coverage review for this synthetic evaluator is:
+
+```text
+docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md
+```
+
+This is a Level 1 / diagnostic-style P5 artifact. It can check that the
+project-authored synthetic fixture covers the current legality branches, but it
+must not be used for model ranking, LuckyJ comparison or candidate promotion.
+
 ### Level 5 — Promotion gate
 
 A candidate can enter the mainline only if:

@@ -8,6 +8,14 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-05-30 — Legal-action synthetic evaluator review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Current-scope completion is mistaken for complete real-game legal-action evaluation. | Evaluation / Governance | High | Medium | The review document states completion is only for P5 synthetic-only `dahai` + strict scope and lists remaining gaps for reach, calls, kan, hora, ryukyoku, red fives, tile notation and real model outputs. | Open |
+| The next tiny benchmark task jumps directly into a runner, CLI or league implementation. | Scope / Engineering | High | Medium | `10_NEXT` sets a boundary-definition task before implementation and explicitly forbids runner, CLI, file ingestion, league, real Tenhou and external data. | Open |
+| Synthetic legal-action coverage is used as model ranking or LuckyJ comparison evidence. | Evaluation / Governance | High | Medium | `05M`, evidence log and algorithm ranking protocol state this is diagnostic P5 smoke evidence only, not model-strength, Tenhou or LuckyJ evidence. | Open |
+
 ## 2026-05-30 — Synthetic legal-action parse-failure coverage risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

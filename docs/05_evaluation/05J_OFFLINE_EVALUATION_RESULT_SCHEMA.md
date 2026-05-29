@@ -108,6 +108,16 @@ That boundary says legal-action synthetic evaluator output should enter `Offline
 
 After the parse-failure fixture coverage update, the synthetic legal-action fixture envelope records `sample_size = 4`, because the skipped empty-`legal_actions` record is excluded from `evaluated_decision_count`. Current metric values include one legal action, one invalid action, one missing action, one parse failure and one skipped record, with all four evaluated rates equal to `1/4`.
 
+The current legal-action synthetic evaluator coverage review is recorded in:
+
+```text
+docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md
+```
+
+That review confirms only the synthetic `dahai` + strict fixture/evaluator
+coverage. It is not model-strength evidence, Tenhou ranked evidence, LuckyJ
+comparison evidence or authorization for real-data ingestion.
+
 ## Result Envelope
 
 The envelope type is:

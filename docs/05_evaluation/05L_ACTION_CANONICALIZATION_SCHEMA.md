@@ -548,17 +548,31 @@ uses_third_party_artifact = false
 - Do not read external logs in this task.
 - Do not enter P6-P12 from this task.
 
+## Coverage Review Reference
+
+The current synthetic legal-action evaluator coverage review is recorded in:
+
+```text
+docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md
+```
+
+That review keeps the current scope at synthetic-only `dahai` + strict
+matching. The fixture's `parse_failure` record uses `tsumogiri: null` only as
+branch coverage for the strict evaluator; it does not make unknown or null
+`tsumogiri` valid for strict matching.
+
 ## Future Implementation Boundary
 
 The next likely P5 task is:
 
 ```text
-Implement P5 synthetic legal-action metric evaluator for project-authored fixture only.
+Define P5 tiny benchmark harness boundary for legal-action rate, latency and fixed-position decisions before implementation.
 ```
 
 That future task must remain:
 
-- project-authored synthetic fixture only.
+- documentation / boundary definition first.
+- no benchmark harness implementation yet.
 - no broad evaluator implementation.
 - no real Tenhou.
 - no league.
