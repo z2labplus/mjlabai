@@ -245,3 +245,12 @@
 | Strict matching rejects valid future representations when `tsumogiri` or tile notation differs across tools. | Evaluation / Compatibility | Medium | Medium | The schema records strict mode as default and leaves relaxed modes / tile normalization as explicit future tasks. | Open |
 | Future fixture authors use real Tenhou or external logs as shortcut data. | Compliance / Data | High | Medium | The schema says the first fixture must be synthetic/local only; no Tenhou, external logs, platform data or strength evidence. | Open |
 | Edge cases such as reach, calls, kans and red fives are underspecified for implementation. | Evaluation / Engineering | Medium | Medium | The schema records them as future edge cases; next tasks should start with minimal `dahai` fixture smoke tests before broader actions. | Open |
+
+## 2026-05-29 — Synthetic legal-action fixture schema smoke risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `expected_future_outcome` labels are mistaken for actual evaluator output. | Evaluation / Governance | High | Medium | The fixture and test docstring label outcomes as future labels only; the test does not compute legal/invalid rates or canonical equality. | Open |
+| Schema smoke test is mistaken for a legal-action evaluator. | Scope / Engineering | High | Medium | Keep the task limited to JSON shape validation; define an explicit evaluator boundary before implementation. | Open |
+| Synthetic fixture is mistaken for model-strength evidence. | Evaluation / Governance | High | Medium | Fixture/source notes and evidence log state synthetic-only, not Tenhou, not model output and not strength evidence. | Open |
+| Dahai-only fixture scope hides future edge cases for reach, calls, kans and red fives. | Evaluation / Engineering | Medium | Medium | Keep `dahai` as the minimum smoke scope and require separate tasks for broader canonicalization and evaluator behavior. | Open |

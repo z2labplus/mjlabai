@@ -8,6 +8,60 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — Synthetic legal-action metric fixture schema smoke test
+
+- Type: internal fixture / smoke-test evidence for P5 legal-action schema groundwork.
+- Stage: P5 evaluation foundation.
+- Added fixture:
+  - `tests/fixtures/eval/legal_action_metric_smoke.json`.
+- Added test:
+  - `tests/eval/test_legal_action_fixture_schema_smoke.py`.
+- Fixture properties:
+  - Project-authored synthetic data only.
+  - Not Tenhou data.
+  - Not a real haifu.
+  - Not an external log.
+  - Not platform data.
+  - Not model output.
+  - Not model-strength evidence.
+- Future outcome labels present in the fixture:
+  - `legal`.
+  - `invalid`.
+  - `missing_action`.
+  - `skipped_no_legal_actions`.
+- Smoke-test coverage:
+  - fixture file exists and loads as JSON.
+  - top-level `fixture_id`, `schema_version`, `source_note` and `records` shape.
+  - record-level required fields.
+  - `matching_mode == strict`.
+  - actor values are explicit `0`/`1`/`2`/`3`.
+  - `proposed_action` and `legal_actions` use canonical `dahai` shape when present.
+  - `raw_action` is preserved.
+  - source notes contain synthetic / not-Tenhou / not-strength-evidence guardrails.
+- Local validation:
+  - `python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py`: 1 test passed.
+  - `git diff --check`: passed.
+- Guardrails:
+  - No `legal_action_rate` or `invalid_action_rate` calculation.
+  - No canonical equality implementation.
+  - No canonicalizer.
+  - No evaluator.
+  - No legal-action checker.
+  - No CLI.
+  - No league harness.
+  - No match runner.
+  - No training.
+  - No tuning.
+  - No self-play.
+  - No real Tenhou connection.
+  - No Tenhou account, platform data, external log, external haifu, scraping, automation, evasion or anti-detection logic.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+- Limitations:
+  - `expected_future_outcome` values are labels only.
+  - The test validates schema shape only.
+  - This is not executable legality evaluation and not strength evidence.
+
 ### 2026-05-29 — P5 action canonicalization schema for legal-action fixtures
 
 - Type: internal documentation / schema-specification evidence.

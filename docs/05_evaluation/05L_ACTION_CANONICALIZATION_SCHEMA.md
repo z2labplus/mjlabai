@@ -336,6 +336,41 @@ Fixture rules:
 - `legal_actions` is a list of canonical action objects.
 - `matching_mode` defaults to `strict`.
 
+## Current Synthetic Smoke Fixture
+
+The current P5 schema smoke fixture is:
+
+```text
+tests/fixtures/eval/legal_action_metric_smoke.json
+```
+
+The corresponding shape-only smoke test is:
+
+```text
+tests/eval/test_legal_action_fixture_schema_smoke.py
+```
+
+The fixture contains four project-authored synthetic records labeled for future evaluator scenarios:
+
+- `legal`.
+- `invalid`.
+- `missing_action`.
+- `skipped_no_legal_actions`.
+
+`expected_future_outcome` is only a fixture label. The smoke test does not calculate legal/invalid outcomes, does not compare canonical equality and does not implement an evaluator.
+
+The current minimum action type remains:
+
+```text
+dahai
+```
+
+The current matching mode remains:
+
+```text
+strict
+```
+
 ## Outcome Mapping
 
 The canonical schema maps to `05K_LEGAL_ACTION_METRIC_SPEC.md` outcomes as follows:

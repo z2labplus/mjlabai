@@ -21,8 +21,9 @@ Offline evaluation result envelope = metric registry and schema implemented/test
 Offline envelope smoke fixture = synthetic stable-dan envelope smoke test implemented
 Legal-action metric specification = defined
 Action canonicalization schema = defined
+Synthetic legal-action metric fixture schema smoke test = implemented
 P5 overall = still in progress
-Next = synthetic legal-action metric fixture schema smoke test
+Next = P5 legal-action metric synthetic evaluator boundary before implementation
 ```
 
 ## AI role
@@ -93,7 +94,7 @@ The CLI-free stable-dan report smoke fixture is a synthetic-only code-path test.
 
 The stable-dan evaluation API documentation is an API-only guide. It must not become a CLI, league harness, file ingestion system, training path, self-play path or real Tenhou integration.
 
-The stable-dan evaluation groundwork subtrack is complete for current P5 scope. P5 overall is still open. The offline result envelope schema and synthetic stable-dan envelope smoke test are implemented. The legal-action / invalid-action metric specification and action canonicalization schema are defined as documentation only. The next evaluation-foundation task may add a synthetic legal-action metric fixture schema smoke test, but it must not jump to evaluator execution, league execution, P6-P12 or model-strength claims.
+The stable-dan evaluation groundwork subtrack is complete for current P5 scope. P5 overall is still open. The offline result envelope schema and synthetic stable-dan envelope smoke test are implemented. The legal-action / invalid-action metric specification and action canonicalization schema are defined, and the synthetic legal-action metric fixture schema smoke test is implemented. The next evaluation-foundation task may define the synthetic evaluator boundary before implementation, but it must not jump to broad evaluator execution, league execution, P6-P12 or model-strength claims.
 
 ## Output files
 
@@ -122,4 +123,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Add synthetic legal-action metric fixture schema smoke test.
+Define P5 legal-action metric synthetic evaluator boundary before implementation.

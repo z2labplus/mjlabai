@@ -1,0 +1,129 @@
+{
+  "fixture_id": "synthetic-legal-action-smoke-v0.1",
+  "schema_version": "legal_action_fixture_v0.1",
+  "source_note": "Synthetic fixture only; not Tenhou data; not a real haifu; not model strength evidence.",
+  "records": [
+    {
+      "decision_id": "synthetic-legal-action-0001",
+      "actor": 0,
+      "ruleset": "tenhou_four_player",
+      "room": "phoenix",
+      "matching_mode": "strict",
+      "expected_future_outcome": "legal",
+      "proposed_action": {
+        "schema_version": "canonical_action_v0.1",
+        "actor": 0,
+        "action_type": "dahai",
+        "tile": "1s",
+        "tsumogiri": true,
+        "raw_action": {
+          "type": "dahai",
+          "actor": 0,
+          "pai": "1s",
+          "tsumogiri": true
+        }
+      },
+      "legal_actions": [
+        {
+          "schema_version": "canonical_action_v0.1",
+          "actor": 0,
+          "action_type": "dahai",
+          "tile": "1s",
+          "tsumogiri": true,
+          "raw_action": {
+            "type": "dahai",
+            "actor": 0,
+            "pai": "1s",
+            "tsumogiri": true
+          }
+        }
+      ],
+      "source_note": "Synthetic fixture only; not Tenhou data; not a real haifu; not model strength evidence."
+    },
+    {
+      "decision_id": "synthetic-legal-action-0002",
+      "actor": 1,
+      "ruleset": "tenhou_four_player",
+      "room": "phoenix",
+      "matching_mode": "strict",
+      "expected_future_outcome": "invalid",
+      "proposed_action": {
+        "schema_version": "canonical_action_v0.1",
+        "actor": 1,
+        "action_type": "dahai",
+        "tile": "9s",
+        "tsumogiri": false,
+        "raw_action": {
+          "type": "dahai",
+          "actor": 1,
+          "pai": "9s",
+          "tsumogiri": false
+        }
+      },
+      "legal_actions": [
+        {
+          "schema_version": "canonical_action_v0.1",
+          "actor": 1,
+          "action_type": "dahai",
+          "tile": "2s",
+          "tsumogiri": false,
+          "raw_action": {
+            "type": "dahai",
+            "actor": 1,
+            "pai": "2s",
+            "tsumogiri": false
+          }
+        }
+      ],
+      "source_note": "Synthetic fixture only; not Tenhou data; not a real haifu; not model strength evidence."
+    },
+    {
+      "decision_id": "synthetic-legal-action-0003",
+      "actor": 2,
+      "ruleset": "tenhou_four_player",
+      "room": "phoenix",
+      "matching_mode": "strict",
+      "expected_future_outcome": "missing_action",
+      "proposed_action": null,
+      "legal_actions": [
+        {
+          "schema_version": "canonical_action_v0.1",
+          "actor": 2,
+          "action_type": "dahai",
+          "tile": "3m",
+          "tsumogiri": true,
+          "raw_action": {
+            "type": "dahai",
+            "actor": 2,
+            "pai": "3m",
+            "tsumogiri": true
+          }
+        }
+      ],
+      "source_note": "Synthetic fixture only; not Tenhou data; not a real haifu; not model strength evidence."
+    },
+    {
+      "decision_id": "synthetic-legal-action-0004",
+      "actor": 3,
+      "ruleset": "tenhou_four_player",
+      "room": "phoenix",
+      "matching_mode": "strict",
+      "expected_future_outcome": "skipped_no_legal_actions",
+      "proposed_action": {
+        "schema_version": "canonical_action_v0.1",
+        "actor": 3,
+        "action_type": "dahai",
+        "tile": "4p",
+        "tsumogiri": false,
+        "raw_action": {
+          "type": "dahai",
+          "actor": 3,
+          "pai": "4p",
+          "tsumogiri": false
+        }
+      },
+      "legal_actions": [],
+      "source_note": "Synthetic fixture only; not Tenhou data; not a real haifu; not model strength evidence."
+    }
+  ]
+}

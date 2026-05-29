@@ -157,6 +157,7 @@ Current implementation status:
 - `tests/eval/test_offline_envelope_smoke.py` verifies that a synthetic stable-dan report can be represented in the offline result envelope.
 - `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md` defines legal-action and invalid-action metric denominators, parse-failure and missing-action handling, skipped-record rules, canonical action matching principles and result-envelope mapping.
 - `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md` defines canonical action fields, minimum `dahai` fixture scope, strict matching, future relaxed matching boundary, legal-action fixture shape and action outcome mapping.
+- `tests/fixtures/eval/legal_action_metric_smoke.json` and `tests/eval/test_legal_action_fixture_schema_smoke.py` validate a project-authored synthetic legal-action fixture shape with future labels for `legal`, `invalid`, `missing_action` and `skipped_no_legal_actions`.
 - `fourth_count == 0` is undefined and raises `StableDanUndefinedError`; do not report infinite stable dan.
 - Bootstrap resamples with `fourth_count == 0` are recorded as undefined; if all resamples are undefined, `StableDanBootstrapUndefinedError` is raised.
 - The synthetic smoke fixture is not model-strength evidence, Tenhou data, an external log, a league result or a LuckyJ comparison claim.
@@ -207,6 +208,8 @@ Skipped records do not enter the denominator, but must be reported through `skip
 High `legal_action_rate` and low `invalid_action_rate` show only basic output legality. They are not LuckyJ comparison evidence and not proof of strong mahjong decisions.
 
 The current minimum canonical fixture scope is `dahai` only. Default matching mode is `strict`: actor, action type, tile and known `tsumogiri` fields must match, while `raw_action` and metadata are preserved for audit but ignored for equality.
+
+The current synthetic legal-action fixture smoke test validates schema shape only. It does not calculate `legal_action_rate`, calculate `invalid_action_rate`, implement canonical equality or implement an evaluator.
 
 ### Level 5 — Promotion gate
 

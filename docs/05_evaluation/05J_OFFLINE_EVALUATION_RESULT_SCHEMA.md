@@ -68,6 +68,20 @@ docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md
 
 That schema defines canonical action fields, current minimum `dahai` fixture scope, strict matching, future relaxed matching boundaries and fixture shape. It does not implement a canonicalizer.
 
+The current synthetic legal-action fixture schema smoke test lives at:
+
+```text
+tests/eval/test_legal_action_fixture_schema_smoke.py
+```
+
+It reads only:
+
+```text
+tests/fixtures/eval/legal_action_metric_smoke.json
+```
+
+That fixture is synthetic-only and shape-only. It does not calculate legal-action metrics, implement an evaluator, read Tenhou data, read external logs or produce strength evidence.
+
 Future registry additions may include:
 
 - `evaluated_decision_count`.

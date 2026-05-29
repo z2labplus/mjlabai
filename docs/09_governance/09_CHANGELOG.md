@@ -1,5 +1,37 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.16
+
+- Added a synthetic legal-action metric fixture schema smoke test.
+- Added `tests/fixtures/eval/legal_action_metric_smoke.json`.
+- Added `tests/eval/test_legal_action_fixture_schema_smoke.py`.
+- Fixture labels cover future outcome examples:
+  - `legal`.
+  - `invalid`.
+  - `missing_action`.
+  - `skipped_no_legal_actions`.
+- The fixture is project-authored synthetic-only data:
+  - not Tenhou data.
+  - not a real haifu.
+  - not an external log.
+  - not model output.
+  - not model-strength evidence.
+- The smoke test validates:
+  - fixture top-level schema fields.
+  - strict matching mode.
+  - record-level required fields.
+  - actor range.
+  - canonical `dahai` action shape.
+  - `raw_action` preservation.
+  - source-note guardrails.
+  - required future outcome labels.
+- The smoke test does not calculate `legal_action_rate` or `invalid_action_rate`.
+- No canonical equality, canonicalizer, evaluator, legal-action checker, Python production schema, CLI, league harness, match runner, training, tuning, self-play, Tenhou connection, external-log reader or platform-data reader was added.
+- Validation:
+  - `python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py`: 1 test passed.
+  - `git diff --check`: passed.
+- Set the next P5-only task to `Define P5 legal-action metric synthetic evaluator boundary before implementation.`
+
 ## 2026-05-29 — v2.15
 
 - Defined the P5 action canonicalization schema for legal-action metric fixtures.

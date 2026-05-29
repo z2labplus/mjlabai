@@ -201,6 +201,37 @@ skipped_not_evaluable
 
 This task defines the vocabulary only. It does not implement code.
 
+## Synthetic Fixture Schema Smoke Test
+
+The first schema-level smoke fixture is:
+
+```text
+tests/fixtures/eval/legal_action_metric_smoke.json
+```
+
+The corresponding test is:
+
+```text
+tests/eval/test_legal_action_fixture_schema_smoke.py
+```
+
+The fixture is synthetic-only and contains future outcome labels for:
+
+- `legal`.
+- `invalid`.
+- `missing_action`.
+- `skipped_no_legal_actions`.
+
+These labels are not evaluator output.
+
+The smoke test validates JSON shape, strict `dahai` canonical action shape and source-note guardrails only. It does not:
+
+- calculate `legal_action_rate`.
+- calculate `invalid_action_rate`.
+- implement canonical equality.
+- implement an evaluator.
+- read Tenhou data, external logs or platform data.
+
 ## Canonical Action Matching
 
 Canonical matching compares structured action fields, not raw text.
