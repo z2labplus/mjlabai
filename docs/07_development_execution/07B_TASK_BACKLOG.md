@@ -27,7 +27,8 @@
 | Kanachan transfer review | 02/03/04 | P1 | candidate table stable | schema/model/data ideas mapped to Tenhou transfer risks | Planned |
 | Suphx method decomposition | 03/04/05 | P0 | evaluation harness draft | SL, self-play RL, GRP, oracle guiding and runtime adaptation experiment cards created | Planned |
 | Implement Tenhou stable-dan calculator | 05 | P0 | metric spec | room-specific formulas and bootstrap requirement documented/tested | Done: deterministic point estimate implemented and tested |
-| Add bootstrap confidence interval for stable-dan estimate | 05 | P0 | stable-dan calculator | bootstrap CI reports uncertainty and does not allow LuckyJ comparison from point estimate alone | Planned: current next |
+| Add bootstrap confidence interval for stable-dan estimate | 05 | P0 | stable-dan calculator | bootstrap CI reports uncertainty and does not allow LuckyJ comparison from point estimate alone | Done: percentile empirical multinomial bootstrap implemented and tested |
+| Add stable-dan threshold comparison helper | 05 | P0 | bootstrap CI | helper compares bootstrap lower bound against LuckyJ 10.68 without treating point estimate alone as sufficient | Planned: current next |
 | Create tiny benchmark harness | 05/06 | P0 | adapter spec | legal action rate, latency, fixed-position decisions and result table recorded | Planned |
 | Define replay schema | 02 | P0 | benchmark metrics stable | `02B_REPLAY_SCHEMA.md` filled | Planned |
 | Build legal action reconstruction test | 02 | P0 | schema | test plan exists | Planned |

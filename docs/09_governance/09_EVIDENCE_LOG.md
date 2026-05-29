@@ -8,6 +8,52 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — Stable-dan bootstrap confidence interval implementation
+
+- Type: internal implementation / local test evidence for evaluation statistics infrastructure.
+- Stage: P5 evaluation foundation.
+- Implemented code:
+  - `src/mjlabai/eval/stable_dan.py`.
+  - `src/mjlabai/eval/__init__.py`.
+  - `tests/eval/test_stable_dan.py`.
+- API:
+  - `bootstrap_stable_dan_ci(first_count, second_count, third_count, fourth_count, room, *, n_bootstrap=10000, confidence_level=0.95, seed=None)`.
+  - `StableDanBootstrapResult`.
+  - `StableDanBootstrapUndefinedError`.
+- Method:
+  - Percentile empirical multinomial bootstrap over observed placement counts.
+  - Uses standard-library `random.Random(seed)` for reproducible resampling.
+  - Uses standard-library linear interpolation for quantiles; no numpy/scipy dependency was added.
+- Required reporting fields:
+  - point estimate.
+  - lower bound.
+  - upper bound.
+  - confidence level.
+  - bootstrap count.
+  - successful resamples.
+  - undefined resamples.
+  - undefined rate.
+- Undefined handling:
+  - Observed `fourth_count == 0` still raises `StableDanUndefinedError`.
+  - Bootstrap resamples with zero fourth-place count are skipped and counted as undefined.
+  - If all bootstrap resamples are undefined, `StableDanBootstrapUndefinedError` is raised.
+  - Undefined resamples are never reported as infinite stable dan.
+- Local validation:
+  - `python3 -m unittest tests/eval/test_stable_dan.py`: 21 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+- Guardrails:
+  - No training.
+  - No tuning.
+  - No self-play, match or league command.
+  - No real Tenhou connection.
+  - No platform automation, scraping, account tooling, evasion or anti-detection logic.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+- Limitations:
+  - Bootstrap CI is a statistical reporting tool, not model-strength evidence by itself.
+  - High `undefined_rate` makes CI unreliable and must be reported.
+  - LuckyJ 10.68 comparison must use bootstrap lower-bound logic; this helper is the next task.
+
 ### 2026-05-29 — Tenhou stable-dan calculator implementation
 
 - Type: internal implementation / local test evidence for evaluation metric infrastructure.

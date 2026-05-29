@@ -151,6 +151,14 @@
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
 |---|---|---|---|---|---|
-| A deterministic stable-dan point estimate is mistaken for statistically reliable strength evidence. | Evaluation / Governance | High | Medium | Label the calculator as point-estimate infrastructure only; require bootstrap confidence intervals and sample-size reporting before comparing against LuckyJ. | Open |
+| A deterministic stable-dan point estimate is mistaken for statistically reliable strength evidence. | Evaluation / Governance | High | Medium | Label the calculator as point-estimate infrastructure only; require bootstrap confidence intervals and sample-size reporting before comparing against LuckyJ. | Mitigated by bootstrap CI implementation; threshold helper still needed |
 | `fourth_count == 0` is misreported as infinite or superior strength. | Evaluation | High | Medium | Calculator raises `StableDanUndefinedError` when `fourth_count` is zero. | Mitigated in implementation |
 | Room aliases or weights are applied to the wrong Tenhou room. | Evaluation | Medium-High | Medium | Canonicalize supported room aliases and expose formula weights in `StableDanResult` for audit. | Open |
+
+## 2026-05-29 — Stable-dan bootstrap CI risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Bootstrap lower/upper bounds are mistaken for proof that a model beats LuckyJ without an explicit threshold decision rule. | Evaluation / Governance | High | Medium | Next task is a threshold comparison helper using the bootstrap lower bound against LuckyJ 10.68. | Open |
+| High undefined-resample rate makes the CI unstable or misleading. | Evaluation | Medium-High | Medium | `StableDanBootstrapResult` reports `undefined_resamples` and `undefined_rate`; docs require treating high undefined rate as unreliable. | Open |
+| Bootstrap resamples with zero fourth-place count are silently converted to infinite stable dan. | Evaluation | High | Low | Implementation skips and counts undefined resamples; if all resamples are undefined, it raises `StableDanBootstrapUndefinedError`. | Mitigated in implementation |

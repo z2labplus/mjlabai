@@ -36,7 +36,8 @@ Minimal Akochan F2 wrapper skeleton is implemented and passes fake-executable sm
 Akochan F2 fixed-sample real-exe wrapper validation has passed: workflow run `26629344590` at commit `29f5e1ed19407d169f85524e05438ac8938d2dc2` built `ai_src/libai.so`, root `libai.so` and `system.exe`; fake wrapper tests passed 14 tests; real `legal_action` and real `mjai_log` wrapper tests both passed.
 This is fixed-sample wrapper/integration evidence only. It is not Akochan strength evidence, not mjlabai strength evidence, and not authorization for broad adapter work, self-play, match, training or Tenhou integration.
 The project has moved to evaluation groundwork: the deterministic Tenhou stable-dan calculator from room-specific formulas is implemented and tested.
-The next project task is to add bootstrap confidence intervals for the stable-dan estimate.
+The stable-dan bootstrap confidence interval is implemented and tested with percentile empirical multinomial resampling.
+The next project task is to add a stable-dan threshold comparison helper for LuckyJ 10.68 using the bootstrap lower bound.
 ```
 
 ## Current methodology
@@ -125,7 +126,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Add bootstrap confidence interval for stable-dan estimate.
+Add stable-dan threshold comparison helper for LuckyJ 10.68 using bootstrap lower bound.
 Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload or broad adapter work.
 ```
 

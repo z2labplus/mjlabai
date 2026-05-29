@@ -32,7 +32,8 @@ P3 baseline reproducibility audit closeout; moving to P5 evaluation foundation.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
-Next = add bootstrap confidence interval for stable-dan estimate.
+Tenhou stable-dan bootstrap CI = percentile empirical multinomial bootstrap implemented and tested.
+Next = add stable-dan threshold comparison helper for LuckyJ 10.68 using bootstrap lower bound.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -163,13 +164,13 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 
 ## Current Next Task
 
-当前 `10_NEXT` 的下一步是在已实现的稳定段位点估计上增加不确定性估计：
+当前 `10_NEXT` 的下一步是在 stable-dan point estimate 和 bootstrap CI 之上增加目标线比较 helper：
 
 ```text
-Add bootstrap confidence interval for stable-dan estimate.
+Add stable-dan threshold comparison helper for LuckyJ 10.68 using bootstrap lower bound.
 ```
 
-The stable-dan calculator now supports four-player general/ippan, upper/joukyu, expert/tokujou and phoenix/houou room formulas, records placement counts/rates and raises `StableDanUndefinedError` when `fourth_count == 0`. This is metric infrastructure only, not training, self-play, league evaluation or Tenhou integration.
+The stable-dan calculator now supports four-player general/ippan, upper/joukyu, expert/tokujou and phoenix/houou room formulas, records placement counts/rates and raises `StableDanUndefinedError` when `fourth_count == 0`. The bootstrap CI uses percentile empirical multinomial resampling, reports successful/undefined resamples and refuses to fabricate infinite stable dan. This is metric infrastructure only, not training, self-play, league evaluation or Tenhou integration.
 
 Mortal runnable baseline 已暂停，因为当前没有合法、可校验、可使用的 trained model artifact。Mortal 仍保留为源码、mjai 接口、方法论和工程参考。除非未来先补齐 artifact 来源、version/tag、usage constraints 和 checksum 并重新打开 F1，否则不进入 Mortal F2 adapter。
 

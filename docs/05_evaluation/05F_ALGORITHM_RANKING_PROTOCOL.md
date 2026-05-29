@@ -102,11 +102,26 @@ stable_dan = ((first_count * 50 + second_count * 20) / fourth_count - 20) / 10
 
 Always report bootstrap confidence intervals. A model does not beat LuckyJ unless the lower confidence bound is above the required threshold or the project explicitly marks the result as provisional.
 
+Stable-dan CI reporting must include:
+
+- point estimate.
+- lower bound.
+- upper bound.
+- confidence level.
+- number of bootstrap resamples.
+- successful resamples.
+- undefined resamples.
+- undefined rate.
+
+Undefined bootstrap resamples occur when the resampled fourth-place count is zero. They must be skipped and reported, not converted into infinite stable dan. If undefined rate is high, treat the interval as unreliable until more games are available.
+
 Current implementation status:
 
 - `src/mjlabai/eval/stable_dan.py` implements deterministic point estimates for general/ippan, upper/joukyu, expert/tokujou and phoenix/houou.
+- `bootstrap_stable_dan_ci(...)` implements percentile empirical multinomial bootstrap confidence intervals using Python standard library only.
 - `fourth_count == 0` is undefined and raises `StableDanUndefinedError`; do not report infinite stable dan.
-- Bootstrap confidence intervals are the next required evaluation-foundation task.
+- Bootstrap resamples with `fourth_count == 0` are recorded as undefined; if all resamples are undefined, `StableDanBootstrapUndefinedError` is raised.
+- The next required evaluation-foundation task is a LuckyJ 10.68 threshold comparison helper using the bootstrap lower bound.
 
 ### Level 5 — Promotion gate
 

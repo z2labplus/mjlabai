@@ -14,6 +14,49 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-05-29 — DR-0014 — Require Bootstrap Lower-Bound Logic Before LuckyJ Stable-Dan Claims
+
+Decision:
+
+```text
+Implement stable-dan bootstrap confidence intervals as percentile empirical multinomial resampling.
+Do not compare against LuckyJ 10.68 from point estimate alone; the next helper must use the bootstrap lower bound.
+```
+
+Context:
+
+- The deterministic stable-dan calculator is implemented and tested.
+- The project target is stable dan above LuckyJ 10.68, but point estimates alone can overstate strength.
+- Bootstrap resamples can produce undefined stable dan when sampled fourth-place count is zero.
+
+Rationale:
+
+- Percentile empirical multinomial bootstrap is simple, dependency-free and tied directly to observed placement counts.
+- Undefined resamples must be visible in the result because high undefined rate makes the CI unreliable.
+- A threshold helper should encode the project rule that lower-bound evidence matters more than point-estimate optimism.
+
+Consequences:
+
+- `bootstrap_stable_dan_ci(...)` reports point estimate, CI bounds, confidence level, bootstrap count, successful resamples, undefined resamples and undefined rate.
+- Undefined resamples are skipped and counted, never converted into infinite stable dan.
+- If all resamples are undefined, `StableDanBootstrapUndefinedError` is raised.
+- The next task is a LuckyJ 10.68 threshold comparison helper using the bootstrap lower bound.
+
+Linked docs:
+
+- `src/mjlabai/eval/stable_dan.py`
+- `tests/eval/test_stable_dan.py`
+- `docs/10_next/10_NEXT.md`
+- `docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0013 — Treat Stable Dan as Point Estimate Until Bootstrap CI Exists
 
 Decision:

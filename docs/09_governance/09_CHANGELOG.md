@@ -1,5 +1,23 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.5
+
+- Added bootstrap confidence intervals for the Tenhou stable-dan estimate.
+- Extended `src/mjlabai/eval/stable_dan.py` with:
+  - `bootstrap_stable_dan_ci(...)`.
+  - `StableDanBootstrapResult`.
+  - `StableDanBootstrapUndefinedError`.
+- Implemented percentile empirical multinomial bootstrap over observed placement counts using Python standard library only.
+- Bootstrap output records point estimate, confidence level, lower bound, upper bound, bootstrap count, successful resamples, undefined resamples, undefined rate, method, seed, quantile method and source note.
+- Undefined bootstrap resamples with zero fourth-place count are skipped and counted; they are not converted into infinite stable dan.
+- If every bootstrap resample is undefined, the API raises `StableDanBootstrapUndefinedError`.
+- Updated `tests/eval/test_stable_dan.py` to cover reproducible seeded bootstrap, undefined-resample accounting, validation errors and non-infinite bounds.
+- Local validation passed:
+  - `python3 -m unittest tests/eval/test_stable_dan.py`: 21 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+- This is evaluation statistics infrastructure only, not model-strength evidence, training, self-play, league execution or Tenhou integration.
+- Set the next task to `Add stable-dan threshold comparison helper for LuckyJ 10.68 using bootstrap lower bound.`
+
 ## 2026-05-29 — v2.4
 
 - Implemented the Tenhou stable-dan calculator as the next P5 evaluation-foundation task.

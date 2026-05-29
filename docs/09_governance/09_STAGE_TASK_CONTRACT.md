@@ -10,7 +10,8 @@ Current focus:
 Mortal = F1 paused as runnable baseline / ReferenceOnly
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence
 Stable-dan calculator = deterministic point estimate implemented and tested
-Next = P5 evaluation foundation: bootstrap confidence interval for stable-dan estimate
+Stable-dan bootstrap CI = percentile empirical multinomial bootstrap implemented and tested
+Next = P5 evaluation foundation: LuckyJ 10.68 threshold comparison helper using bootstrap lower bound
 ```
 
 ## AI role
@@ -69,7 +70,9 @@ F2 may create only the documented minimal wrapper skeleton for fixed `legal_acti
 
 The Tenhou stable-dan calculator is an offline metric utility. It must remain separate from training, self-play, league execution and real Tenhou integration.
 
-The next evaluation-foundation task may add bootstrap confidence intervals around the stable-dan estimate, but it must not become a league harness or model-strength claim by itself.
+The stable-dan bootstrap CI is an offline statistical reporting utility. It must remain separate from training, self-play, league execution and real Tenhou integration.
+
+The next evaluation-foundation task may add a LuckyJ 10.68 threshold comparison helper using the bootstrap lower bound, but it must not become a league harness or model-strength claim by itself.
 
 ## Output files
 
@@ -98,4 +101,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Add bootstrap confidence interval for stable-dan estimate.
+Add stable-dan threshold comparison helper for LuckyJ 10.68 using bootstrap lower bound.
