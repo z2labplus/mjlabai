@@ -74,5 +74,5 @@ Tenhou 目标一致性 /25：
 | Suphx | Methodology blueprint | ReferenceOnly + module decomposition | Create experiment cards for SL, self-play RL, GRP, oracle guiding, runtime adaptation. |
 | Mortal | Source-code, mjai-interface, methodology and engineering reference | F1 paused as runnable baseline / ReferenceOnly | Re-open F1 only if a lawful, verifiable and usable trained model artifact is provided with version/tag, usage constraints and checksum. |
 | Archer | High-potential baseline candidate | F1 | Verify claims, weights/logs, build path and protocol. |
-| Akochan | Next baseline F1 candidate / reviewer | F1 next | Repository, license, dependencies/build path, artifact requirements, minimal documented run viability and I/O/logging fit. |
+| Akochan | Baseline/reviewer candidate | F1 Blocked | Resolve build/toolchain blocker, then run minimal `legal_action` and/or `mjai_log` sample before F2. |
 | Kanachan | Data/model architecture reference | F0/F1 | Review schema/model ideas for Tenhou transfer. |

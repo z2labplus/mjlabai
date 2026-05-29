@@ -60,6 +60,53 @@ Status:
 Accepted
 ```
 
+## 2026-05-29 — DR-0003 — Keep Akochan at F1 Blocked Until Build and Minimal JSON/Log Sample Pass
+
+Decision:
+
+```text
+Akochan does not pass F1 yet.
+Keep Akochan at F1 Blocked and do not define F2 adapter work until a supported build environment produces `system.exe` and a minimal `legal_action` and/or `mjai_log` sample succeeds.
+```
+
+Context:
+
+- `critter-mj/akochan` is public and inspectable at commit `53188a0b926fbab38177f88c3cd87d554cf412af`.
+- Akochan has promising JSON, mjai, pipe, log review and legal-action entry points.
+- No external neural-network weight artifact appears required; the repository includes required text parameters under `params/`.
+- Local macOS ARM build failed with both the macOS and Linux Makefiles.
+- No `system.exe` was produced, so no minimal run could be executed.
+- The custom license allows private research audit, but redistribution, AI-part modification, commercial use and public release are restricted.
+
+Rationale:
+
+- F1 requires local reproducibility evidence, not only source inspection.
+- Promising I/O surfaces are not enough to justify F2 adapter work without a successful build and minimal run.
+- The license needs tighter review before any public/commercial or modified-source usage.
+
+Consequences:
+
+- `docs/10_next/10_NEXT.md` now points to resolving the Akochan build/toolchain blocker.
+- Akochan remains a baseline/reviewer candidate, not a runnable baseline yet.
+- The next attempt should use a supported Linux toolchain or a corrected macOS Homebrew LLVM/OpenMP/Boost toolchain.
+- Do not run self-play, train, tune, connect to Tenhou or write an adapter while resolving this F1 blocker.
+
+Linked docs:
+
+- `docs/07_development_execution/07I_AKOCHAN_F1_REPRO_AUDIT.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0002 — Pause Mortal Runnable Baseline and Move F1 Path to Akochan
 
 Decision:

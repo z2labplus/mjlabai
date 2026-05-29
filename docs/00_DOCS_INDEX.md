@@ -47,6 +47,7 @@ docs/05_evaluation/05G_RACING_FUNNEL_EVALUATION.md
 docs/07_development_execution/07E_ALGORITHM_DISCOVERY_WORKFLOW.md
 docs/07_development_execution/07F_ALGORITHM_TABLE_BUILD_TASK.md
 docs/07_development_execution/07G_RACING_FUNNEL_EXECUTION_TASK.md
+docs/07_development_execution/07I_AKOCHAN_F1_REPRO_AUDIT.md
 docs/08_experiment_analysis/08F_ALGORITHM_CANDIDATE_CARD.md
 ```
 

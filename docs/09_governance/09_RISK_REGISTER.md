@@ -57,3 +57,13 @@
 | Unknown Mortal weight files such as `mortal.pth`, `*.pth`, `*.pt`, `checkpoint` or `snapshot` are mistaken for usable project artifacts. | Reproducibility / Governance | High | Medium | Do not use unknown model artifacts. Any future Mortal artifact must record source, version/tag, usage constraints and checksum before F1 can be re-opened. | Open |
 | Pausing Mortal leaves the project without a runnable local baseline until another candidate passes F1. | Planning | Medium | High | Move the next baseline F1 audit to Akochan and keep the audit limited to repository, license, dependency, artifact and minimal-run viability. | Open |
 | Mortal reference code is accidentally treated as evidence of runnable strength. | Evaluation | Medium-High | Medium | Keep Mortal labeled as source-code, mjai-interface, methodology and engineering reference only; do not promote to F2 or claim strength without runnable evidence. | Open |
+
+## 2026-05-29 — Akochan F1 audit risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Akochan license is a custom Japanese usage agreement rather than a standard open-source license. | License / Compliance | High | High | Restrict current use to private research audit; get legal/Web ChatGPT Pro review and likely author permission before redistribution, AI-part modification, commercial use or public release. | Open |
+| Local macOS ARM build is blocked by missing or incompatible LLVM/OpenMP/Boost toolchain. | Engineering | High | High | Use a supported Linux build environment with `g++`, Boost and OpenMP, or install/verify Homebrew LLVM/OpenMP/Boost before retrying F1 build. | Open |
+| Normal `git clone` still depends on unreliable local GitHub DNS. | Infrastructure | Medium | High | Fix DNS/proxy or document explicit host-resolution only as a temporary audit workaround; do not treat source access as fully reproducible until normal clone works. | Open |
+| Akochan exposes promising JSON/legal-action/mjai surfaces, but no minimal run has succeeded locally. | Reproducibility | High | High | Keep Akochan at F1 Blocked; run `legal_action` and/or `mjai_log` minimal samples before defining F2 adapter work. | Open |
+| Repository-included `params/` text files are necessary runtime artifacts and may be mistaken for code-only dependency. | Reproducibility / Data | Medium | Medium | Treat `params/` as required artifacts tied to commit `53188a0b926fbab38177f88c3cd87d554cf412af`; record checksums if separated from the repository. | Open |

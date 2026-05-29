@@ -8,7 +8,7 @@ Current funnel focus:
 
 ```text
 Mortal = F1 paused as runnable baseline / ReferenceOnly
-Akochan = next F1 reproducibility audit
+Akochan = F1 Blocked on local build/toolchain
 ```
 
 ## AI role
@@ -47,7 +47,9 @@ This stage supports the north-star target by creating a reproducible baseline an
 - Do not connect to real Tenhou.
 - Do not create platform automation, scraping, evasion or account tooling.
 - Do not claim strength improvement from reproducibility checks.
-- Do not use unknown `mortal.pth`, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
+- Do not use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
+- Do not vendor or copy third-party source into this repository.
+- Do not enter F2 before F1 minimal build/run evidence exists.
 - Do not promote Mortal to F2 unless a lawful, verifiable and usable trained model artifact is provided and Mortal F1 is re-opened with source, version/tag, usage constraints and checksum.
 
 ## Task boundary
@@ -81,4 +83,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Run Akochan F1 reproducibility audit as the next baseline path.
+Resolve Akochan F1 blocker: establish a supported build environment and rerun build plus minimal `legal_action` and/or `mjai_log` sample.

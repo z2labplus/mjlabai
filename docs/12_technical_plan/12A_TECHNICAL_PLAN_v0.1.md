@@ -30,7 +30,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 ```text
 P3 / baseline reproducibility audit.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
-Akochan = next F1 reproducibility audit.
+Akochan = F1 Blocked on local build/toolchain.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -155,14 +155,18 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 - 不声称模型超过任何 baseline。
 - 不把 LuckyJ 当作可直接复现对象。
 - 不跳过 baseline racing funnel。
-- 不使用来路不明的 `mortal.pth`、`*.pth`、`*.pt`、`checkpoint` 或 `snapshot` 文件。
+- 不使用来路不明的 model weights、`*.pth`、`*.pt`、`checkpoint` 或 `snapshot` 文件。
+- 不把第三方源码 vendor/copy 进本仓库。
+- 不在 F1 最小 build/run 证据完成前进入 F2 adapter。
 
 ## Current Next Task
 
-当前 `10_NEXT` 的下一步是 Akochan F1 reproducibility audit：
+当前 `10_NEXT` 的下一步是解决 Akochan F1 blocker：
 
 ```text
-Run Akochan F1 reproducibility audit as the next baseline path.
+Resolve Akochan F1 blocker: establish a supported build environment and rerun build plus minimal legal_action and/or mjai_log sample.
 ```
 
 Mortal runnable baseline 已暂停，因为当前没有合法、可校验、可使用的 trained model artifact。Mortal 仍保留为源码、mjai 接口、方法论和工程参考。除非未来先补齐 artifact 来源、version/tag、usage constraints 和 checksum 并重新打开 F1，否则不进入 Mortal F2 adapter。
+
+Akochan F1 审计已完成但结论为 Blocked：仓库公开且 JSON/mjai/log/legal-action 入口有价值，未发现外部神经网络权重需求，但本机 macOS ARM 构建失败，尚无 `system.exe` 和最小运行证据。因此不能进入 Akochan F2。

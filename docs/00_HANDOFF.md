@@ -30,7 +30,7 @@ Current stage interpretation:
 P0 / P1 / P2 are basically established.
 The project is in P3 baseline reproducibility audit.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
-Akochan F1 reproducibility audit is the next baseline path.
+Akochan F1 is currently blocked by local build/toolchain prerequisites.
 ```
 
 ## Current methodology
@@ -80,7 +80,7 @@ Roles:
 - Suphx: main methodology blueprint, split into reproducible modules.
 - Mortal: paused as a runnable baseline; retained as source-code, mjai-interface, methodology and engineering reference.
 - Archer: high-potential Tenhou baseline candidate requiring verification.
-- Akochan: next baseline F1 reproducibility candidate and reviewer.
+- Akochan: next baseline/reviewer candidate; F1 blocked until build and minimal JSON/log sample run.
 - Kanachan: data/model architecture reference; not direct Tenhou baseline until adapted.
 
 Main technical route:
@@ -119,9 +119,26 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Run Akochan F1 reproducibility audit as the next baseline path.
-Do not start F2 adapter work for Mortal unless a lawful, verifiable and usable Mortal trained model artifact is provided and F1 is re-opened.
+Resolve Akochan F1 build/toolchain blocker, then rerun build plus minimal legal_action and/or mjai_log sample.
+Do not start F2 adapter work for Akochan until F1 minimal build/run evidence exists.
 ```
+
+Latest Akochan F1 audit summary:
+
+- GitHub repository `critter-mj/akochan` is public and inspectable.
+- Clone URL: `https://github.com/critter-mj/akochan.git`.
+- Default branch: `master`.
+- Audited commit: `53188a0b926fbab38177f88c3cd87d554cf412af`.
+- Normal `git clone` failed because local DNS could not resolve `github.com`; clone with explicit `http.curloptResolve` succeeded in `/tmp/mjlabai_akochan_audit_20260529_084246`.
+- License is a custom Japanese usage agreement, not a standard OSI license. Private research audit is allowed, but redistribution, AI-part modification, commercial use and public release are restricted and need review/permission.
+- Build path is C++11 Makefile-based: build `ai_src` into `libai.so`, then root into `system.exe`.
+- Dependencies include g++/clang++, OpenMP, Boost.System/Boost.Asio, pthread on Linux, Homebrew LLVM/Boost on macOS and repository-included `params/` text files.
+- No external neural-network `*.pth`/`*.pt`/checkpoint/snapshot artifact was detected; 709 text parameter files are included under `params/`.
+- Source exposes promising `mjai_log`, `stats_mjai`, `game_server`, `legal_action`, `legal_action_log_all`, `pipe`, `pipe_detailed` and `mjai_client` entry points.
+- Local macOS ARM build failed: MacOS Makefile expects `/opt/homebrew/opt/llvm/bin/clang++`; Linux Makefile is incompatible with this macOS target due `/proc/cpuinfo`, `-mcmodel=medium` and `-fopenmp`.
+- `mjai` CLI was not installed.
+- No `system.exe` was produced, so minimal run was not executed.
+- F1 conclusion: Blocked.
 
 ## Do not forget
 

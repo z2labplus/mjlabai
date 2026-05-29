@@ -1,5 +1,15 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v1.0
+
+- Completed the Akochan F1 reproducibility audit as the next baseline path.
+- Added `docs/07_development_execution/07I_AKOCHAN_F1_REPRO_AUDIT.md`.
+- Recorded `critter-mj/akochan` repository metadata, audited commit, custom license terms, dependency/build path, artifact needs, minimal-run entry points and I/O/logging fit.
+- Confirmed Akochan does not appear to need external neural-network weights, but relies on repository-included text parameters under `params/`.
+- Attempted local build in the external temporary clone only; macOS ARM build is blocked by missing/incompatible LLVM/OpenMP/Boost toolchain and Linux Makefile incompatibility.
+- Set Akochan F1 conclusion to Blocked and kept Akochan out of F2.
+- Updated next-task, handoff, evidence, risk, candidate-table, development-backlog, stage-contract, technical-plan and decision docs.
+
 ## 2026-05-29 — v0.9
 
 - Completed the Mortal F1 continuation decision.

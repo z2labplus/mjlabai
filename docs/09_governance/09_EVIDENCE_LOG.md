@@ -152,3 +152,43 @@ Internal governance decisions that affect execution should also be noted here, b
 - Relevance: Keeps execution tied to reproducible baselines, Tenhou-oriented metrics, racing-funnel gates and documented Codex tasks.
 - Evidence status: internal decision, not external model-strength evidence.
 - Action: Follow `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md` and keep `docs/10_next/10_NEXT.md` as the single next-task queue.
+
+## 2026-05-29 — Akochan F1 reproducibility audit
+
+- Candidate: Akochan.
+- Funnel stage after audit: F1 Blocked.
+- Checked repository: `critter-mj/akochan`.
+- Repository URL: https://github.com/critter-mj/akochan
+- Clone URL: `https://github.com/critter-mj/akochan.git`.
+- Default branch: `master`.
+- Checked commit: `53188a0b926fbab38177f88c3cd87d554cf412af`.
+- Commit date: `2022-07-05 17:40:37 +0900`.
+- Local temporary clone: `/tmp/mjlabai_akochan_audit_20260529_084246`.
+- Source access facts:
+  - `git ls-remote --symref https://github.com/critter-mj/akochan.git HEAD` returned `master` and commit `53188a0b926fbab38177f88c3cd87d554cf412af`.
+  - Normal `git clone --depth 1` failed because local DNS could not resolve `github.com`.
+  - `git -c http.curloptResolve=github.com:443:20.205.243.166 clone --depth 1 https://github.com/critter-mj/akochan.git /tmp/mjlabai_akochan_audit_20260529_084246` succeeded.
+- Source facts:
+  - Repository includes `readme.md`, `readme_jpn.md`, `LICENSE`, `Makefile`, `Makefile_Linux`, `Makefile_MacOS`, `ai_src/Makefile_*`, `setup_mjai.json`, `setup_match.json`, `mjai.sh`, `haifu_log_sample.json` and `match_result/haifu_log_1000_0.json`.
+  - License is a custom Japanese usage agreement. Private non-public research use is allowed; redistribution, AI-part modification, commercial use and public release are restricted and need review or author permission.
+  - Build is C++11 Makefile-based. `ai_src` builds `libai.so`; root build links `libai.so` into `system.exe`.
+  - Dependencies include g++/clang++, OpenMP, Boost.System/Boost.Asio, pthread on Linux, Homebrew LLVM/Boost on macOS and repository-included `params/` text files.
+  - The repository contains 709 tracked text parameter files under `params/`, about 2.8M in the local clone.
+  - No external `*.pth`, `*.pt`, checkpoint or snapshot file was detected or required for F1.
+  - Source entry points include `test`, `check`, `mjai_log`, `full_analyze`, `stats_mjai`, `game_server`, `legal_action`, `legal_action_log_all`, `pipe`, `pipe_detailed` and `mjai_client`.
+  - `mjai.sh` uses a local `mjai server` with `system.exe mjai_client`.
+- Local environment facts:
+  - OS: Darwin arm64.
+  - `g++` maps to Apple clang version 21.0.0.
+  - GNU Make 3.81 is available.
+  - `mjai` CLI was not found.
+- Build attempt facts:
+  - `make -f Makefile_MacOS` in `ai_src` failed because `/opt/homebrew/opt/llvm/bin/clang++` was missing.
+  - `make -f Makefile_Linux` in `ai_src` failed because `/proc/cpuinfo` is absent on macOS and Apple clang rejected `-mcmodel=medium` and `-fopenmp`.
+  - No `libai.so` or `system.exe` was produced.
+- Result:
+  - Minimal run was not executed.
+  - Akochan has promising JSON/mjai/log/legal-action surfaces, but F1 cannot pass until build and minimal sample execution succeed.
+- Action:
+  - Do not promote Akochan to F2.
+  - Resolve build/toolchain blocker and rerun build plus minimal `legal_action` and/or `mjai_log` sample.
