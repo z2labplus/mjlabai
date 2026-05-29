@@ -27,8 +27,9 @@ Synthetic legal-action metric evaluator = implemented for project-authored fixtu
 Synthetic legal-action parse-failure fixture coverage = implemented
 Synthetic legal-action evaluator coverage review = complete for current synthetic-only dahai + strict scope
 P5 tiny benchmark harness boundary = defined before implementation
+P5 tiny benchmark harness synthetic fixture schema smoke test = implemented
 P5 overall = still in progress
-Next = P5 tiny benchmark harness synthetic fixture schema smoke test
+Next = review P5 tiny benchmark harness synthetic fixture schema smoke coverage and define next P5-only task
 ```
 
 ## AI role
@@ -99,7 +100,7 @@ The CLI-free stable-dan report smoke fixture is a synthetic-only code-path test.
 
 The stable-dan evaluation API documentation is an API-only guide. It must not become a CLI, league harness, file ingestion system, training path, self-play path or real Tenhou integration.
 
-The stable-dan evaluation groundwork subtrack is complete for current P5 scope. P5 overall is still open. The offline result envelope schema and synthetic stable-dan envelope smoke test are implemented. The legal-action / invalid-action metric specification and action canonicalization schema are defined, the synthetic legal-action metric fixture schema smoke test is implemented, the synthetic evaluator boundary is defined, the first synthetic evaluator is implemented for the project-authored fixture only, synthetic parse-failure fixture coverage is implemented, the legal-action synthetic evaluator coverage review is complete for the current synthetic-only `dahai` + strict scope, and the P5 tiny benchmark harness boundary is defined before implementation. The next evaluation-foundation task should add a synthetic fixture schema smoke test for the future tiny benchmark harness; it must not implement the harness or jump to broad evaluator execution, file ingestion, CLI, league execution, P6-P12 or model-strength claims.
+The stable-dan evaluation groundwork subtrack is complete for current P5 scope. P5 overall is still open. The offline result envelope schema and synthetic stable-dan envelope smoke test are implemented. The legal-action / invalid-action metric specification and action canonicalization schema are defined, the synthetic legal-action metric fixture schema smoke test is implemented, the synthetic evaluator boundary is defined, the first synthetic evaluator is implemented for the project-authored fixture only, synthetic parse-failure fixture coverage is implemented, the legal-action synthetic evaluator coverage review is complete for the current synthetic-only `dahai` + strict scope, the P5 tiny benchmark harness boundary is defined before implementation, and the P5 tiny benchmark harness synthetic fixture schema smoke test is implemented. The next evaluation-foundation task should review that fixture schema smoke coverage and define the next P5-only task; it must not implement the harness or jump to broad evaluator execution, file ingestion, CLI, league execution, P6-P12 or model-strength claims.
 
 ## Output files
 
@@ -128,4 +129,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Add P5 tiny benchmark harness synthetic fixture schema smoke test.
+Review P5 tiny benchmark harness synthetic fixture schema smoke coverage and define next P5-only task.

@@ -247,15 +247,19 @@ legal-action rate, latency and fixed-position diagnostics before any harness
 implementation. It does not change the coverage conclusion in this review and
 does not expand evaluator scope.
 
-The next narrow P5-only task after that boundary is:
+The tiny benchmark harness synthetic fixture schema smoke coverage now lives at:
 
 ```text
-Add P5 tiny benchmark harness synthetic fixture schema smoke test.
+tests/fixtures/eval/tiny_benchmark_harness_smoke.json
+tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py
 ```
 
-That future task must remain synthetic/local and must not implement the harness,
-runner, CLI, file ingestion, league, real Tenhou, model-output integration or
-P6-P12 work.
+That fixture/test pair remains synthetic/local schema coverage only. It does
+not implement a harness, runner, CLI, file ingestion, league, real Tenhou,
+model-output integration or P6-P12 work.
+
+The next narrow P5-only task is to review that schema smoke coverage and define
+the next P5-only task.
 
 ## Verification
 

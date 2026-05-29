@@ -51,9 +51,10 @@ The P5 action canonicalization schema for legal-action metric fixtures is define
 The synthetic legal-action metric fixture schema smoke test is implemented in `tests/eval/test_legal_action_fixture_schema_smoke.py` against `tests/fixtures/eval/legal_action_metric_smoke.json`; it validates fixture shape only and does not calculate legal/invalid rates or implement an evaluator.
 The P5 legal-action metric synthetic evaluator boundary is defined in `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`: future implementation may use only project-authored synthetic/local fixtures, current `dahai` scope and strict matching; it must preserve explicit count/rate denominator rules and all-false safety flags, and must not use real Tenhou, real haifu, external logs, platform data, model code, third-party binaries, training, self-play or league paths.
 The P5 synthetic legal-action metric evaluator is implemented for the project-authored fixture only in `src/mjlabai/eval/legal_action_metric.py`, with tests in `tests/eval/test_legal_action_metric.py`. The fixture now includes an explicit synthetic `parse_failure` record that keeps `action_type = "dahai"` and uses `tsumogiri: null` only to exercise the current strict parse-failure branch. It computes the current synthetic fixture as `legal=1`, `invalid=1`, `missing=1`, `parse_failure=1`, `skipped=1`, `evaluated=4`, and rates `1/4`, `1/4`, `1/4`, `1/4`. It also maps the result into `OfflineEvaluationResultEnvelope` with all safety flags false and synthetic-only warnings. `docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md` records that this minimum outcome coverage is complete only for the current P5 synthetic-only `dahai` + strict scope. This is legality diagnostic infrastructure only, not a broad evaluator, canonicalizer, legal-action checker, CLI, league, runner, model-output path, Tenhou integration or strength evidence.
-`docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md` defines the P5 tiny benchmark harness boundary before implementation. It is docs-only: future legal-action rate, latency and fixed-position diagnostics may use only synthetic/local inputs and compatible `OfflineEvaluationResultEnvelope` records. No harness code, tests, fixtures, CLI, runner, file ingestion, league, model-output integration, Tenhou path or P6-P12 work has been added.
+`docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md` defines the P5 tiny benchmark harness boundary before implementation. It is docs-only: future legal-action rate, latency and fixed-position diagnostics may use only synthetic/local inputs and compatible `OfflineEvaluationResultEnvelope` records.
+`tests/fixtures/eval/tiny_benchmark_harness_smoke.json` and `tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py` add a P5 tiny benchmark harness synthetic fixture schema smoke test. The fixture is project-authored synthetic/local only and describes legal-action diagnostic shape, latency diagnostic plan shape and fixed-position synthetic decision shape without implementing a harness, measuring latency, calculating fixed-position exact-match, calling model code or reading real Tenhou / real haifu / external logs / platform data. It is not model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
 P5 overall is not complete.
-The next project task is to add a P5 tiny benchmark harness synthetic fixture schema smoke test without implementing the benchmark harness.
+The next project task is to review P5 tiny benchmark harness synthetic fixture schema smoke coverage and define the next P5-only task without implementing the benchmark harness.
 ```
 
 ## Current methodology
@@ -142,11 +143,11 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Add P5 tiny benchmark harness synthetic fixture schema smoke test.
-Do not implement the harness yet, and do not expand beyond P5 synthetic/local
-fixture schema smoke coverage into training, self-play, league evaluation,
-Tenhou integration, artifact upload, broad adapter work, CLI, file ingestion,
-model-output integration or P6-P12.
+Review P5 tiny benchmark harness synthetic fixture schema smoke coverage and
+define the next P5-only task. Do not implement the harness yet, and do not
+expand beyond P5 synthetic/local fixture schema smoke coverage into training,
+self-play, league evaluation, Tenhou integration, artifact upload, broad adapter
+work, CLI, file ingestion, model-output integration or P6-P12.
 ```
 
 Latest Akochan F1 audit summary:

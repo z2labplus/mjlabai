@@ -200,6 +200,49 @@ Minimum expected fields:
 The envelope records results produced elsewhere. It must not generate results,
 run commands, read files broadly or become a runner.
 
+## Synthetic Fixture Schema Smoke Coverage
+
+The current P5 schema-only smoke coverage for this boundary lives in:
+
+```text
+tests/fixtures/eval/tiny_benchmark_harness_smoke.json
+tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py
+```
+
+The fixture is project-authored synthetic/local only. It is not Tenhou data, not
+a real haifu, not an external log, not platform data, not model output, not
+model-strength evidence, not LuckyJ `10.68` comparison and not
+candidate-promotion evidence.
+
+The schema smoke test validates only:
+
+- top-level fixture shape.
+- source-note and warning guardrails.
+- all-false intended safety flags.
+- future diagnostic metric names.
+- legal-action diagnostic reference shape.
+- latency diagnostic plan shape.
+- fixed-position synthetic decision record shape.
+
+It does not:
+
+- implement the tiny benchmark harness.
+- add production code.
+- calculate legal-action metrics.
+- measure latency.
+- use `time` or `perf_counter`.
+- calculate fixed-position exact-match.
+- call model code.
+- call evaluator code.
+- add CLI or file ingestion.
+- read real Tenhou, real haifu, external logs or platform data.
+
+Evidence grade:
+
+```text
+P5 synthetic/local fixture schema smoke evidence only.
+```
+
 ## Safety Flags
 
 Future synthetic/local tiny benchmark smoke results must keep these flags false
@@ -273,9 +316,9 @@ This boundary does not solve:
 
 ## Guardrails
 
-- Do not implement the tiny benchmark harness in this task.
-- Do not add tests or fixtures in this task.
-- Do not modify evaluator logic in this task.
+- Do not implement the tiny benchmark harness as part of this schema smoke
+  coverage.
+- Do not modify evaluator logic as part of this schema smoke coverage.
 - Do not connect to model code.
 - Do not call third-party binaries.
 - Do not read real Tenhou, real haifu, external logs or platform data.
@@ -283,23 +326,25 @@ This boundary does not solve:
 
 ## Next P5-Only Task
 
-After this boundary is reviewed, the next narrow task may be:
+After the fixture schema smoke coverage is reviewed, the next narrow task should
+be selected through `docs/10_next/10_NEXT.md`. The current review gate is:
 
 ```text
-Add P5 tiny benchmark harness synthetic fixture schema smoke test.
+Review P5 tiny benchmark harness synthetic fixture schema smoke coverage and define next P5-only task.
 ```
 
-That future task must still remain P5-only and must not implement the benchmark
+That review task must still remain P5-only and must not implement the benchmark
 harness itself unless a later review explicitly permits that scope.
 
 ## Verification
 
-This is a documentation-only boundary task.
+Current schema smoke validation:
 
 Recommended validation:
 
 ```bash
 git diff --check
+python3 -m unittest tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py
 python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py
 python3 -m unittest tests/eval/test_legal_action_metric.py
 python3 -m unittest tests/eval/test_offline_result.py

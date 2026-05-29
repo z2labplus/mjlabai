@@ -133,6 +133,20 @@ only: no real Tenhou, real haifu, external logs, platform data, model-output
 integration, third-party binaries, CLI, runner or league behavior is authorized.
 Such envelope records are diagnostics, not strength evidence.
 
+The current P5 tiny benchmark harness schema-only smoke fixture lives at:
+
+```text
+tests/fixtures/eval/tiny_benchmark_harness_smoke.json
+tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py
+```
+
+It validates the future envelope-facing shape for synthetic/local legal-action,
+latency and fixed-position diagnostics. It does not create an
+`OfflineEvaluationResultEnvelope`, implement a harness, calculate metrics,
+measure latency, call model/evaluator code or read real Tenhou, real haifu,
+external logs or platform data. It remains P5 synthetic/local fixture schema
+smoke evidence only, not model-strength evidence or LuckyJ `10.68` comparison.
+
 ## Result Envelope
 
 The envelope type is:

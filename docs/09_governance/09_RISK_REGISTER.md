@@ -8,6 +8,15 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-05-30 — Tiny benchmark harness fixture schema smoke risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The tiny benchmark fixture schema smoke test is mistaken for a benchmark harness implementation. | Scope / Engineering | High | Medium | Fixture/test docs state it validates shape only and does not add production code, harness, CLI, file ingestion, runner, league, model-output integration or latency measurement. | Open |
+| The latency diagnostic plan is mistaken for measured benchmark results. | Evaluation / Engineering | Medium-High | Medium | The fixture contains plan fields only; the schema test rejects measured-result fields and does not import `time` or call timing APIs. | Mitigated in test |
+| The fixed-position synthetic record is mistaken for supervised labels, policy quality or strength evidence. | Evaluation / Governance | High | Medium | Fixture interpretation and docs state fixed-position expectations are future diagnostics only, not supervised labels, policy-quality evidence, model-strength evidence or LuckyJ comparison. | Open |
+| Future work jumps from schema smoke coverage into harness implementation, real data ingestion or model-output integration without review. | Scope / Compliance | High | Medium | `10_NEXT` sets a review gate as the next task and explicitly forbids benchmark harness implementation, real Tenhou, real haifu, external logs, model-output integration, CLI, broad file ingestion and P6-P12 work. | Open |
+
 ## 2026-05-30 — Tiny benchmark harness boundary risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

@@ -1,0 +1,167 @@
+{
+  "schema_version": "tiny_benchmark_harness_fixture_v0.1",
+  "fixture_id": "tiny_benchmark_harness_smoke_v0.1",
+  "evaluation_stage": "P5",
+  "fixture_type": "tiny_benchmark_harness_schema_smoke",
+  "source_note": "Project-authored synthetic/local only; not Tenhou data; not real haifu; not external log; not platform data; not model output; not model strength evidence; not LuckyJ 10.68 comparison; not candidate promotion evidence; not full action-space coverage.",
+  "warnings": [
+    "synthetic/local only",
+    "not Tenhou data",
+    "not real haifu",
+    "not external log",
+    "not model strength evidence",
+    "not LuckyJ 10.68 comparison",
+    "not candidate promotion evidence",
+    "not full action-space coverage"
+  ],
+  "intended_safety_flags": {
+    "training_related": false,
+    "self_play_related": false,
+    "league_related": false,
+    "tenhou_related": false,
+    "platform_automation_related": false,
+    "uses_real_platform_data": false,
+    "uses_external_log": false,
+    "uses_third_party_artifact": false
+  },
+  "diagnostic_metric_names": [
+    "legal_action_rate",
+    "invalid_action_rate",
+    "missing_action_rate",
+    "parse_failure_rate",
+    "evaluated_decision_count",
+    "skipped_count",
+    "latency_ms_mean",
+    "latency_ms_p50",
+    "latency_ms_p95",
+    "latency_ms_max",
+    "fixed_position_decision_count",
+    "fixed_position_exact_match_rate"
+  ],
+  "legal_action_diagnostics": {
+    "source_kind": "synthetic_fixture_reference",
+    "fixture_path": "tests/fixtures/eval/legal_action_metric_smoke.json",
+    "allowed_scope": [
+      "project-authored synthetic/local only",
+      "dahai only",
+      "strict matching only"
+    ],
+    "metric_names": [
+      "legal_action_rate",
+      "invalid_action_rate",
+      "missing_action_rate",
+      "parse_failure_rate",
+      "evaluated_decision_count",
+      "skipped_count"
+    ],
+    "interpretation": [
+      "legality diagnostic only",
+      "not strength evidence",
+      "not LuckyJ 10.68 comparison"
+    ]
+  },
+  "latency_diagnostics": {
+    "source_kind": "synthetic_latency_plan",
+    "timing_method": "perf_counter_ns_or_equivalent_future_plan",
+    "repetitions": 3,
+    "sample_count": 5,
+    "target_kind": "synthetic_local_evaluation_path_future_placeholder",
+    "metric_names": [
+      "latency_ms_mean",
+      "latency_ms_p50",
+      "latency_ms_p95",
+      "latency_ms_max"
+    ],
+    "required_reproducibility_fields": [
+      "environment",
+      "command_or_test_path",
+      "sample_count",
+      "timing_method",
+      "repetitions"
+    ],
+    "interpretation": [
+      "engineering smoke diagnostic only",
+      "not model strength evidence",
+      "not training throughput",
+      "not self-play throughput",
+      "not league throughput",
+      "not GPU benchmark"
+    ]
+  },
+  "fixed_position_decision_diagnostics": {
+    "source_kind": "project_authored_synthetic_fixed_position_records",
+    "matching_mode": "strict",
+    "action_scope": "dahai",
+    "records": [
+      {
+        "record_id": "synthetic-fixed-position-0001",
+        "source_note": "Project-authored synthetic/local only; not Tenhou data; not real haifu; not external log; not model output; not model strength evidence; not LuckyJ 10.68 comparison.",
+        "synthetic_position_id": "synthetic-position-0001",
+        "decision_context": {
+          "round_id": "synthetic_round_0",
+          "actor": 0,
+          "turn_index": 0,
+          "observation_stub": "project-authored synthetic fixed-position smoke record",
+          "no_real_haifu": true
+        },
+        "candidate_actions": [
+          {
+            "schema_version": "canonical_action_v0.1",
+            "actor": 0,
+            "action_type": "dahai",
+            "tile": "1s",
+            "tsumogiri": true,
+            "raw_action": {
+              "type": "dahai",
+              "actor": 0,
+              "pai": "1s",
+              "tsumogiri": true
+            },
+            "metadata": {
+              "synthetic_only": true,
+              "not_part_of_equality": true
+            }
+          }
+        ],
+        "expected_action": {
+          "schema_version": "canonical_action_v0.1",
+          "actor": 0,
+          "action_type": "dahai",
+          "tile": "1s",
+          "tsumogiri": true,
+          "raw_action": {
+            "type": "dahai",
+            "actor": 0,
+            "pai": "1s",
+            "tsumogiri": true
+          },
+          "metadata": {
+            "synthetic_only": true,
+            "not_part_of_equality": true
+          }
+        },
+        "metric_names": [
+          "fixed_position_decision_count",
+          "fixed_position_exact_match_rate"
+        ],
+        "interpretation": [
+          "future diagnostic expectation only",
+          "not supervised label",
+          "not policy-quality evidence",
+          "not strength evidence"
+        ]
+      }
+    ]
+  },
+  "related_docs": [
+    "docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md",
+    "docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md",
+    "docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md",
+    "docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md",
+    "docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md"
+  ],
+  "evidence_refs": [
+    "tests/fixtures/eval/tiny_benchmark_harness_smoke.json",
+    "tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py"
+  ]
+}

@@ -567,6 +567,18 @@ The future tiny benchmark harness boundary is recorded in:
 docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md
 ```
 
+The synthetic fixture schema smoke coverage for that future harness is:
+
+```text
+tests/fixtures/eval/tiny_benchmark_harness_smoke.json
+tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py
+```
+
+Its fixed-position record uses only the current `dahai` canonical action shape
+and strict matching metadata. It is schema-only coverage and does not calculate
+fixed-position exact-match, implement a harness, implement a canonicalizer or
+expand action scope.
+
 Future fixed-position decision fixtures must not expand this canonical action
 scope without a separate schema review. This document still does not add
 canonicalizer support for reach, chi, pon, kan, hora, ryukyoku, red-five
@@ -577,13 +589,13 @@ normalization, tile notation conversion or relaxed matching.
 The next likely P5 task is:
 
 ```text
-Add P5 tiny benchmark harness synthetic fixture schema smoke test.
+Review P5 tiny benchmark harness synthetic fixture schema smoke coverage and define next P5-only task.
 ```
 
 That future task must remain:
 
 - no benchmark harness implementation yet.
-- synthetic/local fixture schema smoke coverage only.
+- review and next-task definition only.
 - no broad evaluator implementation.
 - no real Tenhou.
 - no league.

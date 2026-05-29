@@ -69,6 +69,13 @@ is the P5 tiny benchmark harness boundary definition. It is docs-only planning
 for future synthetic/local diagnostics and is not harness implementation,
 model-strength evidence, Tenhou ranked evidence or LuckyJ comparison evidence.
 
+`tests/fixtures/eval/tiny_benchmark_harness_smoke.json` and
+`tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py` are the P5
+tiny benchmark harness synthetic fixture schema smoke coverage. They validate
+fixture shape, guardrails, safety flags and future diagnostic metric names only;
+they do not implement a harness, measure latency, calculate fixed-position
+exact-match, read real data or provide strength evidence.
+
 ## Current rule
 
 所有算法讨论都必须先定位其 funnel stage，再定义下一步最低成本实验。

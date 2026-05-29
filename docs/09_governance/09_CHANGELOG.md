@@ -1,5 +1,29 @@
 # 09_CHANGELOG
 
+## 2026-05-30 — v2.22
+
+- Added the P5 tiny benchmark harness synthetic fixture schema smoke test.
+- Added `tests/fixtures/eval/tiny_benchmark_harness_smoke.json`.
+- Added `tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py`.
+- The fixture is project-authored synthetic/local only and records:
+  - legal-action diagnostic input shape.
+  - latency diagnostic plan shape.
+  - fixed-position synthetic decision diagnostic shape.
+  - all-false intended safety flags.
+  - warnings that the fixture is not Tenhou data, not a real haifu, not an external log, not model output, not model-strength evidence, not LuckyJ `10.68` comparison and not candidate-promotion evidence.
+- The schema smoke test validates fixture shape, safety flags, warnings, future diagnostic metric names, the synthetic legal-action fixture reference, latency plan fields and strict `dahai` fixed-position action shape.
+- The schema smoke test does not implement a benchmark harness, calculate legal-action metrics, measure latency, calculate fixed-position exact-match, call model code, call evaluator code, add CLI/file ingestion or read real Tenhou / real haifu / external logs / platform data.
+- Updated handoff, docs index, 05F, 05J, 05K, 05L, 05N, stage contract, backlog, technical plan, evidence log, risk register and `10_NEXT`.
+- Set the next P5-only task to `Review P5 tiny benchmark harness synthetic fixture schema smoke coverage and define next P5-only task.`
+- No production code, benchmark harness implementation, latency measurement code, evaluator logic changes, canonicalizer, broad evaluator, legal-action checker, CLI, file ingestion, league, runner, model-output path, training, tuning, self-play, Tenhou connection, external-log reader or platform-data reader was added.
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_legal_action_metric.py`: 6 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_result.py`: 16 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_envelope_smoke.py`: 1 test passed.
+
 ## 2026-05-30 — v2.21
 
 - Defined the P5 tiny benchmark harness boundary before implementation.

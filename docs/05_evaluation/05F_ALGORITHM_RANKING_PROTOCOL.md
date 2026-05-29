@@ -251,6 +251,19 @@ legal-action rate, latency and fixed-position diagnostics may help organize
 engineering evidence, but they must not be used for model ranking, candidate
 promotion, Tenhou evidence or LuckyJ comparison.
 
+The tiny benchmark harness synthetic fixture schema smoke coverage is:
+
+```text
+tests/fixtures/eval/tiny_benchmark_harness_smoke.json
+tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py
+```
+
+It is also Level 1 / diagnostic-style P5 evidence only. It validates
+synthetic/local fixture shape, safety flags, warning text and future diagnostic
+metric names; it does not implement a benchmark harness, measure latency,
+calculate fixed-position exact-match, rank models, promote candidates or support
+LuckyJ comparison.
+
 ### Level 5 — Promotion gate
 
 A candidate can enter the mainline only if:

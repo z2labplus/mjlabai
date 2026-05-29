@@ -656,6 +656,19 @@ league execution, training or self-play. Legal-action rates remain legality
 diagnostics only and are not strength evidence or LuckyJ `10.68` comparison
 evidence.
 
+The current tiny benchmark harness schema smoke fixture may reference
+legal-action diagnostic metric names and the project-authored legal-action
+fixture path, but it does not calculate `legal_action_rate` or
+`invalid_action_rate`. That fixture lives at:
+
+```text
+tests/fixtures/eval/tiny_benchmark_harness_smoke.json
+tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py
+```
+
+It is shape-only coverage for future P5 harness inputs, not an evaluator, not
+model-strength evidence and not LuckyJ `10.68` comparison.
+
 ## Guardrails
 
 - `legal_action_rate` only measures basic legality.
