@@ -8,6 +8,55 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — Stable-dan evaluation API documentation
+
+- Type: internal documentation evidence for evaluation API usage.
+- Stage: P5 evaluation foundation.
+- Added document:
+  - `docs/05_evaluation/05H_STABLE_DAN_EVALUATION_API.md`.
+- Updated index:
+  - `docs/00_DOCS_INDEX.md`.
+- Documented example fixture:
+  - `tests/fixtures/eval/stable_dan_placements_smoke.json`.
+  - Project-authored synthetic placement records only.
+  - Not Tenhou data.
+  - Not real platform data.
+  - Not an external haifu/log.
+  - Not a model, league, training or self-play result.
+- Documented API flow:
+  - load synthetic placement records.
+  - aggregate placements with `aggregate_placement_records(...)`.
+  - estimate bootstrap CI with `bootstrap_stable_dan_ci(...)`.
+  - compare against LuckyJ stable-dan threshold with `compare_stable_dan_to_threshold(...)`.
+  - build `StableDanEvaluationReport` with `build_stable_dan_evaluation_report(...)`.
+  - serialize `report.to_dict()`.
+- Documented guardrails:
+  - point estimate alone cannot support a LuckyJ claim.
+  - bootstrap lower-bound logic is required before any clear threshold pass.
+  - high `undefined_rate` is unreliable.
+  - insufficient sample size cannot enter threshold review.
+  - synthetic fixtures are never strength evidence.
+  - stable-dan reports are offline statistics, not real Tenhou ranked results.
+- Local validation:
+  - `python3 -m unittest tests/eval/test_stable_dan_report_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_placement_counts.py`: 18 tests passed.
+  - `python3 -m unittest tests/eval/test_stable_dan.py`: 45 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+  - `git diff --check`: passed.
+- Guardrails:
+  - No code change.
+  - No CLI.
+  - No training.
+  - No tuning.
+  - No self-play, match or league command.
+  - No real Tenhou connection.
+  - No Tenhou account, platform data, external log, external haifu, scraping, automation, evasion or anti-detection logic.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+- Limitations:
+  - Documentation examples are API examples only.
+  - They do not provide model-strength evidence or a LuckyJ comparison claim.
+
 ### 2026-05-29 — CLI-free stable-dan report smoke fixture implementation
 
 - Type: internal implementation / local smoke-test evidence for evaluation reporting infrastructure.

@@ -1,5 +1,30 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.10
+
+- Added stable-dan evaluation API documentation.
+- Added `docs/05_evaluation/05H_STABLE_DAN_EVALUATION_API.md`.
+- Updated `docs/00_DOCS_INDEX.md` to include the new API document.
+- Documented the synthetic fixture:
+  - `tests/fixtures/eval/stable_dan_placements_smoke.json`.
+  - 100 synthetic records with `first=30`, `second=30`, `third=20`, `fourth=20`.
+  - Not Tenhou data, not real haifu, not external log and not model result.
+- Documented the API-only flow:
+  - `aggregate_placement_records(...)`.
+  - `bootstrap_stable_dan_ci(...)`.
+  - `compare_stable_dan_to_threshold(...)`.
+  - `build_stable_dan_evaluation_report(...)`.
+  - `StableDanEvaluationReport.to_dict()`.
+- Documented key report fields and sample-size / threshold / claim guardrails.
+- Clarified that the current report schema does not include `model_name`, `dataset_name`, `evaluation_context` or caller notes; those must remain outside the report until a future schema task extends it.
+- Local validation passed:
+  - `python3 -m unittest tests/eval/test_stable_dan_report_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_placement_counts.py`: 18 tests passed.
+  - `python3 -m unittest tests/eval/test_stable_dan.py`: 45 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+- No code, CLI, file ingestion path, league harness, match runner, training, self-play, Tenhou connection or external-data reader was added.
+- Set the next task to `Review P5 stable-dan evaluation groundwork completion and define the next P5-only evaluation task.`
+
 ## 2026-05-29 — v2.9
 
 - Added CLI-free stable-dan evaluation report smoke fixture from placement inputs.

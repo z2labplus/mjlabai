@@ -15,7 +15,8 @@ Stable-dan threshold helper = LuckyJ 10.68 lower-bound comparison implemented an
 Stable-dan reporting schema = minimum sample-size guardrails and report schema implemented and tested
 Stable-dan placement aggregation = offline placement-count helper implemented and tested
 Stable-dan report smoke fixture = CLI-free synthetic placement fixture implemented and tested
-Next = P5 evaluation foundation: stable-dan evaluation API documentation with synthetic placement example
+Stable-dan evaluation API docs = synthetic placement example added
+Next = P5 evaluation foundation: review stable-dan groundwork completion and define next P5-only task
 ```
 
 ## AI role
@@ -84,7 +85,9 @@ The stable-dan placement aggregation helper is an offline evaluation input utili
 
 The CLI-free stable-dan report smoke fixture is a synthetic-only code-path test. It must not be interpreted as model-strength evidence, Tenhou evidence, a league result or a LuckyJ comparison claim.
 
-The next evaluation-foundation task may add stable-dan evaluation API documentation with example usage from synthetic placements, but it must not become a CLI, league harness, file ingestion system, training path, self-play path or real Tenhou integration.
+The stable-dan evaluation API documentation is an API-only guide. It must not become a CLI, league harness, file ingestion system, training path, self-play path or real Tenhou integration.
+
+The next evaluation-foundation task may review P5 stable-dan evaluation groundwork completion and define the next P5-only task, but it must not jump to P6-P12 or claim model strength.
 
 ## Output files
 
@@ -113,4 +116,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Add stable-dan evaluation API documentation with example usage from synthetic placements.
+Review P5 stable-dan evaluation groundwork completion and define the next P5-only evaluation task.

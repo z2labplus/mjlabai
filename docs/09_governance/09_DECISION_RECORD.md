@@ -14,6 +14,46 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-05-29 — DR-0019 — Stable-Dan API Examples Must Match Implemented Schema
+
+Decision:
+
+```text
+Stable-dan evaluation API documentation must show only implemented parameters and report fields.
+Caller metadata such as model_name, dataset_name and evaluation_context remains outside StableDanEvaluationReport until a future schema task adds it.
+```
+
+Context:
+
+- Web-side drafts suggested including model/dataset/evaluation context metadata in the report builder call.
+- The current implemented `build_stable_dan_evaluation_report(...)` signature accepts `bootstrap_result`, optional `threshold_comparison` and `schema_version`.
+- Adding undocumented parameters to examples would create false expectations and break copy-paste usage.
+
+Rationale:
+
+- Documentation must be executable against the current code.
+- Keeping metadata outside the report avoids unreviewed schema expansion during a docs-only task.
+- Future schema changes should be explicit tasks with tests and governance updates.
+
+Consequences:
+
+- `docs/05_evaluation/05H_STABLE_DAN_EVALUATION_API.md` uses the actual current API signature.
+- The document explicitly notes that `model_name`, `dataset_name`, `evaluation_context` and arbitrary notes are not stored in `StableDanEvaluationReport` yet.
+- The next task is to review P5 stable-dan evaluation groundwork completion and define the next P5-only evaluation task.
+
+Linked docs:
+
+- `docs/05_evaluation/05H_STABLE_DAN_EVALUATION_API.md`
+- `docs/00_DOCS_INDEX.md`
+- `src/mjlabai/eval/stable_dan.py`
+- `docs/10_next/10_NEXT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0018 — Stable-Dan Smoke Fixtures Must Be Synthetic and CLI-Free
 
 Decision:

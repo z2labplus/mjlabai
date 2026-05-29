@@ -41,7 +41,8 @@ The stable-dan threshold comparison helper is implemented and tested with LuckyJ
 The stable-dan reporting schema and minimum sample-size guardrails are implemented and tested.
 The placement-count aggregation helper is implemented and tested for offline stable-dan evaluation inputs.
 The CLI-free stable-dan evaluation report smoke fixture is implemented and tested from synthetic placement inputs.
-The next project task is to add stable-dan evaluation API documentation with example usage from synthetic placements.
+The stable-dan evaluation API documentation is added with example usage from synthetic placements.
+The next project task is to review P5 stable-dan evaluation groundwork completion and define the next P5-only evaluation task.
 ```
 
 ## Current methodology
@@ -130,7 +131,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Add stable-dan evaluation API documentation with example usage from synthetic placements.
+Review P5 stable-dan evaluation groundwork completion and define the next P5-only evaluation task.
 Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload or broad adapter work.
 ```
 

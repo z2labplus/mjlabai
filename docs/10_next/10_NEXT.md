@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Add stable-dan evaluation API documentation with example usage from synthetic placements.
+- [ ] Review P5 stable-dan evaluation groundwork completion and define the next P5-only evaluation task.
 
 Current execution charter:
 
@@ -24,10 +24,10 @@ Limits:
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
-- For the next step, add only stable-dan evaluation API documentation with example usage from synthetic placements.
+- For the next step, review P5 stable-dan evaluation groundwork completion and define the next P5-only evaluation task.
 - Keep the implementation tied to evaluation metrics; do not expand into league, training, self-play or real Tenhou integration.
 - Use only offline synthetic/local placement inputs; do not read Tenhou accounts, online platforms or external logs.
-- Do not add CLI, file ingestion, league harness or external-data readers.
+- Do not add CLI, file ingestion, league harness, external-data readers or new model code.
 - Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
 - Do not modify unrelated files.
@@ -59,6 +59,7 @@ Limits:
 - [x] 2026-05-29 Added stable-dan minimum sample-size and reporting schema: implemented project-internal reporting guardrails, `StableDanSampleSizeAssessment`, `assess_stable_dan_sample_size(...)`, `StableDanEvaluationReport` and `build_stable_dan_evaluation_report(...)`. Defaults are report minimum `total_games >= 100` and `fourth_count >= 10`, threshold-review minimum `total_games >= 1000` and `fourth_count >= 50`, and max undefined rate `0.05`. Local validation passed `python3 -m unittest tests/eval/test_stable_dan.py` with 45 tests and `python3 -m unittest tests/adapters/test_akochan_wrapper.py` with 14 tests.
 - [x] 2026-05-29 Added placement-count aggregation helper for stable-dan evaluation inputs: implemented `StableDanPlacementCounts`, `aggregate_placement_counts(...)`, `aggregate_placement_records(...)` and `calculate_stable_dan_from_placements(...)`. The helper accepts only explicit placements `1`/`2`/`3`/`4` and whitelisted aliases (`"1"`, `"2"`, `"3"`, `"4"`, `"first"`, `"second"`, `"third"`, `"fourth"`, `"1st"`, `"2nd"`, `"3rd"`, `"4th"`), rejects zero-based/ambiguous/bool/float/unknown inputs, and is limited to offline evaluation input preparation. Local validation passed `python3 -m unittest tests/eval/test_placement_counts.py` with 18 tests, `python3 -m unittest tests/eval/test_stable_dan.py` with 45 tests and `python3 -m unittest tests/adapters/test_akochan_wrapper.py` with 14 tests.
 - [x] 2026-05-29 Added CLI-free stable-dan evaluation report smoke fixture from placement inputs: added project-authored synthetic fixture `tests/fixtures/eval/stable_dan_placements_smoke.json` with 100 records (`first=30`, `second=30`, `third=20`, `fourth=20`) and `tests/eval/test_stable_dan_report_smoke.py`. The smoke test verifies placement aggregation, deterministic phoenix stable dan `11.5`, bootstrap CI, LuckyJ threshold comparison, report schema and JSON serialization. This is code-path validation only, not model-strength evidence, Tenhou data, external log ingestion, CLI, league, training or self-play. Local validation passed `python3 -m unittest tests/eval/test_stable_dan_report_smoke.py` with 1 test.
+- [x] 2026-05-29 Added stable-dan evaluation API documentation with example usage from synthetic placements: added `docs/05_evaluation/05H_STABLE_DAN_EVALUATION_API.md` and indexed it in `docs/00_DOCS_INDEX.md`. The document explains the synthetic fixture, API flow from placement records to report serialization, output fields, sample-size / threshold / claim guardrails and verification commands. No CLI, code, training, self-play, league, Tenhou integration, external log reader or platform-data reader was added.
 
 ## Backlog
 
@@ -83,6 +84,7 @@ Limits:
 - [x] Add minimum sample-size and reporting schema for stable-dan evaluation results.
 - [x] Add placement-count aggregation helper for stable-dan evaluation inputs.
 - [x] Add CLI-free stable-dan evaluation report smoke fixture from placement inputs.
-- [ ] Add stable-dan evaluation API documentation with example usage from synthetic placements.
+- [x] Add stable-dan evaluation API documentation with example usage from synthetic placements.
+- [ ] Review P5 stable-dan evaluation groundwork completion and define the next P5-only evaluation task.
 - [ ] Create tiny benchmark harness for legal action rate, latency and fixed-position decisions.
 - [ ] Update `09_EVIDENCE_LOG.md` whenever new external evidence is added.

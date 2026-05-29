@@ -195,3 +195,11 @@
 | Synthetic smoke fixture output is mistaken for a model result or LuckyJ evidence. | Evaluation / Governance | High | Medium | Fixture and docs label it as synthetic-only code-path validation; report notes still say not model-strength evidence and not a Tenhou ranked result. | Open |
 | A smoke test becomes a hidden CLI, file-ingestion path or league harness. | Scope | Medium-High | Medium | Keep the smoke test under `tests/`; it reads only the checked-in synthetic fixture and writes no output files. | Mitigated in implementation |
 | The 100-record synthetic sample is treated as threshold-review ready. | Evaluation / Governance | High | Medium | Test asserts `can_enter_threshold_review=False` because the sample is below the project-internal `1000` game threshold-review minimum. | Mitigated in implementation |
+
+## 2026-05-29 — Stable-dan API documentation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Documentation examples drift from the actual Python API signature. | Documentation / Engineering | Medium | Medium | The API doc was written against the current `build_stable_dan_evaluation_report(...)` signature and notes that model/dataset metadata is not yet part of the report schema. | Open |
+| API documentation is mistaken for an endorsement to build CLI or ingestion tooling. | Scope | Medium-High | Medium | Docs explicitly say API-only, no CLI, no file ingestion path, no league and no Tenhou integration. | Open |
+| Synthetic example documentation is mistaken for strength evidence. | Evaluation / Governance | High | Medium | Docs label the fixture as synthetic only and repeat that point estimate, bootstrap, threshold and report examples are not model-strength evidence. | Open |
