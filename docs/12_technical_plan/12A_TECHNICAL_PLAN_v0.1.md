@@ -30,7 +30,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 ```text
 P3 / baseline reproducibility audit.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
-Akochan = F2 wrapper skeleton implemented; real-executable workflow/test path added; first workflow run found `mjai_log` cwd/runtime blocker.
+Akochan = F2 wrapper skeleton implemented; real-executable workflow/test path added; first workflow run found `mjai_log` cwd/runtime blocker; local wrapper cwd fix implemented and ready for workflow rerun.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -161,10 +161,10 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 
 ## Current Next Task
 
-当前 `10_NEXT` 的下一步是修复真实外部 `system.exe` 调用时的 cwd/runtime blocker：
+当前 `10_NEXT` 的下一步是重跑真实外部 `system.exe` wrapper workflow，验证 cwd/runtime blocker 是否已解除：
 
 ```text
-Fix Akochan F2 real-exe wrapper failure: run external `system.exe` with working directory set to the executable directory so `setup_mjai.json` is visible, then rerun `Akochan F2 Wrapper Real Exe Audit`.
+Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and `mjai_log` wrapper tests both pass with `AKOCHAN_WORKING_DIR` set.
 ```
 
 Mortal runnable baseline 已暂停，因为当前没有合法、可校验、可使用的 trained model artifact。Mortal 仍保留为源码、mjai 接口、方法论和工程参考。除非未来先补齐 artifact 来源、version/tag、usage constraints 和 checksum 并重新打开 F1，否则不进入 Mortal F2 adapter。
@@ -179,4 +179,4 @@ F2 task definition 已写入 `docs/07_development_execution/07J_AKOCHAN_F2_INTER
 
 首个 workflow run `26621536548` 已复审：构建、fake wrapper tests 和真实 `legal_action` wrapper test 通过；真实 `mjai_log` wrapper test 失败，因为 Akochan 运行时需要从 process working directory 读取 `setup_mjai.json`。
 
-下一步允许的范围只包括修复 wrapper 的外部进程 working directory 处理，然后重跑该 GitHub Actions workflow；仍然不训练、不调参、不自我对弈、不接入 Tenhou、不 vendor 或上传第三方源码、二进制、`params/` 或未知 artifact。
+本地 wrapper cwd 边界已修复：`AkochanWrapper` 支持显式 `working_dir`、`AKOCHAN_WORKING_DIR` 和默认 `Path(system_exe).resolve().parent`；`subprocess.run` 使用 `cwd=self.working_dir`；audit log 记录 `working_dir`。下一步只允许重跑该 GitHub Actions workflow 并复审日志；仍然不训练、不调参、不自我对弈、不接入 Tenhou、不 vendor 或上传第三方源码、二进制、`params/` 或未知 artifact。

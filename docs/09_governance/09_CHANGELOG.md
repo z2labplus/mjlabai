@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v1.9
+
+- Fixed the Akochan F2 wrapper working-directory boundary exposed by workflow run `26621536548`.
+- `AkochanWrapper` now resolves the runtime cwd by priority: explicit `working_dir`, `AKOCHAN_WORKING_DIR`, then `Path(system_exe).resolve().parent`.
+- `_run_subcommand` now launches the external executable with `cwd=self.working_dir`.
+- `AkochanAuditLog` now records `working_dir`.
+- Updated fake executable tests so `mjai_log` requires a synthetic cwd runtime marker, proving cwd handling is exercised.
+- Updated the real-exe workflow to export `AKOCHAN_SYSTEM_EXE`, `AKOCHAN_WORKING_DIR` and `AKOCHAN_MJAI_LOG_SAMPLE` before running real wrapper tests.
+- Local validation passed:
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 8 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped as expected without real Akochan.
+- Set the next task to rerun the manual `Akochan F2 Wrapper Real Exe Audit` workflow and review whether real `legal_action` and `mjai_log` both pass with `AKOCHAN_WORKING_DIR` set.
+- No training, tuning, self-play, Tenhou connection, third-party vendoring, binary storage or artifact upload occurred.
+
 ## 2026-05-29 — v1.8
 
 - Triggered manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit`.

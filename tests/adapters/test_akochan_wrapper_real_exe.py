@@ -30,12 +30,14 @@ def _real_system_exe() -> str:
 
 class AkochanWrapperRealExeTest(unittest.TestCase):
     def make_wrapper(self) -> AkochanWrapper:
+        working_dir = os.environ.get("AKOCHAN_WORKING_DIR")
         return AkochanWrapper(
             system_exe=_real_system_exe(),
             build_environment=os.environ.get(
                 "AKOCHAN_BUILD_ENV", "github-actions-ubuntu-real-exe"
             ),
             timeout_seconds=120,
+            working_dir=working_dir,
         )
 
     def test_real_exe_legal_action_fixed_sample(self) -> None:
@@ -45,6 +47,7 @@ class AkochanWrapperRealExeTest(unittest.TestCase):
         self.assertEqual(result.audit_log.exit_code, 0)
         self.assertIsNotNone(result.parsed_json)
         self.assertIsInstance(result.normalized_actions, list)
+        self.assertTrue(result.audit_log.working_dir)
         self.assertFalse(result.audit_log.training_related)
         self.assertFalse(result.audit_log.self_play_related)
         self.assertFalse(result.audit_log.tenhou_related)
@@ -56,10 +59,13 @@ class AkochanWrapperRealExeTest(unittest.TestCase):
         if not Path(log_path).exists():
             self.skipTest(f"AKOCHAN_MJAI_LOG_SAMPLE does not exist: {log_path}")
 
-        result = self.make_wrapper().run_mjai_log(log_path, actor=0, mode=2)
+        result = self.make_wrapper().run_mjai_log(
+            Path(log_path).resolve(), actor=0, mode=2
+        )
 
         self.assertEqual(result.audit_log.exit_code, 0)
         self.assertIsNotNone(result.parsed_json)
+        self.assertTrue(result.audit_log.working_dir)
         self.assertFalse(result.audit_log.training_related)
         self.assertFalse(result.audit_log.self_play_related)
         self.assertFalse(result.audit_log.tenhou_related)

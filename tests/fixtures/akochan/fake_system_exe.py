@@ -9,6 +9,7 @@ third-party source, binaries, params, weights, or build artifacts.
 from __future__ import annotations
 
 import json
+from pathlib import Path
 import sys
 
 
@@ -36,6 +37,10 @@ def _mjai_log(args: list[str]) -> int:
     if len(args) != 3:
         print("usage: fake_system_exe.py mjai_log <log_path> <actor> <mode>", file=sys.stderr)
         return 2
+    runtime_file = Path.cwd() / "fake_setup_mjai.json"
+    if not runtime_file.exists():
+        print(f"missing fake runtime file in cwd: {runtime_file}", file=sys.stderr)
+        return 6
     log_path, actor, mode = args
     print(
         json.dumps(
@@ -47,6 +52,7 @@ def _mjai_log(args: list[str]) -> int:
                 "fake_log_path": log_path,
                 "actor": int(actor),
                 "mode": int(mode),
+                "cwd": str(Path.cwd()),
             },
             separators=(",", ":"),
         )

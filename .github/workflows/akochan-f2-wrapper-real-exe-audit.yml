@@ -150,21 +150,38 @@ jobs:
             echo
           } | tee -a "${SUMMARY_FILE}"
 
+      - name: Configure real wrapper environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            echo "AKOCHAN_SYSTEM_EXE=${AKOCHAN_DIR}/system.exe"
+            echo "AKOCHAN_WORKING_DIR=${AKOCHAN_DIR}"
+            echo "AKOCHAN_MJAI_LOG_SAMPLE=${AKOCHAN_DIR}/haifu_log_sample.json"
+            echo "LD_LIBRARY_PATH=${AKOCHAN_DIR}:${LD_LIBRARY_PATH:-}"
+          } >> "${GITHUB_ENV}"
+          {
+            echo "## Real wrapper environment"
+            echo
+            echo "- AKOCHAN_SYSTEM_EXE: \`${AKOCHAN_DIR}/system.exe\`"
+            echo "- AKOCHAN_WORKING_DIR: \`${AKOCHAN_DIR}\`"
+            echo "- AKOCHAN_MJAI_LOG_SAMPLE: \`${AKOCHAN_DIR}/haifu_log_sample.json\`"
+            echo
+          } | tee -a "${SUMMARY_FILE}"
+
       - name: Run real system.exe wrapper tests
         shell: bash
         env:
           AKOCHAN_BUILD_ENV: github-actions-ubuntu-real-exe
         run: |
           set -euo pipefail
-          export AKOCHAN_SYSTEM_EXE="${AKOCHAN_DIR}/system.exe"
-          export AKOCHAN_MJAI_LOG_SAMPLE="${AKOCHAN_DIR}/haifu_log_sample.json"
-          export LD_LIBRARY_PATH="${AKOCHAN_DIR}:${LD_LIBRARY_PATH:-}"
           echo "## Real system.exe wrapper tests" | tee -a "${SUMMARY_FILE}"
           echo | tee -a "${SUMMARY_FILE}"
           python -m unittest tests/adapters/test_akochan_wrapper_real_exe.py 2>&1 | tee "${RUNNER_TEMP}/real_wrapper_tests.out"
           {
             echo "- Result: success"
             echo "- AKOCHAN_SYSTEM_EXE: \`${AKOCHAN_SYSTEM_EXE}\`"
+            echo "- AKOCHAN_WORKING_DIR: \`${AKOCHAN_WORKING_DIR}\`"
             echo "- AKOCHAN_MJAI_LOG_SAMPLE: \`${AKOCHAN_MJAI_LOG_SAMPLE}\`"
             echo '```text'
             cat "${RUNNER_TEMP}/real_wrapper_tests.out"

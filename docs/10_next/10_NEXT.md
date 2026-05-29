@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Fix Akochan F2 real-exe wrapper failure: run external `system.exe` with working directory set to the executable directory so `setup_mjai.json` is visible, then rerun `Akochan F2 Wrapper Real Exe Audit`.
+- [ ] Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and `mjai_log` wrapper tests both pass with `AKOCHAN_WORKING_DIR` set.
 
 Current execution charter:
 
@@ -24,7 +24,7 @@ Limits:
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
-- For the next step, fix only the real-exe cwd/runtime boundary needed by the wrapper and workflow, then rerun the manual `Akochan F2 Wrapper Real Exe Audit` workflow.
+- For the next step, rerun only the manual `Akochan F2 Wrapper Real Exe Audit` workflow after the wrapper working-directory fix.
 - Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
 - Do not modify unrelated files.
@@ -44,6 +44,7 @@ Limits:
 - [x] 2026-05-29 Implemented minimal Akochan F2 wrapper skeleton for fixed `legal_action` / `mjai_log` samples: added a small Python package, wrapper class, audit-log dataclasses, synthetic fixtures, fake executable smoke tests and normalized `dahai` action schema. Local test command `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 4 tests. The fake executable is only a test substitute, not real Akochan evidence, and no third-party source, binary or artifact was stored.
 - [x] 2026-05-29 Added Akochan F2 real executable wrapper validation path: `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml` manually builds Akochan in a temporary Ubuntu runner, points `AKOCHAN_SYSTEM_EXE` at the runner-temp `system.exe`, and runs wrapper tests against fixed `legal_action` / `mjai_log` samples. Added `tests/adapters/test_akochan_wrapper_real_exe.py`, which skips locally unless `AKOCHAN_SYSTEM_EXE` is provided. Local fake tests passed and local real-exe tests skipped as expected. No third-party source, binary or build artifact was stored or uploaded.
 - [x] 2026-05-29 Ran manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit`: run `26621536548` at commit `7d58f969367d3e51c57d859dbfb9433f1ca898a1` built Akochan successfully and fake wrapper tests passed. Real `legal_action` wrapper test passed, but real `mjai_log` wrapper test failed with `error:load_json_from_file setup_mjai.json` because `system.exe` was launched from the mjlabai checkout working directory instead of the Akochan executable directory.
+- [x] 2026-05-29 Fixed Akochan F2 wrapper working-directory boundary: `AkochanWrapper` now supports explicit `working_dir`, `AKOCHAN_WORKING_DIR`, and default `Path(system_exe).resolve().parent`; subprocess calls use that cwd; audit logs record `working_dir`; fake tests verify default/explicit/env working-directory behavior. Local fake tests passed 8 tests and local real-exe tests skipped 2 tests as expected without real Akochan.
 
 ## Backlog
 
@@ -53,7 +54,8 @@ Limits:
 - [x] Implement minimal Akochan F2 wrapper skeleton for fixed legal_action/mjai_log samples under the documented no-vendor, no-training, no-Tenhou constraints.
 - [x] Add Akochan F2 real executable wrapper validation path without uploading or saving third-party binaries or artifacts.
 - [x] Run the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether the wrapper succeeds against real Ubuntu-built system.exe for fixed legal_action/mjai_log samples.
-- [ ] Fix Akochan F2 real-exe wrapper failure: run external `system.exe` with working directory set to the executable directory so `setup_mjai.json` is visible, then rerun `Akochan F2 Wrapper Real Exe Audit`.
+- [x] Fix Akochan F2 real-exe wrapper failure: run external `system.exe` with working directory set to the executable directory so `setup_mjai.json` is visible, then rerun `Akochan F2 Wrapper Real Exe Audit`.
+- [ ] Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and `mjai_log` wrapper tests both pass with `AKOCHAN_WORKING_DIR` set.
 - [ ] Verify Archer evidence before treating it as a strong Tenhou baseline.
 - [ ] Inspect Kanachan schema/model ideas for Tenhou transfer value.
 - [ ] Decompose Suphx into reproducible experiment cards: SL policy, self-play RL, global reward prediction, oracle guiding, runtime adaptation.

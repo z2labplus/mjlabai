@@ -34,6 +34,7 @@ Akochan F1 is Conditional Pass after successful Ubuntu GitHub Actions build/mini
 Akochan F2 task definition is complete.
 Minimal Akochan F2 wrapper skeleton is implemented and passes fake-executable smoke tests.
 The real external `system.exe` validation path exists and the first workflow run was reviewed; it failed only at the real `mjai_log` wrapper test because Akochan expected `setup_mjai.json` in the process working directory.
+The wrapper working-directory boundary has now been fixed locally: explicit `working_dir`, `AKOCHAN_WORKING_DIR` and default `Path(system_exe).resolve().parent` are supported, subprocess calls use that cwd, and audit logs record it.
 ```
 
 ## Current methodology
@@ -83,7 +84,7 @@ Roles:
 - Suphx: main methodology blueprint, split into reproducible modules.
 - Mortal: paused as a runnable baseline; retained as source-code, mjai-interface, methodology and engineering reference.
 - Archer: high-potential Tenhou baseline candidate requiring verification.
-- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, minimal F2 wrapper skeleton implemented for fixed samples, real-executable validation workflow/test path added, first real-exe workflow run failed on the `mjai_log` cwd/runtime boundary, next step is fixing that boundary without expanding scope.
+- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, minimal F2 wrapper skeleton implemented for fixed samples, real-executable validation workflow/test path added, first real-exe workflow run failed on the `mjai_log` cwd/runtime boundary, wrapper cwd handling has been fixed locally, and the next step is rerunning the manual real-exe workflow without expanding scope.
 - Kanachan: data/model architecture reference; not direct Tenhou baseline until adapted.
 
 Main technical route:
@@ -122,7 +123,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Fix Akochan F2 real-exe wrapper failure: run external `system.exe` with working directory set to the executable directory so `setup_mjai.json` is visible, then rerun `Akochan F2 Wrapper Real Exe Audit`.
+Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and `mjai_log` wrapper tests both pass with `AKOCHAN_WORKING_DIR` set.
 Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload or broad adapter work.
 ```
 
@@ -212,7 +213,7 @@ Akochan F2 wrapper skeleton:
 - Added audit-log dataclasses with required fields: tool name, external repo/commit, build environment, command, input/output hashes, exit code, stdout/stderr summaries, elapsed time and explicit no-training/no-self-play/no-Tenhou flags.
 - Added a synthetic fixed `legal_action` fixture and a tiny synthetic mjai-log fixture.
 - Added `tests/fixtures/akochan/fake_system_exe.py` as a test substitute only. It is not Akochan and is not model-strength evidence.
-- Local smoke test `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 4 tests.
+- Local smoke test `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 8 tests after the working-directory fix.
 - No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
 
 Akochan F2 real executable validation path:
@@ -227,10 +228,16 @@ Akochan F2 real executable validation path:
 - Added `tests/adapters/test_akochan_wrapper_real_exe.py`.
 - Real-executable tests skip locally unless `AKOCHAN_SYSTEM_EXE` is set. The `mjai_log` test also requires `AKOCHAN_MJAI_LOG_SAMPLE`.
 - Local validation:
-  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 4 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 8 tests passed after the working-directory fix.
   - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped, as expected without a real external executable.
 - The wrapper parser now also accepts JSON Lines output, which may be needed for real `mjai_log` stdout.
 - First workflow run `26621536548` was run and reviewed; it failed only at the real `mjai_log` wrapper test because `system.exe` could not load `setup_mjai.json` from the current working directory.
+- Working-directory fix has been implemented locally:
+  - `AkochanWrapper` supports explicit `working_dir`, then `AKOCHAN_WORKING_DIR`, then defaults to `Path(system_exe).resolve().parent`.
+  - `_run_subcommand` passes `cwd=self.working_dir` to `subprocess.run`.
+  - `AkochanAuditLog` records `working_dir`.
+  - Fake tests verify default, explicit and environment-variable working-directory behavior.
+  - The workflow now exports `AKOCHAN_WORKING_DIR=${AKOCHAN_DIR}` before real-exe tests.
 - The workflow does not upload artifacts; any Akochan clone/build output remains in the temporary GitHub runner.
 
 First Akochan F2 real executable workflow run:
@@ -256,6 +263,20 @@ First Akochan F2 real executable workflow run:
   - This is real `legal_action` wrapper compatibility evidence.
   - This is not successful real `mjai_log` wrapper compatibility evidence.
   - This is not strength evidence.
+
+Akochan F2 working-directory fix:
+
+- Wrapper behavior:
+  - Constructor priority is explicit `working_dir`, then `AKOCHAN_WORKING_DIR`, then `Path(system_exe).resolve().parent`.
+  - Missing or non-directory working directories fail with a clear error.
+  - The external subprocess is launched with `cwd=self.working_dir`.
+  - Audit logs include the actual `working_dir`.
+- Test behavior:
+  - `fake_system_exe.py` now requires a synthetic `fake_setup_mjai.json` in cwd for `mjai_log`, proving the cwd boundary is exercised.
+  - Local fake tests passed 8 tests.
+  - Local real-exe tests skipped 2 tests as expected without real Akochan.
+- Current evidence gap:
+  - The manual GitHub Actions workflow must be rerun to confirm real `mjai_log` works with `AKOCHAN_WORKING_DIR` set.
 
 ## Do not forget
 

@@ -63,6 +63,53 @@ Status:
 Accepted
 ```
 
+## 2026-05-29 — DR-0009 — Run External Akochan system.exe From an Audited Working Directory
+
+Decision:
+
+```text
+AkochanWrapper must launch external system.exe with a controlled subprocess working directory.
+The resolution priority is: explicit working_dir constructor argument, AKOCHAN_WORKING_DIR, then Path(system_exe).resolve().parent.
+Each wrapper audit log must record the actual working_dir.
+```
+
+Context:
+
+- GitHub Actions run `26621536548` built Akochan and passed fake wrapper tests plus real `legal_action`.
+- The same run failed real `mjai_log` because `system.exe` attempted to load `setup_mjai.json` from the mjlabai checkout working directory.
+- Akochan runtime files live beside the external executable in the temporary Akochan checkout/build directory.
+
+Rationale:
+
+- Defaulting cwd to the executable directory matches the temporary Ubuntu build layout and keeps runtime files visible.
+- Supporting `AKOCHAN_WORKING_DIR` gives a reproducible override for symlinks or wrapper paths that differ from the real Akochan runtime root.
+- Recording `working_dir` in audit logs makes the runtime boundary inspectable without storing third-party source or binaries.
+
+Consequences:
+
+- `src/mjlabai/adapters/akochan_wrapper.py` now validates and records `working_dir`.
+- Fake tests cover default, explicit and environment-variable working-directory behavior.
+- `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml` exports `AKOCHAN_WORKING_DIR=${AKOCHAN_DIR}` before real-exe tests.
+- The next evidence step is rerunning the manual workflow; this decision alone is not real `mjai_log` compatibility evidence and not strength evidence.
+
+Linked docs:
+
+- `src/mjlabai/adapters/akochan_wrapper.py`
+- `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml`
+- `tests/adapters/test_akochan_wrapper.py`
+- `tests/adapters/test_akochan_wrapper_real_exe.py`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0007 — Implement Akochan F2 Skeleton as Fixed-Command Python Wrapper
 
 Decision:

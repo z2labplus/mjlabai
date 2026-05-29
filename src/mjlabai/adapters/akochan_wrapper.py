@@ -48,6 +48,7 @@ class AkochanAuditLog:
     external_commit: str
     build_environment: str
     command: list[str]
+    working_dir: str
     input_hash: str
     output_hash: str
     exit_code: int
@@ -95,6 +96,7 @@ class AkochanWrapper:
         timeout_seconds: float = 30.0,
         stdout_summary_limit: int = 1000,
         stderr_summary_limit: int = 1000,
+        working_dir: str | os.PathLike[str] | None = None,
     ) -> None:
         exe = system_exe or os.environ.get("AKOCHAN_SYSTEM_EXE")
         if not exe:
@@ -102,7 +104,21 @@ class AkochanWrapper:
                 "Akochan system executable path is required via system_exe "
                 "or AKOCHAN_SYSTEM_EXE."
             )
-        self.system_exe = str(Path(exe))
+        self.system_exe_path = Path(exe).expanduser().resolve()
+        self.system_exe = str(self.system_exe_path)
+
+        working_dir_value = working_dir or os.environ.get("AKOCHAN_WORKING_DIR")
+        if working_dir_value:
+            working_dir_path = Path(working_dir_value).expanduser().resolve()
+        else:
+            working_dir_path = self.system_exe_path.parent
+        if not working_dir_path.is_dir():
+            raise ValueError(
+                "Akochan working directory must exist and be a directory: "
+                f"{working_dir_path}"
+            )
+        self.working_dir = str(working_dir_path)
+
         self.external_repo = external_repo
         self.external_commit = external_commit
         self.build_environment = (
@@ -183,6 +199,7 @@ class AkochanWrapper:
             capture_output=True,
             text=True,
             timeout=self.timeout_seconds,
+            cwd=self.working_dir,
         )
         elapsed_ms = int((time.monotonic() - start) * 1000)
 
@@ -192,6 +209,7 @@ class AkochanWrapper:
             external_commit=self.external_commit,
             build_environment=self.build_environment,
             command=command,
+            working_dir=self.working_dir,
             input_hash=_sha256_text(input_for_hash),
             output_hash=_sha256_text(completed.stdout),
             exit_code=completed.returncode,

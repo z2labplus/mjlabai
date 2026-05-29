@@ -197,6 +197,7 @@ Every future wrapper call must record:
 | `external_commit` | Yes | Current F1 commit: `53188a0b926fbab38177f88c3cd87d554cf412af`. |
 | `build_environment` | Yes | Example: `github-actions ubuntu-latest`. |
 | `command` | Yes | Full command without secrets. |
+| `working_dir` | Yes | Process working directory used for the external executable. |
 | `input_hash` | Yes | SHA256 of wrapper input. |
 | `output_hash` | Yes | SHA256 of raw stdout or normalized output. |
 | `exit_code` | Yes | Process exit code. |
@@ -218,6 +219,7 @@ Draft audit log object:
   "external_commit": "53188a0b926fbab38177f88c3cd87d554cf412af",
   "build_environment": "github-actions ubuntu-latest",
   "command": "./system.exe legal_action <json>",
+  "working_dir": "/runner/temp/akochan",
   "input_hash": "<sha256>",
   "output_hash": "<sha256>",
   "exit_code": 0,
@@ -289,10 +291,13 @@ Implementation status on 2026-05-29:
   - `run_legal_action(input_json)`.
   - `run_mjai_log(log_path, actor=0, mode=2)`.
 - Wrapper executable path must be explicit through constructor argument or `AKOCHAN_SYSTEM_EXE`.
+- Wrapper working directory now follows explicit `working_dir`, then `AKOCHAN_WORKING_DIR`, then `Path(system_exe).resolve().parent`.
+- Wrapper subprocess calls use that working directory through `cwd=self.working_dir`.
+- Audit logs record `working_dir`.
 - Wrapper exposes no free-form command execution API.
 - Synthetic fixtures and a fake executable were added under `tests/fixtures/akochan/`.
 - The fake executable is a test substitute only; it is not Akochan and is not strength evidence.
-- Local test command `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 4 tests.
+- Local test command `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 8 tests after adding working-directory coverage.
 - No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
 
 Real-executable validation path status on 2026-05-29:
@@ -304,12 +309,16 @@ Real-executable validation path status on 2026-05-29:
 - The workflow builds Akochan in a temporary GitHub Actions Ubuntu runner and sets those environment variables to runner-temp paths.
 - The workflow does not upload artifacts and must not preserve Akochan source, `system.exe`, `libai.so`, `params/` or build output.
 - Local validation:
-  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 4 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 8 tests passed after the working-directory fix.
   - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped as expected.
 - First workflow run `26621536548` was run and reviewed.
 - Real `legal_action` wrapper test passed against the Ubuntu-built `system.exe`.
 - Real `mjai_log` wrapper test failed because `system.exe` could not load `setup_mjai.json` from the mjlabai checkout working directory.
-- The next wrapper fix should set subprocess `cwd` to the external executable directory by default, or support an explicitly supplied external working directory.
+- The wrapper fix has now been implemented locally:
+  - default cwd is the external executable directory,
+  - explicit `working_dir` and `AKOCHAN_WORKING_DIR` are supported,
+  - the workflow exports `AKOCHAN_WORKING_DIR=${AKOCHAN_DIR}` before real-exe tests.
+- The next evidence step is rerunning the manual workflow and reviewing whether real `legal_action` and `mjai_log` both pass.
 
 ## H. F2 Failure Conditions
 
@@ -331,7 +340,7 @@ F2 implementation must fail or stop if:
 Recommended next `docs/10_next/10_NEXT.md` first task:
 
 ```text
-Fix Akochan F2 real-exe wrapper failure: run external `system.exe` with working directory set to the executable directory so `setup_mjai.json` is visible, then rerun `Akochan F2 Wrapper Real Exe Audit`.
+Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and `mjai_log` wrapper tests both pass with `AKOCHAN_WORKING_DIR` set.
 ```
 
 Reason:
@@ -341,7 +350,7 @@ Reason:
 - The minimal wrapper skeleton passed fake-executable smoke tests.
 - The real-executable workflow/test path exists.
 - The first real-exe workflow run proved `legal_action` compatibility but exposed an `mjai_log` runtime cwd blocker.
-- The next evidence gap is fixing and rerunning `mjai_log` compatibility for fixed samples, still under no-vendor, no-training and no-Tenhou constraints.
+- The cwd boundary fix is implemented locally; the remaining evidence gap is rerunning real `mjai_log` compatibility for fixed samples, still under no-vendor, no-training and no-Tenhou constraints.
 
 Review note:
 

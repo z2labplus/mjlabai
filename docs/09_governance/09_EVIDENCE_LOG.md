@@ -8,6 +8,36 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — Akochan F2 wrapper working-directory fix
+
+- Type: internal implementation / local test evidence.
+- Candidate: Akochan.
+- Funnel stage after task: F2 wrapper cwd fix implemented; real external workflow rerun pending.
+- Primary code:
+  - `src/mjlabai/adapters/akochan_wrapper.py`.
+  - `tests/adapters/test_akochan_wrapper.py`.
+  - `tests/adapters/test_akochan_wrapper_real_exe.py`.
+  - `tests/fixtures/akochan/fake_system_exe.py`.
+  - `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml`.
+- Fix:
+  - `AkochanWrapper` resolves working directory by priority: explicit `working_dir`, `AKOCHAN_WORKING_DIR`, then `Path(system_exe).resolve().parent`.
+  - Wrapper subprocess calls pass `cwd=self.working_dir`.
+  - `AkochanAuditLog` records `working_dir`.
+  - The workflow exports `AKOCHAN_SYSTEM_EXE`, `AKOCHAN_WORKING_DIR` and `AKOCHAN_MJAI_LOG_SAMPLE` before running real-exe tests.
+- Local validation:
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 8 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped as expected because `AKOCHAN_SYSTEM_EXE` was not set locally.
+- Guardrails:
+  - No real Akochan build was run locally.
+  - No training, tuning, self-play, match, league, `system.exe test` or real Tenhou command was run locally.
+  - No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
+  - The workflow definition uploads no artifacts; runner temporary build output is not preserved.
+- Evidence status:
+  - This is local implementation and test evidence for the cwd fix.
+  - It is not yet successful real `mjai_log` compatibility evidence.
+  - The manual workflow must be rerun and reviewed before the real-exe blocker can be closed.
+  - This is not model-strength evidence and does not imply Tenhou performance.
+
 ### 2026-05-28 — LuckyJ target baseline
 
 - Claim: Tencent LuckyJ reached Tenhou 10 dan and stable dan 10.68.
