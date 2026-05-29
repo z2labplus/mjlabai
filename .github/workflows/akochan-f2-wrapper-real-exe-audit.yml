@@ -1,0 +1,197 @@
+name: Akochan F2 Wrapper Real Exe Audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      akochan_commit:
+        description: "Akochan commit SHA to build for wrapper validation"
+        required: true
+        default: "53188a0b926fbab38177f88c3cd87d554cf412af"
+
+permissions:
+  contents: read
+
+jobs:
+  wrapper-real-exe-audit:
+    name: Validate wrapper against real external system.exe
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      AKOCHAN_REPO: https://github.com/critter-mj/akochan.git
+
+    steps:
+      - name: Checkout mjlabai
+        uses: actions/checkout@v4
+
+      - name: Configure runner temp paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            echo "AKOCHAN_DIR=${RUNNER_TEMP}/akochan"
+            echo "SUMMARY_FILE=${RUNNER_TEMP}/akochan_f2_wrapper_summary.txt"
+          } >> "${GITHUB_ENV}"
+
+      - name: Record audit scope
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            echo "# Akochan F2 Wrapper Real Exe Audit"
+            echo
+            echo "- Scope: F2 fixed-sample wrapper validation only"
+            echo "- Akochan repository: ${AKOCHAN_REPO}"
+            echo "- Akochan commit: ${{ inputs.akochan_commit }}"
+            echo "- Runner OS: ${RUNNER_OS}"
+            echo "- Forbidden: training, tuning, self-play, match/league, system.exe test, real Tenhou access, artifact upload"
+            echo
+          } | tee "${SUMMARY_FILE}"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Ubuntu build dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential \
+            git \
+            make \
+            g++ \
+            libboost-all-dev \
+            libgomp1
+          {
+            echo "## Environment"
+            echo
+            echo '```text'
+            uname -a
+            python --version
+            g++ --version | head -n 1
+            make --version | head -n 1
+            dpkg -l build-essential g++ libboost-all-dev libgomp1 | sed -n '1,20p'
+            echo '```'
+            echo
+          } | tee -a "${SUMMARY_FILE}"
+
+      - name: Clone Akochan at audited commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone "${AKOCHAN_REPO}" "${AKOCHAN_DIR}"
+          cd "${AKOCHAN_DIR}"
+          git checkout --detach "${{ inputs.akochan_commit }}"
+          ACTUAL_COMMIT="$(git rev-parse HEAD)"
+          if [[ "${ACTUAL_COMMIT}" != "${{ inputs.akochan_commit }}" ]]; then
+            echo "Expected commit ${{ inputs.akochan_commit }}, got ${ACTUAL_COMMIT}" >&2
+            exit 1
+          fi
+          {
+            echo "## Akochan source"
+            echo
+            echo "- Temporary clone directory: \`${AKOCHAN_DIR}\`"
+            echo "- Checked commit: \`${ACTUAL_COMMIT}\`"
+            echo "- Commit summary: $(git log -1 --format='%s')"
+            echo
+          } | tee -a "${SUMMARY_FILE}"
+
+      - name: Build libai.so
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "${AKOCHAN_DIR}/ai_src"
+          make -f Makefile_Linux
+          test -f libai.so
+          test -f "${AKOCHAN_DIR}/libai.so"
+          {
+            echo "## Build libai.so"
+            echo
+            echo "- Result: generated \`ai_src/libai.so\` and root \`libai.so\` in runner temp directory."
+            echo
+          } | tee -a "${SUMMARY_FILE}"
+
+      - name: Build system.exe
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "${AKOCHAN_DIR}"
+          make -f Makefile_Linux
+          test -x system.exe || test -f system.exe
+          {
+            echo "## Build system.exe"
+            echo
+            echo "- Result: generated \`system.exe\` in runner temp directory."
+            echo
+          } | tee -a "${SUMMARY_FILE}"
+
+      - name: Install mjlabai package
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+
+      - name: Run fake wrapper smoke tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "## Fake wrapper smoke tests" | tee -a "${SUMMARY_FILE}"
+          echo | tee -a "${SUMMARY_FILE}"
+          python -m unittest tests/adapters/test_akochan_wrapper.py 2>&1 | tee "${RUNNER_TEMP}/fake_wrapper_tests.out"
+          {
+            echo "- Result: success"
+            echo '```text'
+            cat "${RUNNER_TEMP}/fake_wrapper_tests.out"
+            echo '```'
+            echo
+          } | tee -a "${SUMMARY_FILE}"
+
+      - name: Run real system.exe wrapper tests
+        shell: bash
+        env:
+          AKOCHAN_BUILD_ENV: github-actions-ubuntu-real-exe
+        run: |
+          set -euo pipefail
+          export AKOCHAN_SYSTEM_EXE="${AKOCHAN_DIR}/system.exe"
+          export AKOCHAN_MJAI_LOG_SAMPLE="${AKOCHAN_DIR}/haifu_log_sample.json"
+          export LD_LIBRARY_PATH="${AKOCHAN_DIR}:${LD_LIBRARY_PATH:-}"
+          echo "## Real system.exe wrapper tests" | tee -a "${SUMMARY_FILE}"
+          echo | tee -a "${SUMMARY_FILE}"
+          python -m unittest tests/adapters/test_akochan_wrapper_real_exe.py 2>&1 | tee "${RUNNER_TEMP}/real_wrapper_tests.out"
+          {
+            echo "- Result: success"
+            echo "- AKOCHAN_SYSTEM_EXE: \`${AKOCHAN_SYSTEM_EXE}\`"
+            echo "- AKOCHAN_MJAI_LOG_SAMPLE: \`${AKOCHAN_MJAI_LOG_SAMPLE}\`"
+            echo '```text'
+            cat "${RUNNER_TEMP}/real_wrapper_tests.out"
+            echo '```'
+            echo
+          } | tee -a "${SUMMARY_FILE}"
+
+      - name: Append audit summary
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          SUMMARY_FILE="${SUMMARY_FILE:-${RUNNER_TEMP}/akochan_f2_wrapper_summary.txt}"
+          if [[ ! -f "${SUMMARY_FILE}" ]]; then
+            {
+              echo "# Akochan F2 Wrapper Real Exe Audit"
+              echo
+              echo "- Summary file was created by the final step because an earlier setup step did not finish."
+            } > "${SUMMARY_FILE}"
+          fi
+          {
+            echo
+            echo "## Final workflow status"
+            echo
+            echo "- Job status: ${{ job.status }}"
+            echo "- No third-party source, binaries, params, or build artifacts are uploaded by this workflow."
+            echo "- Any Akochan clone and build output stays in the temporary GitHub runner."
+          } >> "${SUMMARY_FILE}"
+          cat "${SUMMARY_FILE}" >> "${GITHUB_STEP_SUMMARY}"
+          echo "Summary written to GitHub step summary."

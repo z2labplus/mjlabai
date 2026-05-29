@@ -32,7 +32,8 @@ The project is in P3 baseline reproducibility audit.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
 Akochan F1 is Conditional Pass after successful Ubuntu GitHub Actions build/minimal-run evidence, with license and local macOS build limits still open.
 Akochan F2 task definition is complete.
-Minimal Akochan F2 wrapper skeleton is implemented and passes fake-executable smoke tests, but it has not yet been run against real Akochan `system.exe`.
+Minimal Akochan F2 wrapper skeleton is implemented and passes fake-executable smoke tests.
+The real external `system.exe` validation path now exists, but its GitHub Actions workflow has not yet been run and reviewed.
 ```
 
 ## Current methodology
@@ -82,7 +83,7 @@ Roles:
 - Suphx: main methodology blueprint, split into reproducible modules.
 - Mortal: paused as a runnable baseline; retained as source-code, mjai-interface, methodology and engineering reference.
 - Archer: high-potential Tenhou baseline candidate requiring verification.
-- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, minimal F2 wrapper skeleton implemented for fixed samples, next step is real external `system.exe` validation without storing third-party artifacts.
+- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, minimal F2 wrapper skeleton implemented for fixed samples, real-executable validation workflow/test path added, next step is running and reviewing that workflow without storing third-party artifacts.
 - Kanachan: data/model architecture reference; not direct Tenhou baseline until adapted.
 
 Main technical route:
@@ -121,8 +122,8 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Run Akochan F2 wrapper against real GitHub Actions Ubuntu-built system.exe for fixed legal_action/mjai_log samples, without uploading third-party binaries or artifacts.
-Do not expand into training, self-play, league evaluation, Tenhou integration or broad adapter work.
+Run the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether the wrapper succeeds against real Ubuntu-built system.exe for fixed legal_action/mjai_log samples.
+Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload or broad adapter work.
 ```
 
 Latest Akochan F1 audit summary:
@@ -213,6 +214,24 @@ Akochan F2 wrapper skeleton:
 - Added `tests/fixtures/akochan/fake_system_exe.py` as a test substitute only. It is not Akochan and is not model-strength evidence.
 - Local smoke test `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 4 tests.
 - No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
+
+Akochan F2 real executable validation path:
+
+- Added `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml`.
+- Workflow name: `Akochan F2 Wrapper Real Exe Audit`.
+- Trigger: manual `workflow_dispatch` only.
+- Input:
+  - `akochan_commit`, default `53188a0b926fbab38177f88c3cd87d554cf412af`.
+- Runner: `ubuntu-latest`.
+- The workflow checks out mjlabai, installs Ubuntu build dependencies, clones `critter-mj/akochan` into the runner temporary directory, checks out the fixed commit, builds `ai_src/libai.so`, root `libai.so` and `system.exe`, installs mjlabai with `python -m pip install -e .`, then runs both fake wrapper tests and real-executable wrapper tests.
+- Added `tests/adapters/test_akochan_wrapper_real_exe.py`.
+- Real-executable tests skip locally unless `AKOCHAN_SYSTEM_EXE` is set. The `mjai_log` test also requires `AKOCHAN_MJAI_LOG_SAMPLE`.
+- Local validation:
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 4 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped, as expected without a real external executable.
+- The wrapper parser now also accepts JSON Lines output, which may be needed for real `mjai_log` stdout.
+- This workflow has not yet been run, so it is not yet real `system.exe` compatibility evidence.
+- The workflow does not upload artifacts; any Akochan clone/build output remains in the temporary GitHub runner.
 
 ## Do not forget
 

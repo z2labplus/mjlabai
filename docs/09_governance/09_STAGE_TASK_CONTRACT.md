@@ -8,7 +8,7 @@ Current funnel focus:
 
 ```text
 Mortal = F1 paused as runnable baseline / ReferenceOnly
-Akochan = F2 wrapper skeleton implemented after F1 Conditional Pass on Ubuntu GitHub Actions build/minimal-run evidence
+Akochan = F2 wrapper skeleton implemented; real-executable workflow/test path added; manual workflow run pending
 ```
 
 ## AI role
@@ -51,6 +51,7 @@ This stage supports the north-star target by creating a reproducible baseline an
 - Do not vendor or copy third-party source into this repository.
 - Do not exceed the documented Akochan F2 wrapper boundary: fixed `legal_action` / `mjai_log` samples only until later evidence justifies more.
 - Treat fake-executable wrapper tests as implementation smoke tests only, not real Akochan compatibility or strength evidence.
+- Treat the new real-exe workflow definition as a validation path only until a manual workflow run succeeds and logs are reviewed.
 - Do not vendor or store Akochan source, `system.exe`, `libai.so`, `params/`, third-party binaries or unknown artifacts in this repository.
 - Do not promote Mortal to F2 unless a lawful, verifiable and usable trained model artifact is provided and Mortal F1 is re-opened with source, version/tag, usage constraints and checksum.
 
@@ -87,4 +88,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Run Akochan F2 wrapper against real GitHub Actions Ubuntu-built system.exe for fixed legal_action/mjai_log samples, without uploading third-party binaries or artifacts.
+Run the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether the wrapper succeeds against real Ubuntu-built system.exe for fixed legal_action/mjai_log samples.

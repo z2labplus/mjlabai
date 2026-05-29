@@ -14,6 +14,55 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-05-29 — DR-0008 — Validate Akochan F2 Wrapper Through Temporary GitHub Actions Real-Exe Workflow
+
+Decision:
+
+```text
+Add a manual GitHub Actions workflow and default-skip unittest file to validate the Akochan F2 wrapper against a real Ubuntu-built external system.exe.
+The workflow may build Akochan in the runner temp directory and set AKOCHAN_SYSTEM_EXE for tests, but must not upload or store third-party source, binaries, params or build artifacts.
+```
+
+Context:
+
+- Akochan F1 is Conditional Pass from GitHub Actions run `26617347785`.
+- The minimal Akochan F2 wrapper skeleton passes fake-executable smoke tests.
+- Fake-executable tests prove wrapper behavior only; they do not prove compatibility with real `system.exe`.
+- The project must keep Akochan source and binaries outside the repository because of license and governance constraints.
+
+Rationale:
+
+- A manual workflow gives a reproducible Ubuntu environment without requiring local Docker or macOS toolchain changes.
+- Default-skip real-exe tests keep local unit tests reliable when no real external executable is available.
+- Runner-temp build and no artifact upload preserve the no-vendor/no-binary boundary.
+
+Consequences:
+
+- `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml` is the controlled real-exe validation path.
+- `tests/adapters/test_akochan_wrapper_real_exe.py` skips locally unless `AKOCHAN_SYSTEM_EXE` exists; the `mjai_log` test also requires `AKOCHAN_MJAI_LOG_SAMPLE`.
+- The next task is to manually run the workflow and review its run ID/logs.
+- Until that workflow succeeds and is reviewed, the project has no real `system.exe` wrapper compatibility evidence.
+- This remains interface evidence only, not strength evidence.
+
+Linked docs:
+
+- `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml`
+- `tests/adapters/test_akochan_wrapper_real_exe.py`
+- `src/mjlabai/adapters/akochan_wrapper.py`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0007 — Implement Akochan F2 Skeleton as Fixed-Command Python Wrapper
 
 Decision:

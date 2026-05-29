@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v1.7
+
+- Added `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml`.
+- The new workflow is manual `workflow_dispatch` only and builds Akochan at commit `53188a0b926fbab38177f88c3cd87d554cf412af` inside a temporary `ubuntu-latest` GitHub runner.
+- The workflow sets `AKOCHAN_SYSTEM_EXE` to the runner-temp `system.exe` and `AKOCHAN_MJAI_LOG_SAMPLE` to the runner-temp `haifu_log_sample.json`, then runs mjlabai wrapper tests against the real external executable.
+- Added `tests/adapters/test_akochan_wrapper_real_exe.py` with default skip behavior when `AKOCHAN_SYSTEM_EXE` is absent; `mjai_log` also skips when `AKOCHAN_MJAI_LOG_SAMPLE` is absent.
+- Updated the wrapper stdout parser to accept either one JSON document or newline-delimited JSON objects.
+- Verified local fake tests with `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 4 tests passed.
+- Verified local real-exe tests with `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped as expected without a real external executable.
+- Confirmed the new workflow/test path does not upload or store Akochan source, `system.exe`, `libai.so`, `params/`, third-party binaries or build artifacts.
+- Set the next task to manually run `Akochan F2 Wrapper Real Exe Audit` and review whether the wrapper succeeds against the real Ubuntu-built `system.exe`.
+
 ## 2026-05-29 — v1.6
 
 - Implemented the minimal Akochan F2 wrapper skeleton for fixed `legal_action` / `mjai_log` samples.

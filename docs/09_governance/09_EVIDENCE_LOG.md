@@ -365,3 +365,45 @@ Internal governance decisions that affect execution should also be noted here, b
   - This is wrapper behavior evidence only.
   - It is not evidence of Akochan playing strength, Tenhou performance or real external `system.exe` compatibility.
   - Next evidence should come from running the wrapper against a real externally built Akochan `system.exe` in a temporary GitHub Actions Ubuntu environment without uploading third-party binaries or artifacts.
+
+## 2026-05-29 — Akochan F2 real executable validation path added
+
+- Type: internal implementation / workflow-definition evidence.
+- Candidate: Akochan.
+- Funnel stage after task: F2 real-executable validation path defined; actual workflow run still pending.
+- Workflow file: `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml`.
+- Workflow name: `Akochan F2 Wrapper Real Exe Audit`.
+- Trigger: manual `workflow_dispatch` only.
+- Input:
+  - `akochan_commit`, default `53188a0b926fbab38177f88c3cd87d554cf412af`.
+- Intended runner behavior:
+  - Use GitHub-hosted `ubuntu-latest`.
+  - Configure temporary paths through `$GITHUB_ENV`, not job-level `runner.temp`.
+  - Clone `https://github.com/critter-mj/akochan.git` into the runner temporary directory.
+  - Check out the requested Akochan commit.
+  - Build `ai_src/libai.so`, root `libai.so` and `system.exe` inside the temporary runner.
+  - Install mjlabai with `python -m pip install -e .`.
+  - Set `AKOCHAN_SYSTEM_EXE` to the runner-temp `system.exe`.
+  - Set `AKOCHAN_MJAI_LOG_SAMPLE` to the runner-temp `haifu_log_sample.json`.
+  - Run `python -m unittest tests/adapters/test_akochan_wrapper.py`.
+  - Run `python -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`.
+- New test file:
+  - `tests/adapters/test_akochan_wrapper_real_exe.py`.
+- Test behavior:
+  - `legal_action` test skips unless `AKOCHAN_SYSTEM_EXE` exists.
+  - `mjai_log` test skips unless both `AKOCHAN_SYSTEM_EXE` and `AKOCHAN_MJAI_LOG_SAMPLE` exist.
+  - Tests assert parseable output, exit code 0 and no-training/no-self-play/no-Tenhou audit flags.
+- Local validation:
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 4 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped as expected without a real external executable.
+- Wrapper parser update:
+  - `AkochanWrapper` now attempts normal JSON parsing first, then newline-delimited JSON object parsing for multi-line stdout.
+- Guardrails:
+  - No real Akochan build was run locally in this task.
+  - No training, tuning, self-play, match, league, `system.exe test` or real Tenhou command was run locally.
+  - No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
+  - The workflow definition uploads no artifacts; runner temporary build output is not preserved.
+- Evidence status:
+  - This is evidence that the real-executable validation path exists.
+  - It is not yet evidence that the wrapper works against real `system.exe`; that requires a successful manual workflow run and log review.
+  - It is not strength evidence and does not imply Tenhou performance.

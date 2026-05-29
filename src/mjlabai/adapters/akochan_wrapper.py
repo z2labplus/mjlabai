@@ -216,8 +216,15 @@ class AkochanWrapper:
         try:
             return json.loads(raw_stdout)
         except json.JSONDecodeError as exc:
+            lines = [line for line in raw_stdout.splitlines() if line.strip()]
+            if len(lines) > 1:
+                try:
+                    return [json.loads(line) for line in lines]
+                except json.JSONDecodeError:
+                    pass
             raise AkochanOutputParseError(
-                f"Akochan stdout was not parseable JSON: {exc}", audit_log=audit_log
+                f"Akochan stdout was not parseable JSON or JSON Lines: {exc}",
+                audit_log=audit_log,
             ) from exc
 
 

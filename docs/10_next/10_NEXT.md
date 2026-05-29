@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Run Akochan F2 wrapper against real GitHub Actions Ubuntu-built system.exe for fixed legal_action/mjai_log samples, without uploading third-party binaries or artifacts.
+- [ ] Run the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether the wrapper succeeds against real Ubuntu-built system.exe for fixed legal_action/mjai_log samples.
 
 Current execution charter:
 
@@ -24,7 +24,7 @@ Limits:
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
-- For the next implementation, only validate the existing wrapper skeleton against a real external Akochan `system.exe` built in a temporary GitHub Actions Ubuntu runner or another explicitly approved external path.
+- For the next step, run only the manual `Akochan F2 Wrapper Real Exe Audit` workflow and review its logs.
 - Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
 - Do not modify unrelated files.
@@ -42,6 +42,7 @@ Limits:
 - [x] 2026-05-29 Ran corrected GitHub Actions workflow `Akochan F1 Build Audit`: run `26617347785` at commit `b6b69e08fd009052cb3bbd16c779ac6e2139591b` succeeded on `ubuntu-latest`; `ai_src/libai.so`, root `libai.so` and `system.exe` were generated; both minimal non-training samples succeeded: `legal_action` and `mjai_log haifu_log_sample.json 0 2`. Akochan F1 is upgraded to Conditional Pass because reproducibility is proven on Ubuntu, while custom license and local macOS build limits remain.
 - [x] 2026-05-29 Defined Akochan F2 interface/legal-action adapter task in `docs/07_development_execution/07J_AKOCHAN_F2_INTERFACE_TASK.md`: documented wrapper-only boundary, state/action mapping draft, audit log schema, license guardrails, F2 acceptance criteria and failure conditions. No adapter code was written.
 - [x] 2026-05-29 Implemented minimal Akochan F2 wrapper skeleton for fixed `legal_action` / `mjai_log` samples: added a small Python package, wrapper class, audit-log dataclasses, synthetic fixtures, fake executable smoke tests and normalized `dahai` action schema. Local test command `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 4 tests. The fake executable is only a test substitute, not real Akochan evidence, and no third-party source, binary or artifact was stored.
+- [x] 2026-05-29 Added Akochan F2 real executable wrapper validation path: `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml` manually builds Akochan in a temporary Ubuntu runner, points `AKOCHAN_SYSTEM_EXE` at the runner-temp `system.exe`, and runs wrapper tests against fixed `legal_action` / `mjai_log` samples. Added `tests/adapters/test_akochan_wrapper_real_exe.py`, which skips locally unless `AKOCHAN_SYSTEM_EXE` is provided. Local fake tests passed and local real-exe tests skipped as expected. No third-party source, binary or build artifact was stored or uploaded.
 
 ## Backlog
 
@@ -49,7 +50,8 @@ Limits:
 - [ ] If a lawful, verifiable and usable Mortal trained model artifact is provided later, re-open Mortal F1 artifact verification before any F2 adapter task.
 - [x] Define Akochan F2 interface/legal-action adapter task: specify state/action mapping, legal-action checker boundary, log schema, wrapper-only integration constraints and license guardrails before writing adapter code.
 - [x] Implement minimal Akochan F2 wrapper skeleton for fixed legal_action/mjai_log samples under the documented no-vendor, no-training, no-Tenhou constraints.
-- [ ] Run Akochan F2 wrapper against real GitHub Actions Ubuntu-built system.exe for fixed legal_action/mjai_log samples, without uploading third-party binaries or artifacts.
+- [x] Add Akochan F2 real executable wrapper validation path without uploading or saving third-party binaries or artifacts.
+- [ ] Run the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether the wrapper succeeds against real Ubuntu-built system.exe for fixed legal_action/mjai_log samples.
 - [ ] Verify Archer evidence before treating it as a strong Tenhou baseline.
 - [ ] Inspect Kanachan schema/model ideas for Tenhou transfer value.
 - [ ] Decompose Suphx into reproducible experiment cards: SL policy, self-play RL, global reward prediction, oracle guiding, runtime adaptation.

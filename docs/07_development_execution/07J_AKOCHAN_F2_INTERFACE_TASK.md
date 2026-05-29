@@ -295,6 +295,19 @@ Implementation status on 2026-05-29:
 - Local test command `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 4 tests.
 - No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
 
+Real-executable validation path status on 2026-05-29:
+
+- Added `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml`.
+- Added `tests/adapters/test_akochan_wrapper_real_exe.py`.
+- The real-exe tests are skipped by default unless `AKOCHAN_SYSTEM_EXE` exists.
+- The `mjai_log` real-exe test also requires `AKOCHAN_MJAI_LOG_SAMPLE`.
+- The workflow builds Akochan in a temporary GitHub Actions Ubuntu runner and sets those environment variables to runner-temp paths.
+- The workflow does not upload artifacts and must not preserve Akochan source, `system.exe`, `libai.so`, `params/` or build output.
+- Local validation:
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 4 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped as expected.
+- The workflow has not yet been run, so real `system.exe` compatibility evidence is still pending.
+
 ## H. F2 Failure Conditions
 
 F2 implementation must fail or stop if:
@@ -315,7 +328,7 @@ F2 implementation must fail or stop if:
 Recommended next `docs/10_next/10_NEXT.md` first task:
 
 ```text
-Run Akochan F2 wrapper against real GitHub Actions Ubuntu-built system.exe for fixed legal_action/mjai_log samples, without uploading third-party binaries or artifacts.
+Run the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether the wrapper succeeds against real Ubuntu-built system.exe for fixed legal_action/mjai_log samples.
 ```
 
 Reason:
@@ -323,7 +336,8 @@ Reason:
 - F1 has Conditional Pass evidence from Ubuntu GitHub Actions run `26617347785`.
 - The F2 interface boundary, state/action mapping, audit log schema and license guardrails are now defined.
 - The minimal wrapper skeleton passed fake-executable smoke tests.
-- The next evidence gap is real external `system.exe` compatibility for fixed samples, still under no-vendor, no-training and no-Tenhou constraints.
+- The real-executable workflow/test path exists.
+- The next evidence gap is an actual workflow run proving or disproving real external `system.exe` compatibility for fixed samples, still under no-vendor, no-training and no-Tenhou constraints.
 
 Review note:
 

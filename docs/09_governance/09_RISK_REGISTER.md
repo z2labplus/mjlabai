@@ -105,3 +105,13 @@
 | The wrapper can call an external executable path, so a wrong local path could point to an unaudited binary. | Reproducibility / Security | Medium-High | Medium | Require explicit `system_exe` or `AKOCHAN_SYSTEM_EXE`, record external commit/build environment in audit logs, and avoid unknown binaries or artifacts. | Open |
 | Real Ubuntu-built `system.exe` may produce output that differs from the fake executable shape. | Engineering | Medium | Medium | Preserve raw stdout, keep parse warnings, and make the next task a fixed-sample real `system.exe` validation without artifact upload. | Open |
 | The initial wrapper skeleton may be expanded too quickly into broad adapter, match, league or Tenhou integration work. | Scope / Compliance | High | Medium | Keep `10_NEXT` on the single real fixed-sample validation step; no self-play, match, training or Tenhou commands. | Open |
+
+## 2026-05-29 — Akochan F2 real-exe workflow risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The real-exe workflow definition is mistaken for successful real `system.exe` compatibility evidence before it is run. | Governance / Evaluation | High | Medium | Keep `10_NEXT` focused on manually running the workflow and reviewing run ID/logs before promoting F2 status. | Open |
+| Workflow logs could expose too much third-party build output or sample stdout. | Governance | Low-Medium | Medium | Write only short summaries to GitHub Step Summary and do not upload artifacts. | Open |
+| GitHub Actions temporary build succeeds but local macOS remains unable to run real Akochan. | Reproducibility | Medium | High | Treat evidence as Ubuntu-runner compatibility only; keep local macOS build limits documented. | Open |
+| Real `mjai_log` stdout may be newline-delimited JSON rather than a single JSON document. | Engineering | Medium | Medium | Wrapper now tries both JSON and JSON Lines parsing; real workflow will verify actual output shape. | Open |
+| The workflow accidentally persists third-party source or binaries. | License / Governance | High | Low | Use runner temp directories only and do not configure artifact upload or caches for Akochan outputs. | Open |
