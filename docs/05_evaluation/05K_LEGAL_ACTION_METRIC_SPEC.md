@@ -232,6 +232,202 @@ The smoke test validates JSON shape, strict `dahai` canonical action shape and s
 - implement an evaluator.
 - read Tenhou data, external logs or platform data.
 
+## P5 Synthetic Evaluator Boundary Before Implementation
+
+This section defines the minimum future boundary for a synthetic legal-action metric evaluator before any implementation is written.
+
+It is a boundary definition only. It does not implement:
+
+- evaluator code.
+- canonicalizer code.
+- legal-action checker code.
+- a CLI.
+- file ingestion.
+- league, match, self-play or training code.
+- real Tenhou integration.
+- external-log, real-haifu, platform-data or account reading.
+
+### Allowed Scope
+
+A future synthetic evaluator may use only:
+
+- project-authored synthetic/local fixtures.
+- the default fixture `tests/fixtures/eval/legal_action_metric_smoke.json`.
+- P5 offline evaluation context.
+- current minimum action type `dahai`.
+- current default matching mode `strict`.
+- explicit fixture records with `proposed_action`, `legal_actions`, `actor`, `room`, `ruleset` and source notes.
+
+It must not use:
+
+- real Tenhou data.
+- real haifu.
+- platform data.
+- online accounts.
+- external logs.
+- Akochan real executable or any third-party binary.
+- model output, model inference, model training or model weights.
+- self-play, league, match runner or any Tenhou connector.
+- unknown `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
+
+### Out-of-Scope Actions
+
+The first synthetic evaluator boundary covers only `dahai`.
+
+The following action types and representation issues are explicitly out of scope until later tasks define them:
+
+- reach.
+- chi.
+- pon.
+- kan.
+- hora.
+- ryukyoku.
+- red-five / aka-dora normalization.
+- tile notation conversion.
+- relaxed discard matching.
+- tile parser implementation.
+- canonicalizer implementation.
+
+### Minimum Counting Boundary
+
+The future synthetic evaluator may count only:
+
+- `legal_action_count`.
+- `invalid_action_count`.
+- `missing_action_count`.
+- `parse_failure_count`.
+- `skipped_count`.
+- `evaluated_decision_count`.
+- `legal_action_rate`.
+- `invalid_action_rate`.
+- `missing_action_rate`.
+- `parse_failure_rate`.
+
+Denominator:
+
+```text
+evaluated_decision_count = non-empty legal_actions records that are not skipped
+```
+
+Boundary rules:
+
+- `skipped_no_legal_actions` does not enter `evaluated_decision_count`.
+- `missing_action` enters `evaluated_decision_count` when `legal_actions` is non-empty and the record is otherwise evaluable.
+- `parse_failure` enters `evaluated_decision_count` when `legal_actions` is non-empty and the record is otherwise evaluable.
+- The evaluator must preserve this invariant:
+
+```text
+evaluated_decision_count
+= legal_action_count
++ invalid_action_count
++ parse_failure_count
++ missing_action_count
+```
+
+- `legal_action_rate + invalid_action_rate` is not required to equal `1.0`, because parse failures and missing actions are independent categories.
+- If `evaluated_decision_count == 0`, all rates are undefined. Do not fabricate `0`, `1` or any other numeric rate.
+
+### Current Fixture Boundary
+
+The current fixture contains these labels:
+
+```text
+legal
+invalid
+missing_action
+skipped_no_legal_actions
+```
+
+`expected_future_outcome` is only a fixture label for future smoke expectations.
+
+It is not:
+
+- evaluator output.
+- a model prediction.
+- model-strength evidence.
+- LuckyJ comparison evidence.
+
+If a future evaluator uses the current fixture, it should skip the empty-`legal_actions` record and calculate only over synthetic/local records. That future computation is not implemented in this task.
+
+Expected future smoke expectations for the current fixture, without implementing them here:
+
+- one `legal` label.
+- one `invalid` label.
+- one `missing_action` label.
+- one `skipped_no_legal_actions` label.
+- `evaluated_decision_count` should exclude the skipped empty-`legal_actions` record.
+
+### Canonical Comparison Boundary
+
+Current matching boundary:
+
+```text
+action_type = dahai
+matching_mode = strict
+```
+
+Strict `dahai` comparison may compare only:
+
+- `actor`.
+- `action_type`.
+- `tile`.
+- `tsumogiri`.
+
+Rules:
+
+- `raw_action` is audit/debug data and does not participate in default equality.
+- `metadata` does not participate in default equality.
+- Do not normalize tile notation.
+- Do not guess unknown or null `tsumogiri`.
+- Do not use `relaxed_discard_tile` unless a future task explicitly approves it and records that mode in the offline result envelope.
+- Do not implement a canonicalizer in this boundary task.
+
+### Offline Result Envelope Boundary
+
+A future synthetic evaluator result should map into `OfflineEvaluationResultEnvelope` with:
+
+- `evaluation_stage = "P5"`.
+- `evaluation_type = "legal_action_metric"`.
+- `dataset_or_fixture_id` recording the fixture id or fixture path.
+- `model_or_tool_id` using an explicit synthetic/test id for synthetic-only smoke runs, not a real model id.
+- `sample_size = evaluated_decision_count`.
+- metric values for counts and rates when implemented.
+- reproducibility metadata containing the code commit, fixture id, test path, environment or command.
+- evidence references to the fixture, test, docs and commit.
+
+Required safety flags for this synthetic-only boundary:
+
+```text
+training_related = false
+self_play_related = false
+league_related = false
+tenhou_related = false
+platform_automation_related = false
+uses_real_platform_data = false
+uses_external_log = false
+uses_third_party_artifact = false
+```
+
+Required warnings:
+
+- synthetic only.
+- not Tenhou data.
+- not real haifu.
+- not model strength evidence.
+- not LuckyJ 10.68 comparison.
+
+### Claim Boundary
+
+Legal-action metrics are legality diagnostics only.
+
+They are not:
+
+- model-strength evidence.
+- Tenhou ranked evidence.
+- LuckyJ 10.68 comparison.
+- sufficient to promote a candidate in the racing funnel.
+- permission to start training, self-play, league, runner, real Tenhou or P6-P12 work.
+
 ## Canonical Action Matching
 
 Canonical matching compares structured action fields, not raw text.
@@ -378,8 +574,8 @@ Any true flag must be explicitly audited in a future task.
 
 Future P5 tasks may implement:
 
-- synthetic legal-action metric fixture schema smoke tests.
 - synthetic fixture based legal-action metric smoke tests.
+- a narrow synthetic legal-action metric evaluator for `tests/fixtures/eval/legal_action_metric_smoke.json` only.
 - fixed decision records with hand-authored `legal_actions`.
 - parser and canonicalizer unit tests.
 - offline envelope smoke tests for legal-action metrics.

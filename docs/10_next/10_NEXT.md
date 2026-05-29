@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Define P5 legal-action metric synthetic evaluator boundary before implementation.
+- [ ] Implement P5 synthetic legal-action metric evaluator for project-authored fixture only.
 
 Current execution charter:
 
@@ -24,10 +24,12 @@ Limits:
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
-- For the next step, define the P5 legal-action metric synthetic evaluator boundary before implementation.
+- For the next step, implement the P5 synthetic legal-action metric evaluator for the project-authored fixture only.
 - Keep the implementation tied to evaluation metrics; do not expand into league, training, self-play or real Tenhou integration.
-- Use only offline synthetic/local placement inputs; do not read Tenhou accounts, online platforms or external logs.
-- Do not add CLI, file ingestion, league harness, external-data readers or new model code unless the first unchecked task explicitly authorizes a lightweight schema-only code change.
+- Use only offline synthetic/local inputs; do not read Tenhou accounts, online platforms or external logs.
+- Do not add CLI, file ingestion, league harness, external-data readers or new model code. The next task may add only the explicitly scoped fixture-only synthetic legal-action evaluator.
+- For the next implementation step, do not expand beyond the project-authored synthetic fixture `tests/fixtures/eval/legal_action_metric_smoke.json`.
+- Do not connect the synthetic evaluator to model code, Akochan `system.exe`, third-party binaries, real Tenhou, real haifu, external logs or platform data.
 - Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
 - Do not modify unrelated files.
@@ -66,6 +68,7 @@ Limits:
 - [x] 2026-05-29 Defined P5 legal-action and invalid-action metric specification: added `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`, defining decision records, legal/proposed actions, denominator rules, legal/invalid/parse-failure/missing/skipped counts, canonical matching principles, result-envelope mapping and guardrails. No evaluator, legal-action checker, CLI, league, runner, training, self-play, Tenhou access, external-log reader or platform-data reader was added.
 - [x] 2026-05-29 Defined P5 action canonicalization schema for legal-action metric fixtures: added `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`, defining canonical action fields, current minimum `dahai` fixture scope, strict matching, future relaxed matching boundary, legal-action fixture shape, outcome mapping, edge cases and result-envelope mapping. No canonicalizer, evaluator, CLI, league, runner, training, self-play, Tenhou access, external-log reader or platform-data reader was added.
 - [x] 2026-05-29 Added synthetic legal-action metric fixture schema smoke test: added `tests/fixtures/eval/legal_action_metric_smoke.json` and `tests/eval/test_legal_action_fixture_schema_smoke.py`. The fixture is project-authored synthetic-only data with `legal`, `invalid`, `missing_action` and `skipped_no_legal_actions` future labels. The smoke test validates top-level fixture shape, strict `dahai` canonical action shape, source-note guardrails and expected labels without calculating legal/invalid rates, implementing canonical equality, writing an evaluator, reading Tenhou/platform/external-log data or claiming strength.
+- [x] 2026-05-29 Defined P5 legal-action metric synthetic evaluator boundary before implementation: updated `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md` to define allowed synthetic/local fixture scope, forbidden real Tenhou/external data/model/binary scope, current `dahai` + strict matching boundary, count/rate denominator rules, `expected_future_outcome` label limits, canonical comparison boundaries and `OfflineEvaluationResultEnvelope` mapping with all-false safety flags. No evaluator, canonicalizer, legal-action checker, CLI, file ingestion, league, runner, training, self-play, Tenhou access or external-data ingestion was added.
 
 ## Backlog
 
@@ -97,6 +100,7 @@ Limits:
 - [x] Define P5 legal-action and invalid-action metric specification.
 - [x] Define P5 action canonicalization schema for legal-action metric fixtures.
 - [x] Add synthetic legal-action metric fixture schema smoke test.
-- [ ] Define P5 legal-action metric synthetic evaluator boundary before implementation.
+- [x] Define P5 legal-action metric synthetic evaluator boundary before implementation.
+- [ ] Implement P5 synthetic legal-action metric evaluator for project-authored fixture only.
 - [ ] Create tiny benchmark harness for legal action rate, latency and fixed-position decisions.
 - [ ] Update `09_EVIDENCE_LOG.md` whenever new external evidence is added.

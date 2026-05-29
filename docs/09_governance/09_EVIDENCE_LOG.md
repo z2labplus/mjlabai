@@ -8,6 +8,81 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — P5 legal-action metric synthetic evaluator boundary
+
+- Type: internal documentation / implementation-boundary evidence.
+- Stage: P5 evaluation foundation.
+- Updated primary specification:
+  - `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`.
+- Updated cross-references:
+  - `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`.
+  - `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`.
+  - `docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md`.
+- Decision record:
+  - `docs/09_governance/09_DECISION_RECORD.md` entry `DR-0024`.
+- Allowed future implementation scope:
+  - project-authored synthetic/local fixtures only.
+  - default fixture `tests/fixtures/eval/legal_action_metric_smoke.json`.
+  - P5 offline evaluation context only.
+  - current minimum action type `dahai`.
+  - current matching mode `strict`.
+- Forbidden scope:
+  - no real Tenhou data.
+  - no real haifu.
+  - no platform data.
+  - no online accounts.
+  - no external logs.
+  - no Akochan real executable or third-party binary.
+  - no model output, model inference, model training or model weights.
+  - no self-play, league, match runner or Tenhou connector.
+- Count/rate boundary:
+  - `legal_action_count`.
+  - `invalid_action_count`.
+  - `missing_action_count`.
+  - `parse_failure_count`.
+  - `skipped_count`.
+  - `evaluated_decision_count`.
+  - `legal_action_rate`.
+  - `invalid_action_rate`.
+  - `missing_action_rate`.
+  - `parse_failure_rate`.
+- Denominator:
+  - `evaluated_decision_count = non-empty legal_actions records that are not skipped`.
+- Invariant:
+  - `evaluated_decision_count = legal_action_count + invalid_action_count + parse_failure_count + missing_action_count`.
+- Envelope boundary:
+  - `evaluation_stage = "P5"`.
+  - `evaluation_type = "legal_action_metric"`.
+  - `sample_size = evaluated_decision_count`.
+  - all safety flags false for synthetic-only smoke runs.
+  - warnings must state synthetic-only, not Tenhou data, not real haifu, not strength evidence and not LuckyJ comparison.
+- Local validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_offline_result.py`: 15 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_envelope_smoke.py`: 1 test passed.
+- Guardrails:
+  - No evaluator was implemented.
+  - No canonicalizer was implemented.
+  - No legal-action checker was implemented.
+  - No production code.
+  - No evaluator test.
+  - No CLI.
+  - No file ingestion.
+  - No league harness.
+  - No match runner.
+  - No training.
+  - No tuning.
+  - No self-play.
+  - No real Tenhou connection.
+  - No Tenhou account, platform data, external log, external haifu, scraping, automation, evasion or anti-detection logic.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+- Limitations:
+  - This is a boundary definition only.
+  - It is not executable legality evaluation.
+  - It is not model-strength evidence and not a LuckyJ comparison claim.
+
 ### 2026-05-29 — Synthetic legal-action metric fixture schema smoke test
 
 - Type: internal fixture / smoke-test evidence for P5 legal-action schema groundwork.

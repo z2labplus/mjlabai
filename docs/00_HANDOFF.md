@@ -49,8 +49,9 @@ The offline evaluation envelope smoke test now verifies that a synthetic stable-
 The P5 legal-action / invalid-action metric specification is defined in `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`.
 The P5 action canonicalization schema for legal-action metric fixtures is defined in `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`.
 The synthetic legal-action metric fixture schema smoke test is implemented in `tests/eval/test_legal_action_fixture_schema_smoke.py` against `tests/fixtures/eval/legal_action_metric_smoke.json`; it validates fixture shape only and does not calculate legal/invalid rates or implement an evaluator.
+The P5 legal-action metric synthetic evaluator boundary is defined in `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`: future implementation may use only project-authored synthetic/local fixtures, current `dahai` scope and strict matching; it must preserve explicit count/rate denominator rules and all-false safety flags, and must not use real Tenhou, real haifu, external logs, platform data, model code, third-party binaries, training, self-play or league paths.
 P5 overall is not complete.
-The next project task is to define the P5 legal-action metric synthetic evaluator boundary before implementation.
+The next project task is to implement the P5 synthetic legal-action metric evaluator for the project-authored fixture only.
 ```
 
 ## Current methodology
@@ -139,8 +140,8 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define P5 legal-action metric synthetic evaluator boundary before implementation.
-Do not expand into evaluator implementation, training, self-play, league evaluation, Tenhou integration, artifact upload, broad adapter work or P6-P12.
+Implement P5 synthetic legal-action metric evaluator for project-authored fixture only.
+Do not expand beyond that narrow evaluator into training, self-play, league evaluation, Tenhou integration, artifact upload, broad adapter work or P6-P12.
 ```
 
 Latest Akochan F1 audit summary:

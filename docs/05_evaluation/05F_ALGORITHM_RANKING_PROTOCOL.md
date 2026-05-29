@@ -211,6 +211,8 @@ The current minimum canonical fixture scope is `dahai` only. Default matching mo
 
 The current synthetic legal-action fixture smoke test validates schema shape only. It does not calculate `legal_action_rate`, calculate `invalid_action_rate`, implement canonical equality or implement an evaluator.
 
+Before any legal-action evaluator implementation, `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md` defines a synthetic evaluator boundary: only project-authored synthetic/local fixtures, current `dahai` scope, strict matching, explicit count/rate denominator rules and all-false safety flags are allowed. That boundary is not an evaluator implementation and cannot be used as model-strength or LuckyJ comparison evidence.
+
 ### Level 5 — Promotion gate
 
 A candidate can enter the mainline only if:

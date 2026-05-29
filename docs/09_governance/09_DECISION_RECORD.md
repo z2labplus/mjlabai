@@ -14,6 +14,50 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-05-29 — DR-0024 — Define Synthetic Legal-Action Evaluator Boundary Before Implementation
+
+Decision:
+
+```text
+Before implementing any P5 synthetic legal-action evaluator, define its allowed fixture-only scope, forbidden data/tooling scope, count/rate rules and offline result envelope mapping.
+```
+
+Context:
+
+- Legal-action and invalid-action denominator rules are defined.
+- Canonical `dahai` action fixture schema is defined.
+- A synthetic legal-action fixture schema smoke test exists.
+- The next step may implement a narrow evaluator, so the project needs explicit boundaries before code.
+
+Rationale:
+
+- Fixture labels such as `expected_future_outcome` must not be mistaken for evaluator output.
+- Legal-action metrics are legality diagnostics only, not model-strength evidence.
+- Keeping the first evaluator synthetic-only avoids accidental real Tenhou, external-log, platform-data, Akochan binary, model or league coupling.
+- Count/rate invariants and zero-denominator behavior should be written before implementation.
+
+Consequences:
+
+- `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md` now defines the synthetic evaluator boundary.
+- Future implementation is limited to project-authored synthetic/local fixtures, current `dahai` scope and strict matching unless a later task changes the boundary.
+- Future result envelopes must record P5 stage, legal-action metric type, fixture/reproducibility metadata, all-false safety flags and warnings against strength/LuckyJ claims.
+- No evaluator, canonicalizer, legal-action checker, production code, CLI, file ingestion, league, runner, training, self-play or Tenhou integration was implemented in this task.
+
+Linked docs:
+
+- `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`
+- `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`
+- `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0023 — Define Canonical Action Fixture Schema Before Smoke Tests
 
 Decision:

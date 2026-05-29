@@ -1,5 +1,51 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.17
+
+- Defined the P5 legal-action metric synthetic evaluator boundary before implementation.
+- Updated `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md` with a new boundary section.
+- Added decision record `DR-0024`.
+- Added cross-references from:
+  - `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`.
+  - `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`.
+  - `docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md`.
+- Boundary allows only:
+  - project-authored synthetic/local fixtures.
+  - default fixture `tests/fixtures/eval/legal_action_metric_smoke.json`.
+  - P5 offline evaluation context.
+  - current `dahai` scope.
+  - current strict matching mode.
+- Boundary forbids:
+  - real Tenhou data.
+  - real haifu.
+  - platform data.
+  - online accounts.
+  - external logs.
+  - Akochan real executable or third-party binaries.
+  - model output, model inference, model training or model weights.
+  - self-play, league, match runner or Tenhou connector.
+- Recorded minimum future count/rate boundary:
+  - `legal_action_count`.
+  - `invalid_action_count`.
+  - `missing_action_count`.
+  - `parse_failure_count`.
+  - `skipped_count`.
+  - `evaluated_decision_count`.
+  - `legal_action_rate`.
+  - `invalid_action_rate`.
+  - `missing_action_rate`.
+  - `parse_failure_rate`.
+- Recorded invariant:
+  - `evaluated_decision_count = legal_action_count + invalid_action_count + parse_failure_count + missing_action_count`.
+- Recorded that `expected_future_outcome` labels are not evaluator output, model predictions, strength evidence or LuckyJ comparison evidence.
+- No evaluator, canonicalizer, legal-action checker, production code, CLI, file ingestion, league harness, match runner, training, tuning, self-play, Tenhou connection, external-log reader or platform-data reader was added.
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_offline_result.py`: 15 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_envelope_smoke.py`: 1 test passed.
+- Set the next P5-only task to `Implement P5 synthetic legal-action metric evaluator for project-authored fixture only.`
+
 ## 2026-05-29 — v2.16
 
 - Added a synthetic legal-action metric fixture schema smoke test.

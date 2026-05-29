@@ -82,6 +82,14 @@ tests/fixtures/eval/legal_action_metric_smoke.json
 
 That fixture is synthetic-only and shape-only. It does not calculate legal-action metrics, implement an evaluator, read Tenhou data, read external logs or produce strength evidence.
 
+The future synthetic legal-action evaluator boundary is documented in:
+
+```text
+docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md
+```
+
+That boundary says future legal-action synthetic evaluator output should enter `OfflineEvaluationResultEnvelope` with `evaluation_stage = "P5"` and `evaluation_type = "legal_action_metric"`, all safety flags false for synthetic-only smoke runs, explicit fixture/reproducibility metadata and warnings that the result is synthetic-only, not Tenhou data and not model-strength evidence. This schema document still does not implement that evaluator.
+
 Future registry additions may include:
 
 - `evaluated_decision_count`.

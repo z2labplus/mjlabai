@@ -254,3 +254,13 @@
 | Schema smoke test is mistaken for a legal-action evaluator. | Scope / Engineering | High | Medium | Keep the task limited to JSON shape validation; define an explicit evaluator boundary before implementation. | Open |
 | Synthetic fixture is mistaken for model-strength evidence. | Evaluation / Governance | High | Medium | Fixture/source notes and evidence log state synthetic-only, not Tenhou, not model output and not strength evidence. | Open |
 | Dahai-only fixture scope hides future edge cases for reach, calls, kans and red fives. | Evaluation / Engineering | Medium | Medium | Keep `dahai` as the minimum smoke scope and require separate tasks for broader canonicalization and evaluator behavior. | Open |
+
+## 2026-05-29 — Synthetic legal-action evaluator boundary risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The future synthetic evaluator expands from fixture-only code into a broad evaluator, file ingestion path or runner. | Scope / Engineering | High | Medium | `05K_LEGAL_ACTION_METRIC_SPEC.md` limits the next implementation to the project-authored synthetic fixture and requires a separate boundary change before broader inputs. | Open |
+| Synthetic legal-action rates are mistaken for model-strength evidence or LuckyJ comparison. | Evaluation / Governance | High | Medium | Boundary warnings require synthetic-only, not Tenhou data, not real haifu, not strength evidence and not LuckyJ comparison. | Open |
+| Future implementation accidentally reads real Tenhou, external logs or platform data. | Compliance / Data | High | Medium | Boundary explicitly forbids real Tenhou, real haifu, platform data, online accounts and external logs. | Open |
+| Future implementation silently fabricates rates when `evaluated_decision_count == 0`. | Evaluation / Data Quality | High | Low-Medium | Boundary requires all rates to be undefined when denominator is zero and preserves the count invariant. | Open |
+| Future implementation treats `expected_future_outcome` as authoritative evaluator output. | Evaluation / Governance | Medium-High | Medium | Boundary states labels are smoke expectations only and not model predictions, evaluator output or strength evidence. | Open |

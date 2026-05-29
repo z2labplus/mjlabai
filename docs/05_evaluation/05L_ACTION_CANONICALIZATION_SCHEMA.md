@@ -371,6 +371,14 @@ The current matching mode remains:
 strict
 ```
 
+The synthetic evaluator boundary before implementation is defined in:
+
+```text
+docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md
+```
+
+That boundary keeps the current evaluator scope to synthetic/local fixtures, `dahai` actions and strict matching only. It does not implement a canonicalizer or evaluator.
+
 ## Outcome Mapping
 
 The canonical schema maps to `05K_LEGAL_ACTION_METRIC_SPEC.md` outcomes as follows:
@@ -525,18 +533,20 @@ uses_third_party_artifact = false
 The next likely P5 task is:
 
 ```text
-Add synthetic legal-action metric fixture schema smoke test.
+Implement P5 synthetic legal-action metric evaluator for project-authored fixture only.
 ```
 
 That future task must remain:
 
-- synthetic fixture only.
+- project-authored synthetic fixture only.
 - no broad evaluator implementation.
 - no real Tenhou.
 - no league.
 - no training.
 - no self-play.
 - no external logs.
+- no CLI.
+- no file ingestion.
 
 ## Verification
 
