@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Add placement-count aggregation helper for stable-dan evaluation inputs.
+- [ ] Add CLI-free stable-dan evaluation report smoke fixture from placement inputs.
 
 Current execution charter:
 
@@ -24,8 +24,9 @@ Limits:
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
-- For the next step, add only a placement-count aggregation helper for stable-dan evaluation inputs.
+- For the next step, add only a CLI-free stable-dan evaluation report smoke fixture from placement inputs.
 - Keep the implementation tied to evaluation metrics; do not expand into league, training, self-play or real Tenhou integration.
+- Use only offline synthetic/local placement inputs; do not read Tenhou accounts, online platforms or external logs.
 - Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
 - Do not modify unrelated files.
@@ -55,6 +56,7 @@ Limits:
 - [x] 2026-05-29 Added stable-dan bootstrap confidence interval: implemented percentile empirical multinomial bootstrap over observed placement counts, records point estimate, bounds, confidence level, bootstrap count, successful resamples, undefined resamples and undefined rate. Undefined resamples with zero fourth-place count are skipped and reported; if all resamples are undefined, `StableDanBootstrapUndefinedError` is raised. Local validation passed `python3 -m unittest tests/eval/test_stable_dan.py` with 21 tests and `python3 -m unittest tests/adapters/test_akochan_wrapper.py` with 14 tests.
 - [x] 2026-05-29 Added stable-dan threshold comparison helper for LuckyJ 10.68: implemented `LUCKYJ_STABLE_DAN_THRESHOLD`, `compare_stable_dan_to_threshold(...)`, `bootstrap_and_compare_stable_dan_threshold(...)` and `StableDanThresholdComparison`. Clear pass now requires bootstrap `lower_bound > threshold` and acceptable `undefined_rate`; point estimate alone cannot clear the threshold. Local validation passed `python3 -m unittest tests/eval/test_stable_dan.py` with 32 tests and `python3 -m unittest tests/adapters/test_akochan_wrapper.py` with 14 tests.
 - [x] 2026-05-29 Added stable-dan minimum sample-size and reporting schema: implemented project-internal reporting guardrails, `StableDanSampleSizeAssessment`, `assess_stable_dan_sample_size(...)`, `StableDanEvaluationReport` and `build_stable_dan_evaluation_report(...)`. Defaults are report minimum `total_games >= 100` and `fourth_count >= 10`, threshold-review minimum `total_games >= 1000` and `fourth_count >= 50`, and max undefined rate `0.05`. Local validation passed `python3 -m unittest tests/eval/test_stable_dan.py` with 45 tests and `python3 -m unittest tests/adapters/test_akochan_wrapper.py` with 14 tests.
+- [x] 2026-05-29 Added placement-count aggregation helper for stable-dan evaluation inputs: implemented `StableDanPlacementCounts`, `aggregate_placement_counts(...)`, `aggregate_placement_records(...)` and `calculate_stable_dan_from_placements(...)`. The helper accepts only explicit placements `1`/`2`/`3`/`4` and whitelisted aliases (`"1"`, `"2"`, `"3"`, `"4"`, `"first"`, `"second"`, `"third"`, `"fourth"`, `"1st"`, `"2nd"`, `"3rd"`, `"4th"`), rejects zero-based/ambiguous/bool/float/unknown inputs, and is limited to offline evaluation input preparation. Local validation passed `python3 -m unittest tests/eval/test_placement_counts.py` with 18 tests, `python3 -m unittest tests/eval/test_stable_dan.py` with 45 tests and `python3 -m unittest tests/adapters/test_akochan_wrapper.py` with 14 tests.
 
 ## Backlog
 
@@ -77,6 +79,7 @@ Limits:
 - [x] Add bootstrap confidence interval for stable-dan estimate.
 - [x] Add stable-dan threshold comparison helper for LuckyJ 10.68 using bootstrap lower bound.
 - [x] Add minimum sample-size and reporting schema for stable-dan evaluation results.
-- [ ] Add placement-count aggregation helper for stable-dan evaluation inputs.
+- [x] Add placement-count aggregation helper for stable-dan evaluation inputs.
+- [ ] Add CLI-free stable-dan evaluation report smoke fixture from placement inputs.
 - [ ] Create tiny benchmark harness for legal action rate, latency and fixed-position decisions.
 - [ ] Update `09_EVIDENCE_LOG.md` whenever new external evidence is added.

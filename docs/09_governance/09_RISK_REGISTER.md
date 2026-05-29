@@ -178,3 +178,12 @@
 | Internal sample-size guardrails are mistaken for Tenhou official standards or statistical proof. | Governance / Evaluation | Medium-High | Medium | Report source note and docs label them as project-internal governance defaults only. | Open |
 | A report with `clears_threshold=True` but insufficient sample size is used as a LuckyJ claim. | Evaluation / Governance | High | Medium | Report separates `clears_threshold` from `can_enter_threshold_review`; low sample adds a warning note. | Mitigated in implementation |
 | Future callers feed inconsistent threshold comparison and bootstrap results into the report. | Engineering / Evaluation | Medium | Medium | Report builder validates matching point estimate, bounds, confidence level and resample counts before building a report. | Mitigated in implementation |
+
+## 2026-05-29 — Stable-dan placement aggregation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Placement input aliases are over-expanded and accidentally accept ambiguous or zero-based values. | Evaluation / Data Quality | Medium-High | Medium | Aggregator accepts only explicit `1`/`2`/`3`/`4` values and a small whitelist of aliases; zero-based, bool, float and unknown strings fail. | Mitigated in implementation |
+| Placement aggregation helper is mistaken for a league harness or real Tenhou ingestion path. | Scope / Compliance | High | Medium | Document helper as offline input preparation only; it does not read accounts, platform data, logs, Tenhou, league or match runner outputs. | Open |
+| Bad placement records are silently skipped, biasing stable-dan counts. | Evaluation / Data Quality | High | Medium | Missing keys, invalid records and invalid placements raise clear errors instead of being skipped. | Mitigated in implementation |
+| Aggregated placement counts are used as strength evidence without bootstrap, threshold and sample-size report context. | Evaluation / Governance | High | Medium | Require composition with stable-dan calculator, bootstrap CI, threshold helper and reporting schema before any threshold review. | Open |

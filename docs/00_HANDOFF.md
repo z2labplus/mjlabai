@@ -39,7 +39,8 @@ The project has moved to evaluation groundwork: the deterministic Tenhou stable-
 The stable-dan bootstrap confidence interval is implemented and tested with percentile empirical multinomial resampling.
 The stable-dan threshold comparison helper is implemented and tested with LuckyJ stable dan `10.68` as the default target line.
 The stable-dan reporting schema and minimum sample-size guardrails are implemented and tested.
-The next project task is to add placement-count aggregation helper for stable-dan evaluation inputs.
+The placement-count aggregation helper is implemented and tested for offline stable-dan evaluation inputs.
+The next project task is to add a CLI-free stable-dan evaluation report smoke fixture from placement inputs.
 ```
 
 ## Current methodology
@@ -128,7 +129,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Add placement-count aggregation helper for stable-dan evaluation inputs.
+Add CLI-free stable-dan evaluation report smoke fixture from placement inputs.
 Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload or broad adapter work.
 ```
 

@@ -1,5 +1,25 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.8
+
+- Added placement-count aggregation helper for stable-dan evaluation inputs.
+- Added `src/mjlabai/eval/placement_counts.py` with:
+  - `StableDanPlacementCounts`.
+  - `aggregate_placement_counts(...)`.
+  - `aggregate_placement_records(...)`.
+  - `calculate_stable_dan_from_placements(...)`.
+- Exported placement aggregation APIs from `src/mjlabai/eval/__init__.py`.
+- Added `tests/eval/test_placement_counts.py`.
+- Supported placement inputs are only explicit `1`/`2`/`3`/`4` values and whitelisted aliases: `"1"`, `"2"`, `"3"`, `"4"`, `"first"`, `"second"`, `"third"`, `"fourth"`, `"1st"`, `"2nd"`, `"3rd"` and `"4th"`.
+- Invalid, ambiguous, zero-based, bool, float and unknown placement inputs now fail explicitly instead of being silently normalized.
+- `to_stable_dan_kwargs()` can feed the existing deterministic stable-dan calculator without reading files, running league code or touching Tenhou.
+- Local validation passed:
+  - `python3 -m unittest tests/eval/test_placement_counts.py`: 18 tests passed.
+  - `python3 -m unittest tests/eval/test_stable_dan.py`: 45 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+- This remains offline evaluation input infrastructure only, not training, self-play, league execution, real Tenhou integration or model-strength evidence.
+- Set the next task to `Add CLI-free stable-dan evaluation report smoke fixture from placement inputs.`
+
 ## 2026-05-29 — v2.7
 
 - Added minimum sample-size guardrails and stable-dan evaluation report schema.

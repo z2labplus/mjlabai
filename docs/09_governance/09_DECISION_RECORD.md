@@ -14,6 +14,49 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-05-29 — DR-0017 — Stable-Dan Placement Aggregation Accepts Only Explicit Placements
+
+Decision:
+
+```text
+Stable-dan placement aggregation may accept only explicit 1/2/3/4 placements and a small whitelist of human-readable aliases.
+It must reject zero-based, fuzzy, bool, float and unknown placement inputs instead of silently correcting them.
+```
+
+Context:
+
+- Stable-dan calculator, bootstrap CI, threshold helper and report schema are implemented.
+- Future evaluation inputs will often arrive as per-game placement records rather than precomputed counts.
+- Accepting ambiguous placement labels could bias first/second/third/fourth counts and therefore stable-dan estimates.
+
+Rationale:
+
+- Stable-dan is highly sensitive to fourth-place counts, so silent coercion is risky.
+- Explicit failure on bad records makes upstream evaluator bugs visible.
+- Keeping aggregation offline and schema-limited prevents it from becoming a league harness or Tenhou ingestion path.
+
+Consequences:
+
+- `aggregate_placement_counts(...)` accepts `1`, `2`, `3`, `4` and whitelisted string aliases only.
+- `aggregate_placement_records(...)` extracts a named placement field from mapping records and fails on missing keys.
+- `StableDanPlacementCounts.to_stable_dan_kwargs()` can feed `calculate_stable_dan(...)`.
+- The next task is a CLI-free stable-dan evaluation report smoke fixture from placement inputs.
+
+Linked docs:
+
+- `src/mjlabai/eval/placement_counts.py`
+- `tests/eval/test_placement_counts.py`
+- `docs/10_next/10_NEXT.md`
+- `docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0016 — Stable-Dan Reports Require Sample-Size Guardrails
 
 Decision:

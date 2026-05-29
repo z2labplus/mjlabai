@@ -35,7 +35,8 @@ Tenhou stable-dan calculator = deterministic point estimate implemented and test
 Tenhou stable-dan bootstrap CI = percentile empirical multinomial bootstrap implemented and tested.
 Tenhou stable-dan threshold helper = LuckyJ 10.68 lower-bound comparison implemented and tested.
 Tenhou stable-dan reporting schema = minimum sample-size guardrails and report schema implemented and tested.
-Next = add placement-count aggregation helper for stable-dan evaluation inputs.
+Tenhou stable-dan placement aggregation = offline placement-count helper implemented and tested.
+Next = add CLI-free stable-dan evaluation report smoke fixture from placement inputs.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -166,13 +167,13 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 
 ## Current Next Task
 
-当前 `10_NEXT` 的下一步是在 stable-dan report schema 之上增加 placement-count aggregation：
+当前 `10_NEXT` 的下一步是在 stable-dan placement aggregation 之上增加 CLI-free smoke fixture：
 
 ```text
-Add placement-count aggregation helper for stable-dan evaluation inputs.
+Add CLI-free stable-dan evaluation report smoke fixture from placement inputs.
 ```
 
-The stable-dan calculator now supports four-player general/ippan, upper/joukyu, expert/tokujou and phoenix/houou room formulas, records placement counts/rates and raises `StableDanUndefinedError` when `fourth_count == 0`. The bootstrap CI uses percentile empirical multinomial resampling, reports successful/undefined resamples and refuses to fabricate infinite stable dan. The threshold helper uses LuckyJ stable dan `10.68` by default and only returns `clear_pass` when bootstrap lower bound exceeds the threshold with acceptable undefined rate. The reporting schema separates `clears_threshold` from `can_enter_threshold_review` so low-sample reports cannot become project-level LuckyJ claims. This is metric infrastructure only, not training, self-play, league evaluation or Tenhou integration.
+The stable-dan calculator now supports four-player general/ippan, upper/joukyu, expert/tokujou and phoenix/houou room formulas, records placement counts/rates and raises `StableDanUndefinedError` when `fourth_count == 0`. The bootstrap CI uses percentile empirical multinomial resampling, reports successful/undefined resamples and refuses to fabricate infinite stable dan. The threshold helper uses LuckyJ stable dan `10.68` by default and only returns `clear_pass` when bootstrap lower bound exceeds the threshold with acceptable undefined rate. The reporting schema separates `clears_threshold` from `can_enter_threshold_review` so low-sample reports cannot become project-level LuckyJ claims. The placement aggregation helper converts only explicit offline placement values and whitelisted aliases into first/second/third/fourth counts; it rejects zero-based, ambiguous, bool, float and unknown inputs. This is metric infrastructure only, not training, self-play, league evaluation or Tenhou integration.
 
 Mortal runnable baseline 已暂停，因为当前没有合法、可校验、可使用的 trained model artifact。Mortal 仍保留为源码、mjai 接口、方法论和工程参考。除非未来先补齐 artifact 来源、version/tag、usage constraints 和 checksum 并重新打开 F1，否则不进入 Mortal F2 adapter。
 
@@ -186,4 +187,4 @@ F2 task definition 已写入 `docs/07_development_execution/07J_AKOCHAN_F2_INTER
 
 首个 workflow run `26621536548` 已复审：构建、fake wrapper tests 和真实 `legal_action` wrapper test 通过；真实 `mjai_log` wrapper test 失败，因为 Akochan 运行时需要从 process working directory 读取 `setup_mjai.json`。
 
-本地 wrapper cwd 边界已修复：`AkochanWrapper` 支持显式 `working_dir`、`AKOCHAN_WORKING_DIR` 和默认 `Path(system_exe).resolve().parent`；`subprocess.run` 使用 `cwd=self.working_dir`；audit log 记录 `working_dir`。workflow run `26623247276` 证明 `setup_mjai.json` blocker 已消失，真实 `legal_action` 继续通过，但真实 `mjai_log` stdout 触发 `JSONDecodeError: Extra data`。workflow run `26628128871` 进一步证明 strict JSON stream parser 能解析前段 JSON records，但真实 stdout 还包含白名单状态行 `calculating review` 和后续 JSON review output。本地 parser 已支持 single JSON、JSON Lines、concatenated JSON values、pretty-printed multi-record JSON stream，以及只跳过 exactly `calculating review` 的 allowlisted mixed stdout；unknown non-JSON line 和 partial parse 仍必须失败。workflow run `26629344590` 已成功验证该路径：Ubuntu runner 成功构建 `ai_src/libai.so`、root `libai.so` 和 `system.exe`，fake wrapper tests 14 tests passed，real `legal_action` 和 real `mjai_log` 均通过。该证据只说明 fixed-sample wrapper/integration 可行，不是 Akochan 或 mjlabai 强度证据。下一步只允许实现 Tenhou stable-dan calculator 这一评测地基任务；仍然不训练、不调参、不自我对弈、不接入 Tenhou、不 vendor 或上传第三方源码、二进制、`params/` 或未知 artifact。
+本地 wrapper cwd 边界已修复：`AkochanWrapper` 支持显式 `working_dir`、`AKOCHAN_WORKING_DIR` 和默认 `Path(system_exe).resolve().parent`；`subprocess.run` 使用 `cwd=self.working_dir`；audit log 记录 `working_dir`。workflow run `26623247276` 证明 `setup_mjai.json` blocker 已消失，真实 `legal_action` 继续通过，但真实 `mjai_log` stdout 触发 `JSONDecodeError: Extra data`。workflow run `26628128871` 进一步证明 strict JSON stream parser 能解析前段 JSON records，但真实 stdout 还包含白名单状态行 `calculating review` 和后续 JSON review output。本地 parser 已支持 single JSON、JSON Lines、concatenated JSON values、pretty-printed multi-record JSON stream，以及只跳过 exactly `calculating review` 的 allowlisted mixed stdout；unknown non-JSON line 和 partial parse 仍必须失败。workflow run `26629344590` 已成功验证该路径：Ubuntu runner 成功构建 `ai_src/libai.so`、root `libai.so` 和 `system.exe`，fake wrapper tests 14 tests passed，real `legal_action` 和 real `mjai_log` 均通过。该证据只说明 fixed-sample wrapper/integration 可行，不是 Akochan 或 mjlabai 强度证据。下一步只允许增加 CLI-free stable-dan evaluation report smoke fixture from placement inputs；仍然不训练、不调参、不自我对弈、不跑 league、不接入 Tenhou、不 vendor 或上传第三方源码、二进制、`params/` 或未知 artifact。

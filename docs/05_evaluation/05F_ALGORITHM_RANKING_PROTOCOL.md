@@ -133,15 +133,25 @@ Stable-dan reports must also pass sample-size reporting guardrails before projec
 
 These defaults are project-internal governance guardrails, not Tenhou official standards or proof of strength. Low-sample reports may be useful diagnostics, but they cannot support a LuckyJ 10.68 project-level claim.
 
+Stable-dan inputs may be aggregated from offline placement results only through explicit placement values:
+
+- accepted numeric placements: `1`, `2`, `3`, `4`.
+- accepted string placements: `"1"`, `"2"`, `"3"`, `"4"`.
+- accepted alias placements: `"first"`, `"second"`, `"third"`, `"fourth"`, `"1st"`, `"2nd"`, `"3rd"`, `"4th"`.
+
+Do not accept zero-based placements, fuzzy labels, bools, floats or unknown strings. Invalid placement records must fail loudly instead of being skipped or repaired, because silent correction can bias the stable-dan estimate.
+
 Current implementation status:
 
 - `src/mjlabai/eval/stable_dan.py` implements deterministic point estimates for general/ippan, upper/joukyu, expert/tokujou and phoenix/houou.
 - `bootstrap_stable_dan_ci(...)` implements percentile empirical multinomial bootstrap confidence intervals using Python standard library only.
 - `compare_stable_dan_to_threshold(...)` compares bootstrap CI results against LuckyJ stable dan `10.68` using lower-bound logic.
 - `build_stable_dan_evaluation_report(...)` produces an offline report schema with point estimate, CI, threshold outcome and sample-size assessment.
+- `aggregate_placement_counts(...)` and `aggregate_placement_records(...)` convert offline placement inputs into validated first/second/third/fourth counts.
+- `calculate_stable_dan_from_placements(...)` composes placement aggregation with the deterministic stable-dan calculator only.
 - `fourth_count == 0` is undefined and raises `StableDanUndefinedError`; do not report infinite stable dan.
 - Bootstrap resamples with `fourth_count == 0` are recorded as undefined; if all resamples are undefined, `StableDanBootstrapUndefinedError` is raised.
-- The next required evaluation-foundation task is placement-count aggregation for stable-dan evaluation inputs.
+- The next required evaluation-foundation task is a CLI-free stable-dan evaluation report smoke fixture from placement inputs.
 
 ### Level 5 — Promotion gate
 

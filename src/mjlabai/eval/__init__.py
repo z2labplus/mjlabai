@@ -23,6 +23,12 @@ from mjlabai.eval.stable_dan import (
     compare_stable_dan_to_threshold,
     placement_rates,
 )
+from mjlabai.eval.placement_counts import (
+    StableDanPlacementCounts,
+    aggregate_placement_counts,
+    aggregate_placement_records,
+    calculate_stable_dan_from_placements,
+)
 
 __all__ = [
     "DEFAULT_MAX_UNDEFINED_RATE_FOR_STABLE_DAN_REPORT",
@@ -35,14 +41,18 @@ __all__ = [
     "StableDanBootstrapResult",
     "StableDanBootstrapUndefinedError",
     "StableDanEvaluationReport",
+    "StableDanPlacementCounts",
     "StableDanResult",
     "StableDanSampleSizeAssessment",
     "StableDanThresholdComparison",
     "StableDanUndefinedError",
     "assess_stable_dan_sample_size",
+    "aggregate_placement_counts",
+    "aggregate_placement_records",
     "bootstrap_and_compare_stable_dan_threshold",
     "bootstrap_stable_dan_ci",
     "build_stable_dan_evaluation_report",
+    "calculate_stable_dan_from_placements",
     "calculate_stable_dan",
     "compare_stable_dan_to_threshold",
     "placement_rates",

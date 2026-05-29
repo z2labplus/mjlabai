@@ -8,6 +8,48 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — Stable-dan placement-count aggregation helper implementation
+
+- Type: internal implementation / local test evidence for evaluation input infrastructure.
+- Stage: P5 evaluation foundation.
+- Implemented code:
+  - `src/mjlabai/eval/placement_counts.py`.
+  - `src/mjlabai/eval/__init__.py`.
+  - `tests/eval/test_placement_counts.py`.
+- API:
+  - `StableDanPlacementCounts`.
+  - `aggregate_placement_counts(placements)`.
+  - `aggregate_placement_records(records, placement_key="placement")`.
+  - `calculate_stable_dan_from_placements(placements, room=...)`.
+- Supported placement inputs:
+  - `1`, `2`, `3`, `4`.
+  - `"1"`, `"2"`, `"3"`, `"4"`.
+  - `"first"`, `"second"`, `"third"`, `"fourth"`.
+  - `"1st"`, `"2nd"`, `"3rd"`, `"4th"`.
+- Explicitly rejected inputs:
+  - empty placement iterables.
+  - zero-based or out-of-range placements such as `0` or `5`.
+  - ambiguous strings such as `"win"`.
+  - bool values such as `True` or `False`.
+  - float values such as `1.0`.
+- Local validation:
+  - `python3 -m unittest tests/eval/test_placement_counts.py`: 18 tests passed.
+  - `python3 -m unittest tests/eval/test_stable_dan.py`: 45 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+  - `git diff --check`: passed.
+- Guardrails:
+  - No training.
+  - No tuning.
+  - No self-play, match or league command.
+  - No real Tenhou connection.
+  - No Tenhou account, platform data, scraping, automation, evasion or anti-detection logic.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+- Limitations:
+  - This is an offline placement-input utility, not model-strength evidence.
+  - It does not read files, aggregate real logs, run a league or connect to Tenhou.
+  - The next task is a CLI-free smoke fixture that composes placement aggregation with the stable-dan report schema.
+
 ### 2026-05-29 — Stable-dan minimum sample-size and report schema implementation
 
 - Type: internal implementation / local test evidence for evaluation reporting infrastructure.

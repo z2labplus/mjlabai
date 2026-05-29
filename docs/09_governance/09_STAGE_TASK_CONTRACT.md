@@ -13,7 +13,8 @@ Stable-dan calculator = deterministic point estimate implemented and tested
 Stable-dan bootstrap CI = percentile empirical multinomial bootstrap implemented and tested
 Stable-dan threshold helper = LuckyJ 10.68 lower-bound comparison implemented and tested
 Stable-dan reporting schema = minimum sample-size guardrails and report schema implemented and tested
-Next = P5 evaluation foundation: placement-count aggregation helper for stable-dan evaluation inputs
+Stable-dan placement aggregation = offline placement-count helper implemented and tested
+Next = P5 evaluation foundation: CLI-free stable-dan report smoke fixture from placement inputs
 ```
 
 ## AI role
@@ -78,7 +79,9 @@ The stable-dan threshold helper is an offline statistical reporting utility. It 
 
 The stable-dan reporting schema is an offline statistics reporting utility. It must remain separate from training, self-play, league execution and real Tenhou integration.
 
-The next evaluation-foundation task may add placement-count aggregation for stable-dan inputs, but it must not become a league harness or model-strength claim by itself.
+The stable-dan placement aggregation helper is an offline evaluation input utility. It accepts only explicit placement values and whitelisted aliases; it must not become a league harness, real Tenhou ingestion path or model-strength claim by itself.
+
+The next evaluation-foundation task may add a CLI-free stable-dan report smoke fixture from placement inputs, but it must not become a CLI, league harness, training path, self-play path or real Tenhou integration.
 
 ## Output files
 
@@ -107,4 +110,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Add placement-count aggregation helper for stable-dan evaluation inputs.
+Add CLI-free stable-dan evaluation report smoke fixture from placement inputs.
