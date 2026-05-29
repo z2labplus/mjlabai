@@ -119,7 +119,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Resolve Akochan F1 build/toolchain blocker, then rerun build plus minimal legal_action and/or mjai_log sample.
+Provide a supported build environment with Docker Linux or verified local LLVM/Boost/OpenMP, then rerun Akochan build plus minimal legal_action and/or mjai_log sample.
 Do not start F2 adapter work for Akochan until F1 minimal build/run evidence exists.
 ```
 
@@ -139,6 +139,19 @@ Latest Akochan F1 audit summary:
 - `mjai` CLI was not installed.
 - No `system.exe` was produced, so minimal run was not executed.
 - F1 conclusion: Blocked.
+
+Latest Akochan F1 blocker-resolution attempt:
+
+- Docker is not installed: `docker: command not found`.
+- Host is macOS 26.2 / Darwin 25.2.0 on arm64.
+- `/usr/bin/g++`, `/usr/bin/clang++` and `/usr/bin/make` exist, but `g++`/`clang++` are Apple clang 21.0.0.
+- Homebrew exists, but usable Boost, LLVM and OpenMP/libomp files were not present under the expected `/opt/homebrew/opt/*` paths.
+- Akochan was cloned outside the repository to `/tmp/mjlabai_akochan_build_audit` and checked out at `53188a0b926fbab38177f88c3cd87d554cf412af`.
+- `make -f Makefile_MacOS` in `ai_src` failed because `/opt/homebrew/opt/llvm/bin/clang++` was missing.
+- `make -f Makefile_Linux` in `ai_src` failed because `/proc/cpuinfo` is absent on macOS and Apple clang rejected `-mcmodel=medium` and `-fopenmp`.
+- Root Makefile attempts failed for the same missing LLVM / unsupported OpenMP reasons.
+- No `libai.so` or `system.exe` was generated, so no minimal `legal_action`, `legal_action_log_all`, `mjai_log` or `stats_mjai` sample was run.
+- F1 conclusion remains: Blocked.
 
 ## Do not forget
 

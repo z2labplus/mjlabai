@@ -164,9 +164,11 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是解决 Akochan F1 blocker：
 
 ```text
-Resolve Akochan F1 blocker: establish a supported build environment and rerun build plus minimal legal_action and/or mjai_log sample.
+Resolve Akochan F1 blocker: provide a supported build environment with Docker Linux or verified local LLVM/Boost/OpenMP, then rebuild Akochan and run minimal legal_action and/or mjai_log sample.
 ```
 
 Mortal runnable baseline 已暂停，因为当前没有合法、可校验、可使用的 trained model artifact。Mortal 仍保留为源码、mjai 接口、方法论和工程参考。除非未来先补齐 artifact 来源、version/tag、usage constraints 和 checksum 并重新打开 F1，否则不进入 Mortal F2 adapter。
 
 Akochan F1 审计已完成但结论为 Blocked：仓库公开且 JSON/mjai/log/legal-action 入口有价值，未发现外部神经网络权重需求，但本机 macOS ARM 构建失败，尚无 `system.exe` 和最小运行证据。因此不能进入 Akochan F2。
+
+最新 blocker-resolution attempt 仍为 Blocked：Docker 不可用，native Linux 不可用，本地 macOS Homebrew 路径缺少可用 LLVM/Boost/OpenMP；未生成 `libai.so` 或 `system.exe`，因此没有运行最小样例。

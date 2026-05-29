@@ -83,4 +83,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Resolve Akochan F1 blocker: establish a supported build environment and rerun build plus minimal `legal_action` and/or `mjai_log` sample.
+Resolve Akochan F1 blocker: provide a supported build environment with Docker Linux or verified local LLVM/Boost/OpenMP, then rebuild Akochan and run minimal `legal_action` and/or `mjai_log` sample.

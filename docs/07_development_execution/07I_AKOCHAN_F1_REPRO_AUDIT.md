@@ -351,3 +351,160 @@ Next required task:
 ```text
 Resolve Akochan F1 blocker: establish a supported build environment and rerun build plus minimal legal_action/mjai_log sample.
 ```
+
+## H. 2026-05-29 Blocker Resolution Attempt
+
+Goal:
+
+```text
+Resolve the Akochan F1 build/toolchain blocker and obtain minimal build/run evidence.
+```
+
+Result:
+
+```text
+Blocked
+```
+
+### A. Environment Probe
+
+Local machine:
+
+```text
+OS: macOS 26.2 / Darwin 25.2.0
+Arch: arm64
+```
+
+Tooling check:
+
+| Tool | Result |
+|---|---|
+| Docker | Not available: `docker: command not found`. |
+| `g++` | Present at `/usr/bin/g++`; Apple clang version 21.0.0. |
+| `clang++` | Present at `/usr/bin/clang++`; Apple clang version 21.0.0. |
+| `make` | Present at `/usr/bin/make`; GNU Make 3.81. |
+| Homebrew | Present at `/opt/homebrew/bin/brew`. |
+| Boost | Not installed/usable: no `/opt/homebrew/opt/boost`, no boost include dir, no `libboost_system` found. |
+| LLVM | Not installed/usable: no `/opt/homebrew/opt/llvm/bin/clang++`. |
+| OpenMP/libomp | Not installed/usable: no `omp.h` or `libomp` found in searched Homebrew/system paths. |
+
+Build path selection:
+
+```text
+Docker Linux: unavailable.
+Native Linux: unavailable, host is macOS arm64.
+macOS Homebrew: blocked by missing usable LLVM/Boost/OpenMP.
+Final selected path: blocked after environment probe and official Makefile attempts.
+```
+
+No global install command such as `brew install` or `sudo apt install` was run.
+
+### B. Build Attempt
+
+Temporary external clone:
+
+```text
+/tmp/mjlabai_akochan_build_audit
+```
+
+Clone and checkout:
+
+```text
+git -c http.curloptResolve=github.com:443:20.205.243.166 clone https://github.com/critter-mj/akochan.git /tmp/mjlabai_akochan_build_audit
+cd /tmp/mjlabai_akochan_build_audit
+git checkout 53188a0b926fbab38177f88c3cd87d554cf412af
+```
+
+Checked commit:
+
+```text
+53188a0b926fbab38177f88c3cd87d554cf412af
+```
+
+Build attempt 1:
+
+```text
+cd /tmp/mjlabai_akochan_build_audit/ai_src
+make -f Makefile_MacOS
+```
+
+Result:
+
+```text
+make: /opt/homebrew/opt/llvm/bin/clang++: No such file or directory
+make: *** [obj/agari.o] Error 1
+```
+
+Build attempt 2:
+
+```text
+cd /tmp/mjlabai_akochan_build_audit/ai_src
+make -f Makefile_Linux
+```
+
+Result:
+
+```text
+grep: /proc/cpuinfo: No such file or directory
+clang++: error: unsupported argument 'medium' to option '-mcmodel=' for target 'arm64-apple-macosx26.0.0'
+clang++: error: unsupported option '-fopenmp'
+make: *** [obj/agari.o] Error 1
+```
+
+Root build attempts were also checked after `ai_src` failed:
+
+```text
+make -f Makefile_MacOS
+make -f Makefile_Linux
+```
+
+They failed for the same missing LLVM and unsupported OpenMP/macOS flag reasons.
+
+Generated files:
+
+| File | Result |
+|---|---|
+| `ai_src/libai.so` | Not generated. |
+| root `libai.so` | Not generated. |
+| `system.exe` | Not generated. |
+
+### C. Minimal Non-Training Run
+
+No minimal run was executed because `system.exe` was not generated.
+
+Confirmed non-training candidate commands from `main.cpp` remain:
+
+- `system.exe legal_action <json>`
+- `system.exe legal_action_log_all <file>`
+- `system.exe mjai_log <file> <id> [line_index]`
+- `system.exe stats_mjai [dir_name] [player_name_prefix]`
+
+Forbidden commands were not run:
+
+- No `system.exe test`.
+- No match/self-play command.
+- No training command.
+- No real Tenhou connection.
+
+### D. F1 Gate Update
+
+Conclusion:
+
+```text
+Blocked
+```
+
+Reason:
+
+- Docker is not installed, so the preferred temporary Linux path cannot be used.
+- Native Linux is not available on the host.
+- macOS Homebrew build path is blocked because required LLVM/Boost/OpenMP files are absent.
+- Official Linux Makefile is incompatible with this macOS ARM host.
+- No `system.exe` was generated.
+- No minimal `legal_action`, `legal_action_log_all`, `mjai_log` or `stats_mjai` sample could be run.
+
+Updated next required task:
+
+```text
+Resolve Akochan F1 blocker: provide a supported build environment with Docker Linux or verified local LLVM/Boost/OpenMP, then rebuild Akochan and run minimal legal_action and/or mjai_log sample.
+```

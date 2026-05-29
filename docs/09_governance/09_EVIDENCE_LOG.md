@@ -192,3 +192,39 @@ Internal governance decisions that affect execution should also be noted here, b
 - Action:
   - Do not promote Akochan to F2.
   - Resolve build/toolchain blocker and rerun build plus minimal `legal_action` and/or `mjai_log` sample.
+
+## 2026-05-29 — Akochan F1 blocker-resolution attempt
+
+- Candidate: Akochan.
+- Funnel stage after attempt: F1 Blocked.
+- Checked repository: `critter-mj/akochan`.
+- Checked commit: `53188a0b926fbab38177f88c3cd87d554cf412af`.
+- Local temporary clone: `/tmp/mjlabai_akochan_build_audit`.
+- Environment facts:
+  - OS: macOS 26.2 / Darwin 25.2.0.
+  - Arch: arm64.
+  - Docker: not found; `docker: command not found`.
+  - `g++`: `/usr/bin/g++`, Apple clang version 21.0.0.
+  - `clang++`: `/usr/bin/clang++`, Apple clang version 21.0.0.
+  - `make`: `/usr/bin/make`, GNU Make 3.81.
+  - Homebrew exists at `/opt/homebrew/bin/brew`, but no usable `/opt/homebrew/opt/boost`, `/opt/homebrew/opt/llvm` or `/opt/homebrew/opt/libomp` files were present.
+  - No boost include directory, `libboost_system`, `omp.h` or `libomp` file was found in the searched Homebrew/system paths.
+- Source access:
+  - `git -c http.curloptResolve=github.com:443:20.205.243.166 clone https://github.com/critter-mj/akochan.git /tmp/mjlabai_akochan_build_audit` succeeded.
+  - `git checkout 53188a0b926fbab38177f88c3cd87d554cf412af` succeeded.
+- Build attempts:
+  - `cd /tmp/mjlabai_akochan_build_audit/ai_src && make -f Makefile_MacOS` failed because `/opt/homebrew/opt/llvm/bin/clang++` was missing.
+  - `cd /tmp/mjlabai_akochan_build_audit/ai_src && make -f Makefile_Linux` failed because `/proc/cpuinfo` is absent on macOS and Apple clang rejected `-mcmodel=medium` and `-fopenmp`.
+  - Root `make -f Makefile_MacOS` failed for missing `/opt/homebrew/opt/llvm/bin/clang++`.
+  - Root `make -f Makefile_Linux` failed because Apple clang rejected `-fopenmp`.
+- Generated artifacts:
+  - `ai_src/libai.so`: not generated.
+  - root `libai.so`: not generated.
+  - `system.exe`: not generated.
+- Minimal run:
+  - No `legal_action`, `legal_action_log_all`, `mjai_log` or `stats_mjai` sample was run because `system.exe` was unavailable.
+  - No self-match/test/training/Tenhou command was run.
+- Result:
+  - Akochan remains F1 Blocked.
+- Action:
+  - Provide a supported build environment with Docker Linux or verified local LLVM/Boost/OpenMP before retrying the build and minimal samples.

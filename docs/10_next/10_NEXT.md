@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Resolve Akochan F1 blocker: establish a supported build environment, preferably Linux with `g++`/Boost/OpenMP or a corrected macOS Homebrew LLVM/OpenMP/Boost toolchain, then rerun Akochan build plus minimal `legal_action` and/or `mjai_log` sample.
+- [ ] Resolve Akochan F1 blocker: provide a supported build environment with Docker Linux or verified local LLVM/Boost/OpenMP, then rebuild Akochan and run minimal `legal_action` and/or `mjai_log` sample.
 
 Current execution charter:
 
@@ -33,6 +33,7 @@ Limits:
 - [x] 2026-05-29 Technical-plan-first execution charter added: `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md` now defines Web ChatGPT Pro vs local Codex roles, Git + docs source of truth, current technical route and update rules.
 - [x] 2026-05-29 Mortal F1 continuation decision: no lawful, verifiable and usable Mortal trained model artifact is currently available, so Mortal is paused as a runnable baseline. Mortal remains a source-code, mjai-interface, methodology and engineering reference. Unknown `mortal.pth`, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files must not be used. The next baseline F1 path moves to Akochan.
 - [x] 2026-05-29 Akochan F1 reproducibility audit: `critter-mj/akochan` at commit `53188a0b926fbab38177f88c3cd87d554cf412af` is public and inspectable; custom license permits private research but restricts redistribution/modification/commercial use; no external neural-network weights are required; JSON/mjai/log/legal-action entry points look promising; local build failed on macOS ARM due missing/incompatible LLVM/OpenMP/Boost toolchain, so minimal run was not executed and F1 is Blocked.
+- [x] 2026-05-29 Akochan F1 blocker-resolution attempt: Docker was unavailable, native Linux was unavailable, and the macOS Homebrew build path lacked usable LLVM/Boost/OpenMP files. Official MacOS and Linux Makefile attempts in `/tmp/mjlabai_akochan_build_audit` failed before producing `libai.so` or `system.exe`, so no minimal `legal_action`, `legal_action_log_all`, `mjai_log` or `stats_mjai` sample was run. Akochan remains F1 Blocked.
 
 ## Backlog
 
