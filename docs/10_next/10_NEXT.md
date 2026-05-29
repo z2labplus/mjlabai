@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Run the manual GitHub Actions workflow `Akochan F1 Build Audit`, then review whether Ubuntu build produces `system.exe` and runs at least one minimal non-training sample.
+- [ ] Run the corrected manual GitHub Actions workflow `Akochan F1 Build Audit`, then review whether Ubuntu build produces `system.exe` and runs at least one minimal non-training sample.
 
 Current execution charter:
 
@@ -35,6 +35,7 @@ Limits:
 - [x] 2026-05-29 Akochan F1 reproducibility audit: `critter-mj/akochan` at commit `53188a0b926fbab38177f88c3cd87d554cf412af` is public and inspectable; custom license permits private research but restricts redistribution/modification/commercial use; no external neural-network weights are required; JSON/mjai/log/legal-action entry points look promising; local build failed on macOS ARM due missing/incompatible LLVM/OpenMP/Boost toolchain, so minimal run was not executed and F1 is Blocked.
 - [x] 2026-05-29 Akochan F1 blocker-resolution attempt: Docker was unavailable, native Linux was unavailable, and the macOS Homebrew build path lacked usable LLVM/Boost/OpenMP files. Official MacOS and Linux Makefile attempts in `/tmp/mjlabai_akochan_build_audit` failed before producing `libai.so` or `system.exe`, so no minimal `legal_action`, `legal_action_log_all`, `mjai_log` or `stats_mjai` sample was run. Akochan remains F1 Blocked.
 - [x] 2026-05-29 Added manual GitHub Actions workflow `Akochan F1 Build Audit`: `.github/workflows/akochan-f1-build-audit.yml` provides an Ubuntu Linux runner path for the fixed Akochan commit, installs build dependencies inside the runner, clones Akochan in the runner temp directory, attempts `Makefile_Linux` builds, and only if `system.exe` exists attempts minimal non-training `legal_action` and `mjai_log` samples. This does not by itself pass F1; Akochan remains F1 Blocked until a workflow run succeeds and evidence is reviewed.
+- [x] 2026-05-29 Reviewed first GitHub Actions workflow run: run `26615920289` failed during workflow validation before any Ubuntu build because `runner.temp` was used in job-level `env`. The workflow was corrected to configure `AKOCHAN_DIR` and `SUMMARY_FILE` through `$GITHUB_ENV`; no Akochan build or minimal sample evidence was produced by the failed run.
 
 ## Backlog
 

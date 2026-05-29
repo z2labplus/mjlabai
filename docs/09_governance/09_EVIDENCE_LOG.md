@@ -253,3 +253,23 @@ Internal governance decisions that affect execution should also be noted here, b
 - Evidence status:
   - This records that a supported Ubuntu workflow path was added.
   - It is not evidence that Akochan F1 passed. F1 remains Blocked until a manual workflow run succeeds and the logs are reviewed.
+
+## 2026-05-29 — Akochan F1 GitHub Actions first run validation failure
+
+- Type: internal execution infrastructure / failed workflow-run evidence.
+- Workflow file: `.github/workflows/akochan-f1-build-audit.yml`.
+- Workflow run URL: `https://github.com/z2labplus/mjlabai/actions/runs/26615920289`.
+- Commit under review: `a095dd1f0b22c3e6b496f0131c474da5fdc63753`.
+- Result:
+  - GitHub failed workflow validation before starting the Ubuntu build job.
+  - No Akochan clone, build, `system.exe` generation or minimal non-training sample run occurred.
+- Validation issue:
+  - Job-level `env` used `${{ runner.temp }}` for `AKOCHAN_DIR` and `SUMMARY_FILE`.
+  - GitHub rejected the workflow at lines 27 and 28 because the `runner` context was not accepted there.
+- Local correction:
+  - The workflow now sets `AKOCHAN_DIR=${RUNNER_TEMP}/akochan` and `SUMMARY_FILE=${RUNNER_TEMP}/akochan_f1_summary.txt` in a shell step via `$GITHUB_ENV`.
+  - The final summary step now creates a fallback summary file if earlier setup failed before writing one.
+- Evidence status:
+  - This is evidence of a workflow-definition blocker and its local correction.
+  - It is not evidence that Akochan F1 passed.
+  - Akochan remains F1 Blocked until a corrected workflow run produces `system.exe` and at least one minimal non-training sample succeeds.

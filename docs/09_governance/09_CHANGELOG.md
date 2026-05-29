@@ -1,5 +1,14 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v1.3
+
+- Reviewed the first `Akochan F1 Build Audit` GitHub Actions run.
+- Confirmed run `26615920289` failed during GitHub workflow validation before any Ubuntu build/minimal sample started.
+- Fixed `.github/workflows/akochan-f1-build-audit.yml` by moving `AKOCHAN_DIR` and `SUMMARY_FILE` path setup out of job-level `env` and into a shell step that writes to `$GITHUB_ENV`.
+- Added a fallback in the final summary step so validation/setup failures still produce a clear GitHub step summary when possible.
+- Akochan remains F1 Blocked because the failed run produced no `system.exe`, `legal_action` or `mjai_log` evidence.
+- Updated next, handoff, evidence, risk, audit and backlog docs.
+
 ## 2026-05-29 — v1.2
 
 - Added manual GitHub Actions workflow `.github/workflows/akochan-f1-build-audit.yml`.

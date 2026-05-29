@@ -24,12 +24,19 @@ jobs:
 
     env:
       AKOCHAN_REPO: https://github.com/critter-mj/akochan.git
-      AKOCHAN_DIR: ${{ runner.temp }}/akochan
-      SUMMARY_FILE: ${{ runner.temp }}/akochan_f1_summary.txt
 
     steps:
       - name: Checkout mjlabai docs
         uses: actions/checkout@v4
+
+      - name: Configure runner temp paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            echo "AKOCHAN_DIR=${RUNNER_TEMP}/akochan"
+            echo "SUMMARY_FILE=${RUNNER_TEMP}/akochan_f1_summary.txt"
+          } >> "${GITHUB_ENV}"
 
       - name: Record audit scope
         shell: bash
@@ -192,6 +199,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          SUMMARY_FILE="${SUMMARY_FILE:-${RUNNER_TEMP}/akochan_f1_summary.txt}"
+          if [[ ! -f "${SUMMARY_FILE}" ]]; then
+            {
+              echo "# Akochan F1 Build Audit"
+              echo
+              echo "- Summary file was created by the final step because an earlier setup step did not finish."
+            } > "${SUMMARY_FILE}"
+          fi
           {
             echo
             echo "## Final workflow status"

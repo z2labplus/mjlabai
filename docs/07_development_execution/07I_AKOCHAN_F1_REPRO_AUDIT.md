@@ -578,6 +578,56 @@ F1 can be reconsidered only after a manual workflow run succeeds and the logs ar
 Next required task:
 
 ```text
-Run the manual GitHub Actions workflow `Akochan F1 Build Audit`,
+Run the corrected manual GitHub Actions workflow `Akochan F1 Build Audit`,
+then review whether Ubuntu build produces `system.exe` and runs at least one minimal non-training sample.
+```
+
+## J. 2026-05-29 First GitHub Actions Run Review
+
+Run:
+
+```text
+https://github.com/z2labplus/mjlabai/actions/runs/26615920289
+```
+
+Result:
+
+```text
+Failed during GitHub workflow validation.
+No Ubuntu build job started.
+No Akochan source clone, build, `system.exe` generation or minimal sample run occurred.
+```
+
+Validation blocker:
+
+```text
+.github/workflows/akochan-f1-build-audit.yml used `${{ runner.temp }}` inside job-level `env`.
+GitHub rejected that context at lines 27 and 28.
+```
+
+Local correction:
+
+- Removed `AKOCHAN_DIR` and `SUMMARY_FILE` from job-level `env`.
+- Added a `Configure runner temp paths` shell step.
+- The new step writes these values to `$GITHUB_ENV`:
+
+```text
+AKOCHAN_DIR=${RUNNER_TEMP}/akochan
+SUMMARY_FILE=${RUNNER_TEMP}/akochan_f1_summary.txt
+```
+
+- Added a fallback in the final summary step so it creates a summary file if an earlier setup step failed before one existed.
+
+Current F1 status:
+
+```text
+Akochan remains F1 Blocked.
+The first workflow run produced only workflow-validation evidence, not build/minimal-run evidence.
+```
+
+Next required task:
+
+```text
+Run the corrected manual GitHub Actions workflow `Akochan F1 Build Audit`,
 then review whether Ubuntu build produces `system.exe` and runs at least one minimal non-training sample.
 ```

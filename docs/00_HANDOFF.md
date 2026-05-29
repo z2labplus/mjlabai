@@ -119,7 +119,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Run the manual GitHub Actions workflow `Akochan F1 Build Audit`, then review whether Ubuntu build produces system.exe and runs at least one minimal non-training sample.
+Run the corrected manual GitHub Actions workflow `Akochan F1 Build Audit`, then review whether Ubuntu build produces system.exe and runs at least one minimal non-training sample.
 Do not start F2 adapter work for Akochan until F1 minimal build/run evidence exists.
 ```
 
@@ -166,6 +166,14 @@ GitHub Actions support added:
 - If `system.exe` is generated and `run_minimal_samples` is true, it runs only minimal non-training samples: `legal_action` and `mjai_log haifu_log_sample.json 0 2`.
 - The workflow does not upload third-party source, `system.exe`, binaries or build artifacts.
 - Akochan remains F1 Blocked until an actual workflow run succeeds and the evidence is reviewed.
+
+First GitHub Actions run review:
+
+- Run URL: `https://github.com/z2labplus/mjlabai/actions/runs/26615920289`.
+- Result: failed during GitHub workflow validation before any Ubuntu runner build started.
+- Cause: `.github/workflows/akochan-f1-build-audit.yml` used `runner.temp` inside job-level `env`, which GitHub did not accept at lines 27 and 28.
+- Local fix: `AKOCHAN_DIR` and `SUMMARY_FILE` are now configured in a runtime shell step via `$GITHUB_ENV`; the final summary step has a fallback if the summary file was not created.
+- Evidence impact: no `system.exe`, `legal_action` or `mjai_log` evidence was produced by the failed run. Akochan remains F1 Blocked.
 
 ## Do not forget
 
