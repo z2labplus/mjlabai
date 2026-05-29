@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Define P5 tiny benchmark harness boundary for legal-action rate, latency and fixed-position decisions before implementation.
+- [ ] Add P5 tiny benchmark harness synthetic fixture schema smoke test.
 
 Current execution charter:
 
@@ -24,12 +24,12 @@ Limits:
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
-- For the next step, define the P5 tiny benchmark harness boundary for legal-action rate, latency and fixed-position decisions before implementation.
-- Keep the implementation tied to evaluation metrics; do not expand into league, training, self-play or real Tenhou integration.
+- For the next step, add only a P5 tiny benchmark harness synthetic fixture schema smoke test.
+- Keep the work tied to evaluation metrics; do not expand into league, training, self-play or real Tenhou integration.
 - Use only offline synthetic/local inputs; do not read Tenhou accounts, online platforms or external logs.
-- Do not add CLI, file ingestion, league harness, external-data readers or new model code.
-- The next task is a docs-only boundary definition unless a later review explicitly permits code.
+- Do not add CLI, broad file ingestion, league harness, external-data readers or new model code.
 - Do not implement the tiny benchmark harness in the next task.
+- Do not add production evaluator logic in the next task.
 - Do not connect tiny benchmark planning to model code, Akochan `system.exe`, third-party binaries, real Tenhou, real haifu, external logs or platform data.
 - Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
@@ -74,6 +74,7 @@ Limits:
 - [x] 2026-05-29 Implemented P5 synthetic legal-action metric evaluator for project-authored fixture only: added a narrow in-memory evaluator for `tests/fixtures/eval/legal_action_metric_smoke.json`, strict `dahai` comparison over actor/action_type/tile/tsumogiri, count/rate output with undefined zero-denominator rates, registry entries for the implemented legal-action counts/rates and an `OfflineEvaluationResultEnvelope` helper. After parse-failure fixture coverage, the current fixture yields `legal=1`, `invalid=1`, `missing=1`, `parse_failure=1`, `skipped=1`, `evaluated=4` and rates `1/4`, `1/4`, `1/4`, `1/4`. No canonicalizer, broad evaluator, legal-action checker, CLI, league, runner, model code, training, self-play, Tenhou access or external-data ingestion was added.
 - [x] 2026-05-30 Added P5 synthetic parse-failure legal-action fixture case and evaluator smoke coverage: extended `tests/fixtures/eval/legal_action_metric_smoke.json` with a project-authored synthetic `parse_failure` record using `dahai` plus `tsumogiri: null`; updated fixture schema smoke and evaluator tests so the project fixture covers `legal`, `invalid`, `missing_action`, `parse_failure` and `skipped_no_legal_actions`. This validates the existing strict evaluator branch only and does not add canonicalizer, broader action scope, CLI, file ingestion, league, runner, model code, training, self-play, Tenhou access or external-data ingestion.
 - [x] 2026-05-30 Reviewed P5 legal-action synthetic evaluator coverage: added `docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md`, recorded that minimum outcome coverage is complete only for the current P5 synthetic-only `dahai` + strict scope, kept P5 overall open, and confirmed this is not model-strength evidence, Tenhou ranked evidence or LuckyJ 10.68 comparison evidence. No production code, evaluator logic, canonicalizer, legal-action checker, CLI, benchmark harness implementation, file ingestion, league, runner, training, self-play, Tenhou access or external-data ingestion was added.
+- [x] 2026-05-30 Defined P5 tiny benchmark harness boundary before implementation: added `docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md`, documenting that any future tiny benchmark harness may use only synthetic/local inputs and may record only diagnostic legal-action, latency and fixed-position outputs in P5 result envelopes. No harness implementation, production code, tests, fixtures, CLI, file ingestion, league, runner, model-output integration, training, self-play, real Tenhou access or external-data ingestion was added.
 
 ## Backlog
 
@@ -109,6 +110,7 @@ Limits:
 - [x] Implement P5 synthetic legal-action metric evaluator for project-authored fixture only.
 - [x] Add P5 synthetic parse-failure legal-action fixture case and evaluator smoke coverage.
 - [x] Review P5 legal-action synthetic evaluator coverage and define next P5-only evaluation task.
-- [ ] Define P5 tiny benchmark harness boundary for legal-action rate, latency and fixed-position decisions before implementation.
+- [x] Define P5 tiny benchmark harness boundary for legal-action rate, latency and fixed-position decisions before implementation.
+- [ ] Add P5 tiny benchmark harness synthetic fixture schema smoke test.
 - [ ] Create tiny benchmark harness for legal action rate, latency and fixed-position decisions.
 - [ ] Update `09_EVIDENCE_LOG.md` whenever new external evidence is added.

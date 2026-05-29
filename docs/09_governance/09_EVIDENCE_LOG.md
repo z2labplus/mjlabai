@@ -8,6 +8,73 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-30 — P5 tiny benchmark harness boundary
+
+- Type: internal documentation / boundary evidence.
+- Stage: P5 evaluation foundation.
+- Added boundary document:
+  - `docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md`.
+- Boundary purpose:
+  - define the future tiny benchmark harness scope before implementation.
+  - keep legal-action rate, latency and fixed-position decision diagnostics
+    synthetic/local and auditable.
+- Evidence grade:
+  - P5 docs-only boundary evidence.
+- Future synthetic/local tiny benchmark smoke evidence can be at most:
+  - P5 synthetic/local engineering diagnostic evidence.
+- Allowed future inputs:
+  - project-authored synthetic fixtures.
+  - repo-local synthetic/local fixtures.
+  - in-memory fixture mappings.
+  - fixed synthetic decision records.
+- Forbidden scope:
+  - real Tenhou.
+  - real haifu.
+  - external logs.
+  - platform data.
+  - online accounts.
+  - platform automation.
+  - third-party binaries.
+  - Akochan `system.exe`.
+  - `libai.so`.
+  - unknown model weights.
+  - model-output integration.
+  - training, tuning, self-play, league, runner, CLI or broad file ingestion.
+  - P6-P12.
+- Not evidence of:
+  - model strength.
+  - Tenhou ranked performance.
+  - LuckyJ `10.68` comparison.
+  - stable-dan evidence.
+  - policy quality.
+  - candidate promotion.
+- Local validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py`:
+    1 test passed.
+  - `python3 -m unittest tests/eval/test_legal_action_metric.py`: 6 tests
+    passed.
+  - `python3 -m unittest tests/eval/test_offline_result.py`: 16 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_envelope_smoke.py`: 1 test
+    passed.
+- Guardrails:
+  - No production code.
+  - No tests or fixtures.
+  - No benchmark harness implementation.
+  - No evaluator logic changes.
+  - No canonicalizer.
+  - No broad evaluator.
+  - No legal-action checker or rule engine.
+  - No CLI or file ingestion.
+  - No league, runner, match harness, training, tuning, self-play or real
+    Tenhou connection.
+  - No external-log reader or platform-data reader.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact
+    were downloaded, stored or uploaded.
+- Next task:
+  - Add P5 tiny benchmark harness synthetic fixture schema smoke test.
+
 ### 2026-05-30 — P5 legal-action synthetic evaluator coverage review
 
 - Type: internal documentation / review-gate evidence.

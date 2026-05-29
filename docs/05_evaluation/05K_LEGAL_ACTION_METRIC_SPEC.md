@@ -640,6 +640,22 @@ uses_third_party_artifact = false
 
 Any true flag must be explicitly audited in a future task.
 
+## Tiny Benchmark Harness Boundary Reference
+
+Legal-action metrics may feed a future P5 tiny benchmark harness only as
+diagnostics. The boundary for that future harness is documented in:
+
+```text
+docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md
+```
+
+That boundary does not change the legal-action metric rules in this document.
+It does not authorize a runner, CLI, file ingestion, real Tenhou, real haifu,
+external logs, platform data, model-output integration, third-party binaries,
+league execution, training or self-play. Legal-action rates remain legality
+diagnostics only and are not strength evidence or LuckyJ `10.68` comparison
+evidence.
+
 ## Guardrails
 
 - `legal_action_rate` only measures basic legality.

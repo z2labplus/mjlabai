@@ -50,6 +50,7 @@ docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md
 docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md
 docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md
 docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md
+docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md
 docs/07_development_execution/07E_ALGORITHM_DISCOVERY_WORKFLOW.md
 docs/07_development_execution/07F_ALGORITHM_TABLE_BUILD_TASK.md
 docs/07_development_execution/07G_RACING_FUNNEL_EXECUTION_TASK.md
@@ -62,6 +63,11 @@ docs/08_experiment_analysis/08F_ALGORITHM_CANDIDATE_CARD.md
 is the P5 legal-action synthetic evaluator coverage review. It records current
 synthetic-only `dahai` + strict coverage and is not model-strength evidence,
 Tenhou ranked evidence or LuckyJ comparison evidence.
+
+`docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md`
+is the P5 tiny benchmark harness boundary definition. It is docs-only planning
+for future synthetic/local diagnostics and is not harness implementation,
+model-strength evidence, Tenhou ranked evidence or LuckyJ comparison evidence.
 
 ## Current rule
 

@@ -240,6 +240,17 @@ This is a Level 1 / diagnostic-style P5 artifact. It can check that the
 project-authored synthetic fixture covers the current legality branches, but it
 must not be used for model ranking, LuckyJ comparison or candidate promotion.
 
+The tiny benchmark harness boundary is documented in:
+
+```text
+docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md
+```
+
+That boundary is also Level 1 / diagnostic-style P5 work only. Future
+legal-action rate, latency and fixed-position diagnostics may help organize
+engineering evidence, but they must not be used for model ranking, candidate
+promotion, Tenhou evidence or LuckyJ comparison.
+
 ### Level 5 — Promotion gate
 
 A candidate can enter the mainline only if:

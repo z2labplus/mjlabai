@@ -561,18 +561,29 @@ matching. The fixture's `parse_failure` record uses `tsumogiri: null` only as
 branch coverage for the strict evaluator; it does not make unknown or null
 `tsumogiri` valid for strict matching.
 
+The future tiny benchmark harness boundary is recorded in:
+
+```text
+docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md
+```
+
+Future fixed-position decision fixtures must not expand this canonical action
+scope without a separate schema review. This document still does not add
+canonicalizer support for reach, chi, pon, kan, hora, ryukyoku, red-five
+normalization, tile notation conversion or relaxed matching.
+
 ## Future Implementation Boundary
 
 The next likely P5 task is:
 
 ```text
-Define P5 tiny benchmark harness boundary for legal-action rate, latency and fixed-position decisions before implementation.
+Add P5 tiny benchmark harness synthetic fixture schema smoke test.
 ```
 
 That future task must remain:
 
-- documentation / boundary definition first.
 - no benchmark harness implementation yet.
+- synthetic/local fixture schema smoke coverage only.
 - no broad evaluator implementation.
 - no real Tenhou.
 - no league.

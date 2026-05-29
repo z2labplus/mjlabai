@@ -236,16 +236,25 @@ Do not promote this result into:
 
 ## Next P5-Only Task
 
-The next recommended task is:
+The next boundary step is documented in:
 
 ```text
-Define P5 tiny benchmark harness boundary for legal-action rate, latency and fixed-position decisions before implementation.
+docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md
 ```
 
-That next task should be a boundary-definition task, not harness implementation.
-It must continue to forbid training, tuning, self-play, league execution, real
-Tenhou, platform automation, external logs, real haifu ingestion, model-output
-integration, third-party binaries/artifacts, CLI, broad file ingestion and
+That document defines the future tiny benchmark harness boundary for
+legal-action rate, latency and fixed-position diagnostics before any harness
+implementation. It does not change the coverage conclusion in this review and
+does not expand evaluator scope.
+
+The next narrow P5-only task after that boundary is:
+
+```text
+Add P5 tiny benchmark harness synthetic fixture schema smoke test.
+```
+
+That future task must remain synthetic/local and must not implement the harness,
+runner, CLI, file ingestion, league, real Tenhou, model-output integration or
 P6-P12 work.
 
 ## Verification

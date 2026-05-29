@@ -8,6 +8,15 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-05-30 — Tiny benchmark harness boundary risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| A future tiny benchmark harness boundary is mistaken for harness implementation or production evaluator readiness. | Scope / Engineering | High | Medium | `05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md` states the task is docs-only and adds no harness, code, tests, fixtures, CLI, file ingestion, runner or league behavior. | Open |
+| Legal-action rate, latency or fixed-position diagnostics are used as model strength or LuckyJ evidence. | Evaluation / Governance | High | Medium | `05N`, `05F`, evidence log and `10_NEXT` state these diagnostics are not model-strength evidence, Tenhou ranked evidence, stable-dan evidence, policy-quality evidence, candidate-promotion evidence or LuckyJ `10.68` comparison. | Open |
+| A future schema smoke task expands into real Tenhou, real haifu, external logs, model-output integration or third-party binary paths. | Compliance / Scope | High | Medium | `05N` and `10_NEXT` restrict the next task to synthetic/local fixture schema smoke coverage and explicitly forbid real Tenhou, external data, Akochan binaries, model weights, CLI, runner, league and P6-P12 work. | Open |
+| Latency diagnostics are misread as GPU, training, self-play or league throughput benchmarks. | Engineering / Evaluation | Medium-High | Medium | `05N` restricts latency to local offline synthetic/local evaluation code paths and requires environment, sample count, timing method and repetitions when implemented later. | Open |
+
 ## 2026-05-30 — Legal-action synthetic evaluator review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

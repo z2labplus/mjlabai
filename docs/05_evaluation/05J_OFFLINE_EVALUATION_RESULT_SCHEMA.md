@@ -118,6 +118,21 @@ That review confirms only the synthetic `dahai` + strict fixture/evaluator
 coverage. It is not model-strength evidence, Tenhou ranked evidence, LuckyJ
 comparison evidence or authorization for real-data ingestion.
 
+The future P5 tiny benchmark harness boundary is recorded in:
+
+```text
+docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md
+```
+
+If a future synthetic/local tiny benchmark result is implemented, it should
+enter this envelope schema with `evaluation_stage = "P5"` and an explicit
+diagnostic `evaluation_type`, such as `tiny_benchmark_harness`. It may record
+legal-action, latency and fixed-position diagnostic metrics only after separate
+fixture/schema tasks define those inputs. The boundary remains synthetic/local
+only: no real Tenhou, real haifu, external logs, platform data, model-output
+integration, third-party binaries, CLI, runner or league behavior is authorized.
+Such envelope records are diagnostics, not strength evidence.
+
 ## Result Envelope
 
 The envelope type is:

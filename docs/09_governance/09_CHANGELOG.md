@@ -1,5 +1,47 @@
 # 09_CHANGELOG
 
+## 2026-05-30 — v2.21
+
+- Defined the P5 tiny benchmark harness boundary before implementation.
+- Added `docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md`.
+- The boundary allows only future synthetic/local diagnostic inputs:
+  - project-authored synthetic fixtures.
+  - repo-local synthetic/local fixtures.
+  - in-memory fixture mappings.
+  - fixed synthetic decision records.
+- The boundary forbids real Tenhou, real haifu, external logs, platform data,
+  online accounts, platform automation, third-party binaries, Akochan
+  `system.exe`, `libai.so`, unknown model weights, model-output integration,
+  training, tuning, self-play, league, runner, CLI, broad file ingestion and
+  P6-P12 work.
+- Future diagnostic metric categories are limited to legal-action rate,
+  latency and fixed-position decision diagnostics. They are not strength
+  evidence, Tenhou ranked evidence, stable-dan evidence, policy-quality
+  evidence, candidate-promotion evidence or LuckyJ `10.68` comparison.
+- Added cross-references from:
+  - `docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md`.
+  - `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`.
+  - `docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md`.
+  - `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`.
+  - `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`.
+- Updated handoff, docs index, stage contract, backlog, technical plan and
+  `10_NEXT`.
+- Set the next P5-only task to `Add P5 tiny benchmark harness synthetic fixture
+  schema smoke test.`
+- No production code, tests, fixtures, evaluator logic, canonicalizer, broad
+  evaluator, legal-action checker, benchmark harness implementation, CLI, file
+  ingestion, league, runner, model-output path, training, tuning, self-play,
+  Tenhou connection, external-log reader or platform-data reader was added.
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py`:
+    1 test passed.
+  - `python3 -m unittest tests/eval/test_legal_action_metric.py`: 6 tests
+    passed.
+  - `python3 -m unittest tests/eval/test_offline_result.py`: 16 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_envelope_smoke.py`: 1 test
+    passed.
+
 ## 2026-05-30 — v2.20
 
 - Reviewed the P5 legal-action synthetic evaluator coverage.
