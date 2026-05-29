@@ -60,6 +60,49 @@ Status:
 Accepted
 ```
 
+## 2026-05-29 — DR-0004 — Use Manual GitHub Actions Ubuntu Runner for Akochan F1 Build Evidence
+
+Decision:
+
+```text
+Add a manual GitHub Actions workflow to provide an Ubuntu Linux build environment for Akochan F1 build/minimal-run evidence.
+```
+
+Context:
+
+- Local macOS ARM cannot currently build Akochan.
+- Docker is not installed locally.
+- Homebrew LLVM, Boost and OpenMP are not available through expected local paths.
+- The project still needs a reproducible Linux build environment before Akochan can leave F1 Blocked.
+
+Rationale:
+
+- GitHub Actions `ubuntu-latest` gives a temporary Linux environment without polluting the local machine.
+- A manual `workflow_dispatch` keeps execution explicit and avoids automatic repeated third-party builds.
+- The workflow can install build dependencies inside the temporary runner, clone the fixed Akochan commit outside the repository, build, and run minimal non-training samples.
+
+Consequences:
+
+- `.github/workflows/akochan-f1-build-audit.yml` becomes the supported build-environment path for the next Akochan F1 evidence attempt.
+- Akochan remains F1 Blocked until a workflow run succeeds and logs are reviewed.
+- The workflow must not train, tune, self-play, connect to Tenhou, write adapters, enter F2, upload third-party source or publish binaries.
+
+Linked docs:
+
+- `.github/workflows/akochan-f1-build-audit.yml`
+- `docs/07_development_execution/07I_AKOCHAN_F1_REPRO_AUDIT.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0003 — Keep Akochan at F1 Blocked Until Build and Minimal JSON/Log Sample Pass
 
 Decision:

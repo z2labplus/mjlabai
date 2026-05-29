@@ -11,7 +11,8 @@
 | Verify Archer evidence | 04/09 | P1 | racing funnel confirmed | Tenhou claim, weights/logs/protocol/build path recorded before baseline use | Planned |
 | Akochan F1 reproducibility audit | 04/07 | P0 | Mortal runnable baseline paused | repository, license, dependencies/build path, artifact requirements, minimal documented run viability and I/O/logging fit recorded | Done: F1 Blocked on local build/toolchain |
 | Resolve Akochan F1 build/toolchain blocker | 04/07/09 | P0 | Akochan F1 audit | Supported build environment produces `system.exe`, then minimal `legal_action` and/or `mjai_log` sample runs without training, self-play or Tenhou access | Blocked: no Docker and no usable local LLVM/Boost/OpenMP |
-| Provide supported Akochan build environment | 04/07/09 | P0 | Akochan blocker-resolution attempt | Docker Linux or verified local LLVM/Boost/OpenMP is available before retrying build and minimal run | Planned: current next |
+| Provide supported Akochan build environment | 04/07/09 | P0 | Akochan blocker-resolution attempt | Docker Linux or verified local LLVM/Boost/OpenMP is available before retrying build and minimal run | Done: manual GitHub Actions Ubuntu workflow added |
+| Run Akochan F1 GitHub Actions build audit | 04/07/09 | P0 | Manual workflow added | Workflow run logs show whether Ubuntu build produces `system.exe` and at least one minimal non-training sample succeeds | Planned: current next |
 | Define Akochan F2 adapter/legal-action task | 04/06 | P0 | Akochan F1 passes | state/action mapping, legal action validator and decision log schema specified | Blocked: Akochan F1 not passed |
 | Kanachan transfer review | 02/03/04 | P1 | candidate table stable | schema/model/data ideas mapped to Tenhou transfer risks | Planned |
 | Suphx method decomposition | 03/04/05 | P0 | evaluation harness draft | SL, self-play RL, GRP, oracle guiding and runtime adaptation experiment cards created | Planned |

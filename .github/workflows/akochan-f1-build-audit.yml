@@ -1,0 +1,203 @@
+name: Akochan F1 Build Audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      akochan_commit:
+        description: "Akochan commit SHA to audit"
+        required: true
+        default: "53188a0b926fbab38177f88c3cd87d554cf412af"
+      run_minimal_samples:
+        description: "Run minimal non-training samples after build"
+        required: true
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  build-audit:
+    name: Build Akochan and run minimal samples
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      AKOCHAN_REPO: https://github.com/critter-mj/akochan.git
+      AKOCHAN_DIR: ${{ runner.temp }}/akochan
+      SUMMARY_FILE: ${{ runner.temp }}/akochan_f1_summary.txt
+
+    steps:
+      - name: Checkout mjlabai docs
+        uses: actions/checkout@v4
+
+      - name: Record audit scope
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            echo "# Akochan F1 Build Audit"
+            echo
+            echo "- Scope: F1 build/minimal-run audit only"
+            echo "- Akochan repository: ${AKOCHAN_REPO}"
+            echo "- Akochan commit: ${{ inputs.akochan_commit }}"
+            echo "- Runner OS: ${RUNNER_OS}"
+            echo "- Minimal samples requested: ${{ inputs.run_minimal_samples }}"
+            echo "- Forbidden: training, tuning, self-play, real Tenhou access, adapter/F2 work, artifact upload"
+            echo
+          } | tee "${SUMMARY_FILE}"
+
+      - name: Install Ubuntu build dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential \
+            git \
+            make \
+            g++ \
+            libboost-all-dev \
+            libgomp1
+          {
+            echo "## Environment"
+            echo
+            echo '```text'
+            uname -a
+            g++ --version | head -n 1
+            make --version | head -n 1
+            dpkg -l build-essential g++ libboost-all-dev libgomp1 | sed -n '1,20p'
+            echo '```'
+            echo
+          } | tee -a "${SUMMARY_FILE}"
+
+      - name: Clone Akochan at audited commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone "${AKOCHAN_REPO}" "${AKOCHAN_DIR}"
+          cd "${AKOCHAN_DIR}"
+          git checkout --detach "${{ inputs.akochan_commit }}"
+          ACTUAL_COMMIT="$(git rev-parse HEAD)"
+          if [[ "${ACTUAL_COMMIT}" != "${{ inputs.akochan_commit }}" ]]; then
+            echo "Expected commit ${{ inputs.akochan_commit }}, got ${ACTUAL_COMMIT}" >&2
+            exit 1
+          fi
+          {
+            echo "## Source"
+            echo
+            echo "- Temporary clone directory: \`${AKOCHAN_DIR}\`"
+            echo "- Checked commit: \`${ACTUAL_COMMIT}\`"
+            echo "- Commit summary: $(git log -1 --format='%s')"
+            echo
+          } | tee -a "${SUMMARY_FILE}"
+
+      - name: Inspect non-training entry points
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "${AKOCHAN_DIR}"
+          {
+            echo "## Confirmed non-training entry points"
+            echo
+            echo '```text'
+            grep -n 'system.exe legal_action\|system.exe mjai_log\|system.exe stats_mjai\|system.exe pipe' main.cpp || true
+            echo '```'
+            echo
+          } | tee -a "${SUMMARY_FILE}"
+
+      - name: Build libai.so
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "${AKOCHAN_DIR}/ai_src"
+          make -f Makefile_Linux
+          test -f libai.so
+          test -f "${AKOCHAN_DIR}/libai.so"
+          {
+            echo "## Build libai.so"
+            echo
+            echo "- Result: generated \`ai_src/libai.so\` and copied \`libai.so\` to repository root."
+            echo
+          } | tee -a "${SUMMARY_FILE}"
+
+      - name: Build system.exe
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "${AKOCHAN_DIR}"
+          make -f Makefile_Linux
+          test -x system.exe || test -f system.exe
+          {
+            echo "## Build system.exe"
+            echo
+            echo "- Result: generated \`system.exe\`."
+            echo
+          } | tee -a "${SUMMARY_FILE}"
+
+      - name: Run minimal non-training samples
+        if: ${{ github.event.inputs.run_minimal_samples == 'true' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "${AKOCHAN_DIR}"
+          export LD_LIBRARY_PATH="${AKOCHAN_DIR}:${LD_LIBRARY_PATH:-}"
+
+          LEGAL_JSON='{"record":[{"type":"start_game","kyoku_first":0,"aka_flag":true,"names":["p0","p1","p2","p3"]},{"type":"start_kyoku","bakaze":"E","dora_marker":"7s","kyoku":1,"honba":0,"kyotaku":0,"oya":0,"scores":[25000,25000,25000,25000],"tehais":[["1m","2m","3m","6m","7m","7m","1p","4p","7p","8p","8p","6s","W"],["1m","2m","4m","5m","5m","8m","9m","2p","3s","5s","N","P","F"],["2m","6m","6m","3p","5p","6p","8s","9s","9s","9s","E","E","C"],["2m","3m","8m","3p","4p","6p","1s","5sr","7s","E","P","F","C"]]},{"type":"tsumo","actor":0,"pai":"1s"}]}'
+
+          echo "## Minimal non-training samples" | tee -a "${SUMMARY_FILE}"
+          echo | tee -a "${SUMMARY_FILE}"
+
+          sample_success=0
+
+          set +e
+          timeout 60s ./system.exe legal_action "${LEGAL_JSON}" > "${RUNNER_TEMP}/legal_action.out" 2>&1
+          legal_action_status=$?
+          set -e
+          if [[ "${legal_action_status}" -eq 0 ]]; then
+            sample_success=1
+            echo "- legal_action: success" | tee -a "${SUMMARY_FILE}"
+          else
+            echo "- legal_action: failed with status ${legal_action_status}" | tee -a "${SUMMARY_FILE}"
+          fi
+          echo '```text' | tee -a "${SUMMARY_FILE}"
+          head -c 2000 "${RUNNER_TEMP}/legal_action.out" | tee -a "${SUMMARY_FILE}"
+          echo | tee -a "${SUMMARY_FILE}"
+          echo '```' | tee -a "${SUMMARY_FILE}"
+          echo | tee -a "${SUMMARY_FILE}"
+
+          set +e
+          timeout 120s ./system.exe mjai_log haifu_log_sample.json 0 2 > "${RUNNER_TEMP}/mjai_log.out" 2>&1
+          mjai_log_status=$?
+          set -e
+          if [[ "${mjai_log_status}" -eq 0 ]]; then
+            sample_success=1
+            echo "- mjai_log haifu_log_sample.json 0 2: success" | tee -a "${SUMMARY_FILE}"
+          else
+            echo "- mjai_log haifu_log_sample.json 0 2: failed with status ${mjai_log_status}" | tee -a "${SUMMARY_FILE}"
+          fi
+          echo '```text' | tee -a "${SUMMARY_FILE}"
+          head -c 3000 "${RUNNER_TEMP}/mjai_log.out" | tee -a "${SUMMARY_FILE}"
+          echo | tee -a "${SUMMARY_FILE}"
+          echo '```' | tee -a "${SUMMARY_FILE}"
+          echo | tee -a "${SUMMARY_FILE}"
+
+          if [[ "${sample_success}" -ne 1 ]]; then
+            echo "No minimal non-training sample succeeded." >&2
+            exit 1
+          fi
+
+      - name: Append audit summary
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            echo
+            echo "## Final workflow status"
+            echo
+            echo "- Job status: ${{ job.status }}"
+            echo "- No third-party source, binaries, or build artifacts are uploaded by this workflow."
+          } >> "${SUMMARY_FILE}"
+          cat "${SUMMARY_FILE}" >> "${GITHUB_STEP_SUMMARY}"
+          echo "Summary written to GitHub step summary."

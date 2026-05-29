@@ -228,3 +228,28 @@ Internal governance decisions that affect execution should also be noted here, b
   - Akochan remains F1 Blocked.
 - Action:
   - Provide a supported build environment with Docker Linux or verified local LLVM/Boost/OpenMP before retrying the build and minimal samples.
+
+## 2026-05-29 — Akochan F1 GitHub Actions build-audit workflow added
+
+- Type: internal execution infrastructure.
+- Workflow file: `.github/workflows/akochan-f1-build-audit.yml`.
+- Workflow name: `Akochan F1 Build Audit`.
+- Trigger: manual `workflow_dispatch` only.
+- Runner: `ubuntu-latest`.
+- Inputs:
+  - `akochan_commit`, default `53188a0b926fbab38177f88c3cd87d554cf412af`.
+  - `run_minimal_samples`, default `true`.
+- Intended build path:
+  - Install Ubuntu dependencies inside the temporary GitHub-hosted runner: `build-essential`, `git`, `make`, `g++`, `libboost-all-dev`, `libgomp1`.
+  - Clone `https://github.com/critter-mj/akochan.git` into `${{ runner.temp }}/akochan`.
+  - Check out the requested commit.
+  - Build `ai_src/libai.so` with `make -f Makefile_Linux`.
+  - Build `system.exe` with the root `make -f Makefile_Linux`.
+  - If requested and `system.exe` exists, run minimal non-training `legal_action` and `mjai_log haifu_log_sample.json 0 2` samples.
+- Guardrails:
+  - No training, tuning, self-play, Tenhou access, adapter/F2 work, unknown model weights or third-party vendoring.
+  - No upload of third-party source, `system.exe`, binaries or build artifacts.
+  - Only short text summaries are written to the GitHub step summary.
+- Evidence status:
+  - This records that a supported Ubuntu workflow path was added.
+  - It is not evidence that Akochan F1 passed. F1 remains Blocked until a manual workflow run succeeds and the logs are reviewed.

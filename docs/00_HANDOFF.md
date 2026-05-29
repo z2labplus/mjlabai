@@ -119,7 +119,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Provide a supported build environment with Docker Linux or verified local LLVM/Boost/OpenMP, then rerun Akochan build plus minimal legal_action and/or mjai_log sample.
+Run the manual GitHub Actions workflow `Akochan F1 Build Audit`, then review whether Ubuntu build produces system.exe and runs at least one minimal non-training sample.
 Do not start F2 adapter work for Akochan until F1 minimal build/run evidence exists.
 ```
 
@@ -152,6 +152,20 @@ Latest Akochan F1 blocker-resolution attempt:
 - Root Makefile attempts failed for the same missing LLVM / unsupported OpenMP reasons.
 - No `libai.so` or `system.exe` was generated, so no minimal `legal_action`, `legal_action_log_all`, `mjai_log` or `stats_mjai` sample was run.
 - F1 conclusion remains: Blocked.
+
+GitHub Actions support added:
+
+- Added `.github/workflows/akochan-f1-build-audit.yml`.
+- Workflow name: `Akochan F1 Build Audit`.
+- Trigger: manual `workflow_dispatch` only.
+- Inputs:
+  - `akochan_commit`, default `53188a0b926fbab38177f88c3cd87d554cf412af`.
+  - `run_minimal_samples`, default `true`.
+- Runner: `ubuntu-latest`.
+- The workflow installs Ubuntu build dependencies inside the temporary runner, clones `critter-mj/akochan` into the runner temp directory, checks out the requested commit, attempts `cd ai_src && make -f Makefile_Linux` and then `make -f Makefile_Linux` at the root.
+- If `system.exe` is generated and `run_minimal_samples` is true, it runs only minimal non-training samples: `legal_action` and `mjai_log haifu_log_sample.json 0 2`.
+- The workflow does not upload third-party source, `system.exe`, binaries or build artifacts.
+- Akochan remains F1 Blocked until an actual workflow run succeeds and the evidence is reviewed.
 
 ## Do not forget
 

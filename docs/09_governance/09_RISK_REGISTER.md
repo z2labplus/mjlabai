@@ -75,3 +75,11 @@
 | Preferred Docker Linux build path is unavailable because Docker is not installed. | Infrastructure / Engineering | High | High | Provision Docker or another approved temporary Linux environment outside the repository before retrying F1. | Open |
 | Homebrew reports formula prefixes but the expected LLVM/Boost/OpenMP files are absent. | Engineering | High | High | Verify or reinstall Homebrew LLVM, Boost and libomp explicitly before using the macOS build path; do not run global installs without user approval. | Open |
 | Repeated F1 attempts may leave external temporary clone/build directories behind. | Hygiene | Low | Medium | Keep all third-party source in `/tmp` or `../_external`, record paths, and clean temporary clones after evidence is captured. | Open |
+
+## 2026-05-29 — Akochan GitHub Actions build-audit risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| GitHub Actions workflow succeeds in Ubuntu but local macOS remains unable to build Akochan. | Reproducibility | Medium | Medium | Treat a successful workflow as Ubuntu-runner evidence only; record runner OS, commit and commands before deciding F1 status. | Open |
+| Workflow logs may include too much third-party output. | Governance | Low | Medium | Workflow writes short summaries with `head -c` limits for sample output and uploads no artifacts. | Open |
+| A workflow definition may be mistaken for successful F1 evidence before it is run. | Governance / Evaluation | High | Medium | Keep Akochan F1 Blocked until a manual workflow run produces `system.exe` and at least one minimal non-training sample succeeds. | Open |

@@ -1,5 +1,14 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v1.2
+
+- Added manual GitHub Actions workflow `.github/workflows/akochan-f1-build-audit.yml`.
+- The workflow provides an Ubuntu `workflow_dispatch` build-audit path for Akochan F1 without changing local machine dependencies.
+- The workflow clones `critter-mj/akochan` at commit `53188a0b926fbab38177f88c3cd87d554cf412af` into the runner temp directory, installs build dependencies inside the temporary Ubuntu runner, attempts the Linux Makefile builds and runs only minimal non-training samples if `system.exe` is produced.
+- The workflow does not train, tune, self-play, connect to Tenhou, write an adapter, enter F2, upload third-party source, upload binaries or publish artifacts.
+- Akochan remains F1 Blocked until a manual workflow run succeeds and its build/minimal-run evidence is reviewed.
+- Updated next, handoff, evidence, risk, audit and backlog docs.
+
 ## 2026-05-29 — v1.1
 
 - Attempted to resolve the Akochan F1 build/toolchain blocker without training, tuning, self-play, Tenhou access, adapter work or third-party vendoring.

@@ -508,3 +508,76 @@ Updated next required task:
 ```text
 Resolve Akochan F1 blocker: provide a supported build environment with Docker Linux or verified local LLVM/Boost/OpenMP, then rebuild Akochan and run minimal legal_action and/or mjai_log sample.
 ```
+
+## I. 2026-05-29 GitHub Actions Ubuntu Build-Audit Workflow
+
+Goal:
+
+```text
+Provide a supported Ubuntu Linux build environment for the next Akochan F1 build/minimal-run audit.
+```
+
+Added workflow:
+
+```text
+.github/workflows/akochan-f1-build-audit.yml
+```
+
+Workflow properties:
+
+| Item | Value |
+|---|---|
+| Name | `Akochan F1 Build Audit` |
+| Trigger | Manual `workflow_dispatch` only |
+| Runner | `ubuntu-latest` |
+| Input `akochan_commit` | Default `53188a0b926fbab38177f88c3cd87d554cf412af` |
+| Input `run_minimal_samples` | Default `true` |
+
+Workflow actions:
+
+- Installs Ubuntu build dependencies inside the temporary GitHub-hosted runner.
+- Clones `https://github.com/critter-mj/akochan.git` into `${{ runner.temp }}/akochan`.
+- Checks out the requested Akochan commit.
+- Attempts the Linux build path:
+
+```text
+cd ai_src
+make -f Makefile_Linux
+cd ..
+make -f Makefile_Linux
+```
+
+- If `system.exe` is generated and `run_minimal_samples` is true, runs only minimal non-training samples:
+
+```text
+./system.exe legal_action <minimal JSON>
+./system.exe mjai_log haifu_log_sample.json 0 2
+```
+
+Workflow guardrails:
+
+- Does not train models.
+- Does not tune hyperparameters.
+- Does not run `system.exe test`, match or self-play tasks.
+- Does not connect to real Tenhou.
+- Does not create platform automation, scraping, account, evasion or anti-detection tooling.
+- Does not download or use unknown model weights.
+- Does not vendor or copy Akochan source into this repository.
+- Does not write adapters or enter F2.
+- Does not upload third-party source, `system.exe`, binaries or build artifacts.
+- Writes only a short text summary to the GitHub step summary.
+
+Current F1 status:
+
+```text
+Akochan remains F1 Blocked.
+Adding the workflow is not build/run evidence by itself.
+F1 can be reconsidered only after a manual workflow run succeeds and the logs are reviewed.
+```
+
+Next required task:
+
+```text
+Run the manual GitHub Actions workflow `Akochan F1 Build Audit`,
+then review whether Ubuntu build produces `system.exe` and runs at least one minimal non-training sample.
+```
