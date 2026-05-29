@@ -318,7 +318,12 @@ Real-executable validation path status on 2026-05-29:
   - default cwd is the external executable directory,
   - explicit `working_dir` and `AKOCHAN_WORKING_DIR` are supported,
   - the workflow exports `AKOCHAN_WORKING_DIR=${AKOCHAN_DIR}` before real-exe tests.
-- The next evidence step is rerunning the manual workflow and reviewing whether real `legal_action` and `mjai_log` both pass.
+- Workflow rerun `26623247276` showed:
+  - fake wrapper tests passed 8 tests,
+  - real `legal_action` passed,
+  - real `mjai_log` no longer failed on `setup_mjai.json`,
+  - real `mjai_log` failed in wrapper parsing with `JSONDecodeError: Extra data`.
+- The next evidence step is fixing real `mjai_log` stdout parsing/diagnostics and rerunning the manual workflow.
 
 ## H. F2 Failure Conditions
 
@@ -340,7 +345,7 @@ F2 implementation must fail or stop if:
 Recommended next `docs/10_next/10_NEXT.md` first task:
 
 ```text
-Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and `mjai_log` wrapper tests both pass with `AKOCHAN_WORKING_DIR` set.
+Fix Akochan F2 real-exe `mjai_log` stdout parsing failure: real `mjai_log` now launches with `AKOCHAN_WORKING_DIR`, but wrapper parsing fails with `JSONDecodeError: Extra data`; improve diagnostics and parse the real multi-record stdout shape, then rerun `Akochan F2 Wrapper Real Exe Audit`.
 ```
 
 Reason:
@@ -350,7 +355,7 @@ Reason:
 - The minimal wrapper skeleton passed fake-executable smoke tests.
 - The real-executable workflow/test path exists.
 - The first real-exe workflow run proved `legal_action` compatibility but exposed an `mjai_log` runtime cwd blocker.
-- The cwd boundary fix is implemented locally; the remaining evidence gap is rerunning real `mjai_log` compatibility for fixed samples, still under no-vendor, no-training and no-Tenhou constraints.
+- The cwd boundary fix has been validated far enough to remove the `setup_mjai.json` failure; the remaining evidence gap is parsing real `mjai_log` stdout for fixed samples, still under no-vendor, no-training and no-Tenhou constraints.
 
 Review note:
 

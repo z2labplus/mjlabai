@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.0
+
+- Reran manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit`.
+- Run `26623247276` executed at commit `0ddb28575ddd1b624cad34b20d6dc6b79303963c`.
+- Confirmed Ubuntu build still generated `ai_src/libai.so`, root `libai.so` and `system.exe`.
+- Confirmed fake wrapper smoke tests passed 8 tests in the workflow.
+- Confirmed workflow exported `AKOCHAN_SYSTEM_EXE`, `AKOCHAN_WORKING_DIR` and `AKOCHAN_MJAI_LOG_SAMPLE` before real-exe tests.
+- Confirmed real `legal_action` wrapper test passed.
+- Confirmed the previous `setup_mjai.json` cwd failure is gone for real `mjai_log`.
+- Recorded the new blocker: real `mjai_log` stdout reaches the wrapper, but parsing fails with `JSONDecodeError: Extra data` / `AkochanOutputParseError`.
+- Set the next task to fix real `mjai_log` stdout parsing/diagnostics, then rerun the workflow.
+- Reaffirmed that this is interface/runtime evidence only, not strength evidence, and no third-party source, binary, params or build artifact was uploaded.
+
 ## 2026-05-29 — v1.9
 
 - Fixed the Akochan F2 wrapper working-directory boundary exposed by workflow run `26621536548`.

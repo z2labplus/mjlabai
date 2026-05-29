@@ -123,3 +123,10 @@
 |---|---|---|---|---|---|
 | Local fake tests may pass while real Akochan still needs additional runtime files or cwd assumptions beyond `setup_mjai.json`. | Engineering / Reproducibility | Medium | Medium | Rerun `Akochan F2 Wrapper Real Exe Audit` against the Ubuntu-built real `system.exe` and record the run ID/logs before closing F2 real-exe compatibility. | Open |
 | `AKOCHAN_WORKING_DIR` could point to a directory that does not match the audited executable or commit. | Reproducibility / Governance | Medium | Medium | Require explicit environment setup in workflow, record `working_dir` in every audit log, and keep external commit/build environment in the audit record. | Open |
+
+## 2026-05-29 — Akochan F2 real mjai_log parser risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Real `mjai_log` stdout is multi-record or mixed-format output that the current wrapper parser cannot represent. | Engineering / Reproducibility | Medium-High | High | Preserve raw stdout, improve parse diagnostics, parse the real multi-record stdout shape, and rerun the workflow before claiming real `mjai_log` compatibility. | Open |
+| Parser fixes could silently discard non-JSON lines that matter for reproducibility or debugging. | Governance / Engineering | Medium | Medium | Keep bounded raw stdout summaries and parse warnings; do not treat partial parsing as strength or full semantic understanding. | Open |

@@ -8,6 +8,51 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — Akochan F2 real executable workflow rerun after cwd fix
+
+- Type: external CI run evidence / wrapper parser blocker.
+- Candidate: Akochan.
+- Funnel stage after run: F2 real-exe validation partially passed; `mjai_log` runtime cwd blocker mitigated; parser compatibility still blocked.
+- Workflow file: `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml`.
+- Workflow run URL: `https://github.com/z2labplus/mjlabai/actions/runs/26623247276`.
+- Workflow run ID: `26623247276`.
+- Job ID: `78453823175`.
+- mjlabai commit: `0ddb28575ddd1b624cad34b20d6dc6b79303963c`.
+- Akochan repository: `https://github.com/critter-mj/akochan.git`.
+- Akochan commit: `53188a0b926fbab38177f88c3cd87d554cf412af`.
+- Runner: GitHub-hosted `ubuntu-latest`, image `ubuntu-24.04`.
+- Run result: failure.
+- Successful steps:
+  - Checkout mjlabai.
+  - Configure runner temp paths.
+  - Set up Python 3.12.
+  - Install Ubuntu build dependencies.
+  - Clone Akochan at audited commit.
+  - Build `ai_src/libai.so`.
+  - Build root `system.exe`.
+  - Install mjlabai package.
+  - Run fake wrapper smoke tests: 8 tests passed.
+  - Configure real wrapper environment with `AKOCHAN_SYSTEM_EXE`, `AKOCHAN_WORKING_DIR` and `AKOCHAN_MJAI_LOG_SAMPLE`.
+- Real wrapper test result:
+  - `legal_action`: passed against real runner-temp `system.exe`.
+  - `mjai_log`: reached stdout parsing; no `setup_mjai.json` failure appeared.
+- Failure detail:
+  - `AkochanOutputParseError: Akochan stdout was not parseable JSON or JSON Lines: Extra data: line 2 column 1`.
+- Interpretation:
+  - The working-directory/runtime-file blocker is mitigated.
+  - Real `mjai_log` stdout shape is not yet handled by the wrapper parser.
+  - The next fix should preserve raw stdout, improve parse diagnostics and parse the real multi-record stdout shape without treating it as strength evidence.
+- Guardrails confirmed:
+  - No training.
+  - No tuning.
+  - No self-play, match or league command.
+  - No real Tenhou connection.
+  - No third-party source, binary, params or build artifact upload.
+- Evidence status:
+  - This is cwd-fix evidence and real `legal_action` wrapper compatibility evidence.
+  - This is not successful real `mjai_log` wrapper compatibility evidence.
+  - This is not model-strength evidence and does not imply Tenhou performance.
+
 ### 2026-05-29 — Akochan F2 wrapper working-directory fix
 
 - Type: internal implementation / local test evidence.

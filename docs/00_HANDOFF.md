@@ -35,6 +35,7 @@ Akochan F2 task definition is complete.
 Minimal Akochan F2 wrapper skeleton is implemented and passes fake-executable smoke tests.
 The real external `system.exe` validation path exists and the first workflow run was reviewed; it failed only at the real `mjai_log` wrapper test because Akochan expected `setup_mjai.json` in the process working directory.
 The wrapper working-directory boundary has now been fixed locally: explicit `working_dir`, `AKOCHAN_WORKING_DIR` and default `Path(system_exe).resolve().parent` are supported, subprocess calls use that cwd, and audit logs record it.
+The follow-up workflow run confirmed the `setup_mjai.json` cwd blocker is gone, but real `mjai_log` still fails because the wrapper cannot parse its multi-record stdout shape.
 ```
 
 ## Current methodology
@@ -84,7 +85,7 @@ Roles:
 - Suphx: main methodology blueprint, split into reproducible modules.
 - Mortal: paused as a runnable baseline; retained as source-code, mjai-interface, methodology and engineering reference.
 - Archer: high-potential Tenhou baseline candidate requiring verification.
-- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, minimal F2 wrapper skeleton implemented for fixed samples, real-executable validation workflow/test path added, first real-exe workflow run failed on the `mjai_log` cwd/runtime boundary, wrapper cwd handling has been fixed locally, and the next step is rerunning the manual real-exe workflow without expanding scope.
+- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, minimal F2 wrapper skeleton implemented for fixed samples, real-executable validation workflow/test path added, first real-exe workflow run failed on the `mjai_log` cwd/runtime boundary, wrapper cwd handling has been fixed and rerun, and the next step is fixing real `mjai_log` stdout parsing/diagnostics without expanding scope.
 - Kanachan: data/model architecture reference; not direct Tenhou baseline until adapted.
 
 Main technical route:
@@ -123,7 +124,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and `mjai_log` wrapper tests both pass with `AKOCHAN_WORKING_DIR` set.
+Fix Akochan F2 real-exe `mjai_log` stdout parsing failure: real `mjai_log` now launches with `AKOCHAN_WORKING_DIR`, but wrapper parsing fails with `JSONDecodeError: Extra data`; improve diagnostics and parse the real multi-record stdout shape, then rerun `Akochan F2 Wrapper Real Exe Audit`.
 Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload or broad adapter work.
 ```
 
@@ -276,7 +277,32 @@ Akochan F2 working-directory fix:
   - Local fake tests passed 8 tests.
   - Local real-exe tests skipped 2 tests as expected without real Akochan.
 - Current evidence gap:
-  - The manual GitHub Actions workflow must be rerun to confirm real `mjai_log` works with `AKOCHAN_WORKING_DIR` set.
+  - Workflow run `26623247276` confirmed `AKOCHAN_WORKING_DIR` removes the `setup_mjai.json` failure.
+  - The remaining blocker is parsing real `mjai_log` stdout, which produced `JSONDecodeError: Extra data` in the wrapper parser.
+
+Second Akochan F2 real executable workflow run:
+
+- Run URL: `https://github.com/z2labplus/mjlabai/actions/runs/26623247276`.
+- Commit: `0ddb28575ddd1b624cad34b20d6dc6b79303963c`.
+- Result: failure.
+- Successful evidence:
+  - Akochan source cloned at `53188a0b926fbab38177f88c3cd87d554cf412af`.
+  - `ai_src/libai.so`, root `libai.so` and `system.exe` built successfully.
+  - Fake wrapper smoke tests passed 8 tests.
+  - `AKOCHAN_SYSTEM_EXE`, `AKOCHAN_WORKING_DIR` and `AKOCHAN_MJAI_LOG_SAMPLE` were configured.
+  - Real `legal_action` wrapper test passed.
+  - Real `mjai_log` no longer failed on `setup_mjai.json`.
+- Failed evidence:
+  - Real `mjai_log` wrapper test failed while parsing stdout.
+- Failure detail:
+  - `AkochanOutputParseError: Akochan stdout was not parseable JSON or JSON Lines: Extra data: line 2 column 1`.
+- Interpretation:
+  - The cwd/runtime-file blocker is mitigated.
+  - The next issue is understanding and parsing the real multi-record `mjai_log` stdout shape while preserving raw output and bounded summaries.
+- Evidence status:
+  - This is real `legal_action` compatibility evidence and cwd-fix evidence.
+  - This is not successful real `mjai_log` wrapper compatibility evidence.
+  - This is not strength evidence.
 
 ## Do not forget
 
