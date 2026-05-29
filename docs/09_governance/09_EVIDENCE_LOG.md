@@ -8,6 +8,46 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — Akochan F2 allowlisted mixed stdout parser fix
+
+- Type: internal implementation / local test evidence.
+- Candidate: Akochan.
+- Funnel stage after task: F2 mixed stdout parser fix implemented; real external workflow rerun pending.
+- Triggering external evidence:
+  - GitHub Actions run `26628128871` built Akochan and passed fake tests plus real `legal_action`, but real `mjai_log` failed because stdout contained JSON records, then `calculating review`, then JSON review output.
+- Primary code:
+  - `src/mjlabai/adapters/akochan_wrapper.py`.
+  - `tests/adapters/test_akochan_wrapper.py`.
+  - `tests/adapters/test_akochan_wrapper_real_exe.py`.
+  - `tests/fixtures/akochan/fake_system_exe.py`.
+  - `tests/fixtures/akochan/mjai_log_allowlisted_mixed.jsonl`.
+  - `tests/fixtures/akochan/mjai_log_unknown_status.jsonl`.
+- Parser facts:
+  - Supports a single JSON value.
+  - Supports JSON Lines.
+  - Supports concatenated JSON values/objects.
+  - Supports pretty-printed multi-record JSON streams.
+  - Supports mixed stdout only when the non-JSON line is exactly `calculating review`.
+  - Records skipped allowlisted lines in `skipped_non_json_lines`.
+  - Preserves `raw_stdout`.
+  - Preserves `parsed_records`.
+  - Records `parse_warnings`.
+  - Rejects unknown non-JSON lines and partial parses.
+  - Parse failures include bounded stdout summary, stdout SHA256, failure position, parsed-record count and skipped-status-line count.
+- Local validation:
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped as expected because `AKOCHAN_SYSTEM_EXE` was not set locally.
+  - `git diff --check`: passed.
+- Guardrails:
+  - No real Akochan build was run locally.
+  - No training, tuning, self-play, match, league, `system.exe test` or real Tenhou command was run locally.
+  - No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
+- Evidence status:
+  - This is local parser implementation evidence.
+  - It is not yet successful real `mjai_log` compatibility evidence.
+  - The manual workflow must be rerun and reviewed before the real-exe mixed stdout blocker can be closed.
+  - This is not model-strength evidence and does not imply Tenhou performance.
+
 ### 2026-05-29 — Akochan F2 strict JSON stream parser fix
 
 - Type: internal implementation / local test evidence.

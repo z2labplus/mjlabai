@@ -25,6 +25,7 @@ DEFAULT_REPRODUCIBILITY_NOTE = (
     "or binary is stored in this repository."
 )
 _ALLOWED_SUBCOMMANDS = {"legal_action", "mjai_log"}
+_ALLOWED_NON_JSON_STATUS_LINES = {"calculating review"}
 
 
 class AkochanWrapperError(RuntimeError):
@@ -75,6 +76,7 @@ class AkochanCommandResult:
     normalized_actions: list[dict[str, Any]]
     audit_log: AkochanAuditLog
     parse_warnings: list[str]
+    skipped_non_json_lines: list[str]
 
     def to_dict(self) -> dict[str, Any]:
         data = asdict(self)
@@ -145,7 +147,9 @@ class AkochanWrapper:
             tool_name="akochan_legal_action",
             input_for_hash=json_payload,
         )
-        parsed, records, parse_warnings = self._parse_stdout(raw_stdout, audit_log)
+        parsed, records, parse_warnings, skipped_lines = self._parse_stdout(
+            raw_stdout, audit_log
+        )
         normalized, warnings = normalize_legal_actions(parsed)
         return AkochanCommandResult(
             raw_stdout=raw_stdout,
@@ -154,6 +158,7 @@ class AkochanWrapper:
             normalized_actions=normalized,
             audit_log=audit_log,
             parse_warnings=[*parse_warnings, *warnings],
+            skipped_non_json_lines=skipped_lines,
         )
 
     def run_mjai_log(
@@ -173,7 +178,9 @@ class AkochanWrapper:
             tool_name="akochan_mjai_log",
             input_for_hash=input_for_hash,
         )
-        parsed, records, parse_warnings = self._parse_stdout(raw_stdout, audit_log)
+        parsed, records, parse_warnings, skipped_lines = self._parse_stdout(
+            raw_stdout, audit_log
+        )
         return AkochanCommandResult(
             raw_stdout=raw_stdout,
             parsed_json=parsed,
@@ -181,6 +188,7 @@ class AkochanWrapper:
             normalized_actions=[],
             audit_log=audit_log,
             parse_warnings=parse_warnings,
+            skipped_non_json_lines=skipped_lines,
         )
 
     def _run_subcommand(
@@ -235,16 +243,17 @@ class AkochanWrapper:
     @staticmethod
     def _parse_stdout(
         raw_stdout: str, audit_log: AkochanAuditLog
-    ) -> tuple[Any, list[Any], list[str]]:
+    ) -> tuple[Any, list[Any], list[str], list[str]]:
         return _parse_json_stream(raw_stdout, audit_log)
 
 
 def _parse_json_stream(
     raw_stdout: str, audit_log: AkochanAuditLog
-) -> tuple[Any, list[Any], list[str]]:
-    """Parse a single JSON value or a strict stream of JSON values."""
+) -> tuple[Any, list[Any], list[str], list[str]]:
+    """Parse JSON stdout, allowing only audited non-JSON status lines."""
 
     warnings: list[str] = []
+    skipped_non_json_lines: list[str] = []
     if raw_stdout != raw_stdout.strip():
         warnings.append("stdout had surrounding whitespace")
 
@@ -254,6 +263,7 @@ def _parse_json_stream(
                 raw_stdout,
                 "empty stdout",
                 parsed_record_count=0,
+                skipped_non_json_lines_count=0,
                 failure_position=0,
             ),
             audit_log=audit_log,
@@ -261,7 +271,7 @@ def _parse_json_stream(
 
     try:
         parsed = json.loads(raw_stdout)
-        return parsed, [parsed], warnings
+        return parsed, [parsed], warnings, skipped_non_json_lines
     except json.JSONDecodeError as single_json_error:
         single_error_summary = f"{single_json_error}"
         single_error_position = single_json_error.pos
@@ -278,11 +288,28 @@ def _parse_json_stream(
             try:
                 record, end = decoder.raw_decode(raw_stdout, position)
             except json.JSONDecodeError as stream_error:
+                line_end = raw_stdout.find("\n", position)
+                if line_end == -1:
+                    line_end = length
+                current_line = raw_stdout[position:line_end]
+                stripped_line = current_line.strip()
+                if stripped_line in _ALLOWED_NON_JSON_STATUS_LINES:
+                    skipped_non_json_lines.append(stripped_line)
+                    warnings.append(
+                        "allowlisted non-JSON status line skipped: "
+                        f"{stripped_line}"
+                    )
+                    position = line_end + 1 if line_end < length else line_end
+                    continue
+
                 raise AkochanOutputParseError(
                     _parse_error_message(
                         raw_stdout,
                         f"{stream_error}",
                         parsed_record_count=len(records),
+                        skipped_non_json_lines_count=len(
+                            skipped_non_json_lines
+                        ),
                         failure_position=stream_error.pos,
                     ),
                     audit_log=audit_log,
@@ -294,6 +321,9 @@ def _parse_json_stream(
                         raw_stdout,
                         "JSON stream parser made no progress",
                         parsed_record_count=len(records),
+                        skipped_non_json_lines_count=len(
+                            skipped_non_json_lines
+                        ),
                         failure_position=position,
                     ),
                     audit_log=audit_log,
@@ -308,6 +338,7 @@ def _parse_json_stream(
                 raw_stdout,
                 single_error_summary,
                 parsed_record_count=0,
+                skipped_non_json_lines_count=len(skipped_non_json_lines),
                 failure_position=single_error_position,
             ),
             audit_log=audit_log,
@@ -318,8 +349,8 @@ def _parse_json_stream(
         warnings.append("multiple JSON records parsed")
 
     if len(records) == 1:
-        return records[0], records, warnings
-    return records, records, warnings
+        return records[0], records, warnings, skipped_non_json_lines
+    return records, records, warnings, skipped_non_json_lines
 
 
 def _parse_error_message(
@@ -327,11 +358,14 @@ def _parse_error_message(
     error_summary: str,
     *,
     parsed_record_count: int,
+    skipped_non_json_lines_count: int,
     failure_position: int,
 ) -> str:
     return (
-        "Akochan stdout was not parseable as single JSON or strict JSON stream: "
+        "Akochan stdout was not parseable as single JSON, strict JSON stream, "
+        "or allowlisted mixed stream: "
         f"{error_summary}; parsed_record_count={parsed_record_count}; "
+        f"skipped_non_json_lines_count={skipped_non_json_lines_count}; "
         f"failure_position={failure_position}; "
         f"stdout_sha256={_sha256_text(raw_stdout)}; "
         f"stdout_summary={_summary(raw_stdout, 2000)!r}"

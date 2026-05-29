@@ -30,6 +30,10 @@ MJAI_LOG_JSON_LINES_SAMPLE = FIXTURE_DIR / "mjai_log_json_lines.jsonl"
 MJAI_LOG_CONCATENATED_SAMPLE = FIXTURE_DIR / "mjai_log_concatenated.jsonl"
 MJAI_LOG_PRETTY_STREAM_SAMPLE = FIXTURE_DIR / "mjai_log_pretty_stream.jsonl"
 MJAI_LOG_INVALID_MIXED_SAMPLE = FIXTURE_DIR / "mjai_log_invalid_mixed.jsonl"
+MJAI_LOG_ALLOWLISTED_MIXED_SAMPLE = (
+    FIXTURE_DIR / "mjai_log_allowlisted_mixed.jsonl"
+)
+MJAI_LOG_UNKNOWN_STATUS_SAMPLE = FIXTURE_DIR / "mjai_log_unknown_status.jsonl"
 FAKE_RUNTIME_FILE = FIXTURE_DIR / "fake_setup_mjai.json"
 
 
@@ -56,6 +60,7 @@ class AkochanWrapperTest(unittest.TestCase):
         self.assertIsInstance(result.parsed_json, list)
         self.assertEqual(result.parsed_records, [result.parsed_json])
         self.assertEqual(result.parse_warnings, ["stdout had surrounding whitespace"])
+        self.assertEqual(result.skipped_non_json_lines, [])
         self.assertEqual(len(result.normalized_actions), 2)
         self.assertEqual(
             result.normalized_actions[0],
@@ -95,6 +100,7 @@ class AkochanWrapperTest(unittest.TestCase):
 
         self.assertEqual(result.normalized_actions, [])
         self.assertEqual(result.parse_warnings, ["stdout had surrounding whitespace"])
+        self.assertEqual(result.skipped_non_json_lines, [])
         self.assertEqual(result.parsed_json["type"], "start_game")
         self.assertEqual(result.parsed_records, [result.parsed_json])
         self.assertEqual(result.parsed_json["actor"], 0)
@@ -119,6 +125,7 @@ class AkochanWrapperTest(unittest.TestCase):
         self.assertIn("JSON stream parser used", result.parse_warnings)
         self.assertIn("multiple JSON records parsed", result.parse_warnings)
         self.assertIn("stdout had surrounding whitespace", result.parse_warnings)
+        self.assertEqual(result.skipped_non_json_lines, [])
 
     def test_run_mjai_log_parses_concatenated_json_objects(self) -> None:
         result = self.make_wrapper().run_mjai_log(
@@ -131,6 +138,7 @@ class AkochanWrapperTest(unittest.TestCase):
         self.assertEqual(result.parsed_records[1]["type"], "end_kyoku")
         self.assertIn("JSON stream parser used", result.parse_warnings)
         self.assertIn("multiple JSON records parsed", result.parse_warnings)
+        self.assertEqual(result.skipped_non_json_lines, [])
 
     def test_run_mjai_log_parses_pretty_printed_json_record_sequence(self) -> None:
         result = self.make_wrapper().run_mjai_log(
@@ -143,6 +151,37 @@ class AkochanWrapperTest(unittest.TestCase):
         self.assertEqual(result.parsed_records[1]["type"], "end_kyoku")
         self.assertIn("JSON stream parser used", result.parse_warnings)
         self.assertIn("multiple JSON records parsed", result.parse_warnings)
+        self.assertEqual(result.skipped_non_json_lines, [])
+
+    def test_run_mjai_log_parses_allowlisted_mixed_stdout(self) -> None:
+        result = self.make_wrapper().run_mjai_log(
+            MJAI_LOG_ALLOWLISTED_MIXED_SAMPLE, actor=0, mode=2
+        )
+
+        self.assertEqual(len(result.parsed_records), 3)
+        self.assertEqual(result.parsed_json, result.parsed_records)
+        self.assertEqual(result.parsed_records[0]["type"], "start_game")
+        self.assertEqual(result.parsed_records[1]["type"], "end_kyoku")
+        self.assertIsInstance(result.parsed_records[2], list)
+        self.assertEqual(result.skipped_non_json_lines, ["calculating review"])
+        self.assertIn("JSON stream parser used", result.parse_warnings)
+        self.assertIn("multiple JSON records parsed", result.parse_warnings)
+        self.assertIn(
+            "allowlisted non-JSON status line skipped: calculating review",
+            result.parse_warnings,
+        )
+
+    def test_unknown_non_json_status_line_fails(self) -> None:
+        with self.assertRaises(AkochanOutputParseError) as raised:
+            self.make_wrapper().run_mjai_log(
+                MJAI_LOG_UNKNOWN_STATUS_SAMPLE, actor=0, mode=2
+            )
+
+        message = str(raised.exception)
+        self.assertIn("allowlisted mixed stream", message)
+        self.assertIn("parsed_record_count=1", message)
+        self.assertIn("skipped_non_json_lines_count=0", message)
+        self.assertIn("stdout_sha256=", message)
 
     def test_invalid_mixed_stdout_raises_with_bounded_diagnostics(self) -> None:
         with self.assertRaises(AkochanOutputParseError) as raised:
@@ -151,8 +190,13 @@ class AkochanWrapperTest(unittest.TestCase):
             )
 
         message = str(raised.exception)
-        self.assertIn("stdout was not parseable as single JSON or strict JSON stream", message)
+        self.assertIn(
+            "stdout was not parseable as single JSON, strict JSON stream, "
+            "or allowlisted mixed stream",
+            message,
+        )
         self.assertIn("parsed_record_count=1", message)
+        self.assertIn("skipped_non_json_lines_count=0", message)
         self.assertIn("failure_position=", message)
         self.assertIn("stdout_sha256=", message)
         self.assertIn("stdout_summary=", message)
@@ -230,7 +274,8 @@ class AkochanWrapperTest(unittest.TestCase):
         with self.assertRaises(AkochanOutputParseError) as raised:
             self.make_wrapper().run_legal_action({"force_invalid_stdout": True})
 
-        self.assertIn("not parseable as single JSON or strict JSON stream", str(raised.exception))
+        self.assertIn("allowlisted mixed stream", str(raised.exception))
+        self.assertIn("skipped_non_json_lines_count=0", str(raised.exception))
         self.assertIn("stdout_sha256=", str(raised.exception))
         self.assertIn("stdout_summary=", str(raised.exception))
         self.assertEqual(raised.exception.audit_log.tool_name, "akochan_legal_action")

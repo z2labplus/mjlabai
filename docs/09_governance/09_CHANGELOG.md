@@ -1,5 +1,24 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.2
+
+- Fixed the Akochan F2 real-exe `mjai_log` mixed stdout parser blocker exposed by workflow run `26628128871`.
+- The parser now supports:
+  - single JSON values,
+  - JSON Lines,
+  - concatenated JSON values/objects,
+  - pretty-printed multi-record JSON streams,
+  - mixed stdout that contains the single allowlisted non-JSON status line `calculating review`.
+- Added `skipped_non_json_lines` to `AkochanCommandResult`.
+- Parser diagnostics now include bounded stdout summary, stdout SHA256, failure position, parsed-record count and skipped-status-line count.
+- Unknown non-JSON lines and partial parses still raise `AkochanOutputParseError`; the only skipped non-JSON line is exactly `calculating review`.
+- Fake executable tests now simulate JSON records + `calculating review` + JSON review output, plus an unknown status line that must fail.
+- Local validation passed:
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped as expected without real Akochan.
+- Set the next task to rerun the manual `Akochan F2 Wrapper Real Exe Audit` workflow and review real `legal_action` / `mjai_log` results after allowlisted mixed stdout parser support.
+- No training, tuning, self-play, Tenhou connection, third-party vendoring, binary storage or artifact upload occurred.
+
 ## 2026-05-29 — v2.1
 
 - Fixed the Akochan F2 real-exe `mjai_log` stdout parser blocker exposed by workflow run `26623247276`.

@@ -130,3 +130,11 @@
 |---|---|---|---|---|---|
 | Real `mjai_log` stdout is multi-record or mixed-format output that the current wrapper parser cannot represent. | Engineering / Reproducibility | Medium-High | High | Parser now preserves raw stdout, records parsed records and warnings, supports strict JSON streams and raises bounded diagnostics on residue; rerun the workflow before claiming real `mjai_log` compatibility. | Mitigation implemented locally; workflow rerun pending |
 | Parser fixes could silently discard non-JSON lines that matter for reproducibility or debugging. | Governance / Engineering | Medium | Medium | Strict parser rejects partial parses and reports bounded stdout summaries, stdout SHA256, failure position and parsed-record count; keep raw stdout on success. | Mitigation implemented locally; workflow rerun pending |
+
+## 2026-05-29 — Akochan F2 allowlisted mixed stdout parser risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Allowlisting a non-JSON `mjai_log` status line could accidentally hide unexpected runtime output. | Governance / Engineering | Medium-High | Medium | Only the exact line `calculating review` is allowlisted; every other non-JSON line still raises `AkochanOutputParseError` with bounded diagnostics and stdout SHA256. | Mitigation implemented locally; workflow rerun pending |
+| The real `mjai_log` output may contain additional known status lines not covered by local fake tests. | Engineering / Reproducibility | Medium | Medium | Rerun the real-exe workflow and add only specific, reviewed status lines if logs prove they are necessary and safe. | Open |
+| Local parser tests may pass while the real GitHub Actions output still has an unmodeled stdout shape. | Reproducibility | Medium | Medium | Keep `10_NEXT` on the manual `Akochan F2 Wrapper Real Exe Audit` rerun and require run ID/log review before closing F2 real-exe compatibility. | Open |

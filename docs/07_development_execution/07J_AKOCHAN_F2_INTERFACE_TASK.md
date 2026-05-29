@@ -297,9 +297,9 @@ Implementation status on 2026-05-29:
 - Wrapper exposes no free-form command execution API.
 - Synthetic fixtures and a fake executable were added under `tests/fixtures/akochan/`.
 - The fake executable is a test substitute only; it is not Akochan and is not strength evidence.
-- Local test command `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 12 tests after adding strict JSON stream parser coverage.
-- Parser now supports single JSON values, JSON Lines, concatenated JSON values and pretty-printed multi-record JSON streams.
-- Parser preserves `raw_stdout`, exposes `parsed_records`, records `parse_warnings` and rejects partial parses with bounded diagnostics.
+- Local test command `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 14 tests after adding allowlisted mixed stdout parser coverage.
+- Parser now supports single JSON values, JSON Lines, concatenated JSON values, pretty-printed multi-record JSON streams and mixed stdout with the single allowlisted status line `calculating review`.
+- Parser preserves `raw_stdout`, exposes `parsed_records`, records `parse_warnings` and `skipped_non_json_lines`, and rejects unknown non-JSON lines or partial parses with bounded diagnostics.
 - No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
 
 Real-executable validation path status on 2026-05-29:
@@ -325,7 +325,11 @@ Real-executable validation path status on 2026-05-29:
   - real `legal_action` passed,
   - real `mjai_log` no longer failed on `setup_mjai.json`,
   - real `mjai_log` failed in wrapper parsing with `JSONDecodeError: Extra data`.
-- The parser fix has now been implemented locally.
+- Workflow rerun `26628128871` then showed:
+  - fake wrapper tests passed 12 tests,
+  - real `legal_action` passed,
+  - real `mjai_log` produced JSON records, the known non-JSON status line `calculating review`, then JSON review output.
+- The allowlisted mixed stdout parser fix has now been implemented locally.
 - The next evidence step is rerunning the manual workflow and reviewing whether real `mjai_log` passes.
 
 ## H. F2 Failure Conditions
@@ -348,7 +352,7 @@ F2 implementation must fail or stop if:
 Recommended next `docs/10_next/10_NEXT.md` first task:
 
 ```text
-Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and real `mjai_log` wrapper tests both pass after strict JSON stream parser support.
+Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and real `mjai_log` wrapper tests both pass after allowlisted mixed stdout parser support.
 ```
 
 Reason:
@@ -359,7 +363,7 @@ Reason:
 - The real-executable workflow/test path exists.
 - The first real-exe workflow run proved `legal_action` compatibility but exposed an `mjai_log` runtime cwd blocker.
 - The cwd boundary fix has been validated far enough to remove the `setup_mjai.json` failure.
-- The strict JSON stream parser fix is implemented locally; the remaining evidence gap is rerunning real `mjai_log` for fixed samples, still under no-vendor, no-training and no-Tenhou constraints.
+- The allowlisted mixed stdout parser fix is implemented locally; the remaining evidence gap is rerunning real `mjai_log` for fixed samples, still under no-vendor, no-training and no-Tenhou constraints.
 
 Review note:
 

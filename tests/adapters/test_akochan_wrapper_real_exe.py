@@ -69,7 +69,10 @@ class AkochanWrapperRealExeTest(unittest.TestCase):
         self.assertIsNotNone(result.parsed_json)
         self.assertIsInstance(result.parsed_records, list)
         self.assertGreaterEqual(len(result.parsed_records), 1)
+        self.assertIsInstance(result.skipped_non_json_lines, list)
         self.assertTrue(result.audit_log.working_dir)
+        if "calculating review" in result.raw_stdout:
+            self.assertIn("calculating review", result.skipped_non_json_lines)
         self.assertFalse(result.audit_log.training_related)
         self.assertFalse(result.audit_log.self_play_related)
         self.assertFalse(result.audit_log.tenhou_related)

@@ -35,7 +35,7 @@ Akochan F2 task definition is complete.
 Minimal Akochan F2 wrapper skeleton is implemented and passes fake-executable smoke tests.
 The real external `system.exe` validation path exists and the first workflow run was reviewed; it failed only at the real `mjai_log` wrapper test because Akochan expected `setup_mjai.json` in the process working directory.
 The wrapper working-directory boundary has now been fixed locally: explicit `working_dir`, `AKOCHAN_WORKING_DIR` and default `Path(system_exe).resolve().parent` are supported, subprocess calls use that cwd, and audit logs record it.
-The follow-up workflow run confirmed the `setup_mjai.json` cwd blocker is gone, but real `mjai_log` still failed because the wrapper could not parse its multi-record stdout shape. The strict JSON stream parser has now been fixed locally and is ready for workflow rerun.
+The follow-up workflow run confirmed the `setup_mjai.json` cwd blocker is gone, but real `mjai_log` stdout then exposed mixed output: JSON records, the known non-JSON status line `calculating review`, then JSON review output. The wrapper parser now supports strict JSON streams plus that single allowlisted status line, records `skipped_non_json_lines`, and is ready for workflow rerun.
 ```
 
 ## Current methodology
@@ -85,7 +85,7 @@ Roles:
 - Suphx: main methodology blueprint, split into reproducible modules.
 - Mortal: paused as a runnable baseline; retained as source-code, mjai-interface, methodology and engineering reference.
 - Archer: high-potential Tenhou baseline candidate requiring verification.
-- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, minimal F2 wrapper skeleton implemented for fixed samples, real-executable validation workflow/test path added, first real-exe workflow run failed on the `mjai_log` cwd/runtime boundary, wrapper cwd handling has been fixed and rerun, strict JSON stream parser support is implemented locally, and the next step is rerunning the manual real-exe workflow without expanding scope.
+- Akochan: secondary baseline/reviewer candidate; F1 Conditional Pass on Ubuntu GitHub Actions, minimal F2 wrapper skeleton implemented for fixed samples, real-executable validation workflow/test path added, first real-exe workflow run failed on the `mjai_log` cwd/runtime boundary, wrapper cwd handling has been fixed and rerun, allowlisted mixed stdout parser support is implemented locally, and the next step is rerunning the manual real-exe workflow without expanding scope.
 - Kanachan: data/model architecture reference; not direct Tenhou baseline until adapted.
 
 Main technical route:
@@ -124,7 +124,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and real `mjai_log` wrapper tests both pass after strict JSON stream parser support.
+Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and real `mjai_log` wrapper tests both pass after allowlisted mixed stdout parser support.
 Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload or broad adapter work.
 ```
 
@@ -214,7 +214,7 @@ Akochan F2 wrapper skeleton:
 - Added audit-log dataclasses with required fields: tool name, external repo/commit, build environment, command, input/output hashes, exit code, stdout/stderr summaries, elapsed time and explicit no-training/no-self-play/no-Tenhou flags.
 - Added a synthetic fixed `legal_action` fixture and a tiny synthetic mjai-log fixture.
 - Added `tests/fixtures/akochan/fake_system_exe.py` as a test substitute only. It is not Akochan and is not model-strength evidence.
-- Local smoke test `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 12 tests after the strict JSON stream parser fix.
+- Local smoke test `python3 -m unittest tests/adapters/test_akochan_wrapper.py` passed 14 tests after the allowlisted mixed stdout parser fix.
 - No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
 
 Akochan F2 real executable validation path:
@@ -229,10 +229,10 @@ Akochan F2 real executable validation path:
 - Added `tests/adapters/test_akochan_wrapper_real_exe.py`.
 - Real-executable tests skip locally unless `AKOCHAN_SYSTEM_EXE` is set. The `mjai_log` test also requires `AKOCHAN_MJAI_LOG_SAMPLE`.
 - Local validation:
-  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 12 tests passed after the strict JSON stream parser fix.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed after the allowlisted mixed stdout parser fix.
   - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped, as expected without a real external executable.
-- The wrapper parser now supports single JSON values, JSON Lines, concatenated JSON values and pretty-printed multi-record JSON streams.
-- The parser preserves `raw_stdout`, exposes `parsed_records`, records `parse_warnings`, and does not treat partial parses as success.
+- The wrapper parser now supports single JSON values, JSON Lines, concatenated JSON values, pretty-printed multi-record JSON streams and mixed stdout with the single allowlisted status line `calculating review`.
+- The parser preserves `raw_stdout`, exposes `parsed_records`, records `parse_warnings` and `skipped_non_json_lines`, and rejects unknown non-JSON lines or partial parses.
 - First workflow run `26621536548` was run and reviewed; it failed only at the real `mjai_log` wrapper test because `system.exe` could not load `setup_mjai.json` from the current working directory.
 - Working-directory fix has been implemented locally:
   - `AkochanWrapper` supports explicit `working_dir`, then `AKOCHAN_WORKING_DIR`, then defaults to `Path(system_exe).resolve().parent`.
@@ -279,7 +279,7 @@ Akochan F2 working-directory fix:
   - Local real-exe tests skipped 2 tests as expected without real Akochan.
 - Current evidence gap:
   - Workflow run `26623247276` confirmed `AKOCHAN_WORKING_DIR` removes the `setup_mjai.json` failure.
-  - The parser blocker has now been fixed locally; the remaining evidence gap is rerunning the manual workflow.
+  - The first parser blocker was improved locally, but workflow run `26628128871` exposed the known `calculating review` status line.
 
 Second Akochan F2 real executable workflow run:
 
@@ -317,7 +317,40 @@ Akochan F2 strict JSON stream parser fix:
   - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 12 tests passed.
   - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped as expected without real Akochan.
 - Current evidence gap:
-  - The manual workflow must be rerun to verify real `mjai_log` compatibility.
+  - Workflow run `26628128871` must be interpreted before real `mjai_log` compatibility can be closed.
+
+Third Akochan F2 real executable workflow run:
+
+- Run URL: `https://github.com/z2labplus/mjlabai/actions/runs/26628128871`.
+- Commit: `9f51aff1ab403e8053ab71fe1db7587bf7af01cf`.
+- Result: failure.
+- Successful evidence:
+  - Ubuntu runner built `ai_src/libai.so`, root `libai.so` and `system.exe`.
+  - Fake wrapper tests passed 12 tests.
+  - Real `legal_action` wrapper test passed.
+  - Real `mjai_log` launched with `AKOCHAN_WORKING_DIR` and produced parseable JSON records before the status line.
+- Failed evidence:
+  - Real `mjai_log` wrapper test failed on mixed stdout containing JSON records, then `calculating review`, then JSON review output.
+- Interpretation:
+  - Strict JSON stream support is not enough for real `mjai_log`.
+  - The parser may skip only the exact known status line `calculating review`, record that skip, and continue strict JSON stream parsing.
+  - Unknown non-JSON lines and partial parses must remain failures.
+
+Akochan F2 allowlisted mixed stdout parser fix:
+
+- Parser behavior:
+  - single JSON value returns that value with `parsed_records=[value]`;
+  - JSON Lines and concatenated/pretty multi-record JSON streams return `parsed_json=records` and `parsed_records=records`;
+  - mixed stdout may skip only the exact non-JSON status line `calculating review`;
+  - `skipped_non_json_lines` records skipped allowlisted lines;
+  - unknown non-JSON residue and partial parses still fail.
+- Diagnostics:
+  - parse failures include bounded stdout summary, stdout SHA256, failure position, parsed-record count and skipped-status-line count.
+- Local tests:
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped as expected without real Akochan.
+- Current evidence gap:
+  - The manual workflow must be rerun to verify real `mjai_log` compatibility after allowlisted mixed stdout parser support.
 
 ## Do not forget
 

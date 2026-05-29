@@ -14,6 +14,52 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-05-29 — DR-0011 — Allow Only the Known Akochan mjai_log Status Line in Mixed Stdout
+
+Decision:
+
+```text
+AkochanWrapper may parse mixed stdout only when the non-JSON line is exactly `calculating review`.
+The wrapper must record skipped_non_json_lines, preserve raw_stdout and parsed_records, and reject unknown non-JSON lines or partial parses.
+```
+
+Context:
+
+- GitHub Actions run `26628128871` showed strict JSON stream parsing improved the `mjai_log` failure diagnostics.
+- The same run showed the real stdout shape: JSON event records, the non-JSON line `calculating review`, then JSON review output.
+- The project needs real `mjai_log` compatibility evidence without silently accepting arbitrary mixed logs.
+
+Rationale:
+
+- The status line is a known Akochan progress/status message, not a JSON record.
+- A single exact-string allowlist keeps the parser strict and auditable.
+- Recording skipped lines and parse warnings keeps the stdout shape reviewable without uploading third-party artifacts.
+- Unknown non-JSON output may indicate a runtime error or unmodeled behavior and must fail.
+
+Consequences:
+
+- `AkochanCommandResult` now includes `skipped_non_json_lines`.
+- The parser supports single JSON, JSON Lines, concatenated JSON values, pretty-printed multi-record JSON streams and the single allowlisted mixed status line.
+- Parse failures include bounded stdout summary, stdout SHA256, parsed-record count, skipped-status-line count and failure position.
+- The next evidence step is rerunning the manual real-exe workflow; this decision is parser implementation evidence only, not strength evidence.
+
+Linked docs:
+
+- `src/mjlabai/adapters/akochan_wrapper.py`
+- `tests/adapters/test_akochan_wrapper.py`
+- `tests/adapters/test_akochan_wrapper_real_exe.py`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0008 — Validate Akochan F2 Wrapper Through Temporary GitHub Actions Real-Exe Workflow
 
 Decision:

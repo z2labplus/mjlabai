@@ -75,6 +75,33 @@ def _mjai_log(args: list[str]) -> int:
         sys.stdout.write("\n".join(json.dumps(record, indent=2) for record in records))
         return 0
 
+    if "allowlisted_mixed" in sample_name:
+        review = [
+            {
+                "moves": [
+                    {
+                        "type": "dahai",
+                        "actor": int(actor),
+                        "pai": "1s",
+                        "tsumogiri": False,
+                    }
+                ],
+                "review": {"pt_exp_total": 0.1},
+            }
+        ]
+        sys.stdout.write(json.dumps(records[0], separators=(",", ":")))
+        sys.stdout.write("\n")
+        sys.stdout.write(json.dumps(records[1], separators=(",", ":")))
+        sys.stdout.write("\ncalculating review\n")
+        sys.stdout.write(json.dumps(review, separators=(",", ":")))
+        return 0
+
+    if "unknown_status" in sample_name:
+        sys.stdout.write(json.dumps(records[0], separators=(",", ":")))
+        sys.stdout.write("\nunexpected status\n")
+        sys.stdout.write(json.dumps(records[1], separators=(",", ":")))
+        return 0
+
     if "invalid_mixed" in sample_name:
         sys.stdout.write(json.dumps(records[0], separators=(",", ":")) + "\nnot-json")
         return 0
