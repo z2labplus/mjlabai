@@ -52,6 +52,27 @@ The stable-dan metrics have existing calculators or helpers.
 
 The legal-action, invalid-action, parse-success, latency and wrapper-smoke metrics are registry definitions for later P5 evaluators. They are not complete evaluation systems yet.
 
+The legal-action / invalid-action metric specification is documented in:
+
+```text
+docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md
+```
+
+That specification defines the denominator, parse-failure handling, missing-action handling, skipped-record handling, canonical matching principles and result-envelope mapping. It does not implement an evaluator.
+
+Future registry additions may include:
+
+- `evaluated_decision_count`.
+- `legal_action_count`.
+- `invalid_action_count`.
+- `parse_failure_count`.
+- `missing_action_count`.
+- `skipped_count`.
+- `parse_failure_rate`.
+- `missing_action_rate`.
+
+Those names should not be used as implemented metrics until a later task updates the registry and adds tests.
+
 ## Result Envelope
 
 The envelope type is:

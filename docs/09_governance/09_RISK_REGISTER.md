@@ -226,4 +226,13 @@
 |---|---|---|---|---|---|
 | Synthetic envelope smoke result is mistaken for model-strength evidence. | Evaluation / Governance | High | Medium | The smoke test and evidence log label the input as synthetic-only and not strength evidence. | Open |
 | Envelope smoke test is mistaken for a CLI, runner or data-ingestion path. | Scope | Medium-High | Medium | The test constructs an envelope in-process, writes no output files and reads only the checked-in synthetic fixture. | Open |
-| Legal-action / invalid-action placeholder metrics are used before precise metric denominators are defined. | Evaluation | Medium-High | Medium | Next task is to define the legal-action and invalid-action metric specification before evaluator implementation. | Open |
+| Legal-action / invalid-action placeholder metrics are used before precise metric denominators are defined. | Evaluation | Medium-High | Medium | `05K_LEGAL_ACTION_METRIC_SPEC.md` now defines denominator rules; next task should define canonical action fixture schema before implementation. | Mitigated for metric definitions; canonical schema remains open |
+
+## 2026-05-29 — Legal-action metric specification risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `legal_action_rate` is mistaken for model-strength evidence. | Evaluation / Governance | High | Medium | `05K_LEGAL_ACTION_METRIC_SPEC.md` states that legality is necessary but not sufficient and cannot support LuckyJ comparison by itself. | Open |
+| Parse failures or missing actions are incorrectly counted as invalid actions without explicit mode. | Evaluation / Metric Definition | Medium-High | Medium | The spec separates `invalid_action_count`, `parse_failure_count` and `missing_action_count`; strict-mode changes must be explicit future work. | Open |
+| Skipped records silently hide denominator problems. | Evaluation / Data Quality | Medium-High | Medium | The spec requires skipped records to be excluded from denominator but reported through `skipped_count` and skipped categories. | Open |
+| Canonical action matching is implemented inconsistently across future fixtures. | Engineering / Evaluation | Medium-High | Medium | Next task is to define a canonical action schema for legal-action metric fixtures before evaluator implementation. | Open |

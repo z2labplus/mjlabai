@@ -14,6 +14,48 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-05-29 — DR-0022 — Define Legal-Action Metrics Before Evaluator Implementation
+
+Decision:
+
+```text
+Define legal-action and invalid-action metric denominators, outcome categories and canonical matching principles before implementing any evaluator.
+```
+
+Context:
+
+- The offline metric registry already contains `legal_action_rate` and `invalid_action_rate` as placeholders.
+- The project now has a shared offline result envelope, but legal-action metrics still needed precise denominator and failure-category rules.
+- Future fixed-position evaluation and wrapper validation require consistent legality reporting before any evaluator code is written.
+
+Rationale:
+
+- Legal-action rate is a basic validity metric, not a strength metric.
+- Separating invalid actions from parse failures and missing actions prevents misleading denominator math.
+- Defining skipped-record categories before implementation reduces the chance that future evaluators silently hide bad records.
+- Canonical matching should be specified before fixtures and parser/canonicalizer tests are created.
+
+Consequences:
+
+- `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md` defines decision records, legal/proposed actions, formula denominators, outcome categories, canonical matching principles and result-envelope mapping.
+- No evaluator, legal-action checker, canonicalizer, CLI, league, runner, training, self-play or Tenhou integration was implemented.
+- The next P5-only task is to define the action canonicalization schema for legal-action metric fixtures.
+
+Linked docs:
+
+- `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`
+- `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`
+- `docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0021 — Use a Shared Offline Evaluation Result Envelope for P5 Outputs
 
 Decision:

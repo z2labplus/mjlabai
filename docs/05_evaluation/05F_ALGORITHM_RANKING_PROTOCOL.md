@@ -155,11 +155,55 @@ Current implementation status:
 - `docs/05_evaluation/05I_STABLE_DAN_GROUNDWORK_REVIEW.md` records that the stable-dan evaluation subtrack is complete for the current P5 scope.
 - `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md` defines the offline metric registry and result envelope schema for future P5 outputs.
 - `tests/eval/test_offline_envelope_smoke.py` verifies that a synthetic stable-dan report can be represented in the offline result envelope.
+- `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md` defines legal-action and invalid-action metric denominators, parse-failure and missing-action handling, skipped-record rules, canonical action matching principles and result-envelope mapping.
 - `fourth_count == 0` is undefined and raises `StableDanUndefinedError`; do not report infinite stable dan.
 - Bootstrap resamples with `fourth_count == 0` are recorded as undefined; if all resamples are undefined, `StableDanBootstrapUndefinedError` is raised.
 - The synthetic smoke fixture is not model-strength evidence, Tenhou data, an external log, a league result or a LuckyJ comparison claim.
 - `src/mjlabai/eval/offline_result.py` defines `EvaluationMetricDefinition`, `OfflineEvaluationMetricValue`, `OfflineConfidenceInterval`, `OfflineCommandStatus`, `OfflineReproducibilityMetadata`, `OfflineEvaluationSafetyFlags` and `OfflineEvaluationResultEnvelope`.
-- P5 overall is still in progress. The next required evaluation-foundation task is to define legal-action and invalid-action metric specifications before implementing broader evaluator logic.
+- P5 overall is still in progress. The next required evaluation-foundation task is to define a canonical action schema for legal-action metric fixtures before implementing broader evaluator logic.
+
+### Legal-action / invalid-action metrics
+
+Legal-action metrics are P5 legality checks, not strength metrics.
+
+The specification lives in:
+
+```text
+docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md
+```
+
+Core denominator:
+
+```text
+evaluated_decision_count = records with non-empty legal_actions that are not skipped
+```
+
+Core count invariant:
+
+```text
+evaluated_decision_count
+= legal_action_count
++ invalid_action_count
++ parse_failure_count
++ missing_action_count
+```
+
+Rates:
+
+```text
+legal_action_rate = legal_action_count / evaluated_decision_count
+invalid_action_rate = invalid_action_count / evaluated_decision_count
+parse_failure_rate = parse_failure_count / evaluated_decision_count
+missing_action_rate = missing_action_count / evaluated_decision_count
+```
+
+If `evaluated_decision_count == 0`, all rates are undefined. Do not report fabricated `0` or `1` values.
+
+Skipped records do not enter the denominator, but must be reported through `skipped_count` and a skipped category such as `skipped_no_legal_actions`, `skipped_not_decision`, `skipped_actor_mismatch` or `skipped_not_evaluable`.
+
+`legal_action_rate + invalid_action_rate` is not required to equal `1.0`, because parse failures and missing actions are separate outcomes.
+
+High `legal_action_rate` and low `invalid_action_rate` show only basic output legality. They are not LuckyJ comparison evidence and not proof of strong mahjong decisions.
 
 ### Level 5 — Promotion gate
 

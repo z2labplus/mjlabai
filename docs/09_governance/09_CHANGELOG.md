@@ -1,5 +1,43 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.14
+
+- Defined the P5 legal-action and invalid-action metric specification.
+- Added `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`.
+- Updated `docs/00_DOCS_INDEX.md` to include the new specification.
+- Defined core decision-record terminology:
+  - `decision_id`.
+  - actor.
+  - observation / state reference.
+  - `legal_actions`.
+  - `proposed_action`.
+  - model/tool id.
+  - ruleset, room and context metadata.
+- Defined denominator and count rules:
+  - `evaluated_decision_count`.
+  - `legal_action_count`.
+  - `invalid_action_count`.
+  - `parse_failure_count`.
+  - `missing_action_count`.
+  - `skipped_count`.
+- Defined rates for legal actions, invalid actions, parse failures and missing actions.
+- Recorded that `evaluated_decision_count == 0` makes rates undefined and must not produce fabricated `0` or `1` values.
+- Defined recommended outcome categories:
+  - `legal`.
+  - `invalid`.
+  - `parse_failure`.
+  - `missing_action`.
+  - `skipped_no_legal_actions`.
+  - `skipped_not_decision`.
+  - `skipped_actor_mismatch`.
+  - `skipped_not_evaluable`.
+- Documented canonical matching principles for `dahai`, reach, chi/pon/kan and future hora/ryukyoku handling.
+- Documented result-envelope mapping for future legal-action metrics.
+- No evaluator, legal-action checker, canonicalizer implementation, CLI, league harness, match runner, training, tuning, self-play, Tenhou connection, external-log reader or platform-data reader was added.
+- Validation:
+  - `git diff --check`: passed.
+- Set the next P5-only task to `Define P5 action canonicalization schema for legal-action metric fixtures.`
+
 ## 2026-05-29 — v2.13
 
 - Added offline evaluation envelope smoke fixture for a synthetic stable-dan report.

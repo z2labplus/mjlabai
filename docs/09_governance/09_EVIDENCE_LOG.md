@@ -8,6 +8,56 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — P5 legal-action / invalid-action metric specification
+
+- Type: internal documentation / metric-specification evidence.
+- Stage: P5 evaluation foundation.
+- Added specification:
+  - `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`.
+- Specification covers:
+  - decision record fields.
+  - `legal_actions`.
+  - `proposed_action`.
+  - legal action definition.
+  - invalid action definition.
+  - parse failure definition.
+  - missing action definition.
+  - skipped record categories.
+  - metric formulas and denominator rules.
+  - recommended outcome categories.
+  - canonical action matching principles.
+  - offline result envelope mapping.
+  - guardrails and future implementation boundary.
+- Denominator:
+  - `evaluated_decision_count = records with non-empty legal_actions that are not skipped`.
+- Count invariant:
+  - `evaluated_decision_count = legal_action_count + invalid_action_count + parse_failure_count + missing_action_count`.
+- Skipped records:
+  - Do not enter the denominator.
+  - Must still be reported through `skipped_count`.
+- Rate behavior:
+  - If `evaluated_decision_count == 0`, legal/invalid/parse/missing rates are undefined.
+  - Do not fabricate `0` or `1` rates for zero denominator.
+- Local validation:
+  - `git diff --check`: passed.
+- Guardrails:
+  - No evaluator was implemented.
+  - No legal-action checker or canonicalizer was implemented.
+  - No CLI.
+  - No league harness.
+  - No match runner.
+  - No training.
+  - No tuning.
+  - No self-play.
+  - No real Tenhou connection.
+  - No Tenhou account, platform data, external log, external haifu, scraping, automation, evasion or anti-detection logic.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+- Limitations:
+  - This is a metric specification only.
+  - It is not an implemented evaluator.
+  - It is not model-strength evidence and not a LuckyJ comparison claim.
+
 ### 2026-05-29 — Offline envelope smoke fixture for synthetic stable-dan report
 
 - Type: internal smoke-test evidence for P5 result envelope integration.
