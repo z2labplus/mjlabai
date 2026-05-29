@@ -8,6 +8,64 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-30 — P5 tiny benchmark fixture schema coverage review
+
+- Type: internal documentation / review-gate evidence.
+- Stage: P5 evaluation foundation.
+- Added review document:
+  - `docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md`.
+- Reviewed evidence sources:
+  - `docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md`.
+  - `tests/fixtures/eval/tiny_benchmark_harness_smoke.json`.
+  - `tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py`.
+  - `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`.
+  - `docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md`.
+  - `docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md`.
+- Review conclusion:
+  - current tiny benchmark harness synthetic fixture schema smoke coverage is complete for the current P5 schema-only boundary.
+  - the fixture schema is sufficient as a front-door input boundary for a future P5-only tiny benchmark harness implementation task.
+- Evidence grade:
+  - P5 synthetic/local fixture schema smoke evidence only.
+- Not evidence of:
+  - benchmark harness implementation.
+  - latency measurement.
+  - legal-action metric computation.
+  - fixed-position exact-match computation.
+  - model-output integration.
+  - model strength.
+  - Tenhou ranked performance.
+  - LuckyJ `10.68` comparison.
+  - stable-dan evidence.
+  - policy quality.
+  - candidate promotion.
+- Local validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_legal_action_metric.py`: 6 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_result.py`: 16 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_envelope_smoke.py`: 1 test passed.
+- Guardrails:
+  - No production code.
+  - No tests or fixtures.
+  - No benchmark harness implementation.
+  - No latency measurement code.
+  - No evaluator logic changes.
+  - No canonicalizer.
+  - No broad evaluator.
+  - No legal-action checker or rule engine.
+  - No CLI or file ingestion.
+  - No league, runner, match harness, training, tuning, self-play or real
+    Tenhou connection.
+  - No external-log reader or platform-data reader.
+  - No model-output integration.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact
+    were downloaded, stored or uploaded.
+- Next task:
+  - Implement P5 tiny benchmark harness for project-authored synthetic fixture
+    only.
+
 ### 2026-05-30 — P5 tiny benchmark harness synthetic fixture schema smoke test
 
 - Type: internal fixture / schema-smoke evidence.

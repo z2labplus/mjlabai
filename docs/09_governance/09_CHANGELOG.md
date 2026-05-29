@@ -1,5 +1,27 @@
 # 09_CHANGELOG
 
+## 2026-05-30 — v2.23
+
+- Reviewed the P5 tiny benchmark harness synthetic fixture schema smoke coverage.
+- Added `docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md`.
+- The review records that:
+  - `tests/fixtures/eval/tiny_benchmark_harness_smoke.json` satisfies the current P5 synthetic/local input boundary.
+  - `tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py` validates shape, guardrails, all-false safety flags and future diagnostic metric names only.
+  - the fixture schema is sufficient as a front-door input boundary for a future P5-only tiny benchmark harness implementation task.
+- The review preserves the evidence grade:
+  - P5 synthetic/local fixture schema smoke evidence only.
+- The review states this is not benchmark harness implementation, latency measurement, legal-action metric computation, fixed-position exact-match computation, model-output integration, model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
+- Updated handoff, docs index, 05F, 05J, 05K, 05L, 05M, 05N, stage contract, backlog, technical plan, evidence log, risk register and `10_NEXT`.
+- Set the next P5-only task to `Implement P5 tiny benchmark harness for project-authored synthetic fixture only.`
+- No production code, tests, fixtures, benchmark harness implementation, latency measurement code, evaluator logic changes, canonicalizer, broad evaluator, legal-action checker, CLI, file ingestion, league, runner, model-output path, training, tuning, self-play, Tenhou connection, external-log reader or platform-data reader was added.
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py`: 1 test passed.
+  - `python3 -m unittest tests/eval/test_legal_action_metric.py`: 6 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_result.py`: 16 tests passed.
+  - `python3 -m unittest tests/eval/test_offline_envelope_smoke.py`: 1 test passed.
+
 ## 2026-05-30 — v2.22
 
 - Added the P5 tiny benchmark harness synthetic fixture schema smoke test.

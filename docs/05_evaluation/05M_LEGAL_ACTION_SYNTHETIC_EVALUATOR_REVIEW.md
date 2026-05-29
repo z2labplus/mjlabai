@@ -258,8 +258,17 @@ That fixture/test pair remains synthetic/local schema coverage only. It does
 not implement a harness, runner, CLI, file ingestion, league, real Tenhou,
 model-output integration or P6-P12 work.
 
-The next narrow P5-only task is to review that schema smoke coverage and define
-the next P5-only task.
+The review for that fixture schema coverage is recorded in:
+
+```text
+docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md
+```
+
+That review does not change the legal-action evaluator coverage conclusion in
+this document.
+
+The next narrow P5-only task is to implement only a project-authored
+synthetic/local tiny benchmark harness boundary.
 
 ## Verification
 

@@ -579,6 +579,16 @@ and strict matching metadata. It is schema-only coverage and does not calculate
 fixed-position exact-match, implement a harness, implement a canonicalizer or
 expand action scope.
 
+The review for that fixture schema coverage is recorded in:
+
+```text
+docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md
+```
+
+That review keeps the canonical action scope at `dahai` + strict for these
+fixtures. It does not add reach, chi, pon, kan, hora, ryukyoku, red-five
+normalization, tile notation conversion or relaxed matching.
+
 Future fixed-position decision fixtures must not expand this canonical action
 scope without a separate schema review. This document still does not add
 canonicalizer support for reach, chi, pon, kan, hora, ryukyoku, red-five
@@ -589,13 +599,13 @@ normalization, tile notation conversion or relaxed matching.
 The next likely P5 task is:
 
 ```text
-Review P5 tiny benchmark harness synthetic fixture schema smoke coverage and define next P5-only task.
+Implement P5 tiny benchmark harness for project-authored synthetic fixture only.
 ```
 
 That future task must remain:
 
-- no benchmark harness implementation yet.
-- review and next-task definition only.
+- no broad or real-data benchmark harness implementation.
+- project-authored synthetic fixture only.
 - no broad evaluator implementation.
 - no real Tenhou.
 - no league.

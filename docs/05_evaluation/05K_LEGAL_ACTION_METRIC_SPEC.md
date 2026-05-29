@@ -669,6 +669,15 @@ tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py
 It is shape-only coverage for future P5 harness inputs, not an evaluator, not
 model-strength evidence and not LuckyJ `10.68` comparison.
 
+The fixture schema coverage review is recorded in:
+
+```text
+docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md
+```
+
+That review does not change the legal-action denominator, outcome categories,
+synthetic evaluator rules or current `dahai` + strict scope.
+
 ## Guardrails
 
 - `legal_action_rate` only measures basic legality.

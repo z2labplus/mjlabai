@@ -147,6 +147,18 @@ measure latency, call model/evaluator code or read real Tenhou, real haifu,
 external logs or platform data. It remains P5 synthetic/local fixture schema
 smoke evidence only, not model-strength evidence or LuckyJ `10.68` comparison.
 
+The review for that fixture schema coverage is recorded in:
+
+```text
+docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md
+```
+
+Future tiny benchmark harness outputs remain envelope-compatible P5 diagnostics
+only. Even after implementation, they must remain synthetic/local engineering
+diagnostic evidence unless a later task explicitly reviews and authorizes a
+broader scope. They are not model-strength evidence, stable-dan evidence,
+Tenhou evidence or LuckyJ `10.68` comparison.
+
 ## Result Envelope
 
 The envelope type is:

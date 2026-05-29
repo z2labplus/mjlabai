@@ -51,6 +51,7 @@ docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md
 docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md
 docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md
 docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md
+docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md
 docs/07_development_execution/07E_ALGORITHM_DISCOVERY_WORKFLOW.md
 docs/07_development_execution/07F_ALGORITHM_TABLE_BUILD_TASK.md
 docs/07_development_execution/07G_RACING_FUNNEL_EXECUTION_TASK.md
@@ -75,6 +76,13 @@ tiny benchmark harness synthetic fixture schema smoke coverage. They validate
 fixture shape, guardrails, safety flags and future diagnostic metric names only;
 they do not implement a harness, measure latency, calculate fixed-position
 exact-match, read real data or provide strength evidence.
+
+`docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md`
+is the P5 tiny benchmark fixture schema smoke coverage review. It records that
+the fixture schema is sufficient as a front-door input boundary for a future
+P5-only synthetic/local tiny benchmark harness implementation task. It is
+docs-only and not model-strength evidence, Tenhou evidence, stable-dan evidence
+or LuckyJ comparison evidence.
 
 ## Current rule
 

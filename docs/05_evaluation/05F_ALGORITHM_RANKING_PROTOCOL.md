@@ -264,6 +264,17 @@ metric names; it does not implement a benchmark harness, measure latency,
 calculate fixed-position exact-match, rank models, promote candidates or support
 LuckyJ comparison.
 
+The fixture schema coverage review is:
+
+```text
+docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md
+```
+
+That review confirms the fixture schema is a front-door input boundary for a
+future P5-only synthetic harness implementation, but it remains Level 1 /
+diagnostic-style P5 evidence only. It must not be used for model ranking,
+candidate promotion, Tenhou evidence or LuckyJ comparison.
+
 ### Level 5 — Promotion gate
 
 A candidate can enter the mainline only if:

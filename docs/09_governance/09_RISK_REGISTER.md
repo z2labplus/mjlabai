@@ -8,6 +8,14 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-05-30 — Tiny benchmark fixture schema review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The fixture schema review is mistaken for benchmark harness implementation readiness beyond synthetic/local scope. | Scope / Engineering | High | Medium | `05O` states the schema is only a front-door input boundary for a future P5-only synthetic/local harness and does not implement the harness. | Open |
+| The next harness task expands into model-output integration, real data, CLI, league or runner behavior. | Scope / Compliance | High | Medium | `10_NEXT`, `05O` and the stage contract restrict the next task to the project-authored synthetic fixture and forbid model output, real Tenhou, real haifu, external logs, platform data, CLI, broad ingestion, league, runner and P6-P12 work. | Open |
+| Fixture schema sufficiency is misread as model strength, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `05O`, evidence log and ranking protocol state the evidence grade is P5 synthetic/local fixture schema smoke evidence only, not model strength, Tenhou, stable-dan, LuckyJ or candidate promotion evidence. | Open |
+
 ## 2026-05-30 — Tiny benchmark harness fixture schema smoke risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

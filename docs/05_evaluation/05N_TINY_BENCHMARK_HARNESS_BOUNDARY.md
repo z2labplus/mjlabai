@@ -243,6 +243,16 @@ Evidence grade:
 P5 synthetic/local fixture schema smoke evidence only.
 ```
 
+The review gate for this fixture schema smoke coverage is recorded in:
+
+```text
+docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md
+```
+
+That review concludes the fixture schema is sufficient as a front-door input
+boundary for a future P5-only tiny benchmark harness implementation task. The
+review does not implement the harness and does not change this boundary.
+
 ## Safety Flags
 
 Future synthetic/local tiny benchmark smoke results must keep these flags false
@@ -326,15 +336,17 @@ This boundary does not solve:
 
 ## Next P5-Only Task
 
-After the fixture schema smoke coverage is reviewed, the next narrow task should
-be selected through `docs/10_next/10_NEXT.md`. The current review gate is:
+After the fixture schema smoke coverage review, the next narrow task should be
+selected through `docs/10_next/10_NEXT.md`. The current implementation-boundary
+task is:
 
 ```text
-Review P5 tiny benchmark harness synthetic fixture schema smoke coverage and define next P5-only task.
+Implement P5 tiny benchmark harness for project-authored synthetic fixture only.
 ```
 
-That review task must still remain P5-only and must not implement the benchmark
-harness itself unless a later review explicitly permits that scope.
+That future task must still remain P5-only, use the project-authored synthetic
+fixture boundary and avoid model-output integration, real data, CLI, broad file
+ingestion, league, runner, training, self-play, Tenhou access and P6-P12 work.
 
 ## Verification
 
