@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Fix Akochan F2 real-exe `mjai_log` stdout parsing failure: real `mjai_log` now launches with `AKOCHAN_WORKING_DIR`, but wrapper parsing fails with `JSONDecodeError: Extra data`; improve diagnostics and parse the real multi-record stdout shape, then rerun `Akochan F2 Wrapper Real Exe Audit`.
+- [ ] Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and real `mjai_log` wrapper tests both pass after strict JSON stream parser support.
 
 Current execution charter:
 
@@ -24,7 +24,7 @@ Limits:
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
-- For the next step, fix only the real-exe `mjai_log` stdout parsing/diagnostics needed by the wrapper, then rerun the manual `Akochan F2 Wrapper Real Exe Audit` workflow.
+- For the next step, rerun only the manual `Akochan F2 Wrapper Real Exe Audit` workflow after the strict JSON stream parser fix.
 - Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
 - Do not modify unrelated files.
@@ -46,6 +46,7 @@ Limits:
 - [x] 2026-05-29 Ran manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit`: run `26621536548` at commit `7d58f969367d3e51c57d859dbfb9433f1ca898a1` built Akochan successfully and fake wrapper tests passed. Real `legal_action` wrapper test passed, but real `mjai_log` wrapper test failed with `error:load_json_from_file setup_mjai.json` because `system.exe` was launched from the mjlabai checkout working directory instead of the Akochan executable directory.
 - [x] 2026-05-29 Fixed Akochan F2 wrapper working-directory boundary: `AkochanWrapper` now supports explicit `working_dir`, `AKOCHAN_WORKING_DIR`, and default `Path(system_exe).resolve().parent`; subprocess calls use that cwd; audit logs record `working_dir`; fake tests verify default/explicit/env working-directory behavior. Local fake tests passed 8 tests and local real-exe tests skipped 2 tests as expected without real Akochan.
 - [x] 2026-05-29 Reran manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit`: run `26623247276` at commit `0ddb28575ddd1b624cad34b20d6dc6b79303963c` built Akochan successfully, fake wrapper tests passed 8 tests, real `legal_action` passed, and real `mjai_log` no longer failed on `setup_mjai.json`. The real `mjai_log` test now fails in wrapper stdout parsing with `JSONDecodeError: Extra data`, so the cwd blocker is replaced by a parser/diagnostics blocker.
+- [x] 2026-05-29 Fixed Akochan F2 strict JSON stream parser: wrapper now supports single JSON value, JSON Lines, concatenated JSON values and pretty-printed multi-record JSON streams; it preserves `raw_stdout`, exposes `parsed_records`, records `parse_warnings`, and raises bounded diagnostics instead of accepting partial parses. Local fake tests passed 12 tests and local real-exe tests skipped 2 tests as expected without real Akochan.
 
 ## Backlog
 
@@ -57,7 +58,8 @@ Limits:
 - [x] Run the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether the wrapper succeeds against real Ubuntu-built system.exe for fixed legal_action/mjai_log samples.
 - [x] Fix Akochan F2 real-exe wrapper failure: run external `system.exe` with working directory set to the executable directory so `setup_mjai.json` is visible, then rerun `Akochan F2 Wrapper Real Exe Audit`.
 - [x] Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and `mjai_log` wrapper tests both pass with `AKOCHAN_WORKING_DIR` set.
-- [ ] Fix Akochan F2 real-exe `mjai_log` stdout parsing failure: real `mjai_log` now launches with `AKOCHAN_WORKING_DIR`, but wrapper parsing fails with `JSONDecodeError: Extra data`; improve diagnostics and parse the real multi-record stdout shape, then rerun `Akochan F2 Wrapper Real Exe Audit`.
+- [x] Fix Akochan F2 real-exe `mjai_log` stdout parsing failure: real `mjai_log` now launches with `AKOCHAN_WORKING_DIR`, but wrapper parsing fails with `JSONDecodeError: Extra data`; improve diagnostics and parse the real multi-record stdout shape, then rerun `Akochan F2 Wrapper Real Exe Audit`.
+- [ ] Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and real `mjai_log` wrapper tests both pass after strict JSON stream parser support.
 - [ ] Verify Archer evidence before treating it as a strong Tenhou baseline.
 - [ ] Inspect Kanachan schema/model ideas for Tenhou transfer value.
 - [ ] Decompose Suphx into reproducible experiment cards: SL policy, self-play RL, global reward prediction, oracle guiding, runtime adaptation.

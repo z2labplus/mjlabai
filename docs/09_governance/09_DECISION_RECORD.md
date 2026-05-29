@@ -110,6 +110,52 @@ Status:
 Accepted
 ```
 
+## 2026-05-29 — DR-0010 — Parse Akochan stdout as a Strict JSON Stream
+
+Decision:
+
+```text
+AkochanWrapper should parse stdout as either a single JSON value or a strict stream of JSON values.
+It may support JSON Lines, concatenated JSON values and pretty-printed multi-record JSON streams, but it must not treat partial parsing as success.
+```
+
+Context:
+
+- GitHub Actions run `26623247276` showed real `mjai_log` no longer fails on `setup_mjai.json`.
+- The same run failed because real `mjai_log` stdout triggered `JSONDecodeError: Extra data`.
+- The previous parser only handled a single JSON value and simple per-line JSON records.
+
+Rationale:
+
+- Akochan `mjai_log` can emit multiple JSON records in one stdout stream.
+- Strict JSON stream parsing handles compact, line-delimited and pretty-printed records without allowing silent truncation.
+- Bounded diagnostics make GitHub Actions failures reviewable without dumping large raw stdout.
+
+Consequences:
+
+- `AkochanCommandResult` now includes `parsed_records`.
+- Successful calls preserve `raw_stdout`, `parsed_json`, `parsed_records` and `parse_warnings`.
+- Parse failures include bounded stdout summary, stdout SHA256, failure position and parsed-record count.
+- The next evidence step is rerunning the manual real-exe workflow; this decision is parser implementation evidence only, not strength evidence.
+
+Linked docs:
+
+- `src/mjlabai/adapters/akochan_wrapper.py`
+- `tests/adapters/test_akochan_wrapper.py`
+- `tests/adapters/test_akochan_wrapper_real_exe.py`
+- `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0007 — Implement Akochan F2 Skeleton as Fixed-Command Python Wrapper
 
 Decision:

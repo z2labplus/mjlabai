@@ -42,18 +42,46 @@ def _mjai_log(args: list[str]) -> int:
         print(f"missing fake runtime file in cwd: {runtime_file}", file=sys.stderr)
         return 6
     log_path, actor, mode = args
+    sample_name = Path(log_path).name
+    records = [
+        {
+            "type": "start_game",
+            "aka_flag": True,
+            "kyoku_first": 0,
+            "names": ["p0", "p1", "p2", "p3"],
+            "fake_log_path": log_path,
+            "actor": int(actor),
+            "mode": int(mode),
+            "cwd": str(Path.cwd()),
+        },
+        {
+            "type": "end_kyoku",
+            "actor": int(actor),
+            "mode": int(mode),
+            "cwd": str(Path.cwd()),
+        },
+    ]
+
+    if "json_lines" in sample_name:
+        for record in records:
+            print(json.dumps(record, separators=(",", ":")))
+        return 0
+
+    if "concatenated" in sample_name:
+        sys.stdout.write("".join(json.dumps(record, separators=(",", ":")) for record in records))
+        return 0
+
+    if "pretty_stream" in sample_name:
+        sys.stdout.write("\n".join(json.dumps(record, indent=2) for record in records))
+        return 0
+
+    if "invalid_mixed" in sample_name:
+        sys.stdout.write(json.dumps(records[0], separators=(",", ":")) + "\nnot-json")
+        return 0
+
     print(
         json.dumps(
-            {
-                "type": "start_game",
-                "aka_flag": True,
-                "kyoku_first": 0,
-                "names": ["p0", "p1", "p2", "p3"],
-                "fake_log_path": log_path,
-                "actor": int(actor),
-                "mode": int(mode),
-                "cwd": str(Path.cwd()),
-            },
+            records[0],
             separators=(",", ":"),
         )
     )

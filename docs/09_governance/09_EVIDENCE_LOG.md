@@ -8,6 +8,43 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — Akochan F2 strict JSON stream parser fix
+
+- Type: internal implementation / local test evidence.
+- Candidate: Akochan.
+- Funnel stage after task: F2 stdout parser fix implemented; real external workflow rerun pending.
+- Primary code:
+  - `src/mjlabai/adapters/akochan_wrapper.py`.
+  - `tests/adapters/test_akochan_wrapper.py`.
+  - `tests/adapters/test_akochan_wrapper_real_exe.py`.
+  - `tests/fixtures/akochan/fake_system_exe.py`.
+  - `.github/workflows/akochan-f2-wrapper-real-exe-audit.yml`.
+- Parser facts:
+  - Supports a single JSON value.
+  - Supports JSON Lines.
+  - Supports concatenated JSON values/objects.
+  - Supports pretty-printed multi-record JSON streams.
+  - Uses `json.JSONDecoder().raw_decode` for strict stream parsing.
+  - Requires complete stdout consumption; partial parse is failure.
+  - Preserves `raw_stdout`.
+  - Adds `parsed_records`.
+  - Records `parse_warnings` such as multiple records, JSON stream parser use and surrounding whitespace.
+  - Parse failures include bounded stdout summary, stdout SHA256, failure position and parsed-record count.
+- Local validation:
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 12 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper_real_exe.py`: 2 tests skipped as expected because `AKOCHAN_SYSTEM_EXE` was not set locally.
+  - `git diff --check`: passed.
+- Guardrails:
+  - No real Akochan build was run locally.
+  - No training, tuning, self-play, match, league, `system.exe test` or real Tenhou command was run locally.
+  - No Akochan source, `system.exe`, `libai.so`, `params/`, third-party binary, unknown model artifact or build artifact was stored in this repository.
+  - The workflow definition uploads no artifacts; runner temporary build output is not preserved.
+- Evidence status:
+  - This is local parser implementation evidence.
+  - It is not yet successful real `mjai_log` compatibility evidence.
+  - The manual workflow must be rerun and reviewed before the real-exe parser blocker can be closed.
+  - This is not model-strength evidence and does not imply Tenhou performance.
+
 ### 2026-05-29 — Akochan F2 real executable workflow rerun after cwd fix
 
 - Type: external CI run evidence / wrapper parser blocker.

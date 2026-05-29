@@ -8,7 +8,7 @@ Current funnel focus:
 
 ```text
 Mortal = F1 paused as runnable baseline / ReferenceOnly
-Akochan = F2 wrapper skeleton implemented; real-executable workflow/test path added; cwd/runtime blocker mitigated; real `mjai_log` parser blocker remains
+Akochan = F2 wrapper skeleton implemented; real-executable workflow/test path added; cwd/runtime blocker mitigated; strict JSON stream parser fix implemented locally; workflow rerun pending
 ```
 
 ## AI role
@@ -53,7 +53,8 @@ This stage supports the north-star target by creating a reproducible baseline an
 - Treat fake-executable wrapper tests as implementation smoke tests only, not real Akochan compatibility or strength evidence.
 - Treat the new real-exe workflow definition as a validation path only until a manual workflow run succeeds and logs are reviewed.
 - Treat workflow run `26621536548` as partial F2 evidence: real `legal_action` passed, but real `mjai_log` remained blocked by `setup_mjai.json` working-directory handling.
-- Treat workflow run `26623247276` as partial F2 evidence: cwd handling is improved and real `legal_action` passed, but real `mjai_log` remains blocked by stdout parsing.
+- Treat workflow run `26623247276` as partial F2 evidence: cwd handling is improved and real `legal_action` passed, but real `mjai_log` remained blocked by stdout parsing.
+- Treat the strict JSON stream parser fix as local implementation evidence only until `Akochan F2 Wrapper Real Exe Audit` is rerun and logs are reviewed.
 - Do not vendor or store Akochan source, `system.exe`, `libai.so`, `params/`, third-party binaries or unknown artifacts in this repository.
 - Do not promote Mortal to F2 unless a lawful, verifiable and usable trained model artifact is provided and Mortal F1 is re-opened with source, version/tag, usage constraints and checksum.
 
@@ -90,4 +91,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Fix Akochan F2 real-exe `mjai_log` stdout parsing failure: real `mjai_log` now launches with `AKOCHAN_WORKING_DIR`, but wrapper parsing fails with `JSONDecodeError: Extra data`; improve diagnostics and parse the real multi-record stdout shape, then rerun `Akochan F2 Wrapper Real Exe Audit`.
+Rerun the manual GitHub Actions workflow `Akochan F2 Wrapper Real Exe Audit` and review whether real `legal_action` and real `mjai_log` wrapper tests both pass after strict JSON stream parser support.

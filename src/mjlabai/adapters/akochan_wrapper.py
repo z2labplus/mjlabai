@@ -71,6 +71,7 @@ class AkochanCommandResult:
 
     raw_stdout: str
     parsed_json: Any
+    parsed_records: list[Any]
     normalized_actions: list[dict[str, Any]]
     audit_log: AkochanAuditLog
     parse_warnings: list[str]
@@ -144,14 +145,15 @@ class AkochanWrapper:
             tool_name="akochan_legal_action",
             input_for_hash=json_payload,
         )
-        parsed = self._parse_stdout(raw_stdout, audit_log)
+        parsed, records, parse_warnings = self._parse_stdout(raw_stdout, audit_log)
         normalized, warnings = normalize_legal_actions(parsed)
         return AkochanCommandResult(
             raw_stdout=raw_stdout,
             parsed_json=parsed,
+            parsed_records=records,
             normalized_actions=normalized,
             audit_log=audit_log,
-            parse_warnings=warnings,
+            parse_warnings=[*parse_warnings, *warnings],
         )
 
     def run_mjai_log(
@@ -171,13 +173,14 @@ class AkochanWrapper:
             tool_name="akochan_mjai_log",
             input_for_hash=input_for_hash,
         )
-        parsed = self._parse_stdout(raw_stdout, audit_log)
+        parsed, records, parse_warnings = self._parse_stdout(raw_stdout, audit_log)
         return AkochanCommandResult(
             raw_stdout=raw_stdout,
             parsed_json=parsed,
+            parsed_records=records,
             normalized_actions=[],
             audit_log=audit_log,
-            parse_warnings=[],
+            parse_warnings=parse_warnings,
         )
 
     def _run_subcommand(
@@ -230,20 +233,109 @@ class AkochanWrapper:
         return completed.stdout, audit_log
 
     @staticmethod
-    def _parse_stdout(raw_stdout: str, audit_log: AkochanAuditLog) -> Any:
-        try:
-            return json.loads(raw_stdout)
-        except json.JSONDecodeError as exc:
-            lines = [line for line in raw_stdout.splitlines() if line.strip()]
-            if len(lines) > 1:
-                try:
-                    return [json.loads(line) for line in lines]
-                except json.JSONDecodeError:
-                    pass
-            raise AkochanOutputParseError(
-                f"Akochan stdout was not parseable JSON or JSON Lines: {exc}",
-                audit_log=audit_log,
-            ) from exc
+    def _parse_stdout(
+        raw_stdout: str, audit_log: AkochanAuditLog
+    ) -> tuple[Any, list[Any], list[str]]:
+        return _parse_json_stream(raw_stdout, audit_log)
+
+
+def _parse_json_stream(
+    raw_stdout: str, audit_log: AkochanAuditLog
+) -> tuple[Any, list[Any], list[str]]:
+    """Parse a single JSON value or a strict stream of JSON values."""
+
+    warnings: list[str] = []
+    if raw_stdout != raw_stdout.strip():
+        warnings.append("stdout had surrounding whitespace")
+
+    if not raw_stdout.strip():
+        raise AkochanOutputParseError(
+            _parse_error_message(
+                raw_stdout,
+                "empty stdout",
+                parsed_record_count=0,
+                failure_position=0,
+            ),
+            audit_log=audit_log,
+        )
+
+    try:
+        parsed = json.loads(raw_stdout)
+        return parsed, [parsed], warnings
+    except json.JSONDecodeError as single_json_error:
+        single_error_summary = f"{single_json_error}"
+        single_error_position = single_json_error.pos
+        decoder = json.JSONDecoder()
+        records: list[Any] = []
+        position = 0
+        length = len(raw_stdout)
+
+        while True:
+            while position < length and raw_stdout[position].isspace():
+                position += 1
+            if position >= length:
+                break
+            try:
+                record, end = decoder.raw_decode(raw_stdout, position)
+            except json.JSONDecodeError as stream_error:
+                raise AkochanOutputParseError(
+                    _parse_error_message(
+                        raw_stdout,
+                        f"{stream_error}",
+                        parsed_record_count=len(records),
+                        failure_position=stream_error.pos,
+                    ),
+                    audit_log=audit_log,
+                ) from stream_error
+
+            if end <= position:
+                raise AkochanOutputParseError(
+                    _parse_error_message(
+                        raw_stdout,
+                        "JSON stream parser made no progress",
+                        parsed_record_count=len(records),
+                        failure_position=position,
+                    ),
+                    audit_log=audit_log,
+                ) from single_json_error
+
+            records.append(record)
+            position = end
+
+    if not records:
+        raise AkochanOutputParseError(
+            _parse_error_message(
+                raw_stdout,
+                single_error_summary,
+                parsed_record_count=0,
+                failure_position=single_error_position,
+            ),
+            audit_log=audit_log,
+        )
+
+    warnings.append("JSON stream parser used")
+    if len(records) > 1:
+        warnings.append("multiple JSON records parsed")
+
+    if len(records) == 1:
+        return records[0], records, warnings
+    return records, records, warnings
+
+
+def _parse_error_message(
+    raw_stdout: str,
+    error_summary: str,
+    *,
+    parsed_record_count: int,
+    failure_position: int,
+) -> str:
+    return (
+        "Akochan stdout was not parseable as single JSON or strict JSON stream: "
+        f"{error_summary}; parsed_record_count={parsed_record_count}; "
+        f"failure_position={failure_position}; "
+        f"stdout_sha256={_sha256_text(raw_stdout)}; "
+        f"stdout_summary={_summary(raw_stdout, 2000)!r}"
+    )
 
 
 def normalize_legal_actions(parsed_json: Any) -> tuple[list[dict[str, Any]], list[str]]:

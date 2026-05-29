@@ -46,6 +46,8 @@ class AkochanWrapperRealExeTest(unittest.TestCase):
 
         self.assertEqual(result.audit_log.exit_code, 0)
         self.assertIsNotNone(result.parsed_json)
+        self.assertIsInstance(result.parsed_records, list)
+        self.assertGreaterEqual(len(result.parsed_records), 1)
         self.assertIsInstance(result.normalized_actions, list)
         self.assertTrue(result.audit_log.working_dir)
         self.assertFalse(result.audit_log.training_related)
@@ -65,6 +67,8 @@ class AkochanWrapperRealExeTest(unittest.TestCase):
 
         self.assertEqual(result.audit_log.exit_code, 0)
         self.assertIsNotNone(result.parsed_json)
+        self.assertIsInstance(result.parsed_records, list)
+        self.assertGreaterEqual(len(result.parsed_records), 1)
         self.assertTrue(result.audit_log.working_dir)
         self.assertFalse(result.audit_log.training_related)
         self.assertFalse(result.audit_log.self_play_related)

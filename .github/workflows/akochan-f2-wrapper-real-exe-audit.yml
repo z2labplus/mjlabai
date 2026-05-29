@@ -45,6 +45,7 @@ jobs:
             echo "- Akochan commit: ${{ inputs.akochan_commit }}"
             echo "- Runner OS: ${RUNNER_OS}"
             echo "- Forbidden: training, tuning, self-play, match/league, system.exe test, real Tenhou access, artifact upload"
+            echo "- Parser diagnostics: bounded stdout summaries only; no raw artifact upload"
             echo
           } | tee "${SUMMARY_FILE}"
 
@@ -183,6 +184,7 @@ jobs:
             echo "- AKOCHAN_SYSTEM_EXE: \`${AKOCHAN_SYSTEM_EXE}\`"
             echo "- AKOCHAN_WORKING_DIR: \`${AKOCHAN_WORKING_DIR}\`"
             echo "- AKOCHAN_MJAI_LOG_SAMPLE: \`${AKOCHAN_MJAI_LOG_SAMPLE}\`"
+            echo "- Parser expectation: real \`mjai_log\` stdout may contain multiple JSON records; wrapper must parse strict JSON streams without partial success."
             echo '```text'
             cat "${RUNNER_TEMP}/real_wrapper_tests.out"
             echo '```'
