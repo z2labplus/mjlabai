@@ -12,7 +12,8 @@ Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passe
 Stable-dan calculator = deterministic point estimate implemented and tested
 Stable-dan bootstrap CI = percentile empirical multinomial bootstrap implemented and tested
 Stable-dan threshold helper = LuckyJ 10.68 lower-bound comparison implemented and tested
-Next = P5 evaluation foundation: minimum sample-size and reporting schema for stable-dan evaluation results
+Stable-dan reporting schema = minimum sample-size guardrails and report schema implemented and tested
+Next = P5 evaluation foundation: placement-count aggregation helper for stable-dan evaluation inputs
 ```
 
 ## AI role
@@ -75,7 +76,9 @@ The stable-dan bootstrap CI is an offline statistical reporting utility. It must
 
 The stable-dan threshold helper is an offline statistical reporting utility. It must remain separate from training, self-play, league execution and real Tenhou integration.
 
-The next evaluation-foundation task may define minimum sample-size and reporting schema for stable-dan results, but it must not become a league harness or model-strength claim by itself.
+The stable-dan reporting schema is an offline statistics reporting utility. It must remain separate from training, self-play, league execution and real Tenhou integration.
+
+The next evaluation-foundation task may add placement-count aggregation for stable-dan inputs, but it must not become a league harness or model-strength claim by itself.
 
 ## Output files
 
@@ -104,4 +107,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Add minimum sample-size and reporting schema for stable-dan evaluation results.
+Add placement-count aggregation helper for stable-dan evaluation inputs.

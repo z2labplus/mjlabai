@@ -1,5 +1,27 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.7
+
+- Added minimum sample-size guardrails and stable-dan evaluation report schema.
+- Extended `src/mjlabai/eval/stable_dan.py` with:
+  - `DEFAULT_MIN_TOTAL_GAMES_FOR_STABLE_DAN_REPORT = 100`.
+  - `DEFAULT_MIN_FOURTH_COUNT_FOR_STABLE_DAN_REPORT = 10`.
+  - `DEFAULT_MIN_TOTAL_GAMES_FOR_THRESHOLD_REVIEW = 1000`.
+  - `DEFAULT_MIN_FOURTH_COUNT_FOR_THRESHOLD_REVIEW = 50`.
+  - `DEFAULT_MAX_UNDEFINED_RATE_FOR_STABLE_DAN_REPORT = 0.05`.
+  - `StableDanSampleSizeAssessment`.
+  - `StableDanEvaluationReport`.
+  - `assess_stable_dan_sample_size(...)`.
+  - `build_stable_dan_evaluation_report(...)`.
+- Report schema includes placement counts/rates, point estimate, bootstrap CI, threshold outcome, sample-size assessment, notes and source note.
+- `StableDanEvaluationReport.to_dict()` returns a JSON-serializable dictionary.
+- Documented that sample-size defaults are project-internal governance guardrails, not Tenhou official standards or proof of strength.
+- Local validation passed:
+  - `python3 -m unittest tests/eval/test_stable_dan.py`: 45 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+- This remains evaluation statistics infrastructure only, not training, self-play, league execution, real Tenhou integration or model-strength evidence.
+- Set the next task to `Add placement-count aggregation helper for stable-dan evaluation inputs.`
+
 ## 2026-05-29 — v2.6
 
 - Added a stable-dan threshold comparison helper for the LuckyJ 10.68 target line.

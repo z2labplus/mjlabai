@@ -170,3 +170,11 @@
 | A helper outcome of `clear_pass` is treated as a full model-strength claim without sample-size and reporting context. | Evaluation / Governance | High | Medium | Next task defines minimum sample-size and reporting schema before project-level LuckyJ comparison claims. | Open |
 | Point estimate above LuckyJ 10.68 is mistaken for a threshold pass. | Evaluation | High | Medium | Helper returns `point_estimate_only` with `clears_threshold=False` when lower bound does not exceed threshold. | Mitigated in implementation |
 | High undefined rate is ignored when threshold lower bound looks strong. | Evaluation | Medium-High | Medium | Helper returns `unreliable` and `clears_threshold=False` when `undefined_rate > max_undefined_rate`. | Mitigated in implementation |
+
+## 2026-05-29 — Stable-dan reporting schema risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Internal sample-size guardrails are mistaken for Tenhou official standards or statistical proof. | Governance / Evaluation | Medium-High | Medium | Report source note and docs label them as project-internal governance defaults only. | Open |
+| A report with `clears_threshold=True` but insufficient sample size is used as a LuckyJ claim. | Evaluation / Governance | High | Medium | Report separates `clears_threshold` from `can_enter_threshold_review`; low sample adds a warning note. | Mitigated in implementation |
+| Future callers feed inconsistent threshold comparison and bootstrap results into the report. | Engineering / Evaluation | Medium | Medium | Report builder validates matching point estimate, bounds, confidence level and resample counts before building a report. | Mitigated in implementation |

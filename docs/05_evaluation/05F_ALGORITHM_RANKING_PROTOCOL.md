@@ -123,14 +123,25 @@ Stable-dan threshold comparison against LuckyJ 10.68 must use the bootstrap lowe
 - `unreliable` when undefined resample rate is too high.
 - `inconclusive` when confidence interval overlaps the threshold.
 
+Stable-dan reports must also pass sample-size reporting guardrails before project-level threshold review:
+
+- report minimum: `total_games >= 100`.
+- report minimum: `fourth_count >= 10`.
+- threshold-review minimum: `total_games >= 1000`.
+- threshold-review minimum: `fourth_count >= 50`.
+- maximum undefined bootstrap resample rate: `0.05`.
+
+These defaults are project-internal governance guardrails, not Tenhou official standards or proof of strength. Low-sample reports may be useful diagnostics, but they cannot support a LuckyJ 10.68 project-level claim.
+
 Current implementation status:
 
 - `src/mjlabai/eval/stable_dan.py` implements deterministic point estimates for general/ippan, upper/joukyu, expert/tokujou and phoenix/houou.
 - `bootstrap_stable_dan_ci(...)` implements percentile empirical multinomial bootstrap confidence intervals using Python standard library only.
 - `compare_stable_dan_to_threshold(...)` compares bootstrap CI results against LuckyJ stable dan `10.68` using lower-bound logic.
+- `build_stable_dan_evaluation_report(...)` produces an offline report schema with point estimate, CI, threshold outcome and sample-size assessment.
 - `fourth_count == 0` is undefined and raises `StableDanUndefinedError`; do not report infinite stable dan.
 - Bootstrap resamples with `fourth_count == 0` are recorded as undefined; if all resamples are undefined, `StableDanBootstrapUndefinedError` is raised.
-- The next required evaluation-foundation task is minimum sample-size and reporting schema for stable-dan evaluation results.
+- The next required evaluation-foundation task is placement-count aggregation for stable-dan evaluation inputs.
 
 ### Level 5 — Promotion gate
 

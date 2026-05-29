@@ -81,7 +81,121 @@ class StableDanThresholdComparison:
     source_note: str
 
 
+@dataclass(frozen=True)
+class StableDanSampleSizeAssessment:
+    total_games: int
+    fourth_count: int
+    undefined_rate: float | None
+    min_total_games_for_report: int
+    min_fourth_count_for_report: int
+    min_total_games_for_threshold_review: int
+    min_fourth_count_for_threshold_review: int
+    max_undefined_rate: float
+    meets_report_minimum: bool
+    meets_threshold_review_minimum: bool
+    undefined_rate_acceptable: bool
+    reporting_status: str
+    warnings: tuple[str, ...]
+    explanation: str
+
+
+@dataclass(frozen=True)
+class StableDanEvaluationReport:
+    schema_version: str
+    room: str
+    first_count: int
+    second_count: int
+    third_count: int
+    fourth_count: int
+    total_games: int
+    first_rate: float
+    second_rate: float
+    third_rate: float
+    fourth_rate: float
+    point_estimate: float
+    confidence_level: float | None
+    lower_bound: float | None
+    upper_bound: float | None
+    n_bootstrap: int | None
+    successful_resamples: int | None
+    undefined_resamples: int | None
+    undefined_rate: float | None
+    threshold: float | None
+    threshold_outcome: str | None
+    clears_threshold: bool | None
+    sample_size_assessment: StableDanSampleSizeAssessment
+    can_report_stable_dan: bool
+    can_enter_threshold_review: bool
+    notes: tuple[str, ...]
+    source_note: str
+
+    def to_dict(self) -> dict[str, object]:
+        return {
+            "schema_version": self.schema_version,
+            "room": self.room,
+            "first_count": self.first_count,
+            "second_count": self.second_count,
+            "third_count": self.third_count,
+            "fourth_count": self.fourth_count,
+            "total_games": self.total_games,
+            "first_rate": self.first_rate,
+            "second_rate": self.second_rate,
+            "third_rate": self.third_rate,
+            "fourth_rate": self.fourth_rate,
+            "point_estimate": self.point_estimate,
+            "confidence_level": self.confidence_level,
+            "lower_bound": self.lower_bound,
+            "upper_bound": self.upper_bound,
+            "n_bootstrap": self.n_bootstrap,
+            "successful_resamples": self.successful_resamples,
+            "undefined_resamples": self.undefined_resamples,
+            "undefined_rate": self.undefined_rate,
+            "threshold": self.threshold,
+            "threshold_outcome": self.threshold_outcome,
+            "clears_threshold": self.clears_threshold,
+            "sample_size_assessment": {
+                "total_games": self.sample_size_assessment.total_games,
+                "fourth_count": self.sample_size_assessment.fourth_count,
+                "undefined_rate": self.sample_size_assessment.undefined_rate,
+                "min_total_games_for_report": (
+                    self.sample_size_assessment.min_total_games_for_report
+                ),
+                "min_fourth_count_for_report": (
+                    self.sample_size_assessment.min_fourth_count_for_report
+                ),
+                "min_total_games_for_threshold_review": (
+                    self.sample_size_assessment.min_total_games_for_threshold_review
+                ),
+                "min_fourth_count_for_threshold_review": (
+                    self.sample_size_assessment.min_fourth_count_for_threshold_review
+                ),
+                "max_undefined_rate": self.sample_size_assessment.max_undefined_rate,
+                "meets_report_minimum": (
+                    self.sample_size_assessment.meets_report_minimum
+                ),
+                "meets_threshold_review_minimum": (
+                    self.sample_size_assessment.meets_threshold_review_minimum
+                ),
+                "undefined_rate_acceptable": (
+                    self.sample_size_assessment.undefined_rate_acceptable
+                ),
+                "reporting_status": self.sample_size_assessment.reporting_status,
+                "warnings": list(self.sample_size_assessment.warnings),
+                "explanation": self.sample_size_assessment.explanation,
+            },
+            "can_report_stable_dan": self.can_report_stable_dan,
+            "can_enter_threshold_review": self.can_enter_threshold_review,
+            "notes": list(self.notes),
+            "source_note": self.source_note,
+        }
+
+
 LUCKYJ_STABLE_DAN_THRESHOLD = 10.68
+DEFAULT_MIN_TOTAL_GAMES_FOR_STABLE_DAN_REPORT = 100
+DEFAULT_MIN_FOURTH_COUNT_FOR_STABLE_DAN_REPORT = 10
+DEFAULT_MIN_TOTAL_GAMES_FOR_THRESHOLD_REVIEW = 1000
+DEFAULT_MIN_FOURTH_COUNT_FOR_THRESHOLD_REVIEW = 50
+DEFAULT_MAX_UNDEFINED_RATE_FOR_STABLE_DAN_REPORT = 0.05
 
 _FORMULAS_BY_CANONICAL_ROOM: Mapping[str, StableDanFormula] = MappingProxyType(
     {
@@ -127,6 +241,23 @@ BOOTSTRAP_SOURCE_NOTE = (
 THRESHOLD_SOURCE_NOTE = (
     "Stable-dan threshold comparison uses bootstrap lower bound, not point "
     "estimate alone; default threshold is LuckyJ stable dan 10.68."
+)
+
+SAMPLE_SIZE_SOURCE_NOTE = (
+    "Project-internal stable-dan reporting guardrail; defaults are governance "
+    "thresholds, not Tenhou official standards or proof of strength."
+)
+
+REPORT_SOURCE_NOTE = (
+    "Stable-dan evaluation report schema for offline statistics; not model "
+    "strength evidence by itself and not a Tenhou ranked result."
+)
+
+REPORT_NOTES = (
+    "this is an offline evaluation statistics report",
+    "not model strength evidence by itself",
+    "not a Tenhou ranked result",
+    "sample-size defaults are governance thresholds, not proof",
 )
 
 
@@ -405,6 +536,196 @@ def bootstrap_and_compare_stable_dan_threshold(
     )
 
 
+def assess_stable_dan_sample_size(
+    *,
+    total_games: int,
+    fourth_count: int,
+    undefined_rate: float | None = None,
+    min_total_games_for_report: int = DEFAULT_MIN_TOTAL_GAMES_FOR_STABLE_DAN_REPORT,
+    min_fourth_count_for_report: int = DEFAULT_MIN_FOURTH_COUNT_FOR_STABLE_DAN_REPORT,
+    min_total_games_for_threshold_review: int = (
+        DEFAULT_MIN_TOTAL_GAMES_FOR_THRESHOLD_REVIEW
+    ),
+    min_fourth_count_for_threshold_review: int = (
+        DEFAULT_MIN_FOURTH_COUNT_FOR_THRESHOLD_REVIEW
+    ),
+    max_undefined_rate: float = DEFAULT_MAX_UNDEFINED_RATE_FOR_STABLE_DAN_REPORT,
+) -> StableDanSampleSizeAssessment:
+    """Assess whether a stable-dan result has enough sample for reporting."""
+
+    total_games_value = _validate_positive_int(total_games, "total_games")
+    fourth_count_value = _validate_non_negative_int(fourth_count, "fourth_count")
+    min_total_report = _validate_positive_int(
+        min_total_games_for_report,
+        "min_total_games_for_report",
+    )
+    min_fourth_report = _validate_non_negative_int(
+        min_fourth_count_for_report,
+        "min_fourth_count_for_report",
+    )
+    min_total_threshold = _validate_positive_int(
+        min_total_games_for_threshold_review,
+        "min_total_games_for_threshold_review",
+    )
+    min_fourth_threshold = _validate_non_negative_int(
+        min_fourth_count_for_threshold_review,
+        "min_fourth_count_for_threshold_review",
+    )
+    max_undefined_rate_value = _validate_rate(
+        max_undefined_rate,
+        "max_undefined_rate",
+    )
+    if min_total_threshold < min_total_report:
+        raise ValueError(
+            "min_total_games_for_threshold_review must be >= "
+            "min_total_games_for_report"
+        )
+    if min_fourth_threshold < min_fourth_report:
+        raise ValueError(
+            "min_fourth_count_for_threshold_review must be >= "
+            "min_fourth_count_for_report"
+        )
+    undefined_rate_value = None
+    if undefined_rate is not None:
+        undefined_rate_value = _validate_rate(undefined_rate, "undefined_rate")
+
+    warnings: list[str] = []
+    meets_report_minimum = (
+        total_games_value >= min_total_report
+        and fourth_count_value >= min_fourth_report
+    )
+    undefined_rate_acceptable = (
+        undefined_rate_value is None
+        or undefined_rate_value <= max_undefined_rate_value
+    )
+    if not meets_report_minimum:
+        reporting_status = "insufficient_sample"
+        meets_threshold_review_minimum = False
+        if total_games_value < min_total_report:
+            warnings.append("total_games below report minimum")
+        if fourth_count_value < min_fourth_report:
+            warnings.append("fourth_count below report minimum")
+        explanation = "sample does not meet minimum stable-dan report guardrails"
+    elif not undefined_rate_acceptable:
+        reporting_status = "unreliable_undefined_rate"
+        meets_threshold_review_minimum = False
+        warnings.append("undefined_rate above maximum")
+        explanation = "undefined bootstrap resample rate is too high"
+    else:
+        meets_threshold_review_minimum = (
+            total_games_value >= min_total_threshold
+            and fourth_count_value >= min_fourth_threshold
+        )
+        if meets_threshold_review_minimum:
+            reporting_status = "threshold_review_candidate"
+            explanation = "sample meets internal threshold-review guardrails"
+        else:
+            reporting_status = "reportable_estimate"
+            if total_games_value < min_total_threshold:
+                warnings.append("total_games below threshold-review minimum")
+            if fourth_count_value < min_fourth_threshold:
+                warnings.append("fourth_count below threshold-review minimum")
+            explanation = (
+                "sample may be reported as an estimate but is not ready for "
+                "project-level threshold review"
+            )
+
+    return StableDanSampleSizeAssessment(
+        total_games=total_games_value,
+        fourth_count=fourth_count_value,
+        undefined_rate=undefined_rate_value,
+        min_total_games_for_report=min_total_report,
+        min_fourth_count_for_report=min_fourth_report,
+        min_total_games_for_threshold_review=min_total_threshold,
+        min_fourth_count_for_threshold_review=min_fourth_threshold,
+        max_undefined_rate=max_undefined_rate_value,
+        meets_report_minimum=meets_report_minimum,
+        meets_threshold_review_minimum=meets_threshold_review_minimum,
+        undefined_rate_acceptable=undefined_rate_acceptable,
+        reporting_status=reporting_status,
+        warnings=tuple(warnings),
+        explanation=explanation,
+    )
+
+
+def build_stable_dan_evaluation_report(
+    bootstrap_result: StableDanBootstrapResult,
+    threshold_comparison: StableDanThresholdComparison | None = None,
+    *,
+    schema_version: str = "stable_dan_report_v0.1",
+) -> StableDanEvaluationReport:
+    """Build a JSON-serializable stable-dan evaluation report object."""
+
+    if not isinstance(bootstrap_result, StableDanBootstrapResult):
+        raise TypeError("bootstrap_result must be a StableDanBootstrapResult")
+    if threshold_comparison is not None:
+        if not isinstance(threshold_comparison, StableDanThresholdComparison):
+            raise TypeError(
+                "threshold_comparison must be a StableDanThresholdComparison"
+            )
+        _validate_threshold_comparison_matches_bootstrap(
+            threshold_comparison,
+            bootstrap_result,
+        )
+    if not isinstance(schema_version, str) or not schema_version.strip():
+        raise ValueError("schema_version must be a non-empty string")
+
+    point = bootstrap_result.point_estimate
+    sample_size_assessment = assess_stable_dan_sample_size(
+        total_games=point.total_games,
+        fourth_count=point.fourth_count,
+        undefined_rate=bootstrap_result.undefined_rate,
+    )
+    threshold = None
+    threshold_outcome = None
+    clears_threshold = None
+    notes = list(REPORT_NOTES)
+    if threshold_comparison is not None:
+        threshold = threshold_comparison.threshold
+        threshold_outcome = threshold_comparison.outcome
+        clears_threshold = threshold_comparison.clears_threshold
+        if (
+            threshold_comparison.clears_threshold
+            and not sample_size_assessment.meets_threshold_review_minimum
+        ):
+            notes.append(
+                "clear_pass does not authorize a project-level claim because "
+                "sample-size threshold review minimum is not met"
+            )
+
+    return StableDanEvaluationReport(
+        schema_version=schema_version,
+        room=point.room,
+        first_count=point.first_count,
+        second_count=point.second_count,
+        third_count=point.third_count,
+        fourth_count=point.fourth_count,
+        total_games=point.total_games,
+        first_rate=point.first_rate,
+        second_rate=point.second_rate,
+        third_rate=point.third_rate,
+        fourth_rate=point.fourth_rate,
+        point_estimate=point.stable_dan,
+        confidence_level=bootstrap_result.confidence_level,
+        lower_bound=bootstrap_result.lower_bound,
+        upper_bound=bootstrap_result.upper_bound,
+        n_bootstrap=bootstrap_result.n_bootstrap,
+        successful_resamples=bootstrap_result.successful_resamples,
+        undefined_resamples=bootstrap_result.undefined_resamples,
+        undefined_rate=bootstrap_result.undefined_rate,
+        threshold=threshold,
+        threshold_outcome=threshold_outcome,
+        clears_threshold=clears_threshold,
+        sample_size_assessment=sample_size_assessment,
+        can_report_stable_dan=sample_size_assessment.meets_report_minimum,
+        can_enter_threshold_review=(
+            sample_size_assessment.meets_threshold_review_minimum
+        ),
+        notes=tuple(notes),
+        source_note=REPORT_SOURCE_NOTE,
+    )
+
+
 def _resolve_formula(room: str) -> StableDanFormula:
     if not isinstance(room, str):
         raise ValueError("room must be a string")
@@ -415,6 +736,43 @@ def _resolve_formula(room: str) -> StableDanFormula:
     return _FORMULAS_BY_CANONICAL_ROOM[canonical_room]
 
 
+def _validate_threshold_comparison_matches_bootstrap(
+    comparison: StableDanThresholdComparison,
+    bootstrap_result: StableDanBootstrapResult,
+) -> None:
+    checks = {
+        "point_estimate": (
+            comparison.point_estimate,
+            bootstrap_result.point_estimate.stable_dan,
+        ),
+        "lower_bound": (comparison.lower_bound, bootstrap_result.lower_bound),
+        "upper_bound": (comparison.upper_bound, bootstrap_result.upper_bound),
+        "confidence_level": (
+            comparison.confidence_level,
+            bootstrap_result.confidence_level,
+        ),
+        "n_bootstrap": (comparison.n_bootstrap, bootstrap_result.n_bootstrap),
+        "successful_resamples": (
+            comparison.successful_resamples,
+            bootstrap_result.successful_resamples,
+        ),
+        "undefined_resamples": (
+            comparison.undefined_resamples,
+            bootstrap_result.undefined_resamples,
+        ),
+        "undefined_rate": (
+            comparison.undefined_rate,
+            bootstrap_result.undefined_rate,
+        ),
+    }
+    for name, (left, right) in checks.items():
+        if left != right:
+            raise ValueError(
+                "threshold_comparison does not match bootstrap_result "
+                f"for {name}"
+            )
+
+
 def _validate_finite_number(value: float, name: str) -> float:
     if not isinstance(value, (int, float)) or isinstance(value, bool):
         raise ValueError(f"{name} must be a finite number")
@@ -422,6 +780,18 @@ def _validate_finite_number(value: float, name: str) -> float:
     if not math.isfinite(number):
         raise ValueError(f"{name} must be a finite number")
     return number
+
+
+def _validate_positive_int(value: int, name: str) -> int:
+    if not isinstance(value, int) or isinstance(value, bool) or value <= 0:
+        raise ValueError(f"{name} must be a positive integer")
+    return value
+
+
+def _validate_non_negative_int(value: int, name: str) -> int:
+    if not isinstance(value, int) or isinstance(value, bool) or value < 0:
+        raise ValueError(f"{name} must be a non-negative integer")
+    return value
 
 
 def _validate_rate(value: float, name: str) -> float:

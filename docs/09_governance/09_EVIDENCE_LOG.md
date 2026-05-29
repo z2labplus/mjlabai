@@ -8,6 +8,57 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — Stable-dan minimum sample-size and report schema implementation
+
+- Type: internal implementation / local test evidence for evaluation reporting infrastructure.
+- Stage: P5 evaluation foundation.
+- Implemented code:
+  - `src/mjlabai/eval/stable_dan.py`.
+  - `src/mjlabai/eval/__init__.py`.
+  - `tests/eval/test_stable_dan.py`.
+- API:
+  - `StableDanSampleSizeAssessment`.
+  - `assess_stable_dan_sample_size(...)`.
+  - `StableDanEvaluationReport`.
+  - `build_stable_dan_evaluation_report(...)`.
+  - `StableDanEvaluationReport.to_dict()`.
+- Project-internal default guardrails:
+  - Report minimum: `total_games >= 100`.
+  - Report minimum: `fourth_count >= 10`.
+  - Threshold-review minimum: `total_games >= 1000`.
+  - Threshold-review minimum: `fourth_count >= 50`.
+  - Maximum undefined bootstrap resample rate: `0.05`.
+- Report schema includes:
+  - room.
+  - placement counts.
+  - placement rates.
+  - point estimate.
+  - bootstrap lower/upper bounds.
+  - confidence level.
+  - bootstrap count.
+  - successful resamples.
+  - undefined resamples.
+  - undefined rate.
+  - threshold comparison outcome.
+  - sample-size assessment.
+  - source note.
+- Local validation:
+  - `python3 -m unittest tests/eval/test_stable_dan.py`: 45 tests passed.
+  - `python3 -m unittest tests/adapters/test_akochan_wrapper.py`: 14 tests passed.
+  - `git diff --check`: passed.
+- Guardrails:
+  - No training.
+  - No tuning.
+  - No self-play, match or league command.
+  - No real Tenhou connection.
+  - No platform automation, scraping, account tooling, evasion or anti-detection logic.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+- Limitations:
+  - These defaults are internal governance guardrails, not Tenhou official standards or statistical proof.
+  - A low-sample clear threshold outcome cannot become a project-level LuckyJ claim.
+  - The next task is placement-count aggregation for stable-dan evaluation inputs.
+
 ### 2026-05-29 — Stable-dan LuckyJ threshold comparison helper implementation
 
 - Type: internal implementation / local test evidence for evaluation statistics infrastructure.

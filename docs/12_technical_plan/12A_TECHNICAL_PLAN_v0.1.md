@@ -34,7 +34,8 @@ Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passe
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
 Tenhou stable-dan bootstrap CI = percentile empirical multinomial bootstrap implemented and tested.
 Tenhou stable-dan threshold helper = LuckyJ 10.68 lower-bound comparison implemented and tested.
-Next = add minimum sample-size and reporting schema for stable-dan evaluation results.
+Tenhou stable-dan reporting schema = minimum sample-size guardrails and report schema implemented and tested.
+Next = add placement-count aggregation helper for stable-dan evaluation inputs.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -165,13 +166,13 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 
 ## Current Next Task
 
-当前 `10_NEXT` 的下一步是在 stable-dan point estimate、bootstrap CI 和 threshold helper 之上增加最小样本量与报告结构：
+当前 `10_NEXT` 的下一步是在 stable-dan report schema 之上增加 placement-count aggregation：
 
 ```text
-Add minimum sample-size and reporting schema for stable-dan evaluation results.
+Add placement-count aggregation helper for stable-dan evaluation inputs.
 ```
 
-The stable-dan calculator now supports four-player general/ippan, upper/joukyu, expert/tokujou and phoenix/houou room formulas, records placement counts/rates and raises `StableDanUndefinedError` when `fourth_count == 0`. The bootstrap CI uses percentile empirical multinomial resampling, reports successful/undefined resamples and refuses to fabricate infinite stable dan. The threshold helper uses LuckyJ stable dan `10.68` by default and only returns `clear_pass` when bootstrap lower bound exceeds the threshold with acceptable undefined rate. This is metric infrastructure only, not training, self-play, league evaluation or Tenhou integration.
+The stable-dan calculator now supports four-player general/ippan, upper/joukyu, expert/tokujou and phoenix/houou room formulas, records placement counts/rates and raises `StableDanUndefinedError` when `fourth_count == 0`. The bootstrap CI uses percentile empirical multinomial resampling, reports successful/undefined resamples and refuses to fabricate infinite stable dan. The threshold helper uses LuckyJ stable dan `10.68` by default and only returns `clear_pass` when bootstrap lower bound exceeds the threshold with acceptable undefined rate. The reporting schema separates `clears_threshold` from `can_enter_threshold_review` so low-sample reports cannot become project-level LuckyJ claims. This is metric infrastructure only, not training, self-play, league evaluation or Tenhou integration.
 
 Mortal runnable baseline 已暂停，因为当前没有合法、可校验、可使用的 trained model artifact。Mortal 仍保留为源码、mjai 接口、方法论和工程参考。除非未来先补齐 artifact 来源、version/tag、usage constraints 和 checksum 并重新打开 F1，否则不进入 Mortal F2 adapter。
 

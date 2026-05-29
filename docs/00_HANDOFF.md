@@ -38,7 +38,8 @@ This is fixed-sample wrapper/integration evidence only. It is not Akochan streng
 The project has moved to evaluation groundwork: the deterministic Tenhou stable-dan calculator from room-specific formulas is implemented and tested.
 The stable-dan bootstrap confidence interval is implemented and tested with percentile empirical multinomial resampling.
 The stable-dan threshold comparison helper is implemented and tested with LuckyJ stable dan `10.68` as the default target line.
-The next project task is to add minimum sample-size and reporting schema for stable-dan evaluation results.
+The stable-dan reporting schema and minimum sample-size guardrails are implemented and tested.
+The next project task is to add placement-count aggregation helper for stable-dan evaluation inputs.
 ```
 
 ## Current methodology
@@ -127,7 +128,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Add minimum sample-size and reporting schema for stable-dan evaluation results.
+Add placement-count aggregation helper for stable-dan evaluation inputs.
 Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload or broad adapter work.
 ```
 

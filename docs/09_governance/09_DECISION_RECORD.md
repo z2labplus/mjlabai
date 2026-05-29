@@ -14,6 +14,51 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-05-29 — DR-0016 — Stable-Dan Reports Require Sample-Size Guardrails
+
+Decision:
+
+```text
+Stable-dan reporting must separate statistical threshold outcome from project-level claim readiness.
+Default sample-size guardrails are internal governance defaults, not Tenhou official standards or proof.
+```
+
+Context:
+
+- Stable-dan point estimate, bootstrap CI and LuckyJ threshold helper are implemented.
+- A `clear_pass` threshold outcome can still be based on too little data for project-level claims.
+- Future reports need a standard schema so counts, CI, threshold outcome and sample-size status are always present.
+
+Rationale:
+
+- Separating `clears_threshold` from `can_enter_threshold_review` prevents overclaiming.
+- Report schema makes future evaluation outputs easier to audit.
+- Explicit notes keep the report framed as offline statistics, not Tenhou ranked proof.
+
+Consequences:
+
+- `assess_stable_dan_sample_size(...)` returns report and threshold-review readiness.
+- `build_stable_dan_evaluation_report(...)` combines point estimate, bootstrap CI, threshold outcome and sample-size assessment.
+- Default report minimum is `total_games >= 100` and `fourth_count >= 10`.
+- Default threshold-review minimum is `total_games >= 1000` and `fourth_count >= 50`.
+- Default maximum undefined rate is `0.05`.
+- The next task is placement-count aggregation for stable-dan evaluation inputs.
+
+Linked docs:
+
+- `src/mjlabai/eval/stable_dan.py`
+- `tests/eval/test_stable_dan.py`
+- `docs/10_next/10_NEXT.md`
+- `docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0015 — Stable-Dan Threshold Pass Requires Bootstrap Lower Bound
 
 Decision:

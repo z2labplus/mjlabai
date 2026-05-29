@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import math
 from pathlib import Path
 import sys
@@ -12,14 +13,23 @@ if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
 from mjlabai.eval.stable_dan import (  # noqa: E402
+    DEFAULT_MAX_UNDEFINED_RATE_FOR_STABLE_DAN_REPORT,
+    DEFAULT_MIN_FOURTH_COUNT_FOR_STABLE_DAN_REPORT,
+    DEFAULT_MIN_FOURTH_COUNT_FOR_THRESHOLD_REVIEW,
+    DEFAULT_MIN_TOTAL_GAMES_FOR_STABLE_DAN_REPORT,
+    DEFAULT_MIN_TOTAL_GAMES_FOR_THRESHOLD_REVIEW,
     LUCKYJ_STABLE_DAN_THRESHOLD,
     StableDanBootstrapResult,
     StableDanBootstrapUndefinedError,
+    StableDanEvaluationReport,
     StableDanResult,
+    StableDanSampleSizeAssessment,
     StableDanThresholdComparison,
     StableDanUndefinedError,
+    assess_stable_dan_sample_size,
     bootstrap_and_compare_stable_dan_threshold,
     bootstrap_stable_dan_ci,
+    build_stable_dan_evaluation_report,
     calculate_stable_dan,
     compare_stable_dan_to_threshold,
     placement_rates,
@@ -369,6 +379,193 @@ class StableDanThresholdComparisonTest(unittest.TestCase):
 
         self.assertIsInstance(comparison, StableDanThresholdComparison)
         self.assertEqual(comparison.threshold, LUCKYJ_STABLE_DAN_THRESHOLD)
+
+
+class StableDanReportingTest(unittest.TestCase):
+    def make_bootstrap_result(
+        self,
+        *,
+        first_count: int = 30,
+        second_count: int = 30,
+        third_count: int = 20,
+        fourth_count: int = 20,
+        lower_bound: float = 10.9,
+        upper_bound: float = 12.3,
+        successful_resamples: int = 1000,
+        undefined_resamples: int = 0,
+    ) -> StableDanBootstrapResult:
+        point = calculate_stable_dan(
+            first_count,
+            second_count,
+            third_count,
+            fourth_count,
+            "phoenix",
+        )
+        n_bootstrap = successful_resamples + undefined_resamples
+        return StableDanBootstrapResult(
+            point_estimate=point,
+            confidence_level=0.95,
+            lower_bound=lower_bound,
+            upper_bound=upper_bound,
+            n_bootstrap=n_bootstrap,
+            successful_resamples=successful_resamples,
+            undefined_resamples=undefined_resamples,
+            undefined_rate=undefined_resamples / n_bootstrap,
+            room=point.room,
+            method="test",
+            seed=1,
+            quantile_method="test",
+            source_note="test",
+        )
+
+    def test_sample_size_defaults_are_valid(self) -> None:
+        assessment = assess_stable_dan_sample_size(
+            total_games=DEFAULT_MIN_TOTAL_GAMES_FOR_THRESHOLD_REVIEW,
+            fourth_count=DEFAULT_MIN_FOURTH_COUNT_FOR_THRESHOLD_REVIEW,
+            undefined_rate=DEFAULT_MAX_UNDEFINED_RATE_FOR_STABLE_DAN_REPORT,
+        )
+
+        self.assertIsInstance(assessment, StableDanSampleSizeAssessment)
+        self.assertEqual(
+            assessment.min_total_games_for_report,
+            DEFAULT_MIN_TOTAL_GAMES_FOR_STABLE_DAN_REPORT,
+        )
+        self.assertEqual(
+            assessment.min_fourth_count_for_report,
+            DEFAULT_MIN_FOURTH_COUNT_FOR_STABLE_DAN_REPORT,
+        )
+        self.assertTrue(assessment.meets_threshold_review_minimum)
+
+    def test_invalid_sample_size_policy_raises_value_error(self) -> None:
+        with self.assertRaisesRegex(
+            ValueError,
+            "min_total_games_for_threshold_review must be >=",
+        ):
+            assess_stable_dan_sample_size(
+                total_games=100,
+                fourth_count=10,
+                min_total_games_for_report=100,
+                min_total_games_for_threshold_review=99,
+            )
+
+        with self.assertRaisesRegex(ValueError, "undefined_rate must be"):
+            assess_stable_dan_sample_size(
+                total_games=100,
+                fourth_count=10,
+                undefined_rate=1.1,
+            )
+
+    def test_insufficient_sample_total_games(self) -> None:
+        assessment = assess_stable_dan_sample_size(
+            total_games=99,
+            fourth_count=10,
+            undefined_rate=0,
+        )
+
+        self.assertFalse(assessment.meets_report_minimum)
+        self.assertEqual(assessment.reporting_status, "insufficient_sample")
+
+    def test_insufficient_fourth_count(self) -> None:
+        assessment = assess_stable_dan_sample_size(
+            total_games=100,
+            fourth_count=9,
+            undefined_rate=0,
+        )
+
+        self.assertFalse(assessment.meets_report_minimum)
+        self.assertEqual(assessment.reporting_status, "insufficient_sample")
+
+    def test_reportable_estimate_before_threshold_review(self) -> None:
+        assessment = assess_stable_dan_sample_size(
+            total_games=200,
+            fourth_count=20,
+            undefined_rate=0,
+        )
+
+        self.assertTrue(assessment.meets_report_minimum)
+        self.assertFalse(assessment.meets_threshold_review_minimum)
+        self.assertEqual(assessment.reporting_status, "reportable_estimate")
+
+    def test_threshold_review_candidate(self) -> None:
+        assessment = assess_stable_dan_sample_size(
+            total_games=1000,
+            fourth_count=50,
+            undefined_rate=0.05,
+        )
+
+        self.assertTrue(assessment.meets_report_minimum)
+        self.assertTrue(assessment.meets_threshold_review_minimum)
+        self.assertEqual(assessment.reporting_status, "threshold_review_candidate")
+
+    def test_unreliable_undefined_rate(self) -> None:
+        assessment = assess_stable_dan_sample_size(
+            total_games=1000,
+            fourth_count=50,
+            undefined_rate=0.06,
+        )
+
+        self.assertFalse(assessment.undefined_rate_acceptable)
+        self.assertFalse(assessment.meets_threshold_review_minimum)
+        self.assertEqual(assessment.reporting_status, "unreliable_undefined_rate")
+
+    def test_build_report_returns_schema(self) -> None:
+        bootstrap_result = self.make_bootstrap_result()
+        comparison = compare_stable_dan_to_threshold(bootstrap_result)
+        report = build_stable_dan_evaluation_report(bootstrap_result, comparison)
+
+        self.assertIsInstance(report, StableDanEvaluationReport)
+        self.assertEqual(report.point_estimate, bootstrap_result.point_estimate.stable_dan)
+        self.assertEqual(report.lower_bound, bootstrap_result.lower_bound)
+        self.assertEqual(report.threshold_outcome, comparison.outcome)
+
+    def test_clear_pass_with_low_sample_cannot_enter_threshold_review(self) -> None:
+        bootstrap_result = self.make_bootstrap_result()
+        comparison = compare_stable_dan_to_threshold(bootstrap_result)
+        report = build_stable_dan_evaluation_report(bootstrap_result, comparison)
+
+        self.assertTrue(comparison.clears_threshold)
+        self.assertTrue(report.can_report_stable_dan)
+        self.assertFalse(report.can_enter_threshold_review)
+        self.assertTrue(
+            any("sample-size threshold review minimum" in note for note in report.notes)
+        )
+
+    def test_clear_pass_with_enough_sample_can_enter_threshold_review(self) -> None:
+        bootstrap_result = self.make_bootstrap_result(
+            first_count=300,
+            second_count=300,
+            third_count=200,
+            fourth_count=200,
+        )
+        comparison = compare_stable_dan_to_threshold(bootstrap_result)
+        report = build_stable_dan_evaluation_report(bootstrap_result, comparison)
+
+        self.assertTrue(comparison.clears_threshold)
+        self.assertTrue(report.can_enter_threshold_review)
+
+    def test_report_to_dict_is_json_serializable(self) -> None:
+        bootstrap_result = self.make_bootstrap_result()
+        comparison = compare_stable_dan_to_threshold(bootstrap_result)
+        report = build_stable_dan_evaluation_report(bootstrap_result, comparison)
+        report_dict = report.to_dict()
+
+        self.assertEqual(report_dict["room"], "phoenix")
+        self.assertIn("sample_size_assessment", report_dict)
+        json.dumps(report_dict)
+
+    def test_report_notes_state_not_strength_evidence(self) -> None:
+        bootstrap_result = self.make_bootstrap_result()
+        report = build_stable_dan_evaluation_report(bootstrap_result)
+
+        self.assertIn("not model strength evidence by itself", report.notes)
+
+    def test_report_rejects_mismatched_comparison(self) -> None:
+        bootstrap_result = self.make_bootstrap_result()
+        other_bootstrap = self.make_bootstrap_result(lower_bound=9.0)
+        comparison = compare_stable_dan_to_threshold(other_bootstrap)
+
+        with self.assertRaisesRegex(ValueError, "does not match bootstrap_result"):
+            build_stable_dan_evaluation_report(bootstrap_result, comparison)
 
 
 if __name__ == "__main__":
