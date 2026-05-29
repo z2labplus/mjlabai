@@ -8,6 +8,61 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-29 — Offline envelope smoke fixture for synthetic stable-dan report
+
+- Type: internal smoke-test evidence for P5 result envelope integration.
+- Stage: P5 evaluation foundation.
+- Added test:
+  - `tests/eval/test_offline_envelope_smoke.py`.
+- Input fixture:
+  - `tests/fixtures/eval/stable_dan_placements_smoke.json`.
+  - Project-authored synthetic placement records only.
+  - Not Tenhou data.
+  - Not real platform data.
+  - Not an external haifu/log.
+  - Not a model, league, training or self-play result.
+- Smoke chain:
+  - aggregate synthetic placement records.
+  - build stable-dan bootstrap CI.
+  - compare stable dan against the LuckyJ threshold helper.
+  - build a `StableDanEvaluationReport`.
+  - wrap stable-dan metrics in `OfflineEvaluationResultEnvelope`.
+  - serialize with `envelope.to_dict()` and `json.dumps(...)`.
+- Envelope metrics:
+  - `stable_dan_point_estimate`.
+  - `stable_dan_ci_lower`.
+  - `stable_dan_ci_upper`.
+  - `stable_dan_threshold_outcome`.
+  - `stable_dan_sample_size_status`.
+- Envelope metadata:
+  - evaluation stage `P5`.
+  - evaluation type `stable_dan_report_smoke`.
+  - sample size `100`.
+  - room `phoenix`.
+  - ruleset `tenhou_four_player_phoenix`.
+  - reproducibility metadata with fixture id and seed `12345`.
+  - all-false safety flags.
+  - synthetic / not-strength-evidence warnings.
+  - evidence references to the test and fixture.
+- Local validation:
+  - `python3 -m unittest tests/eval/test_offline_envelope_smoke.py`: 1 test passed.
+  - `git diff --check`: passed.
+- Guardrails:
+  - No helper was added.
+  - No CLI.
+  - No league harness.
+  - No match runner.
+  - No training.
+  - No tuning.
+  - No self-play.
+  - No real Tenhou connection.
+  - No Tenhou account, platform data, external log, external haifu, scraping, automation, evasion or anti-detection logic.
+  - No GitHub Actions run.
+  - No model weights, third-party source, third-party binary or build artifact were downloaded, stored or uploaded.
+- Limitations:
+  - This is envelope integration evidence only.
+  - It is not model-strength evidence and not a LuckyJ comparison claim.
+
 ### 2026-05-29 — P5 offline evaluation result envelope schema
 
 - Type: internal implementation / schema-test evidence.

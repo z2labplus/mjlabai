@@ -1,5 +1,26 @@
 # 09_CHANGELOG
 
+## 2026-05-29 — v2.13
+
+- Added offline evaluation envelope smoke fixture for a synthetic stable-dan report.
+- Added `tests/eval/test_offline_envelope_smoke.py`.
+- The smoke test starts from `tests/fixtures/eval/stable_dan_placements_smoke.json`.
+- The smoke chain covers:
+  - `aggregate_placement_records(...)`.
+  - `bootstrap_stable_dan_ci(...)`.
+  - `compare_stable_dan_to_threshold(...)`.
+  - `build_stable_dan_evaluation_report(...)`.
+  - `OfflineEvaluationResultEnvelope(...)`.
+  - `envelope.to_dict()`.
+  - `json.dumps(...)`.
+- The envelope includes stable-dan point estimate, CI lower/upper, threshold outcome and sample-size status metrics.
+- The envelope records reproducibility metadata, all-false safety flags, synthetic / not-strength-evidence warnings and evidence references.
+- No conversion helper was added; the smoke test constructs the envelope directly to keep scope minimal.
+- No CLI, league harness, match runner, training, tuning, self-play, Tenhou connection, external-log reader or platform-data reader was added.
+- Local validation passed:
+  - `python3 -m unittest tests/eval/test_offline_envelope_smoke.py`: 1 test passed.
+- Set the next P5-only task to `Define P5 legal-action and invalid-action metric specification.`
+
 ## 2026-05-29 — v2.12
 
 - Defined P5 offline evaluation metric registry and result envelope schema.

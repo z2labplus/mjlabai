@@ -239,8 +239,22 @@ envelope_dict = envelope.to_dict()
 Run:
 
 ```bash
+python3 -m unittest tests/eval/test_offline_envelope_smoke.py
 python3 -m unittest tests/eval/test_offline_result.py
 ```
 
-This verifies schema validation and JSON serialization. It does not run a league, command runner, Tenhou connector, training job or external-data reader.
+`test_offline_result.py` verifies schema validation and JSON serialization.
 
+`test_offline_envelope_smoke.py` verifies that the project-authored synthetic stable-dan placement fixture can flow through stable-dan report generation, then be wrapped in `OfflineEvaluationResultEnvelope` with:
+
+- stable-dan point estimate metric.
+- stable-dan CI lower and upper metrics.
+- stable-dan threshold outcome metric.
+- stable-dan sample-size status metric.
+- confidence interval.
+- reproducibility metadata.
+- all-false safety flags.
+- synthetic / not-strength-evidence warnings.
+- JSON serialization.
+
+These tests do not run a league, command runner, Tenhou connector, training job or external-data reader.

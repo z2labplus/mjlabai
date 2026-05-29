@@ -45,8 +45,9 @@ The CLI-free stable-dan evaluation report smoke fixture is implemented and teste
 The stable-dan evaluation API documentation is added with example usage from synthetic placements.
 The stable-dan evaluation groundwork subtrack is complete for the current P5 scope.
 The P5 offline evaluation metric registry and result envelope schema are implemented and documented.
+The offline evaluation envelope smoke test now verifies that a synthetic stable-dan report can be represented as an `OfflineEvaluationResultEnvelope`.
 P5 overall is not complete.
-The next project task is to add an offline evaluation envelope smoke fixture for a synthetic stable-dan report.
+The next project task is to define the P5 legal-action and invalid-action metric specification.
 ```
 
 ## Current methodology
@@ -135,7 +136,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Add offline evaluation envelope smoke fixture for synthetic stable-dan report.
+Define P5 legal-action and invalid-action metric specification.
 Do not expand into training, self-play, league evaluation, Tenhou integration, artifact upload, broad adapter work or P6-P12.
 ```
 

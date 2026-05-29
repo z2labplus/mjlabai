@@ -18,8 +18,9 @@ Stable-dan report smoke fixture = CLI-free synthetic placement fixture implement
 Stable-dan evaluation API docs = synthetic placement example added
 Stable-dan evaluation groundwork = complete for current P5 scope
 Offline evaluation result envelope = metric registry and schema implemented/tested
+Offline envelope smoke fixture = synthetic stable-dan envelope smoke test implemented
 P5 overall = still in progress
-Next = offline evaluation envelope smoke fixture for synthetic stable-dan report
+Next = legal-action and invalid-action metric specification
 ```
 
 ## AI role
@@ -90,7 +91,7 @@ The CLI-free stable-dan report smoke fixture is a synthetic-only code-path test.
 
 The stable-dan evaluation API documentation is an API-only guide. It must not become a CLI, league harness, file ingestion system, training path, self-play path or real Tenhou integration.
 
-The stable-dan evaluation groundwork subtrack is complete for current P5 scope. P5 overall is still open. The offline result envelope schema is implemented. The next evaluation-foundation task may add an offline envelope smoke fixture for a synthetic stable-dan report, but it must not jump to league execution, P6-P12 or model-strength claims.
+The stable-dan evaluation groundwork subtrack is complete for current P5 scope. P5 overall is still open. The offline result envelope schema and synthetic stable-dan envelope smoke test are implemented. The next evaluation-foundation task may define legal-action and invalid-action metrics, but it must not jump to evaluator execution, league execution, P6-P12 or model-strength claims.
 
 ## Output files
 
@@ -119,4 +120,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Add offline evaluation envelope smoke fixture for synthetic stable-dan report.
+Define P5 legal-action and invalid-action metric specification.

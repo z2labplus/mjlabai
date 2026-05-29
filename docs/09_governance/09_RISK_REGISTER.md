@@ -219,3 +219,11 @@
 | Registry placeholder metrics are mistaken for implemented evaluators. | Evaluation / Governance | Medium-High | Medium | `05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md` labels legal-action, invalid-action, parse-success and latency metrics as schema placeholders unless separate evaluator tasks implement them. | Open |
 | Result envelope is mistaken for a runner or evidence generator. | Scope | High | Medium | The schema records results only; docs and tests confirm it does not run commands, read data, train, self-play, league or connect to Tenhou. | Open |
 | High-risk safety flags are ignored in downstream reports. | Governance | Medium | Medium | Envelope preserves safety flags and adds warnings when high-risk flags are true. | Open |
+
+## 2026-05-29 — Offline envelope smoke fixture risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Synthetic envelope smoke result is mistaken for model-strength evidence. | Evaluation / Governance | High | Medium | The smoke test and evidence log label the input as synthetic-only and not strength evidence. | Open |
+| Envelope smoke test is mistaken for a CLI, runner or data-ingestion path. | Scope | Medium-High | Medium | The test constructs an envelope in-process, writes no output files and reads only the checked-in synthetic fixture. | Open |
+| Legal-action / invalid-action placeholder metrics are used before precise metric denominators are defined. | Evaluation | Medium-High | Medium | Next task is to define the legal-action and invalid-action metric specification before evaluator implementation. | Open |

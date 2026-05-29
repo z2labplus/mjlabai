@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Add offline evaluation envelope smoke fixture for synthetic stable-dan report.
+- [ ] Define P5 legal-action and invalid-action metric specification.
 
 Current execution charter:
 
@@ -24,7 +24,7 @@ Limits:
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
-- For the next step, add an offline evaluation envelope smoke fixture for a synthetic stable-dan report.
+- For the next step, define the P5 legal-action and invalid-action metric specification.
 - Keep the implementation tied to evaluation metrics; do not expand into league, training, self-play or real Tenhou integration.
 - Use only offline synthetic/local placement inputs; do not read Tenhou accounts, online platforms or external logs.
 - Do not add CLI, file ingestion, league harness, external-data readers or new model code unless the first unchecked task explicitly authorizes a lightweight schema-only code change.
@@ -62,6 +62,7 @@ Limits:
 - [x] 2026-05-29 Added stable-dan evaluation API documentation with example usage from synthetic placements: added `docs/05_evaluation/05H_STABLE_DAN_EVALUATION_API.md` and indexed it in `docs/00_DOCS_INDEX.md`. The document explains the synthetic fixture, API flow from placement records to report serialization, output fields, sample-size / threshold / claim guardrails and verification commands. No CLI, code, training, self-play, league, Tenhou integration, external log reader or platform-data reader was added.
 - [x] 2026-05-29 Reviewed P5 stable-dan evaluation groundwork completion: added `docs/05_evaluation/05I_STABLE_DAN_GROUNDWORK_REVIEW.md`, marked the stable-dan evaluation subtrack complete for the current P5 scope, kept P5 overall open, and defined the next P5-only task as `Define P5 offline evaluation metric registry and result envelope schema`. No code, tests, CLI, league, training, self-play or Tenhou integration was added.
 - [x] 2026-05-29 Defined P5 offline evaluation metric registry and result envelope schema: added `src/mjlabai/eval/offline_result.py`, exports, unit tests and `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`. The schema records metric values, confidence intervals, command-status summaries, reproducibility metadata, safety flags, warnings and evidence references. It does not implement CLI, league, runner, training, self-play, Tenhou access or external-data ingestion.
+- [x] 2026-05-29 Added offline evaluation envelope smoke fixture for synthetic stable-dan report: added `tests/eval/test_offline_envelope_smoke.py`, which starts from the project-authored synthetic placement fixture, builds a stable-dan report, wraps it in `OfflineEvaluationResultEnvelope`, validates required stable-dan metrics, reproducibility metadata, all-false safety flags and JSON serialization. No helper, CLI, league, runner, training, self-play, Tenhou access or external-data ingestion was added.
 
 ## Backlog
 
@@ -89,6 +90,7 @@ Limits:
 - [x] Add stable-dan evaluation API documentation with example usage from synthetic placements.
 - [x] Review P5 stable-dan evaluation groundwork completion and define the next P5-only evaluation task.
 - [x] Define P5 offline evaluation metric registry and result envelope schema.
-- [ ] Add offline evaluation envelope smoke fixture for synthetic stable-dan report.
+- [x] Add offline evaluation envelope smoke fixture for synthetic stable-dan report.
+- [ ] Define P5 legal-action and invalid-action metric specification.
 - [ ] Create tiny benchmark harness for legal action rate, latency and fixed-position decisions.
 - [ ] Update `09_EVIDENCE_LOG.md` whenever new external evidence is added.
