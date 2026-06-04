@@ -8,6 +8,56 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-04 — P5 evidence taxonomy and promotion guardrails review
+
+- Type: internal documentation / review-gate evidence.
+- Stage: P5 evaluation foundation.
+- Added review document:
+  - `docs/05_evaluation/05T_SYNTHETIC_LOCAL_EVIDENCE_TAXONOMY_AND_PROMOTION_GUARDRAILS_REVIEW.md`.
+- Reviewed artifacts:
+  - `docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md`.
+  - `docs/05_evaluation/05H_STABLE_DAN_EVALUATION_API.md`.
+  - `docs/05_evaluation/05I_STABLE_DAN_GROUNDWORK_REVIEW.md`.
+  - `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`.
+  - `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`.
+  - `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md`.
+  - `docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md`.
+  - `docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md`.
+  - `docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md`.
+  - `docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md`.
+  - `docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md`.
+  - `docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md`.
+  - `docs/05_evaluation/05S_METRIC_REGISTRY_CONSISTENCY_REVIEW.md`.
+  - current P5 source, tests and synthetic fixtures as read-only context.
+- Review conclusion:
+  - current evidence labels and non-evidence warnings are consistent.
+  - current promotion/ranking guardrails prevent synthetic/local diagnostics
+    from being used as model-strength, Tenhou, stable-dan ranked-game, LuckyJ
+    or candidate-promotion evidence.
+  - no blocker was found.
+- Evidence grade:
+  - P5 synthetic/local evidence taxonomy and promotion guardrails review
+    evidence only.
+- Not evidence of:
+  - production evaluator expansion.
+  - metric implementation.
+  - registry code change.
+  - promotion criteria change.
+  - latency measurement.
+  - legal-action checker or canonicalizer.
+  - fixed-position exact-match computation.
+  - model-output integration.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P6-P12.
+- Follow-up:
+  - Define P5 evaluation groundwork closure criteria and an exit readiness
+    checklist so P5 does not continue indefinitely through more schema/review
+    churn.
+
 ### 2026-05-30 — P5 metric registry consistency review
 
 - Type: internal documentation / review-gate evidence.

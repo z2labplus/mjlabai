@@ -58,8 +58,9 @@ The P5 synthetic legal-action metric evaluator is implemented for the project-au
 `docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md` reviews the P5 tiny benchmark harness implementation and records that it can close for the current project-authored synthetic/local fixture scope with no blocker. The evidence grade remains P5 synthetic/local tiny benchmark harness implementation review evidence only.
 `docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md` reviews the P5 offline result envelope coverage for synthetic tiny benchmark diagnostics. It records that the current envelope can represent the diagnostic with `evaluation_type = "tiny_benchmark_harness"`, `wrapper_smoke_success = true`, `sample_size = 1`, `latency_ms = None`, all-false safety flags, synthetic/local warnings and evidence references. No blocker was found, and the evidence grade remains P5 synthetic/local offline envelope coverage review evidence only.
 `docs/05_evaluation/05S_METRIC_REGISTRY_CONSISTENCY_REVIEW.md` reviews P5 metric registry consistency across stable-dan, legal-action and tiny benchmark diagnostics. It records that current registry names, units, directions, status/source notes and evidence grades are consistent for the current P5 scope. It also records that future tiny benchmark names such as latency percentiles and fixed-position exact-match remain fixture planning names, not current registered/emitted metrics. No blocker was found, and no registry code, production code, tests or fixtures were changed by the review.
+`docs/05_evaluation/05T_SYNTHETIC_LOCAL_EVIDENCE_TAXONOMY_AND_PROMOTION_GUARDRAILS_REVIEW.md` reviews P5 synthetic/local evidence taxonomy and promotion guardrails. It records that evidence labels, non-evidence warnings, promotion/ranking guardrails and stage-boundary wording are consistent across the current P5 stable-dan, legal-action, tiny benchmark, offline envelope and metric registry artifacts. No blocker was found, and no promotion criteria, taxonomy definitions, production code, tests or fixtures were changed by the review.
 P5 overall is not complete.
-The next project task is to review P5 synthetic/local evaluation evidence taxonomy and promotion guardrails, under the strict synthetic/local boundary and without production code, tests, fixtures, metric implementation, model-output integration, real data, CLI, broad file ingestion, latency measurement, league, runner, training, self-play or P6-P12 work.
+P5 should not be extended indefinitely through more schema/review churn. The next project task is to define P5 evaluation groundwork closure criteria and an exit readiness checklist, under the strict synthetic/local boundary and without production code, tests, fixtures, metric implementation, model-output integration, real data, CLI, broad file ingestion, latency measurement, league, runner, training, self-play or P6-P12 work.
 ```
 
 ## Current methodology
@@ -148,7 +149,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review P5 synthetic/local evaluation evidence taxonomy and promotion guardrails.
+Define P5 evaluation groundwork closure criteria and exit readiness checklist.
 Do not expand beyond P5 synthetic/local engineering diagnostics into training,
 self-play, league evaluation, Tenhou integration, artifact upload, broad adapter
 work, CLI, broad file ingestion, model-output integration or P6-P12.

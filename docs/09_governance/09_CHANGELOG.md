@@ -1,5 +1,33 @@
 # 09_CHANGELOG
 
+## 2026-06-04 — v2.28
+
+- Reviewed P5 synthetic/local evaluation evidence taxonomy and promotion
+  guardrails.
+- Added
+  `docs/05_evaluation/05T_SYNTHETIC_LOCAL_EVIDENCE_TAXONOMY_AND_PROMOTION_GUARDRAILS_REVIEW.md`.
+- The review records that current evidence labels, non-evidence warnings,
+  promotion/ranking guardrails, LuckyJ / Tenhou / stable-dan claim boundaries
+  and stage-boundary wording are consistent across the current P5 stable-dan,
+  legal-action, tiny benchmark, offline envelope and metric registry artifacts.
+- No blocker was found.
+- Evidence grade:
+  - P5 synthetic/local evidence taxonomy and promotion guardrails review
+    evidence only.
+- Follow-up:
+  - P5 has many completed subtracks and should not continue indefinitely
+    through more schema/review churn.
+  - The next P5-only task is to define evaluation groundwork closure criteria
+    and an exit readiness checklist.
+- Updated handoff, docs index, 05F, 05J, 05S, stage contract, backlog,
+  technical plan, evidence log, risk register and `10_NEXT`.
+- No production code, tests, fixtures, metric implementation, registry code
+  changes, evidence taxonomy definition changes, promotion criteria changes,
+  CLI, broad ingestion, latency measurement, fixed-position exact-match
+  computation, model-output integration, legal-action checker, canonicalizer,
+  broad evaluator, league, runner, training, tuning, self-play, Tenhou
+  connection, external-data reader or P6-P12 work was added.
+
 ## 2026-05-30 — v2.27
 
 - Reviewed P5 metric registry consistency across stable-dan, legal-action and

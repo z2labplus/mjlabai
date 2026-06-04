@@ -322,10 +322,18 @@ The next narrow task should be:
 Review P5 synthetic/local evaluation evidence taxonomy and promotion guardrails.
 ```
 
-That task should remain docs/review only. It should review the vocabulary used
-for P5 synthetic/local evidence grades, non-evidence warnings and promotion
-guardrails across current stable-dan, legal-action, tiny benchmark and envelope
-review artifacts.
+That follow-up review is recorded in:
+
+```text
+docs/05_evaluation/05T_SYNTHETIC_LOCAL_EVIDENCE_TAXONOMY_AND_PROMOTION_GUARDRAILS_REVIEW.md
+```
+
+It found no blocker in the current evidence taxonomy or promotion guardrails
+and recommends defining P5 evaluation groundwork closure criteria next. The
+follow-up remained docs/review only and reviewed the vocabulary used for P5
+synthetic/local evidence grades, non-evidence warnings and promotion guardrails
+across current stable-dan, legal-action, tiny benchmark and envelope review
+artifacts.
 
 The next task must not:
 

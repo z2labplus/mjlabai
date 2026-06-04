@@ -8,6 +8,14 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-04 — Evidence taxonomy and promotion guardrails review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Evidence taxonomy review is mistaken for permission to promote candidates, change promotion criteria or claim model strength from P5 synthetic/local diagnostics. | Governance / Evaluation | High | Medium | `05T` states the review is docs-only and not promotion criteria change, model-strength evidence, Tenhou evidence, stable-dan ranked-game evidence or LuckyJ comparison. | Open |
+| P5 continues indefinitely through additional schema/review gates without defining closure criteria. | Planning / Scope | Medium-High | Medium | `05T`, handoff and `10_NEXT` set the next task to define P5 evaluation groundwork closure criteria and an exit readiness checklist. | Open |
+| Evidence labels are treated as interchangeable and lose subtrack-specific meaning. | Documentation / Evaluation | Medium | Medium | `05T` records an evidence taxonomy table that separates stable-dan, legal-action, engineering, schema, implementation review, envelope review and registry review labels. | Open |
+
 ## 2026-05-30 — Metric registry consistency review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

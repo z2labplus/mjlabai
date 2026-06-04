@@ -308,6 +308,15 @@ consistent across stable-dan, legal-action and tiny benchmark diagnostics. It
 does not change the rule that P5 synthetic/local diagnostics are not model
 ranking, candidate-promotion, Tenhou, stable-dan ranked-game or LuckyJ evidence.
 
+The synthetic/local evidence taxonomy and promotion guardrails review is
+recorded in
+`docs/05_evaluation/05T_SYNTHETIC_LOCAL_EVIDENCE_TAXONOMY_AND_PROMOTION_GUARDRAILS_REVIEW.md`.
+It confirms that current P5 evidence labels, non-evidence warnings and
+promotion guardrails are conservative and consistent. It does not change
+promotion criteria, ranking criteria or any requirement for future LuckyJ
+comparison. The next P5 task should define closure criteria and exit readiness
+for the evaluation groundwork stage before any broader work is considered.
+
 ### Level 5 — Promotion gate
 
 A candidate can enter the mainline only if:

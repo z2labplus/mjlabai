@@ -412,3 +412,14 @@ That review confirms the current registry names, units, directions, statuses
 and evidence grades are consistent across stable-dan, legal-action and tiny
 benchmark diagnostics for the current P5 scope. It does not change registry
 code, units or directions.
+
+The evidence taxonomy and promotion guardrails review is recorded in:
+
+```text
+docs/05_evaluation/05T_SYNTHETIC_LOCAL_EVIDENCE_TAXONOMY_AND_PROMOTION_GUARDRAILS_REVIEW.md
+```
+
+That review confirms that envelope warnings, evidence references, safety flags
+and P5 synthetic/local evidence labels remain non-promotion diagnostics. It
+does not change the envelope schema, evidence taxonomy definitions or promotion
+criteria.

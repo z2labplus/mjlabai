@@ -56,6 +56,7 @@ docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md
 docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md
 docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md
 docs/05_evaluation/05S_METRIC_REGISTRY_CONSISTENCY_REVIEW.md
+docs/05_evaluation/05T_SYNTHETIC_LOCAL_EVIDENCE_TAXONOMY_AND_PROMOTION_GUARDRAILS_REVIEW.md
 docs/07_development_execution/07E_ALGORITHM_DISCOVERY_WORKFLOW.md
 docs/07_development_execution/07F_ALGORITHM_TABLE_BUILD_TASK.md
 docs/07_development_execution/07G_RACING_FUNNEL_EXECUTION_TASK.md
@@ -115,6 +116,13 @@ benchmark diagnostics. It records that metric names, units, directions,
 current status, source notes and evidence grades are consistent for the current
 P5 scope. It is docs-only review evidence, not metric implementation,
 registry-code change, model-strength evidence or LuckyJ comparison evidence.
+
+`docs/05_evaluation/05T_SYNTHETIC_LOCAL_EVIDENCE_TAXONOMY_AND_PROMOTION_GUARDRAILS_REVIEW.md`
+reviews P5 synthetic/local evidence taxonomy and promotion guardrails across
+stable-dan, legal-action, tiny benchmark, offline envelope and metric registry
+artifacts. It records that current evidence labels and non-evidence warnings are
+consistent, and recommends defining P5 closure criteria next. It is docs-only
+review evidence, not a promotion criteria change or model-strength evidence.
 
 ## Current rule
 

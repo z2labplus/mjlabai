@@ -33,8 +33,9 @@ P5 tiny benchmark harness = implemented for project-authored synthetic fixture o
 P5 tiny benchmark harness implementation review = complete
 P5 offline envelope coverage review for synthetic tiny benchmark diagnostics = complete
 P5 metric registry consistency review across stable-dan, legal-action and tiny benchmark diagnostics = complete
+P5 synthetic/local evidence taxonomy and promotion guardrails review = complete
 P5 overall = still in progress
-Next = review P5 synthetic/local evaluation evidence taxonomy and promotion guardrails
+Next = define P5 evaluation groundwork closure criteria and exit readiness checklist
 ```
 
 ## AI role
@@ -105,7 +106,7 @@ The CLI-free stable-dan report smoke fixture is a synthetic-only code-path test.
 
 The stable-dan evaluation API documentation is an API-only guide. It must not become a CLI, league harness, file ingestion system, training path, self-play path or real Tenhou integration.
 
-The stable-dan evaluation groundwork subtrack is complete for current P5 scope. P5 overall is still open. The offline result envelope schema and synthetic stable-dan envelope smoke test are implemented. The legal-action / invalid-action metric specification and action canonicalization schema are defined, the synthetic legal-action metric fixture schema smoke test is implemented, the synthetic evaluator boundary is defined, the first synthetic evaluator is implemented for the project-authored fixture only, synthetic parse-failure fixture coverage is implemented, the legal-action synthetic evaluator coverage review is complete for the current synthetic-only `dahai` + strict scope, the P5 tiny benchmark harness boundary is defined before implementation, the P5 tiny benchmark harness synthetic fixture schema smoke test is implemented, the fixture schema coverage review confirms it is sufficient as a front-door input boundary for a future P5-only harness implementation, the P5 tiny benchmark harness is implemented only for the project-authored synthetic fixture, the implementation review is complete for the current fixture scope, the offline envelope coverage review confirms the current synthetic tiny benchmark diagnostic can be represented with the existing envelope, and the metric registry consistency review confirms current names, units, directions, statuses and evidence grades are consistent. The next evaluation-foundation task may review only P5 synthetic/local evaluation evidence taxonomy and promotion guardrails; it must not jump to code changes, broad evaluator execution, file ingestion, CLI, league execution, model-output integration, real data, P6-P12 or model-strength claims.
+The stable-dan evaluation groundwork subtrack is complete for current P5 scope. P5 overall is still open. The offline result envelope schema and synthetic stable-dan envelope smoke test are implemented. The legal-action / invalid-action metric specification and action canonicalization schema are defined, the synthetic legal-action metric fixture schema smoke test is implemented, the synthetic evaluator boundary is defined, the first synthetic evaluator is implemented for the project-authored fixture only, synthetic parse-failure fixture coverage is implemented, the legal-action synthetic evaluator coverage review is complete for the current synthetic-only `dahai` + strict scope, the P5 tiny benchmark harness boundary is defined before implementation, the P5 tiny benchmark harness synthetic fixture schema smoke test is implemented, the fixture schema coverage review confirms it is sufficient as a front-door input boundary for a future P5-only harness implementation, the P5 tiny benchmark harness is implemented only for the project-authored synthetic fixture, the implementation review is complete for the current fixture scope, the offline envelope coverage review confirms the current synthetic tiny benchmark diagnostic can be represented with the existing envelope, the metric registry consistency review confirms current names, units, directions, statuses and evidence grades are consistent, and the evidence taxonomy / promotion guardrails review confirms current P5 synthetic/local evidence labels and non-evidence warnings remain conservative. The next evaluation-foundation task should define P5 closure criteria and an exit readiness checklist so P5 does not continue indefinitely; it must not jump to code changes, broad evaluator execution, file ingestion, CLI, league execution, model-output integration, real data, P6-P12 or model-strength claims.
 
 ## Output files
 
@@ -134,4 +135,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review P5 synthetic/local evaluation evidence taxonomy and promotion guardrails.
+Define P5 evaluation groundwork closure criteria and exit readiness checklist.
