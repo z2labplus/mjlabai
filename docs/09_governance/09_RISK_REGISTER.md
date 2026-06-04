@@ -8,6 +8,14 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-04 — P5 closure criteria risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Closure criteria specification is mistaken for P5 closure or P6-P12 entry approval. | Governance / Scope | High | Medium | `05U`, evidence log and `10_NEXT` state P5 remains open until a closure review gate confirms readiness. | Open |
+| Deferred items such as real data ingestion, model-output integration or latency measurement are treated as required blockers for current P5 closure. | Planning / Scope | Medium-High | Medium | `05U` separates required remaining P5 items from deferred later-stage items and records defer reasons. | Open |
+| P5 closure review skips human review or ignores failing validation. | Governance / Quality | High | Low-Medium | `05U` lists final human review, passing tests and governance consistency as required before closure. | Open |
+
 ## 2026-06-04 — Evidence taxonomy and promotion guardrails review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

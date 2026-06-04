@@ -57,6 +57,7 @@ docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md
 docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md
 docs/05_evaluation/05S_METRIC_REGISTRY_CONSISTENCY_REVIEW.md
 docs/05_evaluation/05T_SYNTHETIC_LOCAL_EVIDENCE_TAXONOMY_AND_PROMOTION_GUARDRAILS_REVIEW.md
+docs/05_evaluation/05U_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_CHECKLIST.md
 docs/07_development_execution/07E_ALGORITHM_DISCOVERY_WORKFLOW.md
 docs/07_development_execution/07F_ALGORITHM_TABLE_BUILD_TASK.md
 docs/07_development_execution/07G_RACING_FUNNEL_EXECUTION_TASK.md
@@ -123,6 +124,12 @@ stable-dan, legal-action, tiny benchmark, offline envelope and metric registry
 artifacts. It records that current evidence labels and non-evidence warnings are
 consistent, and recommends defining P5 closure criteria next. It is docs-only
 review evidence, not a promotion criteria change or model-strength evidence.
+
+`docs/05_evaluation/05U_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_CHECKLIST.md`
+defines P5 evaluation groundwork closure criteria and an exit readiness
+checklist. It records that P5 is near closure but remains open until reviewed.
+It is docs-only specification evidence, not P5 closure itself, P6-P12 entry
+approval or model-strength evidence.
 
 ## Current rule
 

@@ -8,6 +8,50 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-04 — P5 closure criteria and exit readiness specification
+
+- Type: internal documentation / closure-criteria specification evidence.
+- Stage: P5 evaluation foundation.
+- Added document:
+  - `docs/05_evaluation/05U_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_CHECKLIST.md`.
+- Specification contents:
+  - current P5 scope.
+  - current P5 subtrack inventory.
+  - P5 closure criteria.
+  - exit readiness checklist.
+  - required remaining P5 items.
+  - deferred items.
+  - non-entry conditions for P6-P12.
+  - closure readiness assessment.
+- Assessment:
+  - P5 closure criteria are defined.
+  - P5 remains open until reviewed.
+  - P5 is near closure.
+  - P5 must not enter P6-P12 yet.
+- Evidence grade:
+  - P5 evaluation groundwork closure criteria and exit readiness specification
+    evidence only.
+- Not evidence of:
+  - P5 closure itself.
+  - P6-P12 entry approval.
+  - production evaluator expansion.
+  - metric implementation.
+  - registry code change.
+  - promotion criteria change.
+  - latency measurement.
+  - legal-action checker or canonicalizer.
+  - fixed-position exact-match computation.
+  - model-output integration.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P6-P12.
+- Next task:
+  - Review P5 evaluation groundwork closure criteria and exit readiness
+    checklist.
+
 ### 2026-06-04 — P5 evidence taxonomy and promotion guardrails review
 
 - Type: internal documentation / review-gate evidence.

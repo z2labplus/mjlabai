@@ -348,6 +348,16 @@ automatically. It should define the minimum necessary closure criteria,
 remaining required items, optional deferred items and explicit non-entry
 conditions for P6-P12.
 
+That follow-up specification is recorded in:
+
+```text
+docs/05_evaluation/05U_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_CHECKLIST.md
+```
+
+It defines P5 closure criteria and an exit readiness checklist, records P5 as
+near closure, and keeps P5 open until a later closure review gate confirms
+readiness.
+
 The next task must not:
 
 - add production code.
