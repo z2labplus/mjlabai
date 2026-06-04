@@ -207,20 +207,38 @@ Current interpretation:
 - P5 should not enter P6-P12.
 - At least one closure review gate is still required.
 
+## Review Status
+
+The closure criteria and exit readiness checklist were reviewed in:
+
+```text
+docs/05_evaluation/05V_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_REVIEW.md
+```
+
+Review result:
+
+```text
+closure criteria review can close, but P5 remains open pending final P5
+handoff/evidence index finalization and final closure review.
+```
+
+The review found no closure-criteria blocker and did not approve P5 closure or
+P6-P12 entry.
+
 ## Next P5-Only Task Recommendation
 
 The next narrow task should be:
 
 ```text
-Review P5 evaluation groundwork closure criteria and exit readiness checklist.
+Finalize P5 handoff and evidence index before final closure review.
 ```
 
-That task should remain a docs-only review gate. It should not close P5 unless
-the review explicitly confirms readiness and sets a later final closure review
-or finalization task. It must not enter P6-P12 or add code, tests, fixtures,
-metrics, registry changes, CLI, latency measurement, fixed-position
-exact-match, model-output integration, real-data ingestion, training, self-play,
-league or runner behavior.
+That task should remain docs-only finalization. It should not close P5 or enter
+P6-P12. It should synchronize final P5 handoff and evidence-index materials
+for a later final closure review gate. It must not add code, tests, fixtures,
+metrics, registry changes, CLI, latency measurement, fixed-position exact-match,
+model-output integration, real-data ingestion, training, self-play, league or
+runner behavior.
 
 ## Evidence Grade
 

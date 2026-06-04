@@ -8,6 +8,51 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-04 — P5 closure criteria and exit readiness review
+
+- Type: internal documentation / review-gate evidence.
+- Stage: P5 evaluation foundation.
+- Added review document:
+  - `docs/05_evaluation/05V_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_REVIEW.md`.
+- Reviewed artifact:
+  - `docs/05_evaluation/05U_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_CHECKLIST.md`.
+- Review findings:
+  - `05U` scope is correct.
+  - current P5 subtrack inventory is complete enough for finalization.
+  - P5 closure criteria are sufficient.
+  - the exit readiness checklist is executable.
+  - required remaining P5 items are correctly limited to review/finalization.
+  - deferred items are correctly classified and are not current P5 blockers.
+  - P6-P12 non-entry conditions are sufficient.
+  - no closure-criteria blocker was found.
+- Review conclusion:
+  - closure criteria review can close.
+  - P5 remains open pending final P5 handoff/evidence index finalization and a
+    later final closure review.
+  - P5 must not enter P6-P12 yet.
+- Evidence grade:
+  - P5 evaluation groundwork closure criteria and exit readiness review
+    evidence only.
+- Not evidence of:
+  - P5 closure itself.
+  - P6-P12 entry approval.
+  - production evaluator expansion.
+  - metric implementation.
+  - registry code change.
+  - promotion criteria change.
+  - latency measurement.
+  - legal-action checker or canonicalizer.
+  - fixed-position exact-match computation.
+  - model-output integration.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P6-P12.
+- Next task:
+  - Finalize P5 handoff and evidence index before final closure review.
+
 ### 2026-06-04 — P5 closure criteria and exit readiness specification
 
 - Type: internal documentation / closure-criteria specification evidence.

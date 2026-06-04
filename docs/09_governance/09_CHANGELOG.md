@@ -1,5 +1,40 @@
 # 09_CHANGELOG
 
+## 2026-06-04 — v2.30
+
+- Reviewed P5 evaluation groundwork closure criteria and the exit readiness
+  checklist.
+- Added
+  `docs/05_evaluation/05V_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_REVIEW.md`.
+- Review findings:
+  - `05U` scope is correct.
+  - current P5 subtrack inventory is complete enough for finalization.
+  - P5 closure criteria are sufficient.
+  - the exit readiness checklist is executable.
+  - required remaining P5 items are correctly limited to review/finalization.
+  - deferred items are correctly classified.
+  - P6-P12 non-entry conditions are sufficient.
+  - no closure-criteria blocker was found.
+- Review conclusion:
+  - closure criteria review can close.
+  - P5 remains open pending final P5 handoff/evidence index finalization and a
+    later final closure review.
+  - P5 must not enter P6-P12 yet.
+- Evidence grade:
+  - P5 evaluation groundwork closure criteria and exit readiness review
+    evidence only.
+- Updated handoff, docs index, stage contract, backlog, technical plan,
+  evidence log, risk register and `10_NEXT`.
+- Set the next P5-only task to `Finalize P5 handoff and evidence index before
+  final closure review.`
+- No P5 closure, P6-P12 entry approval, production code, tests, fixtures,
+  metric implementation, registry code changes, evidence taxonomy definition
+  changes, promotion criteria changes, CLI, broad ingestion, latency
+  measurement, fixed-position exact-match computation, model-output
+  integration, legal-action checker, canonicalizer, broad evaluator, league,
+  runner, training, tuning, self-play, Tenhou connection or external-data
+  reader was added.
+
 ## 2026-06-04 — v2.29
 
 - Defined P5 evaluation groundwork closure criteria and an exit readiness

@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Review P5 evaluation groundwork closure criteria and exit readiness checklist.
+- [ ] Finalize P5 handoff and evidence index before final closure review.
 
 Current execution charter:
 
@@ -24,18 +24,19 @@ Limits:
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
-- For the next step, review only P5 evaluation groundwork closure criteria and exit readiness checklist.
+- For the next step, finalize only P5 handoff and evidence index before final closure review.
 - Keep the work tied to evaluation metrics; do not expand into league, training, self-play or real Tenhou integration.
 - Use only offline synthetic/local inputs; do not read Tenhou accounts, online platforms or external logs.
 - Do not add CLI, broad file ingestion, league harness, external-data readers or new model code.
 - Do not expand the tiny benchmark harness beyond the project-authored synthetic fixture and repo-local synthetic/local inputs.
 - Any harness output is P5 synthetic/local engineering diagnostic evidence only, not model-strength evidence, Tenhou evidence, stable-dan evidence or LuckyJ `10.68` comparison.
+- Do not close P5 in the next task; prepare the final closure review only.
 - Do not add production evaluator logic in the next task.
-- Do not add new production code, tests, fixtures, CLI, benchmark expansion, latency measurement, metric implementation, registry code changes, model-output integration or broad file ingestion in the next task.
+- Do not add new production code, tests, fixtures, CLI, benchmark expansion, latency measurement, metric implementation, registry code changes, model-output integration, broad file ingestion, evidence taxonomy definition changes or promotion criteria changes in the next task.
 - Do not connect tiny benchmark planning to model code, Akochan `system.exe`, third-party binaries, real Tenhou, real haifu, external logs or platform data.
 - Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not add model-output integration, broad file ingestion, new model code or latency measurement code.
-- Do not change metric units, directions, evidence taxonomy definitions, promotion criteria or registry definitions in the next task; record closure checklist review findings only unless a later implementation task explicitly permits code.
+- Do not change metric units, directions, evidence taxonomy definitions, promotion criteria or registry definitions in the next task; synchronize final P5 handoff/evidence index docs only unless a later implementation task explicitly permits code.
 - Do not read platform data or use model weights.
 - Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
 - Do not claim the tiny benchmark harness envelope is model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
@@ -127,6 +128,7 @@ Limits:
 - [x] 2026-05-30 Reviewed P5 metric registry consistency across stable-dan, legal-action and tiny benchmark diagnostics: added `docs/05_evaluation/05S_METRIC_REGISTRY_CONSISTENCY_REVIEW.md`, recorded that current registry names, units, directions, statuses/source notes and evidence grades are consistent across the current P5 stable-dan, legal-action and tiny benchmark diagnostics, found no blocker, noted that future tiny benchmark latency/fixed-position names remain planning names and not current registered/emitted metrics, and set the next P5-only task to review synthetic/local evidence taxonomy and promotion guardrails.
 - [x] 2026-06-04 Reviewed P5 synthetic/local evaluation evidence taxonomy and promotion guardrails: added `docs/05_evaluation/05T_SYNTHETIC_LOCAL_EVIDENCE_TAXONOMY_AND_PROMOTION_GUARDRAILS_REVIEW.md`, recorded that current evidence labels, non-evidence warnings, promotion/ranking guardrails, LuckyJ/Tenhou/stable-dan claim boundaries and stage-boundary wording are consistent across current P5 diagnostics, found no blocker, and set the next P5-only task to define evaluation groundwork closure criteria and an exit readiness checklist.
 - [x] 2026-06-04 Defined P5 evaluation groundwork closure criteria and exit readiness checklist: added `docs/05_evaluation/05U_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_CHECKLIST.md`, recorded current P5 scope, current-scope complete subtracks, closure criteria, exit readiness checklist, required remaining P5 items, deferred items and non-entry conditions for P6-P12, and kept P5 open until a closure review gate confirms readiness.
-- [ ] Review P5 evaluation groundwork closure criteria and exit readiness checklist.
+- [x] 2026-06-04 Reviewed P5 evaluation groundwork closure criteria and exit readiness checklist: added `docs/05_evaluation/05V_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_REVIEW.md`, confirmed that `05U` scope is correct, current P5 subtrack inventory is complete enough for finalization, closure criteria are sufficient, the exit readiness checklist is executable, deferred items are correctly classified, P6-P12 non-entry conditions are sufficient and no closure-criteria blocker was found. P5 remains open pending final P5 handoff/evidence index finalization and a later final closure review.
+- [ ] Finalize P5 handoff and evidence index before final closure review.
 - [ ] Deferred: broader tiny benchmark harness expansion for legal-action rate, latency and fixed-position decisions. Current P5 implemented only the project-authored synthetic fixture harness; broader latency measurement, fixed-position exact-match, model-output integration, CLI, file ingestion, real data, league, runner, training, self-play and P6-P12 work require later explicit approval.
 - [ ] Update `09_EVIDENCE_LOG.md` whenever new external evidence is added.

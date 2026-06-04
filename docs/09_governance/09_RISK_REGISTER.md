@@ -8,6 +8,14 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-04 — P5 closure criteria review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Closure criteria review is mistaken for P5 closure or P6-P12 entry approval. | Governance / Scope | High | Medium | `05V`, evidence log, handoff and `10_NEXT` state that the review can close but P5 remains open pending final handoff/evidence index finalization and final closure review. | Open |
+| Finalization is used to sneak in production code, metric implementation, registry changes, CLI, latency measurement, model-output integration or real-data paths. | Scope / Engineering | High | Medium | The next task is docs-only finalization and explicitly forbids code, tests, fixtures, registry changes, promotion criteria changes, real data, model output, CLI, broad ingestion and P6-P12 work. | Open |
+| Deferred later-stage items are reclassified as current blockers and cause P5 to extend indefinitely. | Planning / Scope | Medium-High | Medium | `05V` confirms deferred items are correctly classified and not blockers for current P5 finalization. | Open |
+
 ## 2026-06-04 — P5 closure criteria risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
