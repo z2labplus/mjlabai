@@ -8,6 +8,14 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-05-30 — Metric registry consistency review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Metric registry consistency review is mistaken for permission to change registry code, implement future metrics or expand tiny benchmark diagnostics. | Scope / Governance | Medium-High | Medium | `05S` is docs-only and `10_NEXT` sets an evidence taxonomy / promotion guardrail review as the next P5-only task. | Open |
+| Future tiny benchmark planning names such as latency percentiles are mistaken for current registered/emitted metrics. | Evaluation / Documentation | Medium-High | Medium | `05S` records these names as future fixture planning names only and not current envelope metrics. | Open |
+| Direction values such as `higher_is_better = true` for `legal_action_rate` or `wrapper_smoke_success` are overclaimed as strength rankings. | Evaluation / Governance | High | Medium | `05S`, `05F` and evidence log state these are diagnostics only and not model-strength, Tenhou, stable-dan or LuckyJ evidence. | Open |
+
 ## 2026-05-30 — Tiny benchmark offline envelope coverage review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

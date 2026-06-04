@@ -1,5 +1,33 @@
 # 09_CHANGELOG
 
+## 2026-05-30 — v2.27
+
+- Reviewed P5 metric registry consistency across stable-dan, legal-action and
+  tiny benchmark diagnostics.
+- Added `docs/05_evaluation/05S_METRIC_REGISTRY_CONSISTENCY_REVIEW.md`.
+- The review records that current registry names, units, directions, current
+  statuses/source notes and evidence grades are consistent for the current P5
+  scope across:
+  - stable-dan synthetic report metrics.
+  - synthetic legal-action count/rate metrics.
+  - synthetic tiny benchmark diagnostic metric `wrapper_smoke_success`.
+- No blocker was found.
+- Non-blocking follow-up:
+  - tiny benchmark fixture names such as latency percentiles and
+    fixed-position exact-match remain future planning names, not current
+    registered/emitted metrics.
+- Evidence grade:
+  - P5 synthetic/local metric registry consistency review evidence only.
+- Updated handoff, docs index, 05F, 05J, 05R, stage contract, backlog,
+  technical plan, evidence log, risk register and `10_NEXT`.
+- Set the next P5-only task to `Review P5 synthetic/local evaluation evidence
+  taxonomy and promotion guardrails.`
+- No production code, tests, fixtures, metric implementation, registry code
+  changes, CLI, broad ingestion, latency measurement, fixed-position exact-match
+  computation, model-output integration, legal-action checker, canonicalizer,
+  broad evaluator, league, runner, training, tuning, self-play, Tenhou
+  connection, external-data reader or P6-P12 work was added.
+
 ## 2026-05-30 — v2.26
 
 - Reviewed the P5 offline evaluation result envelope coverage for synthetic tiny

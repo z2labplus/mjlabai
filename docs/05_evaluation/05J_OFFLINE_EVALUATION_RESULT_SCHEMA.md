@@ -401,3 +401,14 @@ That review found no blocker for representing the current diagnostic with
 synthetic/local warnings and evidence references. It does not change the schema,
 add metrics, measure latency, compute fixed-position exact-match, integrate
 model output or create strength evidence.
+
+The metric registry consistency review is recorded in:
+
+```text
+docs/05_evaluation/05S_METRIC_REGISTRY_CONSISTENCY_REVIEW.md
+```
+
+That review confirms the current registry names, units, directions, statuses
+and evidence grades are consistent across stable-dan, legal-action and tiny
+benchmark diagnostics for the current P5 scope. It does not change registry
+code, units or directions.

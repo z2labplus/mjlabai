@@ -8,6 +8,59 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-30 — P5 metric registry consistency review
+
+- Type: internal documentation / review-gate evidence.
+- Stage: P5 evaluation foundation.
+- Added review document:
+  - `docs/05_evaluation/05S_METRIC_REGISTRY_CONSISTENCY_REVIEW.md`.
+- Reviewed artifacts:
+  - `src/mjlabai/eval/offline_result.py`.
+  - `src/mjlabai/eval/stable_dan.py`.
+  - `src/mjlabai/eval/legal_action_metric.py`.
+  - `src/mjlabai/eval/tiny_benchmark_harness.py`.
+  - `docs/05_evaluation/05F_ALGORITHM_RANKING_PROTOCOL.md`.
+  - `docs/05_evaluation/05H_STABLE_DAN_EVALUATION_API.md`.
+  - `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`.
+  - `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md`.
+  - `docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md`.
+  - `docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md`.
+  - current P5 tests and synthetic fixtures.
+- Review conclusion:
+  - current registry names, units, directions, statuses/source notes and
+    evidence grades are consistent for the current P5 scope.
+  - no blocker was found.
+- Follow-up noted:
+  - tiny benchmark fixture names for future latency percentiles and
+    fixed-position exact-match remain planning names only; they are not current
+    registered/emitted metrics.
+- Evidence grade:
+  - P5 synthetic/local metric registry consistency review evidence only.
+- Not evidence of:
+  - production evaluator expansion.
+  - metric implementation.
+  - registry code change.
+  - latency measurement.
+  - legal-action checker or canonicalizer.
+  - fixed-position exact-match computation.
+  - model-output integration.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P6-P12.
+- Guardrails:
+  - No production code, tests or fixtures were added.
+  - No metric registry code, units or directions were changed.
+  - No CLI or broad file ingestion was added.
+  - No latency measurement or fixed-position exact-match computation was added.
+  - No model-output path, real Tenhou, real haifu, external-log or
+    platform-data path was added.
+- Next task:
+  - Review P5 synthetic/local evaluation evidence taxonomy and promotion
+    guardrails.
+
 ### 2026-05-30 — P5 offline envelope coverage review for tiny benchmark diagnostics
 
 - Type: internal documentation / review-gate evidence.

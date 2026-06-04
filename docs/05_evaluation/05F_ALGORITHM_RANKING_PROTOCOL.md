@@ -301,6 +301,13 @@ synthetic/local warnings and evidence references. It must not be used for model
 ranking, candidate promotion, Tenhou evidence, stable-dan evidence or LuckyJ
 comparison.
 
+The metric registry consistency review is recorded in
+`docs/05_evaluation/05S_METRIC_REGISTRY_CONSISTENCY_REVIEW.md`. It confirms the
+current P5 registry names, units, directions, statuses and evidence grades are
+consistent across stable-dan, legal-action and tiny benchmark diagnostics. It
+does not change the rule that P5 synthetic/local diagnostics are not model
+ranking, candidate-promotion, Tenhou, stable-dan ranked-game or LuckyJ evidence.
+
 ### Level 5 — Promotion gate
 
 A candidate can enter the mainline only if:

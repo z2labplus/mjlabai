@@ -257,6 +257,15 @@ The next task must not:
 - claim model strength, Tenhou ranked evidence, stable-dan evidence, LuckyJ
   `10.68` comparison or candidate promotion.
 
+That follow-up review has now been recorded in:
+
+```text
+docs/05_evaluation/05S_METRIC_REGISTRY_CONSISTENCY_REVIEW.md
+```
+
+It found no blocker and did not change registry code, metric units or metric
+directions.
+
 ## Verification
 
 Recommended validation:

@@ -55,6 +55,7 @@ docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md
 docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md
 docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md
 docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md
+docs/05_evaluation/05S_METRIC_REGISTRY_CONSISTENCY_REVIEW.md
 docs/07_development_execution/07E_ALGORITHM_DISCOVERY_WORKFLOW.md
 docs/07_development_execution/07F_ALGORITHM_TABLE_BUILD_TASK.md
 docs/07_development_execution/07G_RACING_FUNNEL_EXECUTION_TASK.md
@@ -107,6 +108,13 @@ synthetic tiny benchmark diagnostics. It records that `tiny_benchmark_harness`,
 synthetic/local warnings and evidence references are sufficient for the current
 fixture scope. It is docs-only review evidence, not model-strength evidence,
 Tenhou evidence, stable-dan evidence or LuckyJ comparison evidence.
+
+`docs/05_evaluation/05S_METRIC_REGISTRY_CONSISTENCY_REVIEW.md`
+reviews metric registry consistency across stable-dan, legal-action and tiny
+benchmark diagnostics. It records that metric names, units, directions,
+current status, source notes and evidence grades are consistent for the current
+P5 scope. It is docs-only review evidence, not metric implementation,
+registry-code change, model-strength evidence or LuckyJ comparison evidence.
 
 ## Current rule
 
