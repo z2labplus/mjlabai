@@ -8,6 +8,15 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-05-30 — Tiny benchmark harness implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The synthetic tiny benchmark harness is mistaken for a real benchmark harness or production evaluator. | Scope / Engineering | High | Medium | `05P` and tests state the harness loads only the fixed project-authored synthetic fixture and does not add CLI, broad ingestion, model output, real data, league or runner behavior. | Open |
+| `smoke_success` is mistaken for model strength, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | The envelope warnings, `05P`, evidence log and ranking protocol state the result is P5 synthetic/local engineering diagnostic evidence only. | Open |
+| The latency diagnostic plan is mistaken for measured latency or throughput. | Evaluation / Engineering | Medium-High | Medium | The harness validates plan shape only, stores `latency_ms = None` in the envelope and does not import timing APIs or measure latency. | Mitigated in implementation |
+| Future work expands from the synthetic harness into model-output integration, real data, CLI or P6-P12. | Scope / Compliance | High | Medium | `10_NEXT` sets a review gate as the next task and forbids model output, real Tenhou, real haifu, external logs, platform data, CLI, broad ingestion, league, runner and P6-P12. | Open |
+
 ## 2026-05-30 — Tiny benchmark fixture schema review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

@@ -175,7 +175,7 @@ considered complete for the current P5 schema-only boundary.
 The fixture schema is sufficient as the front-door input boundary for a future
 P5-only tiny benchmark harness implementation task.
 
-This conclusion does not mean:
+At the time of this schema review, this conclusion did not mean:
 
 - the harness is implemented.
 - latency is measured.
@@ -187,6 +187,12 @@ This conclusion does not mean:
 - P6-P12 work is authorized.
 
 P5 overall remains open.
+
+The later implementation is recorded separately in:
+
+```text
+docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md
+```
 
 ## Evidence Grade
 
@@ -212,7 +218,6 @@ It is not:
 
 The project still lacks:
 
-- tiny benchmark harness implementation.
 - latency measurement.
 - fixed-position exact-match calculation.
 - model-output adapter.
@@ -229,15 +234,35 @@ The project still lacks:
 - action-space expansion beyond `dahai` + strict.
 - stable-dan evidence from actual ranked games.
 
+## Follow-Up Implementation
+
+The follow-up implementation lives in:
+
+```text
+src/mjlabai/eval/tiny_benchmark_harness.py
+tests/eval/test_tiny_benchmark_harness.py
+docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md
+```
+
+It implements only the project-authored synthetic/local fixture harness that
+this review permitted. It does not expand into latency measurement,
+fixed-position exact-match, model-output integration, real data, CLI, broad
+file ingestion, league, runner, training, self-play, Tenhou access or P6-P12.
+
 ## Next P5-Only Task Recommendation
+
+This review's implementation recommendation has now been executed in:
+
+```text
+src/mjlabai/eval/tiny_benchmark_harness.py
+tests/eval/test_tiny_benchmark_harness.py
+```
 
 The next narrow P5-only task should be:
 
 ```text
-Implement P5 tiny benchmark harness for project-authored synthetic fixture only.
+Review P5 tiny benchmark harness implementation and define next P5-only evaluation task.
 ```
-
-This is only the next task name. It is not executed in this review.
 
 The next task must remain P5-only and may use only:
 

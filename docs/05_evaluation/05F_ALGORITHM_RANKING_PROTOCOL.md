@@ -275,6 +275,19 @@ future P5-only synthetic harness implementation, but it remains Level 1 /
 diagnostic-style P5 evidence only. It must not be used for model ranking,
 candidate promotion, Tenhou evidence or LuckyJ comparison.
 
+The implemented tiny benchmark harness is:
+
+```text
+src/mjlabai/eval/tiny_benchmark_harness.py
+tests/eval/test_tiny_benchmark_harness.py
+docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md
+```
+
+It remains Level 1 / diagnostic-style P5 evidence only. Its
+`wrapper_smoke_success` envelope metric only says the fixed synthetic fixture
+was validated and summarized; it must not be used for model ranking, candidate
+promotion, Tenhou evidence, stable-dan evidence or LuckyJ comparison.
+
 ### Level 5 — Promotion gate
 
 A candidate can enter the mainline only if:

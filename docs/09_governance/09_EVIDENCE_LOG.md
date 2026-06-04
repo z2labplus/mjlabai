@@ -8,6 +8,58 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-30 — P5 tiny benchmark harness implementation
+
+- Type: internal implementation / synthetic-local diagnostic evidence.
+- Stage: P5 evaluation foundation.
+- Added implementation:
+  - `src/mjlabai/eval/tiny_benchmark_harness.py`.
+- Added test:
+  - `tests/eval/test_tiny_benchmark_harness.py`.
+- Added implementation documentation:
+  - `docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md`.
+- Input boundary:
+  - fixed project-authored fixture only:
+    `tests/fixtures/eval/tiny_benchmark_harness_smoke.json`.
+  - no arbitrary path input.
+  - no CLI.
+  - no broad file ingestion.
+  - no real Tenhou, real haifu, external logs or platform data.
+- Output boundary:
+  - deterministic `TinyBenchmarkHarnessResult`.
+  - `smoke_success = true`.
+  - `fixed_position_record_count = 1`.
+  - optional `OfflineEvaluationResultEnvelope` with
+    `evaluation_type = "tiny_benchmark_harness"`, metric
+    `wrapper_smoke_success = true`, `sample_size = 1`, all safety flags false
+    and synthetic/local warnings.
+- Evidence grade:
+  - P5 synthetic/local engineering diagnostic evidence only.
+- Not evidence of:
+  - model strength.
+  - Tenhou ranked performance.
+  - LuckyJ `10.68` comparison.
+  - stable-dan evidence.
+  - policy quality.
+  - candidate promotion.
+  - latency benchmark results.
+  - production evaluator readiness.
+- Guardrails:
+  - No latency measurement code.
+  - No legal-action metric calculation inside the tiny benchmark harness.
+  - No fixed-position exact-match calculation.
+  - No model-output integration.
+  - No broad evaluator or canonicalizer.
+  - No legal-action checker or rule engine.
+  - No CLI or broad file ingestion.
+  - No league, runner, match harness, training, tuning, self-play or real
+    Tenhou connection.
+  - No third-party binary, `system.exe`, `libai.so`, model-weight or artifact
+    use.
+- Next task:
+  - Review P5 tiny benchmark harness implementation and define next P5-only
+    evaluation task.
+
 ### 2026-05-30 — P5 tiny benchmark fixture schema coverage review
 
 - Type: internal documentation / review-gate evidence.

@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Implement P5 tiny benchmark harness for project-authored synthetic fixture only.
+- [ ] Review P5 tiny benchmark harness implementation and define next P5-only evaluation task.
 
 Current execution charter:
 
@@ -24,13 +24,14 @@ Limits:
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
-- For the next step, implement only a P5 tiny benchmark harness for the project-authored synthetic fixture.
+- For the next step, review only the P5 tiny benchmark harness implementation and define the next P5-only evaluation task.
 - Keep the work tied to evaluation metrics; do not expand into league, training, self-play or real Tenhou integration.
 - Use only offline synthetic/local inputs; do not read Tenhou accounts, online platforms or external logs.
 - Do not add CLI, broad file ingestion, league harness, external-data readers or new model code.
 - Do not expand the tiny benchmark harness beyond the project-authored synthetic fixture and repo-local synthetic/local inputs.
 - Any harness output is P5 synthetic/local engineering diagnostic evidence only, not model-strength evidence, Tenhou evidence, stable-dan evidence or LuckyJ `10.68` comparison.
 - Do not add production evaluator logic in the next task.
+- Do not add new production code, tests, fixtures, CLI, benchmark expansion, latency measurement, model-output integration or broad file ingestion in the next task.
 - Do not connect tiny benchmark planning to model code, Akochan `system.exe`, third-party binaries, real Tenhou, real haifu, external logs or platform data.
 - Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not add model-output integration, broad file ingestion, new model code or latency measurement code.
@@ -118,6 +119,6 @@ Limits:
 - [x] Define P5 tiny benchmark harness boundary for legal-action rate, latency and fixed-position decisions before implementation.
 - [x] Add P5 tiny benchmark harness synthetic fixture schema smoke test.
 - [x] Review P5 tiny benchmark harness synthetic fixture schema smoke coverage and define next P5-only task.
-- [ ] Implement P5 tiny benchmark harness for project-authored synthetic fixture only.
+- [x] Implement P5 tiny benchmark harness for project-authored synthetic fixture only.
 - [ ] Create tiny benchmark harness for legal action rate, latency and fixed-position decisions.
 - [ ] Update `09_EVIDENCE_LOG.md` whenever new external evidence is added.

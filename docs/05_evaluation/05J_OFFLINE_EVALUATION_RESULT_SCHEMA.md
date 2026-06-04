@@ -365,3 +365,21 @@ python3 -m unittest tests/eval/test_offline_result.py
 - JSON serialization.
 
 These tests do not run a league, command runner, Tenhou connector, training job or external-data reader.
+
+## Tiny Benchmark Harness Envelope Note
+
+The P5 tiny benchmark harness implementation can wrap its fixed synthetic
+fixture smoke result in `OfflineEvaluationResultEnvelope` with:
+
+- `evaluation_stage = "P5"`.
+- `evaluation_type = "tiny_benchmark_harness"`.
+- `dataset_or_fixture_id = "tests/fixtures/eval/tiny_benchmark_harness_smoke.json"`.
+- metric `wrapper_smoke_success = true`.
+- `sample_size = 1`.
+- all safety flags false.
+- synthetic/local warnings.
+
+This envelope is synthetic/local engineering diagnostic evidence only. It does
+not record latency measurement, fixed-position exact-match, model output, real
+Tenhou, real haifu, external logs, platform data, model strength, stable-dan
+evidence or LuckyJ `10.68` comparison.

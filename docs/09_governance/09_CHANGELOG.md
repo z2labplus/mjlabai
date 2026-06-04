@@ -1,5 +1,36 @@
 # 09_CHANGELOG
 
+## 2026-05-30 — v2.24
+
+- Implemented the P5 tiny benchmark harness for the project-authored synthetic
+  fixture only.
+- Added `src/mjlabai/eval/tiny_benchmark_harness.py`.
+- Added exports in `src/mjlabai/eval/__init__.py`.
+- Added `tests/eval/test_tiny_benchmark_harness.py`.
+- Added `docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md`.
+- The harness:
+  - loads only `tests/fixtures/eval/tiny_benchmark_harness_smoke.json`.
+  - validates and summarizes legal-action diagnostic shape, latency plan shape
+    and fixed-position synthetic record shape.
+  - records deterministic `smoke_success = true` and
+    `fixed_position_record_count = 1`.
+  - can wrap the result in `OfflineEvaluationResultEnvelope` with
+    `evaluation_type = "tiny_benchmark_harness"`,
+    `wrapper_smoke_success = true`, `sample_size = 1`, all safety flags false
+    and synthetic/local warnings.
+- The harness does not measure latency, calculate legal-action metrics inside
+  the harness, compute fixed-position exact-match, connect model output, add
+  CLI/file ingestion, read real Tenhou / real haifu / external logs / platform
+  data, call third-party binaries, train, tune, self-play, run league/runner
+  behavior or enter P6-P12.
+- Evidence grade remains P5 synthetic/local engineering diagnostic evidence
+  only, not model-strength, Tenhou, stable-dan, LuckyJ `10.68`, policy-quality
+  or candidate-promotion evidence.
+- Updated handoff, docs index, 05J, 05N, 05O, stage contract, backlog,
+  technical plan, evidence log, risk register and `10_NEXT`.
+- Set the next P5-only task to `Review P5 tiny benchmark harness
+  implementation and define next P5-only evaluation task.`
+
 ## 2026-05-30 — v2.23
 
 - Reviewed the P5 tiny benchmark harness synthetic fixture schema smoke coverage.

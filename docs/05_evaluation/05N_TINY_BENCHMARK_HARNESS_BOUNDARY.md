@@ -336,17 +336,22 @@ This boundary does not solve:
 
 ## Next P5-Only Task
 
-After the fixture schema smoke coverage review, the next narrow task should be
-selected through `docs/10_next/10_NEXT.md`. The current implementation-boundary
-task is:
+After the fixture schema smoke coverage review, the project implemented the
+fixed synthetic fixture harness in:
 
 ```text
-Implement P5 tiny benchmark harness for project-authored synthetic fixture only.
+src/mjlabai/eval/tiny_benchmark_harness.py
+tests/eval/test_tiny_benchmark_harness.py
+docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md
 ```
 
-That future task must still remain P5-only, use the project-authored synthetic
-fixture boundary and avoid model-output integration, real data, CLI, broad file
-ingestion, league, runner, training, self-play, Tenhou access and P6-P12 work.
+That implementation remains inside this boundary: fixed project-authored
+synthetic fixture only, no latency measurement, no fixed-position exact-match,
+no model-output integration, no CLI, no broad ingestion, no real data, no
+league/runner/training/self-play/Tenhou access and no P6-P12 work.
+
+The next task should be selected through `docs/10_next/10_NEXT.md` and should
+review the implementation before any further P5 work.
 
 ## Verification
 
@@ -356,6 +361,7 @@ Recommended validation:
 
 ```bash
 git diff --check
+python3 -m unittest tests/eval/test_tiny_benchmark_harness.py
 python3 -m unittest tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py
 python3 -m unittest tests/eval/test_legal_action_fixture_schema_smoke.py
 python3 -m unittest tests/eval/test_legal_action_metric.py

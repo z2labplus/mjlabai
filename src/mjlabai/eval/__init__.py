@@ -45,6 +45,17 @@ from mjlabai.eval.legal_action_metric import (
     build_synthetic_legal_action_metric_envelope,
     evaluate_synthetic_legal_action_fixture,
 )
+from mjlabai.eval.tiny_benchmark_harness import (
+    PROJECT_TINY_BENCHMARK_FIXTURE_ID,
+    PROJECT_TINY_BENCHMARK_FIXTURE_PATH,
+    TINY_BENCHMARK_FIXTURE_SCHEMA_VERSION,
+    TINY_BENCHMARK_FIXTURE_TYPE,
+    TinyBenchmarkHarnessResult,
+    build_tiny_benchmark_harness_envelope,
+    evaluate_tiny_benchmark_harness_fixture,
+    load_project_tiny_benchmark_harness_fixture,
+    run_project_tiny_benchmark_harness,
+)
 
 __all__ = [
     "DEFAULT_MAX_UNDEFINED_RATE_FOR_STABLE_DAN_REPORT",
@@ -61,6 +72,8 @@ __all__ = [
     "OfflineEvaluationResultEnvelope",
     "OfflineEvaluationSafetyFlags",
     "OfflineReproducibilityMetadata",
+    "PROJECT_TINY_BENCHMARK_FIXTURE_ID",
+    "PROJECT_TINY_BENCHMARK_FIXTURE_PATH",
     "ROOM_FORMULAS",
     "StableDanBootstrapResult",
     "StableDanBootstrapUndefinedError",
@@ -70,6 +83,9 @@ __all__ = [
     "StableDanSampleSizeAssessment",
     "StableDanThresholdComparison",
     "StableDanUndefinedError",
+    "TINY_BENCHMARK_FIXTURE_SCHEMA_VERSION",
+    "TINY_BENCHMARK_FIXTURE_TYPE",
+    "TinyBenchmarkHarnessResult",
     "assess_stable_dan_sample_size",
     "aggregate_placement_counts",
     "aggregate_placement_records",
@@ -77,11 +93,15 @@ __all__ = [
     "bootstrap_stable_dan_ci",
     "build_synthetic_legal_action_metric_envelope",
     "build_stable_dan_evaluation_report",
+    "build_tiny_benchmark_harness_envelope",
     "calculate_stable_dan_from_placements",
     "calculate_stable_dan",
     "compare_stable_dan_to_threshold",
     "evaluate_synthetic_legal_action_fixture",
+    "evaluate_tiny_benchmark_harness_fixture",
     "get_metric_definition",
     "list_metric_definitions",
+    "load_project_tiny_benchmark_harness_fixture",
     "placement_rates",
+    "run_project_tiny_benchmark_harness",
 ]

@@ -52,6 +52,7 @@ docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md
 docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md
 docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md
 docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md
+docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md
 docs/07_development_execution/07E_ALGORITHM_DISCOVERY_WORKFLOW.md
 docs/07_development_execution/07F_ALGORITHM_TABLE_BUILD_TASK.md
 docs/07_development_execution/07G_RACING_FUNNEL_EXECUTION_TASK.md
@@ -83,6 +84,13 @@ the fixture schema is sufficient as a front-door input boundary for a future
 P5-only synthetic/local tiny benchmark harness implementation task. It is
 docs-only and not model-strength evidence, Tenhou evidence, stable-dan evidence
 or LuckyJ comparison evidence.
+
+`docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md`
+records the P5 tiny benchmark harness implementation for the project-authored
+synthetic fixture only. The implementation validates and summarizes the fixed
+synthetic fixture and can emit an `OfflineEvaluationResultEnvelope`; it does not
+measure latency, compute fixed-position exact-match, connect model output,
+read real data, add CLI/file ingestion or provide strength evidence.
 
 ## Current rule
 
