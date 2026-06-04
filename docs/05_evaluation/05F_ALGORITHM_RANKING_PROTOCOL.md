@@ -288,6 +288,10 @@ It remains Level 1 / diagnostic-style P5 evidence only. Its
 was validated and summarized; it must not be used for model ranking, candidate
 promotion, Tenhou evidence, stable-dan evidence or LuckyJ comparison.
 
+The implementation review is recorded in
+`docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md`; it
+does not change the evidence grade or authorize candidate promotion.
+
 ### Level 5 — Promotion gate
 
 A candidate can enter the mainline only if:

@@ -135,6 +135,18 @@ It is not:
 - candidate-promotion evidence.
 - P6-P12 evidence.
 
+## Implementation Review
+
+The implementation review is recorded in:
+
+```text
+docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md
+```
+
+That review closes the current implementation for the project-authored
+synthetic/local fixture scope and keeps the evidence grade limited to P5
+synthetic/local implementation review evidence.
+
 ## Validation
 
 Expected validation commands:

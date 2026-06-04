@@ -53,6 +53,7 @@ docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md
 docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md
 docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md
 docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md
+docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md
 docs/07_development_execution/07E_ALGORITHM_DISCOVERY_WORKFLOW.md
 docs/07_development_execution/07F_ALGORITHM_TABLE_BUILD_TASK.md
 docs/07_development_execution/07G_RACING_FUNNEL_EXECUTION_TASK.md
@@ -91,6 +92,12 @@ synthetic fixture only. The implementation validates and summarizes the fixed
 synthetic fixture and can emit an `OfflineEvaluationResultEnvelope`; it does not
 measure latency, compute fixed-position exact-match, connect model output,
 read real data, add CLI/file ingestion or provide strength evidence.
+
+`docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md`
+reviews the P5 tiny benchmark harness implementation and records that it can
+close for the current project-authored synthetic/local fixture scope. It is
+docs-only review evidence, not model-strength evidence, Tenhou evidence,
+stable-dan evidence or LuckyJ comparison evidence.
 
 ## Current rule
 

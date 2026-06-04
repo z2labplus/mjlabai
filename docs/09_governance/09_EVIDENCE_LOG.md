@@ -8,6 +8,49 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-30 — P5 tiny benchmark harness implementation review
+
+- Type: internal documentation / review-gate evidence.
+- Stage: P5 evaluation foundation.
+- Added review document:
+  - `docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md`.
+- Reviewed artifacts:
+  - `src/mjlabai/eval/tiny_benchmark_harness.py`.
+  - `src/mjlabai/eval/__init__.py`.
+  - `tests/eval/test_tiny_benchmark_harness.py`.
+  - `tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py`.
+  - `tests/fixtures/eval/tiny_benchmark_harness_smoke.json`.
+  - `docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md`.
+  - related P5 boundary/envelope/ranking docs.
+- Review conclusion:
+  - current implementation can close for the project-authored synthetic/local
+    fixture scope.
+  - no blocker was found.
+- Evidence grade:
+  - P5 synthetic/local tiny benchmark harness implementation review evidence
+    only.
+- Not evidence of:
+  - production evaluator expansion.
+  - latency measurement.
+  - legal-action metric computation inside the tiny harness.
+  - fixed-position exact-match computation.
+  - model-output integration.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P6-P12.
+- Guardrails:
+  - No production code, tests or fixtures were added.
+  - No CLI or broad file ingestion was added.
+  - No model-output path or model/API call was added.
+  - No real Tenhou, real haifu, external-log or platform-data path was added.
+  - No third-party binary, Akochan `system.exe` or `libai.so` call was added.
+- Next task:
+  - Review P5 offline evaluation result envelope coverage for synthetic tiny
+    benchmark diagnostics.
+
 ### 2026-05-30 — P5 tiny benchmark harness implementation
 
 - Type: internal implementation / synthetic-local diagnostic evidence.

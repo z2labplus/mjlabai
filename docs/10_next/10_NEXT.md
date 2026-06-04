@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Review P5 tiny benchmark harness implementation and define next P5-only evaluation task.
+- [ ] Review P5 offline evaluation result envelope coverage for synthetic tiny benchmark diagnostics.
 
 Current execution charter:
 
@@ -24,7 +24,7 @@ Limits:
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
-- For the next step, review only the P5 tiny benchmark harness implementation and define the next P5-only evaluation task.
+- For the next step, review only P5 offline evaluation result envelope coverage for synthetic tiny benchmark diagnostics.
 - Keep the work tied to evaluation metrics; do not expand into league, training, self-play or real Tenhou integration.
 - Use only offline synthetic/local inputs; do not read Tenhou accounts, online platforms or external logs.
 - Do not add CLI, broad file ingestion, league harness, external-data readers or new model code.
@@ -37,6 +37,7 @@ Limits:
 - Do not add model-output integration, broad file ingestion, new model code or latency measurement code.
 - Do not read platform data or use model weights.
 - Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
+- Do not claim the tiny benchmark harness envelope is model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
 - Do not enter P6-P12.
 - Do not modify unrelated files.
 
@@ -120,5 +121,6 @@ Limits:
 - [x] Add P5 tiny benchmark harness synthetic fixture schema smoke test.
 - [x] Review P5 tiny benchmark harness synthetic fixture schema smoke coverage and define next P5-only task.
 - [x] Implement P5 tiny benchmark harness for project-authored synthetic fixture only.
+- [x] 2026-05-30 Reviewed P5 tiny benchmark harness implementation: added `docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md`, recorded that the implementation can close for the current project-authored synthetic/local fixture scope with no blocker, kept the evidence grade at P5 synthetic/local implementation review evidence only, and set the next P5-only task to review offline result envelope coverage for synthetic tiny benchmark diagnostics.
 - [ ] Create tiny benchmark harness for legal action rate, latency and fixed-position decisions.
 - [ ] Update `09_EVIDENCE_LOG.md` whenever new external evidence is added.

@@ -8,6 +8,14 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-05-30 — Tiny benchmark harness implementation review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The implementation review is mistaken for authorization to expand the harness into model-output integration, CLI, real data or league behavior. | Scope / Governance | High | Medium | `05Q` closes only the current project-authored synthetic/local fixture scope and `10_NEXT` sets a P5 envelope-coverage review as the next task. | Open |
+| `wrapper_smoke_success` is overclaimed as strength, Tenhou, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `05Q`, evidence log and ranking protocol state the evidence grade is implementation review evidence only and not model-strength or LuckyJ comparison. | Open |
+| The next envelope review drifts into production code or metric expansion. | Scope / Engineering | Medium-High | Medium | `10_NEXT` forbids new production code, tests, fixtures, CLI, latency measurement, broad ingestion, model-output integration and P6-P12 work. | Open |
+
 ## 2026-05-30 — Tiny benchmark harness implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

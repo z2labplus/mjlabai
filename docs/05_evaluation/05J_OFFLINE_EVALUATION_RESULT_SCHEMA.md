@@ -383,3 +383,7 @@ This envelope is synthetic/local engineering diagnostic evidence only. It does
 not record latency measurement, fixed-position exact-match, model output, real
 Tenhou, real haifu, external logs, platform data, model strength, stable-dan
 evidence or LuckyJ `10.68` comparison.
+
+`docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md`
+reviews that current envelope-producing implementation boundary and keeps the
+evidence grade at P5 synthetic/local review evidence only.

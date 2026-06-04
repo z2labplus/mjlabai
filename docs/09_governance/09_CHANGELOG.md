@@ -1,5 +1,37 @@
 # 09_CHANGELOG
 
+## 2026-05-30 — v2.25
+
+- Reviewed the P5 tiny benchmark harness implementation.
+- Added `docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md`.
+- The review records that:
+  - the harness loads only the fixed project-authored synthetic/local fixture.
+  - `run_project_tiny_benchmark_harness()` has no arbitrary path parameter.
+  - no CLI, directory scan, glob, broad file ingestion, model-output path, real
+    Tenhou / real haifu / external-log / platform-data path, third-party binary
+    call or model/API call was found.
+  - the envelope remains P5-only with `evaluation_type =
+    "tiny_benchmark_harness"`, `wrapper_smoke_success = true`, `sample_size =
+    1`, all safety flags false and `latency_ms = None`.
+  - tests cover fixed fixture loading, deterministic result, no arbitrary path,
+    envelope fields, all-false safety flags, measured-latency rejection and
+    JSON serialization.
+- Review conclusion:
+  - current implementation can close for the project-authored synthetic/local
+    fixture scope.
+  - no blocker was found.
+- Evidence grade:
+  - P5 synthetic/local tiny benchmark harness implementation review evidence
+    only.
+- Updated handoff, docs index, stage contract, backlog, technical plan,
+  evidence log, risk register and `10_NEXT`.
+- Set the next P5-only task to `Review P5 offline evaluation result envelope
+  coverage for synthetic tiny benchmark diagnostics.`
+- No production code, tests, fixtures, CLI, broad ingestion, latency measurement,
+  fixed-position exact-match computation, model-output integration, legal-action
+  checker, canonicalizer, broad evaluator, league, runner, training, tuning,
+  self-play, Tenhou connection, external-data reader or P6-P12 work was added.
+
 ## 2026-05-30 — v2.24
 
 - Implemented the P5 tiny benchmark harness for the project-authored synthetic
