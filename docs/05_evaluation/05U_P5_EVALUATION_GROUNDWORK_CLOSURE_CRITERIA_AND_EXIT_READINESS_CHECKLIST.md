@@ -230,13 +230,12 @@ P6-P12 entry.
 The next narrow task should be:
 
 ```text
-Finalize P5 handoff and evidence index before final closure review.
+Run final P5 closure review gate.
 ```
 
-That task should remain docs-only finalization. It should not close P5 or enter
-P6-P12. It should synchronize final P5 handoff and evidence-index materials
-for a later final closure review gate. It must not add code, tests, fixtures,
-metrics, registry changes, CLI, latency measurement, fixed-position exact-match,
+That task may decide whether P5 can close. It must not directly execute P6-P12,
+generate a P6-P12 execution prompt, add code, tests, fixtures, metrics,
+registry changes, CLI, latency measurement, fixed-position exact-match,
 model-output integration, real-data ingestion, training, self-play, league or
 runner behavior.
 

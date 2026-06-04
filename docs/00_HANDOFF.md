@@ -61,8 +61,9 @@ The P5 synthetic legal-action metric evaluator is implemented for the project-au
 `docs/05_evaluation/05T_SYNTHETIC_LOCAL_EVIDENCE_TAXONOMY_AND_PROMOTION_GUARDRAILS_REVIEW.md` reviews P5 synthetic/local evidence taxonomy and promotion guardrails. It records that evidence labels, non-evidence warnings, promotion/ranking guardrails and stage-boundary wording are consistent across the current P5 stable-dan, legal-action, tiny benchmark, offline envelope and metric registry artifacts. No blocker was found, and no promotion criteria, taxonomy definitions, production code, tests or fixtures were changed by the review.
 `docs/05_evaluation/05U_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_CHECKLIST.md` defines P5 evaluation groundwork closure criteria and an exit readiness checklist. It records the current P5 scope, current-scope complete subtracks, required remaining P5 items, deferred items and non-entry conditions for P6-P12. P5 is near closure, but it remains open until a closure review gate confirms readiness.
 `docs/05_evaluation/05V_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_REVIEW.md` reviews the P5 closure criteria and exit readiness checklist. The review found no blocker: the `05U` scope is correct, the current P5 subtrack inventory is complete enough for finalization, closure criteria are sufficient, the exit readiness checklist is executable, deferred items are correctly classified and P6-P12 non-entry conditions are sufficient. The closure criteria review can close, but P5 remains open pending final P5 handoff/evidence index finalization and a later final closure review.
+`docs/05_evaluation/05W_P5_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION.md` finalizes the P5 handoff and evidence index for final closure review. It records a finalization-ready handoff summary, a P5 evidence index, required remaining items, deferred items and governance synchronization status. No blocker was found. P5 handoff and evidence index are finalized for final closure review, but P5 remains open until the final closure review gate.
 P5 overall is not complete.
-P5 should not be extended indefinitely through more schema/review churn. The next project task is to finalize the P5 handoff and evidence index before final closure review, under the strict synthetic/local boundary and without production code, tests, fixtures, metric implementation, registry code changes, promotion criteria changes, model-output integration, real data, CLI, broad file ingestion, latency measurement, fixed-position exact-match computation, league, runner, training, self-play or P6-P12 work.
+P5 should not be extended indefinitely through more schema/review churn. The next project task is to run the final P5 closure review gate, under the strict synthetic/local boundary and without production code, tests, fixtures, metric implementation, registry code changes, promotion criteria changes, model-output integration, real data, CLI, broad file ingestion, latency measurement, fixed-position exact-match computation, league, runner, training, self-play or P6-P12 work.
 ```
 
 ## Current methodology
@@ -151,12 +152,13 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Finalize P5 handoff and evidence index before final closure review.
+Run final P5 closure review gate.
 Do not expand beyond P5 synthetic/local engineering diagnostics into training,
 self-play, league evaluation, Tenhou integration, artifact upload, broad adapter
 work, CLI, broad file ingestion, model-output integration, latency measurement,
 fixed-position exact-match computation, metric implementation, registry code
-changes, promotion criteria changes or P6-P12.
+changes, promotion criteria changes or P6-P12. The final closure review may
+decide whether P5 can close, but it must not directly execute P6.
 ```
 
 Latest Akochan F1 audit summary:

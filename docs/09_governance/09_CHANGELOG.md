@@ -1,5 +1,35 @@
 # 09_CHANGELOG
 
+## 2026-06-04 — v2.31
+
+- Finalized the P5 handoff and evidence index before final closure review.
+- Added
+  `docs/05_evaluation/05W_P5_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION.md`.
+- Finalization contents:
+  - finalization-ready P5 handoff summary.
+  - P5 evidence index across stable-dan, offline envelope, legal-action, tiny
+    benchmark, cross-cutting reviews and governance artifacts.
+  - required remaining P5 items.
+  - deferred item table.
+  - governance synchronization summary.
+- Assessment:
+  - P5 handoff and evidence index are finalized for final closure review.
+  - P5 remains open until the final closure review gate.
+  - no finalization blocker was found.
+  - P5 must not enter P6-P12 yet.
+- Evidence grade:
+  - P5 handoff and evidence index finalization evidence only.
+- Updated handoff, docs index, stage contract, backlog, technical plan,
+  evidence log, risk register and `10_NEXT`.
+- Set the next P5-only task to `Run final P5 closure review gate.`
+- No P5 closure, P6-P12 entry approval, production code, tests, fixtures,
+  metric implementation, registry code changes, evidence taxonomy definition
+  changes, promotion criteria changes, CLI, broad ingestion, latency
+  measurement, fixed-position exact-match computation, model-output
+  integration, legal-action checker, canonicalizer, broad evaluator, league,
+  runner, training, tuning, self-play, Tenhou connection or external-data
+  reader was added.
+
 ## 2026-06-04 — v2.30
 
 - Reviewed P5 evaluation groundwork closure criteria and the exit readiness

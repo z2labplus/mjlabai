@@ -8,6 +8,45 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-04 — P5 handoff and evidence index finalization
+
+- Type: internal documentation / finalization evidence.
+- Stage: P5 evaluation foundation.
+- Added finalization document:
+  - `docs/05_evaluation/05W_P5_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION.md`.
+- Finalization contents:
+  - final P5 handoff summary.
+  - P5 evidence index.
+  - required remaining P5 items.
+  - deferred items.
+  - governance synchronization summary.
+- Assessment:
+  - P5 handoff and evidence index are finalized for final closure review.
+  - P5 remains open until the final closure review gate.
+  - no finalization blocker was found.
+  - P5 must not enter P6-P12 yet.
+- Evidence grade:
+  - P5 handoff and evidence index finalization evidence only.
+- Not evidence of:
+  - P5 closure itself.
+  - P6-P12 entry approval.
+  - production evaluator expansion.
+  - metric implementation.
+  - registry code change.
+  - promotion criteria change.
+  - latency measurement.
+  - legal-action checker or canonicalizer.
+  - fixed-position exact-match computation.
+  - model-output integration.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P6-P12.
+- Next task:
+  - Run final P5 closure review gate.
+
 ### 2026-06-04 — P5 closure criteria and exit readiness review
 
 - Type: internal documentation / review-gate evidence.

@@ -160,6 +160,15 @@ tests, fixtures, metric implementation, registry code changes, CLI, latency
 measurement, model-output integration or real-data work before moving to
 handoff/evidence index finalization.
 
+The follow-up finalization is recorded in:
+
+```text
+docs/05_evaluation/05W_P5_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION.md
+```
+
+That document finalizes the P5 handoff and evidence index for the final closure
+review gate, while keeping P5 open until that gate runs.
+
 ## Deferred Items Review
 
 | deferred_item | defer_reason_present | earliest_stage_or_condition_present | guardrail_present | review_finding | blocker |
@@ -243,19 +252,15 @@ Specific conclusions:
 The next narrow P5-only task should be:
 
 ```text
-Finalize P5 handoff and evidence index before final closure review.
+Run final P5 closure review gate.
 ```
 
-That task should remain docs-only finalization. It should synchronize
-`00_HANDOFF`, `00_DOCS_INDEX`, `09_EVIDENCE_LOG`, `09_RISK_REGISTER`,
-`09_STAGE_TASK_CONTRACT`, `07B_TASK_BACKLOG`, `12A_TECHNICAL_PLAN_v0.1` and
-`10_NEXT` for a later final P5 closure review gate.
-
-It must not close P5 by itself, enter P6-P12, add code, add tests, add
-fixtures, implement metrics, change registry code, change promotion criteria,
-measure latency, calculate fixed-position exact-match, add CLI, add broad file
-ingestion, connect model output, read real data, train, tune, self-play, run
-league or runner behavior, or claim model strength.
+That task may decide whether P5 can close. It must not directly execute P6-P12,
+add code, add tests, add fixtures, implement metrics, change registry code,
+change promotion criteria, measure latency, calculate fixed-position
+exact-match, add CLI, add broad file ingestion, connect model output, read real
+data, train, tune, self-play, run league or runner behavior, or claim model
+strength.
 
 ## Evidence Grade
 
