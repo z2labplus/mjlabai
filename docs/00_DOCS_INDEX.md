@@ -60,6 +60,7 @@ docs/05_evaluation/05T_SYNTHETIC_LOCAL_EVIDENCE_TAXONOMY_AND_PROMOTION_GUARDRAIL
 docs/05_evaluation/05U_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_CHECKLIST.md
 docs/05_evaluation/05V_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_REVIEW.md
 docs/05_evaluation/05W_P5_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION.md
+docs/05_evaluation/05X_FINAL_P5_CLOSURE_REVIEW.md
 docs/07_development_execution/07E_ALGORITHM_DISCOVERY_WORKFLOW.md
 docs/07_development_execution/07F_ALGORITHM_TABLE_BUILD_TASK.md
 docs/07_development_execution/07G_RACING_FUNNEL_EXECUTION_TASK.md
@@ -146,6 +147,11 @@ It records a finalization-ready P5 handoff summary, a P5 evidence index,
 deferred items and governance synchronization status. P5 remains open until the
 final closure review gate. It is docs-only finalization evidence, not P5
 closure itself, P6-P12 entry approval or model-strength evidence.
+
+`docs/05_evaluation/05X_FINAL_P5_CLOSURE_REVIEW.md`
+is the final P5 closure review gate. It records that P5 can close for the
+current synthetic/local evaluation groundwork scope. This is not P6-P12 entry
+approval, not P6 first-task approval and not model-strength evidence.
 
 ## Current rule
 

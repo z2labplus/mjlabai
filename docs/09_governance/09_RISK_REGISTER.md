@@ -8,6 +8,14 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-04 — Final P5 closure review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| P5 closure is mistaken for P6-P12 entry approval or P6 first-task approval. | Governance / Stage Control | High | Medium | `05X`, handoff, evidence log, stage contract and `10_NEXT` state P5 closure is not P6-P12 entry and the next task is separate post-P5 transition review. | Open |
+| Synthetic/local P5 evidence is overclaimed as model strength, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ comparison or candidate promotion. | Evaluation / Governance | High | Medium | `05X` repeats explicit non-evidence boundaries and `05W` evidence index marks promotion/ranking/Tenhou/LuckyJ/P6-P12 entry as `no` for all rows. | Open |
+| Post-P5 transition planning skips independent scope, entry criteria, risk review and first task. | Governance / Planning | High | Medium | `05X` and `10_NEXT` require a separate post-P5 transition review before defining any P6 task. | Open |
+
 ## 2026-06-04 — P5 handoff and evidence index finalization risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

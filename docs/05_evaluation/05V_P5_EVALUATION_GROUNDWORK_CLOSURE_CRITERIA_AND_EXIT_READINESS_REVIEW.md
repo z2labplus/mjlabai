@@ -247,9 +247,19 @@ Specific conclusions:
 - P5 is closer to closure, but it is not closed by this review.
 - P6-P12 transition planning is not approved by this review.
 
+Later final closure status is recorded in:
+
+```text
+docs/05_evaluation/05X_FINAL_P5_CLOSURE_REVIEW.md
+```
+
+That later review found no blocker and recorded that P5 can close for the
+current synthetic/local evaluation groundwork scope. That later closure still
+does not approve P6-P12 entry, a P6 first task or any model-strength claim.
+
 ## Next P5-Only Task Recommendation
 
-The next narrow P5-only task should be:
+Historical recommendation before finalization and `05X`:
 
 ```text
 Run final P5 closure review gate.
@@ -261,6 +271,12 @@ change promotion criteria, measure latency, calculate fixed-position
 exact-match, add CLI, add broad file ingestion, connect model output, read real
 data, train, tune, self-play, run league or runner behavior, or claim model
 strength.
+
+Current recommendation after `05X`:
+
+```text
+Await separate post-P5 transition review before defining any P6 task.
+```
 
 ## Evidence Grade
 

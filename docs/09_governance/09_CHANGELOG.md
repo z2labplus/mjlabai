@@ -1,5 +1,35 @@
 # 09_CHANGELOG
 
+## 2026-06-04 — v2.32
+
+- Ran the final P5 closure review gate.
+- Added `docs/05_evaluation/05X_FINAL_P5_CLOSURE_REVIEW.md`.
+- Closure decision:
+  - P5 can close.
+  - P5 is closed for the current synthetic/local evaluation groundwork scope.
+  - no closure blocker was found.
+- The review records:
+  - all closure criteria pass.
+  - current-scope P5 subtracks are complete for synthetic/local evaluation
+    groundwork.
+  - the P5 evidence index is sufficient for the closure decision.
+  - required remaining P5 items narrowed to closure decision recording.
+  - deferred later-stage items do not block P5 closure.
+  - P6-P12 non-entry conditions remain active.
+- Evidence grade:
+  - P5 final closure review evidence only.
+- Updated handoff, docs index, stage contract, backlog, technical plan,
+  evidence log, risk register and `10_NEXT`.
+- Set the next task to `Await separate post-P5 transition review before
+  defining any P6 task.`
+- P5 closure is not P6-P12 entry approval and does not approve P6 first task,
+  P6 data-system work, production evaluator expansion, metric implementation,
+  registry code changes, promotion criteria changes, CLI, broad ingestion,
+  latency measurement, fixed-position exact-match computation, model-output
+  integration, legal-action checker, canonicalizer, broad evaluator, league,
+  runner, training, tuning, self-play, Tenhou connection, external-data reader
+  or model-strength claims.
+
 ## 2026-06-04 — v2.31
 
 - Finalized the P5 handoff and evidence index before final closure review.

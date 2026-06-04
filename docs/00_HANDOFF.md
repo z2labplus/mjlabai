@@ -29,14 +29,17 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
-The active project work is P5 evaluation groundwork.
+The active project work has just closed P5 evaluation groundwork for the
+current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
 Akochan F1 is Conditional Pass after successful Ubuntu GitHub Actions build/minimal-run evidence, with license and local macOS build limits still open.
 Akochan F2 task definition is complete.
 Minimal Akochan F2 wrapper skeleton is implemented and passes fake-executable smoke tests.
 Akochan F2 fixed-sample real-exe wrapper validation has passed: workflow run `26629344590` at commit `29f5e1ed19407d169f85524e05438ac8938d2dc2` built `ai_src/libai.so`, root `libai.so` and `system.exe`; fake wrapper tests passed 14 tests; real `legal_action` and real `mjai_log` wrapper tests both passed.
 This is fixed-sample wrapper/integration evidence only. It is not Akochan strength evidence, not mjlabai strength evidence, and not authorization for broad adapter work, self-play, match, training or Tenhou integration.
-The project is now in P5 evaluation groundwork. The deterministic Tenhou stable-dan calculator from room-specific formulas is implemented and tested.
+The project has completed the final P5 closure review for the current
+synthetic/local evaluation groundwork scope. The deterministic Tenhou
+stable-dan calculator from room-specific formulas is implemented and tested.
 The stable-dan bootstrap confidence interval is implemented and tested with percentile empirical multinomial resampling.
 The stable-dan threshold comparison helper is implemented and tested with LuckyJ stable dan `10.68` as the default target line.
 The stable-dan reporting schema and minimum sample-size guardrails are implemented and tested.
@@ -62,8 +65,9 @@ The P5 synthetic legal-action metric evaluator is implemented for the project-au
 `docs/05_evaluation/05U_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_CHECKLIST.md` defines P5 evaluation groundwork closure criteria and an exit readiness checklist. It records the current P5 scope, current-scope complete subtracks, required remaining P5 items, deferred items and non-entry conditions for P6-P12. P5 is near closure, but it remains open until a closure review gate confirms readiness.
 `docs/05_evaluation/05V_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_REVIEW.md` reviews the P5 closure criteria and exit readiness checklist. The review found no blocker: the `05U` scope is correct, the current P5 subtrack inventory is complete enough for finalization, closure criteria are sufficient, the exit readiness checklist is executable, deferred items are correctly classified and P6-P12 non-entry conditions are sufficient. The closure criteria review can close, but P5 remains open pending final P5 handoff/evidence index finalization and a later final closure review.
 `docs/05_evaluation/05W_P5_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION.md` finalizes the P5 handoff and evidence index for final closure review. It records a finalization-ready handoff summary, a P5 evidence index, required remaining items, deferred items and governance synchronization status. No blocker was found. P5 handoff and evidence index are finalized for final closure review, but P5 remains open until the final closure review gate.
-P5 overall is not complete.
-P5 should not be extended indefinitely through more schema/review churn. The next project task is to run the final P5 closure review gate, under the strict synthetic/local boundary and without production code, tests, fixtures, metric implementation, registry code changes, promotion criteria changes, model-output integration, real data, CLI, broad file ingestion, latency measurement, fixed-position exact-match computation, league, runner, training, self-play or P6-P12 work.
+`docs/05_evaluation/05X_FINAL_P5_CLOSURE_REVIEW.md` is the final P5 closure review gate. It records that all P5 closure criteria pass, no blocker was found, required remaining P5 items have narrowed to closure decision recording, deferred later-stage items do not block current P5 closure, and required validation tests were rerun. P5 is closed for the current synthetic/local evaluation groundwork scope.
+P5 closure does not approve P6-P12 entry, P6 data-system work, training, self-play, league, real Tenhou, model-output integration, CLI, broad ingestion, latency measurement, fixed-position exact-match, metric implementation, registry code changes, promotion criteria changes or model-strength claims.
+The next project task is to await a separate post-P5 transition review before defining any P6 task. That post-P5 review must have independent scope, entry criteria, risk review and first task, and it must not execute P6-P12 directly.
 ```
 
 ## Current methodology
@@ -152,13 +156,14 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Run final P5 closure review gate.
-Do not expand beyond P5 synthetic/local engineering diagnostics into training,
-self-play, league evaluation, Tenhou integration, artifact upload, broad adapter
-work, CLI, broad file ingestion, model-output integration, latency measurement,
-fixed-position exact-match computation, metric implementation, registry code
-changes, promotion criteria changes or P6-P12. The final closure review may
-decide whether P5 can close, but it must not directly execute P6.
+Await separate post-P5 transition review before defining any P6 task.
+Do not execute P6-P12 directly. Do not expand beyond completed P5
+synthetic/local engineering diagnostics into training, self-play, league
+evaluation, Tenhou integration, artifact upload, broad adapter work, CLI, broad
+file ingestion, model-output integration, latency measurement, fixed-position
+exact-match computation, metric implementation, registry code changes,
+promotion criteria changes or model-strength claims without a separate
+post-P5 transition review and explicit approval.
 ```
 
 Latest Akochan F1 audit summary:

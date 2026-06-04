@@ -193,9 +193,24 @@ remains open until the final closure review gate.
 
 No finalization blocker was found.
 
+Final closure review status is now recorded in:
+
+```text
+docs/05_evaluation/05X_FINAL_P5_CLOSURE_REVIEW.md
+```
+
+That review found no blocker and recorded:
+
+```text
+P5 can close.
+P5 is closed for the current synthetic/local evaluation groundwork scope.
+```
+
+This does not approve P6-P12 entry or any P6 first task.
+
 ## Next P5-Only Task Recommendation
 
-The next narrow P5-only task should be:
+Historical recommendation before `05X`:
 
 ```text
 Run final P5 closure review gate.
@@ -211,6 +226,19 @@ add tests, add fixtures or claim model strength.
 
 If P5 is closed later, any P6 transition planning must still be a separate task
 with independent scope, entry criteria and first task.
+
+Current recommendation after `05X`:
+
+```text
+Await separate post-P5 transition review before defining any P6 task.
+```
+
+That task must not execute P6-P12, generate a P6 execution prompt, train, tune,
+self-play, run league/runner behavior, read real Tenhou, read real haifu, read
+external logs, read platform data, connect model output, add CLI, add broad
+file ingestion, measure latency, compute fixed-position exact-match, implement
+metrics, change registry code, change promotion criteria, add production code,
+add tests, add fixtures or claim model strength.
 
 ## Evidence Grade
 

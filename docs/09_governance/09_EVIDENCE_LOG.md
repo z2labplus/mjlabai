@@ -8,6 +8,46 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-04 — Final P5 closure review
+
+- Type: internal documentation / final closure review evidence.
+- Stage: P5 evaluation foundation.
+- Added review document:
+  - `docs/05_evaluation/05X_FINAL_P5_CLOSURE_REVIEW.md`.
+- Closure decision:
+  - P5 can close.
+  - P5 is closed for the current synthetic/local evaluation groundwork scope.
+  - no closure blocker was found.
+- Review findings:
+  - all closure criteria pass.
+  - current-scope P5 subtracks are complete for synthetic/local evaluation
+    groundwork.
+  - the P5 evidence index is sufficient for the closure decision.
+  - required remaining P5 items narrowed to closure decision recording.
+  - deferred later-stage items do not block current P5 closure.
+  - P6-P12 non-entry conditions remain active.
+- Evidence grade:
+  - P5 final closure review evidence only.
+- Not evidence of:
+  - P6-P12 entry approval.
+  - P6 first-task approval.
+  - production evaluator expansion.
+  - metric implementation.
+  - registry code change.
+  - promotion criteria change.
+  - latency measurement.
+  - legal-action checker or canonicalizer.
+  - fixed-position exact-match computation.
+  - model-output integration.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P6-P12.
+- Next task:
+  - Await separate post-P5 transition review before defining any P6 task.
+
 ### 2026-06-04 — P5 handoff and evidence index finalization
 
 - Type: internal documentation / finalization evidence.

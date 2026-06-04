@@ -207,6 +207,16 @@ Current interpretation:
 - P5 should not enter P6-P12.
 - At least one closure review gate is still required.
 
+Later final closure status is recorded in:
+
+```text
+docs/05_evaluation/05X_FINAL_P5_CLOSURE_REVIEW.md
+```
+
+That later review found no blocker and recorded that P5 can close for the
+current synthetic/local evaluation groundwork scope. This checklist remains the
+criteria source; it does not itself approve P6-P12 entry or a P6 first task.
+
 ## Review Status
 
 The closure criteria and exit readiness checklist were reviewed in:
@@ -227,7 +237,7 @@ P6-P12 entry.
 
 ## Next P5-Only Task Recommendation
 
-The next narrow task should be:
+Historical recommendation before `05V`, `05W` and `05X`:
 
 ```text
 Run final P5 closure review gate.
@@ -238,6 +248,12 @@ generate a P6-P12 execution prompt, add code, tests, fixtures, metrics,
 registry changes, CLI, latency measurement, fixed-position exact-match,
 model-output integration, real-data ingestion, training, self-play, league or
 runner behavior.
+
+Current recommendation after `05X`:
+
+```text
+Await separate post-P5 transition review before defining any P6 task.
+```
 
 ## Evidence Grade
 
