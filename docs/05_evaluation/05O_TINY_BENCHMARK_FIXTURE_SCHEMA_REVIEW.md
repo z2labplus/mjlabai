@@ -194,6 +194,16 @@ The later implementation is recorded separately in:
 docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md
 ```
 
+The later envelope coverage review is recorded separately in:
+
+```text
+docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md
+```
+
+That review confirms the current synthetic tiny benchmark diagnostic can be
+represented in the existing offline result envelope. It does not change this
+schema review, add a harness, measure latency or create strength evidence.
+
 ## Evidence Grade
 
 Current evidence grade:

@@ -8,6 +8,61 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-05-30 — P5 offline envelope coverage review for tiny benchmark diagnostics
+
+- Type: internal documentation / review-gate evidence.
+- Stage: P5 evaluation foundation.
+- Added review document:
+  - `docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md`.
+- Reviewed artifacts:
+  - `src/mjlabai/eval/offline_result.py`.
+  - `src/mjlabai/eval/tiny_benchmark_harness.py`.
+  - `tests/eval/test_offline_result.py`.
+  - `tests/eval/test_offline_envelope_smoke.py`.
+  - `tests/eval/test_tiny_benchmark_harness.py`.
+  - `tests/fixtures/eval/tiny_benchmark_harness_smoke.json`.
+  - `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md`.
+  - `docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md`.
+  - `docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md`.
+  - `docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md`.
+  - `docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md`.
+- Review conclusion:
+  - the current envelope coverage is sufficient for the current synthetic tiny
+    benchmark diagnostic scope.
+  - no blocker was found.
+- Envelope fields reviewed:
+  - `evaluation_stage = "P5"`.
+  - `evaluation_type = "tiny_benchmark_harness"`.
+  - `wrapper_smoke_success = true`.
+  - `sample_size = 1`.
+  - `latency_ms = None`.
+  - all safety flags false.
+  - synthetic/local warnings.
+  - evidence references to the fixture, tests and P5 docs.
+- Evidence grade:
+  - P5 synthetic/local offline envelope coverage review evidence only.
+- Not evidence of:
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - latency measurement.
+  - production evaluator readiness.
+  - model-output integration.
+  - P6-P12.
+- Guardrails:
+  - No production code, tests or fixtures were added.
+  - No envelope schema code or metric registry code was changed.
+  - No CLI or broad file ingestion was added.
+  - No latency measurement or fixed-position exact-match computation was added.
+  - No model-output path, real Tenhou, real haifu, external-log or
+    platform-data path was added.
+  - No third-party binary, Akochan `system.exe` or `libai.so` call was added.
+- Next task:
+  - Review P5 metric registry consistency across stable-dan, legal-action and
+    tiny benchmark diagnostics.
+
 ### 2026-05-30 — P5 tiny benchmark harness implementation review
 
 - Type: internal documentation / review-gate evidence.

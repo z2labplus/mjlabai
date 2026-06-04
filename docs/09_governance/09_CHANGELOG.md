@@ -1,5 +1,35 @@
 # 09_CHANGELOG
 
+## 2026-05-30 — v2.26
+
+- Reviewed the P5 offline evaluation result envelope coverage for synthetic tiny
+  benchmark diagnostics.
+- Added
+  `docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md`.
+- The review records that the current `OfflineEvaluationResultEnvelope` coverage
+  is sufficient for the current project-authored synthetic/local tiny benchmark
+  diagnostic scope:
+  - `evaluation_type = "tiny_benchmark_harness"`.
+  - `wrapper_smoke_success = true`.
+  - `sample_size = 1`.
+  - `latency_ms = None`.
+  - all safety flags false.
+  - synthetic/local warnings.
+  - evidence references to the fixture, tests and P5 boundary/review docs.
+- No blocker was found for representing the current tiny benchmark diagnostic in
+  the offline envelope.
+- Evidence grade:
+  - P5 synthetic/local offline envelope coverage review evidence only.
+- Updated handoff, docs index, 05F, 05J, 05P, 05Q, stage contract, backlog,
+  technical plan, evidence log, risk register and `10_NEXT`.
+- Set the next P5-only task to `Review P5 metric registry consistency across
+  stable-dan, legal-action and tiny benchmark diagnostics.`
+- No production code, tests, fixtures, envelope schema code, metric registry
+  code, CLI, broad ingestion, latency measurement, fixed-position exact-match
+  computation, model-output integration, legal-action checker, canonicalizer,
+  broad evaluator, league, runner, training, tuning, self-play, Tenhou
+  connection, external-data reader or P6-P12 work was added.
+
 ## 2026-05-30 — v2.25
 
 - Reviewed the P5 tiny benchmark harness implementation.

@@ -8,6 +8,14 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-05-30 — Tiny benchmark offline envelope coverage review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The envelope coverage review is mistaken for authorization to add new metrics, schema fields, production code or broader benchmark behavior. | Scope / Governance | High | Medium | `05R` closes only the current synthetic/local envelope representation and `10_NEXT` sets a registry-consistency review as the next P5-only task. | Open |
+| `wrapper_smoke_success` or `sample_size = 1` is overclaimed as strength, Tenhou, stable-dan, latency or LuckyJ evidence. | Evaluation / Governance | High | Medium | `05R`, evidence log and ranking protocol state the evidence grade is offline envelope coverage review evidence only and not model-strength or LuckyJ comparison. | Open |
+| The next registry review drifts into code changes or metric implementation. | Scope / Engineering | Medium-High | Medium | `10_NEXT` forbids production code, tests, fixtures, registry code changes, latency measurement, fixed-position exact-match, model-output integration and P6-P12 work. | Open |
+
 ## 2026-05-30 — Tiny benchmark harness implementation review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

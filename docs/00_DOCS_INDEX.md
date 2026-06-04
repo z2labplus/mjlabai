@@ -54,6 +54,7 @@ docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md
 docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md
 docs/05_evaluation/05P_TINY_BENCHMARK_HARNESS_IMPLEMENTATION.md
 docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md
+docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md
 docs/07_development_execution/07E_ALGORITHM_DISCOVERY_WORKFLOW.md
 docs/07_development_execution/07F_ALGORITHM_TABLE_BUILD_TASK.md
 docs/07_development_execution/07G_RACING_FUNNEL_EXECUTION_TASK.md
@@ -98,6 +99,14 @@ reviews the P5 tiny benchmark harness implementation and records that it can
 close for the current project-authored synthetic/local fixture scope. It is
 docs-only review evidence, not model-strength evidence, Tenhou evidence,
 stable-dan evidence or LuckyJ comparison evidence.
+
+`docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md`
+reviews whether the current offline result envelope coverage is sufficient for
+synthetic tiny benchmark diagnostics. It records that `tiny_benchmark_harness`,
+`wrapper_smoke_success`, `sample_size = 1`, all-false safety flags,
+synthetic/local warnings and evidence references are sufficient for the current
+fixture scope. It is docs-only review evidence, not model-strength evidence,
+Tenhou evidence, stable-dan evidence or LuckyJ comparison evidence.
 
 ## Current rule
 

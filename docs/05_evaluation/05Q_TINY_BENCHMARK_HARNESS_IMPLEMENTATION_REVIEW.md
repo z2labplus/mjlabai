@@ -164,6 +164,17 @@ No blocker was found in the review.
 The implementation is suitable as P5 synthetic/local engineering diagnostic
 infrastructure. P5 overall remains open.
 
+The follow-up envelope coverage review is recorded in:
+
+```text
+docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md
+```
+
+That review confirms the current synthetic tiny benchmark diagnostic can be
+represented in the existing offline result envelope. It does not change this
+implementation review, add schema code, add metrics or authorize broader
+benchmark behavior.
+
 ## Evidence Grade
 
 Current evidence grade:

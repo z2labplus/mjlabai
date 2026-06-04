@@ -292,6 +292,15 @@ The implementation review is recorded in
 `docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md`; it
 does not change the evidence grade or authorize candidate promotion.
 
+The offline envelope coverage review for the synthetic tiny benchmark
+diagnostic is recorded in
+`docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md`.
+It only confirms that the current diagnostic can be represented with
+`wrapper_smoke_success`, `sample_size = 1`, all-false safety flags,
+synthetic/local warnings and evidence references. It must not be used for model
+ranking, candidate promotion, Tenhou evidence, stable-dan evidence or LuckyJ
+comparison.
+
 ### Level 5 — Promotion gate
 
 A candidate can enter the mainline only if:

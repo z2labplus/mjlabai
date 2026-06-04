@@ -200,6 +200,17 @@ Minimum expected fields:
 The envelope records results produced elsewhere. It must not generate results,
 run commands, read files broadly or become a runner.
 
+The current synthetic tiny benchmark envelope coverage review is recorded in:
+
+```text
+docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md
+```
+
+That review confirms the existing envelope is sufficient for the current
+synthetic/local diagnostic result. It does not add implementation, schema
+fields, latency measurement, fixed-position exact-match or model-output
+integration.
+
 ## Synthetic Fixture Schema Smoke Coverage
 
 The current P5 schema-only smoke coverage for this boundary lives in:

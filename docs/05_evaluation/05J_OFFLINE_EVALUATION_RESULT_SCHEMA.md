@@ -387,3 +387,17 @@ evidence or LuckyJ `10.68` comparison.
 `docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md`
 reviews that current envelope-producing implementation boundary and keeps the
 evidence grade at P5 synthetic/local review evidence only.
+
+The envelope coverage review for those synthetic tiny benchmark diagnostics is
+recorded in:
+
+```text
+docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md
+```
+
+That review found no blocker for representing the current diagnostic with
+`evaluation_type = "tiny_benchmark_harness"`, `wrapper_smoke_success = true`,
+`sample_size = 1`, `latency_ms = None`, all-false safety flags,
+synthetic/local warnings and evidence references. It does not change the schema,
+add metrics, measure latency, compute fixed-position exact-match, integrate
+model output or create strength evidence.

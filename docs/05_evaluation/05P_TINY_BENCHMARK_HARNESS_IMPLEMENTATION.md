@@ -147,6 +147,21 @@ That review closes the current implementation for the project-authored
 synthetic/local fixture scope and keeps the evidence grade limited to P5
 synthetic/local implementation review evidence.
 
+## Envelope Coverage Review
+
+The offline envelope coverage review is recorded in:
+
+```text
+docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md
+```
+
+That review confirms that the current synthetic tiny benchmark diagnostic can
+be represented in the existing `OfflineEvaluationResultEnvelope` with
+`wrapper_smoke_success`, `sample_size = 1`, `latency_ms = None`, all-false
+safety flags, synthetic/local warnings and evidence references. It does not
+expand the implementation, add metrics, measure latency, compute fixed-position
+exact-match, connect model output or create strength evidence.
+
 ## Validation
 
 Expected validation commands:

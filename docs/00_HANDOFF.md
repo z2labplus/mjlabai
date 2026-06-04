@@ -56,8 +56,9 @@ The P5 synthetic legal-action metric evaluator is implemented for the project-au
 `docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md` reviews that fixture schema smoke coverage and records that it is complete only for the current P5 schema-only synthetic/local boundary. The fixture schema is sufficient as a front-door input boundary for a future P5-only tiny benchmark harness implementation task, but no harness implementation, production code, tests, fixtures, latency measurement, model-output integration, real-data path, CLI, league, runner or P6-P12 work was added by the review gate.
 `src/mjlabai/eval/tiny_benchmark_harness.py` implements the P5 tiny benchmark harness for the project-authored synthetic fixture only, with tests in `tests/eval/test_tiny_benchmark_harness.py`. The harness loads only `tests/fixtures/eval/tiny_benchmark_harness_smoke.json`, validates and summarizes its legal-action diagnostic shape, latency plan shape and fixed-position synthetic record shape, and can emit an `OfflineEvaluationResultEnvelope` with `evaluation_type = "tiny_benchmark_harness"`, `wrapper_smoke_success = true`, `sample_size = 1`, all safety flags false and synthetic/local warnings. It does not measure latency, calculate legal-action metrics inside the harness, compute fixed-position exact-match, connect model output, add CLI/file ingestion, read real Tenhou / real haifu / external logs / platform data, or provide model-strength, stable-dan or LuckyJ `10.68` evidence.
 `docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md` reviews the P5 tiny benchmark harness implementation and records that it can close for the current project-authored synthetic/local fixture scope with no blocker. The evidence grade remains P5 synthetic/local tiny benchmark harness implementation review evidence only.
+`docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md` reviews the P5 offline result envelope coverage for synthetic tiny benchmark diagnostics. It records that the current envelope can represent the diagnostic with `evaluation_type = "tiny_benchmark_harness"`, `wrapper_smoke_success = true`, `sample_size = 1`, `latency_ms = None`, all-false safety flags, synthetic/local warnings and evidence references. No blocker was found, and the evidence grade remains P5 synthetic/local offline envelope coverage review evidence only.
 P5 overall is not complete.
-The next project task is to review P5 offline evaluation result envelope coverage for synthetic tiny benchmark diagnostics, under the strict synthetic/local boundary and without model-output integration, real data, CLI, broad file ingestion, latency measurement, league, runner, training, self-play or P6-P12 work.
+The next project task is to review P5 metric registry consistency across stable-dan, legal-action and tiny benchmark diagnostics, under the strict synthetic/local boundary and without production code, tests, fixtures, model-output integration, real data, CLI, broad file ingestion, latency measurement, league, runner, training, self-play or P6-P12 work.
 ```
 
 ## Current methodology
@@ -146,7 +147,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review P5 offline evaluation result envelope coverage for synthetic tiny benchmark diagnostics.
+Review P5 metric registry consistency across stable-dan, legal-action and tiny benchmark diagnostics.
 Do not expand beyond P5 synthetic/local engineering diagnostics into training,
 self-play, league evaluation, Tenhou integration, artifact upload, broad adapter
 work, CLI, broad file ingestion, model-output integration or P6-P12.
