@@ -2,7 +2,8 @@
 
 ## Current stage
 
-P5 evaluation foundation.
+Post-P5 transition planning. P5 evaluation foundation is closed for the current
+synthetic/local scope; P6 is not yet open for implementation.
 
 Current focus:
 
@@ -39,7 +40,8 @@ P5 evaluation groundwork closure criteria and exit readiness checklist review = 
 P5 handoff and evidence index finalization = complete; no blocker found
 Final P5 closure review gate = complete; P5 can close for current synthetic/local evaluation groundwork scope
 P5 overall = closed for current synthetic/local evaluation groundwork scope
-Next = await separate post-P5 transition review before defining any P6 task
+Post-P5 transition review = complete
+Next = define P6 data-system scope, entry criteria and first task before implementation
 ```
 
 ## AI role
@@ -48,9 +50,13 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Build the evaluation metric foundation needed to compare future candidates before any training, self-play, league or real Tenhou work.
+Bridge from the closed P5 evaluation foundation into a safe P6 data-system
+planning task without executing P6 implementation.
 
-This supports the north-star target by pairing reproducible baseline/interface evidence with Tenhou-oriented metrics before any supervised learning, RL, search or LuckyJ validation work begins.
+This supports the north-star target by ensuring that future replay, feature,
+label and dataset work has explicit scope, entry criteria, provenance
+guardrails and first-task boundaries before any supervised learning, RL, search
+or LuckyJ validation work begins.
 
 ## Inputs
 
@@ -110,7 +116,7 @@ The CLI-free stable-dan report smoke fixture is a synthetic-only code-path test.
 
 The stable-dan evaluation API documentation is an API-only guide. It must not become a CLI, league harness, file ingestion system, training path, self-play path or real Tenhou integration.
 
-The stable-dan evaluation groundwork subtrack is complete for current P5 scope. The offline result envelope schema and synthetic stable-dan envelope smoke test are implemented. The legal-action / invalid-action metric specification and action canonicalization schema are defined, the synthetic legal-action metric fixture schema smoke test is implemented, the synthetic evaluator boundary is defined, the first synthetic evaluator is implemented for the project-authored fixture only, synthetic parse-failure fixture coverage is implemented, the legal-action synthetic evaluator coverage review is complete for the current synthetic-only `dahai` + strict scope, the P5 tiny benchmark harness boundary is defined before implementation, the P5 tiny benchmark harness synthetic fixture schema smoke test is implemented, the fixture schema coverage review confirms it is sufficient as a front-door input boundary for a future P5-only harness implementation, the P5 tiny benchmark harness is implemented only for the project-authored synthetic fixture, the implementation review is complete for the current fixture scope, the offline envelope coverage review confirms the current synthetic tiny benchmark diagnostic can be represented with the existing envelope, the metric registry consistency review confirms current names, units, directions, statuses and evidence grades are consistent, the evidence taxonomy / promotion guardrails review confirms current P5 synthetic/local evidence labels and non-evidence warnings remain conservative, the P5 closure criteria / exit readiness checklist is defined, the closure criteria review found no blocker, the P5 handoff/evidence index finalization found no blocker, and the final P5 closure review gate records that P5 can close for the current synthetic/local evaluation groundwork scope. P5 closure is not P6-P12 entry approval. The next task should await a separate post-P5 transition review before defining any P6 task; it must not jump to code changes, broad evaluator execution, file ingestion, CLI, league execution, model-output integration, real data, P6-P12 or model-strength claims.
+The stable-dan evaluation groundwork subtrack is complete for current P5 scope. The offline result envelope schema and synthetic stable-dan envelope smoke test are implemented. The legal-action / invalid-action metric specification and action canonicalization schema are defined, the synthetic legal-action metric fixture schema smoke test is implemented, the synthetic evaluator boundary is defined, the first synthetic evaluator is implemented for the project-authored fixture only, synthetic parse-failure fixture coverage is implemented, the legal-action synthetic evaluator coverage review is complete for the current synthetic-only `dahai` + strict scope, the P5 tiny benchmark harness boundary is defined before implementation, the P5 tiny benchmark harness synthetic fixture schema smoke test is implemented, the fixture schema coverage review confirms it is sufficient as a front-door input boundary for a future P5-only harness implementation, the P5 tiny benchmark harness is implemented only for the project-authored synthetic fixture, the implementation review is complete for the current fixture scope, the offline envelope coverage review confirms the current synthetic tiny benchmark diagnostic can be represented with the existing envelope, the metric registry consistency review confirms current names, units, directions, statuses and evidence grades are consistent, the evidence taxonomy / promotion guardrails review confirms current P5 synthetic/local evidence labels and non-evidence warnings remain conservative, the P5 closure criteria / exit readiness checklist is defined, the closure criteria review found no blocker, the P5 handoff/evidence index finalization found no blocker, and the final P5 closure review gate records that P5 can close for the current synthetic/local evaluation groundwork scope. P5 closure is not P6-P12 entry approval. The post-P5 transition review records that the next task may define P6 data-system scope, entry criteria and first task before implementation. That next task must be docs-only and must not implement replay schema code, data ingestion, feature extraction, label generation, CLI, broad file ingestion, model-output integration, real Tenhou, real haifu, external logs, platform data, training, self-play, league, runner behavior, P7-P12 or model-strength claims.
 
 ## Output files
 
@@ -139,4 +145,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Await separate post-P5 transition review before defining any P6 task.
+Define P6 data-system scope, entry criteria and first task before implementation.

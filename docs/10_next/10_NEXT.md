@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Await separate post-P5 transition review before defining any P6 task.
+- [ ] Define P6 data-system scope, entry criteria and first task before implementation.
 
 Current execution charter:
 
@@ -25,21 +25,23 @@ Limits:
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
 - P5 is closed for the current synthetic/local evaluation groundwork scope.
-- The next step is not P6 execution. It is a separate post-P5 transition review gate before any P6 task is defined.
-- Do not define a P6 first task in this task unless a separate post-P5 transition review is explicitly opened and recorded later.
-- Do not generate a P6-P12 execution prompt.
-- Use only docs/governance context; do not read Tenhou accounts, online platforms or external logs.
+- The post-P5 transition review is complete.
+- The next task may define P6 data-system scope, entry criteria and first task before implementation.
+- The next task is docs-only. Do not execute P6 implementation.
+- Do not generate a P6-P12 implementation prompt.
+- Use only docs/governance and existing data-system planning context; do not read Tenhou accounts, online platforms or external logs.
 - Do not add CLI, broad file ingestion, league harness, external-data readers or new model code.
 - Do not add production evaluator logic in the next task.
-- Do not add new production code, tests, fixtures, CLI, benchmark expansion, latency measurement, metric implementation, registry code changes, model-output integration, broad file ingestion, evidence taxonomy definition changes or promotion criteria changes in the next task.
-- Do not connect post-P5 planning to model code, Akochan `system.exe`, third-party binaries, real Tenhou, real haifu, external logs or platform data.
+- Do not add new production code, tests, fixtures, replay schema code, dataset readers, feature extraction, label generation, CLI, benchmark expansion, latency measurement, metric implementation, registry code changes, model-output integration, broad file ingestion, evidence taxonomy definition changes or promotion criteria changes in the next task.
+- Do not connect P6 planning to model code, Akochan `system.exe`, third-party binaries, real Tenhou, real haifu, external logs or platform data.
 - Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not add model-output integration, broad file ingestion, new model code or latency measurement code.
 - Do not change metric units, directions, evidence taxonomy definitions, promotion criteria or registry definitions in the next task.
 - Do not read platform data or use model weights.
 - Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
-- Do not claim any P5 closure artifact is model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
-- Do not enter P6-P12.
+- Do not claim any P5 closure artifact or P6 planning artifact is model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
+- Do not enter P6 implementation.
+- Do not enter P7-P12.
 - Do not modify unrelated files.
 
 ## Completed
@@ -130,6 +132,7 @@ Limits:
 - [x] 2026-06-04 Reviewed P5 evaluation groundwork closure criteria and exit readiness checklist: added `docs/05_evaluation/05V_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_REVIEW.md`, confirmed that `05U` scope is correct, current P5 subtrack inventory is complete enough for finalization, closure criteria are sufficient, the exit readiness checklist is executable, deferred items are correctly classified, P6-P12 non-entry conditions are sufficient and no closure-criteria blocker was found. P5 remains open pending final P5 handoff/evidence index finalization and a later final closure review.
 - [x] 2026-06-04 Finalized P5 handoff and evidence index before final closure review: added `docs/05_evaluation/05W_P5_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION.md`, recorded a finalization-ready P5 handoff summary, P5 evidence index, required remaining items, deferred items and governance synchronization summary. No blocker was found. P5 remains open until the final closure review gate.
 - [x] 2026-06-04 Ran final P5 closure review gate: added `docs/05_evaluation/05X_FINAL_P5_CLOSURE_REVIEW.md`, reviewed closure criteria, current-scope P5 subtracks, evidence index, deferred items and P6-P12 non-entry conditions, found no blocker, and recorded that P5 can close for the current synthetic/local evaluation groundwork scope. This is not P6-P12 entry approval, not a P6 first-task approval and not model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ `10.68` comparison or candidate-promotion evidence.
-- [ ] Await separate post-P5 transition review before defining any P6 task.
+- [x] 2026-06-04 Completed post-P5 transition review: added `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`, confirmed P5 is closed for the current synthetic/local evaluation groundwork scope, confirmed P5 closure is not P6 implementation approval, and allowed only a docs-only next task to define P6 data-system scope, entry criteria and first task before implementation. No P6 implementation, replay schema code, data ingestion, tests, fixtures, CLI, model-output integration, real Tenhou, external data, training, self-play, league, runner behavior, P7-P12 or model-strength claim was added.
+- [ ] Define P6 data-system scope, entry criteria and first task before implementation.
 - [ ] Deferred: broader tiny benchmark harness expansion for legal-action rate, latency and fixed-position decisions. Current P5 implemented only the project-authored synthetic fixture harness; broader latency measurement, fixed-position exact-match, model-output integration, CLI, file ingestion, real data, league, runner, training, self-play and P6-P12 work require later explicit approval.
 - [ ] Update `09_EVIDENCE_LOG.md` whenever new external evidence is added.

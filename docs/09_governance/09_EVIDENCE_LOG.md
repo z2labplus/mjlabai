@@ -8,6 +8,42 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-04 — Post-P5 transition review
+
+- Type: internal documentation / transition review evidence.
+- Stage: post-P5 transition planning.
+- Added review document:
+  - `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`.
+- Transition decision:
+  - P5 is closed for the current synthetic/local evaluation groundwork scope.
+  - P5 closure is not P6 implementation approval.
+  - the project may start only a docs-only task to define P6 data-system scope,
+    entry criteria and first task before implementation.
+- Review findings:
+  - the next step cannot execute P6-P12 directly.
+  - P6 candidate scope is data system, but implementation remains unapproved.
+  - the next task must define P6 allowed inputs, forbidden inputs, entry
+    criteria, exit criteria, first task, risks and evidence requirements before
+    any implementation.
+- Evidence grade:
+  - post-P5 transition review evidence only.
+- Not evidence of:
+  - P6 implementation approval.
+  - P7-P12 entry approval.
+  - production data-system readiness.
+  - replay schema implementation.
+  - data ingestion.
+  - real Tenhou, real haifu, external-log or platform-data access.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+- Next task:
+  - Define P6 data-system scope, entry criteria and first task before
+    implementation.
+
 ### 2026-06-04 — Final P5 closure review
 
 - Type: internal documentation / final closure review evidence.

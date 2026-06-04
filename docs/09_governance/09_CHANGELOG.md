@@ -1,5 +1,32 @@
 # 09_CHANGELOG
 
+## 2026-06-04 — v2.33
+
+- Completed the post-P5 transition review.
+- Added `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`.
+- Transition decision:
+  - P5 remains closed for the current synthetic/local evaluation groundwork
+    scope.
+  - P5 closure is not P6 implementation approval.
+  - the project may start a docs-only task to define P6 data-system scope,
+    entry criteria and first task before implementation.
+- The review records:
+  - transition-review goal, inputs, output boundary and forbidden scope.
+  - P6 candidate scope is data system, but implementation is not approved.
+  - the next task must define P6 scope / entry criteria / first task before any
+    replay schema code, data ingestion or pipeline work.
+- Evidence grade:
+  - post-P5 transition review evidence only.
+- Updated handoff, docs index, stage contract, backlog, technical plan,
+  evidence log, risk register, decision record and `10_NEXT`.
+- Set the next task to `Define P6 data-system scope, entry criteria and first
+  task before implementation.`
+- No production code, tests, fixtures, replay schema code, dataset reader,
+  feature extraction, label generation, CLI, broad ingestion, model-output
+  integration, real Tenhou, real haifu, external-log ingestion, platform-data
+  ingestion, third-party binary call, training, tuning, self-play, league,
+  runner behavior, P7-P12 work or model-strength claim was added.
+
 ## 2026-06-04 — v2.32
 
 - Ran the final P5 closure review gate.

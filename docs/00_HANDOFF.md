@@ -67,7 +67,8 @@ The P5 synthetic legal-action metric evaluator is implemented for the project-au
 `docs/05_evaluation/05W_P5_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION.md` finalizes the P5 handoff and evidence index for final closure review. It records a finalization-ready handoff summary, a P5 evidence index, required remaining items, deferred items and governance synchronization status. No blocker was found. P5 handoff and evidence index are finalized for final closure review, but P5 remains open until the final closure review gate.
 `docs/05_evaluation/05X_FINAL_P5_CLOSURE_REVIEW.md` is the final P5 closure review gate. It records that all P5 closure criteria pass, no blocker was found, required remaining P5 items have narrowed to closure decision recording, deferred later-stage items do not block current P5 closure, and required validation tests were rerun. P5 is closed for the current synthetic/local evaluation groundwork scope.
 P5 closure does not approve P6-P12 entry, P6 data-system work, training, self-play, league, real Tenhou, model-output integration, CLI, broad ingestion, latency measurement, fixed-position exact-match, metric implementation, registry code changes, promotion criteria changes or model-strength claims.
-The next project task is to await a separate post-P5 transition review before defining any P6 task. That post-P5 review must have independent scope, entry criteria, risk review and first task, and it must not execute P6-P12 directly.
+`docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md` records the post-P5 transition review. It confirms that P5 is closed for the current synthetic/local evaluation groundwork scope and that the project may start only a docs-only task to define P6 data-system scope, entry criteria and first task before implementation.
+The next project task is to define P6 data-system scope, entry criteria and first task before implementation. That task must remain docs-only and must not implement replay schema code, data ingestion, feature extraction, label generation, model-output integration, CLI, broad file ingestion, training, self-play, league, real Tenhou, external-log ingestion, platform-data ingestion, P7-P12 work or model-strength claims.
 ```
 
 ## Current methodology
@@ -156,14 +157,15 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Await separate post-P5 transition review before defining any P6 task.
-Do not execute P6-P12 directly. Do not expand beyond completed P5
-synthetic/local engineering diagnostics into training, self-play, league
-evaluation, Tenhou integration, artifact upload, broad adapter work, CLI, broad
-file ingestion, model-output integration, latency measurement, fixed-position
-exact-match computation, metric implementation, registry code changes,
-promotion criteria changes or model-strength claims without a separate
-post-P5 transition review and explicit approval.
+Define P6 data-system scope, entry criteria and first task before
+implementation.
+Do not execute P6 implementation directly. Do not expand into replay schema
+code, data ingestion, feature extraction, label generation, training,
+self-play, league evaluation, Tenhou integration, artifact upload, broad
+adapter work, CLI, broad file ingestion, model-output integration, latency
+measurement, fixed-position exact-match computation, metric implementation,
+registry code changes, promotion criteria changes, P7-P12 or model-strength
+claims without a later explicit implementation approval.
 ```
 
 Latest Akochan F1 audit summary:

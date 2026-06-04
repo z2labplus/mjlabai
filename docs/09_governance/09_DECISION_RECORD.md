@@ -14,6 +14,58 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-04 — DR-0026 — Allow Docs-Only P6 Data-System Scope Definition After P5 Closure
+
+Decision:
+
+```text
+After final P5 closure, allow exactly one docs-only next task to define P6
+data-system scope, entry criteria and first task before implementation.
+```
+
+Context:
+
+- `docs/05_evaluation/05X_FINAL_P5_CLOSURE_REVIEW.md` records that P5 can
+  close for the current synthetic/local evaluation groundwork scope.
+- P5 closure explicitly does not approve P6-P12 entry, P6 implementation or a
+  P6 first task.
+- The project needs to avoid both indefinite P5 extension and premature P6
+  implementation.
+
+Rationale:
+
+- P6 is the data-system stage and needs independent scope, entry criteria, risk
+  review and first-task definition before any implementation.
+- A docs-only P6 definition task is the smallest safe next step after P5
+  closure.
+- Keeping replay schema code, data ingestion, real Tenhou, real haifu, external
+  logs, platform data, model-output integration, CLI, training, self-play,
+  league and P7-P12 forbidden prevents stage creep.
+
+Consequences:
+
+- `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md` records the
+  post-P5 transition decision.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define P6 data-system scope, entry criteria and first task before
+  implementation.`
+- The next task must remain documentation-only and must not implement P6 data
+  pipelines, replay schema code, ingestion, model-output paths or training.
+
+Linked docs:
+
+- `docs/05_evaluation/05X_FINAL_P5_CLOSURE_REVIEW.md`
+- `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-05-29 — DR-0024 — Define Synthetic Legal-Action Evaluator Boundary Before Implementation
 
 Decision:

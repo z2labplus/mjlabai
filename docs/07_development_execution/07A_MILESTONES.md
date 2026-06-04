@@ -18,8 +18,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 | P2 | Algorithm candidate table and racing funnel | Maintain Suphx / LuckyJ / Mortal / Archer / Akochan / Kanachan roles and funnel stages | Candidate roles and F0-F7 gates are documented | Mostly complete |
 | P3 | Baseline reproducibility audit | Verify whether open baselines can install, run, infer and expose useful I/O locally | At least one baseline can perform stable local inference | Active |
 | P4 | Unified mahjong environment and interface | Define shared state, legal actions, logs, replays and adapter contracts | Different candidates can run through the same interface | Future |
-| P5 | Unified evaluation system | Compare all models with Tenhou-oriented metrics under one harness | Stable comparison of baselines and project models | Future |
-| P6 | Data system | Build replay, feature, label and quality pipelines for training and evaluation | Supervised training and offline evaluation datasets can be generated | Future |
+| P5 | Unified evaluation system | Compare all models with Tenhou-oriented metrics under one harness | Stable comparison of baselines and project models | Closed for current synthetic/local evaluation groundwork scope |
+| P6 | Data system | Build replay, feature, label and quality pipelines for training and evaluation | Supervised training and offline evaluation datasets can be generated | Transition planning next; implementation not approved |
 | P7 | Supervised policy model | Train a base strategy model from high-quality human play and key decisions | Model beats simple baselines in key offline scenarios and completes games | Future |
 | P8 | Self-play reinforcement learning | Optimize toward Tenhou pt EV, placement and stable-dan objectives | RL checkpoint beats supervised checkpoint in the unified league | Future |
 | P9 | Search and risk model | Improve push/fold, deal-in risk, south-round rank control and oorasu decisions | Search-enhanced model beats non-search model in scenarios and league play | Future |
@@ -31,11 +31,15 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 
 ```text
 P0 / P1 / P2 are basically established.
-The project is in P3.
-Mortal F1 is blocked by local source/toolchain/model-artifact prerequisites.
+P3 baseline reproducibility produced current Mortal/Akochan funnel evidence.
+P5 evaluation groundwork is closed for the current synthetic/local scope.
+The project is in post-P5 transition planning before any P6 implementation.
 ```
 
-The next execution step is to decide whether a lawful Mortal trained model artifact can be provided. If not, pause Mortal as a runnable baseline and move to the next baseline F1 audit.
+The next execution step is to define P6 data-system scope, entry criteria and
+first task before implementation. That task must remain docs-only and must not
+implement replay schema code, data ingestion, training, self-play, league, real
+Tenhou, external-log ingestion or P7-P12 work.
 
 ## Guardrail
 

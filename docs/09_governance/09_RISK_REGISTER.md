@@ -8,6 +8,14 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-04 — Post-P5 transition review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The docs-only P6 scope definition task is mistaken for P6 implementation approval. | Governance / Stage Control | High | Medium | `12B`, stage contract and `10_NEXT` state the next task may define P6 scope/entry criteria/first task only and must not implement replay schema code, data ingestion or pipelines. | Open |
+| P6 planning jumps directly into real Tenhou, real haifu, external logs or platform data before source rights and compliance boundaries are defined. | Data / Compliance | High | Medium | `12B` requires P6 allowed/forbidden inputs, provenance guardrails and evidence requirements before any ingestion. | Open |
+| P6 planning is overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `12B`, evidence log and `10_NEXT` classify the transition as planning evidence only and forbid strength/ranking claims. | Open |
+
 ## 2026-06-04 — Final P5 closure review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

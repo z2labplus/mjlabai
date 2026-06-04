@@ -32,7 +32,15 @@ docs/10_next/10_NEXT.md
 
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
+docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
 ```
+
+`docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
+records the post-P5 transition review after final P5 closure. It confirms that
+P5 is closed for the current synthetic/local evaluation groundwork scope and
+allows only a docs-only next task to define P6 data-system scope, entry criteria
+and first task before implementation. It is not P6 implementation approval,
+P7-P12 entry approval, data-ingestion evidence or model-strength evidence.
 
 ## Algorithm discovery and racing-funnel files
 
