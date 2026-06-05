@@ -8,6 +8,49 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-05 — P6 data-system scope, entry criteria and first task definition
+
+- Type: internal documentation / P6 planning evidence.
+- Stage: P6 data-system docs-only planning.
+- Added scope document:
+  - `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`.
+- Planning decision:
+  - P6 data-system scope, entry criteria and first task are defined for
+    planning only.
+  - P6 implementation remains unapproved.
+  - P7-P12 remain unapproved.
+- The document records:
+  - P6 purpose and north-star relationship.
+  - allowed and forbidden P6 planning scope.
+  - allowed and forbidden future inputs.
+  - P6 docs-only entry criteria.
+  - future P6 implementation entry criteria.
+  - future P6 exit criteria.
+  - provenance, rights and compliance requirements.
+  - evidence requirements.
+  - risk review.
+  - P7-P12 non-entry boundaries.
+  - first next task candidate.
+- Evidence grade:
+  - P6 data-system scope definition evidence only.
+- Not evidence of:
+  - P6 implementation approval.
+  - P7-P12 entry approval.
+  - replay schema implementation.
+  - data ingestion.
+  - feature extraction.
+  - label generation.
+  - real Tenhou, real haifu, external-log or platform-data access.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+- Next task:
+  - Define P6 data-source provenance and rights inventory before replay schema
+    implementation.
+
 ### 2026-06-04 — Post-P5 transition review
 
 - Type: internal documentation / transition review evidence.

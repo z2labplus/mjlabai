@@ -42,6 +42,21 @@ allows only a docs-only next task to define P6 data-system scope, entry criteria
 and first task before implementation. It is not P6 implementation approval,
 P7-P12 entry approval, data-ingestion evidence or model-strength evidence.
 
+## Data-system files
+
+```text
+docs/02_data_system/02A_DATA_SOURCES.md
+docs/02_data_system/02B_REPLAY_SCHEMA.md
+docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md
+```
+
+`docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
+defines P6 data-system scope, entry criteria, future exit criteria and the
+first next task before implementation. It is docs-only planning evidence: P6
+implementation, replay schema code, data ingestion, real Tenhou, real haifu,
+external logs, platform data, CLI, model-output integration, training,
+self-play, league, runner behavior and P7-P12 remain unapproved.
+
 ## Algorithm discovery and racing-funnel files
 
 ```text

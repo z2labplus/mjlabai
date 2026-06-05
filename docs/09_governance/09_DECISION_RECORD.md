@@ -14,6 +14,58 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-05 — DR-0027 — Define P6 Data-System Scope Before Implementation
+
+Decision:
+
+```text
+Define P6 data-system scope, entry criteria, future exit criteria and first
+next task as docs-only planning before any P6 implementation.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- The post-P5 transition review allowed exactly one docs-only task to define
+  P6 data-system scope, entry criteria and first task before implementation.
+- Existing data-system docs are intentionally thin and need provenance, rights
+  and compliance boundaries before implementation.
+
+Rationale:
+
+- Future replay, feature, label and data-quality work needs lawful, auditable
+  sources before any ingestion or training path exists.
+- Defining source/provenance and rights requirements first reduces the risk of
+  unsafe real Tenhou, real haifu, external-log or platform-data usage.
+- Keeping P6 scope definition docs-only prevents a jump into replay schema code,
+  data pipelines, CLI, model-output integration, training, self-play, league or
+  P7-P12.
+
+Consequences:
+
+- `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
+  records the P6 scope definition.
+- P6 implementation remains closed.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define P6 data-source provenance and rights inventory before replay schema
+  implementation.`
+- The next task must remain docs-only and must not implement replay schema
+  code, data ingestion, real-data access, model-output paths, training or P7-P12.
+
+Linked docs:
+
+- `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
+- `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-06-04 — DR-0026 — Allow Docs-Only P6 Data-System Scope Definition After P5 Closure
 
 Decision:

@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-05 — P6 data-system scope definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The P6 scope definition is mistaken for approval to implement replay schema code or ingest data. | Governance / Stage Control | High | Medium | `02C`, stage contract and `10_NEXT` state that P6 implementation remains closed and the next task is provenance/rights inventory only. | Open |
+| The next P6 provenance task drifts into real Tenhou, real haifu, external logs, platform data or online account access. | Data / Compliance | High | Medium | `02C` forbids these inputs until a later source-rights and compliance review approves them. | Open |
+| A source is treated as usable before rights, allowed use, storage and redistribution status are recorded. | Data / Rights | High | Medium | `02C` requires source id, owner/origin, license/terms, allowed/forbidden use, storage, checksum/version and evidence reference before ingestion. | Open |
+| P6 planning artifacts are overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02C`, evidence log and `10_NEXT` classify this task as P6 planning evidence only and repeat non-evidence warnings. | Open |
+| P7-P12 work starts before P6 source/provenance and data-system implementation gates are approved. | Governance / Stage Control | High | Medium | `02C` records P7-P12 non-entry boundaries and requires separate transition, scope, entry criteria and first-task approval for later stages. | Open |
+
 ## 2026-06-04 — Post-P5 transition review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

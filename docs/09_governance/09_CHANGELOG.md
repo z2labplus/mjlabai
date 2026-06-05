@@ -1,5 +1,39 @@
 # 09_CHANGELOG
 
+## 2026-06-05 — v2.34
+
+- Defined P6 data-system scope, entry criteria and first task before
+  implementation.
+- Added
+  `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`.
+- The document records:
+  - P6 purpose and north-star relationship.
+  - allowed and forbidden P6 planning scope.
+  - allowed and forbidden future inputs.
+  - P6 docs-only entry criteria.
+  - future P6 implementation entry criteria.
+  - future P6 exit criteria.
+  - provenance, rights and compliance requirements.
+  - evidence requirements.
+  - risk review.
+  - P7-P12 non-entry boundaries.
+  - first next task candidate.
+- Decision:
+  - P6 data-system scope is defined for planning only.
+  - P6 implementation remains closed.
+  - the next task is `Define P6 data-source provenance and rights inventory
+    before replay schema implementation.`
+- Evidence grade:
+  - P6 data-system scope definition evidence only.
+- Updated handoff, docs index, stage contract, milestones, backlog, technical
+  plan, evidence log, risk register, decision record and `10_NEXT`.
+- No production code, tests, fixtures, replay schema code, dataset reader,
+  feature extraction, label generation, data ingestion, CLI, broad ingestion,
+  model-output integration, real Tenhou, real haifu, external-log ingestion,
+  platform-data ingestion, third-party binary call, training, tuning,
+  self-play, league, runner behavior, P7-P12 work or model-strength claim was
+  added.
+
 ## 2026-06-04 — v2.33
 
 - Completed the post-P5 transition review.
