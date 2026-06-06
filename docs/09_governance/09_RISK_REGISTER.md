@@ -8,6 +8,19 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation proposal risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Minimal proposal drafting is mistaken for P6 implementation approval. | Governance / Stage Control | High | Medium | `02L`, evidence log and `10_NEXT` state the proposal is for review before code and implementation remains closed. | Open |
+| Proposed file candidates are mistaken for files to create now. | Governance / Scope | High | Medium | `02L` marks every candidate path as `implementation_allowed_now = no` and requires later review. | Open |
+| The next review gate is skipped and implementation starts directly. | Governance / Process | High | Medium | `10_NEXT` sets the next task to review the proposal before code. | Open |
+| Future minimal implementation expands into parser, dataset reader, ingestion, feature extraction or label generation. | Data / Engineering | High | Medium | `02L` explicitly forbids those classes and includes stop conditions and rollback criteria. | Open |
+| A synthetic fixture candidate includes real Tenhou, real haifu, external logs or platform data. | Data / Compliance | High | Medium | `02L` requires project-authored synthetic/local content only and no-real-data guardrails. | Open |
+| Account/session/cookie/token or private-log data enters through a fixture proposal. | Privacy / Security | High | Low-Medium | `02L` forbids account/private identifiers and requires stop before implementation. | Open |
+| Proposal evidence is overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02L` evidence grade and explicit non-evidence list classify it as proposal drafting evidence only. | Open |
+| P6 proposal planning drifts into P7-P12. | Governance / Stage Control | High | Medium | `02L`, stage contract and `10_NEXT` keep P7-P12, training, self-play, league and runner behavior closed. | Open |
+
 ## 2026-06-06 — P6 replay schema and synthetic fixture implementation proposal boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

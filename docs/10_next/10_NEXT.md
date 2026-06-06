@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Prepare P6 minimal replay schema and synthetic fixture implementation proposal for review before code.
+- [ ] Review P6 minimal replay schema and synthetic fixture implementation proposal before code.
 
 Current execution charter:
 
@@ -40,8 +40,8 @@ Limits:
 - Replay fixture implementation remains closed.
 - The P6 replay schema and synthetic fixture implementation proposal boundary is defined for review before code.
 - The P6 replay schema and synthetic fixture implementation proposal boundary review found no blocker and can close.
-- The next task may prepare a docs-only minimal replay schema and synthetic fixture implementation proposal for review before code.
-- The next task is docs-only proposal drafting. Do not execute P6 implementation.
+- The P6 minimal replay schema and synthetic fixture implementation proposal is prepared in `docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md`.
+- The next task is a docs-only proposal review gate. Do not execute P6 implementation.
 - Do not generate a P6-P12 implementation prompt.
 - Use only docs/governance and existing data-system planning context; do not read Tenhou accounts, online platforms or external logs.
 - Do not implement replay schema code or data-source ingestion in the next task.
@@ -60,7 +60,7 @@ Limits:
 - Do not add CLI, broad file ingestion, league harness, external-data readers or new model code.
 - Do not add production evaluator logic in the next task.
 - Do not add new production code, tests, fixtures, synthetic replay fixtures, replay schema code, dataclasses, pydantic models, JSON schema, parsers, dataset readers, data ingestion, feature extraction, label generation, CLI, benchmark expansion, latency measurement, fixed-position exact-match, metric implementation, registry code changes, model-output integration, broad file ingestion, evidence taxonomy definition changes or promotion criteria changes in the next task.
-- Do not treat the docs-only proposal as implementation approval; it must be reviewed before any code, test or fixture task.
+- Do not treat the docs-only proposal as implementation approval; the next task must review it before any code, test or fixture task.
 - Do not connect P6 planning to model code, Akochan `system.exe`, third-party binaries, real Tenhou, real haifu, external logs or platform data.
 - Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not add model-output integration, broad file ingestion, new model code or latency measurement code.
@@ -69,6 +69,7 @@ Limits:
 - Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
 - Do not claim any P5 closure artifact or P6 planning artifact is model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
 - Do not enter P6 implementation.
+- Do not approve implementation unless a later review explicitly sets a new first `10_NEXT` implementation task with exact allowed files and forbidden expansions.
 - Do not enter P7-P12.
 - Do not modify unrelated files.
 
@@ -172,5 +173,6 @@ Limits:
 - [x] 2026-06-06 Reviewed P6 replay schema and fixture implementation readiness checklist before code: added `docs/02_data_system/02I_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW.md`, confirming `02H` scope, candidate implementation classes, replay schema code readiness, synthetic/local replay fixture readiness, parser/dataset reader readiness, feature extraction / label generation readiness, data-ingestion readiness, readiness decision vocabulary, cross-artifact dependency map, P7-P12 non-entry boundary, readiness risks and governance synchronization are sufficient. Review can close, but P6 implementation, replay schema implementation, fixture implementation, data ingestion, dataset readers, parsers, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, training, self-play, league, P7-P12 and model-strength claims remain closed.
 - [x] 2026-06-06 Defined P6 replay schema and synthetic fixture implementation proposal boundary before code: added `docs/02_data_system/02J_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY.md`, defining candidate proposal classes, required future proposal sections, allowed and forbidden proposal scope, source/fixture constraints, minimal replay schema code and synthetic/local fixture candidate boundaries, test/validation proposal boundaries, future implementation approval conditions, proposal decision vocabulary, P7-P12 non-entry boundaries and proposal risks. This does not approve P6 implementation, replay schema implementation, fixture implementation, tests, data ingestion, dataset readers, parsers, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, broad file ingestion, training, self-play, league, P7-P12 or model-strength claims.
 - [x] 2026-06-06 Reviewed P6 replay schema and synthetic fixture implementation proposal boundary before code: added `docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md`, confirming `02J` scope, candidate proposal classes, required proposal sections, allowed/forbidden proposal boundaries, source/fixture constraints, minimal replay schema and synthetic fixture candidate boundaries, test/validation proposal boundary, future approval conditions, decision vocabulary, P7-P12 non-entry boundary and governance synchronization. Review can close with no blocker, but P6 implementation, replay schema implementation, fixture implementation, tests, data ingestion, dataset readers, parsers, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, broad file ingestion, training, self-play, league, P7-P12 and model-strength claims remain closed.
+- [x] 2026-06-07 Prepared P6 minimal replay schema and synthetic fixture implementation proposal for review before code: added `docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md`, naming candidate future files, scope, validation, evidence, risk, rollback, stop-condition and human/Web ChatGPT approval boundaries. This is docs-only proposal drafting and does not approve or create replay schema code, synthetic fixture files, tests, parsers, dataset readers, data ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, training, self-play, league, P7-P12 or model-strength claims.
 - [ ] Deferred: broader tiny benchmark harness expansion for legal-action rate, latency and fixed-position decisions. Current P5 implemented only the project-authored synthetic fixture harness; broader latency measurement, fixed-position exact-match, model-output integration, CLI, file ingestion, real data, league, runner, training, self-play and P6-P12 work require later explicit approval.
 - [ ] Update `09_EVIDENCE_LOG.md` whenever new external evidence is added.

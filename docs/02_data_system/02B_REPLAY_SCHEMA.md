@@ -218,6 +218,12 @@ inventory review. Replay schema implementation is still not approved.
 `docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md`
 reviews this replay schema documentation boundary before implementation.
 
+`docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md`
+now prepares the minimal replay schema and synthetic fixture implementation
+proposal for review before code. It is proposal drafting only; it does not
+approve replay schema implementation, fixture implementation, tests, parser,
+dataset reader, data ingestion, feature extraction or label generation.
+
 Review decision:
 
 ```text
@@ -262,22 +268,26 @@ generation.
 
 docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md
 reviews that proposal boundary with no blocker. It keeps replay schema
-implementation closed and allows only docs-only minimal implementation proposal
-drafting as the next step.
+implementation closed and allowed only docs-only minimal implementation
+proposal drafting as the next step.
+
+docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md
+prepares that docs-only minimal proposal for review before code. It keeps
+replay schema implementation closed.
 ```
 
 ## Next Task Recommendation
 
 ```text
-Prepare P6 minimal replay schema and synthetic fixture implementation proposal for review before code.
+Review P6 minimal replay schema and synthetic fixture implementation proposal before code.
 ```
 
-The proposal boundary is defined in `02J` and reviewed in `02K` with no
-blocker. The next task should draft a docs-only minimal implementation proposal
-for review before code. It must not implement replay schema code, fixtures,
-tests, ingestion, validation commands, dataset readers, parsers, feature
-extraction, label generation, CLI, model-output integration, real data access,
-training, self-play, league, runner behavior or P7-P12 work.
+The proposal boundary is defined in `02J`, reviewed in `02K` with no blocker
+and drafted in `02L`. The next task should review that docs-only proposal
+before code. It must not implement replay schema code, fixtures, tests,
+ingestion, validation commands, dataset readers, parsers, feature extraction,
+label generation, CLI, model-output integration, real data access, training,
+self-play, league, runner behavior or P7-P12 work.
 
 ## Evidence Grade
 

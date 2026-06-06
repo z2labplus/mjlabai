@@ -256,13 +256,13 @@ task cannot consume any unapproved source. A later implementation task requires:
 
 Because no blocker was found in `02D`, the follow-up chain defined and reviewed
 the replay schema documentation boundary in `02B` / `02E`, then defined and
-reviewed the synthetic/local replay fixture boundary in `02F` / `02G`, and now
-defines and reviews the readiness checklist in `02H` / `02I`, and `02J`
+reviewed the synthetic/local replay fixture boundary in `02F` / `02G`, then
+defined and reviewed the readiness checklist in `02H` / `02I`, and `02J`
 defines the proposal boundary before code. `02K` reviews that proposal
-boundary with no blocker. These reviews, checklists and proposal boundaries do
-not approve source ingestion, replay schema implementation or fixture
-implementation. The current next step is to prepare a docs-only minimal replay
-schema and synthetic fixture implementation proposal for review before code.
+boundary with no blocker. `02L` now prepares a docs-only minimal replay schema
+and synthetic fixture implementation proposal for review before code. These
+reviews, checklists, boundaries and the proposal do not approve source
+ingestion, replay schema implementation, fixture implementation or tests.
 
 ## Planning Decision
 
@@ -275,10 +275,10 @@ implementation and data ingestion are still not approved.
 ## Next Task Recommendation
 
 ```text
-Prepare P6 minimal replay schema and synthetic fixture implementation proposal for review before code.
+Review P6 minimal replay schema and synthetic fixture implementation proposal before code.
 ```
 
-That task should be docs-only proposal drafting. It must not implement replay
+That task should be a docs-only review gate. It must not implement replay
 schema code, fixtures, tests, data ingestion, dataset readers, parsers, feature
 extraction, label generation, model-output integration, CLI, broad file
 ingestion, real Tenhou, real haifu, external-log ingestion, platform-data

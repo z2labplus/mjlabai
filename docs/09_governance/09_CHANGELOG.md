@@ -1,5 +1,56 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.45
+
+- Prepared the P6 minimal replay schema and synthetic fixture implementation
+  proposal for review before code.
+- Added
+  `docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md`.
+- The proposal draft records:
+  - target stage: `P6 data system / docs-only proposal drafting`.
+  - candidate implementation classes for minimal replay schema code,
+    project-authored synthetic/local replay fixture, minimal schema validation
+    test, minimal fixture validation test and evidence/risk/docs
+    synchronization.
+  - proposed future file candidates:
+    `src/mjlabai/data/replay_schema.py`,
+    `tests/fixtures/data/synthetic_replay_smoke.json`,
+    `tests/data/test_replay_schema.py` and
+    `tests/data/test_synthetic_replay_fixture_schema.py`.
+  - minimal replay schema code candidate boundary.
+  - minimal synthetic/local fixture candidate boundary.
+  - minimal validation test candidate boundary.
+  - allowed future minimal implementation scope if later approved.
+  - forbidden future expansion.
+  - future validation command candidates.
+  - evidence / risk / docs update plan.
+  - rollback plan and stop conditions.
+  - human / Web ChatGPT approval requirement.
+  - P7-P12 non-entry boundary.
+- Decision:
+  - P6 minimal replay schema and synthetic fixture implementation proposal is
+    prepared for review before code.
+  - P6 implementation remains closed.
+  - replay schema implementation remains closed.
+  - fixture implementation remains closed.
+  - tests, data ingestion, dataset readers, parsers, feature extraction and
+    label generation remain closed.
+  - the next task is `Review P6 minimal replay schema and synthetic fixture
+    implementation proposal before code.`
+- Evidence grade:
+  - P6 minimal replay schema and synthetic fixture implementation proposal
+    drafting evidence only.
+- Updated `02A`, `02B`, `02F`, `02H`, `02J`, `02K`, handoff, docs index,
+  stage contract, milestones, backlog, technical plan, evidence log, risk
+  register, decision record and `10_NEXT`.
+- No production code, tests, fixtures, synthetic replay fixture, replay schema
+  code, dataclass / pydantic / JSON schema, parser, dataset reader, feature
+  extraction, label generation, data ingestion, CLI, broad ingestion,
+  model-output integration, real Tenhou, real haifu, external-log ingestion,
+  platform-data ingestion, OpenAI / LLM / model API call, third-party binary
+  call, training, tuning, self-play, league, runner behavior, P7-P12 work or
+  model-strength claim was added.
+
 ## 2026-06-06 — v2.44
 
 - Reviewed the P6 replay schema and synthetic fixture implementation proposal

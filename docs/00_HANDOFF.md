@@ -79,7 +79,8 @@ P5 closure does not approve P6-P12 entry, P6 data-system work, training, self-pl
 `docs/02_data_system/02I_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW.md` reviews the P6 replay schema and fixture implementation readiness checklist before code. The review found no blocker and can close, but P6 implementation, replay schema implementation, fixture implementation, data ingestion, dataset readers, parsers, feature extraction, label generation and P7-P12 remain unapproved.
 `docs/02_data_system/02J_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY.md` defines the P6 replay schema and synthetic fixture implementation proposal boundary before code. It records how any future implementation proposal must state candidate class, scope, non-goals, source inventory dependency, replay schema boundary dependency, synthetic fixture boundary dependency, readiness status, allowed/forbidden files, allowed/forbidden code changes, fixture/test policy, validation commands, evidence/risk update plans, rollback plan, blockers, human/Web ChatGPT approval requirements, P7-P12 non-entry and non-evidence warnings. This is proposal-boundary definition evidence only: P6 implementation, replay schema implementation, fixture implementation, tests, data ingestion, dataset readers, parsers, feature extraction, label generation and P7-P12 remain unapproved.
 `docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md` reviews that proposal boundary with no blocker. The review can close, but P6 implementation, replay schema implementation, fixture implementation, tests, data ingestion, dataset readers, parsers, feature extraction, label generation and P7-P12 remain unapproved. This is proposal-boundary review evidence only, not implementation approval, source approval, ingestion evidence, model-strength evidence or LuckyJ `10.68` comparison.
-The next project task is to prepare a P6 minimal replay schema and synthetic fixture implementation proposal for review before code. That task must remain docs-only proposal drafting and must not implement fixture files, replay schema code, tests, data ingestion, feature extraction, label generation, model-output integration, CLI, broad file ingestion, training, self-play, league, real Tenhou, external-log ingestion, platform-data ingestion, P7-P12 work or model-strength claims.
+`docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md` prepares the P6 minimal replay schema and synthetic fixture implementation proposal for review before code. It names candidate future files (`src/mjlabai/data/replay_schema.py`, `tests/fixtures/data/synthetic_replay_smoke.json`, `tests/data/test_replay_schema.py`, `tests/data/test_synthetic_replay_fixture_schema.py`) and defines strict scope, validation, evidence, risk, rollback, stop-condition and human/Web ChatGPT approval boundaries. This is proposal-drafting evidence only: P6 implementation, replay schema implementation, fixture implementation, tests, data ingestion, dataset readers, parsers, feature extraction, label generation and P7-P12 remain unapproved.
+The next project task is to review the P6 minimal replay schema and synthetic fixture implementation proposal before code. That task must remain a docs-only review gate and must not implement fixture files, replay schema code, tests, data ingestion, feature extraction, label generation, model-output integration, CLI, broad file ingestion, training, self-play, league, real Tenhou, external-log ingestion, platform-data ingestion, P7-P12 work or model-strength claims.
 ```
 
 ## Current methodology
@@ -168,15 +169,15 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Prepare P6 minimal replay schema and synthetic fixture implementation proposal
-for review before code. Do not execute P6 implementation directly. Do not
-expand into replay schema code, replay fixture implementation, tests, data
-ingestion, dataset readers, parsers, feature extraction, label generation,
-training, self-play, league evaluation, Tenhou integration, artifact upload,
-broad adapter work, CLI, broad file ingestion, model-output integration,
-latency measurement, fixed-position exact-match computation, metric
-implementation, registry code changes, promotion criteria changes, P7-P12 or
-model-strength claims without a later explicit implementation approval.
+Review P6 minimal replay schema and synthetic fixture implementation proposal
+before code. Do not execute P6 implementation directly. Do not expand into
+replay schema code, replay fixture implementation, tests, data ingestion,
+dataset readers, parsers, feature extraction, label generation, training,
+self-play, league evaluation, Tenhou integration, artifact upload, broad
+adapter work, CLI, broad file ingestion, model-output integration, latency
+measurement, fixed-position exact-match computation, metric implementation,
+registry code changes, promotion criteria changes, P7-P12 or model-strength
+claims without a later explicit implementation approval.
 ```
 
 Latest Akochan F1 audit summary:
@@ -455,7 +456,7 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is P6 data-system docs-only proposal drafting for a minimal
+- Current next work is a P6 data-system docs-only review gate for the minimal
   replay schema and synthetic fixture implementation proposal: do not implement
   fixture files, tests, replay schema code, ingest data, train, tune, self-play
   or connect to real Tenhou.

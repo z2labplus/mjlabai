@@ -14,6 +14,81 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-07 — DR-0038 — Prepare P6 Minimal Replay Schema and Synthetic Fixture Implementation Proposal Before Code
+
+Decision:
+
+```text
+Prepare the P6 minimal replay schema and synthetic fixture implementation
+proposal for review before code, keep all implementation classes closed, and
+allow only a docs-only proposal review as the next task.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- P6 data-system scope and entry criteria are defined for planning only.
+- The P6 data-source provenance and rights inventory has been defined and
+  reviewed with no blocker.
+- The P6 replay schema documentation boundary has been defined and reviewed
+  with no blocker.
+- The P6 synthetic/local replay fixture boundary has been defined and reviewed
+  with no blocker.
+- The P6 replay schema and fixture implementation readiness checklist has been
+  defined and reviewed with no blocker.
+- The P6 replay schema and synthetic fixture implementation proposal boundary
+  has been defined and reviewed with no blocker.
+
+Rationale:
+
+- A minimal implementation proposal is needed before any code, fixture or test
+  can be considered.
+- The proposal names exact candidate future files and preserves scope,
+  validation, evidence, risk, rollback, stop-condition and human approval
+  boundaries.
+- Keeping the next step as review-only prevents premature replay schema code,
+  fixture creation, tests, parser, dataset reader, ingestion, feature
+  extraction, label generation or P7-P12 drift.
+
+Consequences:
+
+- `docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md`
+  records the proposal.
+- P6 implementation remains closed.
+- Replay schema implementation remains closed.
+- Replay fixture implementation remains closed.
+- Tests remain closed.
+- Data ingestion, dataset readers, parsers, feature extraction and label
+  generation remain closed.
+- P7-P12 remain closed.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review P6 minimal replay schema and synthetic fixture implementation proposal before code.`
+- The next task must remain docs-only review and must not implement fixture
+  files, tests, replay schema code, dataclasses, pydantic models, JSON schema,
+  parsers, dataset readers, ingestion, feature extraction, label generation,
+  CLI, model-output integration, real Tenhou, real haifu, external-log
+  ingestion, platform-data ingestion, training, self-play, league, runner
+  behavior or P7-P12.
+
+Linked docs:
+
+- `docs/02_data_system/02A_DATA_SOURCES.md`
+- `docs/02_data_system/02B_REPLAY_SCHEMA.md`
+- `docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md`
+- `docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md`
+- `docs/02_data_system/02J_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY.md`
+- `docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md`
+- `docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-06-06 — DR-0037 — Close P6 Replay Schema and Synthetic Fixture Implementation Proposal Boundary Review
 
 Decision:

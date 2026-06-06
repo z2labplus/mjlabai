@@ -509,17 +509,17 @@ Consequences:
 ## Next Task Recommendation
 
 ```text
-Prepare P6 minimal replay schema and synthetic fixture implementation proposal for review before code.
+Review P6 minimal replay schema and synthetic fixture implementation proposal before code.
 ```
 
-That next task must remain docs-only proposal drafting. It must not implement
-P6, replay schema code, dataclasses, pydantic models, JSON schema, parsers,
-dataset readers, fixture files, tests, ingestion, feature extraction, label
-generation, CLI, broad file ingestion, model-output integration, latency
-measurement, fixed-position exact-match, metric implementation, registry code
-changes, promotion criteria changes, training, tuning, self-play, league,
-runner behavior, real Tenhou, real haifu, external logs, platform data or
-P7-P12.
+`02L` now prepares the docs-only proposal. The next task must remain a
+docs-only proposal review gate. It must not implement P6, replay schema code,
+dataclasses, pydantic models, JSON schema, parsers, dataset readers, fixture
+files, tests, ingestion, feature extraction, label generation, CLI, broad file
+ingestion, model-output integration, latency measurement, fixed-position
+exact-match, metric implementation, registry code changes, promotion criteria
+changes, training, tuning, self-play, league, runner behavior, real Tenhou,
+real haifu, external logs, platform data or P7-P12.
 
 ## Evidence Grade
 
