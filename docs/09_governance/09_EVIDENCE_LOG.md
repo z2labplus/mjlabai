@@ -8,6 +8,64 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-06 — P6 synthetic/local replay fixture boundary definition
+
+- Type: internal documentation / P6 planning boundary evidence.
+- Stage: P6 data-system docs-only planning.
+- Added boundary document:
+  - `docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md`.
+- Planning decision:
+  - P6 synthetic/local replay fixture boundary is defined for review before
+    schema implementation.
+  - fixture implementation remains unapproved.
+  - replay schema implementation remains unapproved.
+  - P6 implementation remains closed.
+  - data ingestion, dataset readers, feature extraction and label generation
+    remain unapproved.
+  - P7-P12 remain unapproved.
+- The document records:
+  - allowed fixture boundary.
+  - forbidden fixture boundary.
+  - source-inventory dependency.
+  - replay-schema boundary dependency.
+  - future fixture shape families.
+  - future implementation entry criteria.
+  - future validation expectations.
+  - synthetic/local fixture risks.
+  - planning decision and next-task recommendation.
+- Source / boundary dependencies:
+  - `docs/02_data_system/02A_DATA_SOURCES.md`.
+  - `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md`.
+  - `docs/02_data_system/02B_REPLAY_SCHEMA.md`.
+  - `docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md`.
+- Evidence grade:
+  - P6 synthetic/local replay fixture boundary definition evidence only.
+- Not evidence of:
+  - P6 implementation approval.
+  - fixture implementation.
+  - replay schema implementation.
+  - data ingestion.
+  - dataset reader.
+  - parser.
+  - source approval.
+  - feature extraction.
+  - label generation.
+  - dataset generation.
+  - supervised-learning readiness.
+  - real Tenhou, real haifu, external-log or platform-data access.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P7-P12 entry.
+- Next task:
+  - Review P6 synthetic/local replay fixture boundary before schema
+    implementation.
+
 ### 2026-06-06 — P6 replay schema documentation boundary review
 
 - Type: internal documentation / P6 planning review evidence.

@@ -50,6 +50,7 @@ docs/02_data_system/02B_REPLAY_SCHEMA.md
 docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md
 docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md
 docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md
+docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -92,6 +93,16 @@ extraction, label generation, real Tenhou / real haifu / external-log /
 platform-data access and P7-P12 remain closed. It is review evidence only, not
 schema implementation, source approval, ingestion evidence, model-strength
 evidence or LuckyJ comparison evidence.
+
+`docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md`
+defines the P6 synthetic/local replay fixture boundary before schema
+implementation. It records allowed and forbidden fixture-boundary scope,
+source-inventory dependency, replay-schema dependency, future shape families,
+future implementation entry criteria, validation expectations and risks. It is
+docs-only boundary definition evidence, not fixture implementation, replay
+schema implementation, ingestion approval, dataset-reader approval,
+feature/label generation, model-strength evidence or LuckyJ comparison
+evidence.
 
 ## Algorithm discovery and racing-funnel files
 

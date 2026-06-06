@@ -49,6 +49,15 @@ records that this inventory review can close with no blocker, but P6
 implementation, replay schema implementation and data ingestion remain closed.
 ```
 
+Synthetic/local replay fixture boundary:
+
+```text
+docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md
+defines the project-authored synthetic/local replay fixture boundary before
+schema implementation. It does not approve fixture implementation, source
+ingestion, replay schema implementation or any real/external/platform source.
+```
+
 ## Inventory Field Schema
 
 Every future data source must be represented with the fields below before it can

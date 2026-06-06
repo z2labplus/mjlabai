@@ -230,10 +230,20 @@ label generation, real Tenhou / real haifu / external-log / platform-data
 access, model-output integration, CLI, training, self-play, league and P7-P12
 remain closed.
 
+Synthetic/local replay fixture boundary:
+
+```text
+docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md
+defines future project-authored synthetic/local replay fixture shape families
+as documentation boundaries only. It does not create a fixture, implement this
+schema, approve ingestion, approve dataset readers or approve feature/label
+generation.
+```
+
 ## Next Task Recommendation
 
 ```text
-Define P6 synthetic/local replay fixture boundary before schema implementation.
+Review P6 synthetic/local replay fixture boundary before schema implementation.
 ```
 
 The next task should remain docs-only unless a later review explicitly approves

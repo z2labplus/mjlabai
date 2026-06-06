@@ -1,5 +1,45 @@
 # 09_CHANGELOG
 
+## 2026-06-06 — v2.39
+
+- Defined the P6 synthetic/local replay fixture boundary before schema
+  implementation.
+- Added
+  `docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md`.
+- The document records:
+  - fixture boundary purpose.
+  - allowed project-authored / repo-local / small smoke-only fixture boundary.
+  - forbidden real Tenhou, real haifu, external-log, platform-data, model-output,
+    training, self-play, league and P7-P12 fixture interpretations.
+  - source-inventory dependency on `02A` / `02D`.
+  - replay-schema boundary dependency on `02B` / `02E`.
+  - future fixture shape families.
+  - future fixture implementation entry criteria.
+  - future validation expectations.
+  - synthetic/local fixture risks.
+  - planning decision and next-task recommendation.
+- Decision:
+  - P6 synthetic/local replay fixture boundary is defined for review.
+  - fixture implementation remains unapproved.
+  - replay schema implementation remains unapproved.
+  - P6 implementation remains closed.
+  - data ingestion, dataset readers, feature extraction and label generation
+    remain closed.
+  - the next task is `Review P6 synthetic/local replay fixture boundary before
+    schema implementation.`
+- Evidence grade:
+  - P6 synthetic/local replay fixture boundary definition evidence only.
+- Updated `02A`, `02B`, handoff, docs index, stage contract, milestones,
+  backlog, technical plan, evidence log, risk register, decision record and
+  `10_NEXT`.
+- No production code, tests, fixtures, synthetic replay fixture, replay schema
+  code, dataclass / pydantic / JSON schema, parser, dataset reader, feature
+  extraction, label generation, data ingestion, CLI, broad ingestion,
+  model-output integration, real Tenhou, real haifu, external-log ingestion,
+  platform-data ingestion, third-party binary call, training, tuning,
+  self-play, league, runner behavior, P7-P12 work or model-strength claim was
+  added.
+
 ## 2026-06-06 — v2.38
 
 - Reviewed the P6 replay schema documentation boundary before implementation.

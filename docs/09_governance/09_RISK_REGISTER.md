@@ -8,6 +8,20 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-06 — P6 synthetic/local replay fixture boundary risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Synthetic/local replay fixture boundary is mistaken for fixture implementation approval. | Governance / Stage Control | High | Medium | `02F`, evidence log and `10_NEXT` state fixture implementation remains unapproved. | Open |
+| Future fixture shape families are treated as concrete JSON schema, dataclass or parser contract. | Data / Engineering | Medium-High | Medium | `02F` labels shape families as documentation boundary only and requires later review before implementation. | Open |
+| Real Tenhou, real haifu or external log content is copied into a future synthetic fixture. | Compliance / Data | High | Medium | `02F` forbids real/external/platform content and requires future no-real-data validation. | Open |
+| Player/account identifiers enter a future fixture. | Privacy / Security | High | Low-Medium | `02F` requires synthetic seat ids, no account identifiers and privacy review before creation. | Open |
+| Model outputs, labels or features creep into future fixture planning. | Governance / Data Quality | High | Medium | `02F` forbids model output, feature extraction and labels from real data; P7 remains closed. | Open |
+| Synthetic replay fixture is overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02F` and evidence log classify this as boundary definition evidence only. | Open |
+| Future fixture boundary is used to bypass source approval or ingestion approval. | Data / Rights | High | Medium | `02F` depends on `02A` / `02D` and requires explicit future `10_NEXT` implementation approval. | Open |
+| Fixture boundary expands into broad ingestion, CLI, parser or dataset reader work. | Governance / Scope | High | Medium | `02F`, stage contract and `10_NEXT` keep fixture implementation, CLI, parser and reader work closed. | Open |
+| P6 fixture planning drifts into P7-P12. | Governance / Stage Control | High | Medium | `02F` keeps training, self-play, league, runner behavior and P7-P12 closed. | Open |
+
 ## 2026-06-06 — P6 replay schema documentation boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
