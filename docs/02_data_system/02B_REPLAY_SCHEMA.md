@@ -213,10 +213,27 @@ P6 replay schema documentation boundary is defined for review after source
 inventory review. Replay schema implementation is still not approved.
 ```
 
+## Review Status
+
+`docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md`
+reviews this replay schema documentation boundary before implementation.
+
+Review decision:
+
+```text
+Review can close, but replay schema implementation remains closed.
+```
+
+This review reference does not widen the boundary. P6 implementation, replay
+schema implementation, data ingestion, dataset readers, feature extraction,
+label generation, real Tenhou / real haifu / external-log / platform-data
+access, model-output integration, CLI, training, self-play, league and P7-P12
+remain closed.
+
 ## Next Task Recommendation
 
 ```text
-Review P6 replay schema documentation boundary before implementation.
+Define P6 synthetic/local replay fixture boundary before schema implementation.
 ```
 
 The next task should remain docs-only unless a later review explicitly approves

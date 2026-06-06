@@ -49,6 +49,7 @@ docs/02_data_system/02A_DATA_SOURCES.md
 docs/02_data_system/02B_REPLAY_SCHEMA.md
 docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md
 docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md
+docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -82,6 +83,15 @@ pre-ingestion boundary before replay schema documentation work. P6
 implementation, replay schema implementation and data ingestion remain closed.
 It is review evidence only, not source approval, ingestion evidence,
 model-strength evidence or LuckyJ comparison evidence.
+
+`docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md`
+reviews the P6 replay schema documentation boundary before implementation. It
+records that the review can close with no blocker, but replay schema
+implementation, P6 implementation, data ingestion, dataset readers, feature
+extraction, label generation, real Tenhou / real haifu / external-log /
+platform-data access and P7-P12 remain closed. It is review evidence only, not
+schema implementation, source approval, ingestion evidence, model-strength
+evidence or LuckyJ comparison evidence.
 
 ## Algorithm discovery and racing-funnel files
 

@@ -8,6 +8,58 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-06 — P6 replay schema documentation boundary review
+
+- Type: internal documentation / P6 planning review evidence.
+- Stage: P6 data-system docs-only planning.
+- Added review document:
+  - `docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md`.
+- Reviewed boundary document:
+  - `docs/02_data_system/02B_REPLAY_SCHEMA.md`.
+- Review decision:
+  - Review can close.
+  - no blocker was found.
+  - replay schema implementation remains unapproved.
+  - P6 implementation remains closed.
+  - data ingestion, dataset readers, feature extraction and label generation
+    remain unapproved.
+  - P7-P12 remain unapproved.
+- Review findings:
+  - `02B` scope is correct.
+  - allowed documentation scope is sufficient.
+  - forbidden scope is strict enough.
+  - source inventory dependency is clear.
+  - field-family draft is sufficient and safe as documentation-boundary
+    planning only.
+  - validation expectations and future implementation entry criteria are
+    sufficient for the current gate.
+  - replay-schema risks and governance synchronization have no blocker.
+- Evidence grade:
+  - P6 replay schema documentation boundary review evidence only.
+- Not evidence of:
+  - P6 implementation approval.
+  - replay schema implementation.
+  - data ingestion.
+  - dataset reader.
+  - source approval.
+  - feature extraction.
+  - label generation.
+  - dataset generation.
+  - supervised-learning readiness.
+  - real Tenhou, real haifu, external-log or platform-data access.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P7-P12 entry.
+- Next task:
+  - Define P6 synthetic/local replay fixture boundary before schema
+    implementation.
+
 ### 2026-06-06 — P6 replay schema documentation boundary definition
 
 - Type: internal documentation / P6 planning boundary evidence.

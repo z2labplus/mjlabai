@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-06 — P6 replay schema documentation boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Replay schema boundary review is mistaken for replay schema implementation approval. | Governance / Stage Control | High | Medium | `02E`, evidence log and `10_NEXT` state the review can close but implementation remains unapproved. | Open |
+| The next synthetic/local replay fixture boundary task is mistaken for fixture implementation or schema code approval. | Governance / Stage Control | Medium-High | Medium | `02E` recommends a docs-only boundary task and `10_NEXT` forbids production code, tests, fixtures and schema code. | Open |
+| Source inventory dependency is overread as source approval after the review found no blocker. | Data / Rights | High | Medium | `02E` repeats that `02A` / `02D` are prerequisites, not source approval, ingestion approval or implementation approval. | Open |
+| Field-family draft is treated as a concrete JSON schema, dataclass or parser contract. | Data / Engineering | Medium-High | Medium | `02E` reviews all field families as documentation boundary only and keeps implementation entry criteria unsatisfied. | Open |
+| Replay schema review drifts into real Tenhou, real haifu, external logs or platform data. | Compliance / Scope | High | Medium | `02E`, stage contract and `10_NEXT` keep real/external/platform data closed. | Open |
+| Replay schema review is overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02E` classifies this as P6 replay schema documentation boundary review evidence only. | Open |
+| P6 docs planning drifts into P7-P12 after review closure. | Governance / Stage Control | High | Medium | `02E` and `10_NEXT` keep implementation and P7-P12 closed; next task remains docs-only. | Open |
+
 ## 2026-06-06 — P6 replay schema documentation boundary risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

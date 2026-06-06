@@ -14,6 +14,69 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-06 — DR-0031 — Close P6 Replay Schema Documentation Boundary Review
+
+Decision:
+
+```text
+Close the P6 replay schema documentation boundary review with no blocker,
+keep replay schema implementation closed, and require a docs-only synthetic/local
+replay fixture boundary task before any schema implementation.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- P6 data-system scope and entry criteria are defined for planning only.
+- The P6 data-source provenance and rights inventory has been defined and
+  reviewed with no blocker.
+- `docs/02_data_system/02B_REPLAY_SCHEMA.md` defines replay schema allowed
+  documentation scope, forbidden scope, source dependencies, field families,
+  validation expectations, future implementation entry criteria and risks.
+
+Rationale:
+
+- The replay schema boundary needs a review gate before any implementation
+  task can even be considered.
+- The review found that `02B` is conservative enough to prevent premature
+  schema code, ingestion, source approval, feature extraction, label generation
+  or P7-P12 drift.
+- A synthetic/local replay fixture boundary is the smallest safe next step
+  before any fixture or schema implementation.
+
+Consequences:
+
+- `docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md`
+  records the review.
+- Review can close.
+- P6 implementation remains closed.
+- Replay schema implementation remains closed.
+- Data ingestion, dataset readers, feature extraction and label generation
+  remain closed.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define P6 synthetic/local replay fixture boundary before schema implementation.`
+- The next task must remain docs-only and must not implement replay schema
+  code, fixtures, data ingestion, dataset readers, feature extraction, label
+  generation, CLI, model-output integration, real Tenhou, real haifu,
+  external-log ingestion, platform-data ingestion, training, self-play, league,
+  runner behavior or P7-P12.
+
+Linked docs:
+
+- `docs/02_data_system/02A_DATA_SOURCES.md`
+- `docs/02_data_system/02B_REPLAY_SCHEMA.md`
+- `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md`
+- `docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-06-06 — DR-0030 — Define P6 Replay Schema Documentation Boundary Before Implementation
 
 Decision:
