@@ -413,19 +413,19 @@ ingestion, feature extraction or label generation.
 ## Next Task Recommendation
 
 ```text
-Review P6 minimal replay schema and synthetic fixture implementation proposal before code.
+Prepare approval decision for minimal P6 replay schema and synthetic fixture implementation task.
 ```
 
 The proposal-boundary review has now been completed in `02K` with no blocker,
-but implementation remains closed. `02L` now prepares the docs-only minimal
-implementation proposal for review before code. The follow-up must review that
-proposal only. It must not implement P6, replay schema code, dataclasses,
-pydantic models, JSON schema, parsers, dataset readers, fixture files, tests,
-ingestion, feature extraction, label generation, CLI, broad file ingestion,
-model-output integration, latency measurement, fixed-position exact-match,
-metric implementation, registry code changes, promotion criteria changes,
-training, tuning, self-play, league, runner behavior, real Tenhou, real haifu,
-external logs, platform data or P7-P12.
+but implementation remains closed. `02L` prepares the docs-only minimal
+implementation proposal, and `02M` reviews that proposal with no blocker. The
+follow-up must prepare an approval decision only. It must not implement P6,
+replay schema code, dataclasses, pydantic models, JSON schema, parsers, dataset
+readers, fixture files, tests, ingestion, feature extraction, label generation,
+CLI, broad file ingestion, model-output integration, latency measurement,
+fixed-position exact-match, metric implementation, registry code changes,
+promotion criteria changes, training, tuning, self-play, league, runner
+behavior, real Tenhou, real haifu, external logs, platform data or P7-P12.
 
 ## Review Status
 

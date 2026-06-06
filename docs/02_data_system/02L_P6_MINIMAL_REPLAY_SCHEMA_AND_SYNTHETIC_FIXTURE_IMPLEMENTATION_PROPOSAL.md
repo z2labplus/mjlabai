@@ -390,16 +390,33 @@ implementation, fixture implementation, tests, parser, dataset reader, data
 ingestion, feature extraction or label generation.
 ```
 
+## Review Status
+
+`docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md`
+reviews this proposal before code.
+
+Review decision:
+
+```text
+Review can close, but P6 implementation remains closed.
+```
+
+The review found no blocker and records that the proposal is sufficiently
+bounded for a later approval-decision task. It does not approve replay schema
+implementation, fixture implementation, tests, parser, dataset reader, data
+ingestion, feature extraction or label generation.
+
 ## Next Task Recommendation
 
 ```text
-Review P6 minimal replay schema and synthetic fixture implementation proposal before code.
+Prepare approval decision for minimal P6 replay schema and synthetic fixture implementation task.
 ```
 
-That next task must be a docs-only review gate. It must not implement replay
-schema code, fixture files, tests, parser, dataset reader, data ingestion,
-feature extraction, label generation, real-data access, model-output
-integration, CLI, training, self-play, league, runner behavior or P7-P12.
+That next task must be a docs-only approval-decision gate. It must not
+implement replay schema code, fixture files, tests, parser, dataset reader,
+data ingestion, feature extraction, label generation, real-data access,
+model-output integration, CLI, training, self-play, league, runner behavior or
+P7-P12.
 
 ## Evidence Grade
 

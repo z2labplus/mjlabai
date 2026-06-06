@@ -19,7 +19,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 | P3 | Baseline reproducibility audit | Verify whether open baselines can install, run, infer and expose useful I/O locally | At least one baseline can perform stable local inference | Active |
 | P4 | Unified mahjong environment and interface | Define shared state, legal actions, logs, replays and adapter contracts | Different candidates can run through the same interface | Future |
 | P5 | Unified evaluation system | Compare all models with Tenhou-oriented metrics under one harness | Stable comparison of baselines and project models | Closed for current synthetic/local evaluation groundwork scope |
-| P6 | Data system | Build replay, feature, label and quality pipelines for training and evaluation | Supervised training and offline evaluation datasets can be generated | Docs-only minimal replay schema and synthetic fixture implementation proposal prepared for review; implementation not approved |
+| P6 | Data system | Build replay, feature, label and quality pipelines for training and evaluation | Supervised training and offline evaluation datasets can be generated | Docs-only minimal replay schema and synthetic fixture implementation proposal reviewed with no blocker; implementation not approved |
 | P7 | Supervised policy model | Train a base strategy model from high-quality human play and key decisions | Model beats simple baselines in key offline scenarios and completes games | Future |
 | P8 | Self-play reinforcement learning | Optimize toward Tenhou pt EV, placement and stable-dan objectives | RL checkpoint beats supervised checkpoint in the unified league | Future |
 | P9 | Search and risk model | Improve push/fold, deal-in risk, south-round rank control and oorasu decisions | Search-enhanced model beats non-search model in scenarios and league play | Future |
@@ -36,11 +36,12 @@ P5 evaluation groundwork is closed for the current synthetic/local scope.
 The project is in P6 data-system docs-only planning before any P6 implementation.
 ```
 
-The next execution step is to review the P6 minimal replay schema and synthetic
-fixture implementation proposal before code. That task must remain a docs-only
-review gate and must not implement fixture files, tests, replay schema code,
-data ingestion, dataset readers, parsers, feature extraction, label generation,
-training, self-play, league, real Tenhou, external-log ingestion or P7-P12 work.
+The next execution step is to prepare an approval decision for the minimal P6
+replay schema and synthetic fixture implementation task. That task must remain
+a docs-only approval-decision gate and must not implement fixture files, tests,
+replay schema code, data ingestion, dataset readers, parsers, feature
+extraction, label generation, training, self-play, league, real Tenhou,
+external-log ingestion or P7-P12 work.
 
 ## Guardrail
 

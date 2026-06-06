@@ -359,12 +359,14 @@ That boundary is reviewed in
 `docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md`
 with no blocker. The minimal proposal is now prepared in
 `docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md`.
-The current next task is to review that docs-only proposal before code. It must
-not implement replay schema code, fixture files, tests, dataclasses, pydantic
-models, JSON schema, parsers, dataset readers, ingestion, feature extraction,
-label generation, CLI, model-output integration, real data access, training,
-self-play, league, runner behavior, metric implementation, registry changes,
-promotion criteria changes or P7-P12 work.
+The proposal is reviewed in
+`docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md`
+with no blocker. The current next task is to prepare a docs-only approval
+decision. It must not implement replay schema code, fixture files, tests,
+dataclasses, pydantic models, JSON schema, parsers, dataset readers, ingestion,
+feature extraction, label generation, CLI, model-output integration, real data
+access, training, self-play, league, runner behavior, metric implementation,
+registry changes, promotion criteria changes or P7-P12 work.
 
 ## Evidence Grade
 

@@ -274,20 +274,25 @@ proposal drafting as the next step.
 docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md
 prepares that docs-only minimal proposal for review before code. It keeps
 replay schema implementation closed.
+
+docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md
+reviews that proposal with no blocker and records that review can close while
+replay schema implementation remains closed.
 ```
 
 ## Next Task Recommendation
 
 ```text
-Review P6 minimal replay schema and synthetic fixture implementation proposal before code.
+Prepare approval decision for minimal P6 replay schema and synthetic fixture implementation task.
 ```
 
 The proposal boundary is defined in `02J`, reviewed in `02K` with no blocker
-and drafted in `02L`. The next task should review that docs-only proposal
-before code. It must not implement replay schema code, fixtures, tests,
-ingestion, validation commands, dataset readers, parsers, feature extraction,
-label generation, CLI, model-output integration, real data access, training,
-self-play, league, runner behavior or P7-P12 work.
+and drafted in `02L`; the proposal review is recorded in `02M` with no
+blocker. The next task should prepare a docs-only approval decision. It must
+not implement replay schema code, fixtures, tests, ingestion, validation
+commands, dataset readers, parsers, feature extraction, label generation, CLI,
+model-output integration, real data access, training, self-play, league,
+runner behavior or P7-P12 work.
 
 ## Evidence Grade
 

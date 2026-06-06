@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Review P6 minimal replay schema and synthetic fixture implementation proposal before code.
+- [ ] Prepare approval decision for minimal P6 replay schema and synthetic fixture implementation task.
 
 Current execution charter:
 
@@ -41,7 +41,9 @@ Limits:
 - The P6 replay schema and synthetic fixture implementation proposal boundary is defined for review before code.
 - The P6 replay schema and synthetic fixture implementation proposal boundary review found no blocker and can close.
 - The P6 minimal replay schema and synthetic fixture implementation proposal is prepared in `docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md`.
-- The next task is a docs-only proposal review gate. Do not execute P6 implementation.
+- The P6 minimal replay schema and synthetic fixture implementation proposal review is complete in `docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md`.
+- The proposal review found no blocker and can close, but P6 implementation remains closed.
+- The next task is a docs-only approval-decision gate. Do not execute P6 implementation.
 - Do not generate a P6-P12 implementation prompt.
 - Use only docs/governance and existing data-system planning context; do not read Tenhou accounts, online platforms or external logs.
 - Do not implement replay schema code or data-source ingestion in the next task.
@@ -60,7 +62,7 @@ Limits:
 - Do not add CLI, broad file ingestion, league harness, external-data readers or new model code.
 - Do not add production evaluator logic in the next task.
 - Do not add new production code, tests, fixtures, synthetic replay fixtures, replay schema code, dataclasses, pydantic models, JSON schema, parsers, dataset readers, data ingestion, feature extraction, label generation, CLI, benchmark expansion, latency measurement, fixed-position exact-match, metric implementation, registry code changes, model-output integration, broad file ingestion, evidence taxonomy definition changes or promotion criteria changes in the next task.
-- Do not treat the docs-only proposal as implementation approval; the next task must review it before any code, test or fixture task.
+- Do not treat the docs-only proposal or proposal review as implementation approval; the next task must prepare an approval decision before any code, test or fixture task.
 - Do not connect P6 planning to model code, Akochan `system.exe`, third-party binaries, real Tenhou, real haifu, external logs or platform data.
 - Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not add model-output integration, broad file ingestion, new model code or latency measurement code.
@@ -69,12 +71,14 @@ Limits:
 - Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
 - Do not claim any P5 closure artifact or P6 planning artifact is model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
 - Do not enter P6 implementation.
-- Do not approve implementation unless a later review explicitly sets a new first `10_NEXT` implementation task with exact allowed files and forbidden expansions.
+- Do not approve implementation in the next task unless that task is explicitly an approval-decision document; even then, do not execute implementation.
+- Do not implement unless a later review explicitly sets a new first `10_NEXT` implementation task with exact allowed files and forbidden expansions.
 - Do not enter P7-P12.
 - Do not modify unrelated files.
 
 ## Completed
 
+- [x] 2026-06-07 Reviewed P6 minimal replay schema and synthetic fixture implementation proposal before code: added `docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md`, confirmed that the `02L` proposal scope is correct, candidate implementation classes and file candidates are sufficient and conservative, minimal replay schema / synthetic fixture / validation test candidate boundaries are narrow enough for a later approval decision, no blocker was found, and review can close while P6 implementation, replay schema implementation, fixture implementation, tests, data ingestion, dataset readers, parsers, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, training, self-play, league, P7-P12 and model-strength claims remain closed.
 - [x] 2026-05-28 Mortal F1 initial reproducibility audit: repository metadata and selected source/docs were inspected through the GitHub connector; local clone/build/minimal run were blocked by GitHub DNS, missing Rust/Cargo, missing Docker/conda/torch and missing model artifact.
 - [x] 2026-05-28 Mortal F1 blocker-resolution attempt: source tarball for commit `0cff2b52982be5b1163aa9a62fb01f03ce91e0d2` was downloaded through `codeload.github.com` with explicit host resolution and checksum `6531f46ba2f2b40a69528bf5362f9c89294ad72521aec4f59e208400c379e62c`; official gist evidence says there is currently no plan to release trained model parameters, so the official mjai inference sample was not run.
 - [x] 2026-05-29 Technical-plan-first execution charter added: `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md` now defines Web ChatGPT Pro vs local Codex roles, Git + docs source of truth, current technical route and update rules.

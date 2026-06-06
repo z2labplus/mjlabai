@@ -57,6 +57,7 @@ docs/02_data_system/02I_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CH
 docs/02_data_system/02J_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY.md
 docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md
 docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md
+docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -164,6 +165,16 @@ scope, validation, evidence, risk, rollback and stop-condition boundaries. It
 does not create replay schema code, fixture files, tests, parser, dataset
 reader, ingestion, feature extraction or label generation, and it is not
 implementation approval, source approval, model-strength evidence or LuckyJ
+comparison evidence.
+
+`docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md`
+reviews that minimal proposal before code. It records that the proposal review
+can close with no blocker and that the proposal is sufficiently bounded for a
+later approval-decision task, while P6 implementation, replay schema
+implementation, fixture implementation, tests, ingestion, parser /
+dataset-reader work, feature extraction, label generation and P7-P12 remain
+closed. It is proposal-review evidence only, not implementation approval,
+source approval, ingestion evidence, model-strength evidence or LuckyJ
 comparison evidence.
 
 ## Algorithm discovery and racing-funnel files

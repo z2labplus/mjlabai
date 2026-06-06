@@ -1,5 +1,47 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.46
+
+- Reviewed the P6 minimal replay schema and synthetic fixture implementation
+  proposal before code.
+- Added
+  `docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md`.
+- The review confirms:
+  - `02L` scope is correct.
+  - candidate implementation classes are sufficient and conservative.
+  - proposed file candidates are clear and remain candidate paths only.
+  - minimal replay schema code, synthetic/local fixture and validation test
+    candidate boundaries are narrow enough for a later approval-decision task.
+  - allowed future minimal scope is conservative.
+  - forbidden future expansion, rollback plan and stop conditions are
+    sufficient.
+  - human / Web ChatGPT approval requirement is clear.
+  - P7-P12 non-entry boundary is sufficient.
+  - governance docs are synchronized.
+- Decision:
+  - review can close.
+  - no blocker was found.
+  - P6 implementation remains closed.
+  - replay schema implementation remains closed.
+  - replay fixture implementation remains closed.
+  - tests, data ingestion, dataset readers, parsers, feature extraction and
+    label generation remain closed.
+  - the next task is `Prepare approval decision for minimal P6 replay schema
+    and synthetic fixture implementation task.`
+- Evidence grade:
+  - P6 minimal replay schema and synthetic fixture implementation proposal
+    review evidence only.
+- Updated `02A`, `02B`, `02F`, `02H`, `02J`, `02L`, handoff, docs index,
+  stage contract, milestones, backlog, technical plan, evidence log, risk
+  register, decision record and `10_NEXT`.
+- No production code, tests, fixtures, synthetic replay fixture, replay schema
+  code, dataclass / pydantic / JSON schema, parser, dataset reader, feature
+  extraction, label generation, data ingestion, CLI, broad ingestion,
+  model-output integration, real Tenhou, real haifu, external-log ingestion,
+  platform-data ingestion, OpenAI / LLM / model API call, third-party binary
+  call, training, tuning, self-play, league, runner behavior, P7-P12 work or
+  model-strength claim was added.
+
 ## 2026-06-07 — v2.45
 
 - Prepared the P6 minimal replay schema and synthetic fixture implementation

@@ -259,10 +259,12 @@ the replay schema documentation boundary in `02B` / `02E`, then defined and
 reviewed the synthetic/local replay fixture boundary in `02F` / `02G`, then
 defined and reviewed the readiness checklist in `02H` / `02I`, and `02J`
 defines the proposal boundary before code. `02K` reviews that proposal
-boundary with no blocker. `02L` now prepares a docs-only minimal replay schema
-and synthetic fixture implementation proposal for review before code. These
-reviews, checklists, boundaries and the proposal do not approve source
-ingestion, replay schema implementation, fixture implementation or tests.
+boundary with no blocker. `02L` prepares a docs-only minimal replay schema
+and synthetic fixture implementation proposal for review before code. `02M`
+reviews that proposal with no blocker and records that review can close while
+implementation remains closed. These reviews, checklists, boundaries and the
+proposal do not approve source ingestion, replay schema implementation,
+fixture implementation or tests.
 
 ## Planning Decision
 
@@ -275,12 +277,12 @@ implementation and data ingestion are still not approved.
 ## Next Task Recommendation
 
 ```text
-Review P6 minimal replay schema and synthetic fixture implementation proposal before code.
+Prepare approval decision for minimal P6 replay schema and synthetic fixture implementation task.
 ```
 
-That task should be a docs-only review gate. It must not implement replay
-schema code, fixtures, tests, data ingestion, dataset readers, parsers, feature
-extraction, label generation, model-output integration, CLI, broad file
+That task should be a docs-only approval-decision gate. It must not implement
+replay schema code, fixtures, tests, data ingestion, dataset readers, parsers,
+feature extraction, label generation, model-output integration, CLI, broad file
 ingestion, real Tenhou, real haifu, external-log ingestion, platform-data
 ingestion, training, self-play, league, runner behavior, P7-P12 or
 model-strength claims.

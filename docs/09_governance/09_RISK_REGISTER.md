@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation proposal review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Proposal review closure is mistaken for P6 implementation approval. | Governance / Stage Control | High | Medium | `02M`, evidence log and `10_NEXT` state review can close but implementation remains closed. | Open |
+| No-blocker review is mistaken for permission to create candidate files. | Governance / Scope | High | Medium | `02M` repeats that `src/mjlabai/data/replay_schema.py`, `tests/fixtures/data/synthetic_replay_smoke.json` and future tests remain candidate paths only. | Open |
+| The next approval-decision gate is skipped and implementation starts directly. | Governance / Process | High | Medium | `10_NEXT` sets a docs-only approval-decision task as the next first item. | Open |
+| Future minimal implementation expands into parser, dataset reader, ingestion, feature extraction or label generation. | Data / Engineering | High | Medium | `02M` confirms `02L` forbidden future expansion and stop conditions are sufficient. | Open |
+| Synthetic/local fixture implementation is overread as permission to use real Tenhou, real haifu, external logs or platform data. | Data / Compliance | High | Medium | `02M` keeps future scope project-authored synthetic/local only and keeps real/external/platform sources blocked. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02M` evidence grade and explicit non-evidence list classify it as proposal-review evidence only. | Open |
+| P6 approval planning drifts into P7-P12. | Governance / Stage Control | High | Medium | `02M`, stage contract and `10_NEXT` keep P7-P12, training, self-play, league and runner behavior closed. | Open |
+
 ## 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation proposal risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
