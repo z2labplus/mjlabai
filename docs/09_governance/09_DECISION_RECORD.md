@@ -14,6 +14,66 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-06 — DR-0030 — Define P6 Replay Schema Documentation Boundary Before Implementation
+
+Decision:
+
+```text
+Define the P6 replay schema documentation boundary after source inventory
+review, keep replay schema implementation unapproved, and require a docs-only
+review gate before any schema code or ingestion work.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- P6 data-system scope and entry criteria are defined for planning only.
+- The P6 data-source provenance and rights inventory has been defined and
+  reviewed with no blocker.
+- The project needed a replay schema boundary before any implementation could
+  be safely considered.
+
+Rationale:
+
+- Future replay records must be traceable to approved sources, provenance,
+  rights, storage policy and validation metadata.
+- Replay schema field families should be defined before parser, reader,
+  feature, label or training code exists.
+- Defining documentation boundaries first reduces the risk of unsafe real-data
+  ingestion, hidden-information leakage, private data exposure and stage creep
+  into P7-P12.
+
+Consequences:
+
+- `docs/02_data_system/02B_REPLAY_SCHEMA.md` now records allowed documentation
+  scope, forbidden scope, source-inventory dependencies, replay field families,
+  validation expectations, future implementation entry criteria and risks.
+- P6 implementation remains closed.
+- Replay schema implementation remains closed.
+- Data ingestion, feature extraction and label generation remain closed.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review P6 replay schema documentation boundary before implementation.`
+- The next task must remain docs-only and must not implement replay schema
+  code, data ingestion, dataset readers, feature extraction, label generation,
+  CLI, model-output integration, real Tenhou, real haifu, external-log
+  ingestion, platform-data ingestion, training, self-play, league, runner
+  behavior or P7-P12.
+
+Linked docs:
+
+- `docs/02_data_system/02A_DATA_SOURCES.md`
+- `docs/02_data_system/02B_REPLAY_SCHEMA.md`
+- `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-06-06 — DR-0029 — Close P6 Source Inventory Review Before Replay Schema Boundary Definition
 
 Decision:

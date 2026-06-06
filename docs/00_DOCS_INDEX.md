@@ -66,6 +66,15 @@ provenance risks and replay-schema implementation boundaries. It is docs-only
 inventory-definition evidence, not ingestion approval, replay schema
 implementation, model-strength evidence or LuckyJ comparison evidence.
 
+`docs/02_data_system/02B_REPLAY_SCHEMA.md` defines the P6 replay schema
+documentation boundary after the source inventory review. It records allowed
+and forbidden field-family planning, source-inventory dependencies,
+raw-vs-derived storage boundaries, validation expectations, future
+implementation entry criteria and replay-schema risks. It is docs-only boundary
+definition evidence, not replay schema implementation, ingestion approval,
+source approval, P6 implementation approval, model-strength evidence or LuckyJ
+comparison evidence.
+
 `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md`
 reviews the P6 data-source provenance and rights inventory. It records that the
 review can close with no blocker and that the inventory is sufficient as a

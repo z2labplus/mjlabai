@@ -223,8 +223,10 @@ task cannot consume any unapproved source. A later implementation task requires:
 - evidence log and risk register entries.
 - a `docs/10_next/10_NEXT.md` first task naming the exact implementation.
 
-Because no blocker was found in `02D`, the next task should define the replay
-schema documentation boundary, not implement replay schema code.
+Because no blocker was found in `02D`, the follow-up task was to define the
+replay schema documentation boundary, not implement replay schema code. That
+boundary is now defined in `docs/02_data_system/02B_REPLAY_SCHEMA.md`; the
+current next step is to review it before implementation.
 
 ## Planning Decision
 
@@ -237,7 +239,7 @@ implementation and data ingestion are still not approved.
 ## Next Task Recommendation
 
 ```text
-Define P6 replay schema documentation boundary after source inventory review.
+Review P6 replay schema documentation boundary before implementation.
 ```
 
 That task should be docs-only. It must not implement replay schema code, data

@@ -71,7 +71,8 @@ P5 closure does not approve P6-P12 entry, P6 data-system work, training, self-pl
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md` defines P6 data-system scope, entry criteria, future exit criteria and first next task before implementation. It records that P6 exists to make future replay, feature, label and data-quality work lawful, reproducible and auditable before any supervised learning, RL, search, league or LuckyJ validation work begins. This is docs-only planning evidence: no replay schema code, data ingestion, feature extraction, label generation, dataset reader, CLI, model-output integration, real Tenhou, real haifu, external-log ingestion, platform-data ingestion, training, self-play, league, runner behavior, P7-P12 work or model-strength claim was added. P6 implementation remains closed until a later explicit implementation boundary is approved.
 `docs/02_data_system/02A_DATA_SOURCES.md` defines the P6 data-source provenance and rights inventory before replay schema implementation. It records inventory fields, approval-status vocabulary, source-category approvals, required-before-ingestion checks, future evidence requirements, rights/provenance risks and replay-schema implementation boundaries. Project-authored synthetic/local fixtures and repository docs may be used only in their current docs/smoke context; real Tenhou, real haifu, external logs, platform data, accounts, third-party binaries, model weights, model outputs, self-play outputs and league outputs remain unapproved. This inventory is docs-only definition evidence, not ingestion approval, replay schema implementation, P6 implementation approval, model-strength evidence or LuckyJ `10.68` comparison.
 `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md` reviews that inventory before replay schema implementation. The review found no blocker and can close, but P6 implementation, replay schema implementation, source ingestion, feature extraction, label generation and P7-P12 remain closed. This is P6 inventory review evidence only, not source approval, ingestion approval, data-system implementation approval, model-strength evidence or LuckyJ `10.68` comparison.
-The next project task is to define the P6 replay schema documentation boundary after source inventory review. That task must remain docs-only and must not implement replay schema code, data ingestion, feature extraction, label generation, model-output integration, CLI, broad file ingestion, training, self-play, league, real Tenhou, external-log ingestion, platform-data ingestion, P7-P12 work or model-strength claims.
+`docs/02_data_system/02B_REPLAY_SCHEMA.md` defines the P6 replay schema documentation boundary after source inventory review. It records allowed documentation scope, forbidden scope, source-inventory dependencies, replay field families, validation expectations, future implementation entry criteria and replay-schema risks. This is P6 replay schema documentation boundary definition evidence only: P6 implementation, replay schema implementation, source ingestion, feature extraction, label generation and P7-P12 remain closed.
+The next project task is to review the P6 replay schema documentation boundary before implementation. That review must remain docs-only and must not implement replay schema code, data ingestion, feature extraction, label generation, model-output integration, CLI, broad file ingestion, training, self-play, league, real Tenhou, external-log ingestion, platform-data ingestion, P7-P12 work or model-strength claims.
 ```
 
 ## Current methodology
@@ -160,7 +161,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define P6 replay schema documentation boundary after source inventory review.
+Review P6 replay schema documentation boundary before implementation.
 Do not execute P6 implementation directly. Do not expand into replay schema
 code, data ingestion, feature extraction, label generation, training,
 self-play, league evaluation, Tenhou integration, artifact upload, broad
@@ -446,5 +447,5 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is P6 data-system docs-only replay schema boundary planning: do not implement replay schema code, ingest data, train, tune, self-play or connect to real Tenhou.
+- Current next work is P6 data-system docs-only replay schema boundary review: do not implement replay schema code, ingest data, train, tune, self-play or connect to real Tenhou.
 - Technical decisions from Web ChatGPT Pro must be written into Git + docs before becoming project facts.

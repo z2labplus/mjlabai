@@ -1,5 +1,38 @@
 # 09_CHANGELOG
 
+## 2026-06-06 — v2.37
+
+- Defined the P6 replay schema documentation boundary after source inventory
+  review.
+- Updated `docs/02_data_system/02B_REPLAY_SCHEMA.md` from a placeholder into a
+  docs-only boundary document.
+- The document records:
+  - allowed replay schema documentation scope.
+  - forbidden implementation, ingestion and real-data scope.
+  - source-inventory dependencies.
+  - replay field-family draft.
+  - validation expectations before future implementation.
+  - future implementation entry criteria.
+  - replay-schema risks.
+  - planning decision and next-task recommendation.
+- Decision:
+  - P6 replay schema documentation boundary is defined for review.
+  - replay schema implementation remains unapproved.
+  - P6 implementation remains closed.
+  - data ingestion, feature extraction and label generation remain closed.
+  - the next task is `Review P6 replay schema documentation boundary before
+    implementation.`
+- Evidence grade:
+  - P6 replay schema documentation boundary definition evidence only.
+- Updated handoff, docs index, stage contract, milestones, backlog, technical
+  plan, evidence log, risk register, decision record and `10_NEXT`.
+- No production code, tests, fixtures, replay schema code, dataset reader,
+  feature extraction, label generation, data ingestion, CLI, broad ingestion,
+  model-output integration, real Tenhou, real haifu, external-log ingestion,
+  platform-data ingestion, third-party binary call, training, tuning,
+  self-play, league, runner behavior, P7-P12 work or model-strength claim was
+  added.
+
 ## 2026-06-06 — v2.36
 
 - Reviewed the P6 data-source provenance and rights inventory before replay

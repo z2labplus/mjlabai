@@ -223,13 +223,15 @@ The review confirms:
 - No source category may be consumed by code until a later task explicitly
   approves both source use and implementation boundary.
 
-The next safe task is documentation-only replay schema boundary definition, not
-implementation.
+The next safe task at the time of this review was documentation-only replay
+schema boundary definition, not implementation. That follow-up is now defined
+in `docs/02_data_system/02B_REPLAY_SCHEMA.md`; the current next step is to
+review the boundary before implementation.
 
 Recommended next task:
 
 ```text
-Define P6 replay schema documentation boundary after source inventory review.
+Review P6 replay schema documentation boundary before implementation.
 ```
 
 ## Governance Synchronization Review
@@ -267,13 +269,15 @@ P7-P12 remain closed.
 
 ## Next Task Recommendation
 
-Set the next first task in `docs/10_next/10_NEXT.md` to:
+This review originally set the next first task in `docs/10_next/10_NEXT.md` to:
 
 ```text
 Define P6 replay schema documentation boundary after source inventory review.
 ```
 
-That next task must remain docs-only. It must not implement replay schema code,
+That follow-up has now been completed in `02B`. The current next task is to
+review the P6 replay schema documentation boundary before implementation, and
+it must remain docs-only. It must not implement replay schema code,
 dataset readers, feature extraction, label generation, data ingestion, CLI,
 broad file ingestion, model-output integration, real Tenhou, real haifu,
 external-log ingestion, platform-data ingestion, training, self-play, league,

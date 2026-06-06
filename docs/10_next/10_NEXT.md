@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Define P6 replay schema documentation boundary after source inventory review.
+- [ ] Review P6 replay schema documentation boundary before implementation.
 
 Current execution charter:
 
@@ -30,7 +30,8 @@ Limits:
 - P6 implementation remains closed.
 - The P6 data-source provenance and rights inventory is defined and reviewed before replay schema implementation.
 - The P6 data-source provenance and rights inventory review found no blocker.
-- The next task may define the replay schema documentation boundary after source inventory review.
+- The P6 replay schema documentation boundary is defined after source inventory review.
+- The next task may review the replay schema documentation boundary before implementation.
 - The next task is docs-only. Do not execute P6 implementation.
 - Do not generate a P6-P12 implementation prompt.
 - Use only docs/governance and existing data-system planning context; do not read Tenhou accounts, online platforms or external logs.
@@ -144,6 +145,7 @@ Limits:
 - [x] 2026-06-05 Defined P6 data-system scope, entry criteria and first task before implementation: added `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`, recording P6 purpose, allowed/forbidden scope, entry criteria, future implementation entry criteria, future exit criteria, provenance/rights/compliance requirements, evidence requirements, risks, P7-P12 non-entry boundaries and the first next task. This is docs-only planning evidence and does not approve P6 implementation, replay schema code, data ingestion, feature extraction, label generation, CLI, model-output integration, real Tenhou, real haifu, external logs, platform data, training, self-play, league, runner behavior, P7-P12 or model-strength claims.
 - [x] 2026-06-05 Defined P6 data-source provenance and rights inventory before replay schema implementation: updated `docs/02_data_system/02A_DATA_SOURCES.md` with inventory fields, approval-status vocabulary, source-category approvals, required-before-ingestion checklist, future evidence requirements, rights/provenance risks, replay schema implementation boundary and explicit non-evidence warnings. This is docs-only inventory-definition evidence and does not approve P6 implementation, replay schema code, data ingestion, feature extraction, label generation, CLI, model-output integration, real Tenhou, real haifu, external logs, platform data, training, self-play, league, runner behavior, P7-P12 or model-strength claims.
 - [x] 2026-06-06 Reviewed P6 data-source provenance and rights inventory before replay schema implementation: added `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md`, confirmed that `02A` scope, field schema, approval vocabulary, source categories, pre-ingestion checklist, future evidence requirements, rights/provenance risks, replay schema boundary and governance synchronization are sufficient for the current review gate, found no blocker, and kept P6 implementation, replay schema implementation, data ingestion, real sources, training, self-play, league, P7-P12 and model-strength claims closed.
-- [ ] Define P6 replay schema documentation boundary after source inventory review.
+- [x] 2026-06-06 Defined P6 replay schema documentation boundary after source inventory review: updated `docs/02_data_system/02B_REPLAY_SCHEMA.md` with allowed documentation scope, forbidden scope, source-inventory dependencies, replay field-family draft, validation expectations, future implementation entry criteria, replay-schema risks, planning decision, next-task recommendation and explicit non-evidence warnings. P6 implementation, replay schema implementation, data ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, training, self-play, league, P7-P12 and model-strength claims remain closed.
+- [ ] Review P6 replay schema documentation boundary before implementation.
 - [ ] Deferred: broader tiny benchmark harness expansion for legal-action rate, latency and fixed-position decisions. Current P5 implemented only the project-authored synthetic fixture harness; broader latency measurement, fixed-position exact-match, model-output integration, CLI, file ingestion, real data, league, runner, training, self-play and P6-P12 work require later explicit approval.
 - [ ] Update `09_EVIDENCE_LOG.md` whenever new external evidence is added.

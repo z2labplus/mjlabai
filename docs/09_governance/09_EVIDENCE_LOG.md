@@ -8,6 +8,54 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-06 — P6 replay schema documentation boundary definition
+
+- Type: internal documentation / P6 planning boundary evidence.
+- Stage: P6 data-system docs-only planning.
+- Updated boundary document:
+  - `docs/02_data_system/02B_REPLAY_SCHEMA.md`.
+- Planning decision:
+  - P6 replay schema documentation boundary is defined for review after source
+    inventory review.
+  - replay schema implementation remains unapproved.
+  - P6 implementation remains closed.
+  - data ingestion, feature extraction and label generation remain unapproved.
+  - P7-P12 remain unapproved.
+- The document records:
+  - allowed replay schema documentation scope.
+  - forbidden implementation / ingestion / real-data scope.
+  - source-inventory dependencies.
+  - replay field-family draft.
+  - validation expectations before future implementation.
+  - future implementation entry criteria.
+  - replay-schema risks.
+  - planning decision and next-task recommendation.
+- Source dependency:
+  - `docs/02_data_system/02A_DATA_SOURCES.md`.
+  - `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md`.
+- Evidence grade:
+  - P6 replay schema documentation boundary definition evidence only.
+- Not evidence of:
+  - P6 implementation approval.
+  - replay schema implementation.
+  - data ingestion.
+  - source approval.
+  - feature extraction.
+  - label generation.
+  - dataset generation.
+  - supervised-learning readiness.
+  - real Tenhou, real haifu, external-log or platform-data access.
+  - model-output integration.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P7-P12 entry.
+- Next task:
+  - Review P6 replay schema documentation boundary before implementation.
+
 ### 2026-06-06 — P6 data-source provenance and rights inventory review
 
 - Type: internal documentation / P6 planning review evidence.

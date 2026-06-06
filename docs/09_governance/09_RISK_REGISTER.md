@@ -8,6 +8,19 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-06 — P6 replay schema documentation boundary risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Replay schema documentation boundary is mistaken for replay schema implementation approval. | Governance / Stage Control | High | Medium | `02B`, evidence log and `10_NEXT` state that the boundary is docs-only and implementation remains unapproved. | Open |
+| Field-family names are treated as a concrete JSON schema, dataclass or parser contract. | Data / Engineering | Medium-High | Medium | `02B` labels the field-family draft as documentation boundary only and requires a later review before implementation. | Open |
+| Source inventory review plus replay schema boundary are mistaken for source ingestion approval. | Data / Rights | High | Medium | `02B` requires source-specific approval, storage policy, evidence references and an explicit implementation task before ingestion. | Open |
+| Hidden-information leakage enters future decision-state or label fields. | Evaluation / Data Quality | High | Medium | `02B` requires observation / decision-state boundaries, hidden-information policy and later leakage tests before implementation. | Open |
+| Real Tenhou, real haifu, external logs or platform data are introduced under replay-schema planning. | Compliance / Scope | High | Medium | `02B`, stage contract and `10_NEXT` keep real/external/platform sources blocked pending source-specific review. | Open |
+| Replay schema planning is overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02B` and evidence log classify the artifact as P6 replay schema documentation boundary definition evidence only. | Open |
+| P6 replay schema review drifts into feature extraction, label generation, CLI or broad file ingestion. | Governance / Stage Control | High | Medium | The next task is a docs-only review gate and must not implement schema code, readers, CLI, feature extraction or label generation. | Open |
+| P7-P12 work starts from replay schema planning without implementation and transition approval. | Governance / Stage Control | High | Medium | `02B`, stage contract and `10_NEXT` keep training, self-play, league, runner behavior and P7-P12 closed. | Open |
+
 ## 2026-06-06 — P6 source inventory review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
