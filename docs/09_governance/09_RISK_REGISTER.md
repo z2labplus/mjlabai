@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-06 — P6 replay schema and synthetic fixture implementation proposal boundary risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Proposal boundary definition is mistaken for P6 implementation approval. | Governance / Stage Control | High | Medium | `02J`, evidence log and `10_NEXT` state proposal definition is not implementation approval. | Open |
+| Future implementation proposal becomes too broad. | Governance / Scope | High | Medium | `02J` requires allowed/forbidden files, allowed/forbidden code changes, rollback plan and blockers before review. | Open |
+| Proposal language expands into parser, dataset reader, data ingestion, feature extraction or label generation. | Data / Engineering | High | Medium | `02J` forbids those classes and marks them deferred until separate approval. | Open |
+| Real Tenhou, real haifu, external logs or platform data are introduced through a proposal. | Data / Compliance | High | Medium | `02J` limits candidate work to project-authored synthetic/local source category and keeps source approval separate. | Open |
+| Tests or fixtures are created from proposal-boundary language. | Governance / Scope | High | Medium | `02J` defines test/fixture candidates only and `10_NEXT` forbids code, tests and fixtures in the review task. | Open |
+| Proposal evidence is overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02J` evidence grade and explicit non-evidence list keep the artifact as proposal-boundary definition evidence only. | Open |
+| P6 planning drifts into P7-P12 after proposal-boundary definition. | Governance / Stage Control | High | Medium | `02J`, stage contract and `10_NEXT` keep P7-P12, training, self-play, league and runner behavior closed. | Open |
+
 ## 2026-06-06 — P6 replay schema and fixture implementation readiness checklist review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

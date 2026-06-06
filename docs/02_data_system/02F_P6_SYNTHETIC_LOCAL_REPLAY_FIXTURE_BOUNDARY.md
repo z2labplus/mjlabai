@@ -298,15 +298,22 @@ reviews that checklist with no blocker. It keeps fixture implementation closed
 and does not approve fixture files, validation tests, schema code, ingestion,
 parser, dataset reader, feature extraction or label generation.
 
+`docs/02_data_system/02J_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY.md`
+defines the proposal boundary for any future replay schema and synthetic
+fixture implementation proposal. It keeps fixture implementation closed and
+does not approve fixture files, validation tests, schema code, ingestion,
+parser, dataset reader, feature extraction or label generation.
+
 ## Next Task Recommendation
 
 ```text
-Define P6 replay schema and synthetic fixture implementation proposal boundary before code.
+Review P6 replay schema and synthetic fixture implementation proposal boundary before code.
 ```
 
-The next task should remain docs-only. It must not implement fixture files,
-replay schema code, parsers, dataset readers, ingestion, feature extraction,
-label generation, CLI, model-output integration, real data access, training,
+The proposal boundary is now defined in `02J`; the next task should review it
+and remain docs-only. It must not implement fixture files, replay schema code,
+tests, parsers, dataset readers, ingestion, feature extraction, label
+generation, CLI, model-output integration, real data access, training,
 self-play, league, runner behavior or P7-P12 work.
 
 ## Evidence Grade

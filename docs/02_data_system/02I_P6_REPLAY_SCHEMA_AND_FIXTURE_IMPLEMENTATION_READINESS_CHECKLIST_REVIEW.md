@@ -412,17 +412,18 @@ Consequences:
 ## Next Task Recommendation
 
 ```text
-Define P6 replay schema and synthetic fixture implementation proposal boundary before code.
+Review P6 replay schema and synthetic fixture implementation proposal boundary before code.
 ```
 
-That next task must remain docs-only. It may define the boundary for a future
-implementation proposal, but it must not implement P6, replay schema code,
-dataclasses, pydantic models, JSON schema, parser, dataset reader, fixture
-files, tests, ingestion, feature extraction, label generation, CLI, broad file
-ingestion, model-output integration, latency measurement, fixed-position
-exact-match, metric implementation, registry code changes, promotion criteria
-changes, training, tuning, self-play, league, runner behavior, real Tenhou,
-real haifu, external logs, platform data or P7-P12.
+`docs/02_data_system/02J_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY.md`
+now defines that boundary for review. The next task must remain docs-only and
+must not implement P6, replay schema code, dataclasses, pydantic models, JSON
+schema, parser, dataset reader, fixture files, tests, ingestion, feature
+extraction, label generation, CLI, broad file ingestion, model-output
+integration, latency measurement, fixed-position exact-match, metric
+implementation, registry code changes, promotion criteria changes, training,
+tuning, self-play, league, runner behavior, real Tenhou, real haifu, external
+logs, platform data or P7-P12.
 
 ## Evidence Grade
 

@@ -352,13 +352,15 @@ schema implementation, fixture implementation, data ingestion, parser /
 dataset-reader work, feature extraction, label generation and P7-P12 remain
 closed.
 
-The current next task is to define a docs-only replay schema and synthetic
-fixture implementation proposal boundary before code. It must not implement
-replay schema code, fixture files, dataclasses, pydantic models, JSON schema,
-parsers, dataset readers, ingestion, feature extraction, label generation,
-CLI, model-output integration, real data access, training, self-play, league,
-runner behavior, metric implementation, registry changes, promotion criteria
-changes or P7-P12 work.
+The docs-only replay schema and synthetic fixture implementation proposal
+boundary is now defined in
+`docs/02_data_system/02J_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY.md`.
+The current next task is to review that proposal boundary before code. It must
+not implement replay schema code, fixture files, dataclasses, pydantic models,
+JSON schema, parsers, dataset readers, ingestion, feature extraction, label
+generation, CLI, model-output integration, real data access, training,
+self-play, league, runner behavior, metric implementation, registry changes,
+promotion criteria changes or P7-P12 work.
 
 ## Evidence Grade
 

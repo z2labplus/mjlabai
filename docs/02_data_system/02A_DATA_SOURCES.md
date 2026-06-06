@@ -72,6 +72,12 @@ docs/02_data_system/02I_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CH
 reviews that checklist with no blocker. The review does not change source
 approval policy and does not approve ingestion, replay schema implementation,
 fixture implementation or any real/external/platform source.
+
+docs/02_data_system/02J_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY.md
+defines the proposal boundary that any future replay schema or synthetic
+fixture implementation proposal must satisfy before code. It does not change
+source approval policy, does not approve ingestion and does not approve any
+real/external/platform source.
 ```
 
 ## Inventory Field Schema
@@ -251,10 +257,12 @@ task cannot consume any unapproved source. A later implementation task requires:
 Because no blocker was found in `02D`, the follow-up chain defined and reviewed
 the replay schema documentation boundary in `02B` / `02E`, then defined and
 reviewed the synthetic/local replay fixture boundary in `02F` / `02G`, and now
-defines and reviews the readiness checklist in `02H` / `02I`. These reviews and
-checklists do not approve source ingestion, replay schema implementation or
-fixture implementation. The current next step is to define a docs-only replay
-schema and synthetic fixture implementation proposal boundary before code.
+defines and reviews the readiness checklist in `02H` / `02I`, and `02J`
+defines the proposal boundary before code. These reviews, checklists and
+proposal boundaries do not approve source ingestion, replay schema
+implementation or fixture implementation. The current next step is to review
+the docs-only replay schema and synthetic fixture implementation proposal
+boundary before code.
 
 ## Planning Decision
 
@@ -267,13 +275,13 @@ implementation and data ingestion are still not approved.
 ## Next Task Recommendation
 
 ```text
-Define P6 replay schema and synthetic fixture implementation proposal boundary before code.
+Review P6 replay schema and synthetic fixture implementation proposal boundary before code.
 ```
 
 That task should be docs-only. It must not implement replay schema code,
-fixtures, data ingestion, dataset readers, parsers, feature extraction, label
-generation, model-output integration, CLI, broad file ingestion, real Tenhou,
-real haifu, external-log ingestion, platform-data ingestion, training,
+fixtures, tests, data ingestion, dataset readers, parsers, feature extraction,
+label generation, model-output integration, CLI, broad file ingestion, real
+Tenhou, real haifu, external-log ingestion, platform-data ingestion, training,
 self-play, league, runner behavior, P7-P12 or model-strength claims.
 
 ## Evidence Grade
