@@ -412,14 +412,16 @@ Consequences:
 ## Next Task Recommendation
 
 ```text
-Review P6 replay schema and synthetic fixture implementation proposal boundary before code.
+Prepare P6 minimal replay schema and synthetic fixture implementation proposal for review before code.
 ```
 
 `docs/02_data_system/02J_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY.md`
-now defines that boundary for review. The next task must remain docs-only and
-must not implement P6, replay schema code, dataclasses, pydantic models, JSON
-schema, parser, dataset reader, fixture files, tests, ingestion, feature
-extraction, label generation, CLI, broad file ingestion, model-output
+defines that boundary and
+`docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md`
+reviews it with no blocker. The next task must remain docs-only proposal
+drafting and must not implement P6, replay schema code, dataclasses, pydantic
+models, JSON schema, parser, dataset reader, fixture files, tests, ingestion,
+feature extraction, label generation, CLI, broad file ingestion, model-output
 integration, latency measurement, fixed-position exact-match, metric
 implementation, registry code changes, promotion criteria changes, training,
 tuning, self-play, league, runner behavior, real Tenhou, real haifu, external

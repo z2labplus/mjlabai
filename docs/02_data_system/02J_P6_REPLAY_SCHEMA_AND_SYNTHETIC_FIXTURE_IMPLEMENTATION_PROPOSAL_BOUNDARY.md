@@ -413,16 +413,32 @@ ingestion, feature extraction or label generation.
 ## Next Task Recommendation
 
 ```text
-Review P6 replay schema and synthetic fixture implementation proposal boundary before code.
+Prepare P6 minimal replay schema and synthetic fixture implementation proposal for review before code.
 ```
 
-That follow-up must remain docs-only. It must not implement P6, replay schema
-code, dataclasses, pydantic models, JSON schema, parsers, dataset readers,
-fixture files, tests, ingestion, feature extraction, label generation, CLI,
-broad file ingestion, model-output integration, latency measurement,
-fixed-position exact-match, metric implementation, registry code changes,
-promotion criteria changes, training, tuning, self-play, league, runner
-behavior, real Tenhou, real haifu, external logs, platform data or P7-P12.
+The proposal-boundary review has now been completed in `02K` with no blocker,
+but implementation remains closed. The follow-up must remain docs-only
+proposal drafting. It must not implement P6, replay schema code, dataclasses,
+pydantic models, JSON schema, parsers, dataset readers, fixture files, tests,
+ingestion, feature extraction, label generation, CLI, broad file ingestion,
+model-output integration, latency measurement, fixed-position exact-match,
+metric implementation, registry code changes, promotion criteria changes,
+training, tuning, self-play, league, runner behavior, real Tenhou, real haifu,
+external logs, platform data or P7-P12.
+
+## Review Status
+
+`docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md`
+reviews this proposal boundary and records:
+
+```text
+Review can close, but P6 implementation remains closed.
+```
+
+The review does not approve P6 implementation, replay schema implementation,
+fixture implementation, tests, data ingestion, parser, dataset reader, feature
+extraction, label generation, real data access, model-output integration, CLI,
+training, self-play, league, runner behavior or P7-P12 work.
 
 ## Evidence Grade
 

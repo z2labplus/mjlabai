@@ -259,20 +259,25 @@ proposal must be written and reviewed before code. It keeps replay schema
 implementation closed and does not approve dataclasses, pydantic models, JSON
 schema, parser, dataset reader, ingestion, feature extraction or label
 generation.
+
+docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md
+reviews that proposal boundary with no blocker. It keeps replay schema
+implementation closed and allows only docs-only minimal implementation proposal
+drafting as the next step.
 ```
 
 ## Next Task Recommendation
 
 ```text
-Review P6 replay schema and synthetic fixture implementation proposal boundary before code.
+Prepare P6 minimal replay schema and synthetic fixture implementation proposal for review before code.
 ```
 
-The proposal boundary is now defined in `02J`; the next task should review it
-and remain docs-only unless a later review explicitly approves implementation.
-It must not implement replay schema code, fixtures, tests, ingestion,
-validation commands, dataset readers, parsers, feature extraction, label
-generation, CLI, model-output integration, real data access, training,
-self-play, league, runner behavior or P7-P12 work.
+The proposal boundary is defined in `02J` and reviewed in `02K` with no
+blocker. The next task should draft a docs-only minimal implementation proposal
+for review before code. It must not implement replay schema code, fixtures,
+tests, ingestion, validation commands, dataset readers, parsers, feature
+extraction, label generation, CLI, model-output integration, real data access,
+training, self-play, league, runner behavior or P7-P12 work.
 
 ## Evidence Grade
 

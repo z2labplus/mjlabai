@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-06 — P6 replay schema and synthetic fixture implementation proposal boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Proposal-boundary review closure is mistaken for P6 implementation approval. | Governance / Stage Control | High | Medium | `02K`, evidence log and `10_NEXT` state review can close but implementation remains closed. | Open |
+| The next proposal-drafting task is mistaken for code approval. | Governance / Scope | High | Medium | `10_NEXT` limits the next task to docs-only proposal drafting before code review. | Open |
+| Future proposal drafting creates fixtures, tests or schema code. | Data / Engineering | High | Medium | `02K` repeats that fixture files, tests, dataclasses, pydantic models, JSON schema and parsers remain closed. | Open |
+| Parser, dataset reader, ingestion, feature extraction or label generation starts from review wording. | Data / Stage Control | High | Medium | `02K` keeps those classes closed and requires later explicit approval. | Open |
+| Real Tenhou, real haifu, external logs or platform data are introduced through proposal drafting. | Data / Compliance | High | Medium | `02K` and `10_NEXT` keep real/external/platform sources blocked. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02K` evidence grade and explicit non-evidence list classify the artifact as review evidence only. | Open |
+| P6 proposal planning drifts into P7-P12. | Governance / Stage Control | High | Medium | Stage contract and `10_NEXT` keep P7-P12, training, self-play, league and runner behavior closed. | Open |
+
 ## 2026-06-06 — P6 replay schema and synthetic fixture implementation proposal boundary risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

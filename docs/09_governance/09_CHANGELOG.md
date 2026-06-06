@@ -1,5 +1,48 @@
 # 09_CHANGELOG
 
+## 2026-06-06 — v2.44
+
+- Reviewed the P6 replay schema and synthetic fixture implementation proposal
+  boundary before code.
+- Added
+  `docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md`.
+- The review confirms:
+  - `02J` scope is correct.
+  - candidate proposal classes are sufficient and conservative.
+  - required future proposal sections are sufficient.
+  - allowed and forbidden proposal boundaries are strict enough.
+  - source and fixture constraints are sufficient.
+  - minimal replay schema and synthetic fixture candidate boundaries remain
+    proposal-only.
+  - test and validation proposal boundaries remain proposal-only.
+  - future implementation approval conditions are sufficient.
+  - proposal decision vocabulary is safe.
+  - P7-P12 non-entry boundary is sufficient.
+  - governance docs are synchronized.
+- Decision:
+  - review can close.
+  - no blocker was found.
+  - P6 implementation remains closed.
+  - replay schema implementation remains closed.
+  - replay fixture implementation remains closed.
+  - tests, data ingestion, dataset readers, parsers, feature extraction and
+    label generation remain closed.
+  - the next task is `Prepare P6 minimal replay schema and synthetic fixture
+    implementation proposal for review before code.`
+- Evidence grade:
+  - P6 replay schema and synthetic fixture implementation proposal boundary
+    review evidence only.
+- Updated `02A`, `02B`, `02F`, `02I`, `02J`, handoff, docs index, stage
+  contract, milestones, backlog, technical plan, evidence log, risk register,
+  decision record and `10_NEXT`.
+- No production code, tests, fixtures, synthetic replay fixture, replay schema
+  code, dataclass / pydantic / JSON schema, parser, dataset reader, feature
+  extraction, label generation, data ingestion, CLI, broad ingestion,
+  model-output integration, real Tenhou, real haifu, external-log ingestion,
+  platform-data ingestion, third-party binary call, training, tuning,
+  self-play, league, runner behavior, P7-P12 work or model-strength claim was
+  added.
+
 ## 2026-06-06 — v2.43
 
 - Defined the P6 replay schema and synthetic fixture implementation proposal

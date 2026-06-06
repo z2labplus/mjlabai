@@ -8,6 +8,68 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-06 — P6 replay schema and synthetic fixture implementation proposal boundary review
+
+- Type: internal documentation / P6 planning proposal-boundary review evidence.
+- Stage: P6 data-system docs-only planning.
+- Added review document:
+  - `docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md`.
+- Reviewed proposal-boundary document:
+  - `docs/02_data_system/02J_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY.md`.
+- Review decision:
+  - Review can close.
+  - no blocker was found.
+  - P6 implementation remains closed.
+  - replay schema implementation remains closed.
+  - replay fixture implementation remains closed.
+  - tests remain closed.
+  - data ingestion, dataset readers, parsers, feature extraction and label
+    generation remain closed.
+  - P7-P12 remain closed.
+- Review findings:
+  - `02J` scope is correct.
+  - candidate proposal classes are sufficient and conservative.
+  - required future proposal sections are sufficient.
+  - allowed and forbidden proposal boundaries are strict enough.
+  - source and fixture constraints are sufficient.
+  - minimal replay schema code and synthetic/local fixture candidate boundaries
+    remain proposal-only.
+  - test and validation proposal boundaries remain proposal-only.
+  - future implementation approval conditions and decision vocabulary are
+    sufficient.
+  - P7-P12 non-entry boundary is sufficient.
+  - governance synchronization has no blocker.
+- Evidence grade:
+  - P6 replay schema and synthetic fixture implementation proposal boundary
+    review evidence only.
+- Not evidence of:
+  - P6 implementation approval.
+  - replay schema implementation.
+  - fixture implementation.
+  - test implementation.
+  - data ingestion.
+  - dataset reader.
+  - parser.
+  - feature extraction.
+  - label generation.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - source approval.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P7-P12 entry.
+- Next task:
+  - Prepare P6 minimal replay schema and synthetic fixture implementation
+    proposal for review before code.
+
 ### 2026-06-06 — P6 replay schema and synthetic fixture implementation proposal boundary definition
 
 - Type: internal documentation / P6 planning proposal-boundary evidence.

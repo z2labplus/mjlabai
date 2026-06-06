@@ -55,6 +55,7 @@ docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md
 docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md
 docs/02_data_system/02I_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW.md
 docs/02_data_system/02J_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY.md
+docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -145,6 +146,15 @@ It is proposal-boundary definition evidence only, not P6 implementation
 approval, replay schema implementation, fixture implementation, test
 implementation, ingestion evidence, source approval, model-strength evidence
 or LuckyJ comparison evidence.
+
+`docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md`
+reviews the P6 replay schema and synthetic fixture implementation proposal
+boundary before code. It records that the review can close with no blocker,
+while P6 implementation, replay schema implementation, fixture implementation,
+tests, ingestion, parser/dataset-reader work, feature extraction, label
+generation and P7-P12 remain closed. It is proposal-boundary review evidence
+only, not implementation approval, source approval, ingestion evidence,
+model-strength evidence or LuckyJ comparison evidence.
 
 ## Algorithm discovery and racing-funnel files
 
