@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-06 — P6 replay schema and fixture implementation readiness checklist risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Readiness checklist definition is mistaken for replay schema or fixture implementation approval. | Governance / Stage Control | High | Medium | `02H`, evidence log and `10_NEXT` state no candidate implementation class is approved and the next task is review only. | Open |
+| A `ready_for_review_only` checklist status is mistaken for `ready_for_implementation`. | Governance / Process | High | Medium | `02H` defines separate decision vocabulary and keeps implementation task approval, human approval and explicit `10_NEXT` approval as required future gates. | Open |
+| Future review skips source-specific rights, storage, privacy or platform terms before implementation. | Data / Compliance | High | Medium | `02H` requires source-specific approval, storage policy, privacy / terms review and evidence references before implementation. | Open |
+| Parser, dataset reader, feature extraction or label generation is started from checklist language. | Governance / Engineering | High | Medium | `02H`, stage contract and `10_NEXT` keep parser, reader, feature and label implementation closed. | Open |
+| A future fixture task copies real Tenhou, real haifu, external logs or platform data into a synthetic/local fixture. | Data / Compliance | High | Medium | `02H` requires project-authored fixture content, no real logs, no player/account identifiers and explicit future validation before fixture creation. | Open |
+| Checklist evidence is overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02H` and evidence log classify the artifact as checklist-definition evidence only with explicit non-evidence warnings. | Open |
+| P6 checklist planning drifts into P7-P12 implementation. | Governance / Stage Control | High | Medium | `02H`, stage contract and `10_NEXT` keep training, self-play, league, runner behavior and P7-P12 closed. | Open |
+
 ## 2026-06-06 — P6 synthetic/local replay fixture boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

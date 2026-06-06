@@ -409,12 +409,14 @@ This review does not approve:
 Define P6 replay schema and fixture implementation readiness checklist before code.
 ```
 
-The next task should remain docs-only. It must not implement replay fixture
-files, replay schema code, dataclasses, pydantic models, JSON schema, parsers,
-dataset readers, ingestion, feature extraction, label generation, CLI,
-model-output integration, real data access, training, self-play, league,
-runner behavior, metric implementation, registry changes, promotion criteria
-changes or P7-P12 work.
+That follow-up has now been completed in
+`docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md`.
+The current next task is to review that checklist before code. The review must
+remain docs-only. It must not implement replay fixture files, replay schema
+code, dataclasses, pydantic models, JSON schema, parsers, dataset readers,
+ingestion, feature extraction, label generation, CLI, model-output integration,
+real data access, training, self-play, league, runner behavior, metric
+implementation, registry changes, promotion criteria changes or P7-P12 work.
 
 ## Evidence Grade
 

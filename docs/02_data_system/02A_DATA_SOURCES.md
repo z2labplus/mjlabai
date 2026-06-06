@@ -61,6 +61,12 @@ docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md
 reviews that boundary with no blocker and keeps fixture implementation, source
 approval, source ingestion, replay schema implementation and real/external/
 platform sources closed.
+
+docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md
+defines readiness criteria before any replay schema code, fixture creation,
+parser, dataset reader, ingestion, feature extraction or label generation can
+be considered. It does not change source approval policy and does not approve
+any real/external/platform source.
 ```
 
 ## Inventory Field Schema
@@ -239,10 +245,11 @@ task cannot consume any unapproved source. A later implementation task requires:
 
 Because no blocker was found in `02D`, the follow-up chain defined and reviewed
 the replay schema documentation boundary in `02B` / `02E`, then defined and
-reviewed the synthetic/local replay fixture boundary in `02F` / `02G`. These
-reviews do not approve source ingestion, replay schema implementation or
-fixture implementation. The current next step is to define a docs-only replay
-schema and fixture implementation readiness checklist before code.
+reviewed the synthetic/local replay fixture boundary in `02F` / `02G`, and now
+defines the readiness checklist in `02H`. These reviews and checklists do not
+approve source ingestion, replay schema implementation or fixture
+implementation. The current next step is to review the docs-only replay schema
+and fixture implementation readiness checklist before code.
 
 ## Planning Decision
 
@@ -255,7 +262,7 @@ implementation and data ingestion are still not approved.
 ## Next Task Recommendation
 
 ```text
-Define P6 replay schema and fixture implementation readiness checklist before code.
+Review P6 replay schema and fixture implementation readiness checklist before code.
 ```
 
 That task should be docs-only. It must not implement replay schema code,

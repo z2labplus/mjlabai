@@ -1,5 +1,50 @@
 # 09_CHANGELOG
 
+## 2026-06-06 — v2.41
+
+- Defined the P6 replay schema and fixture implementation readiness checklist
+  before code.
+- Added
+  `docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md`.
+- The checklist records:
+  - candidate implementation classes for replay schema code, synthetic/local
+    fixture files, schema/fixture validation tests, parsers, dataset readers,
+    feature extraction, label generation, data ingestion, real/external source
+    integration, CLI / broad ingestion, model-output integration and later-stage
+    work.
+  - replay schema code readiness criteria.
+  - synthetic/local replay fixture readiness criteria.
+  - parser / dataset reader readiness criteria.
+  - feature extraction / label generation readiness criteria.
+  - data-ingestion readiness criteria.
+  - readiness decision vocabulary.
+  - cross-artifact dependency map.
+  - P7-P12 non-entry boundary.
+  - readiness risks.
+- Decision:
+  - the readiness checklist is defined for review before code.
+  - no candidate implementation class is approved by the checklist definition.
+  - P6 implementation remains closed.
+  - replay schema implementation remains closed.
+  - replay fixture implementation remains closed.
+  - data ingestion, dataset readers, parsers, feature extraction and label
+    generation remain closed.
+  - the next task is `Review P6 replay schema and fixture implementation
+    readiness checklist before code.`
+- Evidence grade:
+  - P6 replay schema and fixture implementation readiness checklist definition
+    evidence only.
+- Updated `02A`, `02B`, `02F`, handoff, docs index, stage contract,
+  milestones, backlog, technical plan, evidence log, risk register, decision
+  record and `10_NEXT`.
+- No production code, tests, fixtures, synthetic replay fixture, replay schema
+  code, dataclass / pydantic / JSON schema, parser, dataset reader, feature
+  extraction, label generation, data ingestion, CLI, broad ingestion,
+  model-output integration, real Tenhou, real haifu, external-log ingestion,
+  platform-data ingestion, third-party binary call, training, tuning,
+  self-play, league, runner behavior, P7-P12 work or model-strength claim was
+  added.
+
 ## 2026-06-06 — v2.40
 
 - Reviewed the P6 synthetic/local replay fixture boundary before schema

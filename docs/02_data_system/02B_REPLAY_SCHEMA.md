@@ -243,12 +243,16 @@ docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md
 reviews that boundary with no blocker and keeps fixture implementation, replay
 schema implementation, ingestion, dataset readers, parsers, feature extraction
 and label generation closed.
+
+docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md
+defines readiness criteria before replay schema code or fixture implementation
+can be considered. It does not approve replay schema implementation.
 ```
 
 ## Next Task Recommendation
 
 ```text
-Define P6 replay schema and fixture implementation readiness checklist before code.
+Review P6 replay schema and fixture implementation readiness checklist before code.
 ```
 
 The next task should remain docs-only unless a later review explicitly approves

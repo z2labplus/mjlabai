@@ -289,10 +289,14 @@ implementation, data ingestion, dataset readers, parsers, feature extraction,
 label generation, real data access, model-output integration, CLI, training,
 self-play, league, runner behavior or P7-P12 work.
 
+`docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md`
+defines readiness criteria before future fixture implementation or replay
+schema code can be considered. It does not approve fixture implementation.
+
 ## Next Task Recommendation
 
 ```text
-Define P6 replay schema and fixture implementation readiness checklist before code.
+Review P6 replay schema and fixture implementation readiness checklist before code.
 ```
 
 The next task should remain docs-only. It must not implement fixture files,

@@ -14,6 +14,78 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-06 — DR-0034 — Define P6 Replay Schema and Fixture Implementation Readiness Checklist Before Code
+
+Decision:
+
+```text
+Define the P6 replay schema and fixture implementation readiness checklist
+before code, keep all implementation classes closed, and require a docs-only
+review gate before any replay schema or fixture implementation can be proposed.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- P6 data-system scope and entry criteria are defined for planning only.
+- The P6 data-source provenance and rights inventory has been defined and
+  reviewed with no blocker.
+- The P6 replay schema documentation boundary has been defined and reviewed
+  with no blocker.
+- The P6 synthetic/local replay fixture boundary has been defined and reviewed
+  with no blocker.
+- P6 implementation, replay schema implementation, fixture implementation and
+  data ingestion remain closed.
+
+Rationale:
+
+- A readiness checklist is needed before any future task can safely propose
+  replay schema code, fixture files, validation tests, parsers, dataset readers,
+  feature extraction, label generation or data ingestion.
+- The checklist separates `ready_for_review_only` from
+  `ready_for_implementation` so planning progress is not mistaken for code
+  approval.
+- Keeping the next step as a review gate prevents premature P6 implementation,
+  source-approval bypass and P7-P12 drift.
+
+Consequences:
+
+- `docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md`
+  records the checklist.
+- No candidate implementation class is approved by this decision.
+- P6 implementation remains closed.
+- Replay schema implementation remains closed.
+- Replay fixture implementation remains closed.
+- Data ingestion, dataset readers, parsers, feature extraction and label
+  generation remain closed.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review P6 replay schema and fixture implementation readiness checklist before code.`
+- The next task must remain docs-only and must not implement fixture files,
+  replay schema code, dataclasses, pydantic models, JSON schema, parsers,
+  dataset readers, ingestion, feature extraction, label generation, CLI,
+  model-output integration, real Tenhou, real haifu, external-log ingestion,
+  platform-data ingestion, training, self-play, league, runner behavior or
+  P7-P12.
+
+Linked docs:
+
+- `docs/02_data_system/02A_DATA_SOURCES.md`
+- `docs/02_data_system/02B_REPLAY_SCHEMA.md`
+- `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md`
+- `docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md`
+- `docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md`
+- `docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md`
+- `docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-06-06 — DR-0033 — Close P6 Synthetic/Local Replay Fixture Boundary Review
 
 Decision:

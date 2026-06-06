@@ -8,6 +8,69 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-06 — P6 replay schema and fixture implementation readiness checklist definition
+
+- Type: internal documentation / P6 planning checklist evidence.
+- Stage: P6 data-system docs-only planning.
+- Added readiness checklist:
+  - `docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md`.
+- Planning decision:
+  - P6 replay schema and fixture implementation readiness checklist is defined
+    for review before code.
+  - no candidate implementation class is approved by the checklist definition.
+  - P6 implementation remains closed.
+  - replay schema implementation remains closed.
+  - replay fixture implementation remains closed.
+  - data ingestion, dataset readers, parsers, feature extraction and label
+    generation remain unapproved.
+  - P7-P12 remain unapproved.
+- The checklist records:
+  - candidate implementation classes.
+  - replay schema code readiness criteria.
+  - synthetic/local replay fixture readiness criteria.
+  - parser / dataset reader readiness criteria.
+  - feature extraction / label generation readiness criteria.
+  - data-ingestion readiness criteria.
+  - readiness decision vocabulary.
+  - cross-artifact dependency map.
+  - P7-P12 non-entry boundary.
+  - readiness risks.
+- Source / boundary dependencies:
+  - `docs/02_data_system/02A_DATA_SOURCES.md`.
+  - `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md`.
+  - `docs/02_data_system/02B_REPLAY_SCHEMA.md`.
+  - `docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md`.
+  - `docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md`.
+  - `docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md`.
+- Evidence grade:
+  - P6 replay schema and fixture implementation readiness checklist definition
+    evidence only.
+- Not evidence of:
+  - P6 implementation approval.
+  - replay schema implementation.
+  - replay fixture implementation.
+  - data ingestion.
+  - dataset reader.
+  - parser.
+  - source approval.
+  - feature extraction.
+  - label generation.
+  - dataset generation.
+  - supervised-learning readiness.
+  - real Tenhou, real haifu, external-log or platform-data access.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P7-P12 entry.
+- Next task:
+  - Review P6 replay schema and fixture implementation readiness checklist
+    before code.
+
 ### 2026-06-06 — P6 synthetic/local replay fixture boundary review
 
 - Type: internal documentation / P6 planning review evidence.

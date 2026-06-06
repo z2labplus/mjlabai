@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Define P6 replay schema and fixture implementation readiness checklist before code.
+- [ ] Review P6 replay schema and fixture implementation readiness checklist before code.
 
 Current execution charter:
 
@@ -35,9 +35,10 @@ Limits:
 - Replay schema implementation remains closed.
 - The P6 synthetic/local replay fixture boundary is defined before schema implementation.
 - The P6 synthetic/local replay fixture boundary review found no blocker and can close.
+- The P6 replay schema and fixture implementation readiness checklist is defined before code.
 - Replay fixture implementation remains closed.
-- The next task may define a docs-only replay schema and fixture implementation readiness checklist before code.
-- The next task is docs-only. Do not execute P6 implementation.
+- The next task may review the docs-only replay schema and fixture implementation readiness checklist before code.
+- The next task is a docs-only review gate. Do not execute P6 implementation.
 - Do not generate a P6-P12 implementation prompt.
 - Use only docs/governance and existing data-system planning context; do not read Tenhou accounts, online platforms or external logs.
 - Do not implement replay schema code or data-source ingestion in the next task.
@@ -46,6 +47,7 @@ Limits:
 - Do not treat replay schema boundary review as replay schema implementation approval.
 - Do not treat synthetic/local replay fixture boundary documentation as replay fixture implementation approval.
 - Do not treat synthetic/local replay fixture boundary review as replay fixture implementation approval.
+- Do not treat replay schema and fixture implementation readiness checklist definition as implementation approval.
 - Do not approve any real source before source rights, license, allowed-use, storage and evidence requirements are documented.
 - Do not treat the inventory definition or review as source approval, ingestion approval or replay schema implementation approval.
 - Do not treat a synthetic/local replay fixture boundary as fixture implementation, schema implementation, source approval or ingestion approval.
@@ -159,6 +161,7 @@ Limits:
 - [x] 2026-06-06 Reviewed P6 replay schema documentation boundary before implementation: added `docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md`, confirmed that `02B` scope, allowed documentation scope, forbidden scope, source inventory dependency, field-family draft, validation expectations, future implementation entry criteria, replay-schema risks and governance synchronization are sufficient for the current docs-only review gate, found no blocker, and kept P6 implementation, replay schema implementation, data ingestion, dataset readers, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, training, self-play, league, P7-P12 and model-strength claims closed.
 - [x] 2026-06-06 Defined P6 synthetic/local replay fixture boundary before schema implementation: added `docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md`, defining project-authored and repo-local fixture requirements, allowed and forbidden fixture-boundary scope, source-inventory dependency, replay-schema boundary dependency, future fixture shape families, future implementation entry criteria, validation expectations, synthetic/local fixture risks, planning decision and explicit non-evidence warnings. P6 implementation, replay fixture implementation, replay schema implementation, data ingestion, dataset readers, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, training, self-play, league, P7-P12 and model-strength claims remain closed.
 - [x] 2026-06-06 Reviewed P6 synthetic/local replay fixture boundary before schema implementation: added `docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md`, confirming `02F` scope, allowed fixture boundary, forbidden fixture boundary, source-inventory dependency, replay-schema dependency, future fixture shape families, future implementation entry criteria, validation expectations, risks and governance synchronization are sufficient. Review can close, but P6 implementation, replay fixture implementation, replay schema implementation, data ingestion, dataset readers, parsers, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, training, self-play, league, P7-P12 and model-strength claims remain closed.
-- [ ] Define P6 replay schema and fixture implementation readiness checklist before code.
+- [x] 2026-06-06 Defined P6 replay schema and fixture implementation readiness checklist before code: added `docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md`, defining candidate implementation classes, replay schema code readiness, synthetic/local replay fixture readiness, parser/dataset reader readiness, feature extraction / label generation readiness, data-ingestion readiness, decision vocabulary, cross-artifact dependency map, P7-P12 non-entry boundary, readiness risks, planning decision and explicit non-evidence warnings. This does not approve P6 implementation, replay schema implementation, fixture implementation, data ingestion, dataset readers, parsers, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, training, self-play, league, P7-P12 or model-strength claims.
+- [ ] Review P6 replay schema and fixture implementation readiness checklist before code.
 - [ ] Deferred: broader tiny benchmark harness expansion for legal-action rate, latency and fixed-position decisions. Current P5 implemented only the project-authored synthetic fixture harness; broader latency measurement, fixed-position exact-match, model-output integration, CLI, file ingestion, real data, league, runner, training, self-play and P6-P12 work require later explicit approval.
 - [ ] Update `09_EVIDENCE_LOG.md` whenever new external evidence is added.

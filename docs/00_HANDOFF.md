@@ -75,7 +75,8 @@ P5 closure does not approve P6-P12 entry, P6 data-system work, training, self-pl
 `docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md` reviews the P6 replay schema documentation boundary before implementation. The review found no blocker and can close, but P6 implementation, replay schema implementation, source ingestion, data ingestion, dataset readers, feature extraction, label generation and P7-P12 remain closed. This is P6 replay schema documentation boundary review evidence only, not source approval, ingestion approval, schema implementation, data-system implementation approval, model-strength evidence or LuckyJ `10.68` comparison.
 `docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md` defines the P6 synthetic/local replay fixture boundary before schema implementation. It records project-authored and repo-local fixture requirements, allowed and forbidden fixture-boundary scope, source/provenance dependencies, replay field-family alignment, future shape families, future implementation entry criteria, validation expectations and fixture risks. This is docs-only boundary definition evidence: fixture implementation, replay schema implementation, data ingestion, dataset readers, feature extraction, label generation and P7-P12 remain closed.
 `docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md` reviews the P6 synthetic/local replay fixture boundary and records that the review can close with no blocker, but fixture implementation remains closed. P6 implementation, replay schema implementation, replay fixture implementation, data ingestion, dataset readers, parsers, feature extraction, label generation and P7-P12 remain unapproved.
-The next project task is to define the P6 replay schema and fixture implementation readiness checklist before code. That task must remain docs-only and must not implement fixture files, replay schema code, data ingestion, feature extraction, label generation, model-output integration, CLI, broad file ingestion, training, self-play, league, real Tenhou, external-log ingestion, platform-data ingestion, P7-P12 work or model-strength claims.
+`docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md` defines the P6 replay schema and fixture implementation readiness checklist before code. It records candidate implementation classes, replay schema code readiness, synthetic/local replay fixture readiness, parser/dataset reader readiness, feature/label readiness, data-ingestion readiness, decision vocabulary, dependency map, P7-P12 non-entry boundaries and risks. This is checklist-definition evidence only: P6 implementation, replay schema implementation, fixture implementation, data ingestion, dataset readers, parsers, feature extraction, label generation and P7-P12 remain unapproved.
+The next project task is to review the P6 replay schema and fixture implementation readiness checklist before code. That task must remain docs-only and must not implement fixture files, replay schema code, data ingestion, feature extraction, label generation, model-output integration, CLI, broad file ingestion, training, self-play, league, real Tenhou, external-log ingestion, platform-data ingestion, P7-P12 work or model-strength claims.
 ```
 
 ## Current methodology
@@ -164,7 +165,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define P6 replay schema and fixture implementation readiness checklist before
+Review P6 replay schema and fixture implementation readiness checklist before
 code. Do not execute P6 implementation directly. Do not expand into replay
 schema code, replay fixture implementation, data ingestion, dataset readers,
 parsers, feature extraction, label generation, training, self-play, league
@@ -451,5 +452,8 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is a P6 data-system docs-only synthetic/local replay fixture boundary review: do not implement fixture files, replay schema code, ingest data, train, tune, self-play or connect to real Tenhou.
+- Current next work is a P6 data-system docs-only review of the replay schema
+  and fixture implementation readiness checklist: do not implement fixture
+  files, replay schema code, ingest data, train, tune, self-play or connect to
+  real Tenhou.
 - Technical decisions from Web ChatGPT Pro must be written into Git + docs before becoming project facts.
