@@ -8,6 +8,53 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-06 — P6 data-source provenance and rights inventory review
+
+- Type: internal documentation / P6 planning review evidence.
+- Stage: P6 data-system docs-only planning.
+- Added review document:
+  - `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md`.
+- Reviewed source inventory document:
+  - `docs/02_data_system/02A_DATA_SOURCES.md`.
+- Review decision:
+  - P6 data-source provenance and rights inventory review can close.
+  - no blocker was found.
+  - P6 implementation remains unapproved.
+  - replay schema implementation remains unapproved.
+  - data ingestion remains unapproved.
+  - P7-P12 remain unapproved.
+- Review findings:
+  - inventory scope is documentation-only and pre-ingestion.
+  - field schema covers provenance, rights, storage, privacy, platform risk,
+    approval status, evidence references and risk references.
+  - approval vocabulary keeps real/external/platform/model/binary sources
+    blocked or unapproved by default.
+  - required-before-ingestion checklist is sufficient for the current
+    pre-schema boundary.
+  - future source evidence requirements are sufficient for the current review.
+  - rights/provenance risks have documented mitigations.
+- Evidence grade:
+  - P6 data-source provenance and rights inventory review evidence only.
+- Not evidence of:
+  - P6 implementation approval.
+  - replay schema implementation.
+  - data ingestion.
+  - source approval.
+  - feature extraction.
+  - label generation.
+  - real Tenhou, real haifu, external-log or platform-data access.
+  - model-output integration.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P7-P12 entry.
+- Next task:
+  - Define P6 replay schema documentation boundary after source inventory
+    review.
+
 ### 2026-06-05 — P6 data-source provenance and rights inventory definition
 
 - Type: internal documentation / P6 planning evidence.

@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-06 — P6 source inventory review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Source inventory review is mistaken for source-ingestion approval. | Governance / Data | High | Medium | `02D`, evidence log and `10_NEXT` state the review can close but P6 implementation, replay schema implementation and data ingestion remain closed. | Open |
+| Replay schema boundary definition drifts into schema code or dataset readers. | Governance / Stage Control | High | Medium | The next task is docs-only boundary definition and must not implement replay schema code, ingestion, feature extraction, label generation, CLI or broad file ingestion. | Open |
+| Real Tenhou, real haifu, external logs or platform data are treated as approved because the inventory review found no blocker. | Data / Compliance | High | Medium | `02D` says no source category is over-approved and real/external/platform sources remain unapproved or blocked pending source-specific review. | Open |
+| P6 planning review is overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02D` and evidence log classify this as P6 source inventory review evidence only. | Open |
+| P7-P12 work starts from replay schema boundary planning without implementation approval. | Governance / Stage Control | High | Medium | `02D`, stage contract and `10_NEXT` keep P6 implementation and P7-P12 closed. | Open |
+
 ## 2026-06-05 — P6 data-source provenance and rights inventory risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

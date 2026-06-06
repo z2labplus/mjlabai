@@ -1,5 +1,42 @@
 # 09_CHANGELOG
 
+## 2026-06-06 — v2.36
+
+- Reviewed the P6 data-source provenance and rights inventory before replay
+  schema implementation.
+- Added
+  `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md`.
+- The review confirms:
+  - `02A` scope is documentation-only and pre-ingestion.
+  - the inventory field schema is sufficient as a future source-record
+    boundary.
+  - the approval-status vocabulary is conservative.
+  - project-authored synthetic/local fixtures and repository docs remain
+    limited to their current docs/smoke/review contexts.
+  - real Tenhou, real haifu, external logs, platform data, accounts,
+    third-party binaries, unknown weights, model outputs, self-play outputs
+    and league outputs remain unapproved or blocked.
+  - the required-before-ingestion checklist and future evidence requirements
+    are sufficient for the current pre-schema review gate.
+  - no rights/provenance blocker was found.
+- Decision:
+  - the P6 source inventory review can close.
+  - P6 implementation remains closed.
+  - replay schema implementation remains closed.
+  - data ingestion remains closed.
+  - the next task is `Define P6 replay schema documentation boundary after
+    source inventory review.`
+- Evidence grade:
+  - P6 data-source provenance and rights inventory review evidence only.
+- Updated handoff, docs index, stage contract, milestones, backlog, technical
+  plan, evidence log, risk register, decision record and `10_NEXT`.
+- No production code, tests, fixtures, replay schema code, dataset reader,
+  feature extraction, label generation, data ingestion, CLI, broad ingestion,
+  model-output integration, real Tenhou, real haifu, external-log ingestion,
+  platform-data ingestion, third-party binary call, training, tuning,
+  self-play, league, runner behavior, P7-P12 work or model-strength claim was
+  added.
+
 ## 2026-06-05 — v2.35
 
 - Defined P6 data-source provenance and rights inventory before replay schema

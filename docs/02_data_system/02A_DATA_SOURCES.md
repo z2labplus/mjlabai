@@ -41,6 +41,14 @@ systems are required before later supervised learning, RL, evaluation and
 LuckyJ validation can be meaningful. The inventory itself is not model-strength
 evidence and is not a LuckyJ comparison.
 
+Review status:
+
+```text
+docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md
+records that this inventory review can close with no blocker, but P6
+implementation, replay schema implementation and data ingestion remain closed.
+```
+
 ## Inventory Field Schema
 
 Every future data source must be represented with the fields below before it can
@@ -197,8 +205,8 @@ or candidate-promotion evidence.
 | Model weights committed or used without provenance | Forbid unknown `*.pth`, `*.pt`, checkpoints and snapshots. | Blocks weight use. | risk register. | No weights used in P6 planning. |
 | Source contamination / train-test leakage | Require source ids, schema families, transforms and split policy before implementation. | Blocks future training/evaluation. | future P6 data-quality task. | No train/test split exists yet. |
 | Synthetic fixture overclaiming | Label synthetic fixtures as smoke/review context only. | Blocks strength claims. | evidence log, ranking protocol. | Not Tenhou or real haifu. |
-| Stage creep into P7-P12 | Keep next task review-gate only and forbid training/self-play/league. | Blocks later-stage work. | `10_NEXT`, stage contract. | P7-P12 not open. |
-| Treating P6 source inventory as ingestion approval | State inventory definition is pre-review, not approval. | Blocks ingestion. | `02A`, `10_NEXT`. | Review gate required next. |
+| Stage creep into P7-P12 | Keep next task docs-only and forbid training/self-play/league. | Blocks later-stage work. | `10_NEXT`, stage contract. | P7-P12 not open. |
+| Treating P6 source inventory as ingestion approval | State inventory definition and review are not approval. | Blocks ingestion. | `02A`, `02D`, `10_NEXT`. | Replay schema boundary definition required next. |
 | Treating P6 source inventory as model-strength evidence | Explicit non-evidence warnings in all governance docs. | Blocks claims. | evidence log, handoff. | No LuckyJ claim. |
 
 ## Replay Schema Implementation Boundary
@@ -215,21 +223,21 @@ task cannot consume any unapproved source. A later implementation task requires:
 - evidence log and risk register entries.
 - a `docs/10_next/10_NEXT.md` first task naming the exact implementation.
 
-If no blocker is found, the next task should be a review gate, not replay schema
-implementation.
+Because no blocker was found in `02D`, the next task should define the replay
+schema documentation boundary, not implement replay schema code.
 
 ## Planning Decision
 
 ```text
-P6 data-source provenance and rights inventory is defined for review before
-replay schema implementation. P6 implementation is still not approved.
+P6 data-source provenance and rights inventory has been reviewed before replay
+schema implementation. No blocker was found. P6 implementation, replay schema
+implementation and data ingestion are still not approved.
 ```
 
 ## Next Task Recommendation
 
 ```text
-Review P6 data-source provenance and rights inventory before replay schema
-implementation.
+Define P6 replay schema documentation boundary after source inventory review.
 ```
 
 That task should be docs-only. It must not implement replay schema code, data
