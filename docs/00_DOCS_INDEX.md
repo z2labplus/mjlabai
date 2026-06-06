@@ -51,6 +51,7 @@ docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md
 docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md
 docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md
 docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md
+docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -103,6 +104,15 @@ docs-only boundary definition evidence, not fixture implementation, replay
 schema implementation, ingestion approval, dataset-reader approval,
 feature/label generation, model-strength evidence or LuckyJ comparison
 evidence.
+
+`docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md`
+reviews the P6 synthetic/local replay fixture boundary before schema
+implementation. It records that the review can close with no blocker, while
+fixture implementation, replay schema implementation, data ingestion, dataset
+readers, parsers, feature extraction, label generation and P7-P12 remain
+closed. It is review evidence only, not fixture implementation, schema
+implementation, source approval, ingestion evidence, model-strength evidence or
+LuckyJ comparison evidence.
 
 ## Algorithm discovery and racing-funnel files
 

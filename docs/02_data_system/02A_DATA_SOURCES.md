@@ -56,6 +56,11 @@ docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md
 defines the project-authored synthetic/local replay fixture boundary before
 schema implementation. It does not approve fixture implementation, source
 ingestion, replay schema implementation or any real/external/platform source.
+
+docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md
+reviews that boundary with no blocker and keeps fixture implementation, source
+approval, source ingestion, replay schema implementation and real/external/
+platform sources closed.
 ```
 
 ## Inventory Field Schema
@@ -232,10 +237,12 @@ task cannot consume any unapproved source. A later implementation task requires:
 - evidence log and risk register entries.
 - a `docs/10_next/10_NEXT.md` first task naming the exact implementation.
 
-Because no blocker was found in `02D`, the follow-up task was to define the
-replay schema documentation boundary, not implement replay schema code. That
-boundary is now defined in `docs/02_data_system/02B_REPLAY_SCHEMA.md`; the
-current next step is to review it before implementation.
+Because no blocker was found in `02D`, the follow-up chain defined and reviewed
+the replay schema documentation boundary in `02B` / `02E`, then defined and
+reviewed the synthetic/local replay fixture boundary in `02F` / `02G`. These
+reviews do not approve source ingestion, replay schema implementation or
+fixture implementation. The current next step is to define a docs-only replay
+schema and fixture implementation readiness checklist before code.
 
 ## Planning Decision
 
@@ -248,14 +255,14 @@ implementation and data ingestion are still not approved.
 ## Next Task Recommendation
 
 ```text
-Review P6 replay schema documentation boundary before implementation.
+Define P6 replay schema and fixture implementation readiness checklist before code.
 ```
 
-That task should be docs-only. It must not implement replay schema code, data
-ingestion, feature extraction, label generation, model-output integration, CLI,
-broad file ingestion, real Tenhou, real haifu, external-log ingestion,
-platform-data ingestion, training, self-play, league, runner behavior, P7-P12
-or model-strength claims.
+That task should be docs-only. It must not implement replay schema code,
+fixtures, data ingestion, dataset readers, parsers, feature extraction, label
+generation, model-output integration, CLI, broad file ingestion, real Tenhou,
+real haifu, external-log ingestion, platform-data ingestion, training,
+self-play, league, runner behavior, P7-P12 or model-strength claims.
 
 ## Evidence Grade
 

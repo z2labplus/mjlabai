@@ -238,18 +238,24 @@ defines future project-authored synthetic/local replay fixture shape families
 as documentation boundaries only. It does not create a fixture, implement this
 schema, approve ingestion, approve dataset readers or approve feature/label
 generation.
+
+docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md
+reviews that boundary with no blocker and keeps fixture implementation, replay
+schema implementation, ingestion, dataset readers, parsers, feature extraction
+and label generation closed.
 ```
 
 ## Next Task Recommendation
 
 ```text
-Review P6 synthetic/local replay fixture boundary before schema implementation.
+Define P6 replay schema and fixture implementation readiness checklist before code.
 ```
 
 The next task should remain docs-only unless a later review explicitly approves
-implementation. It must not implement replay schema code, ingestion, validation
-commands, feature extraction, label generation, CLI, model-output integration,
-real data access, training, self-play, league, runner behavior or P7-P12 work.
+implementation. It must not implement replay schema code, fixtures, ingestion,
+validation commands, dataset readers, parsers, feature extraction, label
+generation, CLI, model-output integration, real data access, training,
+self-play, league, runner behavior or P7-P12 work.
 
 ## Evidence Grade
 

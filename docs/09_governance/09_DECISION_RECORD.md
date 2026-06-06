@@ -14,6 +14,76 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-06 — DR-0033 — Close P6 Synthetic/Local Replay Fixture Boundary Review
+
+Decision:
+
+```text
+Close the P6 synthetic/local replay fixture boundary review with no blocker,
+keep fixture implementation and replay schema implementation closed, and
+require a docs-only readiness-checklist task before any code or fixture work.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- P6 data-system scope and entry criteria are defined for planning only.
+- The P6 data-source provenance and rights inventory has been defined and
+  reviewed with no blocker.
+- The P6 replay schema documentation boundary has been defined and reviewed
+  with no blocker.
+- `docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md`
+  defines the synthetic/local replay fixture boundary before schema
+  implementation.
+
+Rationale:
+
+- A review gate is required before any fixture file, replay schema code,
+  parser, dataset reader, ingestion, feature extraction or label generation
+  work can be considered.
+- The review found that `02F` has sufficient scope, allowed/forbidden boundary,
+  source dependency, replay-schema dependency, shape-family, entry-criteria,
+  validation and risk coverage.
+- Keeping the next step docs-only prevents premature P6 implementation and
+  P7-P12 drift.
+
+Consequences:
+
+- `docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md`
+  records the review.
+- Review can close.
+- Fixture implementation remains closed.
+- Replay schema implementation remains closed.
+- P6 implementation remains closed.
+- Data ingestion, dataset readers, parsers, feature extraction and label
+  generation remain closed.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define P6 replay schema and fixture implementation readiness checklist before code.`
+- The next task must remain docs-only and must not implement fixture files,
+  replay schema code, dataclasses, pydantic models, JSON schema, parsers,
+  dataset readers, ingestion, feature extraction, label generation, CLI,
+  model-output integration, real Tenhou, real haifu, external-log ingestion,
+  platform-data ingestion, training, self-play, league, runner behavior or
+  P7-P12.
+
+Linked docs:
+
+- `docs/02_data_system/02A_DATA_SOURCES.md`
+- `docs/02_data_system/02B_REPLAY_SCHEMA.md`
+- `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md`
+- `docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md`
+- `docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md`
+- `docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-06-06 — DR-0032 — Define P6 Synthetic/Local Replay Fixture Boundary Before Schema Implementation
 
 Decision:

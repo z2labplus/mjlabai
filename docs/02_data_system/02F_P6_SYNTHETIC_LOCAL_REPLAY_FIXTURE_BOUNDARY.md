@@ -275,10 +275,24 @@ P6 synthetic/local replay fixture boundary is defined for review before schema
 implementation. Fixture implementation is still not approved.
 ```
 
+## Review Status
+
+`docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md`
+reviews this boundary and records:
+
+```text
+Review can close, but fixture implementation remains closed.
+```
+
+The review does not approve fixture implementation, replay schema
+implementation, data ingestion, dataset readers, parsers, feature extraction,
+label generation, real data access, model-output integration, CLI, training,
+self-play, league, runner behavior or P7-P12 work.
+
 ## Next Task Recommendation
 
 ```text
-Review P6 synthetic/local replay fixture boundary before schema implementation.
+Define P6 replay schema and fixture implementation readiness checklist before code.
 ```
 
 The next task should remain docs-only. It must not implement fixture files,

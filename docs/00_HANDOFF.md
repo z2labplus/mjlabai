@@ -74,7 +74,8 @@ P5 closure does not approve P6-P12 entry, P6 data-system work, training, self-pl
 `docs/02_data_system/02B_REPLAY_SCHEMA.md` defines the P6 replay schema documentation boundary after source inventory review. It records allowed documentation scope, forbidden scope, source-inventory dependencies, replay field families, validation expectations, future implementation entry criteria and replay-schema risks. This is P6 replay schema documentation boundary definition evidence only: P6 implementation, replay schema implementation, source ingestion, feature extraction, label generation and P7-P12 remain closed.
 `docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md` reviews the P6 replay schema documentation boundary before implementation. The review found no blocker and can close, but P6 implementation, replay schema implementation, source ingestion, data ingestion, dataset readers, feature extraction, label generation and P7-P12 remain closed. This is P6 replay schema documentation boundary review evidence only, not source approval, ingestion approval, schema implementation, data-system implementation approval, model-strength evidence or LuckyJ `10.68` comparison.
 `docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md` defines the P6 synthetic/local replay fixture boundary before schema implementation. It records project-authored and repo-local fixture requirements, allowed and forbidden fixture-boundary scope, source/provenance dependencies, replay field-family alignment, future shape families, future implementation entry criteria, validation expectations and fixture risks. This is docs-only boundary definition evidence: fixture implementation, replay schema implementation, data ingestion, dataset readers, feature extraction, label generation and P7-P12 remain closed.
-The next project task is to review the P6 synthetic/local replay fixture boundary before schema implementation. That task must remain docs-only and must not implement fixture files, replay schema code, data ingestion, feature extraction, label generation, model-output integration, CLI, broad file ingestion, training, self-play, league, real Tenhou, external-log ingestion, platform-data ingestion, P7-P12 work or model-strength claims.
+`docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md` reviews the P6 synthetic/local replay fixture boundary and records that the review can close with no blocker, but fixture implementation remains closed. P6 implementation, replay schema implementation, replay fixture implementation, data ingestion, dataset readers, parsers, feature extraction, label generation and P7-P12 remain unapproved.
+The next project task is to define the P6 replay schema and fixture implementation readiness checklist before code. That task must remain docs-only and must not implement fixture files, replay schema code, data ingestion, feature extraction, label generation, model-output integration, CLI, broad file ingestion, training, self-play, league, real Tenhou, external-log ingestion, platform-data ingestion, P7-P12 work or model-strength claims.
 ```
 
 ## Current methodology
@@ -163,15 +164,15 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review P6 synthetic/local replay fixture boundary before schema implementation.
-Do not execute P6 implementation directly. Do not expand into replay schema
-code, replay fixture implementation, data ingestion, dataset readers, feature
-extraction, label generation, training, self-play, league evaluation, Tenhou
-integration, artifact upload, broad adapter work, CLI, broad file ingestion,
-model-output integration, latency measurement, fixed-position exact-match
-computation, metric implementation, registry code changes, promotion criteria
-changes, P7-P12 or model-strength claims without a later explicit
-implementation approval.
+Define P6 replay schema and fixture implementation readiness checklist before
+code. Do not execute P6 implementation directly. Do not expand into replay
+schema code, replay fixture implementation, data ingestion, dataset readers,
+parsers, feature extraction, label generation, training, self-play, league
+evaluation, Tenhou integration, artifact upload, broad adapter work, CLI,
+broad file ingestion, model-output integration, latency measurement,
+fixed-position exact-match computation, metric implementation, registry code
+changes, promotion criteria changes, P7-P12 or model-strength claims without a
+later explicit implementation approval.
 ```
 
 Latest Akochan F1 audit summary:

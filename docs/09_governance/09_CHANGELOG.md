@@ -1,5 +1,45 @@
 # 09_CHANGELOG
 
+## 2026-06-06 — v2.40
+
+- Reviewed the P6 synthetic/local replay fixture boundary before schema
+  implementation.
+- Added
+  `docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md`.
+- The review confirms:
+  - `02F` scope is correct.
+  - allowed fixture boundary is sufficient.
+  - forbidden fixture boundary is strict enough.
+  - source-inventory dependency on `02A` / `02D` is clear.
+  - replay-schema boundary dependency on `02B` / `02E` is clear.
+  - future fixture shape families are sufficient and safe as documentation
+    boundaries only.
+  - future implementation entry criteria and validation expectations are
+    sufficient.
+  - synthetic/local fixture risks and governance synchronization have no
+    blocker.
+- Decision:
+  - review can close.
+  - fixture implementation remains unapproved.
+  - replay schema implementation remains unapproved.
+  - P6 implementation remains closed.
+  - data ingestion, dataset readers, parsers, feature extraction and label
+    generation remain closed.
+  - the next task is `Define P6 replay schema and fixture implementation
+    readiness checklist before code.`
+- Evidence grade:
+  - P6 synthetic/local replay fixture boundary review evidence only.
+- Updated `02A`, `02B`, `02F`, handoff, docs index, stage contract,
+  milestones, backlog, technical plan, evidence log, risk register, decision
+  record and `10_NEXT`.
+- No production code, tests, fixtures, synthetic replay fixture, replay schema
+  code, dataclass / pydantic / JSON schema, parser, dataset reader, feature
+  extraction, label generation, data ingestion, CLI, broad ingestion,
+  model-output integration, real Tenhou, real haifu, external-log ingestion,
+  platform-data ingestion, third-party binary call, training, tuning,
+  self-play, league, runner behavior, P7-P12 work or model-strength claim was
+  added.
+
 ## 2026-06-06 — v2.39
 
 - Defined the P6 synthetic/local replay fixture boundary before schema

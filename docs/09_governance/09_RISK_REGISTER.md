@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-06 — P6 synthetic/local replay fixture boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Synthetic/local replay fixture boundary review is mistaken for fixture implementation approval. | Governance / Stage Control | High | Medium | `02G`, evidence log and `10_NEXT` state review can close but fixture implementation remains unapproved. | Open |
+| Review closure is mistaken for replay schema implementation approval. | Governance / Stage Control | High | Medium | `02G` keeps replay schema code, dataclasses, pydantic models, JSON schema and parser contracts closed. | Open |
+| Future readiness checklist task drifts into code, tests or fixture creation. | Governance / Scope | Medium-High | Medium | `10_NEXT` marks the next task docs-only and forbids production code, tests, fixtures, schema code, parsers, readers and ingestion. | Open |
+| Source inventory dependency is overread as source approval. | Data / Rights | High | Medium | `02G` repeats that `02A` / `02D` are prerequisites only and source approval remains separate. | Open |
+| Shape-family review is treated as parser, dataset-reader, feature or label readiness. | Data / Engineering | High | Medium | `02G` labels shape families as documentation boundaries and keeps implementation entry criteria unsatisfied. | Open |
+| P6 fixture planning is overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02G` evidence grade is review evidence only with explicit non-evidence warnings. | Open |
+| P6 docs planning drifts into P7-P12 after review closure. | Governance / Stage Control | High | Medium | `02G`, stage contract and `10_NEXT` keep training, self-play, league, runner behavior and P7-P12 closed. | Open |
+
 ## 2026-06-06 — P6 synthetic/local replay fixture boundary risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
