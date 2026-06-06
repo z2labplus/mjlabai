@@ -57,6 +57,14 @@ implementation, replay schema code, data ingestion, real Tenhou, real haifu,
 external logs, platform data, CLI, model-output integration, training,
 self-play, league, runner behavior and P7-P12 remain unapproved.
 
+`docs/02_data_system/02A_DATA_SOURCES.md` defines the P6 data-source
+provenance and rights inventory before replay schema implementation. It records
+inventory fields, approval-status vocabulary, source-category approvals,
+required-before-ingestion checks, future evidence requirements, rights /
+provenance risks and replay-schema implementation boundaries. It is docs-only
+inventory-definition evidence, not ingestion approval, replay schema
+implementation, model-strength evidence or LuckyJ comparison evidence.
+
 ## Algorithm discovery and racing-funnel files
 
 ```text

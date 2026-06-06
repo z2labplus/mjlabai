@@ -229,6 +229,11 @@ Every future data source must record:
 If any of these are unknown for a real or external source, the source must not
 enter an ingestion or training path.
 
+`docs/02_data_system/02A_DATA_SOURCES.md` now defines the detailed P6
+data-source provenance and rights inventory for review before replay schema
+implementation. That inventory definition is not ingestion approval and does
+not open P6 implementation.
+
 ## Evidence Requirements
 
 P6 docs-only planning evidence may include:

@@ -8,6 +8,25 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-05 — P6 data-source provenance and rights inventory risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Rights ambiguity for future sources leads to unsafe ingestion. | Data / Rights | High | Medium | `02A` requires owner/rightsholder, license/terms summary and allowed/forbidden use before ingestion. | Open |
+| Platform terms ambiguity is ignored for Tenhou or other platform-derived data. | Compliance | High | Medium | `02A` keeps real Tenhou/platform sources blocked until source-specific legal/terms review. | Open |
+| Real data is accidentally ingested before approval. | Data / Stage Control | High | Medium | `02A`, stage contract and `10_NEXT` state this task is docs-only and next step is review gate. | Open |
+| Private or personal data enters the project without review. | Privacy | High | Low-Medium | `02A` requires privacy/personal-data review and blocks account/session/cookie/token sources. | Open |
+| Account, session, cookie or token leakage occurs through future platform access. | Security / Compliance | High | Low-Medium | `02A` forbids account tooling and platform-account data in current P6 planning. | Open |
+| Scraping, automation or evasion logic is introduced under a data-source task. | Compliance / Scope | High | Medium | `02A` and `10_NEXT` explicitly forbid platform automation, scraping, evasion and anti-detection tooling. | Open |
+| Raw real data is committed to Git. | Data Hygiene | High | Medium | `02A` requires Git inclusion policy and keeps raw real data out of Git. | Open |
+| Third-party artifacts are committed to Git. | License / Hygiene | High | Medium | `02A` forbids third-party source, binaries, `params/` and build artifacts without explicit approval. | Open |
+| Model weights are committed or used without provenance. | Reproducibility / Governance | High | Medium | `02A` keeps unknown `*.pth`, `*.pt`, checkpoints and snapshots blocked. | Open |
+| Source contamination or train/test leakage enters future datasets. | Data Quality | High | Medium | `02A` requires source ids, schema family, transform/version and future split/leakage controls before implementation. | Open |
+| Synthetic fixtures are overclaimed as real-data or strength evidence. | Evaluation / Governance | High | Medium | `02A` marks synthetic fixtures as smoke/review context only and repeats non-evidence warnings. | Open |
+| Stage creep into P7-P12 starts from P6 inventory review. | Governance / Stage Control | High | Medium | `02A` and `10_NEXT` require docs-only review before implementation and keep P7-P12 closed. | Open |
+| P6 source inventory is mistaken for ingestion approval. | Governance / Data | High | Medium | `02A` states the inventory is definition evidence only and requires a review gate plus later implementation approval. | Open |
+| P6 source inventory is mistaken for model-strength evidence. | Evaluation / Governance | High | Medium | Evidence log and `02A` classify it as P6 inventory-definition evidence only, not Tenhou/LuckyJ/stable-dan evidence. | Open |
+
 ## 2026-06-05 — P6 data-system scope definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

@@ -69,7 +69,8 @@ The P5 synthetic legal-action metric evaluator is implemented for the project-au
 P5 closure does not approve P6-P12 entry, P6 data-system work, training, self-play, league, real Tenhou, model-output integration, CLI, broad ingestion, latency measurement, fixed-position exact-match, metric implementation, registry code changes, promotion criteria changes or model-strength claims.
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md` records the post-P5 transition review. It confirms that P5 is closed for the current synthetic/local evaluation groundwork scope and that the project may start only a docs-only task to define P6 data-system scope, entry criteria and first task before implementation.
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md` defines P6 data-system scope, entry criteria, future exit criteria and first next task before implementation. It records that P6 exists to make future replay, feature, label and data-quality work lawful, reproducible and auditable before any supervised learning, RL, search, league or LuckyJ validation work begins. This is docs-only planning evidence: no replay schema code, data ingestion, feature extraction, label generation, dataset reader, CLI, model-output integration, real Tenhou, real haifu, external-log ingestion, platform-data ingestion, training, self-play, league, runner behavior, P7-P12 work or model-strength claim was added. P6 implementation remains closed until a later explicit implementation boundary is approved.
-The next project task is to define P6 data-source provenance and rights inventory before replay schema implementation. That task must remain docs-only and must not implement replay schema code, data ingestion, feature extraction, label generation, model-output integration, CLI, broad file ingestion, training, self-play, league, real Tenhou, external-log ingestion, platform-data ingestion, P7-P12 work or model-strength claims.
+`docs/02_data_system/02A_DATA_SOURCES.md` defines the P6 data-source provenance and rights inventory before replay schema implementation. It records inventory fields, approval-status vocabulary, source-category approvals, required-before-ingestion checks, future evidence requirements, rights/provenance risks and replay-schema implementation boundaries. Project-authored synthetic/local fixtures and repository docs may be used only in their current docs/smoke context; real Tenhou, real haifu, external logs, platform data, accounts, third-party binaries, model weights, model outputs, self-play outputs and league outputs remain unapproved. This inventory is docs-only definition evidence, not ingestion approval, replay schema implementation, P6 implementation approval, model-strength evidence or LuckyJ `10.68` comparison.
+The next project task is to review P6 data-source provenance and rights inventory before replay schema implementation. That task must remain docs-only and must not implement replay schema code, data ingestion, feature extraction, label generation, model-output integration, CLI, broad file ingestion, training, self-play, league, real Tenhou, external-log ingestion, platform-data ingestion, P7-P12 work or model-strength claims.
 ```
 
 ## Current methodology
@@ -158,7 +159,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define P6 data-source provenance and rights inventory before replay schema
+Review P6 data-source provenance and rights inventory before replay schema
 implementation.
 Do not execute P6 implementation directly. Do not expand into replay schema
 code, data ingestion, feature extraction, label generation, training,

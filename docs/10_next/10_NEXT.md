@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Define P6 data-source provenance and rights inventory before replay schema implementation.
+- [ ] Review P6 data-source provenance and rights inventory before replay schema implementation.
 
 Current execution charter:
 
@@ -28,12 +28,14 @@ Limits:
 - The post-P5 transition review is complete.
 - The P6 data-system scope, entry criteria and first task are defined for planning only.
 - P6 implementation remains closed.
-- The next task may define P6 data-source provenance and rights inventory before replay schema implementation.
+- The P6 data-source provenance and rights inventory is defined for review before replay schema implementation.
+- The next task may review that inventory before replay schema implementation.
 - The next task is docs-only. Do not execute P6 implementation.
 - Do not generate a P6-P12 implementation prompt.
 - Use only docs/governance and existing data-system planning context; do not read Tenhou accounts, online platforms or external logs.
 - Do not implement replay schema code or data-source ingestion in the next task.
 - Do not approve any real source before source rights, license, allowed-use, storage and evidence requirements are documented.
+- Do not treat the inventory definition as source approval, ingestion approval or replay schema implementation approval.
 - Do not add CLI, broad file ingestion, league harness, external-data readers or new model code.
 - Do not add production evaluator logic in the next task.
 - Do not add new production code, tests, fixtures, replay schema code, dataset readers, feature extraction, label generation, CLI, benchmark expansion, latency measurement, metric implementation, registry code changes, model-output integration, broad file ingestion, evidence taxonomy definition changes or promotion criteria changes in the next task.
@@ -138,6 +140,7 @@ Limits:
 - [x] 2026-06-04 Ran final P5 closure review gate: added `docs/05_evaluation/05X_FINAL_P5_CLOSURE_REVIEW.md`, reviewed closure criteria, current-scope P5 subtracks, evidence index, deferred items and P6-P12 non-entry conditions, found no blocker, and recorded that P5 can close for the current synthetic/local evaluation groundwork scope. This is not P6-P12 entry approval, not a P6 first-task approval and not model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ `10.68` comparison or candidate-promotion evidence.
 - [x] 2026-06-04 Completed post-P5 transition review: added `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`, confirmed P5 is closed for the current synthetic/local evaluation groundwork scope, confirmed P5 closure is not P6 implementation approval, and allowed only a docs-only next task to define P6 data-system scope, entry criteria and first task before implementation. No P6 implementation, replay schema code, data ingestion, tests, fixtures, CLI, model-output integration, real Tenhou, external data, training, self-play, league, runner behavior, P7-P12 or model-strength claim was added.
 - [x] 2026-06-05 Defined P6 data-system scope, entry criteria and first task before implementation: added `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`, recording P6 purpose, allowed/forbidden scope, entry criteria, future implementation entry criteria, future exit criteria, provenance/rights/compliance requirements, evidence requirements, risks, P7-P12 non-entry boundaries and the first next task. This is docs-only planning evidence and does not approve P6 implementation, replay schema code, data ingestion, feature extraction, label generation, CLI, model-output integration, real Tenhou, real haifu, external logs, platform data, training, self-play, league, runner behavior, P7-P12 or model-strength claims.
-- [ ] Define P6 data-source provenance and rights inventory before replay schema implementation.
+- [x] 2026-06-05 Defined P6 data-source provenance and rights inventory before replay schema implementation: updated `docs/02_data_system/02A_DATA_SOURCES.md` with inventory fields, approval-status vocabulary, source-category approvals, required-before-ingestion checklist, future evidence requirements, rights/provenance risks, replay schema implementation boundary and explicit non-evidence warnings. This is docs-only inventory-definition evidence and does not approve P6 implementation, replay schema code, data ingestion, feature extraction, label generation, CLI, model-output integration, real Tenhou, real haifu, external logs, platform data, training, self-play, league, runner behavior, P7-P12 or model-strength claims.
+- [ ] Review P6 data-source provenance and rights inventory before replay schema implementation.
 - [ ] Deferred: broader tiny benchmark harness expansion for legal-action rate, latency and fixed-position decisions. Current P5 implemented only the project-authored synthetic fixture harness; broader latency measurement, fixed-position exact-match, model-output integration, CLI, file ingestion, real data, league, runner, training, self-play and P6-P12 work require later explicit approval.
 - [ ] Update `09_EVIDENCE_LOG.md` whenever new external evidence is added.

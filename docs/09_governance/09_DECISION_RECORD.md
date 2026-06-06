@@ -14,6 +14,62 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-05 — DR-0028 — Require Source Provenance And Rights Inventory Review Before Replay Schema Implementation
+
+Decision:
+
+```text
+Define the P6 data-source provenance and rights inventory, then require a
+docs-only review gate before any replay schema implementation or source
+ingestion can be approved.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- P6 data-system scope and entry criteria are defined for planning only.
+- Future replay, feature, label and quality pipelines need source provenance,
+  rights, storage and evidence boundaries before implementation.
+
+Rationale:
+
+- Replay schema code should not consume any unapproved source.
+- Real Tenhou, real haifu, external logs, platform data, accounts, third-party
+  binaries, model weights, model outputs, self-play outputs and league outputs
+  carry rights, privacy, provenance or stage-boundary risks.
+- A source inventory plus review gate reduces the chance of unsafe ingestion,
+  raw-data Git commits, platform-terms violations or synthetic-fixture
+  overclaims.
+
+Consequences:
+
+- `docs/02_data_system/02A_DATA_SOURCES.md` now records the P6 inventory field
+  schema, approval-status vocabulary, source-category inventory,
+  required-before-ingestion checklist, future evidence requirements and
+  rights/provenance risk review.
+- P6 implementation remains closed.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review P6 data-source provenance and rights inventory before replay schema
+  implementation.`
+- The next task must remain docs-only and must not implement replay schema
+  code, data ingestion, feature extraction, label generation, CLI, model-output
+  integration, real Tenhou, real haifu, external-log ingestion, platform-data
+  ingestion, training, self-play, league, runner behavior or P7-P12.
+
+Linked docs:
+
+- `docs/02_data_system/02A_DATA_SOURCES.md`
+- `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-06-05 — DR-0027 — Define P6 Data-System Scope Before Implementation
 
 Decision:

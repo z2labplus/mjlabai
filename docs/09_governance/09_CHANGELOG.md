@@ -1,5 +1,36 @@
 # 09_CHANGELOG
 
+## 2026-06-05 — v2.35
+
+- Defined P6 data-source provenance and rights inventory before replay schema
+  implementation.
+- Updated `docs/02_data_system/02A_DATA_SOURCES.md` from a placeholder source
+  table into the P6 source inventory control document.
+- The document records:
+  - inventory field schema.
+  - approval-status vocabulary.
+  - source-category inventory.
+  - required-before-ingestion checklist.
+  - future source evidence requirements.
+  - rights / provenance risk review.
+  - replay schema implementation boundary.
+  - planning decision and next task recommendation.
+- Decision:
+  - P6 data-source provenance and rights inventory is defined for review.
+  - P6 implementation remains closed.
+  - the next task is `Review P6 data-source provenance and rights inventory
+    before replay schema implementation.`
+- Evidence grade:
+  - P6 data-source provenance and rights inventory definition evidence only.
+- Updated handoff, docs index, stage contract, milestones, backlog, technical
+  plan, evidence log, risk register, decision record and `10_NEXT`.
+- No production code, tests, fixtures, replay schema code, dataset reader,
+  feature extraction, label generation, data ingestion, CLI, broad ingestion,
+  model-output integration, real Tenhou, real haifu, external-log ingestion,
+  platform-data ingestion, third-party binary call, training, tuning,
+  self-play, league, runner behavior, P7-P12 work or model-strength claim was
+  added.
+
 ## 2026-06-05 — v2.34
 
 - Defined P6 data-system scope, entry criteria and first task before

@@ -8,6 +8,55 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-05 — P6 data-source provenance and rights inventory definition
+
+- Type: internal documentation / P6 planning evidence.
+- Stage: P6 data-system docs-only planning.
+- Updated source inventory document:
+  - `docs/02_data_system/02A_DATA_SOURCES.md`.
+- Planning decision:
+  - P6 data-source provenance and rights inventory is defined for review before
+    replay schema implementation.
+  - P6 implementation remains unapproved.
+  - P7-P12 remain unapproved.
+- The document records:
+  - inventory field schema.
+  - approval-status vocabulary.
+  - source-category inventory.
+  - required-before-ingestion checklist.
+  - evidence requirements for future sources.
+  - rights / provenance risk review.
+  - replay schema implementation boundary.
+  - planning decision and next-task recommendation.
+- Current source-category outcomes:
+  - project-authored synthetic/local fixtures remain allowed only for existing
+    synthetic/local docs, smoke and review contexts.
+  - repository documentation remains allowed for docs/planning context only.
+  - third-party code references remain methodology/interface references only.
+  - real Tenhou, real haifu, external logs, platform data, accounts,
+    third-party binaries, unknown model weights, model outputs, self-play
+    outputs and league outputs remain unapproved or blocked.
+- Evidence grade:
+  - P6 data-source provenance and rights inventory definition evidence only.
+- Not evidence of:
+  - P6 implementation approval.
+  - P7-P12 entry approval.
+  - source ingestion approval.
+  - replay schema implementation.
+  - data ingestion.
+  - feature extraction.
+  - label generation.
+  - real Tenhou, real haifu, external-log or platform-data access.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+- Next task:
+  - Review P6 data-source provenance and rights inventory before replay schema
+    implementation.
+
 ### 2026-06-05 — P6 data-system scope, entry criteria and first task definition
 
 - Type: internal documentation / P6 planning evidence.
