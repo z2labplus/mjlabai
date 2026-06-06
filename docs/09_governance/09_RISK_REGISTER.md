@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-06 — P6 replay schema and fixture implementation readiness checklist review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Readiness checklist review closure is mistaken for replay schema or fixture implementation approval. | Governance / Stage Control | High | Medium | `02I`, evidence log and `10_NEXT` state review can close but implementation remains closed. | Open |
+| No-blocker review is mistaken for `ready_for_implementation`. | Governance / Process | High | Medium | `02I` repeats that schema and fixture decisions remain `not_ready_for_implementation`. | Open |
+| Future proposal-boundary task drifts into code, tests or fixture creation. | Governance / Scope | High | Medium | `10_NEXT` marks the next task docs-only and forbids production code, tests, fixtures, schema code, parsers, readers and ingestion. | Open |
+| Parser, dataset reader, feature extraction, label generation or data ingestion starts from the review wording. | Data / Engineering | High | Medium | `02I` keeps those classes deferred/not approved and requires separate future review and explicit `10_NEXT` approval. | Open |
+| Source approval or ingestion approval is inferred from checklist review. | Data / Rights | High | Medium | `02I` repeats source approval and ingestion approval remain separate and absent. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02I` and evidence log classify the artifact as checklist review evidence only with explicit non-evidence warnings. | Open |
+| P6 docs planning drifts into P7-P12 after review closure. | Governance / Stage Control | High | Medium | `02I`, stage contract and `10_NEXT` keep P7-P12, training, self-play, league and runner behavior closed. | Open |
+
 ## 2026-06-06 — P6 replay schema and fixture implementation readiness checklist risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

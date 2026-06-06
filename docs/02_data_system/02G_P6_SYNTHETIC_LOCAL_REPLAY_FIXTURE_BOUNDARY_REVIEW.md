@@ -411,7 +411,7 @@ Define P6 replay schema and fixture implementation readiness checklist before co
 
 That follow-up has now been completed in
 `docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md`.
-The current next task is to review that checklist before code. The review must
+That checklist review has now been completed in `docs/02_data_system/02I_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW.md` with no blocker. The current next task is to define a docs-only replay schema and synthetic fixture implementation proposal boundary before code. The next task must
 remain docs-only. It must not implement replay fixture files, replay schema
 code, dataclasses, pydantic models, JSON schema, parsers, dataset readers,
 ingestion, feature extraction, label generation, CLI, model-output integration,

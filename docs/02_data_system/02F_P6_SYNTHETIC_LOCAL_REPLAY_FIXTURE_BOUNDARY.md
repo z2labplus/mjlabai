@@ -293,10 +293,15 @@ self-play, league, runner behavior or P7-P12 work.
 defines readiness criteria before future fixture implementation or replay
 schema code can be considered. It does not approve fixture implementation.
 
+`docs/02_data_system/02I_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW.md`
+reviews that checklist with no blocker. It keeps fixture implementation closed
+and does not approve fixture files, validation tests, schema code, ingestion,
+parser, dataset reader, feature extraction or label generation.
+
 ## Next Task Recommendation
 
 ```text
-Review P6 replay schema and fixture implementation readiness checklist before code.
+Define P6 replay schema and synthetic fixture implementation proposal boundary before code.
 ```
 
 The next task should remain docs-only. It must not implement fixture files,

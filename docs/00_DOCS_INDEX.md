@@ -53,6 +53,7 @@ docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md
 docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md
 docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md
 docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md
+docs/02_data_system/02I_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -122,6 +123,15 @@ decision vocabulary, dependency map, P7-P12 non-entry boundaries and readiness
 risks. It is checklist-definition evidence only, not replay schema
 implementation, fixture implementation, data ingestion, parser/dataset-reader
 approval, feature/label generation, source approval, model-strength evidence or
+LuckyJ comparison evidence.
+
+`docs/02_data_system/02I_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW.md`
+reviews the P6 replay schema and fixture implementation readiness checklist
+before code. It records that the review can close with no blocker, while P6
+implementation, replay schema implementation, fixture implementation, data
+ingestion, parser/dataset-reader work, feature extraction, label generation and
+P7-P12 remain closed. It is checklist-review evidence only, not implementation
+approval, source approval, ingestion evidence, model-strength evidence or
 LuckyJ comparison evidence.
 
 ## Algorithm discovery and racing-funnel files

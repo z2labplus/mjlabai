@@ -247,12 +247,17 @@ and label generation closed.
 docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md
 defines readiness criteria before replay schema code or fixture implementation
 can be considered. It does not approve replay schema implementation.
+
+docs/02_data_system/02I_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW.md
+reviews that checklist with no blocker. It keeps replay schema implementation
+closed and does not approve dataclasses, pydantic models, JSON schema, parser,
+dataset reader, ingestion, feature extraction or label generation.
 ```
 
 ## Next Task Recommendation
 
 ```text
-Review P6 replay schema and fixture implementation readiness checklist before code.
+Define P6 replay schema and synthetic fixture implementation proposal boundary before code.
 ```
 
 The next task should remain docs-only unless a later review explicitly approves

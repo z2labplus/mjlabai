@@ -345,7 +345,15 @@ label generation.
 Review P6 replay schema and fixture implementation readiness checklist before code.
 ```
 
-The next task should remain a docs-only review gate. It must not implement
+That follow-up has now been completed in
+`docs/02_data_system/02I_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW.md`.
+The review found no blocker and can close, while P6 implementation, replay
+schema implementation, fixture implementation, data ingestion, parser /
+dataset-reader work, feature extraction, label generation and P7-P12 remain
+closed.
+
+The current next task is to define a docs-only replay schema and synthetic
+fixture implementation proposal boundary before code. It must not implement
 replay schema code, fixture files, dataclasses, pydantic models, JSON schema,
 parsers, dataset readers, ingestion, feature extraction, label generation,
 CLI, model-output integration, real data access, training, self-play, league,
