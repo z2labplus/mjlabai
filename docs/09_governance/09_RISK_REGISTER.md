@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 full-closure roadmap and remaining-scope inventory review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Roadmap review closure is mistaken for full P6 closure. | Governance / Stage Control | High | Medium | `02V`, evidence log, handoff and `10_NEXT` state the review can close but full P6 remains open. | Open |
+| Roadmap review closure is mistaken for P7-P12 entry approval. | Governance / Stage Control | High | Medium | `02V` and `10_NEXT` keep P7-P12 unapproved and select only a docs-only closure criteria definition task. | Open |
+| The next closure-criteria definition task drifts into implementation. | Governance / Scope | High | Medium | `02V` and `10_NEXT` forbid code, tests, fixtures, parser, reader, ingestion, feature extraction, label generation, CLI and model-output integration. | Open |
+| Required/deferred/blocked classifications are used to approve real data or ingestion implicitly. | Data / Compliance | High | Medium | `02V` confirms real Tenhou, real haifu, external logs, platform data and source-specific real-data approval remain blocked. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `02V` evidence grade is review evidence only with explicit non-evidence boundaries. | Open |
+
 ## 2026-06-07 — P6 full-closure roadmap and remaining-scope inventory risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

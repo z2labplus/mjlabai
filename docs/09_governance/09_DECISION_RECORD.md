@@ -14,6 +14,67 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-07 — DR-0044 — Review Full P6 Closure Roadmap and Remaining Scope Inventory
+
+Decision:
+
+```text
+Close the full P6 closure roadmap and remaining scope inventory review with no
+blocker, and select a docs-only full P6 closure criteria definition as the next
+task.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- Accepted current-scope P6 is closed only for the synthetic/local minimal
+  replay schema and project-authored fixture scope.
+- Full P6 remains open.
+- P7-P12 entry remains unapproved.
+- `02U` defines the full P6 closure roadmap and remaining scope inventory.
+- Parser, dataset reader, data ingestion, feature extraction, label generation,
+  real data, model-output integration, CLI, training, self-play and league
+  remain unapproved.
+
+Rationale:
+
+- `02U` scope is correct.
+- The current-scope closed chain is complete.
+- The remaining inventory classification is conservative and auditable.
+- The roadmap requires docs-only closure criteria, criteria review, handoff /
+  evidence finalization, risk / source-rights consistency review and a final
+  full P6 closure review gate.
+- No blocker was found.
+
+Consequences:
+
+- `docs/02_data_system/02V_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW.md`
+  records the review.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define full P6 closure criteria after roadmap and remaining scope review.`
+- Full P6 remains open.
+- P7-P12 entry remains unapproved.
+- No implementation, parser, dataset reader, ingestion, feature extraction,
+  label generation, real data, model-output integration, CLI, training,
+  self-play, league or P7-P12 work is approved.
+- This decision is not full P6 closure, P7-P12 entry approval,
+  model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
+  evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/02_data_system/02V_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW.md`
+- `docs/02_data_system/02U_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+- `docs/10_next/10_NEXT.md`
+
+Status:
+
+```text
+Accepted review recorded.
+```
+
 ## 2026-06-07 — DR-0043 — Define Full P6 Closure Roadmap and Remaining Scope Inventory
 
 Decision:

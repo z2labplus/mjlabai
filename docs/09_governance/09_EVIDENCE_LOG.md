@@ -8,6 +8,65 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-07 — P6 full-closure roadmap and remaining-scope inventory review
+
+- Type: internal documentation / P6 full-closure roadmap and remaining-scope
+  inventory review evidence.
+- Stage: P6 data system / docs-only roadmap and inventory review gate.
+- Added review document:
+  - `docs/02_data_system/02V_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW.md`
+- Reviewed primary artifact:
+  - `docs/02_data_system/02U_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY.md`
+- Reviewed context:
+  - `docs/02_data_system/02A_DATA_SOURCES.md` through
+    `docs/02_data_system/02T_FINAL_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_REVIEW.md`
+  - `docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md`
+  - `src/mjlabai/data/replay_schema.py`
+  - `tests/fixtures/data/synthetic_replay_smoke.json`
+  - `tests/data/test_replay_schema.py`
+  - `tests/data/test_synthetic_replay_fixture_schema.py`
+  - handoff, docs index, `10_NEXT`, technical plan, changelog, evidence log,
+    risk register, decision record, stage contract, backlog and milestones.
+- Review decision:
+  - `Review can close`.
+  - No blocker was found.
+  - `02U` scope is correct.
+  - current-scope closed chain is complete.
+  - remaining inventory classification is reasonable.
+  - roadmap is conservative and docs-only.
+  - required / deferred / blocked / later-stage / out-of-scope classifications
+    are safe.
+  - P7-P12 non-entry boundary is sufficient.
+  - governance is synchronized.
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P6 full-closure roadmap and remaining-scope inventory review evidence only.
+- Not evidence of:
+  - full P6 closure.
+  - P7-P12 entry approval.
+  - new implementation approval.
+  - parser.
+  - dataset reader.
+  - data ingestion.
+  - feature extraction.
+  - label generation.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - source approval.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-07 — P6 full-closure roadmap and remaining-scope inventory
 
 - Type: internal documentation / P6 full-closure roadmap and remaining-scope

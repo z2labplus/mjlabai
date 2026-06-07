@@ -1,5 +1,31 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.57
+
+- Reviewed the full P6 closure roadmap and remaining scope inventory after
+  accepted current-scope closure.
+- Added
+  `docs/02_data_system/02V_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW.md`.
+- The review confirms:
+  - `02U` scope is correct.
+  - accepted current-scope closed artifacts are complete.
+  - remaining scope inventory classification is reasonable.
+  - the full P6 closure roadmap is conservative and docs-only.
+  - required, deferred, blocked, later-stage and out-of-scope classifications
+    are safe.
+  - P7-P12 non-entry boundary is sufficient.
+  - governance synchronization is consistent.
+  - validation passed.
+  - review decision: `Review can close`.
+- New `10_NEXT` first item:
+  `Define full P6 closure criteria after roadmap and remaining scope review.`
+- No production code, tests, fixtures, replay schema code, parser, dataset
+  reader, ingestion, feature extraction, label generation, CLI, broad file
+  ingestion, model-output integration, real Tenhou, real haifu, external logs,
+  platform data, OpenAI / LLM / model API call, third-party binary call,
+  training, tuning, self-play, league, runner behavior, full P6 closure,
+  P7-P12 work or model-strength claim was added.
+
 ## 2026-06-07 — v2.56
 
 - Defined the full P6 closure roadmap and remaining scope inventory after
