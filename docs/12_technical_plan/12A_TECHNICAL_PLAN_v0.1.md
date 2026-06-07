@@ -28,14 +28,14 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P6 data-system current-scope closure criteria definition after minimal replay
+P6 data-system current-scope closure criteria review after minimal replay
 schema acceptance.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
 implemented, reviewed with no blocker and accepted as current-scope complete in
-`02P`; `02Q` selected a docs-only current-scope closure-criteria task as the
-next bounded P6 data-system step.
+`02P`; `02Q` selected a docs-only current-scope closure-criteria task and
+`02R` defined those criteria without closing full P6 or current-scope P6.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
@@ -86,8 +86,9 @@ P6 minimal replay schema and project-authored synthetic fixture implementation =
 P6 minimal replay schema and project-authored synthetic fixture implementation review = complete; no blocker found.
 P6 minimal replay schema and project-authored synthetic fixture current-scope acceptance decision = complete; accepted as current-scope complete.
 P6 next current-scope data-system task definition = complete; selected a docs-only closure-criteria task.
-P6 implementation = closed again except for the docs-only current-scope closure criteria definition after acceptance.
-Next = define P6 current-scope data-system closure criteria after minimal replay schema acceptance.
+P6 current-scope data-system closure criteria = defined after minimal replay schema acceptance.
+P6 implementation = closed again except for docs-only current-scope closure-criteria review after acceptance.
+Next = review P6 current-scope data-system closure criteria after minimal replay schema acceptance.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -221,7 +222,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Define P6 current-scope data-system closure criteria after minimal replay schema
+Review P6 current-scope data-system closure criteria after minimal replay schema
 acceptance.
 ```
 
@@ -230,11 +231,13 @@ The exact P6 implementation approved by `02N` is complete and reviewed in
 with no blocker and accepted as current-scope complete in
 `docs/02_data_system/02P_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`.
 `docs/02_data_system/02Q_P6_NEXT_CURRENT_SCOPE_DATA_SYSTEM_TASK_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`
-selects a docs-only closure-criteria definition as the next bounded P6
-data-system task. It does not approve real Tenhou, real haifu, external logs,
-platform data, parser, dataset reader, data ingestion, feature extraction,
-label generation, CLI, model-output integration, training, self-play, league
-or P7-P12.
+selected a docs-only closure-criteria definition as the next bounded P6
+data-system task. `docs/02_data_system/02R_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`
+now defines those criteria and selects a docs-only review gate as the next
+task. It does not close full P6, close current-scope P6 or approve real
+Tenhou, real haifu, external logs, platform data, parser, dataset reader, data
+ingestion, feature extraction, label generation, CLI, model-output
+integration, training, self-play, league or P7-P12.
 
  The stable-dan calculator now supports four-player general/ippan, upper/joukyu, expert/tokujou and phoenix/houou room formulas, records placement counts/rates and raises `StableDanUndefinedError` when `fourth_count == 0`. The bootstrap CI uses percentile empirical multinomial resampling, reports successful/undefined resamples and refuses to fabricate infinite stable dan. The threshold helper uses LuckyJ stable dan `10.68` by default and only returns `clear_pass` when bootstrap lower bound exceeds the threshold with acceptable undefined rate. The reporting schema separates `clears_threshold` from `can_enter_threshold_review` so low-sample reports cannot become project-level LuckyJ claims. The placement aggregation helper converts only explicit offline placement values and whitelisted aliases into first/second/third/fourth counts; it rejects zero-based, ambiguous, bool, float and unknown inputs. The smoke fixture verifies the CLI-free path from synthetic placements through report serialization without Tenhou data or model-strength claims. The API documentation explains this usage path and its guardrails. `docs/05_evaluation/05I_STABLE_DAN_GROUNDWORK_REVIEW.md` records stable-dan evaluation groundwork as complete for current P5 scope while keeping P5 overall open at that time. `src/mjlabai/eval/offline_result.py` and `docs/05_evaluation/05J_OFFLINE_EVALUATION_RESULT_SCHEMA.md` define the P5 offline metric registry and result envelope schema. `tests/eval/test_offline_envelope_smoke.py` verifies that a synthetic stable-dan report can be represented in the envelope. `docs/05_evaluation/05K_LEGAL_ACTION_METRIC_SPEC.md` defines legal-action and invalid-action metric denominators, parse/missing/skipped handling, canonical matching principles, envelope mapping and the synthetic evaluator boundary before implementation. `docs/05_evaluation/05L_ACTION_CANONICALIZATION_SCHEMA.md` defines canonical action fields, current minimum `dahai` fixture scope, strict matching, future relaxed matching boundary and legal-action fixture shape. `tests/fixtures/eval/legal_action_metric_smoke.json` and `tests/eval/test_legal_action_fixture_schema_smoke.py` validate a synthetic-only legal-action fixture shape, now including `parse_failure` coverage. `src/mjlabai/eval/legal_action_metric.py` and `tests/eval/test_legal_action_metric.py` implement and test a narrow synthetic-only evaluator for that fixture, producing counts/rates and an offline envelope without CLI, broad ingestion, canonicalizer, rule engine, model code, training, self-play, league or Tenhou integration. `docs/05_evaluation/05M_LEGAL_ACTION_SYNTHETIC_EVALUATOR_REVIEW.md` records that the current fixture covers `legal`, `invalid`, `missing_action`, `parse_failure` and `skipped_no_legal_actions`, and that the legal-action synthetic evaluator minimum outcome coverage is complete only for the current P5 synthetic-only `dahai` + strict scope. `docs/05_evaluation/05N_TINY_BENCHMARK_HARNESS_BOUNDARY.md` defines the future tiny benchmark harness boundary for legal-action rate, latency and fixed-position diagnostics before implementation. `tests/fixtures/eval/tiny_benchmark_harness_smoke.json` and `tests/eval/test_tiny_benchmark_harness_fixture_schema_smoke.py` validate the synthetic/local fixture shape for that boundary without implementing a harness, measuring latency, calculating fixed-position exact-match or reading real data. `docs/05_evaluation/05O_TINY_BENCHMARK_FIXTURE_SCHEMA_REVIEW.md` records that the fixture schema is sufficient as the front-door input boundary for a future P5-only tiny benchmark harness implementation. `src/mjlabai/eval/tiny_benchmark_harness.py` now implements only that project-authored synthetic/local harness boundary and can emit an offline envelope without latency measurement, fixed-position exact-match, model-output integration, CLI, real data or strength claims. `docs/05_evaluation/05Q_TINY_BENCHMARK_HARNESS_IMPLEMENTATION_REVIEW.md` records that this implementation review can close for the current fixture scope with no blocker. `docs/05_evaluation/05R_OFFLINE_ENVELOPE_COVERAGE_FOR_TINY_BENCHMARK_DIAGNOSTICS_REVIEW.md` records that the existing offline envelope coverage is sufficient for the synthetic tiny benchmark diagnostic scope with `wrapper_smoke_success`, `sample_size = 1`, `latency_ms = None`, all-false safety flags, synthetic/local warnings and evidence references. `docs/05_evaluation/05S_METRIC_REGISTRY_CONSISTENCY_REVIEW.md` records that current P5 metric registry names, units, directions, statuses and evidence grades are consistent across stable-dan, legal-action and tiny benchmark diagnostics with no blocker. `docs/05_evaluation/05T_SYNTHETIC_LOCAL_EVIDENCE_TAXONOMY_AND_PROMOTION_GUARDRAILS_REVIEW.md` records that current P5 synthetic/local evidence labels, non-evidence warnings, promotion/ranking guardrails and stage-boundary wording are consistent with no blocker. `docs/05_evaluation/05U_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_CHECKLIST.md` defines P5 closure criteria and an exit readiness checklist. `docs/05_evaluation/05V_P5_EVALUATION_GROUNDWORK_CLOSURE_CRITERIA_AND_EXIT_READINESS_REVIEW.md` reviews those criteria and finds no blocker. `docs/05_evaluation/05W_P5_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION.md` finalizes the P5 handoff and evidence index for final closure review and finds no blocker. `docs/05_evaluation/05X_FINAL_P5_CLOSURE_REVIEW.md` records that all closure criteria pass, no blocker remains, and P5 can close for the current synthetic/local evaluation groundwork scope. `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md` records that the project may start a docs-only task to define P6 data-system scope, entry criteria and first task before implementation. `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md` defines P6 data-system purpose, allowed/forbidden inputs, entry criteria, future implementation entry criteria, future exit criteria, provenance/rights/compliance requirements, evidence requirements, risks, P7-P12 non-entry boundaries and the first next task. `docs/02_data_system/02A_DATA_SOURCES.md` defines the P6 source provenance/rights inventory, source categories, approval vocabulary, pre-ingestion checklist, future evidence requirements and rights/provenance risks before replay schema implementation. `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md` reviews that inventory and finds no blocker, while keeping broad P6 implementation and data ingestion closed. `docs/02_data_system/02B_REPLAY_SCHEMA.md` defines the P6 replay schema documentation boundary after source inventory review, and `docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md` reviews it with no blocker. `docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md` defines the P6 synthetic/local replay fixture boundary before schema implementation. `docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md` reviews that boundary with no blocker. `docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md` defines the replay schema and fixture implementation readiness checklist before code. `docs/02_data_system/02I_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW.md` reviews that checklist with no blocker. These remain metric infrastructure, specification, implementation, review, finalization, closure-review, transition-review and P6 planning evidence only, not strength evidence. `docs/02_data_system/02J_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY.md` defines the proposal boundary that any future replay schema or synthetic fixture implementation proposal must satisfy before code. `docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md` reviews that proposal boundary with no blocker. `docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md` prepares the minimal implementation proposal for review before code. `docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md` reviews it with no blocker. `docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md` approved only the exact minimal implementation task. That task is now implemented in the approved files and reviewed in `02O` with no blocker before any further P6 work. It does not approve broad P6 implementation, real data, parser / reader / ingestion work, feature extraction, label generation, CLI, model-output integration, training, self-play, league, P7-P12 or model-strength claims.
 
@@ -247,7 +250,7 @@ approved only the exact minimal implementation task. That implementation is
 now complete, reviewed and accepted as current-scope complete in the named
 minimal replay schema module, project-authored synthetic/local fixture and two
 minimal tests; `02Q` selects current-scope closure criteria as the next docs-only
-P6 task. All parser, dataset reader, ingestion, feature
+P6 task and `02R` defines those criteria for review. All parser, dataset reader, ingestion, feature
 extraction, label generation, real-data, CLI, model-output, training,
 self-play, league and P7-P12 work remains unapproved.
 

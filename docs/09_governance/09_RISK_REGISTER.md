@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 current-scope data-system closure criteria definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Closure criteria definition is mistaken for full P6 closure. | Governance / Stage Control | High | Medium | `02R`, handoff, evidence log and `10_NEXT` state that it defines criteria only and does not close full P6. | Open |
+| Closure criteria definition is mistaken for current-scope P6 closure. | Governance / Stage Control | High | Medium | `02R` requires a later docs-only closure-criteria review and final current-scope closure review before closure. | Open |
+| Closure criteria definition is mistaken for implementation approval. | Governance / Scope | High | Medium | `02R` and `10_NEXT` forbid code, tests, fixtures, parser, reader, ingestion, feature extraction and label generation. | Open |
+| Deferred items are treated as required blockers and P6 expands unnecessarily. | Planning / Scope | Medium-High | Medium | `02R` lists deferred items and explains why parser, reader, ingestion, feature, label, real data, CLI and P7-P12 are not required for current-scope closure. | Open |
+| Review gate is skipped and the project jumps directly to final closure or P7-P12. | Governance / Process | High | Medium | `02R` and `10_NEXT` set the next task to a closure-criteria review gate and list P7-P12 non-entry conditions. | Open |
+| Closure criteria evidence is overclaimed as data ingestion, model-strength, Tenhou, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `02R` and evidence log classify this as closure-criteria definition evidence only with explicit non-evidence boundaries. | Open |
+| Real-data or source-approval ambiguity enters closure review. | Data / Compliance | High | Medium | `02R` requires source inventory consistency and keeps real Tenhou, real haifu, external logs and platform data deferred. | Open |
+
 ## 2026-06-07 — P6 next current-scope data-system task definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

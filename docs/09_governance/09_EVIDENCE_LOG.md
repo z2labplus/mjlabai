@@ -8,6 +8,62 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-07 — P6 current-scope data-system closure criteria definition after minimal replay schema acceptance
+
+- Type: internal documentation / P6 current-scope closure-criteria definition
+  evidence.
+- Stage: P6 data system / docs-only closure-criteria definition gate.
+- Added closure-criteria document:
+  - `docs/02_data_system/02R_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`
+- Reviewed accepted current scope from:
+  - `docs/02_data_system/02P_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+  - `docs/02_data_system/02Q_P6_NEXT_CURRENT_SCOPE_DATA_SYSTEM_TASK_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`
+- Defined:
+  - minimum P6 current-scope closure criteria.
+  - exit readiness checklist.
+  - required remaining current-scope P6 items.
+  - deferred items not required for current-scope closure.
+  - P7-P12 non-entry conditions.
+  - next docs-only review task.
+- Decision:
+  - current-scope P6 cannot be closed by this task.
+  - full P6 cannot be closed by this task.
+  - a later docs-only closure-criteria review gate must review these criteria
+    before any final current-scope closure decision.
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P6 current-scope data-system closure criteria definition after minimal
+    replay schema acceptance evidence only.
+- Not evidence of:
+  - full P6 closure.
+  - current-scope P6 closure.
+  - new implementation approval.
+  - parser.
+  - dataset reader.
+  - data ingestion.
+  - feature extraction.
+  - label generation.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - source approval.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P7-P12 entry approval.
+- Next task:
+  - Review P6 current-scope data-system closure criteria after minimal replay
+    schema acceptance.
+
 ### 2026-06-07 — P6 next current-scope data-system task definition after minimal replay schema acceptance
 
 - Type: internal documentation / P6 next-task definition evidence.
