@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Run final P6 current-scope data-system closure review gate.
+- [ ] Run post-current-scope P6 transition review before defining any next-stage data-system or P7 task.
 
 Current execution charter:
 
@@ -59,8 +59,12 @@ Limits:
 - The closure criteria definition does not close full P6, does not close current-scope P6, does not approve new implementation and does not approve P7-P12 entry.
 - The P6 current-scope data-system closure criteria review is complete in `docs/02_data_system/02S_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`.
 - The closure criteria review can close with no blocker, but it does not close full P6, does not close current-scope P6, does not approve new implementation and does not approve P7-P12 entry.
-- The selected next task is `Run final P6 current-scope data-system closure review gate`.
-- The next task is a docs-only final current-scope closure review gate.
+- The final P6 current-scope data-system closure review is complete in `docs/02_data_system/02T_FINAL_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_REVIEW.md`.
+- The final current-scope closure decision is `Current-scope P6 can close`, but only for the accepted synthetic/local minimal replay schema and project-authored synthetic fixture scope.
+- Full P6 is not closed.
+- P7-P12 entry is not approved.
+- The selected next task is `Run post-current-scope P6 transition review before defining any next-stage data-system or P7 task`.
+- The next task is a docs-only post-current-scope transition / planning review.
 - The next task must not add production code, tests, fixtures or data files.
 - The next task must not modify replay schema code, tests or fixtures.
 - The next task must not expand replay schema implementation.
@@ -102,6 +106,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-06-07 Ran final P6 current-scope data-system closure review gate: added `docs/02_data_system/02T_FINAL_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_REVIEW.md`, reviewed the P6 current-scope chain from scope/source inventory through minimal implementation, acceptance, closure criteria and closure criteria review, confirmed validation and governance synchronization, and recorded the decision `Current-scope P6 can close` for the accepted synthetic/local minimal replay schema and project-authored synthetic fixture scope only. This is P6 final current-scope data-system closure review evidence only; it does not close full P6, approve P7-P12 entry, approve new implementation, parser, dataset reader, ingestion, feature extraction, label generation, real data, model-output integration, CLI, training, self-play, league or model-strength claims. Validation passed `git diff --check`, `python3 -m unittest tests/data/test_replay_schema.py` and `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`.
 - [x] 2026-06-07 Reviewed P6 current-scope data-system closure criteria after minimal replay schema acceptance: added `docs/02_data_system/02S_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`, reviewed `02R` scope, accepted/not-accepted scope, C1-C25 closure criteria, exit readiness checklist, required remaining items, deferred items, P7-P12 non-entry conditions, governance synchronization and validation. Review decision: `Review can close`; no blocker found. This is P6 current-scope closure-criteria review evidence only; it does not close full P6, close current-scope P6, approve new implementation, parser, dataset reader, ingestion, feature extraction, label generation, real data, model-output integration, CLI, training, self-play, league, P7-P12 entry or model-strength claims. Validation passed `git diff --check`, `python3 -m unittest tests/data/test_replay_schema.py` and `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`.
 - [x] 2026-06-07 Defined P6 current-scope data-system closure criteria after minimal replay schema acceptance: added `docs/02_data_system/02R_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`, recorded current accepted scope from `02P`, defined minimum closure criteria, exit readiness checklist, required remaining current-scope P6 items, deferred items and P7-P12 non-entry conditions, and selected `Review P6 current-scope data-system closure criteria after minimal replay schema acceptance` as the next docs-only review gate. This is P6 current-scope closure-criteria definition evidence only; it does not close full P6, close current-scope P6, approve new implementation, parser, dataset reader, ingestion, feature extraction, label generation, real data, model-output integration, CLI, training, self-play, league, P7-P12 entry or model-strength claims. Validation passed `git diff --check`, `python3 -m unittest tests/data/test_replay_schema.py` and `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`.
 - [x] 2026-06-07 Defined the next P6 current-scope data-system task after minimal replay schema acceptance: added `docs/02_data_system/02Q_P6_NEXT_CURRENT_SCOPE_DATA_SYSTEM_TASK_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`, reviewed candidate docs-only next tasks, selected `Define P6 current-scope data-system closure criteria after minimal replay schema acceptance`, and recorded allowed scope, forbidden scope, validation commands, stop conditions, planning decision and evidence grade. This is P6 next-task definition evidence only; it does not approve new implementation, parser, dataset reader, ingestion, feature extraction, label generation, real data, model-output integration, CLI, training, self-play, league, full P6 closure, P7-P12 entry or model-strength claims. Validation passed `git diff --check`, `python3 -m unittest tests/data/test_replay_schema.py` and `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`.

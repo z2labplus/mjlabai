@@ -14,6 +14,75 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-07 — DR-0041 — Close Accepted Current-Scope P6 Data-System Scope
+
+Decision:
+
+```text
+Current-scope P6 data system can close for the accepted synthetic/local
+minimal replay schema and project-authored synthetic fixture scope.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- P6 scope, entry criteria and first task were defined in `02C`.
+- P6 source inventory and replay / fixture / readiness / proposal boundaries
+  were defined and reviewed with no blocker.
+- `02N` approved only the exact minimal implementation task.
+- The exact implementation was completed only in:
+  - `src/mjlabai/data/replay_schema.py`
+  - `tests/fixtures/data/synthetic_replay_smoke.json`
+  - `tests/data/test_replay_schema.py`
+  - `tests/data/test_synthetic_replay_fixture_schema.py`
+- `02O` reviewed that exact implementation with no blocker.
+- `02P` accepted that exact implementation as current-scope complete.
+- `02R` defined closure criteria.
+- `02S` reviewed the closure criteria with no blocker.
+- `02T` runs the final current-scope closure review gate.
+
+Rationale:
+
+- The current-scope P6 review chain is complete.
+- Closure criteria pass.
+- Required validation commands pass.
+- Governance documents are synchronized.
+- No unresolved blocker remains.
+- Deferred items are explicitly not required for the accepted current-scope
+  closure.
+- P7-P12 non-entry conditions remain clear.
+
+Consequences:
+
+- Current-scope P6 closes only for the accepted synthetic/local minimal replay
+  schema and project-authored synthetic fixture scope.
+- Full P6 is not closed.
+- P7-P12 entry is not approved.
+- Parser, dataset reader, data ingestion, feature extraction, label
+  generation, real data, model-output integration, CLI, training, self-play
+  and league remain unapproved.
+- The next task is a docs-only post-current-scope P6 transition review before
+  defining any next-stage data-system or P7 task.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate
+  promotion evidence.
+
+Linked docs:
+
+- `docs/02_data_system/02T_FINAL_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_REVIEW.md`
+- `docs/02_data_system/02P_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+- `docs/02_data_system/02R_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`
+- `docs/02_data_system/02S_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+- `docs/10_next/10_NEXT.md`
+
+Status:
+
+```text
+Accepted current-scope closure recorded.
+```
+
 ## 2026-06-07 — DR-0040 — Approve Next Minimal P6 Replay Schema And Synthetic Fixture Implementation Task
 
 Decision:

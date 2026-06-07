@@ -64,6 +64,7 @@ docs/02_data_system/02P_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_CURRENT_S
 docs/02_data_system/02Q_P6_NEXT_CURRENT_SCOPE_DATA_SYSTEM_TASK_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md
 docs/02_data_system/02R_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md
 docs/02_data_system/02S_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md
+docs/02_data_system/02T_FINAL_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_REVIEW.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -250,6 +251,14 @@ conditions are sufficient, governance is synchronized, validation passes and
 the review can close with no blocker. It is closure-criteria review evidence
 only, not full P6 closure, not current-scope P6 closure, not new
 implementation approval and not P7-P12 entry approval.
+`docs/02_data_system/02T_FINAL_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_REVIEW.md`
+runs the final P6 current-scope data-system closure review gate. It records
+that current-scope P6 can close for the accepted synthetic/local minimal replay
+schema and project-authored synthetic fixture scope only. It is final
+current-scope closure review evidence only: full P6 is not closed, P7-P12
+entry is not approved, and parser / dataset-reader / ingestion / feature /
+label / real-data / model-output / CLI / training / self-play / league work
+remains unapproved.
 
 ## Algorithm discovery and racing-funnel files
 

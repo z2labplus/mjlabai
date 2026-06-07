@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 final current-scope data-system closure review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Current-scope P6 closure is mistaken for full P6 closure. | Governance / Stage Control | High | Medium | `02T`, evidence log, handoff and `10_NEXT` state that only the accepted synthetic/local minimal scope is closed. | Open |
+| Current-scope P6 closure is mistaken for P7-P12 entry approval. | Governance / Stage Control | High | Medium | `02T` and `10_NEXT` require a post-current-scope transition review before any next-stage planning or P7 task. | Open |
+| Current-scope P6 closure is mistaken for parser, reader, ingestion, feature or label approval. | Governance / Scope | High | Medium | `02T` accepted boundary excludes those items and keeps them unapproved. | Open |
+| Current-scope P6 closure is overclaimed as real-data, model-strength, Tenhou, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `02T` evidence grade and explicit non-evidence list keep the decision as data-system closure review evidence only. | Open |
+| Post-current-scope transition review drifts into implementation. | Governance / Process | High | Medium | `10_NEXT` sets the next task to docs-only transition review and forbids code, tests, fixtures, ingestion, real data, training and P7-P12. | Open |
+
 ## 2026-06-07 — P6 current-scope data-system closure criteria review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
