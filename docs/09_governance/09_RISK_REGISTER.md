@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 full handoff and evidence index finalization risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Handoff / evidence finalization is mistaken for full P6 closure. | Governance / Stage Control | High | Medium | `02Y`, evidence log, handoff and `10_NEXT` state full P6 remains open and the next task is risk/source-rights review. | Open |
+| Handoff / evidence finalization is mistaken for P7-P12 entry approval. | Governance / Stage Control | High | Medium | `02Y` and `10_NEXT` keep P7-P12 unapproved and require later final closure plus post-full-P6 transition review. | Open |
+| The next risk/source-rights review drifts into implementation. | Governance / Scope | High | Medium | `02Y` and `10_NEXT` forbid code, tests, fixtures, parser, reader, ingestion, feature extraction, label generation, CLI and model-output integration. | Open |
+| Evidence index entries are overread as source approval or real-data approval. | Data / Compliance | High | Medium | `02Y` evidence table marks real-data/source approval as not allowed and routes source consistency to the next docs-only review. | Open |
+| Handoff finalization evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `02Y` evidence grade is handoff / evidence-index finalization evidence only with explicit non-evidence boundaries. | Open |
+
 ## 2026-06-07 — P6 full-closure criteria review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

@@ -2,10 +2,11 @@
 
 ## Current stage
 
-P6 data-system full-P6 handoff and evidence index finalization after accepted current-scope
-closure, post-current-scope transition review, `02U` roadmap / inventory
-definition, `02V` roadmap / inventory review, `02W` closure criteria
-definition and `02X` criteria review. P5 evaluation foundation is
+P6 data-system full-P6 risk register and source-rights inventory consistency
+review after accepted current-scope closure, post-current-scope transition
+review, `02U` roadmap / inventory definition, `02V` roadmap / inventory
+review, `02W` closure criteria definition, `02X` criteria review and `02Y`
+handoff / evidence index finalization. P5 evaluation foundation is
 closed for the current synthetic/local scope; general P6 implementation is not open, and the exact
 minimal replay schema / project-authored synthetic fixture task approved by
 `02N` is implemented, reviewed with no blocker and accepted as current-scope
@@ -18,7 +19,8 @@ selects a docs-only full P6 closure roadmap / remaining-scope inventory as the
 next task. `02U` defines that roadmap / inventory and selects a docs-only
 review gate as the next task. `02V` reviews that roadmap / inventory with no
 blocker and selects a docs-only full P6 closure criteria definition as the next
-task. P7-P12 entry remains unapproved.
+task. `02X` reviews the `02W` criteria with no blocker, and `02Y` finalizes
+the full P6 handoff / evidence index. P7-P12 entry remains unapproved.
 
 Current focus:
 
@@ -81,10 +83,11 @@ P6 full closure roadmap and remaining scope inventory = defined in `02U`; full P
 P6 full closure roadmap and remaining scope inventory review = complete in `02V`; review can close with no blocker
 P6 full closure criteria after roadmap and remaining scope review = defined in `02W`; full P6 remains open and P7-P12 entry remains unapproved
 P6 full closure criteria review after roadmap and remaining scope review = complete in `02X`; review can close with no blocker
+P6 full handoff and evidence index finalization after closure criteria review = complete in `02Y`; full P6 remains open and P7-P12 remains unapproved
 Full P6 = not closed
 P7-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = finalize full P6 handoff and evidence index after closure criteria review
+Next = review full P6 risk register and source-rights inventory consistency before final closure review
 ```
 
 ## AI role
@@ -191,4 +194,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Finalize full P6 handoff and evidence index after closure criteria review.
+Review full P6 risk register and source-rights inventory consistency before final closure review.

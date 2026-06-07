@@ -33,8 +33,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility produced current Mortal/Akochan funnel evidence.
 P5 evaluation groundwork is closed for the current synthetic/local scope.
-The project is in P6 data-system docs-only full-P6 handoff and evidence index
-finalization
+The project is in P6 data-system docs-only full-P6 risk register and
+source-rights inventory consistency review
 after the exact approved replay schema / synthetic fixture implementation was
 implemented, reviewed, accepted as current-scope complete, closed for the
 accepted synthetic/local minimal scope only, reviewed in a post-current-scope
@@ -76,7 +76,10 @@ non-entry conditions.
 `docs/02_data_system/02X_FULL_P6_CLOSURE_CRITERIA_REVIEW_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md`
 reviews those criteria with no blocker and selects full P6 handoff / evidence
 index finalization as the next docs-only task.
-The next docs-only finalization must not expand into parser, dataset reader,
+`docs/02_data_system/02Y_FULL_P6_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+finalizes that handoff / evidence index and selects a docs-only risk register
+and source-rights inventory consistency review before final closure review.
+The next docs-only review must not expand into parser, dataset reader,
 data ingestion, feature extraction, label generation, training, self-play,
 league, real Tenhou, external-log ingestion or P7-P12 work.
 

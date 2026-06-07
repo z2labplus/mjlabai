@@ -8,6 +8,73 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-07 — P6 full handoff and evidence index finalization
+
+- Type: internal documentation / P6 full-handoff and evidence-index
+  finalization evidence.
+- Stage: P6 data system / docs-only full-P6 handoff and evidence index
+  finalization after closure criteria review.
+- Added finalization document:
+  - `docs/02_data_system/02Y_FULL_P6_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+- Finalized evidence index covering:
+  - P6 planning and boundary documents from `02A` through `02X`.
+  - transition reviews `12B` and `12C`.
+  - accepted minimal implementation artifacts:
+    - `src/mjlabai/data/replay_schema.py`
+    - `tests/fixtures/data/synthetic_replay_smoke.json`
+    - `tests/data/test_replay_schema.py`
+    - `tests/data/test_synthetic_replay_fixture_schema.py`
+  - governance artifacts:
+    - `docs/00_HANDOFF.md`
+    - `docs/00_DOCS_INDEX.md`
+    - `docs/10_next/10_NEXT.md`
+    - `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md`
+    - `docs/09_governance/09_EVIDENCE_LOG.md`
+    - `docs/09_governance/09_RISK_REGISTER.md`
+    - `docs/09_governance/09_CHANGELOG.md`
+    - `docs/09_governance/09_DECISION_RECORD.md`
+    - `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+    - `docs/07_development_execution/07A_MILESTONES.md`
+    - `docs/07_development_execution/07B_TASK_BACKLOG.md`
+- Planning decision:
+  - Full P6 handoff and evidence index are finalized after closure criteria
+    review.
+  - Full P6 remains open.
+  - P7-P12 entry remains unapproved.
+  - The selected next task is:
+    `Review full P6 risk register and source-rights inventory consistency
+    before final closure review.`
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P6 full-handoff and evidence-index finalization evidence only.
+- Not evidence of:
+  - full P6 closure.
+  - P7-P12 entry approval.
+  - new implementation approval.
+  - parser.
+  - dataset reader.
+  - data ingestion.
+  - feature extraction.
+  - label generation.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - source approval.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - metric implementation or registry code change.
+  - promotion criteria change.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-07 — P6 full-closure criteria review
 
 - Type: internal documentation / P6 full-closure criteria review evidence.

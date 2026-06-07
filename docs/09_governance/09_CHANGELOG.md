@@ -1,5 +1,32 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.60
+
+- Finalized full P6 handoff and evidence index after closure criteria review.
+- Added
+  `docs/02_data_system/02Y_FULL_P6_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`.
+- The finalization records:
+  - a full-P6 handoff finalization summary.
+  - a P6 evidence index covering P6 planning / boundary / review artifacts,
+    accepted implementation artifacts, validation and governance artifacts.
+  - evidence grade consistency across accepted current-scope evidence and
+    roadmap / criteria / review / finalization evidence.
+  - remaining required full-P6 items.
+  - deferred, blocked, later-stage and out-of-scope summaries.
+  - next risk / source-rights consistency review scope.
+  - planning decision and evidence grade.
+- New `10_NEXT` first item:
+  `Review full P6 risk register and source-rights inventory consistency before final closure review.`
+- Full P6 remains open.
+- P7-P12 entry remains unapproved.
+- No production code, tests, fixtures, replay schema code, parser, dataset
+  reader, ingestion, feature extraction, label generation, CLI, broad file
+  ingestion, model-output integration, real Tenhou, real haifu, external logs,
+  platform data, OpenAI / LLM / model API call, third-party binary call,
+  metric implementation, registry code change, promotion criteria change,
+  training, tuning, self-play, league, runner behavior, full P6 closure,
+  P7-P12 work or model-strength claim was added.
+
 ## 2026-06-07 — v2.59
 
 - Reviewed full P6 closure criteria after roadmap and remaining scope review.

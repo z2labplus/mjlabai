@@ -80,6 +80,7 @@ docs/02_data_system/02U_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY.md
 docs/02_data_system/02V_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW.md
 docs/02_data_system/02W_FULL_P6_CLOSURE_CRITERIA_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md
 docs/02_data_system/02X_FULL_P6_CLOSURE_CRITERIA_REVIEW_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md
+docs/02_data_system/02Y_FULL_P6_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -307,6 +308,17 @@ checklist are conservative and auditable, and selects full P6 handoff /
 evidence index finalization as the next docs-only task. It is criteria-review
 evidence only, not full P6 closure, P7-P12 entry approval, implementation
 approval, real-data approval, ingestion evidence or model-strength evidence.
+
+`docs/02_data_system/02Y_FULL_P6_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+finalizes the full P6 handoff and evidence index after the `02X` criteria
+review. It records a finalization-ready full P6 handoff summary, an evidence
+index covering `02A`-`02X`, `12B` / `12C`, accepted implementation artifacts
+and governance artifacts, evidence grade consistency, remaining required
+full-P6 items and the next risk / source-rights consistency review scope. It
+is handoff / evidence-index finalization evidence only: full P6 remains open,
+P7-P12 entry remains unapproved, and no parser, dataset reader, ingestion,
+feature extraction, label generation, real data, CLI, model-output
+integration, training, self-play, league or model-strength claim is approved.
 
 ## Algorithm discovery and racing-funnel files
 
