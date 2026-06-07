@@ -1,5 +1,31 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.63
+
+- Completed the post-full-P6 transition review before defining any P7 task.
+- Added `docs/12_technical_plan/12D_POST_FULL_P6_TRANSITION_REVIEW.md`.
+- The review confirms:
+  - full P6 is closed only for the documented P6 data-system scope.
+  - P7-P12 remain unapproved.
+  - P7 implementation and P7 first-task execution remain unapproved.
+  - the next task may define P7 scope, entry criteria and first task as
+    docs-only planning before implementation.
+- Decision:
+  `Yes, define P7 scope / entry criteria / first task as docs-only next task.`
+- New `10_NEXT` first item:
+  `Define P7 scope, entry criteria and first task before implementation.`
+- This transition review is not P7 implementation approval, P8-P12 entry
+  approval, parser / reader / ingestion approval, feature / label approval,
+  real-data approval, model-output integration approval or model-strength
+  evidence.
+- No production code, tests, fixtures, replay schema code, parser, dataset
+  reader, ingestion, feature extraction, label generation, CLI, broad file
+  ingestion, model-output integration, real Tenhou, real haifu, external logs,
+  platform data, OpenAI / LLM / model API call, third-party binary call,
+  metric implementation, registry code change, promotion criteria change,
+  training, tuning, self-play, league, runner behavior, P7 implementation,
+  P8-P12 work or model-strength claim was added.
+
 ## 2026-06-07 — v2.62
 
 - Ran the final full P6 closure review gate.

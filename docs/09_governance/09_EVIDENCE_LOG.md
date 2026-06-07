@@ -8,6 +8,54 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-07 — Post-full-P6 transition review
+
+- Type: internal documentation / post-full-P6 transition review evidence.
+- Stage: post-full-P6 transition review / docs-only planning.
+- Added review document:
+  - `docs/12_technical_plan/12D_POST_FULL_P6_TRANSITION_REVIEW.md`
+- Reviewed:
+  - final P6 closure in
+    `docs/02_data_system/02AA_FINAL_FULL_P6_CLOSURE_REVIEW.md`.
+  - post-P5 and post-current-scope-P6 transition reviews.
+  - accepted synthetic/local minimal replay schema artifacts as read-only
+    context.
+  - governance and tracking documents.
+- Transition decision:
+  - `Yes, define P7 scope / entry criteria / first task as docs-only next task.`
+- New next task:
+  - `Define P7 scope, entry criteria and first task before implementation.`
+- Planning boundary:
+  - P7 implementation remains unapproved.
+  - P7 first-task execution remains unapproved.
+  - P8-P12 entry remains unapproved.
+  - Parser, dataset reader, ingestion, feature extraction, label generation,
+    real data, model-output integration, CLI, training, self-play and league
+    remain unapproved.
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - Post-full-P6 transition review evidence only.
+- Not evidence of:
+  - P7-P12 entry approval.
+  - P7 implementation.
+  - P7 first-task execution.
+  - training, tuning, self-play, league or runner behavior.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - parser, dataset reader, ingestion, feature extraction or label generation.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-07 — P6 final full closure review
 
 - Type: internal documentation / P6 final full-closure review evidence.

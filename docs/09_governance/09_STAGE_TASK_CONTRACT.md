@@ -2,8 +2,8 @@
 
 ## Current stage
 
-Post-full-P6 transition review before defining any P7 task after `02AA`
-final full P6 closure review. P5 evaluation foundation is
+P7 docs-only scope / entry criteria / first-task definition after `12D`
+post-full-P6 transition review. P5 evaluation foundation is
 closed for the current synthetic/local scope; general P6 implementation is not open, and the exact
 minimal replay schema / project-authored synthetic fixture task approved by
 `02N` is implemented, reviewed with no blocker and accepted as current-scope
@@ -83,10 +83,12 @@ P6 full closure criteria review after roadmap and remaining scope review = compl
 P6 full handoff and evidence index finalization after closure criteria review = complete in `02Y`; full P6 remains open and P7-P12 remains unapproved
 P6 full risk register and source-rights inventory consistency review before final closure = complete in `02Z`; review can close with no blocker for final full P6 closure review
 P6 final full closure review = complete in `02AA`; Full P6 can close for the documented P6 data-system scope only
+Post-full-P6 transition review = complete in `12D`; next task may define P7 scope, entry criteria and first task as docs-only planning before implementation
 Full P6 = closed for documented P6 data-system scope only
 P7-P12 entry = not approved
+P7 implementation = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = run post-full-P6 transition review before defining any P7 task
+Next = define P7 scope, entry criteria and first task before implementation
 ```
 
 ## AI role
@@ -95,9 +97,10 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Bridge from the closed documented P6 data-system scope into a safe
-post-full-P6 transition review by keeping P7-P12 unapproved until separate
-scope, entry criteria, risk review and first-task approval exist.
+Bridge from the closed documented P6 data-system scope into a safe docs-only
+P7 scope / entry criteria / first-task definition by keeping P7 implementation
+and P8-P12 unapproved until separate scope, entry criteria, risk review and
+first-task approval exist.
 
 This supports the north-star target by ensuring that any future supervised
 learning, RL, search, league or LuckyJ validation work starts only after the
@@ -194,4 +197,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Run post-full-P6 transition review before defining any P7 task.
+Define P7 scope, entry criteria and first task before implementation.

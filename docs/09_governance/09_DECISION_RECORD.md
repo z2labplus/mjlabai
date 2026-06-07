@@ -14,6 +14,62 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-07 — DR-0050 — Post-Full-P6 Transition Review
+
+Decision:
+
+```text
+Define P7 scope, entry criteria and first task as the next docs-only task
+before implementation.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- Full P6 is closed only for the documented P6 data-system scope recorded in
+  `02AA`.
+- P7-P12 entry remained unapproved before this transition review.
+- P7 implementation and P7 first-task execution remained unapproved before
+  this transition review.
+
+Rationale:
+
+- Full P6 closure is complete for the documented data-system scope.
+- P7 supervised learning cannot be implemented safely until independent scope,
+  entry criteria, source/data readiness, feature/label readiness, risk review
+  and first-task boundaries are documented.
+- A docs-only P7 scope definition can be prepared without executing P7.
+- Continuing P6 maintenance would risk unnecessary stage churn after full P6
+  closure.
+
+Consequences:
+
+- `docs/12_technical_plan/12D_POST_FULL_P6_TRANSITION_REVIEW.md` records the
+  transition review.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define P7 scope, entry criteria and first task before implementation.`
+- P7 implementation is not approved.
+- P7 first-task execution is not approved.
+- P8-P12 entry is not approved.
+- Parser, dataset reader, ingestion, feature extraction, label generation,
+  real data, model-output integration, CLI, training, self-play and league
+  remain unapproved.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/12_technical_plan/12D_POST_FULL_P6_TRANSITION_REVIEW.md`
+- `docs/02_data_system/02AA_FINAL_FULL_P6_CLOSURE_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+
+Status:
+
+```text
+Accepted transition decision recorded.
+```
+
 ## 2026-06-07 — DR-0049 — Final Full P6 Closure Review
 
 Decision:

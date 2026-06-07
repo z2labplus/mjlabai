@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — Post-full-P6 transition review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Post-full-P6 transition review is mistaken for P7-P12 entry approval. | Governance / Stage Control | High | Medium | `12D`, evidence log, decision record and `10_NEXT` state that only docs-only P7 scope definition is allowed next. | Open |
+| The next P7 scoping task is mistaken for P7 implementation approval. | Governance / Scope | High | Medium | `12D` and `10_NEXT` forbid production code, tests, fixtures, parser, reader, ingestion, feature extraction, label generation, training, self-play, league and real data. | Open |
+| Full P6 closure is treated as training dataset approval. | Data / Governance | High | Medium | `12D` repeats that full P6 closure does not approve parser, reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs or platform data. | Open |
+| P7 scope definition drifts into model-output integration, CLI or broad ingestion. | Governance / Scope | High | Medium | `12D` and `10_NEXT` keep model-output integration, CLI and broad file ingestion forbidden for the next task. | Open |
+| Transition review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `12D` evidence grade is transition review evidence only with explicit non-evidence boundaries. | Open |
+
 ## 2026-06-07 — P6 final full closure review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

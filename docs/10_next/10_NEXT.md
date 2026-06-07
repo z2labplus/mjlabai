@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Run post-full-P6 transition review before defining any P7 task.
+- [ ] Define P7 scope, entry criteria and first task before implementation.
 
 Current execution charter:
 
@@ -16,12 +16,14 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only post-full-P6 transition review.
+- This is a docs-only P7 scope / entry criteria / first-task definition task.
 - P5 is closed only for the current synthetic/local evaluation groundwork scope.
 - Full P6 is closed only for the documented P6 data-system scope: docs/governance/source-rights planning, accepted synthetic/local minimal replay schema and project-authored synthetic fixture smoke implementation, and deferred/blocked/later-stage inventory.
 - Full P6 closure is not P7-P12 entry approval.
-- Full P6 closure is not P7 first-task approval.
-- Do not define a P7 implementation task.
+- The post-full-P6 transition review in `docs/12_technical_plan/12D_POST_FULL_P6_TRANSITION_REVIEW.md` allows only docs-only P7 scope / entry criteria / first-task definition.
+- This is not P7 implementation.
+- This is not P7 first-task execution.
+- Do not define a P7 implementation prompt.
 - Do not train models.
 - Do not tune hyperparameters.
 - Do not start self-play.
@@ -42,10 +44,11 @@ Limits:
   - `git diff --check`
   - `python3 -m unittest tests/data/test_replay_schema.py`
   - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
-- Stop before commit if implementation, unapproved files, real data, parser / reader / ingestion behavior, feature / label behavior, model-output path, CLI, broad ingestion, third-party artifact, validation failure, overclaim, P7 implementation prompt or P7-P12 drift appears.
+- Stop before commit if implementation, unapproved files, real data, parser / reader / ingestion behavior, feature / label behavior, model-output path, CLI, broad ingestion, third-party artifact, validation failure, overclaim, P7 implementation prompt or P8-P12 drift appears.
 
 ## Completed
 
+- [x] 2026-06-07 Completed post-full-P6 transition review before defining any P7 task: added `docs/12_technical_plan/12D_POST_FULL_P6_TRANSITION_REVIEW.md`, confirmed full P6 is closed only for the documented P6 data-system scope, evaluated candidate next directions, selected `Yes, define P7 scope / entry criteria / first task as docs-only next task`, and set the next first item to `Define P7 scope, entry criteria and first task before implementation`. This does not approve P7 implementation, P7 first-task execution, P8-P12 entry, production code, tests, fixtures, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, training, tuning, self-play, league, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
 - [x] 2026-06-07 Ran final full P6 closure review gate: added `docs/02_data_system/02AA_FINAL_FULL_P6_CLOSURE_REVIEW.md`, reviewed the full P6 chain from `02A`-`02Z`, `12B` / `12C`, accepted implementation artifacts and governance docs, confirmed C1-C27 pass, validation passes and no unresolved blocker remains, and recorded the decision `Full P6 can close` for the documented P6 data-system scope: docs/governance/source-rights planning, accepted synthetic/local minimal replay schema and project-authored synthetic fixture smoke implementation, and deferred/blocked/later-stage inventory. This does not approve P7-P12 entry, P7 first task, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, training, tuning, self-play, league, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence. The next task is a docs-only post-full-P6 transition review before defining any P7 task.
 - [x] 2026-06-07 Reviewed full P6 risk register and source-rights inventory consistency before final closure review: added `docs/02_data_system/02Z_FULL_P6_RISK_REGISTER_AND_SOURCE_RIGHTS_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`, reviewed `02A`, `02D`, `02U`-`02Y`, the evidence log, risk register, accepted synthetic/local replay schema artifacts and governance docs, confirmed source-rights inventory status and risk-register coverage are consistent, found no risk/source-rights blocker for the final full P6 closure review gate, and selected `Run final full P6 closure review gate` as the next docs-only task. This does not close full P6, approve P7-P12 entry, approve implementation, approve source ingestion, approve real data, approve parser / reader / ingestion / feature / label work, approve CLI or model-output integration, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ `10.68` or candidate-promotion evidence.
 - [x] 2026-06-07 Finalized full P6 handoff and evidence index after closure criteria review: added `docs/02_data_system/02Y_FULL_P6_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`, recorded a full-P6 handoff finalization summary, built a P6 evidence index covering `02A`-`02X`, `12B` / `12C`, accepted implementation artifacts, validation commands and governance artifacts, confirmed evidence grade consistency, listed remaining required full-P6 items and defined the next risk / source-rights review scope. Full P6 remains open, P7-P12 remain unapproved, and no production code, tests, fixtures, replay schema code, parser, dataset reader, ingestion, feature extraction, label generation, real data, CLI, broad file ingestion, model-output integration, metric implementation, registry code change, promotion criteria change, training, tuning, self-play, league, runner behavior or model-strength claim was added.

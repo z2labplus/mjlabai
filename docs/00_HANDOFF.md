@@ -97,6 +97,7 @@ The minimal P6 replay schema and project-authored synthetic fixture implementati
 `docs/02_data_system/02Y_FULL_P6_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md` finalizes the full P6 handoff and evidence index after `02X`. It records a finalization-ready full P6 handoff summary, an evidence index covering the P6 planning/review chain, accepted minimal implementation artifacts, validation and governance artifacts, evidence grade consistency, remaining required full-P6 items and the next risk / source-rights review scope. This is handoff / evidence-index finalization evidence only: full P6 remains open, P7-P12 entry remains unapproved, and parser / dataset reader / ingestion / feature extraction / label generation / real-data / model-output / CLI / training / self-play / league work remains unapproved. The next task is docs-only risk register and source-rights inventory consistency review before final closure review.
 `docs/02_data_system/02Z_FULL_P6_RISK_REGISTER_AND_SOURCE_RIGHTS_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md` reviews full P6 risk-register and source-rights inventory consistency before final closure review. It confirms that the source-rights inventory, risk register, evidence index and governance docs consistently keep real Tenhou, real haifu, external logs, platform data, accounts, third-party artifacts, parser / reader / ingestion, feature extraction, label generation, CLI, model-output integration, training, self-play, league and P7-P12 unapproved. Review decision: `Review can close; no risk/source-rights blocker for final full P6 closure review.` This is risk/source-rights consistency review evidence only: it does not close full P6, approve P7-P12 entry, approve source ingestion, approve real data, approve parser / reader / ingestion / feature / label work, approve CLI or model-output integration, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ `10.68` or candidate-promotion evidence. The next task is the docs-only final full P6 closure review gate.
 `docs/02_data_system/02AA_FINAL_FULL_P6_CLOSURE_REVIEW.md` runs the final full P6 closure review gate and records the decision `Full P6 can close` for the documented P6 data-system scope: docs/governance/source-rights planning, accepted synthetic/local minimal replay schema and project-authored synthetic fixture smoke implementation, and deferred/blocked/later-stage inventory. Full P6 closure does not approve P7-P12 entry, a P7 first task, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, source-specific real-data approval, model-output integration, CLI, training, tuning, self-play, league, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate promotion. The next task is a docs-only post-full-P6 transition review before defining any P7 task.
+`docs/12_technical_plan/12D_POST_FULL_P6_TRANSITION_REVIEW.md` completes the post-full-P6 transition review. It confirms that full P6 is closed only for the documented P6 data-system scope and selects `Define P7 scope, entry criteria and first task before implementation` as the next docs-only task. This is transition-review evidence only: it does not approve P7 implementation, P7 first-task execution, P8-P12 entry, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, training, tuning, self-play, league, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate promotion.
 ```
 
 ## Current methodology
@@ -185,18 +186,19 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Run post-full-P6 transition review before defining any P7 task.
-`02AA` records that full P6 can close for the documented P6 data-system scope:
-docs/governance/source-rights planning, accepted synthetic/local minimal
-replay schema and project-authored synthetic fixture smoke implementation, and
-deferred/blocked/later-stage inventory. This closure is not P7-P12 entry
-approval, not P7 first-task approval and not new implementation approval. The
-next task must be docs-only transition planning before any P7 scope or first
-task can be defined. It must not execute P7, add production code, tests,
-fixtures, parser, dataset reader, ingestion, feature extraction, label
-generation, real Tenhou, real haifu, external logs, platform data, model-output
-integration, CLI, broad file ingestion, training, tuning, self-play, league,
-runner behavior or model-strength claims.
+Define P7 scope, entry criteria and first task before implementation.
+`12D` records that the post-full-P6 transition review is complete and that the
+project may start only a docs-only P7 scoping task. Full P6 is closed only for
+the documented P6 data-system scope: docs/governance/source-rights planning,
+accepted synthetic/local minimal replay schema and project-authored synthetic
+fixture smoke implementation, and deferred/blocked/later-stage inventory. P7
+implementation, P7 first-task execution and P8-P12 entry remain unapproved.
+The next task must define P7 scope / entry criteria / first task without
+executing P7, adding production code, tests, fixtures, parser, dataset reader,
+ingestion, feature extraction, label generation, real Tenhou, real haifu,
+external logs, platform data, model-output integration, CLI, broad file
+ingestion, training, tuning, self-play, league, runner behavior or
+model-strength claims.
 ```
 
 Latest Akochan F1 audit summary:
