@@ -8,6 +8,53 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation
+
+- Type: internal implementation / P6 synthetic-local replay schema smoke
+  evidence.
+- Stage: P6 data system / minimal approved implementation.
+- Added implementation files:
+  - `src/mjlabai/data/replay_schema.py`
+  - `tests/fixtures/data/synthetic_replay_smoke.json`
+  - `tests/data/test_replay_schema.py`
+  - `tests/data/test_synthetic_replay_fixture_schema.py`
+- Scope:
+  - one minimal replay schema helper module.
+  - one project-authored synthetic/local replay fixture.
+  - two minimal tests for replay schema and fixture shape.
+  - directly related docs/governance synchronization.
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P6 minimal replay schema and project-authored synthetic fixture smoke
+    implementation evidence only.
+- Not evidence of:
+  - real Tenhou data.
+  - real haifu data.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - parser implementation.
+  - dataset reader implementation.
+  - data ingestion.
+  - feature extraction.
+  - label generation.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - OpenAI / LLM / model API use.
+  - third-party binary use.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P7-P12 entry.
+- Next task:
+  - Review minimal P6 replay schema and project-authored synthetic fixture
+    implementation.
+
 ### 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation approval decision
 
 - Type: internal documentation / P6 implementation approval-decision evidence.

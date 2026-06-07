@@ -81,8 +81,9 @@ P5 closure does not approve P6-P12 entry, P6 data-system work, training, self-pl
 `docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md` reviews that proposal boundary with no blocker. The review can close, but P6 implementation, replay schema implementation, fixture implementation, tests, data ingestion, dataset readers, parsers, feature extraction, label generation and P7-P12 remain unapproved. This is proposal-boundary review evidence only, not implementation approval, source approval, ingestion evidence, model-strength evidence or LuckyJ `10.68` comparison.
 `docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md` prepares the P6 minimal replay schema and synthetic fixture implementation proposal for review before code. It names candidate future files (`src/mjlabai/data/replay_schema.py`, `tests/fixtures/data/synthetic_replay_smoke.json`, `tests/data/test_replay_schema.py`, `tests/data/test_synthetic_replay_fixture_schema.py`) and defines strict scope, validation, evidence, risk, rollback, stop-condition and human/Web ChatGPT approval boundaries. This is proposal-drafting evidence only: P6 implementation, replay schema implementation, fixture implementation, tests, data ingestion, dataset readers, parsers, feature extraction, label generation and P7-P12 remain unapproved.
 `docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md` reviews that proposal before code. The review found no blocker: `02L` scope is correct, candidate implementation classes and proposed file candidates are sufficient and conservative, the minimal replay schema code / synthetic fixture / validation test candidate boundaries are narrow enough for a later approval-decision task, and review can close. This is proposal-review evidence only: P6 implementation, replay schema implementation, fixture implementation, tests, data ingestion, dataset readers, parsers, feature extraction, label generation and P7-P12 remain unapproved.
-`docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md` prepares the approval decision for the minimal P6 replay schema and project-authored synthetic fixture implementation task. The decision is `Approved for next minimal implementation task`, but only for the exact next task and exact files named in `02N`: `src/mjlabai/data/replay_schema.py`, `tests/fixtures/data/synthetic_replay_smoke.json`, `tests/data/test_replay_schema.py` and `tests/data/test_synthetic_replay_fixture_schema.py`, plus directly related docs/governance synchronization. This decision does not execute implementation and does not approve real Tenhou, real haifu, external logs, platform data, parser, dataset reader, data ingestion, feature extraction, label generation, CLI, model-output integration, training, self-play, league or P7-P12.
-The next project task is to implement the minimal P6 replay schema and project-authored synthetic fixture only. That task is the only approved P6 implementation work, and it must stop if it needs any unapproved file, real data, parser / reader / ingestion behavior, feature / label behavior, model output, CLI, broad ingestion, third-party artifact, validation failure, overclaim or P7-P12 drift.
+`docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md` prepared the approval decision for the minimal P6 replay schema and project-authored synthetic fixture implementation task. The decision was `Approved for next minimal implementation task`, but only for the exact task and exact files named in `02N`: `src/mjlabai/data/replay_schema.py`, `tests/fixtures/data/synthetic_replay_smoke.json`, `tests/data/test_replay_schema.py` and `tests/data/test_synthetic_replay_fixture_schema.py`, plus directly related docs/governance synchronization.
+The minimal P6 replay schema and project-authored synthetic fixture implementation is now complete in those exact files. The helper validates in-memory replay fixture / record mappings, project-authored synthetic provenance, no-real-data / no-account-id / no-model-output / no-training-use guardrails and JSON-safe content. `tests/fixtures/data/synthetic_replay_smoke.json` is project-authored synthetic/local only and is not Tenhou data, real haifu, external log, platform data, model output, training data, model-strength evidence or LuckyJ `10.68` comparison. Local validation passed `git diff --check`, `python3 -m unittest tests/data/test_replay_schema.py` and `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`. No parser, dataset reader, ingestion, feature extraction, label generation, CLI, broad file ingestion, model-output integration, real Tenhou, real haifu, external logs, platform data, training, self-play, league, P7-P12 or model-strength claim was added.
+The next project task is a docs-only review gate: review the minimal P6 replay schema and project-authored synthetic fixture implementation. It must not add production code, tests, fixtures, data files, parser / reader / ingestion behavior, feature / label behavior, model output, CLI, broad ingestion, third-party artifact, overclaim or P7-P12 drift.
 ```
 
 ## Current methodology
@@ -171,16 +172,17 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Implement minimal P6 replay schema and project-authored synthetic fixture only.
-This is the only P6 implementation approved by the current `10_NEXT`: one
-minimal replay schema module, one project-authored synthetic/local fixture and
-two minimal tests, plus directly related docs/governance synchronization. Do
-not expand into real Tenhou, real haifu, external logs, platform data, parser,
-dataset reader, ingestion, feature extraction, label generation, training,
-self-play, league evaluation, artifact upload, broad adapter work, CLI, broad
-file ingestion, model-output integration, latency measurement,
-fixed-position exact-match computation, metric implementation, registry code
-changes, promotion criteria changes, P7-P12 or model-strength claims.
+Review minimal P6 replay schema and project-authored synthetic fixture implementation.
+The exact minimal implementation approved by `02N` is complete and limited to
+one replay schema module, one project-authored synthetic/local fixture and two
+minimal tests, plus directly related docs/governance synchronization. The next
+task must review that implementation and must not expand into real Tenhou,
+real haifu, external logs, platform data, parser, dataset reader, ingestion,
+feature extraction, label generation, training, self-play, league evaluation,
+artifact upload, broad adapter work, CLI, broad file ingestion,
+model-output integration, latency measurement, fixed-position exact-match
+computation, metric implementation, registry code changes, promotion criteria
+changes, P7-P12 or model-strength claims.
 ```
 
 Latest Akochan F1 audit summary:

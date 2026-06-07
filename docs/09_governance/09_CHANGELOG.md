@@ -1,5 +1,42 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.48
+
+- Implemented the exact minimal P6 replay schema and project-authored
+  synthetic fixture task approved by `02N`.
+- Added `src/mjlabai/data/replay_schema.py`.
+  - Provides constant schema/source-category names.
+  - Provides `validate_replay_record(...)`,
+    `validate_replay_fixture(...)`, `assert_valid_replay_fixture(...)` and
+    `is_project_authored_synthetic_fixture(...)`.
+  - Validates in-memory mappings only.
+  - Checks project-authored synthetic provenance, required top-level and
+    record keys, no-real-data / no-account-id / no-model-output /
+    no-training-use guardrails and JSON-safe content.
+  - Does not read files, parse real logs, implement ingestion, extract
+    features, generate labels, add CLI or touch model-output paths.
+- Added `tests/fixtures/data/synthetic_replay_smoke.json`.
+  - Project-authored synthetic/local only.
+  - Not Tenhou data, not real haifu, not external log, not platform data, not
+    model output, not training data, not model-strength evidence and not
+    LuckyJ `10.68` comparison.
+- Added `tests/data/test_replay_schema.py` and
+  `tests/data/test_synthetic_replay_fixture_schema.py`.
+- Local validation passed:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Updated handoff, docs index, stage contract, milestones, backlog, technical
+  plan, evidence log, risk register and `10_NEXT`.
+- New `10_NEXT` first item:
+  `Review minimal P6 replay schema and project-authored synthetic fixture
+  implementation.`
+- No parser, dataset reader, ingestion, feature extraction, label generation,
+  CLI, broad file ingestion, model-output integration, real Tenhou, real
+  haifu, external logs, platform data, OpenAI / LLM / model API call,
+  third-party binary call, training, tuning, self-play, league, runner
+  behavior, P7-P12 work or model-strength claim was added.
+
 ## 2026-06-07 — v2.47
 
 - Prepared the approval decision for the minimal P6 replay schema and

@@ -187,6 +187,22 @@ approve real Tenhou, real haifu, external logs, platform data, parser /
 dataset-reader work, ingestion, feature extraction, label generation, CLI,
 model-output integration, training, self-play, league or P7-P12.
 
+The exact minimal P6 replay schema and project-authored synthetic fixture
+implementation approved by `02N` is now present in:
+
+```text
+src/mjlabai/data/replay_schema.py
+tests/fixtures/data/synthetic_replay_smoke.json
+tests/data/test_replay_schema.py
+tests/data/test_synthetic_replay_fixture_schema.py
+```
+
+These are P6 synthetic/local replay schema smoke implementation artifacts
+only. They are not parser, dataset reader, ingestion, feature extraction,
+label generation, real Tenhou, real haifu, external-log, platform-data,
+training, self-play, league, stable-dan, LuckyJ `10.68` or model-strength
+evidence.
+
 ## Algorithm discovery and racing-funnel files
 
 ```text

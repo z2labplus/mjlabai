@@ -1,0 +1,146 @@
+{
+  "schema_version": "p6_replay_schema_v0.1",
+  "fixture_id": "synthetic_replay_smoke_v0.1",
+  "source_id": "project_authored_synthetic_replay_smoke",
+  "source_category": "project_authored_synthetic_local_fixture",
+  "source_note": "Project-authored synthetic/local replay smoke fixture only; not Tenhou data; not real haifu; not external log; not platform data; not model output; not training data; not model strength evidence; not LuckyJ 10.68 comparison; not candidate promotion evidence.",
+  "warnings": [
+    "synthetic/local only",
+    "not Tenhou data",
+    "not real haifu",
+    "not external log",
+    "not platform data",
+    "not model output",
+    "not training data",
+    "not model strength evidence",
+    "not LuckyJ 10.68 comparison",
+    "not candidate promotion evidence"
+  ],
+  "source_provenance": {
+    "source_id": "project_authored_synthetic_replay_smoke",
+    "project_authored": true,
+    "synthetic_local": true,
+    "rights_status": "project_authored",
+    "allowed_use": "P6 replay schema smoke validation only; not training use; not model evaluation use.",
+    "may_enter_git": "yes_small_project_authored_only",
+    "source_inventory_ref": "docs/02_data_system/02A_DATA_SOURCES.md",
+    "source_inventory_review_ref": "docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md",
+    "fixture_boundary_ref": "docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md",
+    "approval_decision_ref": "docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md",
+    "uses_real_tenhou": false,
+    "uses_real_haifu": false,
+    "uses_external_log": false,
+    "uses_platform_data": false,
+    "uses_model_output": false,
+    "training_use": false,
+    "strength_evidence": false,
+    "luckyj_comparison": false
+  },
+  "records": [
+    {
+      "schema_version": "p6_replay_schema_v0.1",
+      "replay_id": "synthetic-replay-0001",
+      "source_id": "project_authored_synthetic_replay_smoke",
+      "source_record_id": "synthetic-source-record-0001",
+      "transform_version": "synthetic_transform_v0.1",
+      "game_context": {
+        "ruleset": "synthetic_riichi_four_player",
+        "room_context": "synthetic_local",
+        "table_context": "project-authored smoke table",
+        "source_time_status": "synthetic_not_platform_time"
+      },
+      "participants": [
+        {
+          "seat": 0,
+          "synthetic_player_id": "synthetic-seat-0"
+        },
+        {
+          "seat": 1,
+          "synthetic_player_id": "synthetic-seat-1"
+        },
+        {
+          "seat": 2,
+          "synthetic_player_id": "synthetic-seat-2"
+        },
+        {
+          "seat": 3,
+          "synthetic_player_id": "synthetic-seat-3"
+        }
+      ],
+      "hand_round_context": {
+        "round_index": 0,
+        "honba": 0,
+        "kyotaku": 0,
+        "dealer_seat": 0,
+        "dora_indicator_policy": "not represented in this smoke fixture"
+      },
+      "event_sequence": [
+        {
+          "event_index": 0,
+          "event_type": "synthetic_start",
+          "actor_seat": null,
+          "event_payload_boundary": "project-authored synthetic start marker only"
+        },
+        {
+          "event_index": 1,
+          "event_type": "synthetic_terminal_result",
+          "actor_seat": null,
+          "event_payload_boundary": "project-authored synthetic terminal marker only"
+        }
+      ],
+      "action_context": {
+        "action_vocabulary_status": "not implemented",
+        "legal_action_context_status": "not represented",
+        "model_output_status": "absent",
+        "canonicalization_dependency": "future review only"
+      },
+      "decision_state_boundary": {
+        "observation_scope": "synthetic visible-state stub only",
+        "hidden_information_policy": "hidden information is not represented",
+        "feature_extraction_status": "not implemented",
+        "future_target_status": "not implemented"
+      },
+      "terminal_result": {
+        "synthetic_placements": [
+          {
+            "seat": 0,
+            "placement": 1
+          },
+          {
+            "seat": 1,
+            "placement": 2
+          },
+          {
+            "seat": 2,
+            "placement": 3
+          },
+          {
+            "seat": 3,
+            "placement": 4
+          }
+        ],
+        "result_note": "Synthetic terminal result only; not stable-dan evidence."
+      },
+      "validation_metadata": {
+        "validation_status": "synthetic_schema_smoke_expected_valid",
+        "known_exclusions": [
+          "no parser",
+          "no dataset reader",
+          "no ingestion",
+          "no feature extraction",
+          "no label generation",
+          "no model output",
+          "no real data"
+        ]
+      }
+    }
+  ],
+  "evidence_refs": [
+    "docs/09_governance/09_EVIDENCE_LOG.md",
+    "docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md",
+    "tests/data/test_synthetic_replay_fixture_schema.py"
+  ],
+  "risk_refs": [
+    "docs/09_governance/09_RISK_REGISTER.md"
+  ]
+}

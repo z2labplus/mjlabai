@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Minimal replay schema helper is mistaken for parser, dataset reader or ingestion approval. | Governance / Data | High | Medium | `replay_schema.py`, changelog, evidence log and `10_NEXT` state it validates in-memory mappings only and the next step is review. | Open |
+| Synthetic replay fixture is mistaken for real Tenhou, real haifu, external-log or platform-data evidence. | Data / Compliance | High | Medium | The fixture source note, warnings and provenance flags state project-authored synthetic/local only and all real/external/platform flags false. | Open |
+| Fixture content is overclaimed as training data, labels, model output or model-strength evidence. | Evaluation / Governance | High | Medium | The schema helper forbids model-output / label fields and docs repeat non-evidence boundaries. | Open |
+| Account, session, cookie, token or private-log identifiers enter future fixtures. | Privacy / Security | High | Low-Medium | The helper rejects forbidden keys such as `account_id`, `session_id`, `cookie`, `token` and `private_log`. | Open |
+| Review gate is skipped and P6 expands directly into parser, reader, ingestion, feature extraction or label generation. | Governance / Stage Control | High | Medium | `10_NEXT` makes the next task a docs-only review gate and forbids new code/tests/fixtures/data files. | Open |
+| P6 minimal implementation is used as P7-P12 entry or LuckyJ / stable-dan evidence. | Governance / Evaluation | High | Medium | Evidence log and risk register classify it as P6 synthetic/local schema smoke implementation evidence only. | Open |
+
 ## 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation approval-decision risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

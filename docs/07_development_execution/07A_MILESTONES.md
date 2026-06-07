@@ -19,7 +19,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 | P3 | Baseline reproducibility audit | Verify whether open baselines can install, run, infer and expose useful I/O locally | At least one baseline can perform stable local inference | Active |
 | P4 | Unified mahjong environment and interface | Define shared state, legal actions, logs, replays and adapter contracts | Different candidates can run through the same interface | Future |
 | P5 | Unified evaluation system | Compare all models with Tenhou-oriented metrics under one harness | Stable comparison of baselines and project models | Closed for current synthetic/local evaluation groundwork scope |
-| P6 | Data system | Build replay, feature, label and quality pipelines for training and evaluation | Supervised training and offline evaluation datasets can be generated | Minimal replay schema and synthetic fixture implementation approved only for the exact next task |
+| P6 | Data system | Build replay, feature, label and quality pipelines for training and evaluation | Supervised training and offline evaluation datasets can be generated | Minimal replay schema and synthetic fixture implemented; review gate pending |
 | P7 | Supervised policy model | Train a base strategy model from high-quality human play and key decisions | Model beats simple baselines in key offline scenarios and completes games | Future |
 | P8 | Self-play reinforcement learning | Optimize toward Tenhou pt EV, placement and stable-dan objectives | RL checkpoint beats supervised checkpoint in the unified league | Future |
 | P9 | Search and risk model | Improve push/fold, deal-in risk, south-round rank control and oorasu decisions | Search-enhanced model beats non-search model in scenarios and league play | Future |
@@ -33,15 +33,16 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility produced current Mortal/Akochan funnel evidence.
 P5 evaluation groundwork is closed for the current synthetic/local scope.
-The project is in P6 data-system docs-only planning before any P6 implementation.
+The project is in P6 data-system minimal implementation review after the exact
+approved replay schema / synthetic fixture implementation.
 ```
 
-The next execution step is to implement the minimal P6 replay schema and
-project-authored synthetic fixture only. This is the only P6 implementation
-currently approved, and it is limited to the exact files and scope in
-`docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md`.
-It must not expand into parser, dataset reader, data ingestion, feature
-extraction, label generation, training, self-play, league, real Tenhou,
+The exact minimal P6 replay schema and project-authored synthetic fixture
+implementation approved in
+`docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md`
+is complete in the named files only. The next execution step is a docs-only
+review gate. It must not expand into parser, dataset reader, data ingestion,
+feature extraction, label generation, training, self-play, league, real Tenhou,
 external-log ingestion or P7-P12 work.
 
 ## Guardrail
