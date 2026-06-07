@@ -63,6 +63,7 @@ docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENT
 docs/02_data_system/02P_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md
 docs/02_data_system/02Q_P6_NEXT_CURRENT_SCOPE_DATA_SYSTEM_TASK_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md
 docs/02_data_system/02R_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md
+docs/02_data_system/02S_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -241,6 +242,14 @@ is closure-criteria definition evidence only, not full P6 closure, not
 current-scope P6 closure, not new implementation approval, not parser /
 dataset-reader / ingestion / feature / label evidence, not real-data approval,
 not model-strength evidence and not P7-P12 entry approval.
+`docs/02_data_system/02S_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`
+reviews the `02R` closure criteria. It records that `02R` scope is correct,
+the C1-C25 criteria are sufficient, the exit readiness checklist is auditable,
+remaining items and deferred items are correctly classified, P7-P12 non-entry
+conditions are sufficient, governance is synchronized, validation passes and
+the review can close with no blocker. It is closure-criteria review evidence
+only, not full P6 closure, not current-scope P6 closure, not new
+implementation approval and not P7-P12 entry approval.
 
 ## Algorithm discovery and racing-funnel files
 

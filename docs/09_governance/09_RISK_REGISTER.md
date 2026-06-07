@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 current-scope data-system closure criteria review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Closure criteria review is mistaken for full P6 closure. | Governance / Stage Control | High | Medium | `02S`, evidence log and `10_NEXT` state that the review can close but full P6 remains open. | Open |
+| Closure criteria review is mistaken for current-scope P6 closure. | Governance / Stage Control | High | Medium | `02S` selects a later final current-scope closure review gate and does not itself close current-scope P6. | Open |
+| Closure criteria review is mistaken for implementation approval. | Governance / Scope | High | Medium | `02S` and `10_NEXT` forbid code, tests, fixtures, parser, reader, ingestion, feature extraction and label generation. | Open |
+| Final closure review gate is treated as P7-P12 entry approval. | Governance / Stage Control | High | Medium | `02S` recommends only a docs-only current-scope P6 closure gate; P7-P12 still require separate scope, risk review and approval. | Open |
+| Review evidence is overclaimed as data ingestion, model-strength, Tenhou, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `02S` and evidence log classify it as P6 closure-criteria review evidence only with explicit non-evidence boundaries. | Open |
+| A final closure review tries to fix code, tests or fixtures instead of recording a blocker. | Governance / Process | High | Medium | `10_NEXT` requires the next task to remain docs-only and to avoid implementation changes. | Open |
+
 ## 2026-06-07 — P6 current-scope data-system closure criteria definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

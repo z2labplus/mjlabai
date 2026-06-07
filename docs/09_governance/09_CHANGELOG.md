@@ -1,5 +1,34 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.53
+
+- Reviewed P6 current-scope data-system closure criteria after minimal replay
+  schema acceptance.
+- Added
+  `docs/02_data_system/02S_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`.
+- The review confirms:
+  - `02R` scope is correct.
+  - current accepted / not accepted scope is accurate.
+  - C1-C25 closure criteria are sufficient, conservative and auditable.
+  - exit readiness checklist is auditable and keeps final closure review as
+    `not_ready`.
+  - required remaining items are docs/review/closure items only.
+  - deferred items are correctly not required for current-scope closure.
+  - P7-P12 non-entry conditions are sufficient.
+  - governance synchronization is consistent.
+  - validation passed.
+  - review decision: `Review can close`.
+- Updated handoff, docs index, stage contract, milestones, backlog, technical
+  plan, evidence log, risk register and `10_NEXT`.
+- New `10_NEXT` first item:
+  `Run final P6 current-scope data-system closure review gate`.
+- No production code, tests, fixtures, replay schema code, parser, dataset
+  reader, ingestion, feature extraction, label generation, CLI, broad file
+  ingestion, model-output integration, real Tenhou, real haifu, external logs,
+  platform data, OpenAI / LLM / model API call, third-party binary call,
+  training, tuning, self-play, league, runner behavior, full P6 closure,
+  current-scope P6 closure, P7-P12 work or model-strength claim was added.
+
 ## 2026-06-07 — v2.52
 
 - Defined P6 current-scope data-system closure criteria after minimal replay

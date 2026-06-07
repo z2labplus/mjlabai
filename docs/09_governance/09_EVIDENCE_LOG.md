@@ -8,6 +8,67 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-07 — P6 current-scope data-system closure criteria review after minimal replay schema acceptance
+
+- Type: internal documentation / P6 current-scope closure-criteria review
+  evidence.
+- Stage: P6 data system / docs-only closure-criteria review gate.
+- Added closure-criteria review document:
+  - `docs/02_data_system/02S_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`
+- Reviewed primary artifact:
+  - `docs/02_data_system/02R_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`
+- Reviewed context:
+  - `docs/02_data_system/02A_DATA_SOURCES.md` through
+    `docs/02_data_system/02Q_P6_NEXT_CURRENT_SCOPE_DATA_SYSTEM_TASK_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`
+  - `src/mjlabai/data/replay_schema.py`
+  - `tests/fixtures/data/synthetic_replay_smoke.json`
+  - `tests/data/test_replay_schema.py`
+  - `tests/data/test_synthetic_replay_fixture_schema.py`
+  - handoff, docs index, `10_NEXT`, technical plan, changelog, evidence log,
+    risk register, stage contract, backlog and milestones.
+- Review decision:
+  - `Review can close`.
+  - No blocker was found.
+  - `02R` scope is correct.
+  - closure criteria are sufficient.
+  - exit readiness checklist is auditable.
+  - required remaining items are reasonable.
+  - deferred items are correctly classified.
+  - P7-P12 non-entry conditions are sufficient.
+  - governance is synchronized.
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P6 current-scope data-system closure criteria review after minimal replay
+    schema acceptance evidence only.
+- Not evidence of:
+  - full P6 closure.
+  - current-scope P6 closure.
+  - new implementation approval.
+  - parser.
+  - dataset reader.
+  - data ingestion.
+  - feature extraction.
+  - label generation.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - source approval.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P7-P12 entry approval.
+- Next task:
+  - Run final P6 current-scope data-system closure review gate.
+
 ### 2026-06-07 — P6 current-scope data-system closure criteria definition after minimal replay schema acceptance
 
 - Type: internal documentation / P6 current-scope closure-criteria definition
