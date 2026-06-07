@@ -8,13 +8,24 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 next current-scope data-system task definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The selected closure-criteria task is mistaken for full P6 closure. | Governance / Stage Control | High | Medium | `02Q`, evidence log and `10_NEXT` state the next task only defines closure criteria and does not close P6. | Open |
+| The selected closure-criteria task is mistaken for implementation approval. | Governance / Scope | High | Medium | `02Q` and `10_NEXT` forbid code, tests, fixtures, parser, reader, ingestion, feature extraction and label generation. | Open |
+| P6 continues indefinitely through additional task-definition gates without closure criteria. | Planning / Scope | Medium-High | Medium | `02Q` selects current-scope closure criteria as the next task specifically to avoid unbounded P6 expansion. | Open |
+| Candidate next-task language pulls the project toward validation-error APIs or additional synthetic implementation too early. | Governance / Scope | Medium-High | Medium | `02Q` defers error taxonomy, fixture checklist and implementation approval criteria until after closure criteria. | Open |
+| Next-task definition evidence is overclaimed as data-system, real-data, model-strength or LuckyJ evidence. | Evaluation / Governance | High | Medium | `02Q` and evidence log classify it as P6 task-definition evidence only with explicit non-evidence boundaries. | Open |
+| P6 task planning drifts into P7-P12. | Governance / Stage Control | High | Medium | `02Q`, stage contract and `10_NEXT` keep P7-P12, training, self-play, league and runner behavior closed. | Open |
+
 ## 2026-06-07 — P6 minimal replay schema and synthetic fixture current-scope acceptance risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
 |---|---|---|---|---|---|
 | Current-scope acceptance is mistaken for full P6 closure. | Governance / Stage Control | High | Medium | `02P`, evidence log, handoff and `10_NEXT` state that only the exact minimal replay schema module, project-authored synthetic/local fixture and two minimal tests are accepted. | Open |
 | Current-scope acceptance is mistaken for approval to add more implementation. | Governance / Scope | High | Medium | `02P` sets the next task to docs-only task definition and forbids new code, tests, fixtures, schema expansion, parser, reader, ingestion, feature extraction and label generation. | Open |
-| The next docs-only task boundary is skipped and P6 expands directly into implementation. | Governance / Process | High | Medium | `10_NEXT` sets `Define next P6 current-scope data-system task after minimal replay schema acceptance` as the only next task. | Open |
+| The next docs-only task boundary is skipped and P6 expands directly into implementation. | Governance / Process | High | Medium | `02P` required a docs-only next-task definition and `02Q` now selects a docs-only closure-criteria task before any further implementation. | Open |
 | The accepted synthetic fixture is overclaimed as real data, training data or data-ingestion evidence. | Data / Compliance | High | Medium | `02P` and evidence log classify the fixture as project-authored synthetic/local only and not ingestion, source approval, real Tenhou, real haifu, external-log or platform-data evidence. | Open |
 | Acceptance evidence is overclaimed as model-strength, Tenhou ranked, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02P`, evidence log and `10_NEXT` repeat explicit non-evidence boundaries. | Open |
 | P6 acceptance planning drifts into P7-P12. | Governance / Stage Control | High | Medium | `02P`, stage contract and `10_NEXT` keep P7-P12, training, self-play, league and runner behavior closed. | Open |

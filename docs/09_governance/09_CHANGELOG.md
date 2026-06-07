@@ -1,5 +1,35 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.51
+
+- Defined the next P6 current-scope data-system task after minimal replay schema
+  acceptance.
+- Added
+  `docs/02_data_system/02Q_P6_NEXT_CURRENT_SCOPE_DATA_SYSTEM_TASK_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`.
+- The task-definition gate records:
+  - accepted current scope from `02P`: exact minimal replay schema module,
+    project-authored synthetic/local fixture, two minimal local tests and
+    directly related governance synchronization.
+  - candidate next docs-only tasks and their risks.
+  - selected next task:
+    `Define P6 current-scope data-system closure criteria after minimal replay
+    schema acceptance.`
+  - allowed scope, forbidden scope, validation commands and stop conditions for
+    that next task.
+  - evidence grade: P6 next current-scope data-system task definition after
+    minimal replay schema acceptance evidence only.
+- Updated handoff, docs index, stage contract, milestones, backlog, technical
+  plan, evidence log, risk register and `10_NEXT`.
+- New `10_NEXT` first item:
+  `Define P6 current-scope data-system closure criteria after minimal replay
+  schema acceptance.`
+- No production code, tests, fixtures, replay schema code, parser, dataset
+  reader, ingestion, feature extraction, label generation, CLI, broad file
+  ingestion, model-output integration, real Tenhou, real haifu, external logs,
+  platform data, OpenAI / LLM / model API call, third-party binary call,
+  training, tuning, self-play, league, runner behavior, full P6 closure,
+  P7-P12 work or model-strength claim was added.
+
 ## 2026-06-07 — v2.50
 
 - Accepted the minimal P6 replay schema and project-authored synthetic fixture

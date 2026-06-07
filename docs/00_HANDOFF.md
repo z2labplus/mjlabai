@@ -85,7 +85,8 @@ P5 closure does not approve P6-P12 entry, P6 data-system work, training, self-pl
 The minimal P6 replay schema and project-authored synthetic fixture implementation is now complete in those exact files. The helper validates in-memory replay fixture / record mappings, project-authored synthetic provenance, no-real-data / no-account-id / no-model-output / no-training-use guardrails and JSON-safe content. `tests/fixtures/data/synthetic_replay_smoke.json` is project-authored synthetic/local only and is not Tenhou data, real haifu, external log, platform data, model output, training data, model-strength evidence or LuckyJ `10.68` comparison. Local validation passed `git diff --check`, `python3 -m unittest tests/data/test_replay_schema.py` and `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`. No parser, dataset reader, ingestion, feature extraction, label generation, CLI, broad file ingestion, model-output integration, real Tenhou, real haifu, external logs, platform data, training, self-play, league, P7-P12 or model-strength claim was added.
 `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md` reviews that exact implementation. It confirms the exact implementation files were respected, the replay schema module remains standard-library-only and in-memory, the fixture remains project-authored synthetic/local, both tests remain minimal/local, validation passed and the review can close with no blocker. This is implementation-review evidence only, not data ingestion, parser, dataset reader, feature extraction, label generation, real-data approval, model-output integration, training, self-play, league, LuckyJ comparison, candidate promotion or P7-P12 entry approval.
 `docs/02_data_system/02P_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md` accepts that exact minimal replay schema module, project-authored synthetic/local fixture, two minimal local tests and directly related governance synchronization as current-scope complete. This is not full P6 closure, not new implementation approval, not parser / reader / ingestion / feature / label evidence, not real-data approval, not model-output integration, not training, self-play, league, LuckyJ comparison, candidate promotion or P7-P12 entry approval.
-The next project task is a docs-only follow-up: define the next P6 current-scope data-system task after minimal replay schema acceptance. It must not add production code, tests, fixtures, data files, parser / reader / ingestion behavior, feature / label behavior, model output, CLI, broad ingestion, third-party artifact, overclaim or P7-P12 drift.
+`docs/02_data_system/02Q_P6_NEXT_CURRENT_SCOPE_DATA_SYSTEM_TASK_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md` defines the next P6 current-scope data-system task after that acceptance. It reviews candidate docs-only tasks and selects `Define P6 current-scope data-system closure criteria after minimal replay schema acceptance` because the project should avoid extending P6 indefinitely now that the minimal replay schema / synthetic fixture scope is accepted.
+The next project task is a docs-only follow-up: define P6 current-scope data-system closure criteria after minimal replay schema acceptance. It must not add production code, tests, fixtures, data files, parser / reader / ingestion behavior, feature / label behavior, model output, CLI, broad ingestion, third-party artifact, overclaim or P7-P12 drift.
 ```
 
 ## Current methodology
@@ -174,12 +175,12 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define the next P6 current-scope data-system task after minimal replay schema
+Define P6 current-scope data-system closure criteria after minimal replay schema
 acceptance.
 The exact minimal implementation approved by `02N` is complete, reviewed in
-`02O` with no blocker and accepted in `02P` as current-scope complete. The next
-task must be docs-only and must define the next bounded P6 data-system task
-without executing it. It must not expand
+`02O` with no blocker and accepted in `02P` as current-scope complete. `02Q`
+selects a docs-only closure-criteria task as the next bounded P6 data-system
+step. The next task must not execute implementation or expand
 into real Tenhou, real haifu, external logs, platform data, parser, dataset
 reader, ingestion, feature extraction, label generation, training, self-play,
 league evaluation, artifact upload, broad adapter work, CLI, broad file
@@ -464,9 +465,9 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is a P6 data-system docs-only task-definition step after
-  accepting the exact minimal replay schema and synthetic fixture
-  implementation as current-scope complete in `02P`: do not implement fixture
-  files, tests, replay schema code, ingest data, train, tune, self-play or
-  connect to real Tenhou.
+- Current next work is a P6 data-system docs-only closure-criteria definition
+  step after accepting the exact minimal replay schema and synthetic fixture
+  implementation in `02P` and selecting that follow-up in `02Q`: do not
+  implement fixture files, tests, replay schema code, ingest data, train, tune,
+  self-play or connect to real Tenhou.
 - Technical decisions from Web ChatGPT Pro must be written into Git + docs before becoming project facts.

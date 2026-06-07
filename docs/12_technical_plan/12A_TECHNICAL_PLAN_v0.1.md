@@ -28,12 +28,14 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P6 data-system next-task definition after minimal replay schema acceptance.
+P6 data-system current-scope closure criteria definition after minimal replay
+schema acceptance.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
 implemented, reviewed with no blocker and accepted as current-scope complete in
-`02P`.
+`02P`; `02Q` selected a docs-only current-scope closure-criteria task as the
+next bounded P6 data-system step.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
@@ -83,8 +85,9 @@ P6 minimal replay schema and synthetic fixture implementation approval decision 
 P6 minimal replay schema and project-authored synthetic fixture implementation = complete in exact approved files only.
 P6 minimal replay schema and project-authored synthetic fixture implementation review = complete; no blocker found.
 P6 minimal replay schema and project-authored synthetic fixture current-scope acceptance decision = complete; accepted as current-scope complete.
-P6 implementation = closed again except for the docs-only next-task definition after acceptance.
-Next = define next P6 current-scope data-system task after minimal replay schema acceptance.
+P6 next current-scope data-system task definition = complete; selected a docs-only closure-criteria task.
+P6 implementation = closed again except for the docs-only current-scope closure criteria definition after acceptance.
+Next = define P6 current-scope data-system closure criteria after minimal replay schema acceptance.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -218,7 +221,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Define the next P6 current-scope data-system task after minimal replay schema
+Define P6 current-scope data-system closure criteria after minimal replay schema
 acceptance.
 ```
 
@@ -226,8 +229,9 @@ The exact P6 implementation approved by `02N` is complete and reviewed in
 `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`
 with no blocker and accepted as current-scope complete in
 `docs/02_data_system/02P_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`.
-The next task must define the next bounded P6 data-system task after that
-acceptance. It does not approve real Tenhou, real haifu, external logs,
+`docs/02_data_system/02Q_P6_NEXT_CURRENT_SCOPE_DATA_SYSTEM_TASK_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`
+selects a docs-only closure-criteria definition as the next bounded P6
+data-system task. It does not approve real Tenhou, real haifu, external logs,
 platform data, parser, dataset reader, data ingestion, feature extraction,
 label generation, CLI, model-output integration, training, self-play, league
 or P7-P12.
@@ -242,8 +246,8 @@ reviews it with no blocker while keeping implementation closed.
 approved only the exact minimal implementation task. That implementation is
 now complete, reviewed and accepted as current-scope complete in the named
 minimal replay schema module, project-authored synthetic/local fixture and two
-minimal tests; the current next task is a docs-only task-definition gate after
-acceptance. All parser, dataset reader, ingestion, feature
+minimal tests; `02Q` selects current-scope closure criteria as the next docs-only
+P6 task. All parser, dataset reader, ingestion, feature
 extraction, label generation, real-data, CLI, model-output, training,
 self-play, league and P7-P12 work remains unapproved.
 
