@@ -1,5 +1,37 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.49
+
+- Reviewed the minimal P6 replay schema and project-authored synthetic fixture
+  implementation.
+- Added
+  `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`.
+- The review confirms:
+  - the exact implementation files from `02N` were respected.
+  - no other code, test, fixture or data file was added or modified by the
+    implementation commit.
+  - `src/mjlabai/data/replay_schema.py` remains standard-library-only,
+    in-memory and minimal.
+  - `tests/fixtures/data/synthetic_replay_smoke.json` remains
+    project-authored synthetic/local only.
+  - `tests/data/test_replay_schema.py` and
+    `tests/data/test_synthetic_replay_fixture_schema.py` remain minimal/local.
+  - validation passed:
+    `git diff --check`,
+    `python3 -m unittest tests/data/test_replay_schema.py` and
+    `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`.
+  - governance synchronization is sufficient.
+  - review can close with no blocker.
+- New `10_NEXT` first item:
+  `Decide whether minimal P6 replay schema and synthetic fixture
+  implementation can be accepted as current-scope complete.`
+- No production code, tests, fixtures, replay schema code, parser, dataset
+  reader, ingestion, feature extraction, label generation, CLI, broad file
+  ingestion, model-output integration, real Tenhou, real haifu, external logs,
+  platform data, OpenAI / LLM / model API call, third-party binary call,
+  training, tuning, self-play, league, runner behavior, P7-P12 work or
+  model-strength claim was added.
+
 ## 2026-06-07 — v2.48
 
 - Implemented the exact minimal P6 replay schema and project-authored

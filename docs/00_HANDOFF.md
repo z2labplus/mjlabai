@@ -83,7 +83,8 @@ P5 closure does not approve P6-P12 entry, P6 data-system work, training, self-pl
 `docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md` reviews that proposal before code. The review found no blocker: `02L` scope is correct, candidate implementation classes and proposed file candidates are sufficient and conservative, the minimal replay schema code / synthetic fixture / validation test candidate boundaries are narrow enough for a later approval-decision task, and review can close. This is proposal-review evidence only: P6 implementation, replay schema implementation, fixture implementation, tests, data ingestion, dataset readers, parsers, feature extraction, label generation and P7-P12 remain unapproved.
 `docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md` prepared the approval decision for the minimal P6 replay schema and project-authored synthetic fixture implementation task. The decision was `Approved for next minimal implementation task`, but only for the exact task and exact files named in `02N`: `src/mjlabai/data/replay_schema.py`, `tests/fixtures/data/synthetic_replay_smoke.json`, `tests/data/test_replay_schema.py` and `tests/data/test_synthetic_replay_fixture_schema.py`, plus directly related docs/governance synchronization.
 The minimal P6 replay schema and project-authored synthetic fixture implementation is now complete in those exact files. The helper validates in-memory replay fixture / record mappings, project-authored synthetic provenance, no-real-data / no-account-id / no-model-output / no-training-use guardrails and JSON-safe content. `tests/fixtures/data/synthetic_replay_smoke.json` is project-authored synthetic/local only and is not Tenhou data, real haifu, external log, platform data, model output, training data, model-strength evidence or LuckyJ `10.68` comparison. Local validation passed `git diff --check`, `python3 -m unittest tests/data/test_replay_schema.py` and `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`. No parser, dataset reader, ingestion, feature extraction, label generation, CLI, broad file ingestion, model-output integration, real Tenhou, real haifu, external logs, platform data, training, self-play, league, P7-P12 or model-strength claim was added.
-The next project task is a docs-only review gate: review the minimal P6 replay schema and project-authored synthetic fixture implementation. It must not add production code, tests, fixtures, data files, parser / reader / ingestion behavior, feature / label behavior, model output, CLI, broad ingestion, third-party artifact, overclaim or P7-P12 drift.
+`docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md` reviews that exact implementation. It confirms the exact implementation files were respected, the replay schema module remains standard-library-only and in-memory, the fixture remains project-authored synthetic/local, both tests remain minimal/local, validation passed and the review can close with no blocker. This is implementation-review evidence only, not data ingestion, parser, dataset reader, feature extraction, label generation, real-data approval, model-output integration, training, self-play, league, LuckyJ comparison, candidate promotion or P7-P12 entry approval.
+The next project task is a docs-only follow-up: decide whether the minimal P6 replay schema and synthetic fixture implementation can be accepted as current-scope complete. It must not add production code, tests, fixtures, data files, parser / reader / ingestion behavior, feature / label behavior, model output, CLI, broad ingestion, third-party artifact, overclaim or P7-P12 drift.
 ```
 
 ## Current methodology
@@ -172,17 +173,17 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review minimal P6 replay schema and project-authored synthetic fixture implementation.
-The exact minimal implementation approved by `02N` is complete and limited to
-one replay schema module, one project-authored synthetic/local fixture and two
-minimal tests, plus directly related docs/governance synchronization. The next
-task must review that implementation and must not expand into real Tenhou,
-real haifu, external logs, platform data, parser, dataset reader, ingestion,
-feature extraction, label generation, training, self-play, league evaluation,
-artifact upload, broad adapter work, CLI, broad file ingestion,
-model-output integration, latency measurement, fixed-position exact-match
-computation, metric implementation, registry code changes, promotion criteria
-changes, P7-P12 or model-strength claims.
+Decide whether minimal P6 replay schema and synthetic fixture implementation
+can be accepted as current-scope complete.
+The exact minimal implementation approved by `02N` is complete and reviewed in
+`02O` with no blocker. The next task must be docs-only and must decide whether
+that minimal scope can be marked current-scope complete. It must not expand
+into real Tenhou, real haifu, external logs, platform data, parser, dataset
+reader, ingestion, feature extraction, label generation, training, self-play,
+league evaluation, artifact upload, broad adapter work, CLI, broad file
+ingestion, model-output integration, latency measurement, fixed-position
+exact-match computation, metric implementation, registry code changes,
+promotion criteria changes, P7-P12 or model-strength claims.
 ```
 
 Latest Akochan F1 audit summary:
@@ -461,8 +462,9 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is a P6 data-system docs-only review gate for the minimal
-  replay schema and synthetic fixture implementation proposal: do not implement
-  fixture files, tests, replay schema code, ingest data, train, tune, self-play
-  or connect to real Tenhou.
+- Current next work is a P6 data-system docs-only current-scope acceptance
+  decision for the exact minimal replay schema and synthetic fixture
+  implementation already reviewed in `02O`: do not implement fixture files,
+  tests, replay schema code, ingest data, train, tune, self-play or connect to
+  real Tenhou.
 - Technical decisions from Web ChatGPT Pro must be written into Git + docs before becoming project facts.

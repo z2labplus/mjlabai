@@ -8,6 +8,54 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation review
+
+- Type: internal documentation / P6 implementation review evidence.
+- Stage: P6 data system / docs-only review gate.
+- Added review document:
+  - `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`
+- Reviewed implementation commit:
+  - `232a0c51460a0168f3f5415d26bff1268b713d35`
+  - `Implement minimal P6 replay schema and synthetic fixture`
+- Reviewed implementation artifacts:
+  - `src/mjlabai/data/replay_schema.py`
+  - `tests/fixtures/data/synthetic_replay_smoke.json`
+  - `tests/data/test_replay_schema.py`
+  - `tests/data/test_synthetic_replay_fixture_schema.py`
+- Review decision:
+  - Review can close.
+  - no blocker was found.
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P6 minimal replay schema and project-authored synthetic fixture
+    implementation review evidence only.
+- Not evidence of:
+  - data ingestion.
+  - parser.
+  - dataset reader.
+  - feature extraction.
+  - label generation.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - source approval.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P7-P12 entry approval.
+- Next task:
+  - Decide whether minimal P6 replay schema and synthetic fixture
+    implementation can be accepted as current-scope complete.
+
 ### 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation
 
 - Type: internal implementation / P6 synthetic-local replay schema smoke

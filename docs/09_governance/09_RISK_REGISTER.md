@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Implementation review closure is mistaken for broad P6 implementation approval. | Governance / Stage Control | High | Medium | `02O`, evidence log and `10_NEXT` state the review can close only for the exact minimal implementation. | Open |
+| Implementation review is mistaken for P6 current-scope completion or P7 entry. | Governance / Stage Control | High | Medium | The next task is a separate docs-only current-scope acceptance decision and P7-P12 remain closed. | Open |
+| Review evidence is overclaimed as data ingestion, parser, dataset-reader, feature or label evidence. | Data / Evidence | High | Medium | `02O` explicit non-evidence list keeps those categories absent. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02O`, evidence log and `10_NEXT` classify it as implementation-review evidence only. | Open |
+| A follow-up task uses the review result to modify code, tests or fixtures without approval. | Governance / Scope | High | Medium | `10_NEXT` requires the next task to remain docs-only and forbids production code, tests and fixtures. | Open |
+
 ## 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

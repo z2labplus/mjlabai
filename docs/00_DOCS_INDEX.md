@@ -59,6 +59,7 @@ docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PR
 docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md
 docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md
 docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md
+docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -202,6 +203,15 @@ only. They are not parser, dataset reader, ingestion, feature extraction,
 label generation, real Tenhou, real haifu, external-log, platform-data,
 training, self-play, league, stable-dan, LuckyJ `10.68` or model-strength
 evidence.
+
+`docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`
+reviews the exact minimal implementation created after `02N`. It records that
+the exact implementation files were respected, the replay schema module remains
+standard-library-only and in-memory, the fixture remains project-authored
+synthetic/local, the two tests remain minimal and local, validation passed and
+the review can close. It is implementation-review evidence only, not parser,
+dataset-reader, ingestion, feature, label, real-data, model-output, training,
+league, LuckyJ comparison, candidate-promotion or P7-P12 evidence.
 
 ## Algorithm discovery and racing-funnel files
 
