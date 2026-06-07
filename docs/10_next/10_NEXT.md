@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Decide whether minimal P6 replay schema and synthetic fixture implementation can be accepted as current-scope complete.
+- [ ] Define next P6 current-scope data-system task after minimal replay schema acceptance.
 
 Current execution charter:
 
@@ -51,10 +51,13 @@ Limits:
   - `tests/data/test_replay_schema.py`
   - `tests/data/test_synthetic_replay_fixture_schema.py`
 - The P6 minimal replay schema and synthetic fixture implementation review is complete in `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`.
-- The next task is a docs-only acceptance decision gate.
+- The P6 minimal replay schema and synthetic fixture current-scope acceptance decision is complete in `docs/02_data_system/02P_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`.
+- The acceptance decision is `Accepted as current-scope complete`, but only for the exact minimal replay schema module, project-authored synthetic/local replay fixture, two minimal local tests and directly related governance synchronization.
+- This acceptance decision is not full P6 closure and not P7-P12 entry approval.
+- The next task is a docs-only P6 current-scope task-definition gate after acceptance.
 - The next task must not add production code, tests, fixtures or data files.
-- The next task must decide whether the minimal P6 replay schema and synthetic fixture implementation can be accepted as current-scope complete.
 - The next task must not modify replay schema code, tests or fixtures.
+- The next task must not expand replay schema implementation.
 - The next task must not implement parser, dataset reader, data ingestion, feature extraction, label generation, model-output integration, CLI, broad file ingestion, training, self-play, league or P7-P12 work.
 - The next task must run existing validation only:
   - `git diff --check`
@@ -93,6 +96,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-06-07 Accepted minimal P6 replay schema and synthetic fixture implementation as current-scope complete: added `docs/02_data_system/02P_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`, selected `Accepted as current-scope complete`, accepted only the exact minimal replay schema module, project-authored synthetic/local fixture, two minimal local tests and directly related governance synchronization, and recorded that this is not full P6 closure, P7-P12 entry approval, parser, dataset reader, ingestion, feature extraction, label generation, real-data approval, model-output integration, CLI, training, self-play, league, LuckyJ `10.68` comparison or model-strength evidence. Validation passed `git diff --check`, `python3 -m unittest tests/data/test_replay_schema.py` and `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`.
 - [x] 2026-06-07 Reviewed minimal P6 replay schema and project-authored synthetic fixture implementation: added `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`, confirmed the exact implementation files were respected, the replay schema module remains standard-library-only and in-memory, the fixture remains project-authored synthetic/local, the two tests remain minimal/local, governance synchronization is sufficient, and validation passed `git diff --check`, `python3 -m unittest tests/data/test_replay_schema.py` and `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`; review can close with no blocker; no production code, tests, fixtures, parser, dataset reader, ingestion, feature extraction, label generation, CLI, model-output integration, real Tenhou, real haifu, external logs, platform data, training, self-play, league, P7-P12 or model-strength claim was added.
 - [x] 2026-06-07 Implemented minimal P6 replay schema and project-authored synthetic fixture only: added `src/mjlabai/data/replay_schema.py`, `tests/fixtures/data/synthetic_replay_smoke.json`, `tests/data/test_replay_schema.py` and `tests/data/test_synthetic_replay_fixture_schema.py`; the helper validates in-memory replay fixture / record mappings, project-authored synthetic provenance, no-real-data / no-account-id / no-model-output / no-training-use guardrails and JSON-safe content; local validation passed `git diff --check`, `python3 -m unittest tests/data/test_replay_schema.py` and `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`; no parser, dataset reader, ingestion, feature extraction, label generation, CLI, broad file ingestion, model-output integration, real Tenhou, real haifu, external logs, platform data, training, self-play, league, P7-P12 or model-strength claim was added.
 - [x] 2026-06-07 Prepared approval decision for minimal P6 replay schema and synthetic fixture implementation task: added `docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md`, reviewed the 02A-02M approval criteria, selected `Approved for next minimal implementation task`, restricted the next task to `src/mjlabai/data/replay_schema.py`, `tests/fixtures/data/synthetic_replay_smoke.json`, `tests/data/test_replay_schema.py`, `tests/data/test_synthetic_replay_fixture_schema.py` and directly related docs/governance synchronization, and kept real Tenhou, real haifu, external logs, platform data, parsers, dataset readers, ingestion, feature extraction, label generation, CLI, model-output integration, training, self-play, league, P7-P12 and model-strength claims closed.

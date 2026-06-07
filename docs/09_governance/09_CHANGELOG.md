@@ -1,5 +1,39 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.50
+
+- Accepted the minimal P6 replay schema and project-authored synthetic fixture
+  implementation as current-scope complete.
+- Added
+  `docs/02_data_system/02P_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`.
+- The acceptance decision records:
+  - decision: `Accepted as current-scope complete`.
+  - accepted scope: the exact minimal replay schema module,
+    project-authored synthetic/local fixture, two minimal local tests and
+    directly related governance synchronization.
+  - non-acceptance: full P6 closure, additional replay schema expansion,
+    additional fixtures/tests, parser, dataset reader, data ingestion, feature
+    extraction, label generation, real data, CLI, model-output integration,
+    training, self-play, league, LuckyJ `10.68` comparison, candidate promotion
+    and P7-P12 entry remain unapproved.
+  - evidence grade: P6 minimal replay schema and project-authored synthetic
+    fixture current-scope acceptance decision evidence only.
+  - validation passed:
+    `git diff --check`,
+    `python3 -m unittest tests/data/test_replay_schema.py` and
+    `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`.
+- Updated handoff, docs index, stage contract, milestones, backlog, technical
+  plan, evidence log, risk register and `10_NEXT`.
+- New `10_NEXT` first item:
+  `Define next P6 current-scope data-system task after minimal replay schema
+  acceptance.`
+- No production code, tests, fixtures, replay schema code, parser, dataset
+  reader, ingestion, feature extraction, label generation, CLI, broad file
+  ingestion, model-output integration, real Tenhou, real haifu, external logs,
+  platform data, OpenAI / LLM / model API call, third-party binary call,
+  training, tuning, self-play, league, runner behavior, P7-P12 work or
+  model-strength claim was added.
+
 ## 2026-06-07 — v2.49
 
 - Reviewed the minimal P6 replay schema and project-authored synthetic fixture

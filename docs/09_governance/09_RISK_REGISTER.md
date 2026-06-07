@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 minimal replay schema and synthetic fixture current-scope acceptance risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Current-scope acceptance is mistaken for full P6 closure. | Governance / Stage Control | High | Medium | `02P`, evidence log, handoff and `10_NEXT` state that only the exact minimal replay schema module, project-authored synthetic/local fixture and two minimal tests are accepted. | Open |
+| Current-scope acceptance is mistaken for approval to add more implementation. | Governance / Scope | High | Medium | `02P` sets the next task to docs-only task definition and forbids new code, tests, fixtures, schema expansion, parser, reader, ingestion, feature extraction and label generation. | Open |
+| The next docs-only task boundary is skipped and P6 expands directly into implementation. | Governance / Process | High | Medium | `10_NEXT` sets `Define next P6 current-scope data-system task after minimal replay schema acceptance` as the only next task. | Open |
+| The accepted synthetic fixture is overclaimed as real data, training data or data-ingestion evidence. | Data / Compliance | High | Medium | `02P` and evidence log classify the fixture as project-authored synthetic/local only and not ingestion, source approval, real Tenhou, real haifu, external-log or platform-data evidence. | Open |
+| Acceptance evidence is overclaimed as model-strength, Tenhou ranked, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02P`, evidence log and `10_NEXT` repeat explicit non-evidence boundaries. | Open |
+| P6 acceptance planning drifts into P7-P12. | Governance / Stage Control | High | Medium | `02P`, stage contract and `10_NEXT` keep P7-P12, training, self-play, league and runner behavior closed. | Open |
+
 ## 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

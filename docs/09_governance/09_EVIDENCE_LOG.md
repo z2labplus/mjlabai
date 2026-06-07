@@ -8,6 +8,62 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-07 — P6 minimal replay schema and synthetic fixture current-scope acceptance decision
+
+- Type: internal documentation / P6 current-scope acceptance decision evidence.
+- Stage: P6 data system / docs-only acceptance gate.
+- Added acceptance decision document:
+  - `docs/02_data_system/02P_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+- Reviewed implementation artifacts:
+  - `src/mjlabai/data/replay_schema.py`
+  - `tests/fixtures/data/synthetic_replay_smoke.json`
+  - `tests/data/test_replay_schema.py`
+  - `tests/data/test_synthetic_replay_fixture_schema.py`
+- Reviewed context:
+  - `docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md`
+  - `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`
+- Decision:
+  - Accepted as current-scope complete.
+  - accepted scope is limited to the exact minimal replay schema module,
+    project-authored synthetic/local fixture, two minimal local tests and
+    directly related governance synchronization.
+  - full P6 closure, additional replay schema expansion, parser, dataset
+    reader, ingestion, feature extraction, label generation, real data,
+    model-output integration, CLI, training, self-play, league and P7-P12
+    remain unapproved.
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P6 minimal replay schema and project-authored synthetic fixture
+    current-scope acceptance decision evidence only.
+- Not evidence of:
+  - full P6 closure.
+  - new implementation.
+  - data ingestion.
+  - parser.
+  - dataset reader.
+  - feature extraction.
+  - label generation.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - source approval.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P7-P12 entry approval.
+- Next task:
+  - Define next P6 current-scope data-system task after minimal replay schema
+    acceptance.
+
 ### 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation review
 
 - Type: internal documentation / P6 implementation review evidence.

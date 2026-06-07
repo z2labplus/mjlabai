@@ -60,6 +60,7 @@ docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENT
 docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md
 docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md
 docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md
+docs/02_data_system/02P_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -212,6 +213,15 @@ synthetic/local, the two tests remain minimal and local, validation passed and
 the review can close. It is implementation-review evidence only, not parser,
 dataset-reader, ingestion, feature, label, real-data, model-output, training,
 league, LuckyJ comparison, candidate-promotion or P7-P12 evidence.
+
+`docs/02_data_system/02P_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+decides that the exact minimal replay schema module, project-authored
+synthetic/local fixture, two minimal local tests and directly related
+governance synchronization are accepted as current-scope complete. This is
+current-scope acceptance decision evidence only. It is not full P6 closure,
+not new implementation approval, not parser / dataset-reader / ingestion /
+feature / label evidence, not real-data approval, not model-strength evidence
+and not P7-P12 entry approval.
 
 ## Algorithm discovery and racing-funnel files
 
