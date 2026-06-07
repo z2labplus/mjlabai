@@ -33,11 +33,13 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility produced current Mortal/Akochan funnel evidence.
 P5 evaluation groundwork is closed for the current synthetic/local scope.
-The project is in P6 data-system docs-only full-closure criteria definition
+The project is in P6 data-system docs-only full-closure criteria review
 after the exact approved replay schema / synthetic fixture implementation was
 implemented, reviewed, accepted as current-scope complete, closed for the
 accepted synthetic/local minimal scope only, reviewed in a post-current-scope
 transition gate, inventoried in `02U` and reviewed in `02V` with no blocker.
+`02W` now defines full P6 closure criteria; the next step is a docs-only
+review of those criteria.
 ```
 
 The exact minimal P6 replay schema and project-authored synthetic fixture
@@ -65,9 +67,13 @@ defines that roadmap / inventory and selects a docs-only review gate.
 `docs/02_data_system/02V_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW.md`
 reviews the roadmap / inventory with no blocker and selects the next docs-only
 task: define full P6 closure criteria after roadmap and remaining scope review.
-That next step must not expand into parser, dataset reader, data ingestion,
-feature extraction, label generation, training, self-play, league, real
-Tenhou, external-log ingestion or P7-P12 work.
+`docs/02_data_system/02W_FULL_P6_CLOSURE_CRITERIA_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md`
+defines those criteria, exit readiness, required remaining closure items,
+deferred / blocked / later-stage / out-of-scope classifications and P7-P12
+non-entry conditions.
+The next docs-only criteria review must not expand into parser, dataset
+reader, data ingestion, feature extraction, label generation, training,
+self-play, league, real Tenhou, external-log ingestion or P7-P12 work.
 
 ## Guardrail
 

@@ -78,6 +78,7 @@ docs/02_data_system/02S_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_REVIEW_AFT
 docs/02_data_system/02T_FINAL_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_REVIEW.md
 docs/02_data_system/02U_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY.md
 docs/02_data_system/02V_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW.md
+docs/02_data_system/02W_FULL_P6_CLOSURE_CRITERIA_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -288,6 +289,15 @@ auditable, and selects a docs-only full P6 closure criteria definition as the
 next task. It is review evidence only, not full P6 closure, P7-P12 entry
 approval, implementation approval, real-data approval, ingestion evidence or
 model-strength evidence.
+
+`docs/02_data_system/02W_FULL_P6_CLOSURE_CRITERIA_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md`
+defines full P6 closure criteria after the `02U` roadmap / inventory and `02V`
+review. It records full-P6 closure scope, C1-C27 closure criteria, exit
+readiness, required remaining closure items, deferred / blocked /
+later-stage / out-of-scope classifications and P7-P12 non-entry conditions.
+It is criteria-definition evidence only: full P6 remains open, P7-P12 entry is
+not approved, and no implementation, parser, reader, ingestion, feature,
+label, real-data or model-strength work is approved.
 
 ## Algorithm discovery and racing-funnel files
 

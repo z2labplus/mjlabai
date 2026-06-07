@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 full-closure criteria definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Closure criteria definition is mistaken for full P6 closure. | Governance / Stage Control | High | Medium | `02W`, evidence log, handoff and `10_NEXT` state that this only defines criteria and full P6 remains open. | Open |
+| Closure criteria definition is mistaken for P7-P12 entry approval. | Governance / Stage Control | High | Medium | `02W` and `10_NEXT` keep P7-P12 unapproved and select only a docs-only criteria review gate. | Open |
+| The next criteria review gate drifts into implementation. | Governance / Scope | High | Medium | `02W` and `10_NEXT` forbid code, tests, fixtures, parser, reader, ingestion, feature extraction, label generation, CLI and model-output integration. | Open |
+| Required closure criteria accidentally turn parser, dataset reader, ingestion, feature extraction or label generation into required current implementation. | Governance / Scope | High | Medium | `02W` classifies those items as deferred or blocked, not required full-P6 closure items. | Open |
+| Blocked real Tenhou, real haifu, external-log or platform-data categories are interpreted as source approval. | Data / Compliance | High | Medium | `02W` keeps these items blocked until source-specific lawful rights, privacy, storage and platform reviews are complete. | Open |
+| Criteria-definition evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `02W` evidence grade is criteria-definition evidence only with explicit non-evidence boundaries. | Open |
+
 ## 2026-06-07 — P6 full-closure roadmap and remaining-scope inventory review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

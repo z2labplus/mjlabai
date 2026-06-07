@@ -75,6 +75,70 @@ Status:
 Accepted review recorded.
 ```
 
+## 2026-06-07 — DR-0045 — Define Full P6 Closure Criteria
+
+Decision:
+
+```text
+Define full P6 closure criteria after the roadmap and remaining scope review,
+and select a docs-only criteria review gate as the next task.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- Accepted current-scope P6 is closed only for the synthetic/local minimal
+  replay schema and project-authored fixture scope.
+- Full P6 remains open.
+- P7-P12 entry remains unapproved.
+- `02U` defines the full P6 closure roadmap and remaining scope inventory.
+- `02V` reviews that roadmap / inventory with no blocker.
+- Parser, dataset reader, data ingestion, feature extraction, label generation,
+  real data, model-output integration, CLI, training, self-play and league
+  remain unapproved.
+
+Rationale:
+
+- Full P6 closure needs explicit, auditable criteria before any final closure
+  gate.
+- Required closure items should remain docs/review/finalization items, not
+  parser, reader, ingestion, feature, label or real-data implementation.
+- Deferred, blocked, later-stage and out-of-scope classifications prevent
+  implicit approval.
+- P7-P12 entry must wait for full P6 closure and a separate transition review.
+
+Consequences:
+
+- `docs/02_data_system/02W_FULL_P6_CLOSURE_CRITERIA_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md`
+  records full-P6 closure scope, C1-C27 criteria, exit readiness, required
+  remaining closure items, deferred / blocked / later-stage / out-of-scope
+  classifications and P7-P12 non-entry conditions.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review full P6 closure criteria after roadmap and remaining scope review.`
+- Full P6 remains open.
+- P7-P12 entry remains unapproved.
+- No implementation, parser, dataset reader, ingestion, feature extraction,
+  label generation, real data, model-output integration, CLI, training,
+  self-play, league or P7-P12 work is approved.
+- This decision is not full P6 closure, P7-P12 entry approval,
+  model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
+  evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/02_data_system/02W_FULL_P6_CLOSURE_CRITERIA_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md`
+- `docs/02_data_system/02V_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW.md`
+- `docs/02_data_system/02U_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+- `docs/10_next/10_NEXT.md`
+
+Status:
+
+```text
+Accepted criteria definition recorded.
+```
+
 ## 2026-06-07 — DR-0043 — Define Full P6 Closure Roadmap and Remaining Scope Inventory
 
 Decision:
