@@ -33,10 +33,11 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility produced current Mortal/Akochan funnel evidence.
 P5 evaluation groundwork is closed for the current synthetic/local scope.
-The project is in P6 data-system docs-only post-current-scope transition
-review after the exact approved replay schema / synthetic fixture
-implementation was implemented, reviewed, accepted as current-scope complete
-and closed for the accepted synthetic/local minimal scope only.
+The project is in P6 data-system docs-only full-closure roadmap / remaining
+scope inventory planning after the exact approved replay schema / synthetic
+fixture implementation was implemented, reviewed, accepted as current-scope
+complete, closed for the accepted synthetic/local minimal scope only, and
+reviewed in a post-current-scope transition gate.
 ```
 
 The exact minimal P6 replay schema and project-authored synthetic fixture
@@ -55,10 +56,13 @@ reviews those criteria with no blocker. The next step is a docs-only final
 current-scope closure review gate. `docs/02_data_system/02T_FINAL_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_REVIEW.md`
 records that current-scope P6 can close for the accepted synthetic/local
 minimal replay schema and project-authored synthetic fixture scope only. Full
-P6 remains open, and P7-P12 remains unapproved. The next step is a docs-only
-post-current-scope transition review; it must not expand into parser, dataset
-reader, data ingestion, feature extraction, label generation, training,
-self-play, league, real Tenhou, external-log ingestion or P7-P12 work.
+P6 remains open, and P7-P12 remains unapproved.
+`docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md`
+completes the post-current-scope transition review and selects the next
+docs-only task: define a full P6 closure roadmap and remaining scope inventory.
+That next step must not expand into parser, dataset reader, data ingestion,
+feature extraction, label generation, training, self-play, league, real Tenhou,
+external-log ingestion or P7-P12 work.
 
 ## Guardrail
 

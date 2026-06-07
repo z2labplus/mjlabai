@@ -1,5 +1,31 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.55
+
+- Completed the post-current-scope P6 transition review.
+- Added
+  `docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md`.
+- The transition review records:
+  - P5 is closed only for the current synthetic/local evaluation groundwork
+    scope.
+  - accepted current-scope P6 is closed only for the synthetic/local minimal
+    replay schema and project-authored fixture scope.
+  - full P6 remains open.
+  - P7-P12 entry remains unapproved.
+  - candidate next directions were reviewed.
+  - the selected next task is:
+    `Define full P6 closure roadmap and remaining scope inventory after
+    current-scope closure`.
+  - the selected next task is docs-only.
+- Updated handoff, docs index, stage contract, milestones, backlog, technical
+  plan, decision record, evidence log, risk register and `10_NEXT`.
+- No production code, tests, fixtures, replay schema code, parser, dataset
+  reader, ingestion, feature extraction, label generation, CLI, broad file
+  ingestion, model-output integration, real Tenhou, real haifu, external logs,
+  platform data, OpenAI / LLM / model API call, third-party binary call,
+  training, tuning, self-play, league, runner behavior, full P6 closure,
+  P7-P12 work or model-strength claim was added.
+
 ## 2026-06-07 — v2.54
 
 - Ran the final P6 current-scope data-system closure review gate.

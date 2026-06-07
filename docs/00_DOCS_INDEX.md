@@ -33,6 +33,7 @@ docs/10_next/10_NEXT.md
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
+docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -41,6 +42,16 @@ P5 is closed for the current synthetic/local evaluation groundwork scope and
 allows only a docs-only next task to define P6 data-system scope, entry criteria
 and first task before implementation. It is not P6 implementation approval,
 P7-P12 entry approval, data-ingestion evidence or model-strength evidence.
+
+`docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md`
+records the post-current-scope P6 transition review after final current-scope
+P6 closure. It confirms that accepted current-scope P6 is closed only for the
+synthetic/local minimal replay schema and project-authored fixture scope, that
+full P6 remains open and that P7-P12 entry remains unapproved. It selects the
+next docs-only task: define a full P6 closure roadmap and remaining scope
+inventory after current-scope closure. It is transition-review evidence only,
+not full P6 closure, P7-P12 entry approval, implementation approval, ingestion
+evidence or model-strength evidence.
 
 ## Data-system files
 

@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 post-current-scope transition review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Post-current-scope transition review is mistaken for full P6 closure. | Governance / Stage Control | High | Medium | `12C`, evidence log, handoff and `10_NEXT` state that full P6 remains open and that the next task is only a docs-only roadmap / inventory. | Open |
+| Post-current-scope transition review is mistaken for P7-P12 entry approval. | Governance / Stage Control | High | Medium | `12C` explains why P7 is premature and `10_NEXT` forbids P7-P12 execution. | Open |
+| The next full-P6 roadmap task drifts into implementation. | Governance / Scope | High | Medium | `12C` and `10_NEXT` forbid production code, tests, fixtures, parser, reader, ingestion, feature extraction and label generation. | Open |
+| Remaining full-P6 inventory is used to approve real data or ingestion implicitly. | Data / Compliance | High | Medium | `12C` requires source-specific future approval and keeps real Tenhou, real haifu, external logs and platform data unapproved. | Open |
+| Transition review evidence is overclaimed as model-strength, Tenhou, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `12C` evidence grade is transition review evidence only with explicit non-evidence boundaries. | Open |
+
 ## 2026-06-07 — P6 final current-scope data-system closure review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

@@ -2,16 +2,19 @@
 
 ## Current stage
 
-P6 data-system post-current-scope transition review after accepted
-current-scope closure. P5 evaluation foundation is closed for the current
-synthetic/local scope; general P6 implementation is not open, and the exact
+P6 data-system full-closure roadmap / remaining-scope inventory planning after
+accepted current-scope closure and post-current-scope transition review. P5
+evaluation foundation is closed for the current synthetic/local scope; general
+P6 implementation is not open, and the exact
 minimal replay schema / project-authored synthetic fixture task approved by
 `02N` is implemented, reviewed with no blocker and accepted as current-scope
 complete in `02P`; `02Q` selected a docs-only current-scope closure-criteria
 task, `02R` defined those criteria, `02S` reviewed them with no blocker and
 `02T` closed the accepted current-scope P6 synthetic/local minimal replay
-schema and project-authored synthetic fixture scope only. Full P6 remains open
-and P7-P12 entry remains unapproved.
+schema and project-authored synthetic fixture scope only. `12C` completes the
+post-current-scope P6 transition review, confirms full P6 remains open and
+selects a docs-only full P6 closure roadmap / remaining-scope inventory as the
+next task. P7-P12 entry remains unapproved.
 
 Current focus:
 
@@ -69,10 +72,11 @@ P6 next current-scope data-system task definition = complete; selected a docs-on
 P6 current-scope data-system closure criteria = defined after minimal replay schema acceptance
 P6 current-scope data-system closure criteria review = complete; no blocker found
 P6 final current-scope data-system closure review = complete; accepted current-scope closed
+P6 post-current-scope transition review = complete; full P6 remains open and P7-P12 entry remains unapproved
 Full P6 = not closed
 P7-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = run post-current-scope P6 transition review before defining any next-stage data-system or P7 task
+Next = define full P6 closure roadmap and remaining scope inventory after current-scope closure
 ```
 
 ## AI role
@@ -179,4 +183,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Run post-current-scope P6 transition review before defining any next-stage data-system or P7 task.
+Define full P6 closure roadmap and remaining scope inventory after current-scope closure.

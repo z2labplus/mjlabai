@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Run post-current-scope P6 transition review before defining any next-stage data-system or P7 task.
+- [ ] Define full P6 closure roadmap and remaining scope inventory after current-scope closure.
 
 Current execution charter:
 
@@ -16,6 +16,11 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
+- This is a docs-only full-P6 roadmap / remaining-scope inventory task.
+- P5 is closed only for the current synthetic/local evaluation groundwork scope.
+- Accepted current-scope P6 is closed only for the synthetic/local minimal replay schema and project-authored synthetic fixture scope.
+- Full P6 is not closed.
+- P7-P12 entry is not approved.
 - Do not train models.
 - Do not tune hyperparameters.
 - Do not start self-play.
@@ -24,88 +29,23 @@ Limits:
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint` or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
-- P5 is closed for the current synthetic/local evaluation groundwork scope.
-- The post-P5 transition review is complete.
-- The P6 data-system scope, entry criteria and first task are defined.
-- General P6 implementation remains closed.
-- The exact minimal replay schema and project-authored synthetic fixture task is implemented and reviewed with no blocker.
-- The P6 data-source provenance and rights inventory is defined and reviewed before replay schema implementation.
-- The P6 data-source provenance and rights inventory review found no blocker.
-- The P6 replay schema documentation boundary is defined after source inventory review.
-- The P6 replay schema documentation boundary review found no blocker and can close.
-- Replay schema implementation exists only in `src/mjlabai/data/replay_schema.py` and must not expand without a later approval.
-- The P6 synthetic/local replay fixture boundary is defined before schema implementation.
-- The P6 synthetic/local replay fixture boundary review found no blocker and can close.
-- The P6 replay schema and fixture implementation readiness checklist is defined before code.
-- The P6 replay schema and fixture implementation readiness checklist review found no blocker and can close.
-- Replay fixture implementation exists only in `tests/fixtures/data/synthetic_replay_smoke.json` and must not expand without a later approval.
-- The P6 replay schema and synthetic fixture implementation proposal boundary is defined for review before code.
-- The P6 replay schema and synthetic fixture implementation proposal boundary review found no blocker and can close.
-- The P6 minimal replay schema and synthetic fixture implementation proposal is prepared in `docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md`.
-- The P6 minimal replay schema and synthetic fixture implementation proposal review is complete in `docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md`.
-- The P6 minimal replay schema and synthetic fixture implementation approval decision is complete in `docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md`.
-- The approval decision is `Approved for next minimal implementation task`.
-- The approved minimal implementation created only these implementation files:
-  - `src/mjlabai/data/replay_schema.py`
-  - `tests/fixtures/data/synthetic_replay_smoke.json`
-  - `tests/data/test_replay_schema.py`
-  - `tests/data/test_synthetic_replay_fixture_schema.py`
-- The P6 minimal replay schema and synthetic fixture implementation review is complete in `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`.
-- The P6 minimal replay schema and synthetic fixture current-scope acceptance decision is complete in `docs/02_data_system/02P_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`.
-- The acceptance decision is `Accepted as current-scope complete`, but only for the exact minimal replay schema module, project-authored synthetic/local replay fixture, two minimal local tests and directly related governance synchronization.
-- This acceptance decision is not full P6 closure and not P7-P12 entry approval.
-- The P6 next current-scope data-system task definition is complete in `docs/02_data_system/02Q_P6_NEXT_CURRENT_SCOPE_DATA_SYSTEM_TASK_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`.
-- The P6 current-scope data-system closure criteria are defined in `docs/02_data_system/02R_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`.
-- The closure criteria definition does not close full P6, does not close current-scope P6, does not approve new implementation and does not approve P7-P12 entry.
-- The P6 current-scope data-system closure criteria review is complete in `docs/02_data_system/02S_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`.
-- The closure criteria review can close with no blocker, but it does not close full P6, does not close current-scope P6, does not approve new implementation and does not approve P7-P12 entry.
-- The final P6 current-scope data-system closure review is complete in `docs/02_data_system/02T_FINAL_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_REVIEW.md`.
-- The final current-scope closure decision is `Current-scope P6 can close`, but only for the accepted synthetic/local minimal replay schema and project-authored synthetic fixture scope.
-- Full P6 is not closed.
-- P7-P12 entry is not approved.
-- The selected next task is `Run post-current-scope P6 transition review before defining any next-stage data-system or P7 task`.
-- The next task is a docs-only post-current-scope transition / planning review.
-- The next task must not add production code, tests, fixtures or data files.
-- The next task must not modify replay schema code, tests or fixtures.
-- The next task must not expand replay schema implementation.
-- The next task must not implement parser, dataset reader, data ingestion, feature extraction, label generation, model-output integration, CLI, broad file ingestion, training, self-play, league or P7-P12 work.
-- The next task must run existing validation only:
+- Do not add production code, tests, fixtures or data files.
+- Do not modify `src/mjlabai/data/replay_schema.py`.
+- Do not modify `tests/fixtures/data/synthetic_replay_smoke.json`.
+- Do not modify existing data tests.
+- Do not implement parser, dataset reader, data ingestion, feature extraction, label generation, model-output integration, CLI or broad file ingestion.
+- Do not read real Tenhou, real haifu, external logs, platform data, accounts, sessions, cookies or tokens.
+- Do not run real-data, Tenhou, self-play, league, training, model-output integration, Akochan `system.exe`, `libai.so`, third-party binary or unknown model artifact commands.
+- Do not claim any P5 closure artifact, P6 planning artifact or P6 synthetic/local schema artifact is model-strength evidence, Tenhou evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
+- Required validation for the next task:
   - `git diff --check`
   - `python3 -m unittest tests/data/test_replay_schema.py`
   - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
-- Stop before commit if any new implementation, unapproved file, real data, parser / reader / ingestion behavior, feature / label behavior, model-output path, CLI, broad ingestion, third-party artifact, validation failure, overclaim or P7-P12 drift appears.
-- Do not generate a P6-P12 implementation prompt.
-- Do not read Tenhou accounts, online platforms or external logs.
-- Do not treat replay schema boundary documentation as replay schema implementation approval.
-- Do not treat replay schema boundary review as replay schema implementation approval.
-- Do not treat synthetic/local replay fixture boundary documentation as replay fixture implementation approval.
-- Do not treat synthetic/local replay fixture boundary review as replay fixture implementation approval.
-- Do not treat replay schema and fixture implementation readiness checklist definition as implementation approval.
-- Do not treat replay schema and fixture implementation readiness checklist review as implementation approval.
-- Do not treat a proposal boundary as permission to implement replay schema code, fixtures, ingestion, parser, reader, feature extraction or label generation.
-- Do not treat proposal boundary definition or proposal boundary review as P6 implementation approval.
-- Do not approve any real source before source rights, license, allowed-use, storage and evidence requirements are documented.
-- Do not treat the inventory definition or review as source approval, ingestion approval or replay schema implementation approval.
-- Do not treat a synthetic/local replay fixture boundary as fixture implementation, schema implementation, source approval or ingestion approval.
-- Do not add CLI, broad file ingestion, league harness, external-data readers or new model code.
-- Do not add production evaluator logic in the next task.
-- Do not add new production code, tests, fixtures, synthetic replay fixtures, replay schema code, dataclasses, pydantic models, JSON schema, parsers, dataset readers, data ingestion, feature extraction, label generation, CLI, benchmark expansion, latency measurement, fixed-position exact-match, metric implementation, registry code changes, model-output integration, broad file ingestion, evidence taxonomy definition changes or promotion criteria changes in the next task.
-- Do not treat the docs-only proposal or proposal review as implementation approval; only `02N` approves the exact next minimal implementation task.
-- Do not connect P6 planning to model code, Akochan `system.exe`, third-party binaries, real Tenhou, real haifu, external logs or platform data.
-- Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
-- Do not add model-output integration, broad file ingestion, new model code or latency measurement code.
-- Do not change metric units, directions, evidence taxonomy definitions, promotion criteria or registry definitions in the next task.
-- Do not read platform data or use model weights.
-- Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
-- Do not claim any P5 closure artifact or P6 planning artifact is model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
-- Do not interpret this limited approval as approval for general P6 implementation.
-- Do not expand beyond the exact minimal implementation task already completed from `02N`.
-- Do not implement parser, dataset reader, data ingestion, feature extraction, label generation, CLI, broad file ingestion, model-output integration, metric implementation, registry code changes or promotion criteria changes.
-- Do not enter P7-P12.
-- Do not modify unrelated files.
+- Stop before commit if implementation, unapproved files, real data, parser / reader / ingestion behavior, feature / label behavior, model-output path, CLI, broad ingestion, third-party artifact, validation failure, overclaim or P7-P12 drift appears.
 
 ## Completed
 
+- [x] 2026-06-07 Completed post-current-scope P6 transition review: added `docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md`, confirmed P5 is closed only for the current synthetic/local evaluation groundwork scope, confirmed accepted current-scope P6 is closed only for the synthetic/local minimal replay schema and project-authored fixture scope, kept full P6 open and P7-P12 unapproved, reviewed candidate next directions, selected `Define full P6 closure roadmap and remaining scope inventory after current-scope closure` as the next docs-only task, and recorded allowed / forbidden scope, validation commands, planning decision and evidence grade. No production code, tests, fixtures, replay schema code, parser, dataset reader, ingestion, feature extraction, label generation, CLI, broad file ingestion, model-output integration, real Tenhou, real haifu, external logs, platform data, training, tuning, self-play, league, runner behavior, P7-P12 work or model-strength claim was added.
 - [x] 2026-06-07 Ran final P6 current-scope data-system closure review gate: added `docs/02_data_system/02T_FINAL_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_REVIEW.md`, reviewed the P6 current-scope chain from scope/source inventory through minimal implementation, acceptance, closure criteria and closure criteria review, confirmed validation and governance synchronization, and recorded the decision `Current-scope P6 can close` for the accepted synthetic/local minimal replay schema and project-authored synthetic fixture scope only. This is P6 final current-scope data-system closure review evidence only; it does not close full P6, approve P7-P12 entry, approve new implementation, parser, dataset reader, ingestion, feature extraction, label generation, real data, model-output integration, CLI, training, self-play, league or model-strength claims. Validation passed `git diff --check`, `python3 -m unittest tests/data/test_replay_schema.py` and `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`.
 - [x] 2026-06-07 Reviewed P6 current-scope data-system closure criteria after minimal replay schema acceptance: added `docs/02_data_system/02S_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`, reviewed `02R` scope, accepted/not-accepted scope, C1-C25 closure criteria, exit readiness checklist, required remaining items, deferred items, P7-P12 non-entry conditions, governance synchronization and validation. Review decision: `Review can close`; no blocker found. This is P6 current-scope closure-criteria review evidence only; it does not close full P6, close current-scope P6, approve new implementation, parser, dataset reader, ingestion, feature extraction, label generation, real data, model-output integration, CLI, training, self-play, league, P7-P12 entry or model-strength claims. Validation passed `git diff --check`, `python3 -m unittest tests/data/test_replay_schema.py` and `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`.
 - [x] 2026-06-07 Defined P6 current-scope data-system closure criteria after minimal replay schema acceptance: added `docs/02_data_system/02R_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`, recorded current accepted scope from `02P`, defined minimum closure criteria, exit readiness checklist, required remaining current-scope P6 items, deferred items and P7-P12 non-entry conditions, and selected `Review P6 current-scope data-system closure criteria after minimal replay schema acceptance` as the next docs-only review gate. This is P6 current-scope closure-criteria definition evidence only; it does not close full P6, close current-scope P6, approve new implementation, parser, dataset reader, ingestion, feature extraction, label generation, real data, model-output integration, CLI, training, self-play, league, P7-P12 entry or model-strength claims. Validation passed `git diff --check`, `python3 -m unittest tests/data/test_replay_schema.py` and `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`.

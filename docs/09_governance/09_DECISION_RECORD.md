@@ -14,6 +14,64 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-07 — DR-0042 — Complete Post-Current-Scope P6 Transition Review
+
+Decision:
+
+```text
+Complete the post-current-scope P6 transition review and select a docs-only
+full P6 closure roadmap / remaining-scope inventory task as the next step.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- Accepted current-scope P6 is closed only for the synthetic/local minimal
+  replay schema and project-authored fixture scope.
+- Full P6 remains open.
+- P7-P12 entry remains unapproved.
+- Parser, dataset reader, data ingestion, feature extraction, label generation,
+  real data, model-output integration, CLI, training, self-play and league
+  remain unapproved.
+
+Rationale:
+
+- Current-scope P6 closure is narrower than full P6 closure.
+- Direct P7 readiness or P7 task definition would be premature without full P6
+  closure criteria, source-specific data readiness, feature / label readiness
+  and risk review.
+- A full P6 closure roadmap / remaining inventory reduces the risk of P6
+  continuing indefinitely while also preventing stage creep into P7.
+
+Consequences:
+
+- `docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md`
+  records the transition review.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define full P6 closure roadmap and remaining scope inventory after
+  current-scope closure.`
+- The next task is docs-only.
+- No implementation, parser, dataset reader, ingestion, feature extraction,
+  label generation, real data, model-output integration, CLI, training,
+  self-play, league or P7-P12 work is approved.
+- This decision is not full P6 closure, P7-P12 entry approval,
+  model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
+  evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md`
+- `docs/02_data_system/02T_FINAL_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_REVIEW.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+- `docs/10_next/10_NEXT.md`
+
+Status:
+
+```text
+Accepted transition review recorded.
+```
+
 ## 2026-06-07 — DR-0041 — Close Accepted Current-Scope P6 Data-System Scope
 
 Decision:
