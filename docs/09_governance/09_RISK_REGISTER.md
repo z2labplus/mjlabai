@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 full-closure criteria review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Closure criteria review is mistaken for full P6 closure. | Governance / Stage Control | High | Medium | `02X`, evidence log, handoff and `10_NEXT` state that review can close but full P6 remains open. | Open |
+| Closure criteria review is mistaken for P7-P12 entry approval. | Governance / Stage Control | High | Medium | `02X` and `10_NEXT` keep P7-P12 unapproved and select only a docs-only handoff / evidence finalization task. | Open |
+| The next handoff / evidence finalization task drifts into implementation. | Governance / Scope | High | Medium | `02X` and `10_NEXT` forbid code, tests, fixtures, parser, reader, ingestion, feature extraction, label generation, CLI and model-output integration. | Open |
+| Required remaining items are misread as parser, dataset reader, ingestion, feature extraction or label generation approval. | Governance / Scope | High | Medium | `02X` confirms required remaining full-P6 items are docs/review/closure-only. | Open |
+| Criteria review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `02X` evidence grade is review evidence only with explicit non-evidence boundaries. | Open |
+
 ## 2026-06-07 — P6 full-closure criteria definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

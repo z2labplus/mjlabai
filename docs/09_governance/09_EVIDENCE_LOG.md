@@ -8,6 +8,65 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-07 — P6 full-closure criteria review
+
+- Type: internal documentation / P6 full-closure criteria review evidence.
+- Stage: P6 data system / docs-only full-P6 closure criteria review gate.
+- Added review document:
+  - `docs/02_data_system/02X_FULL_P6_CLOSURE_CRITERIA_REVIEW_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md`
+- Reviewed primary artifact:
+  - `docs/02_data_system/02W_FULL_P6_CLOSURE_CRITERIA_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md`
+- Reviewed context:
+  - accepted current-scope P6 chain from `02A` through `02T`
+  - `docs/02_data_system/02U_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY.md`
+  - `docs/02_data_system/02V_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW.md`
+  - `docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md`
+  - `src/mjlabai/data/replay_schema.py`
+  - `tests/fixtures/data/synthetic_replay_smoke.json`
+  - `tests/data/test_replay_schema.py`
+  - `tests/data/test_synthetic_replay_fixture_schema.py`
+  - handoff, docs index, `10_NEXT`, technical plan, changelog, risk register,
+    decision record, stage contract, backlog and milestones.
+- Review decision:
+  - `Review can close`.
+  - No blocker was found.
+  - `02W` scope is correct.
+  - full-P6 closure scope is reasonable.
+  - C1-C27 criteria are sufficient, conservative and auditable.
+  - exit readiness checklist is auditable.
+  - required remaining items are docs/review/closure-only.
+  - deferred / blocked / later-stage / out-of-scope classifications are safe.
+  - P7-P12 non-entry conditions are sufficient.
+  - governance is synchronized.
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P6 full-closure criteria review evidence only.
+- Not evidence of:
+  - full P6 closure.
+  - P7-P12 entry approval.
+  - new implementation approval.
+  - parser.
+  - dataset reader.
+  - data ingestion.
+  - feature extraction.
+  - label generation.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - source approval.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-07 — P6 full-closure criteria definition
 
 - Type: internal documentation / P6 full-closure criteria definition evidence.

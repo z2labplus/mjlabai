@@ -2,10 +2,10 @@
 
 ## Current stage
 
-P6 data-system full-closure criteria review after accepted current-scope
+P6 data-system full-P6 handoff and evidence index finalization after accepted current-scope
 closure, post-current-scope transition review, `02U` roadmap / inventory
-definition, `02V` roadmap / inventory review and `02W` closure criteria
-definition. P5 evaluation foundation is
+definition, `02V` roadmap / inventory review, `02W` closure criteria
+definition and `02X` criteria review. P5 evaluation foundation is
 closed for the current synthetic/local scope; general P6 implementation is not open, and the exact
 minimal replay schema / project-authored synthetic fixture task approved by
 `02N` is implemented, reviewed with no blocker and accepted as current-scope
@@ -80,10 +80,11 @@ P6 post-current-scope transition review = complete; full P6 remains open and P7-
 P6 full closure roadmap and remaining scope inventory = defined in `02U`; full P6 remains open and P7-P12 entry remains unapproved
 P6 full closure roadmap and remaining scope inventory review = complete in `02V`; review can close with no blocker
 P6 full closure criteria after roadmap and remaining scope review = defined in `02W`; full P6 remains open and P7-P12 entry remains unapproved
+P6 full closure criteria review after roadmap and remaining scope review = complete in `02X`; review can close with no blocker
 Full P6 = not closed
 P7-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = review full P6 closure criteria after roadmap and remaining scope review
+Next = finalize full P6 handoff and evidence index after closure criteria review
 ```
 
 ## AI role
@@ -190,4 +191,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review full P6 closure criteria after roadmap and remaining scope review.
+Finalize full P6 handoff and evidence index after closure criteria review.

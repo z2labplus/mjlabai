@@ -1,5 +1,32 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.59
+
+- Reviewed full P6 closure criteria after roadmap and remaining scope review.
+- Added
+  `docs/02_data_system/02X_FULL_P6_CLOSURE_CRITERIA_REVIEW_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md`.
+- The review confirms:
+  - `02W` scope is correct.
+  - full-P6 closure scope is reasonable.
+  - C1-C27 criteria are sufficient, conservative and auditable.
+  - exit readiness checklist is auditable.
+  - required remaining items are docs/review/closure-only.
+  - deferred, blocked, later-stage and out-of-scope classifications are safe.
+  - P7-P12 non-entry conditions are sufficient.
+  - governance synchronization is consistent.
+  - validation passed.
+  - review decision: `Review can close`.
+- New `10_NEXT` first item:
+  `Finalize full P6 handoff and evidence index after closure criteria review.`
+- Full P6 remains open.
+- P7-P12 entry remains unapproved.
+- No production code, tests, fixtures, replay schema code, parser, dataset
+  reader, ingestion, feature extraction, label generation, CLI, broad file
+  ingestion, model-output integration, real Tenhou, real haifu, external logs,
+  platform data, OpenAI / LLM / model API call, third-party binary call,
+  training, tuning, self-play, league, runner behavior, full P6 closure,
+  P7-P12 work or model-strength claim was added.
+
 ## 2026-06-07 — v2.58
 
 - Defined full P6 closure criteria after roadmap and remaining scope review.

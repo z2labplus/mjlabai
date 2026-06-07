@@ -93,6 +93,7 @@ The minimal P6 replay schema and project-authored synthetic fixture implementati
 `docs/02_data_system/02U_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY.md` defines the full P6 closure roadmap and remaining scope inventory after accepted current-scope closure. It classifies remaining P6 items as required, deferred, blocked, later-stage or explicitly out of scope; identifies docs-only closure criteria / review / evidence / risk / final closure gates as the required path; and keeps full P6 open, P7-P12 unapproved, and implementation / real-data / parser / reader / ingestion / feature / label work unapproved. The next task is a docs-only review of this roadmap / inventory.
 `docs/02_data_system/02V_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW.md` reviews the `02U` roadmap / inventory with no blocker. It confirms that `02U` scope is correct, the accepted current-scope closed chain is complete, the remaining inventory classification is reasonable, the roadmap is conservative and docs-only, required / deferred / blocked / later-stage / out-of-scope classifications are safe, P7-P12 non-entry boundaries are sufficient and governance is synchronized. The review can close, but it does not close full P6, approve P7-P12 entry, approve implementation, approve real data or create model-strength evidence. The next task is a docs-only full P6 closure criteria definition.
 `docs/02_data_system/02W_FULL_P6_CLOSURE_CRITERIA_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md` defines full P6 closure criteria after the roadmap / inventory and review. It records full-P6 closure scope, C1-C27 closure criteria, an exit readiness checklist, required remaining full-P6 closure items, deferred items, blocked items, later-stage / out-of-scope items and P7-P12 non-entry conditions. This is criteria-definition evidence only: full P6 remains open, P7-P12 entry remains unapproved, and parser / dataset reader / ingestion / feature extraction / label generation / real-data / model-output / CLI / training / self-play / league work remains unapproved. The next task is a docs-only review of these full P6 closure criteria.
+`docs/02_data_system/02X_FULL_P6_CLOSURE_CRITERIA_REVIEW_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md` reviews the `02W` full P6 closure criteria with no blocker. It confirms that the `02W` scope is correct, C1-C27 are sufficient and conservative, exit readiness is auditable, required remaining items are docs/review/closure-only, deferred / blocked / later-stage / out-of-scope classifications are safe, P7-P12 non-entry conditions are sufficient and governance is synchronized. This is criteria-review evidence only: full P6 remains open, P7-P12 entry remains unapproved, and parser / dataset reader / ingestion / feature extraction / label generation / real-data / model-output / CLI / training / self-play / league work remains unapproved. The next task is docs-only full P6 handoff and evidence index finalization.
 ```
 
 ## Current methodology
@@ -181,7 +182,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review full P6 closure criteria after roadmap and remaining scope review.
+Finalize full P6 handoff and evidence index after closure criteria review.
 The exact minimal implementation approved by `02N` is complete, reviewed in
 `02O` with no blocker and accepted in `02P` as current-scope complete. `02Q`
 selected a docs-only closure-criteria task as the next bounded P6 data-system
@@ -192,9 +193,11 @@ synthetic/local minimal replay schema and project-authored synthetic fixture
 scope. `12C` completes the post-current-scope transition review, `02U`
 defines the full P6 closure roadmap / remaining inventory and `02V` reviews it
 with no blocker. `02W` defines full P6 closure criteria and the next task is a
-docs-only review of those criteria. Full P6 remains open, P7-P12 remains
-unapproved. The next task must only review docs-only full P6 closure criteria
-and must not execute implementation or expand into real Tenhou, real haifu,
+docs-only review of those criteria. `02X` reviews those criteria with no
+blocker and selects full P6 handoff / evidence index finalization as the next
+docs-only task. Full P6 remains open, P7-P12 remains unapproved. The next task
+must only finalize docs-only full P6 handoff and evidence index and must not
+execute implementation or expand into real Tenhou, real haifu,
 external logs, platform data, parser, dataset reader, ingestion, feature
 extraction, label generation, training, self-play, league evaluation, artifact
 upload, broad adapter work, CLI, broad file ingestion, model-output
@@ -479,10 +482,10 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is a P6 data-system docs-only full-P6 closure-criteria
-  review after `02U` defined the full-P6 roadmap / inventory, `02V` reviewed
-  it and `02W` defined the closure criteria. Do not implement fixture files,
-  tests, replay schema code, parser, dataset reader, ingestion, feature
-  extraction, label generation, CLI, model-output integration, train, tune,
-  self-play, league or connect to real Tenhou.
+- Current next work is a P6 data-system docs-only full-P6 handoff and evidence
+  index finalization after `02X` reviewed the `02W` closure criteria with no
+  blocker. Do not implement fixture files, tests, replay schema code, parser,
+  dataset reader, ingestion, feature extraction, label generation, CLI,
+  model-output integration, train, tune, self-play, league or connect to real
+  Tenhou.
 - Technical decisions from Web ChatGPT Pro must be written into Git + docs before becoming project facts.

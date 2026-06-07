@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Review full P6 closure criteria after roadmap and remaining scope review.
+- [ ] Finalize full P6 handoff and evidence index after closure criteria review.
 
 Current execution charter:
 
@@ -16,8 +16,8 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only full-P6 closure criteria review gate after criteria
-  definition.
+- This is a docs-only full-P6 handoff and evidence index finalization task
+  after closure criteria review.
 - P5 is closed only for the current synthetic/local evaluation groundwork scope.
 - Accepted current-scope P6 is closed only for the synthetic/local minimal replay schema and project-authored synthetic fixture scope.
 - Full P6 is not closed.
@@ -39,9 +39,10 @@ Limits:
 - Do not run real-data, Tenhou, self-play, league, training, model-output integration, Akochan `system.exe`, `libai.so`, third-party binary or unknown model artifact commands.
 - Do not treat the roadmap / inventory definition as full P6 closure.
 - Do not treat the roadmap / inventory review as P7 execution or P7 entry approval.
-- Do not treat closure criteria definition or review as full P6 closure.
-- Do not treat closure criteria definition or review as P7 execution or P7
-  entry approval.
+- Do not treat closure criteria definition, criteria review or handoff /
+  evidence finalization as full P6 closure.
+- Do not treat closure criteria definition, criteria review or handoff /
+  evidence finalization as P7 execution or P7 entry approval.
 - Do not claim any P5 closure artifact, P6 planning artifact or P6 synthetic/local schema artifact is model-strength evidence, Tenhou evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
 - Required validation for the next task:
   - `git diff --check`
@@ -51,6 +52,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-06-07 Reviewed full P6 closure criteria after roadmap and remaining scope review: added `docs/02_data_system/02X_FULL_P6_CLOSURE_CRITERIA_REVIEW_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md`, reviewed `02W` scope, full-P6 closure scope, C1-C27 criteria, exit readiness checklist, required remaining items, deferred items, blocked items, later-stage / out-of-scope classifications, P7-P12 non-entry conditions, governance synchronization and validation. Review decision: `Review can close`; no blocker found. This is P6 full-closure criteria review evidence only; it does not close full P6, approve P7-P12 entry, approve implementation, parser, dataset reader, ingestion, feature extraction, label generation, real data, model-output integration, CLI, training, tuning, self-play, league or model-strength claims.
 - [x] 2026-06-07 Defined full P6 closure criteria after roadmap and remaining scope review: added `docs/02_data_system/02W_FULL_P6_CLOSURE_CRITERIA_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md`, defined full-P6 closure scope, C1-C27 closure criteria, exit readiness checklist, required remaining full-P6 items, deferred items, blocked items, later-stage / out-of-scope items, P7-P12 non-entry conditions, planning decision and evidence grade. Full P6 remains open, P7-P12 remain unapproved, and no production code, tests, fixtures, replay schema code, parser, dataset reader, ingestion, feature extraction, label generation, real data, CLI, broad file ingestion, model-output integration, metric implementation, registry code change, training, tuning, self-play, league, runner behavior or model-strength claim was added.
 - [x] 2026-06-07 Reviewed full P6 closure roadmap and remaining scope inventory after current-scope closure: added `docs/02_data_system/02V_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW.md`, reviewed `02U` scope, current-scope closed artifacts, remaining inventory classification, roadmap, required items, deferred / blocked / later-stage / out-of-scope classifications, P7-P12 non-entry boundary, governance synchronization and validation. Review decision: `Review can close`; no blocker found. This is P6 full-closure roadmap and remaining-scope inventory review evidence only; it does not close full P6, approve P7-P12 entry, approve implementation, parser, dataset reader, ingestion, feature extraction, label generation, real data, model-output integration, CLI, training, tuning, self-play, league or model-strength claims.
 - [x] 2026-06-07 Defined full P6 closure roadmap and remaining scope inventory after current-scope closure: added `docs/02_data_system/02U_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY.md`, listed the accepted current-scope P6 closed chain, classified full P6 remaining items as required / deferred / blocked / later-stage / out of scope, defined a conservative docs-only full P6 closure roadmap, identified required closure items, deferred items, blocked items and P7-P12 non-entry boundaries, and selected `Review full P6 closure roadmap and remaining scope inventory after current-scope closure` as the next docs-only review gate. Full P6 remains open, P7-P12 remain unapproved, and no implementation, production code, tests, fixtures, replay schema code, parser, dataset reader, ingestion, feature extraction, label generation, real data, model-output integration, CLI, training, tuning, self-play, league, runner behavior or model-strength claim was added.
