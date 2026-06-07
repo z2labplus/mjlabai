@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 final full closure review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Full P6 closure is mistaken for P7-P12 entry approval. | Governance / Stage Control | High | Medium | `02AA`, evidence log, handoff, stage contract and `10_NEXT` state that the next step is a post-full-P6 transition review before defining any P7 task. | Open |
+| Full P6 closure is mistaken for P7 first-task approval. | Governance / Stage Control | High | Medium | `02AA` and `10_NEXT` explicitly forbid P7 execution and P7 first-task approval in the closure decision. | Open |
+| Full P6 closure is overread as parser, reader, ingestion, feature or label approval. | Governance / Scope | High | Medium | `02AA` accepted boundary excludes parser, dataset reader, ingestion, feature extraction and label generation. | Open |
+| Full P6 closure is overread as source approval, real-data approval or platform-data approval. | Data / Compliance | High | Medium | `02AA` keeps real Tenhou, real haifu, external logs, platform data, accounts and source-specific real-data approval unapproved. | Open |
+| Full P6 closure evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `02AA` evidence grade is final full-closure review evidence only with explicit non-evidence boundaries. | Open |
+| Post-full-P6 transition review drifts into P7 implementation. | Governance / Process | High | Medium | `10_NEXT` requires the next task to remain docs-only and to avoid production code, tests, fixtures, parser, ingestion, training, self-play, league and model-strength claims. | Open |
+
 ## 2026-06-07 — P6 risk-register and source-rights consistency review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

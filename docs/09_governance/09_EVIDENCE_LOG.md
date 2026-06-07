@@ -8,6 +8,60 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-07 — P6 final full closure review
+
+- Type: internal documentation / P6 final full-closure review evidence.
+- Stage: P6 data system / docs-only final full P6 closure review gate.
+- Added review document:
+  - `docs/02_data_system/02AA_FINAL_FULL_P6_CLOSURE_REVIEW.md`
+- Reviewed chain:
+  - `docs/02_data_system/02A_DATA_SOURCES.md` through
+    `docs/02_data_system/02Z_FULL_P6_RISK_REGISTER_AND_SOURCE_RIGHTS_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`
+  - `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
+  - `docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md`
+  - accepted synthetic/local minimal replay schema artifacts.
+- Closure decision:
+  - `Full P6 can close`.
+- Accepted closure boundary:
+  - docs/governance/source-rights planning.
+  - accepted synthetic/local minimal replay schema and project-authored
+    synthetic fixture smoke implementation.
+  - deferred/blocked/later-stage inventory.
+- Planning decision:
+  - The selected next task is:
+    `Run post-full-P6 transition review before defining any P7 task.`
+  - P7-P12 entry remains unapproved.
+  - P7 first task remains unapproved.
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P6 final full-closure review evidence only.
+- Not evidence of:
+  - P7-P12 entry approval.
+  - P7 first-task approval.
+  - new implementation approval.
+  - source approval.
+  - real-data approval.
+  - data ingestion.
+  - parser.
+  - dataset reader.
+  - feature extraction.
+  - label generation.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-07 — P6 risk-register and source-rights consistency review before final closure
 
 - Type: internal documentation / P6 risk-register and source-rights

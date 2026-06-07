@@ -1,5 +1,35 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.62
+
+- Ran the final full P6 closure review gate.
+- Added `docs/02_data_system/02AA_FINAL_FULL_P6_CLOSURE_REVIEW.md`.
+- The review confirms:
+  - the full P6 review chain from `02A` through `02Z` is complete.
+  - C1-C27 final full P6 closure criteria pass.
+  - `02Y` finalized handoff / evidence index.
+  - `02Z` found no risk/source-rights blocker.
+  - required validation commands passed.
+  - governance documents are synchronized.
+  - no unresolved blocker remains.
+- Decision:
+  `Full P6 can close`.
+- Accepted closure boundary:
+  docs/governance/source-rights planning, accepted synthetic/local minimal
+  replay schema and project-authored synthetic fixture smoke implementation,
+  and deferred/blocked/later-stage inventory.
+- New `10_NEXT` first item:
+  `Run post-full-P6 transition review before defining any P7 task.`
+- Full P6 closure is not P7-P12 entry approval and is not P7 first-task
+  approval.
+- No production code, tests, fixtures, replay schema code, parser, dataset
+  reader, ingestion, feature extraction, label generation, CLI, broad file
+  ingestion, model-output integration, real Tenhou, real haifu, external logs,
+  platform data, OpenAI / LLM / model API call, third-party binary call,
+  metric implementation, registry code change, promotion criteria change,
+  training, tuning, self-play, league, runner behavior, P7-P12 work or
+  model-strength claim was added.
+
 ## 2026-06-07 — v2.61
 
 - Reviewed full P6 risk register and source-rights inventory consistency

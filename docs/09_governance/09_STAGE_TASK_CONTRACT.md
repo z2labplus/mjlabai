@@ -2,11 +2,8 @@
 
 ## Current stage
 
-P6 data-system final full P6 closure review gate after accepted current-scope
-closure, post-current-scope transition review, `02U` roadmap / inventory
-definition, `02V` roadmap / inventory review, `02W` closure criteria
-definition, `02X` criteria review, `02Y` handoff / evidence index finalization
-and `02Z` risk register / source-rights consistency review. P5 evaluation foundation is
+Post-full-P6 transition review before defining any P7 task after `02AA`
+final full P6 closure review. P5 evaluation foundation is
 closed for the current synthetic/local scope; general P6 implementation is not open, and the exact
 minimal replay schema / project-authored synthetic fixture task approved by
 `02N` is implemented, reviewed with no blocker and accepted as current-scope
@@ -85,10 +82,11 @@ P6 full closure criteria after roadmap and remaining scope review = defined in `
 P6 full closure criteria review after roadmap and remaining scope review = complete in `02X`; review can close with no blocker
 P6 full handoff and evidence index finalization after closure criteria review = complete in `02Y`; full P6 remains open and P7-P12 remains unapproved
 P6 full risk register and source-rights inventory consistency review before final closure = complete in `02Z`; review can close with no blocker for final full P6 closure review
-Full P6 = not closed
+P6 final full closure review = complete in `02AA`; Full P6 can close for the documented P6 data-system scope only
+Full P6 = closed for documented P6 data-system scope only
 P7-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = run final full P6 closure review gate
+Next = run post-full-P6 transition review before defining any P7 task
 ```
 
 ## AI role
@@ -97,14 +95,15 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Bridge from the closed P5 evaluation foundation into safe P6 data-system
-implementation by keeping each step bounded, synthetic/local and reviewed
-before any broader data-system work.
+Bridge from the closed documented P6 data-system scope into a safe
+post-full-P6 transition review by keeping P7-P12 unapproved until separate
+scope, entry criteria, risk review and first-task approval exist.
 
-This supports the north-star target by ensuring that future replay, feature,
-label and dataset work has explicit scope, entry criteria, provenance
-guardrails, rights/compliance requirements and first-task boundaries before any
-supervised learning, RL, search or LuckyJ validation work begins.
+This supports the north-star target by ensuring that any future supervised
+learning, RL, search, league or LuckyJ validation work starts only after the
+data-system closure state is understood and the next stage has explicit scope,
+entry criteria, provenance guardrails, rights/compliance requirements and
+first-task boundaries.
 
 ## Inputs
 
@@ -195,4 +194,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Run final full P6 closure review gate.
+Run post-full-P6 transition review before defining any P7 task.

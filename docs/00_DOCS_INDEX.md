@@ -82,6 +82,7 @@ docs/02_data_system/02W_FULL_P6_CLOSURE_CRITERIA_AFTER_ROADMAP_AND_REMAINING_SCO
 docs/02_data_system/02X_FULL_P6_CLOSURE_CRITERIA_REVIEW_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md
 docs/02_data_system/02Y_FULL_P6_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md
 docs/02_data_system/02Z_FULL_P6_RISK_REGISTER_AND_SOURCE_RIGHTS_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md
+docs/02_data_system/02AA_FINAL_FULL_P6_CLOSURE_REVIEW.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -331,6 +332,16 @@ integration, third-party artifacts, training, self-play, league and P7-P12
 unapproved. The review can close with no risk/source-rights blocker for the
 final full P6 closure review gate. It is not full P6 closure, not P7-P12
 approval, not source approval and not model-strength evidence.
+
+`docs/02_data_system/02AA_FINAL_FULL_P6_CLOSURE_REVIEW.md`
+runs the final full P6 closure review gate. It records that full P6 can close
+for the documented P6 data-system scope: docs/governance/source-rights
+planning, accepted synthetic/local minimal replay schema and project-authored
+synthetic fixture smoke implementation, and deferred/blocked/later-stage
+inventory. It is not P7-P12 entry approval, not P7 first-task approval, not
+new implementation approval, not real-data/source/ingestion approval and not
+model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ `10.68` or
+candidate-promotion evidence.
 
 ## Algorithm discovery and racing-funnel files
 
