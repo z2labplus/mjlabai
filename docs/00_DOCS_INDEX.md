@@ -76,6 +76,7 @@ docs/02_data_system/02Q_P6_NEXT_CURRENT_SCOPE_DATA_SYSTEM_TASK_AFTER_MINIMAL_REP
 docs/02_data_system/02R_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md
 docs/02_data_system/02S_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md
 docs/02_data_system/02T_FINAL_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_REVIEW.md
+docs/02_data_system/02U_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -270,6 +271,14 @@ current-scope closure review evidence only: full P6 is not closed, P7-P12
 entry is not approved, and parser / dataset-reader / ingestion / feature /
 label / real-data / model-output / CLI / training / self-play / league work
 remains unapproved.
+
+`docs/02_data_system/02U_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY.md`
+defines the full P6 closure roadmap and remaining scope inventory after
+accepted current-scope closure. It classifies remaining items as required,
+deferred, blocked, later-stage or explicitly out of scope; selects a docs-only
+roadmap review gate as the next task; and keeps full P6 open, P7-P12
+unapproved and implementation / real-data / parser / reader / ingestion /
+feature / label work unapproved.
 
 ## Algorithm discovery and racing-funnel files
 

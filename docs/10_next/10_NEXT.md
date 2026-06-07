@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Define full P6 closure roadmap and remaining scope inventory after current-scope closure.
+- [ ] Review full P6 closure roadmap and remaining scope inventory after current-scope closure.
 
 Current execution charter:
 
@@ -16,7 +16,7 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only full-P6 roadmap / remaining-scope inventory task.
+- This is a docs-only full-P6 roadmap / remaining-scope inventory review gate.
 - P5 is closed only for the current synthetic/local evaluation groundwork scope.
 - Accepted current-scope P6 is closed only for the synthetic/local minimal replay schema and project-authored synthetic fixture scope.
 - Full P6 is not closed.
@@ -36,6 +36,8 @@ Limits:
 - Do not implement parser, dataset reader, data ingestion, feature extraction, label generation, model-output integration, CLI or broad file ingestion.
 - Do not read real Tenhou, real haifu, external logs, platform data, accounts, sessions, cookies or tokens.
 - Do not run real-data, Tenhou, self-play, league, training, model-output integration, Akochan `system.exe`, `libai.so`, third-party binary or unknown model artifact commands.
+- Do not treat the roadmap / inventory definition as full P6 closure.
+- Do not treat the roadmap / inventory review as P7 execution or P7 entry approval.
 - Do not claim any P5 closure artifact, P6 planning artifact or P6 synthetic/local schema artifact is model-strength evidence, Tenhou evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
 - Required validation for the next task:
   - `git diff --check`
@@ -45,6 +47,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-06-07 Defined full P6 closure roadmap and remaining scope inventory after current-scope closure: added `docs/02_data_system/02U_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY.md`, listed the accepted current-scope P6 closed chain, classified full P6 remaining items as required / deferred / blocked / later-stage / out of scope, defined a conservative docs-only full P6 closure roadmap, identified required closure items, deferred items, blocked items and P7-P12 non-entry boundaries, and selected `Review full P6 closure roadmap and remaining scope inventory after current-scope closure` as the next docs-only review gate. Full P6 remains open, P7-P12 remain unapproved, and no implementation, production code, tests, fixtures, replay schema code, parser, dataset reader, ingestion, feature extraction, label generation, real data, model-output integration, CLI, training, tuning, self-play, league, runner behavior or model-strength claim was added.
 - [x] 2026-06-07 Completed post-current-scope P6 transition review: added `docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md`, confirmed P5 is closed only for the current synthetic/local evaluation groundwork scope, confirmed accepted current-scope P6 is closed only for the synthetic/local minimal replay schema and project-authored fixture scope, kept full P6 open and P7-P12 unapproved, reviewed candidate next directions, selected `Define full P6 closure roadmap and remaining scope inventory after current-scope closure` as the next docs-only task, and recorded allowed / forbidden scope, validation commands, planning decision and evidence grade. No production code, tests, fixtures, replay schema code, parser, dataset reader, ingestion, feature extraction, label generation, CLI, broad file ingestion, model-output integration, real Tenhou, real haifu, external logs, platform data, training, tuning, self-play, league, runner behavior, P7-P12 work or model-strength claim was added.
 - [x] 2026-06-07 Ran final P6 current-scope data-system closure review gate: added `docs/02_data_system/02T_FINAL_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_REVIEW.md`, reviewed the P6 current-scope chain from scope/source inventory through minimal implementation, acceptance, closure criteria and closure criteria review, confirmed validation and governance synchronization, and recorded the decision `Current-scope P6 can close` for the accepted synthetic/local minimal replay schema and project-authored synthetic fixture scope only. This is P6 final current-scope data-system closure review evidence only; it does not close full P6, approve P7-P12 entry, approve new implementation, parser, dataset reader, ingestion, feature extraction, label generation, real data, model-output integration, CLI, training, self-play, league or model-strength claims. Validation passed `git diff --check`, `python3 -m unittest tests/data/test_replay_schema.py` and `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`.
 - [x] 2026-06-07 Reviewed P6 current-scope data-system closure criteria after minimal replay schema acceptance: added `docs/02_data_system/02S_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md`, reviewed `02R` scope, accepted/not-accepted scope, C1-C25 closure criteria, exit readiness checklist, required remaining items, deferred items, P7-P12 non-entry conditions, governance synchronization and validation. Review decision: `Review can close`; no blocker found. This is P6 current-scope closure-criteria review evidence only; it does not close full P6, close current-scope P6, approve new implementation, parser, dataset reader, ingestion, feature extraction, label generation, real data, model-output integration, CLI, training, self-play, league, P7-P12 entry or model-strength claims. Validation passed `git diff --check`, `python3 -m unittest tests/data/test_replay_schema.py` and `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`.

@@ -1,5 +1,36 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.56
+
+- Defined the full P6 closure roadmap and remaining scope inventory after
+  accepted current-scope closure.
+- Added
+  `docs/02_data_system/02U_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY.md`.
+- The roadmap / inventory records:
+  - accepted current-scope P6 is closed only for the synthetic/local minimal
+    replay schema and project-authored fixture scope.
+  - full P6 remains open.
+  - P7-P12 entry remains unapproved.
+  - remaining P6 items are classified as required, deferred, blocked,
+    later-stage or explicitly out of scope.
+  - required full-P6 closure path is docs-only: roadmap review, closure
+    criteria definition / review, handoff / evidence finalization, risk /
+    source-rights consistency review and final full-P6 closure review.
+  - blocked/deferred items include real data, parser, dataset reader,
+    ingestion, feature extraction, label generation, model-output integration,
+    CLI and later-stage training / self-play / league work.
+  - the selected next task is:
+    `Review full P6 closure roadmap and remaining scope inventory after
+    current-scope closure`.
+- Updated handoff, docs index, stage contract, milestones, backlog, technical
+  plan, decision record, evidence log, risk register and `10_NEXT`.
+- No production code, tests, fixtures, replay schema code, parser, dataset
+  reader, ingestion, feature extraction, label generation, CLI, broad file
+  ingestion, model-output integration, real Tenhou, real haifu, external logs,
+  platform data, OpenAI / LLM / model API call, third-party binary call,
+  training, tuning, self-play, league, runner behavior, full P6 closure,
+  P7-P12 work or model-strength claim was added.
+
 ## 2026-06-07 — v2.55
 
 - Completed the post-current-scope P6 transition review.

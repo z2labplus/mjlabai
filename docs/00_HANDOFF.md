@@ -90,6 +90,7 @@ The minimal P6 replay schema and project-authored synthetic fixture implementati
 `docs/02_data_system/02S_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_REPLAY_SCHEMA_ACCEPTANCE.md` reviews the `02R` closure criteria and finds no blocker. The review confirms `02R` scope is correct, closure criteria are sufficient, the exit readiness checklist is auditable, required remaining items are correctly narrowed, deferred items are correctly excluded from current-scope closure, P7-P12 non-entry conditions are sufficient and validation passes. This is closure-criteria review evidence only: it does not close full P6, does not close current-scope P6, does not approve new implementation and does not approve P7-P12 entry.
 `docs/02_data_system/02T_FINAL_P6_CURRENT_SCOPE_DATA_SYSTEM_CLOSURE_REVIEW.md` runs the final P6 current-scope data-system closure review gate. It records that current-scope P6 can close for the accepted synthetic/local minimal replay schema and project-authored synthetic fixture scope only. Full P6 is not closed, P7-P12 entry is not approved and parser / reader / ingestion / feature / label / real-data / model-output / CLI / training / self-play / league work remains unapproved.
 `docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md` completes the post-current-scope P6 transition review. It confirms that accepted current-scope P6 is closed only for the synthetic/local minimal scope, full P6 remains open and P7-P12 remain unapproved. The next project task is docs-only: define a full P6 closure roadmap and remaining scope inventory after current-scope closure. It must not add production code, tests, fixtures, data files, parser / reader / ingestion behavior, feature / label behavior, model output, CLI, broad ingestion, third-party artifact, overclaim or P7-P12 drift.
+`docs/02_data_system/02U_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY.md` defines the full P6 closure roadmap and remaining scope inventory after accepted current-scope closure. It classifies remaining P6 items as required, deferred, blocked, later-stage or explicitly out of scope; identifies docs-only closure criteria / review / evidence / risk / final closure gates as the required path; and keeps full P6 open, P7-P12 unapproved, and implementation / real-data / parser / reader / ingestion / feature / label work unapproved. The next task is a docs-only review of this roadmap / inventory.
 ```
 
 ## Current methodology
@@ -178,7 +179,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define full P6 closure roadmap and remaining scope inventory after
+Review full P6 closure roadmap and remaining scope inventory after
 current-scope closure.
 The exact minimal implementation approved by `02N` is complete, reviewed in
 `02O` with no blocker and accepted in `02P` as current-scope complete. `02Q`
@@ -187,10 +188,10 @@ step. `02R` defines those criteria without closing full P6 or current-scope
 P6. `02S` reviews the criteria with no blocker, but it also does not close
 full P6 or current-scope P6. `02T` closes only the accepted current-scope P6
 synthetic/local minimal replay schema and project-authored synthetic fixture
-scope. `12C` completes the post-current-scope transition review and selects
-the next docs-only task. Full P6 remains open, P7-P12 remains unapproved. The
-next task must only define a full P6 closure roadmap / remaining inventory and
-must not execute implementation or expand into real Tenhou, real haifu,
+scope. `12C` completes the post-current-scope transition review and `02U`
+defines the full P6 closure roadmap / remaining inventory. Full P6 remains
+open, P7-P12 remains unapproved. The next task must only review that roadmap /
+inventory and must not execute implementation or expand into real Tenhou, real haifu,
 external logs, platform data, parser, dataset reader, ingestion, feature
 extraction, label generation, training, self-play, league evaluation, artifact
 upload, broad adapter work, CLI, broad file ingestion, model-output

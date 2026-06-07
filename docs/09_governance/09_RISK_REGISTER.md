@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 full-closure roadmap and remaining-scope inventory risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The roadmap / inventory definition is mistaken for full P6 closure. | Governance / Stage Control | High | Medium | `02U`, evidence log, handoff and `10_NEXT` state that full P6 remains open and that the next task is only a docs-only review gate. | Open |
+| The roadmap / inventory definition is mistaken for P7-P12 entry approval. | Governance / Stage Control | High | Medium | `02U` keeps P7-P12 unapproved and requires separate transition review, scope, entry criteria, risk review and first-task approval. | Open |
+| Deferred parser, dataset reader, ingestion, feature extraction or label generation items are treated as approved implementation. | Governance / Scope | High | Medium | `02U` classifies these as deferred or blocked and states no implementation can proceed without a future explicit `10_NEXT` task and approval. | Open |
+| Blocked real Tenhou, real haifu, external-log or platform-data categories are interpreted as source approval. | Data / Compliance | High | Medium | `02U` lists these as blocked until source-specific lawful rights, privacy, storage and platform reviews are complete. | Open |
+| Roadmap evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `02U` and the evidence log classify it as roadmap / inventory evidence only with explicit non-evidence boundaries. | Open |
+
 ## 2026-06-07 — P6 post-current-scope transition review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

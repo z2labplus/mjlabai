@@ -34,10 +34,10 @@ P0 / P1 / P2 are basically established.
 P3 baseline reproducibility produced current Mortal/Akochan funnel evidence.
 P5 evaluation groundwork is closed for the current synthetic/local scope.
 The project is in P6 data-system docs-only full-closure roadmap / remaining
-scope inventory planning after the exact approved replay schema / synthetic
+scope inventory review after the exact approved replay schema / synthetic
 fixture implementation was implemented, reviewed, accepted as current-scope
-complete, closed for the accepted synthetic/local minimal scope only, and
-reviewed in a post-current-scope transition gate.
+complete, closed for the accepted synthetic/local minimal scope only, reviewed
+in a post-current-scope transition gate and inventoried in `02U`.
 ```
 
 The exact minimal P6 replay schema and project-authored synthetic fixture
@@ -60,9 +60,12 @@ P6 remains open, and P7-P12 remains unapproved.
 `docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md`
 completes the post-current-scope transition review and selects the next
 docs-only task: define a full P6 closure roadmap and remaining scope inventory.
-That next step must not expand into parser, dataset reader, data ingestion,
-feature extraction, label generation, training, self-play, league, real Tenhou,
-external-log ingestion or P7-P12 work.
+`docs/02_data_system/02U_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY.md`
+defines that roadmap / inventory and selects the next docs-only review gate:
+review the full P6 closure roadmap and remaining scope inventory after
+current-scope closure. That next step must not expand into parser, dataset
+reader, data ingestion, feature extraction, label generation, training,
+self-play, league, real Tenhou, external-log ingestion or P7-P12 work.
 
 ## Guardrail
 
