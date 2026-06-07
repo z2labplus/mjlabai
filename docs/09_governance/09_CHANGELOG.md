@@ -1,5 +1,44 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.47
+
+- Prepared the approval decision for the minimal P6 replay schema and
+  project-authored synthetic fixture implementation task.
+- Added
+  `docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md`.
+- The approval decision records:
+  - purpose and limits of the docs-only approval gate.
+  - approval options A / B / C.
+  - approval criteria review across `02A` through `02M`.
+  - decision: `Approved for next minimal implementation task`.
+  - exact allowed implementation files:
+    `src/mjlabai/data/replay_schema.py`,
+    `tests/fixtures/data/synthetic_replay_smoke.json`,
+    `tests/data/test_replay_schema.py` and
+    `tests/data/test_synthetic_replay_fixture_schema.py`.
+  - exact allowed future scope: one minimal replay schema module, one
+    project-authored synthetic/local fixture, two minimal tests and directly
+    related docs/governance synchronization.
+  - forbidden future expansion: real Tenhou, real haifu, external logs,
+    platform data, parser, dataset reader, ingestion, feature extraction,
+    label generation, CLI, model-output integration, training, self-play,
+    league, P7-P12 and model-strength claims.
+  - future validation commands:
+    `git diff --check`,
+    `python3 -m unittest tests/data/test_replay_schema.py` and
+    `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`.
+  - rollback and stop conditions.
+- Updated `02L`, `02M`, handoff, docs index, stage contract, milestones,
+  backlog, technical plan, evidence log, risk register, decision record and
+  `10_NEXT`.
+- No production code, tests, fixtures, replay schema code, synthetic replay
+  fixture, dataclass / pydantic / JSON schema, parser, dataset reader, feature
+  extraction, label generation, data ingestion, CLI, broad ingestion,
+  model-output integration, real Tenhou, real haifu, external-log ingestion,
+  platform-data ingestion, OpenAI / LLM / model API call, third-party binary
+  call, training, tuning, self-play, league, runner behavior, P7-P12 work or
+  model-strength claim was added.
+
 ## 2026-06-07 — v2.46
 
 - Reviewed the P6 minimal replay schema and synthetic fixture implementation

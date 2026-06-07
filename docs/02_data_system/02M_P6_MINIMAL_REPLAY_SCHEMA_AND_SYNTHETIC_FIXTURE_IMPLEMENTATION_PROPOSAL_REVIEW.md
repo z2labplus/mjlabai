@@ -414,7 +414,8 @@ Governance synchronization is required and sufficient.
 ## Review Decision
 
 ```text
-Review can close, but P6 implementation remains closed.
+Review can close; P6 implementation remained closed until the later 02N
+approval decision.
 ```
 
 No blocker was found in the `02L` proposal. The proposal is sufficiently
@@ -453,15 +454,18 @@ Still closed after this review:
 The next task should be:
 
 ```text
-Prepare approval decision for minimal P6 replay schema and synthetic fixture implementation task.
+Implement minimal P6 replay schema and project-authored synthetic fixture only.
 ```
 
-That next task must remain docs-only. It may decide whether to approve the
-minimal implementation task, but it must not implement replay schema code,
-fixture files, tests, dataclasses, pydantic models, JSON schema, parsers,
-dataset readers, ingestion, feature extraction, label generation, CLI,
-model-output integration, real data access, training, self-play, league,
-runner behavior or P7-P12 work.
+`docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md`
+records that the approval-decision gate is complete and that the next task is
+approved only for the exact minimal implementation scope.
+
+The next task must stay limited to the exact allowed files, exact allowed
+scope, forbidden expansions, validation commands and stop conditions in
+`02N`. It must not add parser, dataset reader, ingestion, feature extraction,
+label generation, CLI, model-output integration, real data access, training,
+self-play, league, runner behavior or P7-P12 work.
 
 ## Evidence Grade
 

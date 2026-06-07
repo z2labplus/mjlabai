@@ -398,7 +398,8 @@ reviews this proposal before code.
 Review decision:
 
 ```text
-Review can close, but P6 implementation remains closed.
+Review can close; P6 implementation remained closed until the later 02N
+approval decision.
 ```
 
 The review found no blocker and records that the proposal is sufficiently
@@ -406,17 +407,34 @@ bounded for a later approval-decision task. It does not approve replay schema
 implementation, fixture implementation, tests, parser, dataset reader, data
 ingestion, feature extraction or label generation.
 
+## Approval Decision Status
+
+`docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md`
+prepares the approval decision for this proposal after the `02M` review.
+
+Decision:
+
+```text
+Approved for next minimal implementation task.
+```
+
+The approval applies only to the next exact minimal implementation task and
+the exact files / forbidden expansions recorded in `02N`. It does not approve
+real Tenhou, real haifu, external logs, platform data, parser, dataset reader,
+data ingestion, feature extraction, label generation, CLI, model-output
+integration, training, self-play, league or P7-P12.
+
 ## Next Task Recommendation
 
 ```text
-Prepare approval decision for minimal P6 replay schema and synthetic fixture implementation task.
+Implement minimal P6 replay schema and project-authored synthetic fixture only.
 ```
 
-That next task must be a docs-only approval-decision gate. It must not
-implement replay schema code, fixture files, tests, parser, dataset reader,
-data ingestion, feature extraction, label generation, real-data access,
-model-output integration, CLI, training, self-play, league, runner behavior or
-P7-P12.
+That next task is the only implementation approved by `02N`. It must stay
+within the exact allowed files and forbidden expansions in the approval
+decision, and must not add parser, dataset reader, data ingestion, feature
+extraction, label generation, real-data access, model-output integration, CLI,
+training, self-play, league, runner behavior or P7-P12.
 
 ## Evidence Grade
 

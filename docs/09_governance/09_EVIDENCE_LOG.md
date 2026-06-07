@@ -8,6 +8,66 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation approval decision
+
+- Type: internal documentation / P6 implementation approval-decision evidence.
+- Stage: P6 data-system approval planning.
+- Added approval decision document:
+  - `docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md`.
+- Reviewed chain:
+  - `docs/02_data_system/02A_DATA_SOURCES.md`
+  - `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md`
+  - `docs/02_data_system/02B_REPLAY_SCHEMA.md`
+  - `docs/02_data_system/02E_P6_REPLAY_SCHEMA_DOCUMENTATION_BOUNDARY_REVIEW.md`
+  - `docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md`
+  - `docs/02_data_system/02G_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY_REVIEW.md`
+  - `docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md`
+  - `docs/02_data_system/02I_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW.md`
+  - `docs/02_data_system/02J_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY.md`
+  - `docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md`
+  - `docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md`
+  - `docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md`
+- Decision:
+  - Approved for next minimal implementation task.
+  - Approval is limited to the exact next task:
+    `Implement minimal P6 replay schema and project-authored synthetic fixture only`.
+  - Exact allowed implementation files:
+    `src/mjlabai/data/replay_schema.py`,
+    `tests/fixtures/data/synthetic_replay_smoke.json`,
+    `tests/data/test_replay_schema.py` and
+    `tests/data/test_synthetic_replay_fixture_schema.py`.
+  - Directly related docs/governance synchronization is allowed.
+- Evidence grade:
+  - P6 minimal replay schema and synthetic fixture implementation
+    approval-decision evidence only.
+- Not evidence of:
+  - P6 implementation execution.
+  - replay schema implementation.
+  - fixture implementation.
+  - test implementation.
+  - data ingestion.
+  - dataset reader.
+  - parser.
+  - feature extraction.
+  - label generation.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - source approval.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - P7-P12 entry.
+- Next task:
+  - Implement minimal P6 replay schema and project-authored synthetic fixture
+    only.
+
 ### 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation proposal review
 
 - Type: internal documentation / P6 planning proposal-review evidence.

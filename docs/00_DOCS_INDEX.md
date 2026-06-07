@@ -58,6 +58,7 @@ docs/02_data_system/02J_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PR
 docs/02_data_system/02K_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW.md
 docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md
 docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md
+docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -176,6 +177,15 @@ dataset-reader work, feature extraction, label generation and P7-P12 remain
 closed. It is proposal-review evidence only, not implementation approval,
 source approval, ingestion evidence, model-strength evidence or LuckyJ
 comparison evidence.
+
+`docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md`
+prepares the approval decision after the `02M` review. It approves only the
+next exact minimal implementation task, limited to the named replay schema
+module, one project-authored synthetic/local fixture, two minimal tests and
+governance synchronization. It does not execute implementation and does not
+approve real Tenhou, real haifu, external logs, platform data, parser /
+dataset-reader work, ingestion, feature extraction, label generation, CLI,
+model-output integration, training, self-play, league or P7-P12.
 
 ## Algorithm discovery and racing-funnel files
 

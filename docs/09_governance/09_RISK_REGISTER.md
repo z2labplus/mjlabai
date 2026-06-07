@@ -8,6 +8,19 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation approval-decision risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The approval decision is mistaken for broad P6 implementation approval. | Governance / Stage Control | High | Medium | `02N` and `10_NEXT` approve only the exact next minimal implementation task and exact file list. | Open |
+| The approval decision is mistaken for implementation execution evidence. | Governance / Evidence | High | Medium | `02N` evidence grade states approval-decision evidence only; no code, tests or fixtures were created in this task. | Open |
+| The next task expands beyond the four exact implementation files. | Governance / Scope | High | Medium | `02N` and `10_NEXT` name exact allowed files and require stop if unapproved files appear. | Open |
+| Minimal schema work expands into parser, dataset reader, ingestion, feature extraction or label generation. | Data / Engineering | High | Medium | `02N` forbidden future expansion and stop conditions keep those classes closed. | Open |
+| Synthetic fixture implementation is mistaken for real Tenhou, real haifu, external-log or platform-data approval. | Data / Compliance | High | Medium | `02N` allows only project-authored synthetic/local fixture work and keeps all real / external / platform sources blocked. | Open |
+| Validation tests become broad file ingestion, source approval or real-data checks. | Data / Scope | High | Medium | `02N` limits tests to the approved synthetic fixture and schema behavior only. | Open |
+| Approval evidence is overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or candidate-promotion evidence. | Evaluation / Governance | High | Medium | `02N`, evidence log and `10_NEXT` repeat explicit non-evidence boundaries. | Open |
+| P6 approval planning drifts into P7-P12. | Governance / Stage Control | High | Medium | `02N`, stage contract and `10_NEXT` keep P7-P12, training, self-play, league and runner behavior closed. | Open |
+
 ## 2026-06-07 — P6 minimal replay schema and synthetic fixture implementation proposal review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

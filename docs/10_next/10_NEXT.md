@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Prepare approval decision for minimal P6 replay schema and synthetic fixture implementation task.
+- [ ] Implement minimal P6 replay schema and project-authored synthetic fixture only.
 
 Current execution charter:
 
@@ -26,28 +26,47 @@ Limits:
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
 - P5 is closed for the current synthetic/local evaluation groundwork scope.
 - The post-P5 transition review is complete.
-- The P6 data-system scope, entry criteria and first task are defined for planning only.
-- P6 implementation remains closed.
+- The P6 data-system scope, entry criteria and first task are defined.
+- General P6 implementation remains closed; only the next exact minimal replay schema and project-authored synthetic fixture task is approved.
 - The P6 data-source provenance and rights inventory is defined and reviewed before replay schema implementation.
 - The P6 data-source provenance and rights inventory review found no blocker.
 - The P6 replay schema documentation boundary is defined after source inventory review.
 - The P6 replay schema documentation boundary review found no blocker and can close.
-- Replay schema implementation remains closed.
+- Replay schema implementation is approved only for `src/mjlabai/data/replay_schema.py` in the next exact minimal task.
 - The P6 synthetic/local replay fixture boundary is defined before schema implementation.
 - The P6 synthetic/local replay fixture boundary review found no blocker and can close.
 - The P6 replay schema and fixture implementation readiness checklist is defined before code.
 - The P6 replay schema and fixture implementation readiness checklist review found no blocker and can close.
-- Replay fixture implementation remains closed.
+- Replay fixture implementation is approved only for `tests/fixtures/data/synthetic_replay_smoke.json` in the next exact minimal task.
 - The P6 replay schema and synthetic fixture implementation proposal boundary is defined for review before code.
 - The P6 replay schema and synthetic fixture implementation proposal boundary review found no blocker and can close.
 - The P6 minimal replay schema and synthetic fixture implementation proposal is prepared in `docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md`.
 - The P6 minimal replay schema and synthetic fixture implementation proposal review is complete in `docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md`.
-- The proposal review found no blocker and can close, but P6 implementation remains closed.
-- The next task is a docs-only approval-decision gate. Do not execute P6 implementation.
+- The P6 minimal replay schema and synthetic fixture implementation approval decision is complete in `docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md`.
+- The approval decision is `Approved for next minimal implementation task`.
+- This is the only implementation allowed by the current `10_NEXT`.
+- The next task may create or modify only these implementation files:
+  - `src/mjlabai/data/replay_schema.py`
+  - `tests/fixtures/data/synthetic_replay_smoke.json`
+  - `tests/data/test_replay_schema.py`
+  - `tests/data/test_synthetic_replay_fixture_schema.py`
+- The next task may synchronize only directly related docs/governance files, including handoff, docs index, `10_NEXT`, technical plan, evidence log, risk register, changelog, stage contract, backlog and milestones.
+- The next task may implement only:
+  - one minimal replay schema module.
+  - one project-authored synthetic/local replay fixture.
+  - one minimal replay schema unit test.
+  - one minimal synthetic fixture schema unit test.
+  - no-real-data / no-account-id / no-model-output / no-training-use assertions.
+  - JSON-safe serialization / validation helper if needed.
+  - docs, evidence, risk, handoff and `10_NEXT` synchronization.
+- The next task must use only Python standard library.
+- The next task must run:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Stop before commit if any unapproved file, real data, parser / reader / ingestion behavior, feature / label behavior, model-output path, CLI, broad ingestion, third-party artifact, validation failure, overclaim or P7-P12 drift appears.
 - Do not generate a P6-P12 implementation prompt.
-- Use only docs/governance and existing data-system planning context; do not read Tenhou accounts, online platforms or external logs.
-- Do not implement replay schema code or data-source ingestion in the next task.
-- Do not implement dataclasses, pydantic models, JSON schema, parsers or dataset readers in the next task.
+- Do not read Tenhou accounts, online platforms or external logs.
 - Do not treat replay schema boundary documentation as replay schema implementation approval.
 - Do not treat replay schema boundary review as replay schema implementation approval.
 - Do not treat synthetic/local replay fixture boundary documentation as replay fixture implementation approval.
@@ -62,7 +81,7 @@ Limits:
 - Do not add CLI, broad file ingestion, league harness, external-data readers or new model code.
 - Do not add production evaluator logic in the next task.
 - Do not add new production code, tests, fixtures, synthetic replay fixtures, replay schema code, dataclasses, pydantic models, JSON schema, parsers, dataset readers, data ingestion, feature extraction, label generation, CLI, benchmark expansion, latency measurement, fixed-position exact-match, metric implementation, registry code changes, model-output integration, broad file ingestion, evidence taxonomy definition changes or promotion criteria changes in the next task.
-- Do not treat the docs-only proposal or proposal review as implementation approval; the next task must prepare an approval decision before any code, test or fixture task.
+- Do not treat the docs-only proposal or proposal review as implementation approval; only `02N` approves the exact next minimal implementation task.
 - Do not connect P6 planning to model code, Akochan `system.exe`, third-party binaries, real Tenhou, real haifu, external logs or platform data.
 - Do not run self-play, match, `system.exe test`, training or real Tenhou commands.
 - Do not add model-output integration, broad file ingestion, new model code or latency measurement code.
@@ -70,14 +89,15 @@ Limits:
 - Do not read platform data or use model weights.
 - Do not upload or save `system.exe`, `libai.so`, `params/`, third-party source or other third-party build artifacts.
 - Do not claim any P5 closure artifact or P6 planning artifact is model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
-- Do not enter P6 implementation.
-- Do not approve implementation in the next task unless that task is explicitly an approval-decision document; even then, do not execute implementation.
-- Do not implement unless a later review explicitly sets a new first `10_NEXT` implementation task with exact allowed files and forbidden expansions.
+- Do not interpret this limited approval as approval for general P6 implementation.
+- Do not expand beyond the exact next minimal implementation task approved in `02N`.
+- Do not implement parser, dataset reader, data ingestion, feature extraction, label generation, CLI, broad file ingestion, model-output integration, metric implementation, registry code changes or promotion criteria changes.
 - Do not enter P7-P12.
 - Do not modify unrelated files.
 
 ## Completed
 
+- [x] 2026-06-07 Prepared approval decision for minimal P6 replay schema and synthetic fixture implementation task: added `docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md`, reviewed the 02A-02M approval criteria, selected `Approved for next minimal implementation task`, restricted the next task to `src/mjlabai/data/replay_schema.py`, `tests/fixtures/data/synthetic_replay_smoke.json`, `tests/data/test_replay_schema.py`, `tests/data/test_synthetic_replay_fixture_schema.py` and directly related docs/governance synchronization, and kept real Tenhou, real haifu, external logs, platform data, parsers, dataset readers, ingestion, feature extraction, label generation, CLI, model-output integration, training, self-play, league, P7-P12 and model-strength claims closed.
 - [x] 2026-06-07 Reviewed P6 minimal replay schema and synthetic fixture implementation proposal before code: added `docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md`, confirmed that the `02L` proposal scope is correct, candidate implementation classes and file candidates are sufficient and conservative, minimal replay schema / synthetic fixture / validation test candidate boundaries are narrow enough for a later approval decision, no blocker was found, and review can close while P6 implementation, replay schema implementation, fixture implementation, tests, data ingestion, dataset readers, parsers, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, training, self-play, league, P7-P12 and model-strength claims remain closed.
 - [x] 2026-05-28 Mortal F1 initial reproducibility audit: repository metadata and selected source/docs were inspected through the GitHub connector; local clone/build/minimal run were blocked by GitHub DNS, missing Rust/Cargo, missing Docker/conda/torch and missing model artifact.
 - [x] 2026-05-28 Mortal F1 blocker-resolution attempt: source tarball for commit `0cff2b52982be5b1163aa9a62fb01f03ce91e0d2` was downloaded through `codeload.github.com` with explicit host resolution and checksum `6531f46ba2f2b40a69528bf5362f9c89294ad72521aec4f59e208400c379e62c`; official gist evidence says there is currently no plan to release trained model parameters, so the official mjai inference sample was not run.

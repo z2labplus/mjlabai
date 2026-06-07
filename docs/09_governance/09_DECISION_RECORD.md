@@ -14,6 +14,81 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-07 — DR-0040 — Approve Next Minimal P6 Replay Schema And Synthetic Fixture Implementation Task
+
+Decision:
+
+```text
+Approve only the next exact minimal P6 replay schema and project-authored
+synthetic fixture implementation task.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- P6 data-system scope and entry criteria are defined for planning.
+- The P6 data-source provenance and rights inventory is defined and reviewed
+  with no blocker.
+- The P6 replay schema documentation boundary is defined and reviewed with no
+  blocker.
+- The P6 synthetic/local replay fixture boundary is defined and reviewed with
+  no blocker.
+- The P6 replay schema and fixture implementation readiness checklist is
+  defined and reviewed with no blocker.
+- The P6 replay schema and synthetic fixture implementation proposal boundary
+  is defined and reviewed with no blocker.
+- The P6 minimal replay schema and synthetic fixture implementation proposal
+  is prepared in `02L` and reviewed in `02M` with no blocker.
+
+Rationale:
+
+- All approval criteria in `02N` pass.
+- The proposed implementation is narrow enough to create the first tiny P6
+  data-system smoke artifact without introducing real sources, ingestion,
+  parser / reader work, feature extraction, label generation, model output or
+  later-stage execution.
+- Approving only the next exact implementation task prevents continued
+  docs-only drift while still keeping P7-P12 and real-data work closed.
+
+Consequences:
+
+- `docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md`
+  records the approval decision.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Implement minimal P6 replay schema and project-authored synthetic fixture only.`
+- The only approved implementation files are:
+  - `src/mjlabai/data/replay_schema.py`
+  - `tests/fixtures/data/synthetic_replay_smoke.json`
+  - `tests/data/test_replay_schema.py`
+  - `tests/data/test_synthetic_replay_fixture_schema.py`
+- Directly related docs/governance synchronization is allowed.
+- Real Tenhou, real haifu, external logs, platform data, parser, dataset
+  reader, ingestion, feature extraction, label generation, CLI, model-output
+  integration, training, self-play, league and P7-P12 remain unapproved.
+- The approval decision is not implementation execution evidence, not source
+  approval, not ingestion evidence, not model-strength evidence and not LuckyJ
+  comparison evidence.
+
+Linked docs:
+
+- `docs/02_data_system/02A_DATA_SOURCES.md`
+- `docs/02_data_system/02B_REPLAY_SCHEMA.md`
+- `docs/02_data_system/02F_P6_SYNTHETIC_LOCAL_REPLAY_FIXTURE_BOUNDARY.md`
+- `docs/02_data_system/02H_P6_REPLAY_SCHEMA_AND_FIXTURE_IMPLEMENTATION_READINESS_CHECKLIST.md`
+- `docs/02_data_system/02J_P6_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_BOUNDARY.md`
+- `docs/02_data_system/02L_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL.md`
+- `docs/02_data_system/02M_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_PROPOSAL_REVIEW.md`
+- `docs/02_data_system/02N_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_APPROVAL_DECISION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+```text
+Accepted
+```
+
 ## 2026-06-07 — DR-0039 — Close P6 Minimal Replay Schema and Synthetic Fixture Implementation Proposal Review
 
 Decision:
