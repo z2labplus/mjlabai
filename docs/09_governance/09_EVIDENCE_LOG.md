@@ -8,6 +8,67 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-07 — P6 risk-register and source-rights consistency review before final closure
+
+- Type: internal documentation / P6 risk-register and source-rights
+  consistency review evidence before final closure.
+- Stage: P6 data system / docs-only risk register and source-rights
+  inventory consistency review before final full P6 closure review.
+- Added review document:
+  - `docs/02_data_system/02Z_FULL_P6_RISK_REGISTER_AND_SOURCE_RIGHTS_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`
+- Reviewed primary artifacts:
+  - `docs/02_data_system/02A_DATA_SOURCES.md`
+  - `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md`
+  - `docs/09_governance/09_RISK_REGISTER.md`
+  - `docs/09_governance/09_EVIDENCE_LOG.md`
+- Reviewed closure context:
+  - `docs/02_data_system/02U_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY.md`
+  - `docs/02_data_system/02V_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW.md`
+  - `docs/02_data_system/02W_FULL_P6_CLOSURE_CRITERIA_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md`
+  - `docs/02_data_system/02X_FULL_P6_CLOSURE_CRITERIA_REVIEW_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md`
+  - `docs/02_data_system/02Y_FULL_P6_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+  - accepted synthetic/local minimal replay schema artifacts.
+- Review decision:
+  - `Review can close; no risk/source-rights blocker for final full P6 closure review.`
+- Planning decision:
+  - The selected next task is:
+    `Run final full P6 closure review gate.`
+  - Full P6 remains open until that later gate explicitly passes.
+  - P7-P12 entry remains unapproved.
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P6 risk-register and source-rights consistency review before final
+    closure evidence only.
+- Not evidence of:
+  - full P6 closure.
+  - P7-P12 entry approval.
+  - P7 scope approval.
+  - source approval.
+  - data ingestion.
+  - parser.
+  - dataset reader.
+  - feature extraction.
+  - label generation.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - account/session/cookie/token handling.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - third-party artifact approval.
+  - metric implementation or registry code change.
+  - promotion criteria change.
+  - training, tuning, self-play, league or runner behavior.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-07 — P6 full handoff and evidence index finalization
 
 - Type: internal documentation / P6 full-handoff and evidence-index

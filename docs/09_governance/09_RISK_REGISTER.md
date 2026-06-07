@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-07 — P6 risk-register and source-rights consistency review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Risk/source-rights consistency review is mistaken for full P6 closure. | Governance / Stage Control | High | Medium | `02Z`, evidence log, handoff and `10_NEXT` state that the review can close but full P6 remains open until a later final closure gate explicitly passes. | Open |
+| Risk/source-rights consistency review is mistaken for P7-P12 entry approval. | Governance / Stage Control | High | Medium | `02Z` and `10_NEXT` keep P7-P12 unapproved and require a later post-full-P6 transition review even if final closure passes. | Open |
+| The next final full P6 closure review drifts into implementation. | Governance / Scope | High | Medium | `02Z` and `10_NEXT` forbid production code, tests, fixtures, parser, reader, ingestion, feature extraction, label generation, CLI, model-output integration and real-data paths. | Open |
+| Consistent source inventory is overread as real-data, source-ingestion or platform-data approval. | Data / Compliance | High | Medium | `02Z` confirms real Tenhou, real haifu, external logs, platform data, accounts and source-specific real-data approval remain blocked or unapproved. | Open |
+| Consistent risk inventory is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `02Z` evidence grade is risk/source-rights consistency review evidence only with explicit non-evidence boundaries. | Open |
+
 ## 2026-06-07 — P6 full handoff and evidence index finalization risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

@@ -14,6 +14,74 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-07 — DR-0048 — Review Full P6 Risk And Source-Rights Consistency
+
+Decision:
+
+```text
+Close the full P6 risk-register and source-rights inventory consistency review
+with no blocker, and select a docs-only final full P6 closure review gate as
+the next task.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- Accepted current-scope P6 is closed only for the synthetic/local minimal
+  replay schema and project-authored fixture scope.
+- Full P6 remains open.
+- P7-P12 entry remains unapproved.
+- `02Y` finalized the full P6 handoff and evidence index after `02X`.
+- The remaining required item before final full P6 closure review was
+  risk-register and source-rights inventory consistency review.
+
+Rationale:
+
+- `02A` and `02D` continue to keep project-authored synthetic/local fixtures
+  separate from unapproved real Tenhou, real haifu, external-log, platform,
+  account, model-output and third-party artifact sources.
+- `09_RISK_REGISTER.md` covers overclaim, stage drift, implementation drift,
+  source-rights ambiguity, platform/account and third-party artifact risks.
+- `02U`-`02Y` consistently classify parser, dataset reader, ingestion, feature
+  extraction, label generation, CLI, model-output integration, real data,
+  training, self-play, league and P7-P12 as deferred, blocked, later-stage or
+  out of scope.
+- No risk/source-rights blocker was found for the final full P6 closure
+  review gate.
+
+Consequences:
+
+- `docs/02_data_system/02Z_FULL_P6_RISK_REGISTER_AND_SOURCE_RIGHTS_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`
+  records the review.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Run final full P6 closure review gate.`
+- Full P6 remains open until that later final closure review explicitly
+  passes.
+- P7-P12 entry remains unapproved.
+- No implementation, parser, dataset reader, ingestion, feature extraction,
+  label generation, real data, model-output integration, CLI, training,
+  self-play, league or P7-P12 work is approved.
+- This decision is not full P6 closure, P7-P12 entry approval, source
+  approval, data-ingestion approval, model-strength evidence, Tenhou ranked
+  evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/02_data_system/02Z_FULL_P6_RISK_REGISTER_AND_SOURCE_RIGHTS_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`
+- `docs/02_data_system/02Y_FULL_P6_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+- `docs/02_data_system/02A_DATA_SOURCES.md`
+- `docs/02_data_system/02D_P6_DATA_SOURCE_PROVENANCE_AND_RIGHTS_INVENTORY_REVIEW.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/10_next/10_NEXT.md`
+
+Status:
+
+```text
+Accepted review recorded.
+```
+
 ## 2026-06-07 — DR-0047 — Finalize Full P6 Handoff and Evidence Index
 
 Decision:

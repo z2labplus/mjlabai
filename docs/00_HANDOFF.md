@@ -95,6 +95,7 @@ The minimal P6 replay schema and project-authored synthetic fixture implementati
 `docs/02_data_system/02W_FULL_P6_CLOSURE_CRITERIA_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md` defines full P6 closure criteria after the roadmap / inventory and review. It records full-P6 closure scope, C1-C27 closure criteria, an exit readiness checklist, required remaining full-P6 closure items, deferred items, blocked items, later-stage / out-of-scope items and P7-P12 non-entry conditions. This is criteria-definition evidence only: full P6 remains open, P7-P12 entry remains unapproved, and parser / dataset reader / ingestion / feature extraction / label generation / real-data / model-output / CLI / training / self-play / league work remains unapproved. The next task is a docs-only review of these full P6 closure criteria.
 `docs/02_data_system/02X_FULL_P6_CLOSURE_CRITERIA_REVIEW_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md` reviews the `02W` full P6 closure criteria with no blocker. It confirms that the `02W` scope is correct, C1-C27 are sufficient and conservative, exit readiness is auditable, required remaining items are docs/review/closure-only, deferred / blocked / later-stage / out-of-scope classifications are safe, P7-P12 non-entry conditions are sufficient and governance is synchronized. This is criteria-review evidence only: full P6 remains open, P7-P12 entry remains unapproved, and parser / dataset reader / ingestion / feature extraction / label generation / real-data / model-output / CLI / training / self-play / league work remains unapproved. It selected docs-only full P6 handoff and evidence index finalization as the next task.
 `docs/02_data_system/02Y_FULL_P6_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md` finalizes the full P6 handoff and evidence index after `02X`. It records a finalization-ready full P6 handoff summary, an evidence index covering the P6 planning/review chain, accepted minimal implementation artifacts, validation and governance artifacts, evidence grade consistency, remaining required full-P6 items and the next risk / source-rights review scope. This is handoff / evidence-index finalization evidence only: full P6 remains open, P7-P12 entry remains unapproved, and parser / dataset reader / ingestion / feature extraction / label generation / real-data / model-output / CLI / training / self-play / league work remains unapproved. The next task is docs-only risk register and source-rights inventory consistency review before final closure review.
+`docs/02_data_system/02Z_FULL_P6_RISK_REGISTER_AND_SOURCE_RIGHTS_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md` reviews full P6 risk-register and source-rights inventory consistency before final closure review. It confirms that the source-rights inventory, risk register, evidence index and governance docs consistently keep real Tenhou, real haifu, external logs, platform data, accounts, third-party artifacts, parser / reader / ingestion, feature extraction, label generation, CLI, model-output integration, training, self-play, league and P7-P12 unapproved. Review decision: `Review can close; no risk/source-rights blocker for final full P6 closure review.` This is risk/source-rights consistency review evidence only: it does not close full P6, approve P7-P12 entry, approve source ingestion, approve real data, approve parser / reader / ingestion / feature / label work, approve CLI or model-output integration, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ `10.68` or candidate-promotion evidence. The next task is the docs-only final full P6 closure review gate.
 ```
 
 ## Current methodology
@@ -183,7 +184,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review full P6 risk register and source-rights inventory consistency before final closure review.
+Run final full P6 closure review gate.
 The exact minimal implementation approved by `02N` is complete, reviewed in
 `02O` with no blocker and accepted in `02P` as current-scope complete. `02Q`
 selected a docs-only closure-criteria task as the next bounded P6 data-system
@@ -198,15 +199,17 @@ docs-only review of those criteria. `02X` reviews those criteria with no
 blocker and selects full P6 handoff / evidence index finalization as the next
 docs-only task. `02Y` finalizes full P6 handoff / evidence index and selects
 risk register / source-rights inventory consistency review as the next
-docs-only task before final full P6 closure review. Full P6 remains open,
-P7-P12 remains unapproved. The next task must only review risk / source-rights
-consistency and must not execute implementation or expand into real Tenhou,
-real haifu, external logs, platform data, parser, dataset reader, ingestion,
-feature extraction, label generation, training, self-play, league evaluation,
-artifact upload, broad adapter work, CLI, broad file ingestion, model-output
-integration, latency measurement, fixed-position exact-match computation,
-metric implementation, registry code changes, promotion criteria changes,
-P7-P12 or model-strength claims.
+docs-only task before final full P6 closure review. `02Z` reviews that risk /
+source-rights consistency with no blocker for the final full P6 closure review
+gate. Full P6 remains open until that later gate explicitly passes, and
+P7-P12 remains unapproved. The next task must only run the final full P6
+closure review gate and must not execute implementation or expand into real
+Tenhou, real haifu, external logs, platform data, parser, dataset reader,
+ingestion, feature extraction, label generation, training, self-play, league
+evaluation, artifact upload, broad adapter work, CLI, broad file ingestion,
+model-output integration, latency measurement, fixed-position exact-match
+computation, metric implementation, registry code changes, promotion criteria
+changes, P7-P12 or model-strength claims.
 ```
 
 Latest Akochan F1 audit summary:
@@ -485,10 +488,10 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is a P6 data-system docs-only risk register and
-  source-rights inventory consistency review after `02Y` finalized the full P6
-  handoff and evidence index. Do not implement fixture files, tests, replay
-  schema code, parser, dataset reader, ingestion, feature extraction, label
-  generation, CLI, model-output integration, train, tune, self-play, league or
-  connect to real Tenhou.
+- Current next work is a P6 data-system docs-only final full P6 closure review
+  gate after `02Z` found no risk/source-rights blocker. Do not implement
+  fixture files, tests, replay schema code, parser, dataset reader, ingestion,
+  feature extraction, label generation, CLI, model-output integration, train,
+  tune, self-play, league, connect to real Tenhou or treat closure as P7-P12
+  entry approval.
 - Technical decisions from Web ChatGPT Pro must be written into Git + docs before becoming project facts.

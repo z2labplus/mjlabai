@@ -81,6 +81,7 @@ docs/02_data_system/02V_FULL_P6_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_RE
 docs/02_data_system/02W_FULL_P6_CLOSURE_CRITERIA_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md
 docs/02_data_system/02X_FULL_P6_CLOSURE_CRITERIA_REVIEW_AFTER_ROADMAP_AND_REMAINING_SCOPE_REVIEW.md
 docs/02_data_system/02Y_FULL_P6_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md
+docs/02_data_system/02Z_FULL_P6_RISK_REGISTER_AND_SOURCE_RIGHTS_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md
 ```
 
 `docs/02_data_system/02C_P6_DATA_SYSTEM_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -319,6 +320,17 @@ is handoff / evidence-index finalization evidence only: full P6 remains open,
 P7-P12 entry remains unapproved, and no parser, dataset reader, ingestion,
 feature extraction, label generation, real data, CLI, model-output
 integration, training, self-play, league or model-strength claim is approved.
+
+`docs/02_data_system/02Z_FULL_P6_RISK_REGISTER_AND_SOURCE_RIGHTS_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`
+reviews full P6 risk-register and source-rights inventory consistency before
+the final full P6 closure review. It confirms that source-rights inventory,
+risk register, evidence index and governance docs consistently keep real
+Tenhou, real haifu, external logs, platform data, accounts, parser / reader /
+ingestion, feature extraction, label generation, CLI, model-output
+integration, third-party artifacts, training, self-play, league and P7-P12
+unapproved. The review can close with no risk/source-rights blocker for the
+final full P6 closure review gate. It is not full P6 closure, not P7-P12
+approval, not source approval and not model-strength evidence.
 
 ## Algorithm discovery and racing-funnel files
 

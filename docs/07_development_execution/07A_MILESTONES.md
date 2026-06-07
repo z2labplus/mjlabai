@@ -79,9 +79,12 @@ index finalization as the next docs-only task.
 `docs/02_data_system/02Y_FULL_P6_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
 finalizes that handoff / evidence index and selects a docs-only risk register
 and source-rights inventory consistency review before final closure review.
-The next docs-only review must not expand into parser, dataset reader,
-data ingestion, feature extraction, label generation, training, self-play,
-league, real Tenhou, external-log ingestion or P7-P12 work.
+`docs/02_data_system/02Z_FULL_P6_RISK_REGISTER_AND_SOURCE_RIGHTS_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`
+reviews that risk / source-rights consistency with no blocker for the final
+full P6 closure review gate. The next docs-only review must not expand into
+parser, dataset reader, data ingestion, feature extraction, label generation,
+training, self-play, league, real Tenhou, external-log ingestion, P7-P12 work
+or model-strength claims.
 
 ## Guardrail
 

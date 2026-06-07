@@ -1,5 +1,38 @@
 # 09_CHANGELOG
 
+## 2026-06-07 — v2.61
+
+- Reviewed full P6 risk register and source-rights inventory consistency
+  before final closure review.
+- Added
+  `docs/02_data_system/02Z_FULL_P6_RISK_REGISTER_AND_SOURCE_RIGHTS_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`.
+- The review confirms:
+  - source-rights inventory status remains consistent across `02A`, `02D` and
+    the full-P6 closure chain.
+  - risk register coverage remains sufficient for overclaim, stage drift,
+    implementation drift, source-rights, platform/account and third-party
+    artifact risks.
+  - blocked real Tenhou, real haifu, external logs, platform data, account /
+    session / cookie / token data and third-party artifact categories remain
+    blocked.
+  - deferred parser, dataset reader, ingestion, feature extraction, label
+    generation, CLI and model-output integration remain unapproved.
+  - no risk/source-rights blocker was found for the final full P6 closure
+    review gate.
+  - review decision:
+    `Review can close; no risk/source-rights blocker for final full P6 closure review.`
+- New `10_NEXT` first item:
+  `Run final full P6 closure review gate.`
+- Full P6 remains open until that later final closure review explicitly passes.
+- P7-P12 entry remains unapproved.
+- No production code, tests, fixtures, replay schema code, parser, dataset
+  reader, ingestion, feature extraction, label generation, CLI, broad file
+  ingestion, model-output integration, real Tenhou, real haifu, external logs,
+  platform data, OpenAI / LLM / model API call, third-party binary call,
+  metric implementation, registry code change, promotion criteria change,
+  training, tuning, self-play, league, runner behavior, full P6 closure,
+  P7-P12 work or model-strength claim was added.
+
 ## 2026-06-07 — v2.60
 
 - Finalized full P6 handoff and evidence index after closure criteria review.

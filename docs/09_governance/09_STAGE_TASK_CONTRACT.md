@@ -2,11 +2,11 @@
 
 ## Current stage
 
-P6 data-system full-P6 risk register and source-rights inventory consistency
-review after accepted current-scope closure, post-current-scope transition
-review, `02U` roadmap / inventory definition, `02V` roadmap / inventory
-review, `02W` closure criteria definition, `02X` criteria review and `02Y`
-handoff / evidence index finalization. P5 evaluation foundation is
+P6 data-system final full P6 closure review gate after accepted current-scope
+closure, post-current-scope transition review, `02U` roadmap / inventory
+definition, `02V` roadmap / inventory review, `02W` closure criteria
+definition, `02X` criteria review, `02Y` handoff / evidence index finalization
+and `02Z` risk register / source-rights consistency review. P5 evaluation foundation is
 closed for the current synthetic/local scope; general P6 implementation is not open, and the exact
 minimal replay schema / project-authored synthetic fixture task approved by
 `02N` is implemented, reviewed with no blocker and accepted as current-scope
@@ -84,10 +84,11 @@ P6 full closure roadmap and remaining scope inventory review = complete in `02V`
 P6 full closure criteria after roadmap and remaining scope review = defined in `02W`; full P6 remains open and P7-P12 entry remains unapproved
 P6 full closure criteria review after roadmap and remaining scope review = complete in `02X`; review can close with no blocker
 P6 full handoff and evidence index finalization after closure criteria review = complete in `02Y`; full P6 remains open and P7-P12 remains unapproved
+P6 full risk register and source-rights inventory consistency review before final closure = complete in `02Z`; review can close with no blocker for final full P6 closure review
 Full P6 = not closed
 P7-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = review full P6 risk register and source-rights inventory consistency before final closure review
+Next = run final full P6 closure review gate
 ```
 
 ## AI role
@@ -194,4 +195,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review full P6 risk register and source-rights inventory consistency before final closure review.
+Run final full P6 closure review gate.
