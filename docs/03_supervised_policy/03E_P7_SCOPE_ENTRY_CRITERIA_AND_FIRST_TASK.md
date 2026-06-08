@@ -242,6 +242,12 @@ model-output integration, CLI, self-play, league or P8-P12 entry. The next
 task remains docs-only and moves to P7 supervised-learning data/source
 readiness inventory before implementation.
 
+`docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md`
+defines that inventory. It records that no source is currently approved for P7
+training, source ingestion, parser / reader / ingestion, feature extraction or
+label generation. It is inventory-definition evidence only, not source
+approval, training-data approval or implementation approval.
+
 ## Planning Decision
 
 ```text

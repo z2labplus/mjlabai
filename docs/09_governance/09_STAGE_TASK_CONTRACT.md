@@ -2,9 +2,9 @@
 
 ## Current stage
 
-P7 docs-only supervised-learning data/source readiness inventory definition
-after `03F` reviewed the P7 scope / entry criteria / first-task definition and
-`12D` completed the post-full-P6 transition review. P5 evaluation foundation is
+P7 docs-only supervised-learning data/source readiness inventory review gate
+after `03G` defined the P7 data/source readiness inventory before
+implementation. P5 evaluation foundation is
 closed for the current synthetic/local scope; general P6 implementation is not open, and the exact
 minimal replay schema / project-authored synthetic fixture task approved by
 `02N` is implemented, reviewed with no blocker and accepted as current-scope
@@ -86,11 +86,12 @@ P6 full risk register and source-rights inventory consistency review before fina
 P6 final full closure review = complete in `02AA`; Full P6 can close for the documented P6 data-system scope only
 Post-full-P6 transition review = complete in `12D`; P7 scope, entry criteria and first task are defined in `03E` as docs-only planning before implementation
 P7 scope, entry criteria and first task review = complete in `03F`; review can close with no blocker
+P7 supervised-learning data/source readiness inventory = defined in `03G`; no source is approved for P7 training or ingestion
 Full P6 = closed for documented P6 data-system scope only
 P7-P12 entry = not approved
 P7 implementation = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = define P7 supervised-learning data/source readiness inventory before implementation
+Next = review P7 supervised-learning data/source readiness inventory before implementation
 ```
 
 ## AI role
@@ -100,9 +101,9 @@ Local Codex engineer + evidence keeper + scope controller.
 ## Stage goal
 
 Bridge from the closed documented P6 data-system scope into a safe docs-only
-P7 data/source readiness inventory by keeping P7 implementation and P8-P12
-unapproved until P7 data/source status is inventoried and a later explicit
-implementation approval exists.
+review of the P7 data/source readiness inventory by keeping P7 implementation
+and P8-P12 unapproved until P7 data/source status is reviewed and a later
+explicit implementation approval exists.
 
 This supports the north-star target by ensuring that any future supervised
 learning, RL, search, league or LuckyJ validation work starts only after the

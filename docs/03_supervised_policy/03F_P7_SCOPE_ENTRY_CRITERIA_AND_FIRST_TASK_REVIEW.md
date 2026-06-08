@@ -306,6 +306,14 @@ training, tuning, self-play, league, runner behavior, real Tenhou, real haifu,
 external logs, platform data, account/session/cookie/token handling,
 third-party binaries or model-strength claims.
 
+Follow-up status:
+
+```text
+docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md
+defines the recommended data/source readiness inventory. It does not approve
+source use, source ingestion, P7 implementation or training data.
+```
+
 ## Explicit Non-Evidence
 
 This review is not:

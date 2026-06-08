@@ -72,6 +72,7 @@ docs/03_supervised_policy/03C_KEY_DECISION_HEADS.md
 docs/03_supervised_policy/03D_OFFLINE_METRICS.md
 docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md
 docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md
+docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -92,6 +93,16 @@ P7 implementation, P7 first-task execution, training, parser, dataset reader,
 ingestion, feature extraction, label generation, real Tenhou, real haifu,
 external logs, platform data, model-output integration, CLI, self-play, league
 and P8-P12 remain unapproved.
+
+`docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md`
+defines P7 supervised-learning data/source readiness inventory before
+implementation. It records candidate source categories, readiness status
+vocabulary, training-data readiness requirements, P6 source-rights consistency,
+parser / reader / ingestion dependency status, feature / label readiness
+status, risks and evidence requirements. It records that no source is currently
+approved for P7 training, source ingestion, feature extraction or label
+generation. It is inventory-definition evidence only, not source approval,
+training-data approval, P7 implementation or P8-P12 entry approval.
 
 ## Data-system files
 

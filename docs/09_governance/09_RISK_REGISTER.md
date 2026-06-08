@@ -8,6 +8,19 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-08 — P7 data/source readiness inventory risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| P7 data/source readiness inventory is mistaken for source approval. | Data / Governance | High | Medium | `03G`, `10_NEXT`, evidence log and handoff state that no source is approved for P7 training or ingestion. | Open |
+| P6 synthetic/local fixture is mistaken for P7 training data. | Data / Scope | High | Medium | `03G` classifies it as docs/schema context only and repeats that it is not training data. | Open |
+| Repository documentation is mistaken for a dataset. | Governance / Data | Medium-High | Medium | `03G` classifies docs as `docs_context_only`, not data. | Open |
+| Real Tenhou, real haifu, external logs or platform data are used before source-specific review. | Compliance / Data | High | Medium | `03G` keeps these categories blocked by rights, privacy and platform terms. | Open |
+| Parser, reader or ingestion scope creeps into the next review gate. | Governance / Scope | High | Medium | `10_NEXT` requires the next task to remain docs-only and forbids parser, reader and ingestion. | Open |
+| Feature extraction or label generation starts before readiness review. | Governance / Leakage | High | Medium | `03G` records feature/label boundaries as missing and unapproved. | Open |
+| P7 data/source readiness is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `03G` evidence grade is inventory definition evidence only with explicit non-evidence warnings. | Open |
+| P7 planning drifts into P8-P12, self-play, league or runner behavior. | Governance / Stage Control | High | Medium | `03G`, stage contract and `10_NEXT` keep P8-P12 closed until separate transition reviews. | Open |
+
 ## 2026-06-08 — P7 scope / entry criteria review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

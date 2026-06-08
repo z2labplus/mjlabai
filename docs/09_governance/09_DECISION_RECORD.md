@@ -14,6 +14,69 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-08 — DR-0053 — Define P7 Data-Source Readiness Inventory Before Implementation
+
+Decision:
+
+```text
+P7 supervised-learning data/source readiness inventory is defined before
+implementation. No source is currently approved for P7 training.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- Full P6 is closed only for the documented P6 data-system scope recorded in
+  `02AA`.
+- `03E` defined P7 scope, entry criteria and first task before implementation.
+- `03F` reviewed that definition and recorded `Review can close`.
+- P7 implementation, P7 first-task execution and P8-P12 entry remained
+  unapproved before this decision.
+
+Rationale:
+
+- P7 supervised learning cannot safely plan features, labels, architecture or
+  training until data/source categories and readiness gaps are inventoried.
+- P6 source-rights guardrails must carry forward so P6 synthetic/local fixture
+  evidence is not mistaken for P7 training data approval.
+- A review gate should confirm the inventory before any more detailed P7
+  planning.
+
+Consequences:
+
+- `docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md`
+  records candidate categories, readiness statuses, training-data readiness
+  requirements, P6 source-rights consistency, parser / reader / ingestion
+  dependency status, feature / label readiness status, risks and evidence
+  requirements.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review P7 supervised-learning data/source readiness inventory before implementation.`
+- P7 implementation is not approved.
+- P7 first-task execution is not approved.
+- P7 training data source is not approved.
+- Source ingestion is not approved.
+- Parser, dataset reader, feature extraction and label generation are not
+  approved.
+- P8-P12 entry is not approved.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md`
+- `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
+- `docs/02_data_system/02A_DATA_SOURCES.md`
+- `docs/02_data_system/02AA_FINAL_FULL_P6_CLOSURE_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+
+Status:
+
+```text
+Accepted inventory-definition decision recorded.
+```
+
 ## 2026-06-08 — DR-0052 — Review P7 Scope And Entry Criteria Before Implementation
 
 Decision:
