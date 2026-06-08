@@ -1,5 +1,38 @@
 # 09_CHANGELOG
 
+## 2026-06-08 — v2.64
+
+- Defined P7 supervised-learning scope, entry criteria and first task before
+  implementation.
+- Added `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`.
+- The document records:
+  - post-full-P6 context.
+  - P7 purpose and north-star relationship.
+  - allowed docs-only scope.
+  - forbidden scope.
+  - entry criteria before implementation.
+  - exit criteria draft.
+  - required inputs and current status.
+  - risk review requirements.
+  - evidence requirements.
+  - P8-P12 non-entry boundary.
+  - first task candidate:
+    `Review P7 scope, entry criteria and first task before implementation.`
+- New `10_NEXT` first item:
+  `Review P7 scope, entry criteria and first task before implementation.`
+- This is P7 scope / entry criteria / first-task definition evidence only.
+- P7 implementation, P7 first-task execution, training, parser, dataset
+  reader, ingestion, feature extraction, label generation, real Tenhou, real
+  haifu, external logs, platform data, model-output integration, CLI,
+  self-play, league and P8-P12 remain unapproved.
+- No production code, tests, fixtures, data files, replay schema code, parser,
+  dataset reader, ingestion, feature extraction, label generation, CLI, broad
+  file ingestion, model-output integration, real Tenhou, real haifu, external
+  logs, platform data, OpenAI / LLM / model API call, third-party binary call,
+  metric implementation, registry code change, promotion criteria change,
+  training, tuning, self-play, league, runner behavior, P7 implementation,
+  P8-P12 work or model-strength claim was added.
+
 ## 2026-06-07 — v2.63
 
 - Completed the post-full-P6 transition review before defining any P7 task.

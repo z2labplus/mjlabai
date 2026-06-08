@@ -8,6 +8,53 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-08 — P7 scope, entry criteria and first-task definition
+
+- Type: internal documentation / P7 scope and entry-criteria definition
+  evidence.
+- Stage: P7 supervised learning / docs-only scoping before implementation.
+- Added document:
+  - `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
+- Defined:
+  - P7 purpose and north-star relationship.
+  - allowed docs-only scope.
+  - forbidden scope.
+  - entry criteria before implementation.
+  - exit criteria draft.
+  - required inputs and current status.
+  - risk review requirements.
+  - evidence requirements.
+  - P8-P12 non-entry boundary.
+  - first task candidate:
+    `Review P7 scope, entry criteria and first task before implementation.`
+- Planning decision:
+  - P7 scope, entry criteria and first task are defined for review before
+    implementation.
+  - The next task is a docs-only review gate.
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P7 scope / entry criteria / first-task definition evidence only.
+- Not evidence of:
+  - P7 implementation.
+  - P7 first-task execution.
+  - P8-P12 entry approval.
+  - training, tuning, self-play, league or runner behavior.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - parser, dataset reader, ingestion, feature extraction or label generation.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-07 — Post-full-P6 transition review
 
 - Type: internal documentation / post-full-P6 transition review evidence.

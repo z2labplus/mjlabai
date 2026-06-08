@@ -14,6 +14,68 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-08 — DR-0051 — Define P7 Scope And Entry Criteria Before Implementation
+
+Decision:
+
+```text
+P7 scope, entry criteria and first task are defined for review before
+implementation. The next task is a docs-only review gate.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- Full P6 is closed only for the documented P6 data-system scope recorded in
+  `02AA`.
+- `12D` completed the post-full-P6 transition review and allowed only a
+  docs-only P7 scope / entry criteria / first-task definition task.
+- P7 implementation and P7 first-task execution remained unapproved before
+  this decision.
+- P8-P12 entry remained unapproved before this decision.
+
+Rationale:
+
+- P7 supervised learning cannot safely start before independent scope, entry
+  criteria, source/data readiness, feature/label readiness, risk review and
+  evidence requirements are documented.
+- Defining P7 scope is necessary to avoid both indefinite P6 churn and
+  premature supervised-learning implementation.
+- A docs-only review gate should confirm the P7 scope before any later
+  implementation prompt is considered.
+
+Consequences:
+
+- `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
+  records P7 purpose, allowed docs-only scope, forbidden scope, entry
+  criteria, exit criteria draft, required inputs, risk review requirements,
+  evidence requirements, P8-P12 non-entry boundary and the first task
+  candidate.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review P7 scope, entry criteria and first task before implementation.`
+- P7 implementation is not approved.
+- P7 first-task execution is not approved.
+- P8-P12 entry is not approved.
+- Parser, dataset reader, ingestion, feature extraction, label generation,
+  real data, model-output integration, CLI, training, self-play and league
+  remain unapproved.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
+- `docs/12_technical_plan/12D_POST_FULL_P6_TRANSITION_REVIEW.md`
+- `docs/02_data_system/02AA_FINAL_FULL_P6_CLOSURE_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+
+Status:
+
+```text
+Accepted planning decision recorded.
+```
+
 ## 2026-06-07 — DR-0050 — Post-Full-P6 Transition Review
 
 Decision:

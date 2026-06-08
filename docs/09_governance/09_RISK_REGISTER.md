@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-08 — P7 scope / entry criteria definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| P7 scope definition is mistaken for P7 implementation approval. | Governance / Stage Control | High | Medium | `03E`, `10_NEXT`, evidence log and stage contract state that the next step is a docs-only review gate and that implementation remains unapproved. | Open |
+| P7 entry criteria are treated as already satisfied. | Governance / Process | High | Medium | `03E` separates criterion definition from criterion satisfaction and marks most implementation prerequisites as open. | Open |
+| Supervised-learning training begins before source/data approval. | Data / Governance | High | Medium | `03E` requires source-rights review, selected data-source approval and training data policy before implementation. | Open |
+| Parser, reader, ingestion, feature extraction or label generation starts under the P7 scoping label. | Governance / Scope | High | Medium | `03E` and `10_NEXT` explicitly forbid parser, reader, ingestion, feature extraction and label generation for the next review gate. | Open |
+| P7 scoping drifts into P8-P12. | Governance / Stage Control | High | Medium | `03E` defines P8-P12 non-entry boundaries and requires separate transition reviews for later stages. | Open |
+| P7 planning evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `03E` and evidence log classify this as P7 scope / entry criteria / first-task definition evidence only. | Open |
+
 ## 2026-06-07 — Post-full-P6 transition review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

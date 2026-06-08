@@ -62,6 +62,26 @@ task before implementation. It is transition-review evidence only, not P7-P12
 entry approval, P7 implementation approval, training approval, real-data
 approval, parser / reader / ingestion approval or model-strength evidence.
 
+## Supervised-policy files
+
+```text
+docs/03_supervised_policy/03_SUPERVISED_POLICY.md
+docs/03_supervised_policy/03A_MODEL_ARCHITECTURE.md
+docs/03_supervised_policy/03B_TRAINING_OBJECTIVES.md
+docs/03_supervised_policy/03C_KEY_DECISION_HEADS.md
+docs/03_supervised_policy/03D_OFFLINE_METRICS.md
+docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md
+```
+
+`docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
+defines P7 supervised-learning scope, entry criteria, future exit criteria,
+required inputs, risk review requirements, evidence requirements and the first
+task candidate before implementation. It is docs-only P7 planning evidence:
+P7 implementation, P7 first-task execution, training, parser, dataset reader,
+ingestion, feature extraction, label generation, real Tenhou, real haifu,
+external logs, platform data, model-output integration, CLI, self-play, league
+and P8-P12 remain unapproved.
+
 ## Data-system files
 
 ```text
