@@ -28,8 +28,9 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 docs-only scope / entry criteria / first-task review gate after P7 scope
-definition in `03E` and post-full-P6 transition review in `12D`.
+P7 docs-only supervised-learning data/source readiness inventory definition
+after the P7 scope / entry criteria / first-task review in `03F` and the
+post-full-P6 transition review in `12D`.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -118,10 +119,14 @@ implementation.
 P7 scope, entry criteria and first task = defined in
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md` as
 docs-only planning before implementation.
+P7 scope, entry criteria and first task review = complete in
+`docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md`;
+review can close with no blocker.
 P7-P12 entry = not approved.
 P7 implementation = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = review P7 scope, entry criteria and first task before implementation.
+Next = define P7 supervised-learning data/source readiness inventory before
+implementation.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -255,20 +260,21 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Review P7 scope, entry criteria and first task before implementation.
+Define P7 supervised-learning data/source readiness inventory before
+implementation.
 ```
 
-`docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
-defines P7 supervised-learning scope, entry criteria and the first task
-candidate before implementation after the `12D` post-full-P6 transition review.
-Full P6 is closed only for the documented P6 data-system scope, and the next
-step may be only a docs-only review of that P7 scope definition. This is not
-P7 implementation, not P7 first-task execution and not P8-P12 entry approval.
-The next task must not add production code, tests, fixtures, parser, dataset
-reader, ingestion, feature extraction, label generation, real Tenhou, real
-haifu, external logs, platform data, model-output integration, CLI, broad file
-ingestion, training, tuning, self-play, league, runner behavior or
-model-strength claims.
+`docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md`
+reviews the P7 supervised-learning scope, entry criteria and first-task
+definition in `03E` and records `Review can close`. Full P6 is closed only for
+the documented P6 data-system scope, and the next step may be only a docs-only
+definition of P7 supervised-learning data/source readiness inventory before
+implementation. This is not P7 implementation, not P7 first-task execution and
+not P8-P12 entry approval. The next task must not add production code, tests,
+fixtures, parser, dataset reader, ingestion, feature extraction, label
+generation, real Tenhou, real haifu, external logs, platform data,
+model-output integration, CLI, broad file ingestion, training, tuning,
+self-play, league, runner behavior, source approval or model-strength claims.
 
 The exact P6 implementation approved by `02N` is complete and reviewed in
 `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`

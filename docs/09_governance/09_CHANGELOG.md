@@ -1,5 +1,39 @@
 # 09_CHANGELOG
 
+## 2026-06-08 — v2.65
+
+- Reviewed P7 supervised-learning scope, entry criteria and first task before
+  implementation.
+- Added
+  `docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md`.
+- The review confirms:
+  - `03E` is a docs-only P7 scope / entry criteria / first-task definition.
+  - post-full-P6 context is accurate.
+  - allowed docs-only scope is sufficient.
+  - forbidden scope is strict enough.
+  - entry criteria distinguish definition from satisfaction.
+  - exit criteria are future-only.
+  - required inputs are honestly marked incomplete where appropriate.
+  - risk and evidence requirements are sufficient for the current boundary.
+  - P8-P12 remain closed.
+  - no blocker was found.
+- Review decision:
+  `Review can close.`
+- New `10_NEXT` first item:
+  `Define P7 supervised-learning data/source readiness inventory before implementation.`
+- This is P7 scope / entry criteria / first-task review evidence only.
+- P7 implementation, P7 first-task execution, training, parser, dataset
+  reader, ingestion, feature extraction, label generation, real Tenhou, real
+  haifu, external logs, platform data, model-output integration, CLI,
+  self-play, league and P8-P12 remain unapproved.
+- No production code, tests, fixtures, data files, replay schema code, parser,
+  dataset reader, ingestion, feature extraction, label generation, CLI, broad
+  file ingestion, model-output integration, real Tenhou, real haifu, external
+  logs, platform data, OpenAI / LLM / model API call, third-party binary call,
+  metric implementation, registry code change, promotion criteria change,
+  training, tuning, self-play, league, runner behavior, P7 implementation,
+  P8-P12 work or model-strength claim was added.
+
 ## 2026-06-08 — v2.64
 
 - Defined P7 supervised-learning scope, entry criteria and first task before

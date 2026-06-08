@@ -225,6 +225,23 @@ architecture, dataset reader, parser, feature extraction, label generation,
 real Tenhou dataset use, self-play, league behavior, model-output integration
 or P8-P12 entry.
 
+## Review Status
+
+`docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md`
+reviews this scope, entry criteria and first-task definition. The review
+decision is:
+
+```text
+Review can close.
+```
+
+The review does not approve P7 implementation, P7 first-task execution,
+training, parser, dataset reader, ingestion, feature extraction, label
+generation, real Tenhou, real haifu, external logs, platform data,
+model-output integration, CLI, self-play, league or P8-P12 entry. The next
+task remains docs-only and moves to P7 supervised-learning data/source
+readiness inventory before implementation.
+
 ## Planning Decision
 
 ```text

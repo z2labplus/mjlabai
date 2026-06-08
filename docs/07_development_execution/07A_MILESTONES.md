@@ -20,7 +20,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 | P4 | Unified mahjong environment and interface | Define shared state, legal actions, logs, replays and adapter contracts | Different candidates can run through the same interface | Future |
 | P5 | Unified evaluation system | Compare all models with Tenhou-oriented metrics under one harness | Stable comparison of baselines and project models | Closed for current synthetic/local evaluation groundwork scope |
 | P6 | Data system | Build replay, feature, label and quality pipelines for training and evaluation | Supervised training and offline evaluation datasets can be generated | Closed for documented P6 data-system scope only; parser / reader / ingestion / feature / label and real data remain unapproved |
-| P7 | Supervised policy model | Train a base strategy model from high-quality human play and key decisions | Model beats simple baselines in key offline scenarios and completes games | Scope / entry criteria / first task defined for review; implementation unapproved |
+| P7 | Supervised policy model | Train a base strategy model from high-quality human play and key decisions | Model beats simple baselines in key offline scenarios and completes games | Scope / entry criteria / first task reviewed; data/source readiness inventory next; implementation unapproved |
 | P8 | Self-play reinforcement learning | Optimize toward Tenhou pt EV, placement and stable-dan objectives | RL checkpoint beats supervised checkpoint in the unified league | Future |
 | P9 | Search and risk model | Improve push/fold, deal-in risk, south-round rank control and oorasu decisions | Search-enhanced model beats non-search model in scenarios and league play | Future |
 | P10 | Model league and mainline selection | Run long comparisons among baselines, SL, RL, search and historical best versions | A candidate reliably beats the current mainline with uncertainty reported | Future |
@@ -40,9 +40,11 @@ implementation, and deferred/blocked/later-stage inventory.
 `12D` completes the post-full-P6 transition review and selected the docs-only
 P7 scope definition task. `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
 defines P7 scope, entry criteria and the first task candidate before
-implementation. The current next step is a docs-only review gate for that
-definition. P7 implementation, P7 first-task execution and P8-P12 entry remain
-unapproved.
+implementation. `docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md`
+reviews that definition and records `Review can close`. The current next step
+is a docs-only P7 supervised-learning data/source readiness inventory before
+implementation. P7 implementation, P7 first-task execution and P8-P12 entry
+remain unapproved.
 ```
 
 The exact minimal P6 replay schema and project-authored synthetic fixture

@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-08 — P7 scope / entry criteria review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| P7 review closure is mistaken for P7 implementation approval. | Governance / Stage Control | High | Medium | `03F`, `10_NEXT`, evidence log and stage contract state that review can close but P7 implementation remains unapproved. | Open |
+| The next data/source readiness inventory is mistaken for source approval or ingestion approval. | Data / Governance | High | Medium | `10_NEXT` and `03F` require the next task to remain docs-only and distinguish inventory from approval. | Open |
+| P7 data/source planning drifts into parser, reader, ingestion, feature extraction or label generation. | Governance / Scope | High | Medium | `03F` recommends only an inventory task and keeps parser, reader, ingestion, feature and label work unapproved. | Open |
+| P7 readiness work drifts into training, model architecture, dataloader, optimizer, loss, checkpoint or model-artifact work. | Governance / Scope | High | Medium | `03F` and `10_NEXT` forbid implementation prompts, training and model artifacts until later explicit approval. | Open |
+| P7 review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `03F` classifies this as P7 scope / entry criteria / first-task review evidence only. | Open |
+| P7 planning drifts into P8-P12. | Governance / Stage Control | High | Medium | `03F` repeats that each later stage needs separate transition review, scope, entry criteria, risk review and first-task approval. | Open |
+
 ## 2026-06-08 — P7 scope / entry criteria definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
