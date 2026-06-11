@@ -28,9 +28,9 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 docs-only supervised-learning data/source readiness inventory review gate
-after `03G` defined the P7 data/source readiness inventory before
-implementation.
+P7 docs-only supervised-learning feature and label readiness boundary
+definition after `03H` reviewed the P7 data/source readiness inventory and
+recorded `Review can close`.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -126,11 +126,13 @@ P7 supervised-learning data/source readiness inventory = defined in
 `docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md`;
 no source is currently approved for P7 training, source ingestion, parser /
 reader / ingestion, feature extraction or label generation.
+P7 supervised-learning data/source readiness inventory review = complete in
+`docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md`;
+review can close with no blocker.
 P7-P12 entry = not approved.
 P7 implementation = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = review P7 supervised-learning data/source readiness inventory before
-implementation.
+Next = define P7 feature and label readiness boundary before implementation.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。

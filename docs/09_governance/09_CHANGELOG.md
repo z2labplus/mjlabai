@@ -1,5 +1,41 @@
 # 09_CHANGELOG
 
+## 2026-06-12 — v2.67
+
+- Reviewed P7 supervised-learning data/source readiness inventory before
+  implementation.
+- Added
+  `docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md`.
+- The review confirms:
+  - `03G` scope is correct.
+  - candidate data/source categories are complete enough for the current gate.
+  - current approved P7 training source remains `None.`
+  - readiness status vocabulary is conservative and does not imply approval.
+  - training-data readiness requirements are sufficient.
+  - P6 source-rights consistency is clear.
+  - parser / reader / ingestion remain unapproved.
+  - feature extraction / label generation remain unapproved.
+  - data/source risks and evidence requirements are sufficient.
+  - governance synchronization is consistent.
+- Review decision:
+  `Review can close.`
+- New `10_NEXT` first item:
+  `Define P7 feature and label readiness boundary before implementation.`
+- This is P7 supervised-learning data/source readiness inventory review
+  evidence only.
+- P7 implementation, P7 first-task execution, training data source, source
+  ingestion, parser, dataset reader, ingestion, feature extraction, label
+  generation, real Tenhou, real haifu, external logs, platform data,
+  model-output integration, CLI, self-play, league and P8-P12 remain
+  unapproved.
+- No production code, tests, fixtures, data files, replay schema code, parser,
+  dataset reader, ingestion, feature extraction, label generation, CLI, broad
+  file ingestion, model-output integration, real Tenhou, real haifu, external
+  logs, platform data, OpenAI / LLM / model API call, third-party binary call,
+  metric implementation, registry code change, promotion criteria change,
+  training, tuning, self-play, league, runner behavior, P7 implementation,
+  P8-P12 work or model-strength claim was added.
+
 ## 2026-06-08 — v2.66
 
 - Defined P7 supervised-learning data/source readiness inventory before

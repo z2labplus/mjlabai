@@ -8,6 +8,62 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-12 — P7 supervised-learning data/source readiness inventory review
+
+- Type: internal documentation / P7 data-source readiness inventory review
+  evidence.
+- Stage: P7 supervised learning / docs-only data-source readiness inventory
+  review gate before implementation.
+- Added review document:
+  - `docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md`
+- Reviewed:
+  - `docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md`
+  - `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
+  - `docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md`
+  - P6 source-rights and final full-P6 closure context.
+  - accepted synthetic/local P6 replay schema artifacts as read-only context.
+  - governance and tracking documents.
+- Review decision:
+  - `Review can close.`
+- Confirmed:
+  - current approved P7 training source remains `None.`
+  - P7 implementation remains unapproved.
+  - P7 first-task execution remains unapproved.
+  - P7 training data source remains unapproved.
+  - source ingestion remains unapproved.
+  - parser, dataset reader and ingestion remain unapproved.
+  - feature extraction and label generation remain unapproved.
+  - real Tenhou, real haifu, external logs and platform data remain
+    unapproved.
+  - P8-P12 entry remains unapproved.
+- New next task:
+  - `Define P7 feature and label readiness boundary before implementation.`
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P7 supervised-learning data/source readiness inventory review evidence
+    only.
+- Not evidence of:
+  - P7 implementation.
+  - P7 first-task execution.
+  - P8-P12 entry approval.
+  - training, tuning, self-play, league or runner behavior.
+  - source approval or training-data approval.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - parser, dataset reader, ingestion, feature extraction or label generation.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-08 — P7 supervised-learning data/source readiness inventory definition
 
 - Type: internal documentation / P7 data-source readiness inventory definition

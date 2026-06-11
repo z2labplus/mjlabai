@@ -275,6 +275,22 @@ P7 first-task execution, training data, source ingestion, parser, dataset
 reader, feature extraction, label generation, real data, model-output
 integration, CLI, self-play, league or P8-P12 entry.
 
+## Later Review Status
+
+`docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md`
+reviews this inventory and records:
+
+```text
+Review can close.
+```
+
+That review confirms this inventory is sufficient for the current docs-only P7
+review gate. It does not approve P7 implementation, P7 first-task execution,
+training data source, source ingestion, parser, dataset reader, ingestion,
+feature extraction, label generation, real Tenhou, real haifu, external logs,
+platform data, model-output integration, CLI, self-play, league or P8-P12
+entry.
+
 ## Evidence Grade
 
 ```text

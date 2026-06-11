@@ -220,6 +220,23 @@ Recommended next task:
 Review P7 scope, entry criteria and first task before implementation.
 ```
 
+## Later Review Status
+
+Later P7 docs-only follow-up documents record:
+
+- `docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md`
+  reviewed this scope / entry criteria document and recorded `Review can
+  close`.
+- `docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md`
+  defined the P7 data/source readiness inventory.
+- `docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md`
+  reviewed that inventory and recorded `Review can close`.
+
+These later review outcomes do not approve P7 implementation, P7 first-task
+execution, training data source, source ingestion, parser, dataset reader,
+ingestion, feature extraction, label generation, real data, model-output
+integration, CLI, self-play, league or P8-P12 entry.
+
 The next task should be docs-only. It must not implement training code, model
 architecture, dataset reader, parser, feature extraction, label generation,
 real Tenhou dataset use, self-play, league behavior, model-output integration

@@ -73,6 +73,7 @@ docs/03_supervised_policy/03D_OFFLINE_METRICS.md
 docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md
 docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md
 docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -103,6 +104,16 @@ status, risks and evidence requirements. It records that no source is currently
 approved for P7 training, source ingestion, feature extraction or label
 generation. It is inventory-definition evidence only, not source approval,
 training-data approval, P7 implementation or P8-P12 entry approval.
+
+`docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md`
+reviews the P7 supervised-learning data/source readiness inventory before
+implementation. It records that `03G` scope, source categories, no-approved-
+training-source status, readiness vocabulary, training-data requirements, P6
+source-rights consistency, parser / reader / ingestion status, feature / label
+readiness status, risks, evidence requirements and governance synchronization
+are sufficient for the current review gate. Review decision: `Review can
+close.` It is review evidence only, not source approval, training-data
+approval, P7 implementation, feature/label approval or P8-P12 entry approval.
 
 ## Data-system files
 

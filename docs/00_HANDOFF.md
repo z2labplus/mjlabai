@@ -29,6 +29,10 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
+Current active stage is P7 supervised learning docs-only readiness planning:
+`03H` reviewed the P7 data/source readiness inventory and recorded `Review can
+close`; the next task is to define P7 feature and label readiness boundaries
+before implementation.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -101,6 +105,7 @@ The minimal P6 replay schema and project-authored synthetic fixture implementati
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md` defines P7 supervised-learning scope, entry criteria and the first task candidate before implementation. It records P7 purpose, north-star relationship, allowed docs-only scope, forbidden scope, implementation entry criteria, exit criteria draft, required inputs, risk review requirements, evidence requirements and P8-P12 non-entry boundaries. It recommends `Review P7 scope, entry criteria and first task before implementation` as the next docs-only review gate. This is P7 scope / entry criteria / first-task definition evidence only; it does not approve P7 implementation, P7 first-task execution, training, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate promotion.
 `docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md` reviews `03E` and records the decision `Review can close`. The P7 scope definition is sufficient to move to the next docs-only P7 readiness task, but it still does not approve P7 implementation, P7 first-task execution, training, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry or model-strength claims. The next P7 task is `Define P7 supervised-learning data/source readiness inventory before implementation`.
 `docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md` defines the P7 supervised-learning data/source readiness inventory before implementation. It records that no source is currently approved for P7 training, source ingestion, parser / reader / ingestion, feature extraction or label generation. It classifies candidate categories including the P6 project-authored synthetic/local fixture, repository docs, future synthetic SL fixtures, future approved real replay sources, real Tenhou / ranked logs, real haifu / external logs, platform data / online account data, model outputs / self-play / league outputs, third-party references, third-party binaries / weights / params / checkpoints, human-authored labels and generated labels. This is inventory-definition evidence only, not source approval, training-data approval, P7 implementation, model-strength evidence or P8-P12 entry approval.
+`docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md` reviews `03G` and records the decision `Review can close`. The review confirms that `03G` scope, candidate categories, current `None` approved-for-training status, readiness vocabulary, training-data requirements, P6 source-rights consistency, parser / reader / ingestion dependency status, feature / label readiness status, risks, evidence requirements and governance synchronization are sufficient for the current P7 review gate. This is inventory-review evidence only; it does not approve P7 implementation, P7 first-task execution, training data source, source ingestion, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry or model-strength claims. The next task is `Define P7 feature and label readiness boundary before implementation`.
 ```
 
 ## Current methodology
@@ -189,20 +194,16 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review P7 supervised-learning data/source readiness inventory before
-implementation.
-`03G` defines the P7 supervised-learning data/source readiness inventory before
-implementation and records that no source is currently approved for P7
-training. Full P6 is closed only for the documented P6 data-system scope:
-docs/governance/source-rights planning, accepted synthetic/local minimal
-replay schema and project-authored synthetic fixture smoke implementation, and
-deferred/blocked/later-stage inventory. P7 implementation, P7 first-task
-execution and P8-P12 entry remain unapproved. The next task must review this
-inventory as a docs-only gate without executing P7, approving source use,
-adding production code, tests, fixtures, parser, dataset reader, ingestion,
-feature extraction, label generation, real Tenhou, real haifu, external logs,
-platform data, model-output integration, CLI, broad file ingestion, training,
-tuning, self-play, league, runner behavior or model-strength claims.
+Define P7 feature and label readiness boundary before implementation.
+`03H` reviews the P7 supervised-learning data/source readiness inventory and
+records `Review can close`. No source is approved for P7 training, source
+ingestion, parser / reader / ingestion, feature extraction or label generation.
+The next task must define only the P7 feature and label readiness boundary as
+docs-only planning. It must not execute P7, approve source use, add production
+code, tests, fixtures, parser, dataset reader, ingestion, feature extraction,
+label generation, real Tenhou, real haifu, external logs, platform data,
+model-output integration, CLI, broad file ingestion, training, tuning,
+self-play, league, runner behavior or model-strength claims.
 ```
 
 Latest Akochan F1 audit summary:

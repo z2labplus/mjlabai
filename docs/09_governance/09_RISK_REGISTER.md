@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — P7 data/source readiness inventory review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| P7 data/source readiness inventory review closure is mistaken for source approval. | Data / Governance | High | Medium | `03H`, `10_NEXT`, evidence log and handoff state that review can close but no source is approved for P7 training or ingestion. | Open |
+| P7 data/source readiness inventory review is mistaken for training-data approval. | Data / Scope | High | Medium | `03H` repeats that current approved P7 training source is `None.` | Open |
+| The next feature/label boundary task drifts into feature extraction or label generation implementation. | Governance / Scope | High | Medium | `10_NEXT` defines the next task as docs-only boundary work and forbids feature extraction, label generation, datasets, training and model code. | Open |
+| Parser, reader or ingestion scope creeps into feature/label readiness planning. | Governance / Scope | High | Medium | `03H` keeps parser, reader, ingestion, CLI and broad file ingestion unapproved and routes them to separate future approvals. | Open |
+| P7 review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `03H` evidence grade is inventory review evidence only with explicit non-evidence warnings. | Open |
+| P7 planning drifts into P8-P12, self-play, league or runner behavior. | Governance / Stage Control | High | Medium | `03H`, stage contract and `10_NEXT` keep P8-P12 closed until separate transition reviews. | Open |
+
 ## 2026-06-08 — P7 data/source readiness inventory risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

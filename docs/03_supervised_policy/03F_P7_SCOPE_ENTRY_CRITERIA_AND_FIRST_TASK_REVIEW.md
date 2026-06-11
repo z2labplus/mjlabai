@@ -226,6 +226,23 @@ Rationale:
 - This avoids reopening P6 implementation while still using the full-P6
   closure state as context.
 
+## Later Data / Source Inventory Review Status
+
+`docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md`
+later defined the P7 data/source readiness inventory.
+
+`docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md`
+later reviewed that inventory and recorded:
+
+```text
+Review can close.
+```
+
+That later review does not approve P7 implementation, P7 first-task execution,
+training data source, source ingestion, parser, dataset reader, ingestion,
+feature extraction, label generation, real data, model-output integration,
+CLI, self-play, league or P8-P12 entry.
+
 ## P8-P12 Non-Entry Review
 
 The P8-P12 boundary in `03E` is sufficient. P7 scoping and this review do not
