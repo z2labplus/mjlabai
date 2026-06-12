@@ -295,6 +295,15 @@ actual feature extraction, actual label generation, supervised dataset
 construction, training, model architecture, trainer, model-output integration,
 real data, CLI, self-play, league or P8-P12 work.
 
+The handoff/evidence finalization is now recorded in
+`docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`.
+It records a finalization-ready handoff summary and evidence index, finds no
+risk/evidence consistency blocker, and recommends the final P7 current-scope
+closure review gate next. It does not close P7 current scope or approve
+broader P7 implementation, training, source ingestion, parser / reader /
+ingestion, actual feature extraction, actual label generation, real data,
+model-output integration, self-play, league or P8-P12.
+
 ## Evidence Grade
 
 ```text

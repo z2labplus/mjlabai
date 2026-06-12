@@ -20,7 +20,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 | P4 | Unified mahjong environment and interface | Define shared state, legal actions, logs, replays and adapter contracts | Different candidates can run through the same interface | Future |
 | P5 | Unified evaluation system | Compare all models with Tenhou-oriented metrics under one harness | Stable comparison of baselines and project models | Closed for current synthetic/local evaluation groundwork scope |
 | P6 | Data system | Build replay, feature, label and quality pipelines for training and evaluation | Supervised training and offline evaluation datasets can be generated | Closed for documented P6 data-system scope only; parser / reader / ingestion / feature / label and real data remain unapproved |
-| P7 | Supervised policy model | Train a base strategy model from high-quality human play and key decisions | Model beats simple baselines in key offline scenarios and completes games | Data/source readiness inventory defined/reviewed; feature/label boundary defined/reviewed; risk/evidence taxonomy defined/reviewed; minimal synthetic/local supervised fixture proposal defined/reviewed in `03M`/`03N`; approval decision completed in `03O`; exact minimal synthetic/local smoke implementation completed, reviewed in `03P` and accepted current-scope complete in `03Q`; next-task definition completed in `03R`; current-scope closure criteria defined in `03S` and reviewed in `03T` with no blocker; current-scope handoff/evidence finalization remains pending; broad implementation and training unapproved |
+| P7 | Supervised policy model | Train a base strategy model from high-quality human play and key decisions | Model beats simple baselines in key offline scenarios and completes games | Data/source readiness inventory defined/reviewed; feature/label boundary defined/reviewed; risk/evidence taxonomy defined/reviewed; minimal synthetic/local supervised fixture proposal defined/reviewed in `03M`/`03N`; approval decision completed in `03O`; exact minimal synthetic/local smoke implementation completed, reviewed in `03P` and accepted current-scope complete in `03Q`; next-task definition completed in `03R`; current-scope closure criteria defined in `03S` and reviewed in `03T` with no blocker; current-scope handoff/evidence finalization completed in `03U`; final current-scope closure review remains pending; broad implementation and training unapproved |
 | P8 | Self-play reinforcement learning | Optimize toward Tenhou pt EV, placement and stable-dan objectives | RL checkpoint beats supervised checkpoint in the unified league | Future |
 | P9 | Search and risk model | Improve push/fold, deal-in risk, south-round rank control and oorasu decisions | Search-enhanced model beats non-search model in scenarios and league play | Future |
 | P10 | Model league and mainline selection | Run long comparisons among baselines, SL, RL, search and historical best versions | A candidate reliably beats the current mainline with uncertainty reported | Future |
@@ -77,8 +77,11 @@ does not close P7 current scope; the next step is a docs-only criteria review
 gate.
 `docs/03_supervised_policy/03T_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`
 reviews those criteria and records `Review can close` with no blocker. It does
-not close P7 current scope; the next step is docs-only handoff/evidence
-finalization.
+not close P7 current scope.
+`docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+finalizes the P7 current-scope handoff and evidence index with no separate
+risk/evidence consistency blocker. It does not close P7 current scope; the
+next step is a docs-only final current-scope closure review gate.
 No source is approved for P7 training, source ingestion, parser / reader /
 ingestion, actual feature extraction or actual label generation. Broad P7
 implementation, training and P8-P12 entry remain unapproved.

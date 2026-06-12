@@ -86,6 +86,7 @@ docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABE
 docs/03_supervised_policy/03R_P7_NEXT_CURRENT_SCOPE_SUPERVISED_LEARNING_TASK_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md
 docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md
 docs/03_supervised_policy/03T_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md
+docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -280,6 +281,20 @@ source ingestion, approve parser / reader / ingestion, approve actual feature
 extraction, approve actual label generation, approve real data, approve
 model-output integration, approve self-play, approve league or approve
 P8-P12.
+
+`docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+finalizes the P7 current-scope handoff and evidence index after the `03T`
+closure-criteria review. It records a finalization-ready handoff summary, an
+evidence index covering `03E`-`03U`, accepted minimal synthetic/local
+feature-label smoke implementation artifacts, P6/P5 context and governance
+docs, confirms evidence grade consistency and recommends `Run final P7
+current-scope closure review gate` as the next docs-only task. It is handoff /
+evidence-index finalization evidence only: it does not close P7 current scope,
+approve broader P7 implementation, approve training, approve source ingestion,
+approve parser / reader / ingestion, approve actual feature extraction,
+approve actual label generation, approve real data, approve model-output
+integration, approve self-play, approve league, approve P8-P12 or provide
+model-strength evidence.
 
 ## Data-system files
 

@@ -2,16 +2,16 @@
 
 ## Current stage
 
-P7 docs-only current-scope handoff/evidence finalization gate after the exact
+P7 docs-only final current-scope closure review gate after the exact
 minimal synthetic/local supervised fixture and feature-label smoke
 current-scope acceptance decision, next-task definition, closure-criteria
-definition and closure-criteria review.
+definition, closure-criteria review and handoff/evidence finalization.
 `03M` and `03N` name and review candidate future files and guardrails only;
 `03O` approved only the exact minimal implementation task and exact files.
 That task is now implemented, reviewed in `03P` with `Review can close`, and
 accepted as current-scope complete in `03Q`, followed by next-task definition
 in `03R`, closure criteria definition in `03S` and closure criteria review in
-`03T`, but it does not approve broad P7
+`03T`, followed by handoff/evidence finalization in `03U`, but it does not approve broad P7
 implementation, parser / reader / ingestion, actual feature extraction,
 actual label generation, training, model-output integration, real data or
 P8-P12 entry. P5 evaluation foundation is
@@ -113,11 +113,12 @@ P7 minimal synthetic/local supervised feature-label smoke current-scope acceptan
 P7 next current-scope supervised-learning task definition = complete in `03R`; selected docs-only current-scope closure criteria definition; no broad P7 implementation, training, source ingestion, parser / reader / ingestion, actual feature extraction, actual label generation, real data, model-output integration or P8-P12 entry
 P7 current-scope closure criteria = defined in `03S`; C1-C26 criteria, exit readiness, remaining docs/review/closure items, deferred / blocked / not accepted items and P8-P12 non-entry conditions are documented; P7 current scope is not closed
 P7 current-scope closure criteria review = complete in `03T`; review can close with no blocker; P7 current scope is not closed
+P7 current-scope handoff and evidence index finalization = complete in `03U`; evidence index and handoff are finalized with no separate risk/evidence consistency blocker; P7 current scope is not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = finalize P7 current-scope handoff and evidence index after closure criteria review
+Next = run final P7 current-scope closure review gate
 ```
 
 ## AI role
@@ -228,4 +229,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Finalize P7 current-scope handoff and evidence index after closure criteria review.
+Run final P7 current-scope closure review gate.

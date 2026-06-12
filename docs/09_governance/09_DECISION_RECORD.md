@@ -14,6 +14,63 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-12 — DR-0068 — Finalize P7 Current-Scope Handoff and Evidence Index After Closure Criteria Review
+
+Decision:
+
+```text
+P7 current-scope handoff and evidence index are finalized after closure criteria review; set the next task to the final P7 current-scope closure review gate.
+```
+
+Context:
+
+- `03Q` accepted the exact minimal P7 synthetic/local supervised
+  feature-label smoke implementation as current-scope complete.
+- `03S` defined P7 current-scope closure criteria.
+- `03T` reviewed those criteria and records `Review can close`.
+- P7 broad implementation, training, source ingestion, parser / reader /
+  ingestion, actual feature extraction, actual label generation, real data,
+  model-output integration and P8-P12 remain unapproved.
+
+Rationale:
+
+- The P7 handoff summary and evidence index are needed before the final
+  current-scope closure review gate.
+- Evidence grades remain conservative and consistently non-strength.
+- No separate risk/evidence consistency blocker was found.
+- Remaining required work before current-scope closure is now the final
+  current-scope closure review gate.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Run final P7 current-scope closure review gate.`
+- P7 current scope is not closed by this finalization.
+- Broad P7 implementation, source approval, training-data approval, parser,
+  dataset reader, ingestion, actual feature extraction, actual label
+  generation, supervised dataset construction, training, model architecture,
+  trainer, model-output integration, CLI, real data, self-play, league and
+  P8-P12 remain unapproved.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/10_next/10_NEXT.md`
+- `docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+- `docs/03_supervised_policy/03T_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`
+- `docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`
+- `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+
+Status:
+
+```text
+Accepted; final P7 current-scope closure review gate is next.
+```
+
 ## 2026-06-12 — DR-0067 — Review P7 Current-Scope Closure Criteria After Minimal Synthetic Feature-Label Smoke Acceptance
 
 Decision:

@@ -229,6 +229,15 @@ ingestion, approve parser / reader / ingestion, approve actual feature
 extraction, approve actual label generation, approve real data, approve
 model-output integration or approve P8-P12.
 
+The handoff/evidence finalization is now recorded in
+`docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`.
+It finalizes the P7 current-scope handoff and evidence index and recommends
+the final P7 current-scope closure review gate next. It still does not close
+P7 current scope, approve broader P7 implementation, approve training, approve
+source ingestion, approve parser / reader / ingestion, approve actual feature
+extraction, approve actual label generation, approve real data, approve
+model-output integration or approve P8-P12.
+
 ## Evidence Grade
 
 ```text

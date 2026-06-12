@@ -174,6 +174,15 @@ current scope or approve broader P7 implementation, training, source
 ingestion, parser / reader / ingestion, actual feature extraction, actual label
 generation, real data, model-output integration, self-play, league or P8-P12.
 
+The P7 current-scope handoff/evidence finalization is now recorded in
+`docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`.
+It keeps this acceptance boundary unchanged: the exact minimal synthetic/local
+smoke scope remains accepted as current-scope complete, but P7 current scope is
+not closed by `03U`, and broader P7 implementation, training, source
+ingestion, parser / reader / ingestion, actual feature extraction, actual label
+generation, real data, model-output integration, self-play, league and P8-P12
+remain unapproved.
+
 ## Evidence Grade
 
 ```text

@@ -8,6 +8,64 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-12 — P7 current-scope handoff and evidence index finalization after closure criteria review
+
+- Type: internal documentation / P7 current-scope handoff and evidence-index
+  finalization evidence.
+- Stage: P7 supervised learning / docs-only handoff and evidence-index
+  finalization gate after closure criteria review.
+- Added finalization document:
+  - `docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+- Finalized:
+  - P7 current-scope handoff summary.
+  - evidence index covering `03E`-`03U`.
+  - accepted minimal synthetic/local feature-label smoke implementation
+    artifacts.
+  - P6/P5 context artifacts.
+  - governance artifact synchronization.
+  - evidence grade consistency.
+  - remaining required current-scope closure items.
+  - final closure review readiness.
+  - deferred / blocked / not accepted summary.
+- Planning decision:
+  - P7 current-scope handoff and evidence index are finalized after closure
+    criteria review.
+- New next task:
+  - `Run final P7 current-scope closure review gate.`
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P7 current-scope handoff and evidence-index finalization evidence only.
+- Not evidence of:
+  - P7 current-scope closure.
+  - P7 full closure.
+  - P7 broad implementation.
+  - P7 training.
+  - source approval or training-data approval.
+  - parser, dataset reader or ingestion.
+  - actual feature extraction from logs.
+  - actual label generation.
+  - supervised dataset construction.
+  - model architecture, dataloader, optimizer, loss, trainer, checkpoint or
+    weights.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-12 — P7 current-scope closure criteria review after minimal synthetic feature-label smoke acceptance
 
 - Type: internal documentation / P7 current-scope closure criteria review

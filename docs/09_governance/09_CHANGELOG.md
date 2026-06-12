@@ -1,5 +1,36 @@
 # 09_CHANGELOG
 
+## 2026-06-12 - v2.81
+
+- Finalized P7 current-scope handoff and evidence index after closure
+  criteria review.
+- Added
+  `docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`.
+- Recorded a finalization-ready P7 current-scope handoff summary.
+- Built an evidence index covering `03E`-`03U`, accepted minimal
+  synthetic/local feature-label smoke artifacts, P6/P5 context and governance
+  docs.
+- Confirmed evidence grade consistency and found no separate risk/evidence
+  consistency blocker before final current-scope closure review.
+- New `10_NEXT` first item:
+  `Run final P7 current-scope closure review gate.`
+- This is P7 current-scope handoff and evidence-index finalization evidence
+  only.
+- P7 current scope is not closed by this finalization.
+- Broad P7 implementation, training, source ingestion, parser / reader /
+  ingestion, actual feature extraction, actual label generation, supervised
+  dataset construction, model architecture, trainer, model-output integration,
+  real data, CLI, self-play, league and P8-P12 remain unapproved.
+- No production code, implementation logic, tests, fixtures, data files, replay
+  schema code, parser, dataset reader, ingestion, actual feature extraction,
+  actual label generation, supervised dataset construction, training, tuning,
+  self-play, league, runner behavior, model architecture, trainer, dataloader,
+  optimizer, loss, checkpoint, weights, model-output integration, CLI, broad
+  file ingestion, real Tenhou, real haifu, external logs, platform data,
+  third-party binary call, latency measurement, fixed-position exact-match,
+  metric implementation, registry code change, promotion criteria change,
+  P8-P12 work or model-strength claim was added.
+
 ## 2026-06-12 - v2.80
 
 - Reviewed P7 current-scope closure criteria after minimal synthetic
