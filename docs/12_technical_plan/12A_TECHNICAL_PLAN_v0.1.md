@@ -28,9 +28,9 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 docs-only approval-decision preparation for the minimal synthetic/local
-supervised fixture and feature-label smoke implementation task, after `03N`
-reviewed the `03M` proposal and recorded `Review can close`.
+P7 exact minimal synthetic/local supervised fixture and feature-label smoke
+implementation task, after `03O` recorded the approval decision `Approved for
+next minimal implementation task.`
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -42,7 +42,8 @@ project-authored synthetic fixture scope only. `02AA` closes full P6 only for
 the documented P6 data-system scope: docs/governance/source-rights planning,
 accepted synthetic/local minimal replay schema and project-authored synthetic
 fixture smoke implementation, and deferred/blocked/later-stage inventory.
-P7 implementation remains unapproved, and P8-P12 entry remains unapproved.
+P7 broad implementation remains unapproved beyond the exact `03O` minimal
+synthetic/local smoke task, and P8-P12 entry remains unapproved.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
@@ -158,11 +159,20 @@ review can close with no blocker. Implementation, fixture creation, tests,
 production code, data files, source approval, parser / reader / ingestion,
 feature extraction, label generation, training, model-output integration, real
 data, self-play, league and P8-P12 entry remain unapproved.
-P7 implementation = not approved.
+P7 minimal synthetic/local supervised fixture and feature-label smoke
+implementation approval decision = complete in
+`docs/03_supervised_policy/03O_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`;
+decision: `Approved for next minimal implementation task.` The approval is
+limited to the exact next implementation task and exact files named in `03O`.
+It does not execute implementation, approve parser / reader / ingestion,
+approve actual feature extraction, approve actual label generation, approve
+training, approve model-output integration, approve real data or approve
+P8-P12 entry.
+P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = prepare approval decision for minimal P7 synthetic/local supervised
-fixture and feature-label smoke implementation task.
+Next = implement minimal P7 synthetic/local supervised fixture and feature-label
+smoke only.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。

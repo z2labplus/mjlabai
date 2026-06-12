@@ -80,6 +80,7 @@ docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_
 docs/03_supervised_policy/03L_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_REVIEW.md
 docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03N_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_REVIEW.md
+docs/03_supervised_policy/03O_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -180,6 +181,16 @@ proposal-review evidence only, not P7 implementation, fixture creation, tests,
 production code, data-file creation, source approval, parser, dataset reader,
 ingestion, feature extraction, label generation, training, model-output
 integration, model-strength evidence or P8-P12 entry approval.
+
+`docs/03_supervised_policy/03O_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
+records the docs-only approval decision for the next minimal P7
+synthetic/local supervised fixture and feature-label smoke implementation
+task. Decision: `Approved for next minimal implementation task.` This approval
+is narrow: it only permits the next `10_NEXT` item to be the exact minimal
+synthetic/local smoke implementation task. It does not execute implementation,
+create files, generate an implementation prompt, approve a training source,
+approve parser / reader / ingestion, approve actual feature extraction,
+approve actual label generation, approve real data or approve P8-P12.
 
 ## Data-system files
 

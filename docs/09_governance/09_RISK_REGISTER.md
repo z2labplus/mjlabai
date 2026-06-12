@@ -8,6 +8,20 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — P7 minimal synthetic/local supervised fixture approval-decision risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Approval decision is mistaken for completed implementation. | Governance / Scope | High | Medium | `03O`, `10_NEXT`, handoff and evidence log state that the decision approves only the next exact minimal implementation task and does not execute it. | Open |
+| The next implementation task expands beyond the four exact approved files. | Engineering / Scope | High | Medium | `03O` and `10_NEXT` list the only approved implementation files and require separate approval for any additional file. | Open |
+| The future synthetic supervised fixture is mistaken for training data. | Data / Governance | High | Medium | `03O` allows only synthetic/local smoke validation and forbids supervised dataset construction or training. | Open |
+| Feature / label schema smoke is mistaken for actual feature extraction or label generation. | Leakage / Governance | High | Medium | `03O` permits only schema/guardrail checks and keeps parser, reader, ingestion, actual feature extraction and actual label generation unapproved. | Open |
+| A future implementation adds parser, reader or ingestion behavior for convenience. | Governance / Scope | High | Medium | `03O` and `10_NEXT` stop the task if parser / reader / ingestion or broad file ingestion appears. | Open |
+| A future implementation introduces real data, model output, training, self-play or league sources. | Data / Governance | High | Medium | `03O` forbids real Tenhou, real haifu, external logs, platform data, model-output integration, training, self-play and league. | Open |
+| An implementation prompt is generated before Web/human review of the completed approval decision. | Governance / Process | Medium-High | Medium | `03O` records the decision but states it does not generate an implementation prompt; `10_NEXT` now carries the exact task boundary. | Open |
+| Approval-decision evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is approval-decision evidence only with explicit non-evidence warnings. | Open |
+| P8-P12 work is treated as implicitly approved by the P7 approval decision. | Governance / Stage Control | High | Medium | `03O`, stage contract and `10_NEXT` keep P8-P12 closed until separate transition reviews and approvals. | Open |
+
 ## 2026-06-12 — P7 minimal synthetic/local supervised fixture proposal review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

@@ -330,6 +330,17 @@ generation, train, tune, self-play, run league, connect model output, read
 real Tenhou / real haifu / external logs / platform data, add CLI / broad
 ingestion, make model-strength claims or enter P8-P12.
 
+## Follow-Up Status
+
+`docs/03_supervised_policy/03O_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
+now records the follow-up approval decision:
+`Approved for next minimal implementation task.` The approved next task is
+limited to the exact minimal synthetic/local fixture and feature-label smoke
+implementation files named in `03O`; it does not approve broad P7
+implementation, source ingestion, parser / reader / ingestion, actual feature
+extraction, actual label generation, training, real data, model-output
+integration or P8-P12 entry.
+
 ## Evidence Grade
 
 ```text

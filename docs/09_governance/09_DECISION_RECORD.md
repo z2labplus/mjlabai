@@ -14,6 +14,84 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-12 — DR-0061 — Prepare Minimal P7 Synthetic/Local Supervised Fixture And Feature-Label Smoke Implementation Approval Decision
+
+Decision:
+
+```text
+Approved for next minimal implementation task.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- Full P6 is closed only for the documented P6 data-system scope recorded in
+  `02AA`.
+- `12D` completed the post-full-P6 transition review and selected P7 scope
+  definition as the next docs-only task.
+- `03E` through `03L` define and review P7 scope, data/source readiness,
+  feature/label readiness and risk/evidence taxonomy before implementation.
+- `03M` defines the minimal P7 synthetic/local supervised fixture and
+  feature-label smoke proposal before implementation.
+- `03N` reviews that proposal and records `Review can close`.
+- P7 broad implementation, source approval, parser / reader / ingestion,
+  actual feature extraction, actual label generation, training, model-output
+  integration, real data and P8-P12 remain unapproved before this decision.
+
+Rationale:
+
+- The P7 proposal and proposal review chain found no blocker for an exact
+  minimal synthetic/local smoke implementation task.
+- The candidate implementation is narrow enough to approve as the next
+  `10_NEXT` item if the exact file list and guardrails remain binding.
+- The decision must remain separate from executing implementation so the
+  project does not blur approval evidence with implementation evidence.
+
+Consequences:
+
+- `docs/03_supervised_policy/03O_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
+  records the approval decision.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Implement minimal P7 synthetic/local supervised fixture and feature-label smoke only.`
+- The next task may touch only:
+  `src/mjlabai/supervised/feature_label_schema.py`,
+  `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
+  `tests/supervised/test_feature_label_schema.py`,
+  `tests/supervised/test_synthetic_supervised_fixture_schema.py` and directly
+  related docs/governance updates.
+- This decision does not execute implementation, create fixture files, add
+  tests, add production code, add data files or generate an implementation
+  prompt.
+- Parser, dataset reader, ingestion, actual feature extraction, actual label
+  generation, supervised dataset construction, training, real data,
+  model-output integration, CLI, self-play, league and P8-P12 remain
+  unapproved.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03O_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
+- `docs/03_supervised_policy/03N_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_REVIEW.md`
+- `docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03L_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_REVIEW.md`
+- `docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03J_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_REVIEW.md`
+- `docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md`
+- `docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md`
+- `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
+- `docs/02_data_system/02AA_FINAL_FULL_P6_CLOSURE_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+
+Status:
+
+```text
+Accepted approval-decision recorded.
+```
+
 ## 2026-06-12 — DR-0060 — Review Minimal P7 Synthetic/Local Supervised Fixture And Feature-Label Smoke Proposal Before Implementation
 
 Decision:

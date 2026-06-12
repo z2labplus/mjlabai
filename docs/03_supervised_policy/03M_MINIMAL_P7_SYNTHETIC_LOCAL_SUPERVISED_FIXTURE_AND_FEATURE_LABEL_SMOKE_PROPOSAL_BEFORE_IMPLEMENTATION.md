@@ -237,10 +237,13 @@ implementation unless a later task separately records that decision.
 
 `docs/03_supervised_policy/03N_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_REVIEW.md`
 now reviews this proposal and records `Review can close` with no blocker. The
-next task is docs-only approval-decision preparation. It must not create
-fixtures, tests, production code, data files, parser / dataset reader /
-ingestion, feature extraction, label generation, training, model-output
-integration, real data or P8-P12 work.
+follow-up approval decision is now recorded in
+`docs/03_supervised_policy/03O_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
+with decision `Approved for next minimal implementation task.` That decision
+only permits the next exact minimal synthetic/local smoke implementation task.
+It must not expand into parser / dataset reader / ingestion, actual feature
+extraction, actual label generation, training, model-output integration, real
+data or P8-P12 work.
 
 ## Evidence Grade
 

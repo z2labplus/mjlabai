@@ -1,5 +1,37 @@
 # 09_CHANGELOG
 
+## 2026-06-12 — v2.74
+
+- Prepared the approval decision for the minimal P7 synthetic/local supervised
+  fixture and feature-label smoke implementation task.
+- Added
+  `docs/03_supervised_policy/03O_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`.
+- Decision:
+  `Approved for next minimal implementation task.`
+- Exact approved implementation files for the next task:
+  - `src/mjlabai/supervised/feature_label_schema.py`
+  - `tests/fixtures/supervised/synthetic_supervised_smoke.json`
+  - `tests/supervised/test_feature_label_schema.py`
+  - `tests/supervised/test_synthetic_supervised_fixture_schema.py`
+- Directly related docs / governance updates are allowed only as necessary to
+  record implementation evidence, validation, risks and the next task.
+- New `10_NEXT` first item:
+  `Implement minimal P7 synthetic/local supervised fixture and feature-label smoke only.`
+- This is P7 implementation approval-decision evidence only.
+- The decision does not execute implementation, create fixture files, add
+  tests, add production code, add data files, generate an implementation
+  prompt, approve parser / reader / ingestion, approve actual feature
+  extraction, approve actual label generation, approve supervised dataset
+  construction, approve training, approve model-output integration, approve
+  real data, approve self-play, approve league or approve P8-P12 entry.
+- No implementation files, tests, fixtures, data files, parser, dataset reader,
+  ingestion, actual feature extraction, actual label generation, CLI, broad
+  file ingestion, model-output integration, real Tenhou, real haifu, external
+  logs, platform data, OpenAI / LLM / model API call, third-party binary call,
+  metric implementation, registry code change, promotion criteria change,
+  training, tuning, self-play, league, runner behavior, P8-P12 work or
+  model-strength claim was added.
+
 ## 2026-06-12 — v2.73
 
 - Reviewed the minimal P7 synthetic/local supervised fixture and feature-label
