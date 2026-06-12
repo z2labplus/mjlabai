@@ -249,6 +249,23 @@ extraction, actual label generation, supervised dataset construction,
 training, model architecture, trainer, model-output integration, real data,
 CLI, self-play, league or P8-P12 work.
 
+## Follow-Up Status
+
+The current-scope acceptance decision is now recorded in
+`docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`.
+
+Decision:
+
+```text
+Accepted as current-scope complete.
+```
+
+The acceptance is limited to the exact minimal synthetic/local feature-label
+smoke implementation reviewed here. It does not approve broad P7
+implementation, source ingestion, parser / reader / ingestion, actual feature
+extraction, actual label generation, training, real data, model-output
+integration or P8-P12 entry.
+
 ## Evidence Grade
 
 ```text

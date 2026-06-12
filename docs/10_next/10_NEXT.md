@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Decide whether minimal P7 synthetic/local supervised fixture and feature-label smoke implementation can be accepted as current-scope complete.
+- [ ] Define next P7 current-scope supervised-learning task after minimal synthetic feature-label smoke acceptance.
 
 Current execution charter:
 
@@ -16,25 +16,16 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only P7 current-scope acceptance decision after the exact
-  minimal synthetic/local supervised fixture and feature-label smoke
-  implementation review.
-- `docs/03_supervised_policy/03P_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_REVIEW.md`
-  records `Review can close`.
-- The acceptance decision may decide only whether the exact implementation can
-  be accepted as current-scope complete.
-- The exact implementation files are:
-  - `src/mjlabai/supervised/feature_label_schema.py`
-  - `tests/fixtures/supervised/synthetic_supervised_smoke.json`
-  - `tests/supervised/test_feature_label_schema.py`
-  - `tests/supervised/test_synthetic_supervised_fixture_schema.py`
-- P5 is closed only for the current synthetic/local evaluation groundwork
-  scope.
-- Full P6 is closed only for the documented P6 data-system scope:
-  docs/governance/source-rights planning, accepted synthetic/local minimal
-  replay schema and project-authored synthetic fixture smoke implementation,
-  and deferred/blocked/later-stage inventory.
-- Full P6 closure is not P7-P12 entry approval.
+- This is a docs-only P7 task-definition gate after the exact minimal
+  synthetic/local supervised fixture and feature-label smoke current-scope
+  acceptance decision.
+- `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+  records `Accepted as current-scope complete` for the exact minimal
+  synthetic/local smoke scope only.
+- This task may define only the next P7 current-scope supervised-learning
+  task, such as current-scope closure criteria, another readiness boundary, a
+  minimal implementation proposal or a transition/blocker review.
+- Do not directly enter implementation.
 - Do not add production code.
 - Do not modify implementation logic.
 - Do not add tests.
@@ -44,30 +35,20 @@ Limits:
   extraction, actual label generation, supervised dataset construction,
   training, model architecture, dataloader, optimizer, loss, trainer,
   checkpoint or weights.
-- Do not train models.
-- Do not tune hyperparameters.
-- Do not start self-play.
-- Do not connect to real Tenhou.
+- Do not approve a training data source.
+- Do not approve source ingestion.
+- Do not approve feature or label schemas for training or real-data use.
+- Do not read real Tenhou, real haifu, external logs, platform data, accounts,
+  sessions, cookies or tokens.
+- Do not run real-data, Tenhou, self-play, league, training, model-output
+  integration, Akochan `system.exe`, `libai.so`, third-party binary or unknown
+  model artifact commands.
 - Do not create platform automation, scraping, evasion or account tooling.
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint`
   or `snapshot` files.
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or
   third-party build artifacts.
-- Do not modify `src/mjlabai/data/replay_schema.py`.
-- Do not modify `tests/fixtures/data/synthetic_replay_smoke.json`.
-- Do not modify existing data tests.
-- Do not approve a selected training data source.
-- Do not approve source ingestion.
-- Do not approve feature or label schemas for training or real-data use.
-- Do not approve feature extraction or label generation.
-- Do not approve architecture, loss, optimizer, dataloader, trainer,
-  checkpoint or model-artifact work.
-- Do not read real Tenhou, real haifu, external logs, platform data, accounts,
-  sessions, cookies or tokens.
-- Do not run real-data, Tenhou, self-play, league, training, model-output
-  integration, Akochan `system.exe`, `libai.so`, third-party binary or unknown
-  model artifact commands.
 - Do not claim any P5 closure artifact, P6 closure artifact, P6
   synthetic/local schema artifact or P7 smoke artifact is model-strength
   evidence, Tenhou evidence, stable-dan ranked-game evidence, LuckyJ `10.68`
@@ -86,6 +67,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-06-12 Decided that minimal P7 synthetic/local supervised fixture and feature-label smoke implementation is accepted as current-scope complete: added `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`, selected `Accepted as current-scope complete`, and limited accepted scope to the exact helper, project-authored synthetic/local fixture, smoke tests and direct docs/governance synchronization approved by `03O` and reviewed by `03P`. Accepted behavior is only JSON-safe synthetic/local smoke mapping validation, candidate feature family validation, candidate label family validation, public-information-only placeholder checks, hidden/future information rejection, unsafe provenance / unsafe claim rejection and non-evidence guardrails. This does not accept or approve broader P7 implementation, training, training-data source, source ingestion, parser, dataset reader, ingestion, actual feature extraction, actual label generation, supervised dataset construction, model architecture, trainer, checkpoint, weights, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12, model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ comparison or candidate promotion. The next task is `Define next P7 current-scope supervised-learning task after minimal synthetic feature-label smoke acceptance`.
 - [x] 2026-06-12 Reviewed minimal P7 synthetic/local supervised fixture and feature-label smoke implementation: added `docs/03_supervised_policy/03P_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_REVIEW.md`, confirmed the exact `03O` implementation file list was respected, the helper remains standard-library-only and in-memory, the fixture remains project-authored synthetic/local, tests cover the approved smoke scope, guardrails are sufficient, validation passes and governance is synchronized. Review decision: `Review can close.` This is P7 minimal synthetic/local supervised feature-label smoke implementation review evidence only; it does not approve broad P7 implementation, source approval, training-data approval, parser, dataset reader, ingestion, actual feature extraction, actual label generation, supervised dataset construction, training, model architecture, trainer, model-output integration, CLI, real data, self-play, league, P8-P12 entry, model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence. The next task is `Decide whether minimal P7 synthetic/local supervised fixture and feature-label smoke implementation can be accepted as current-scope complete`.
 - [x] 2026-06-12 Implemented minimal P7 synthetic/local supervised fixture and feature-label smoke only: added `src/mjlabai/supervised/feature_label_schema.py`, `tests/fixtures/supervised/synthetic_supervised_smoke.json`, `tests/supervised/test_feature_label_schema.py` and `tests/supervised/test_synthetic_supervised_fixture_schema.py`, plus direct docs/governance synchronization. The helper validates only in-memory JSON-safe synthetic/local feature-label smoke mappings, candidate feature family names, candidate label family names, public-information-only placeholder fields, absent hidden/future information guardrails, all-false non-evidence flags and provenance rejections for training-use approval, source approval, real data, model output, self-play and league. The fixture is project-authored synthetic/local only and not Tenhou data, not real haifu, not external log, not platform data, not model output, not training data, not model-strength evidence, not LuckyJ `10.68` comparison and not candidate-promotion evidence. This is P7 minimal synthetic/local supervised feature-label smoke implementation evidence only; it is not broad P7 implementation, source approval, training-data approval, parser, dataset reader, ingestion, actual feature extraction, actual label generation, supervised dataset construction, training, model architecture, trainer, model-output integration, CLI, self-play, league, P8-P12 entry, model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence. The next task is `Review minimal P7 synthetic/local supervised fixture and feature-label smoke implementation`.
 - [x] 2026-06-12 Prepared approval decision for minimal P7 synthetic/local supervised fixture and feature-label smoke implementation task: added `docs/03_supervised_policy/03O_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`, reviewed the P7 scope, data/source readiness, feature/label boundary, risk/evidence taxonomy, minimal proposal and proposal review chain, and recorded decision `Approved for next minimal implementation task.` The next task is `Implement minimal P7 synthetic/local supervised fixture and feature-label smoke only`, limited to `src/mjlabai/supervised/feature_label_schema.py`, `tests/fixtures/supervised/synthetic_supervised_smoke.json`, `tests/supervised/test_feature_label_schema.py`, `tests/supervised/test_synthetic_supervised_fixture_schema.py` and directly related docs/governance updates only. This is P7 implementation approval-decision evidence only; it does not execute implementation, create fixture files, add tests, add production code, add data files, generate an implementation prompt, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve training, approve model-output integration, approve real data, approve P8-P12 entry or provide model-strength / Tenhou / stable-dan / LuckyJ `10.68` / candidate-promotion evidence.

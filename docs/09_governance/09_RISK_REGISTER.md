@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — P7 minimal synthetic/local supervised feature-label smoke current-scope acceptance decision risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Current-scope acceptance is mistaken for broad P7 completion. | Governance / Scope | High | Medium | `03Q`, `10_NEXT`, handoff and evidence log state that only the exact minimal synthetic/local feature-label smoke scope is accepted. | Open |
+| Acceptance is mistaken for training-data source approval or source ingestion approval. | Data / Governance | High | Medium | `03Q` explicitly keeps source approval, training-data approval and source ingestion unapproved. | Open |
+| Acceptance is mistaken for parser, dataset reader, ingestion, actual feature extraction or actual label generation approval. | Governance / Leakage | High | Medium | `03Q` accepts only smoke mapping validation and guardrails; the next task is docs-only task definition. | Open |
+| The next task drifts into implementation, code, tests, fixtures, data files, training or model-output integration. | Governance / Scope | High | Medium | `10_NEXT` defines the next task as docs-only and repeats no-code / no-fixture / no-training / no-model-output boundaries. | Open |
+| Acceptance evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is current-scope acceptance decision evidence only with explicit non-evidence warnings. | Open |
+| P8-P12 work is treated as implicitly approved by the acceptance decision. | Governance / Stage Control | High | Medium | `03Q`, stage contract and `10_NEXT` keep P8-P12 closed until separate transition reviews and approvals. | Open |
+
 ## 2026-06-12 — P7 minimal synthetic/local supervised feature-label smoke implementation review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

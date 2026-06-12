@@ -210,6 +210,14 @@ approve broad P7 implementation, parser / reader / ingestion, actual feature
 extraction, actual label generation, training, real data, model-output
 integration or P8-P12 entry.
 
+The current-scope acceptance decision is now recorded in
+`docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+with decision `Accepted as current-scope complete.` The acceptance remains
+limited to the exact `03O` implementation scope and does not approve broad P7
+implementation, training, source ingestion, parser / reader / ingestion,
+actual feature extraction, actual label generation, real data,
+model-output integration or P8-P12 entry.
+
 ## Evidence Grade
 
 ```text

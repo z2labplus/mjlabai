@@ -82,6 +82,7 @@ docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_
 docs/03_supervised_policy/03N_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_REVIEW.md
 docs/03_supervised_policy/03O_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md
 docs/03_supervised_policy/03P_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_REVIEW.md
+docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -224,6 +225,22 @@ approval, parser / reader / ingestion, actual feature extraction, actual label
 generation, supervised dataset construction, training, model architecture,
 trainer, model-output integration, CLI, real-data use, model-strength
 evidence, LuckyJ `10.68` comparison or P8-P12 entry approval.
+
+`docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+records the current-scope acceptance decision for the exact minimal P7
+synthetic/local supervised feature-label smoke implementation. Decision:
+`Accepted as current-scope complete.` The accepted scope is limited to the
+exact helper, fixture, smoke tests and direct docs/governance synchronization.
+It accepts only JSON-safe synthetic/local smoke mapping validation, candidate
+feature family validation, candidate label family validation,
+public-information-only checks, hidden/future information rejection, unsafe
+provenance / claim rejection and non-evidence guardrails. It does not accept
+or approve broad P7 implementation, P7 training, source ingestion, parser /
+reader / ingestion, actual feature extraction, actual label generation,
+supervised dataset construction, model architecture, trainer, real data,
+model-output integration, CLI, self-play, league, P8-P12 entry,
+model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
+evidence, LuckyJ `10.68` comparison or candidate promotion.
 
 ## Data-system files
 

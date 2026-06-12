@@ -1,5 +1,36 @@
 # 09_CHANGELOG
 
+## 2026-06-12 - v2.77
+
+- Decided whether the minimal P7 synthetic/local supervised fixture and
+  feature-label smoke implementation can be accepted as current-scope
+  complete.
+- Added
+  `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`.
+- Acceptance decision:
+  `Accepted as current-scope complete.`
+- Accepted scope is limited to the exact helper, project-authored
+  synthetic/local fixture, smoke tests and direct docs / governance
+  synchronization approved by `03O` and reviewed by `03P`.
+- Accepted behavior is only JSON-safe synthetic/local smoke mapping
+  validation, candidate feature family validation, candidate label family
+  validation, public-information-only placeholder checks, hidden / future
+  information rejection, unsafe provenance / unsafe claim rejection and
+  non-evidence guardrails.
+- New `10_NEXT` first item:
+  `Define next P7 current-scope supervised-learning task after minimal synthetic feature-label smoke acceptance.`
+- This is P7 minimal synthetic/local supervised feature-label smoke
+  current-scope acceptance decision evidence only.
+- No production code, implementation logic, tests, fixtures, data files,
+  replay schema code, parser, dataset reader, ingestion, actual feature
+  extraction, actual label generation, supervised dataset construction,
+  training, tuning, self-play, league, runner behavior, model architecture,
+  trainer, dataloader, optimizer, loss, checkpoint, weights, model-output
+  integration, CLI, broad file ingestion, real Tenhou, real haifu, external
+  logs, platform data, third-party binary call, latency measurement,
+  fixed-position exact-match, metric implementation, registry code change,
+  promotion criteria change, P8-P12 work or model-strength claim was added.
+
 ## 2026-06-12 — v2.76
 
 - Reviewed the minimal P7 synthetic/local supervised fixture and feature-label
