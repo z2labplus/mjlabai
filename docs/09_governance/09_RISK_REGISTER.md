@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — P7 minimal synthetic/local supervised feature-label smoke implementation review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Implementation review closure is mistaken for broad P7 implementation acceptance. | Governance / Scope | High | Medium | `03P`, `10_NEXT`, handoff and evidence log state that only the exact `03O` smoke implementation was reviewed and that a separate current-scope acceptance decision is next. | Open |
+| Review closure is mistaken for training-data approval or source approval. | Data / Governance | High | Medium | `03P` explicitly says the fixture is smoke-only and source / training-data approval remain unapproved. | Open |
+| Review evidence is mistaken for actual feature extraction or actual label generation. | Leakage / Governance | High | Medium | `03P` confirms the helper validates shape and guardrails only; actual extraction and generation remain unapproved. | Open |
+| The next acceptance decision drifts into code, tests, fixtures, parser, reader or ingestion. | Governance / Scope | High | Medium | `10_NEXT` defines the next task as docs-only and repeats the no-code / no-ingestion / no-extraction / no-generation boundary. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is implementation review evidence only with explicit non-evidence warnings. | Open |
+| P8-P12 work is treated as implicitly approved by the review. | Governance / Stage Control | High | Medium | `03P`, stage contract and `10_NEXT` keep P8-P12 closed until separate transition reviews and approvals. | Open |
+
 ## 2026-06-12 — P7 minimal synthetic/local supervised feature-label smoke implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

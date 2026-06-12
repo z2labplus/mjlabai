@@ -245,6 +245,14 @@ It must not expand into parser / dataset reader / ingestion, actual feature
 extraction, actual label generation, training, model-output integration, real
 data or P8-P12 work.
 
+The exact minimal implementation has now been reviewed in
+`docs/03_supervised_policy/03P_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_REVIEW.md`,
+which records `Review can close`. That review is limited to the exact files
+approved by `03O`; it does not approve broad P7 implementation, source
+ingestion, parser / reader / ingestion, actual feature extraction, actual
+label generation, training, real data, model-output integration or P8-P12
+entry.
+
 ## Evidence Grade
 
 ```text

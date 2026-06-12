@@ -8,6 +8,64 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-12 — P7 minimal synthetic/local supervised fixture and feature-label smoke implementation review
+
+- Type: internal documentation / P7 minimal synthetic/local supervised
+  feature-label smoke implementation review evidence.
+- Stage: P7 supervised learning / docs-only implementation review gate.
+- Added review document:
+  - `docs/03_supervised_policy/03P_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_REVIEW.md`
+- Reviewed exact implementation files:
+  - `src/mjlabai/supervised/feature_label_schema.py`
+  - `tests/fixtures/supervised/synthetic_supervised_smoke.json`
+  - `tests/supervised/test_feature_label_schema.py`
+  - `tests/supervised/test_synthetic_supervised_fixture_schema.py`
+- Review decision:
+  - `Review can close.`
+- Confirmed:
+  - exact `03O` allowed files were respected.
+  - helper scope is standard-library-only, in-memory, no file IO and no CLI.
+  - helper validates only synthetic/local smoke shape and guardrails.
+  - fixture is project-authored synthetic/local only.
+  - tests cover the approved smoke scope.
+  - validation passes.
+  - governance is synchronized.
+- New next task:
+  - `Decide whether minimal P7 synthetic/local supervised fixture and feature-label smoke implementation can be accepted as current-scope complete.`
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P7 minimal synthetic/local supervised feature-label smoke implementation
+    review evidence only.
+- Not evidence of:
+  - P7 broad implementation.
+  - P7 training.
+  - training-data source approval.
+  - source ingestion approval.
+  - parser, dataset reader or ingestion.
+  - actual feature extraction from logs.
+  - actual label generation.
+  - supervised dataset construction.
+  - model architecture, dataloader, optimizer, loss, trainer, checkpoint or
+    weights.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-12 — P7 minimal synthetic/local supervised fixture and feature-label smoke implementation
 
 - Type: internal implementation / P7 minimal synthetic/local supervised

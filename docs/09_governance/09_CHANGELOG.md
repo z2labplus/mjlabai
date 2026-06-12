@@ -1,5 +1,40 @@
 # 09_CHANGELOG
 
+## 2026-06-12 — v2.76
+
+- Reviewed the minimal P7 synthetic/local supervised fixture and feature-label
+  smoke implementation.
+- Added
+  `docs/03_supervised_policy/03P_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_REVIEW.md`.
+- Review decision:
+  `Review can close.`
+- The review confirms:
+  - the exact `03O` allowed implementation file list was respected.
+  - `src/mjlabai/supervised/feature_label_schema.py` remains
+    standard-library-only and validates only in-memory synthetic/local smoke
+    mappings and guardrails.
+  - `tests/fixtures/supervised/synthetic_supervised_smoke.json` remains
+    project-authored synthetic/local only, not Tenhou data, not real haifu, not
+    external log, not platform data, not model output, not training data, not
+    model-strength evidence, not LuckyJ `10.68` comparison and not
+    candidate-promotion evidence.
+  - supervised tests cover only the approved smoke scope.
+  - validation passes.
+  - governance is synchronized.
+- New `10_NEXT` first item:
+  `Decide whether minimal P7 synthetic/local supervised fixture and feature-label smoke implementation can be accepted as current-scope complete.`
+- This is P7 minimal synthetic/local supervised feature-label smoke
+  implementation review evidence only.
+- No production code, tests, fixtures, data files, replay schema code, parser,
+  dataset reader, ingestion, actual feature extraction, actual label
+  generation, supervised dataset construction, training, tuning, self-play,
+  league, runner behavior, model architecture, trainer, dataloader, optimizer,
+  loss, checkpoint, weights, model-output integration, CLI, broad file
+  ingestion, real Tenhou, real haifu, external logs, platform data,
+  third-party binary call, latency measurement, fixed-position exact-match,
+  metric implementation, registry code change, promotion criteria change,
+  P8-P12 work or model-strength claim was added.
+
 ## 2026-06-12 — v2.75
 
 - Implemented the minimal P7 synthetic/local supervised fixture and
