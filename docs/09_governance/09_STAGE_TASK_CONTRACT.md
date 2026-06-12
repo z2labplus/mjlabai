@@ -2,14 +2,13 @@
 
 ## Current stage
 
-P7 exact minimal synthetic/local supervised fixture and feature-label smoke
-implementation task, after `03O` recorded the approval decision `Approved for
-next minimal implementation task.` `03M` and `03N` name and review candidate
-future files and guardrails only; `03O` approves only the exact next minimal
-implementation task and exact files. It does not approve broad P7
-implementation, parser / reader / ingestion, actual feature extraction, actual
-label generation, training, model-output integration, real data or P8-P12
-entry. P5 evaluation foundation is
+P7 docs-only implementation review gate after the exact minimal synthetic/local
+supervised fixture and feature-label smoke implementation. `03M` and `03N`
+name and review candidate future files and guardrails only; `03O` approved
+only the exact minimal implementation task and exact files. That task is now
+implemented, but it does not approve broad P7 implementation, parser / reader
+/ ingestion, actual feature extraction, actual label generation, training,
+model-output integration, real data or P8-P12 entry. P5 evaluation foundation is
 closed for the current synthetic/local scope; general P6 implementation is not open, and the exact
 minimal replay schema / project-authored synthetic fixture task approved by
 `02N` is implemented, reviewed with no blocker and accepted as current-scope
@@ -102,11 +101,12 @@ P7 supervised-learning risk and evidence taxonomy review = complete in `03L`; re
 P7 minimal synthetic/local supervised fixture and feature-label smoke proposal = defined in `03M`; implementation, fixture creation, tests, production code, data files, source approval, parser / reader / ingestion, feature extraction, label generation, training and P8-P12 remain unapproved
 P7 minimal synthetic/local supervised fixture and feature-label smoke proposal review = complete in `03N`; review can close with no blocker; implementation, fixture creation, tests, production code, data files, source approval, parser / reader / ingestion, feature extraction, label generation, training and P8-P12 remain unapproved
 P7 minimal synthetic/local supervised fixture and feature-label smoke implementation approval decision = complete in `03O`; decision `Approved for next minimal implementation task`; exact files only; no broad implementation, parser / reader / ingestion, actual feature extraction, actual label generation, training, real data, model-output integration or P8-P12
+P7 minimal synthetic/local supervised fixture and feature-label smoke implementation = complete in exact `03O` files only; helper validates JSON-safe synthetic/local smoke mappings and guardrails; fixture/tests are synthetic/local only; no parser / reader / ingestion, actual feature extraction, actual label generation, training, real data, model-output integration or P8-P12
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = implement minimal P7 synthetic/local supervised fixture and feature-label smoke only
+Next = review minimal P7 synthetic/local supervised fixture and feature-label smoke implementation
 ```
 
 ## AI role
@@ -117,9 +117,10 @@ Local Codex engineer + evidence keeper + scope controller.
 
 Bridge from the closed documented P6 data-system scope through P7 data/source
 inventory review, feature/label readiness boundary, risk/evidence taxonomy,
-minimal proposal review and `03O` approval decision into the exact minimal
-synthetic/local smoke implementation task, while keeping broad P7
-implementation and P8-P12 unapproved until later approvals exist.
+minimal proposal review, `03O` approval decision and exact minimal
+synthetic/local smoke implementation into a docs-only implementation review
+gate, while keeping broad P7 implementation and P8-P12 unapproved until later
+approvals exist.
 
 This supports the north-star target by ensuring that any future supervised
 learning, RL, search, league or LuckyJ validation work starts only after the
@@ -216,4 +217,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement minimal P7 synthetic/local supervised fixture and feature-label smoke only.
+Review minimal P7 synthetic/local supervised fixture and feature-label smoke implementation.

@@ -8,6 +8,19 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — P7 minimal synthetic/local supervised feature-label smoke implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Minimal smoke implementation is mistaken for broad P7 implementation approval. | Governance / Scope | High | Medium | `10_NEXT`, handoff, evidence log and stage contract state that only the exact `03O` smoke files were implemented. | Open |
+| Synthetic fixture is mistaken for training data or source approval. | Data / Governance | High | Medium | Fixture warnings, helper validation and evidence log mark it as synthetic/local smoke only, not training data or source approval. | Open |
+| Feature-label schema validation is mistaken for actual feature extraction or label generation. | Leakage / Governance | High | Medium | Helper validates shape and guardrails only; docs state actual extraction and generation remain unapproved. | Open |
+| Hidden or future information leaks into future smoke fixtures. | Leakage | High | Medium | Helper rejects exact `hidden_information` and `future_information` fields and requires absent-information guardrails. | Open |
+| Future work expands from smoke validation into parser, reader, ingestion, CLI or broad file ingestion. | Governance / Scope | High | Medium | Next task is docs-only review; `10_NEXT` forbids implementation changes and parser / reader / ingestion work. | Open |
+| Real-data, model-output, self-play or league provenance enters future fixtures. | Data / Governance | High | Medium | Helper rejects real-data, model-output, self-play and league provenance flags when they claim true. | Open |
+| Smoke implementation evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is implementation smoke evidence only with explicit non-evidence warnings. | Open |
+| P8-P12 work is treated as implicitly approved by the P7 smoke implementation. | Governance / Stage Control | High | Medium | Stage contract and `10_NEXT` keep P8-P12 closed until separate transition reviews and approvals. | Open |
+
 ## 2026-06-12 — P7 minimal synthetic/local supervised fixture approval-decision risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

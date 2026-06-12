@@ -28,9 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 exact minimal synthetic/local supervised fixture and feature-label smoke
-implementation task, after `03O` recorded the approval decision `Approved for
-next minimal implementation task.`
+P7 docs-only implementation review gate after the exact minimal synthetic/local
+supervised fixture and feature-label smoke implementation.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -168,11 +167,21 @@ It does not execute implementation, approve parser / reader / ingestion,
 approve actual feature extraction, approve actual label generation, approve
 training, approve model-output integration, approve real data or approve
 P8-P12 entry.
+P7 minimal synthetic/local supervised fixture and feature-label smoke
+implementation = complete in
+`src/mjlabai/supervised/feature_label_schema.py`,
+`tests/fixtures/supervised/synthetic_supervised_smoke.json`,
+`tests/supervised/test_feature_label_schema.py` and
+`tests/supervised/test_synthetic_supervised_fixture_schema.py`; it validates
+only JSON-safe synthetic/local smoke mappings, candidate feature/label
+families, public-information-only placeholders, absent hidden/future
+information guardrails, all-false non-evidence flags and unsafe provenance
+rejection.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = implement minimal P7 synthetic/local supervised fixture and feature-label
-smoke only.
+Next = review minimal P7 synthetic/local supervised fixture and feature-label
+smoke implementation.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。

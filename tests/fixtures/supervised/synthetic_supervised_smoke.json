@@ -1,0 +1,102 @@
+{
+  "fixture_id": "synthetic_supervised_smoke_v0.1",
+  "schema_version": "p7_feature_label_smoke_v0.1",
+  "provenance": {
+    "source_type": "project_authored_synthetic_local_supervised_smoke",
+    "project_authored": true,
+    "synthetic": true,
+    "local_only": true,
+    "real_data": false,
+    "training_use_approved": false,
+    "source_approval": "not_approved_for_training_or_ingestion",
+    "model_output": false,
+    "self_play": false,
+    "league_output": false,
+    "human_label_real_play": false,
+    "generated_label_from_unapproved_pipeline": false
+  },
+  "feature_families": [
+    "round_context",
+    "seat_turn_context",
+    "visible_hand_tile_counts",
+    "visible_discard_pond",
+    "visible_dora_indicators",
+    "score_placement_context",
+    "synthetic_provenance_indicators"
+  ],
+  "label_families": [
+    "action_imitation_label",
+    "discard_choice_label",
+    "synthetic_smoke_label"
+  ],
+  "public_information_fields": {
+    "public_information_only": true,
+    "decision_time_only": true,
+    "round_context": {
+      "round_wind": "E",
+      "honba": 0,
+      "riichi_sticks": 0
+    },
+    "seat_turn_context": {
+      "actor": 0,
+      "dealer": 0,
+      "turn_index": 0
+    },
+    "visible_hand_tile_counts": {
+      "actor": 0,
+      "tile_count_stub": {
+        "1m": 1,
+        "2m": 1,
+        "3m": 1
+      }
+    },
+    "visible_discard_pond": {
+      "seat_0": [],
+      "seat_1": [],
+      "seat_2": [],
+      "seat_3": []
+    },
+    "visible_dora_indicators": [
+      "1p"
+    ],
+    "score_placement_context": {
+      "scores": [
+        25000,
+        25000,
+        25000,
+        25000
+      ],
+      "placement_order_stub": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  "forbidden_information_absent": {
+    "hidden_information_absent": true,
+    "future_information_absent": true
+  },
+  "evidence_warnings": [
+    "project-authored synthetic/local only",
+    "not Tenhou data",
+    "not real haifu",
+    "not external log",
+    "not platform data",
+    "not model output",
+    "not training data",
+    "not model strength evidence",
+    "not LuckyJ 10.68 comparison",
+    "not candidate promotion evidence"
+  ],
+  "non_evidence": {
+    "model_strength": false,
+    "tenhou_ranked": false,
+    "stable_dan_ranked_game": false,
+    "luckyj_10_68_comparison": false,
+    "candidate_promotion": false,
+    "training_data_approval": false,
+    "source_approval": false
+  }
+}

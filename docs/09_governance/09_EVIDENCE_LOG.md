@@ -8,6 +8,77 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-12 — P7 minimal synthetic/local supervised fixture and feature-label smoke implementation
+
+- Type: internal implementation / P7 minimal synthetic/local supervised
+  feature-label smoke evidence.
+- Stage: P7 supervised learning / exact minimal implementation approved by
+  `03O`.
+- Added exact implementation files:
+  - `src/mjlabai/supervised/feature_label_schema.py`
+  - `tests/fixtures/supervised/synthetic_supervised_smoke.json`
+  - `tests/supervised/test_feature_label_schema.py`
+  - `tests/supervised/test_synthetic_supervised_fixture_schema.py`
+- Implemented:
+  - in-memory JSON-safe mapping validation helper.
+  - candidate feature family validation.
+  - candidate label family validation.
+  - public-information-only placeholder validation.
+  - hidden-information field rejection.
+  - future-information field rejection.
+  - training-use approval claim rejection.
+  - source-approval claim rejection.
+  - real-data provenance rejection.
+  - model-output provenance rejection.
+  - self-play and league provenance rejection.
+  - project-authored synthetic/local fixture shape validation.
+- Fixture provenance:
+  - project-authored synthetic/local only.
+  - not Tenhou data.
+  - not real haifu.
+  - not external log.
+  - not platform data.
+  - not model output.
+  - not training data.
+  - not model-strength evidence.
+  - not LuckyJ `10.68` comparison.
+  - not candidate-promotion evidence.
+- New next task:
+  - `Review minimal P7 synthetic/local supervised fixture and feature-label smoke implementation.`
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P7 minimal synthetic/local supervised feature-label smoke implementation
+    evidence only.
+- Not evidence of:
+  - P7 broad implementation.
+  - P7 training.
+  - training-data source approval.
+  - source ingestion approval.
+  - parser, dataset reader or ingestion.
+  - actual feature extraction from logs.
+  - actual label generation.
+  - supervised dataset construction.
+  - model architecture, dataloader, optimizer, loss, trainer, checkpoint or
+    weights.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-12 — P7 minimal synthetic/local supervised fixture and feature-label smoke implementation approval decision
 
 - Type: internal documentation / P7 implementation approval-decision evidence.

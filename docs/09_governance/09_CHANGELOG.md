@@ -1,5 +1,45 @@
 # 09_CHANGELOG
 
+## 2026-06-12 — v2.75
+
+- Implemented the minimal P7 synthetic/local supervised fixture and
+  feature-label smoke task approved by `03O`.
+- Added exact approved implementation files:
+  - `src/mjlabai/supervised/feature_label_schema.py`
+  - `tests/fixtures/supervised/synthetic_supervised_smoke.json`
+  - `tests/supervised/test_feature_label_schema.py`
+  - `tests/supervised/test_synthetic_supervised_fixture_schema.py`
+- The helper validates only:
+  - in-memory JSON-safe synthetic/local smoke mappings.
+  - project-authored synthetic/local provenance.
+  - candidate feature family names.
+  - candidate label family names.
+  - public-information-only placeholder fields.
+  - absent hidden/future information guardrails.
+  - all-false non-evidence flags.
+  - rejection of training-use approval, source approval, real data,
+    model-output, self-play and league provenance.
+- The fixture is project-authored synthetic/local only and explicitly not
+  Tenhou data, not real haifu, not external log, not platform data, not model
+  output, not training data, not model-strength evidence, not LuckyJ `10.68`
+  comparison and not candidate-promotion evidence.
+- New `10_NEXT` first item:
+  `Review minimal P7 synthetic/local supervised fixture and feature-label smoke implementation.`
+- This is P7 minimal synthetic/local supervised feature-label smoke
+  implementation evidence only.
+- No files outside the exact `03O` implementation list and direct
+  docs/governance synchronization were added or modified.
+- No replay schema code, P6 synthetic replay fixture, existing P6 tests,
+  parser, dataset reader, data ingestion, actual feature extraction, actual
+  label generation, supervised dataset construction, training, tuning,
+  self-play, league, runner behavior, model architecture, trainer, dataloader,
+  optimizer, loss, checkpoint, weights, model-output integration, CLI, broad
+  file ingestion, real Tenhou, real haifu, external logs, platform data,
+  OpenAI / LLM / model API call, Akochan `system.exe`, `libai.so`,
+  third-party binary call, latency measurement, fixed-position exact-match,
+  metric implementation, registry code change, promotion criteria change,
+  P8-P12 work or model-strength claim was added.
+
 ## 2026-06-12 — v2.74
 
 - Prepared the approval decision for the minimal P7 synthetic/local supervised

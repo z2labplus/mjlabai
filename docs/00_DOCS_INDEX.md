@@ -192,6 +192,25 @@ create files, generate an implementation prompt, approve a training source,
 approve parser / reader / ingestion, approve actual feature extraction,
 approve actual label generation, approve real data or approve P8-P12.
 
+Minimal P7 synthetic/local supervised feature-label smoke implementation
+artifacts:
+
+```text
+src/mjlabai/supervised/feature_label_schema.py
+tests/fixtures/supervised/synthetic_supervised_smoke.json
+tests/supervised/test_feature_label_schema.py
+tests/supervised/test_synthetic_supervised_fixture_schema.py
+```
+
+These artifacts implement only the exact `03O` synthetic/local smoke scope:
+in-memory JSON-safe fixture validation, candidate feature/label family
+validation, public-information-only placeholders, hidden/future information
+rejection, unsafe provenance rejection and fixture smoke tests. They are not
+source approval, training-data approval, parser / reader / ingestion, actual
+feature extraction, actual label generation, supervised dataset construction,
+training, model-output integration, CLI, real-data use, model-strength
+evidence, LuckyJ `10.68` comparison or P8-P12 entry approval.
+
 ## Data-system files
 
 ```text

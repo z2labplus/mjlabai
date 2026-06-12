@@ -14,6 +14,78 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-12 — DR-0062 — Implement Minimal P7 Synthetic/Local Supervised Fixture And Feature-Label Smoke Only
+
+Decision:
+
+```text
+Implement the exact minimal P7 synthetic/local supervised fixture and feature-label smoke approved by `03O`; set the next task to a docs-only implementation review gate.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- Full P6 is closed only for the documented P6 data-system scope recorded in
+  `02AA`.
+- `03E` through `03N` define and review P7 scope, data/source readiness,
+  feature/label readiness, risk/evidence taxonomy and the minimal proposal.
+- `03O` records decision `Approved for next minimal implementation task`.
+- The approval is limited to four exact files and direct docs/governance sync.
+
+Rationale:
+
+- The implementation is narrow enough to create smoke-level P7 artifacts
+  without approving broad supervised learning.
+- In-memory JSON-safe validation and a project-authored synthetic/local
+  fixture provide the smallest auditable step toward later supervised-learning
+  readiness.
+- Guardrail validation rejects hidden/future information fields and unsafe
+  provenance claims before any parser, reader, ingestion, extraction,
+  generation or training work is considered.
+
+Consequences:
+
+- Added `src/mjlabai/supervised/feature_label_schema.py`.
+- Added `tests/fixtures/supervised/synthetic_supervised_smoke.json`.
+- Added `tests/supervised/test_feature_label_schema.py`.
+- Added `tests/supervised/test_synthetic_supervised_fixture_schema.py`.
+- The helper validates only in-memory synthetic/local smoke mappings,
+  candidate feature families, candidate label families, public-information
+  placeholders, absent hidden/future information guardrails and unsafe
+  provenance rejection.
+- The fixture is project-authored synthetic/local only and explicitly not
+  Tenhou data, not real haifu, not external log, not platform data, not model
+  output, not training data, not model-strength evidence, not LuckyJ `10.68`
+  comparison and not candidate-promotion evidence.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review minimal P7 synthetic/local supervised fixture and feature-label smoke implementation.`
+- Parser, dataset reader, ingestion, actual feature extraction, actual label
+  generation, supervised dataset construction, training, real data,
+  model-output integration, CLI, self-play, league and P8-P12 remain
+  unapproved.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/10_next/10_NEXT.md`
+- `docs/03_supervised_policy/03O_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
+- `docs/03_supervised_policy/03N_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_REVIEW.md`
+- `docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `src/mjlabai/supervised/feature_label_schema.py`
+- `tests/fixtures/supervised/synthetic_supervised_smoke.json`
+- `tests/supervised/test_feature_label_schema.py`
+- `tests/supervised/test_synthetic_supervised_fixture_schema.py`
+
+Status:
+
+```text
+Accepted minimal implementation recorded; next review gate required.
+```
+
 ## 2026-06-12 — DR-0061 — Prepare Minimal P7 Synthetic/Local Supervised Fixture And Feature-Label Smoke Implementation Approval Decision
 
 Decision:
