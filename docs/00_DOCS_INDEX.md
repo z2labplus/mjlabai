@@ -87,6 +87,7 @@ docs/03_supervised_policy/03R_P7_NEXT_CURRENT_SCOPE_SUPERVISED_LEARNING_TASK_AFT
 docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md
 docs/03_supervised_policy/03T_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md
 docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md
+docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -295,6 +296,17 @@ approve parser / reader / ingestion, approve actual feature extraction,
 approve actual label generation, approve real data, approve model-output
 integration, approve self-play, approve league, approve P8-P12 or provide
 model-strength evidence.
+
+`docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md`
+runs the final P7 current-scope closure review gate. Decision: `P7 current
+scope can close` for the exact current scope only: docs-only supervised
+learning readiness chain plus the accepted minimal synthetic/local supervised
+feature-label smoke implementation. It is P7 final current-scope closure
+review evidence only. It does not close full P7, approve broader P7
+implementation, approve training, approve source ingestion, approve parser /
+reader / ingestion, approve actual feature extraction, approve actual label
+generation, approve real data, approve model-output integration, approve
+self-play, approve league, approve P8-P12 or provide model-strength evidence.
 
 ## Data-system files
 

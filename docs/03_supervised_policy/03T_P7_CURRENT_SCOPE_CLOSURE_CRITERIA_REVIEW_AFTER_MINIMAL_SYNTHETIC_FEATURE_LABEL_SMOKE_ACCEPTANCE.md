@@ -241,8 +241,8 @@ updates.
 
 The synchronized docs record:
 
-- current stage is P7 closure-criteria review gate.
-- P7 current scope is not closed.
+- current stage at this step was P7 closure-criteria review gate.
+- P7 current scope was not closed by this criteria review gate.
 - broader P7 implementation remains unapproved.
 - training remains unapproved.
 - source ingestion remains unapproved.
@@ -304,6 +304,12 @@ broader P7 implementation, training, source ingestion, parser / reader /
 ingestion, actual feature extraction, actual label generation, real data,
 model-output integration, self-play, league or P8-P12.
 
+The final P7 current-scope closure review is now recorded in
+`docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md`.
+It confirms that P7 current scope can close only for the exact current scope
+and does not expand this criteria-review decision into full P7 closure,
+broader implementation, training, real data or P8-P12 approval.
+
 ## Evidence Grade
 
 ```text
@@ -314,7 +320,7 @@ P7 current-scope closure criteria review evidence only.
 
 This closure-criteria review is not:
 
-- P7 current-scope closure.
+- P7 current-scope closure by this criteria review.
 - P7 full closure.
 - broader P7 implementation.
 - P7 training.

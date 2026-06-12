@@ -8,6 +8,66 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-12 — Final P7 current-scope closure review gate
+
+- Type: internal documentation / P7 final current-scope closure review
+  evidence.
+- Stage: P7 supervised learning / docs-only final current-scope closure review
+  gate.
+- Added final closure review document:
+  - `docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md`
+- Reviewed:
+  - the `03E`-`03U` P7 current-scope chain.
+  - accepted minimal synthetic/local supervised feature-label smoke
+    implementation artifacts.
+  - P6/P5 context artifacts.
+  - governance synchronization state.
+  - C1-C26 closure criteria final status.
+  - required validation commands.
+- Decision:
+  - `P7 current scope can close.`
+- Closed boundary:
+  - docs-only supervised-learning readiness chain.
+  - accepted minimal synthetic/local supervised feature-label smoke
+    implementation in `src/mjlabai/supervised/feature_label_schema.py`,
+    `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
+    `tests/supervised/test_feature_label_schema.py` and
+    `tests/supervised/test_synthetic_supervised_fixture_schema.py`.
+- New next task:
+  - `Run post-current-scope P7 transition review before defining any broader P7 implementation or P8 task.`
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P7 final current-scope closure review evidence only.
+- Not evidence of:
+  - full P7 closure.
+  - broader P7 implementation.
+  - P7 training.
+  - source approval or training-data approval.
+  - parser, dataset reader or ingestion.
+  - actual feature extraction from logs.
+  - actual label generation.
+  - supervised dataset construction.
+  - model architecture, dataloader, optimizer, loss, trainer, checkpoint or
+    weights.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-12 — P7 current-scope handoff and evidence index finalization after closure criteria review
 
 - Type: internal documentation / P7 current-scope handoff and evidence-index

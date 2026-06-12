@@ -29,8 +29,8 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
-Current active stage is P7 supervised learning final current-scope closure
-review planning after handoff/evidence finalization:
+Current active stage is post-current-scope P7 supervised learning transition
+review planning after final current-scope closure:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -67,6 +67,17 @@ scope, close full P7, approve broader P7 implementation, approve training,
 approve source ingestion, approve parser / reader / ingestion, approve actual
 feature extraction, approve actual label generation, approve real data,
 approve model-output integration or approve P8-P12.
+`docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md`
+runs that final gate and records `P7 current scope can close` only for the
+exact current scope: docs-only supervised-learning readiness chain plus the
+accepted minimal synthetic/local supervised feature-label smoke
+implementation. Full P7 is not closed. Broader P7 implementation, training,
+training data source approval, source ingestion, parser / reader / ingestion,
+actual feature extraction, actual label generation, supervised dataset
+construction, model architecture / trainer, real data, model-output
+integration, self-play, league and P8-P12 remain unapproved. The next task is
+`Run post-current-scope P7 transition review before defining any broader P7
+implementation or P8 task`.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -173,15 +184,16 @@ reviews `03S` and records `Review can close`.
 `docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
 finalizes the P7 current-scope handoff and evidence index, records
 conservative evidence-grade consistency and recommends the final P7
-current-scope closure review gate next. This remains handoff/evidence
-finalization evidence only: it is not P7 current-scope closure, P7 broad
-implementation, training-data approval, source approval, parser, dataset
-reader, ingestion, actual feature extraction, actual label generation,
+current-scope closure review gate next. `03V` now records that P7 current
+scope can close only for the exact current scope. This remains non-evidence
+for P7 broad implementation, training-data approval, source approval, parser,
+dataset reader, ingestion, actual feature extraction, actual label generation,
 supervised dataset construction, training, model architecture, trainer,
 model-output integration, real data, CLI, self-play, league, P8-P12 entry,
 model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
 evidence, LuckyJ `10.68` comparison or candidate-promotion evidence. The next
-task is `Run final P7 current-scope closure review gate`.
+task is `Run post-current-scope P7 transition review before defining any
+broader P7 implementation or P8 task`.
 ```
 
 ## Current methodology
@@ -270,8 +282,8 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Run final P7 current-scope closure review gate.
-The final closure review gate must be docs-only. It must not add
+Run post-current-scope P7 transition review before defining any broader P7 implementation or P8 task.
+The post-current-scope P7 transition review must be docs-only. It must not add
 production code, tests, fixtures, data files, parser, dataset reader,
 ingestion, actual feature extraction, actual label generation, supervised
 dataset construction, training, tuning, self-play, league, runner behavior,

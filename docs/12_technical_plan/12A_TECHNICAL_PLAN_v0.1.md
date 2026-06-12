@@ -28,10 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 docs-only final current-scope closure review gate after the exact
-minimal synthetic/local supervised fixture and feature-label smoke
-current-scope acceptance decision, next-task definition, closure-criteria
-definition, closure-criteria review and handoff/evidence finalization.
+Post-current-scope P7 supervised learning transition review planning after the
+final P7 current-scope closure review gate.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -43,12 +41,12 @@ project-authored synthetic fixture scope only. `02AA` closes full P6 only for
 the documented P6 data-system scope: docs/governance/source-rights planning,
 accepted synthetic/local minimal replay schema and project-authored synthetic
 fixture smoke implementation, and deferred/blocked/later-stage inventory.
-P7 broad implementation remains unapproved beyond the exact `03O` minimal
-synthetic/local smoke task reviewed in `03P`, accepted in `03Q`, followed by
-the next-task definition in `03R`, bounded by the closure criteria defined in
-`03S` and reviewed in `03T`, and prepared for final current-scope closure
-review by the handoff/evidence finalization in `03U`; P8-P12 entry remains
-unapproved.
+P7 current scope is closed only for the exact docs-only readiness chain plus
+the accepted minimal synthetic/local supervised feature-label smoke
+implementation reviewed in `03P`, accepted in `03Q`, bounded by `03S`/`03T`,
+finalized in `03U`, and closed for current scope in `03V`. Full P7 remains
+open. P7 broad implementation remains unapproved beyond the exact `03O`
+minimal synthetic/local smoke task; P8-P12 entry remains unapproved.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
@@ -227,10 +225,20 @@ closure review gate. It does not close P7 current scope or approve broad P7
 implementation, training, source ingestion, parser / reader / ingestion,
 actual feature extraction, actual label generation, real data, model-output
 integration or P8-P12 entry.
+P7 final current-scope closure review = complete in
+`docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md`;
+decision `P7 current scope can close` for the exact current scope only:
+docs-only supervised-learning readiness chain plus the accepted minimal
+synthetic/local supervised feature-label smoke implementation. This does not
+close full P7 or approve broad P7 implementation, training, source ingestion,
+parser / reader / ingestion, actual feature extraction, actual label
+generation, model architecture / trainer, real data, model-output integration
+or P8-P12 entry.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = run final P7 current-scope closure review gate.
+Next = run post-current-scope P7 transition review before defining any broader
+P7 implementation or P8 task.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -364,7 +372,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Run final P7 current-scope closure review gate.
+Run post-current-scope P7 transition review before defining any broader P7 implementation or P8 task.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
@@ -378,14 +386,17 @@ blocked / not accepted items, an exit readiness checklist, validation commands
 and P8-P12 non-entry conditions. `docs/03_supervised_policy/03T_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`
 reviews those criteria and records `Review can close`.
 `docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
-finalizes the current-scope handoff and evidence index. The next task must run
-the final current-scope closure review gate and must not add
-production code, tests, fixtures, data files, parser, dataset reader,
-ingestion, actual feature extraction, actual label generation, supervised
-dataset construction, training, model architecture, trainer, real Tenhou, real
-haifu, external logs, platform data, model-output integration, CLI, broad file
-ingestion, self-play, league, P8-P12 work, source approval, training-data
-approval or model-strength claims.
+finalizes the current-scope handoff and evidence index.
+`docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md`
+runs the final current-scope closure review gate and records `P7 current scope
+can close` for the exact current scope only. The next task must be a docs-only
+post-current-scope P7 transition review before any broader P7 implementation
+or P8 task. It must not add production code, tests, fixtures, data files,
+parser, dataset reader, ingestion, actual feature extraction, actual label
+generation, supervised dataset construction, training, model architecture,
+trainer, real Tenhou, real haifu, external logs, platform data,
+model-output integration, CLI, broad file ingestion, self-play, league,
+P8-P12 work, source approval, training-data approval or model-strength claims.
 
 The exact P6 implementation approved by `02N` is complete and reviewed in
 `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`

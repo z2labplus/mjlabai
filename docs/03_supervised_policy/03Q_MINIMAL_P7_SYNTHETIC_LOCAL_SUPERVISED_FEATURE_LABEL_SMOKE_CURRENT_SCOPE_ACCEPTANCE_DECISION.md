@@ -161,8 +161,8 @@ self-play, league or P8-P12.
 
 The closure criteria definition is now recorded in
 `docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`.
-It keeps the acceptance boundary unchanged: P7 current scope is not closed by
-the criteria definition, and broader P7 implementation, training, source
+It keeps the acceptance boundary unchanged: P7 current scope was not closed by
+the criteria definition itself, and broader P7 implementation, training, source
 ingestion, parser / reader / ingestion, actual feature extraction, actual label
 generation, real data, model-output integration, self-play, league and P8-P12
 remain unapproved.
@@ -170,7 +170,7 @@ remain unapproved.
 The closure criteria review is now recorded in
 `docs/03_supervised_policy/03T_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`.
 It records `Review can close` for the criteria only. It does not close P7
-current scope or approve broader P7 implementation, training, source
+current scope by itself or approve broader P7 implementation, training, source
 ingestion, parser / reader / ingestion, actual feature extraction, actual label
 generation, real data, model-output integration, self-play, league or P8-P12.
 
@@ -182,6 +182,14 @@ not closed by `03U`, and broader P7 implementation, training, source
 ingestion, parser / reader / ingestion, actual feature extraction, actual label
 generation, real data, model-output integration, self-play, league and P8-P12
 remain unapproved.
+
+The final P7 current-scope closure review is now recorded in
+`docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md`.
+It closes P7 current scope only after preserving this exact acceptance
+boundary. The acceptance decision still does not approve full P7, broader P7
+implementation, training, source ingestion, parser / reader / ingestion,
+actual feature extraction, actual label generation, real data,
+model-output integration or P8-P12.
 
 ## Evidence Grade
 

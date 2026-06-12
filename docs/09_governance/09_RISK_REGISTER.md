@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — Final P7 current-scope closure review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| P7 current-scope closure is mistaken for full P7 closure. | Governance / Scope | High | Medium | `03V`, `10_NEXT`, handoff, stage contract and technical plan state that only the exact current scope is closed. | Open |
+| P7 current-scope closure is mistaken for broad P7 implementation or training approval. | Governance / Scope | High | Medium | `03V` explicitly keeps broad implementation, training, model architecture and trainer work unapproved. | Open |
+| P7 current-scope closure is mistaken for source approval, parser / reader / ingestion, actual feature extraction or actual label generation approval. | Data / Governance | High | Medium | `03V` keeps source approval, training-data approval, parser, dataset reader, ingestion, actual feature extraction and actual label generation unapproved. | Open |
+| P7 current-scope closure is treated as P8-P12 entry approval. | Governance / Stage Control | High | Medium | `03V` and `10_NEXT` require a post-current-scope P7 transition review before any broader P7 implementation or P8 task. | Open |
+| P7 closure evidence is overclaimed as model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence. | Evaluation / Governance | High | Medium | Evidence grade is P7 final current-scope closure review evidence only with explicit non-evidence wording. | Open |
+
 ## 2026-06-12 — P7 current-scope handoff/evidence finalization risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

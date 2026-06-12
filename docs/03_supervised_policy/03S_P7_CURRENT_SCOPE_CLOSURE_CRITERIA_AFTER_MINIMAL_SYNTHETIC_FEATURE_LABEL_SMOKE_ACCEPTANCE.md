@@ -100,7 +100,7 @@ non-evidence guardrails.
 | P8-P12 non-entry preserved. | ready | `12D`, `03E`, `03R`, this document | no | yes | Later stages require separate transition review and approval. |
 | Current-scope closure criteria review requirement. | not_ready | next task | no | yes | This task defines criteria; a separate review must inspect them. |
 | Handoff/evidence finalization requirement. | not_ready | future task | no | yes | Required before final current-scope closure review. |
-| Final current-scope closure review requirement. | not_ready | future task | no | yes | Final review is still pending; P7 current scope is not closed. |
+| Final current-scope closure review requirement. | not_ready at criteria-definition time | future task | no | yes | Final review was pending at this criteria-definition step; `03V` later records final current-scope closure. |
 
 ## Required Remaining P7 Current-Scope Items
 
@@ -237,6 +237,13 @@ P7 current scope, approve broader P7 implementation, approve training, approve
 source ingestion, approve parser / reader / ingestion, approve actual feature
 extraction, approve actual label generation, approve real data, approve
 model-output integration or approve P8-P12.
+
+The final P7 current-scope closure review is now recorded in
+`docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md`.
+It confirms that the C1-C26 criteria pass for exact current-scope closure
+only. It does not turn this criteria definition into full P7 closure, broader
+implementation approval, training approval, real-data approval or P8-P12
+entry.
 
 ## Evidence Grade
 

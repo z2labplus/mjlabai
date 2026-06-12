@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Run final P7 current-scope closure review gate.
+- [ ] Run post-current-scope P7 transition review before defining any broader P7 implementation or P8 task.
 
 Current execution charter:
 
@@ -16,29 +16,18 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only final P7 current-scope closure review gate after
-  closure criteria were defined in `03S`, reviewed in `03T`, and the handoff /
-  evidence index was finalized in `03U`.
-- `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
-  records `Accepted as current-scope complete` for the exact minimal
-  synthetic/local smoke scope only.
-- `docs/03_supervised_policy/03R_P7_NEXT_CURRENT_SCOPE_SUPERVISED_LEARNING_TASK_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`
-  selected docs-only P7 current-scope closure criteria definition.
-- `docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`
-  defines the accepted current-scope P7 inventory, required criteria before
-  current-scope P7 closure, deferred / blocked / not accepted items, an exit
-  readiness checklist, validation commands and P8-P12 non-entry conditions.
-- `docs/03_supervised_policy/03T_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`
-  records `Review can close` for those criteria with no blocker.
-- `docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
-  finalizes the P7 current-scope handoff and evidence index, records no
-  risk/evidence consistency blocker, and recommends this final closure review
-  gate.
-- This task may decide whether P7 current scope can close.
+- This is a docs-only post-current-scope P7 transition review after
+  `docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md`
+  records that P7 current scope can close for the exact current scope only.
+- P7 current scope is closed only for the docs-only supervised-learning
+  readiness chain plus the accepted minimal synthetic/local supervised
+  feature-label smoke implementation.
+- This task must decide what can be defined next, if anything, before broader
+  P7 implementation or P8 work.
 - This task does not close full P7.
 - This task does not approve broader P7 implementation.
 - This task does not approve P8-P12 entry.
-- Do not directly enter implementation.
+- This task must remain docs-only.
 - Do not add production code.
 - Do not modify implementation logic.
 - Do not add tests.
@@ -63,23 +52,18 @@ Limits:
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or
   third-party build artifacts.
 - Do not claim any P5 closure artifact, P6 closure artifact, P6
-  synthetic/local schema artifact or P7 smoke artifact is model-strength
-  evidence, Tenhou evidence, stable-dan ranked-game evidence, LuckyJ `10.68`
-  comparison or candidate-promotion evidence.
-- Required validation for this task:
-  - `git diff --check`
-  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`
-  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`
-  - `python3 -m unittest tests/data/test_replay_schema.py`
-  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+  synthetic/local schema artifact or P7 current-scope closure artifact is
+  model-strength evidence, Tenhou evidence, stable-dan ranked-game evidence,
+  LuckyJ `10.68` comparison or candidate-promotion evidence.
 - Stop before commit if new implementation logic, new tests, new fixtures,
   data files, real data, parser / reader / ingestion behavior, actual feature
   extraction, actual label generation, model-output path, CLI, broad
-  ingestion, third-party artifact, validation failure, overclaim, source
-  approval, label approval, feature approval or P8-P12 drift appears.
+  ingestion, third-party artifact, overclaim, source approval, label approval,
+  feature approval or P8-P12 drift appears.
 
 ## Completed
 
+- [x] 2026-06-12 Ran final P7 current-scope closure review gate: added `docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md`, reviewed the `03E`-`03U` chain, confirmed C1-C26 final status, reran the required P7/P6 validation commands, synchronized governance, and recorded the decision `P7 current scope can close` for the exact current scope only: docs-only supervised-learning readiness chain plus accepted minimal synthetic/local supervised feature-label smoke implementation. This is P7 final current-scope closure review evidence only. It does not close full P7, approve broader P7 implementation, approve P7 training, approve a training data source, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-12 Finalized P7 current-scope handoff and evidence index after closure criteria review: added `docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`, recorded a finalization-ready P7 current-scope handoff summary, built an evidence index covering `03E`-`03U`, the accepted minimal synthetic/local feature-label smoke implementation artifacts, P6/P5 context and governance docs, confirmed evidence grade consistency, classified remaining required closure items, deferred / blocked / not accepted items and final closure review readiness, and selected `Run final P7 current-scope closure review gate` as the next docs-only task. This is P7 current-scope handoff and evidence-index finalization evidence only; it does not close P7 current scope, close full P7, approve broader P7 implementation, approve training, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-12 Reviewed P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance: added `docs/03_supervised_policy/03T_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`, reviewed `03S` scope, accepted current-scope inventory, C1-C26 closure criteria, exit readiness checklist, required remaining items, deferred / blocked / not accepted classifications, P8-P12 non-entry conditions, validation commands and governance synchronization. Review decision: `Review can close.` This is P7 current-scope closure criteria review evidence only; it does not close P7 current scope, approve broader P7 implementation, approve training, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-12 Defined P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance: added `docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`, recorded accepted current-scope P7 inventory, C1-C26 closure criteria, an exit readiness checklist, required remaining docs/review/closure items, deferred / blocked / not accepted items, P8-P12 non-entry conditions, validation commands, planning decision, next task recommendation and evidence grade. This is P7 current-scope closure criteria definition evidence only; it does not close P7 current scope, approve broader P7 implementation, approve training, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.

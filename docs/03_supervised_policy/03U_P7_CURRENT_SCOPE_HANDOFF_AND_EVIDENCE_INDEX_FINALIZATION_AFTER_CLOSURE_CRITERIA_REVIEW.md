@@ -258,6 +258,16 @@ ingestion, approve parser / reader / ingestion, approve actual feature
 extraction, approve actual label generation, approve real data, approve
 model-output integration, enter P8-P12 or claim model strength.
 
+## Final Closure Reference
+
+The final closure review gate is now recorded in
+`docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md`.
+It closes P7 current scope only for the exact docs-only readiness chain plus
+accepted minimal synthetic/local supervised feature-label smoke implementation.
+It does not close full P7 or approve broader P7 implementation, training,
+source ingestion, parser / reader / ingestion, actual feature extraction,
+actual label generation, real data, model-output integration or P8-P12.
+
 ## Evidence Grade
 
 ```text
