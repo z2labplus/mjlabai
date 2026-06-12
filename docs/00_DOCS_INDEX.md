@@ -35,6 +35,7 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
 docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md
 docs/12_technical_plan/12D_POST_FULL_P6_TRANSITION_REVIEW.md
+docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -61,6 +62,18 @@ and selects the next docs-only task: define P7 scope, entry criteria and first
 task before implementation. It is transition-review evidence only, not P7-P12
 entry approval, P7 implementation approval, training approval, real-data
 approval, parser / reader / ingestion approval or model-strength evidence.
+
+`docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md`
+records the post-current-scope P7 transition review after final current-scope
+P7 closure. It confirms that P7 current scope is closed only for the exact
+docs-only readiness chain plus accepted minimal synthetic/local feature-label
+smoke implementation, that full P7 remains open and that broader P7
+implementation and P8-P12 remain unapproved. It selects the next docs-only
+task: define a full P7 closure roadmap and remaining scope inventory after
+current-scope closure. It is transition-review evidence only, not full P7
+closure, broader implementation approval, training approval, parser / reader /
+ingestion approval, real-data approval, P8-P12 entry approval or
+model-strength evidence.
 
 ## Supervised-policy files
 

@@ -8,6 +8,46 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-12 — Post-current-scope P7 transition review
+
+- Type: internal documentation / P7 transition-review evidence.
+- Stage: post-current-scope P7 supervised learning transition review.
+- Added transition review document:
+  - `docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md`
+- Reviewed:
+  - final P7 current-scope closure review in `03V`.
+  - closed current-scope P7 chain and accepted exact minimal
+    synthetic/local supervised feature-label smoke implementation.
+  - full-P7 non-closure state.
+  - candidate next directions after current-scope closure.
+- Decision:
+  - `Post-current-scope P7 transition review is complete.`
+  - P7 current scope is closed only for exact current scope.
+  - Full P7 remains open.
+  - Recommended next task:
+    `Define full P7 closure roadmap and remaining scope inventory after current-scope closure.`
+- Evidence grade:
+  - Post-current-scope P7 transition review evidence only.
+- Not evidence of:
+  - full P7 closure.
+  - broader P7 implementation.
+  - training.
+  - source approval.
+  - parser, dataset reader or ingestion.
+  - actual feature extraction.
+  - actual label generation.
+  - supervised dataset construction.
+  - model architecture or trainer.
+  - model-output integration.
+  - real Tenhou / real haifu / external-log / platform-data ingestion.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-12 — Final P7 current-scope closure review gate
 
 - Type: internal documentation / P7 final current-scope closure review

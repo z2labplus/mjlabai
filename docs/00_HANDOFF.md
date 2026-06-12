@@ -78,6 +78,16 @@ construction, model architecture / trainer, real data, model-output
 integration, self-play, league and P8-P12 remain unapproved. The next task is
 `Run post-current-scope P7 transition review before defining any broader P7
 implementation or P8 task`.
+`docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md`
+completes that post-current-scope transition review. It confirms that P7
+current scope is closed only for the exact current scope, full P7 remains
+open, broader P7 implementation and P8-P12 remain unapproved, and the next
+task is `Define full P7 closure roadmap and remaining scope inventory after
+current-scope closure`. That next task is docs-only roadmap / inventory
+definition and must not add production code, tests, fixtures, data files,
+parser / reader / ingestion, actual feature extraction, actual label
+generation, supervised dataset construction, training, model architecture,
+model-output integration, real data, self-play, league or P8-P12 work.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -192,8 +202,8 @@ supervised dataset construction, training, model architecture, trainer,
 model-output integration, real data, CLI, self-play, league, P8-P12 entry,
 model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
 evidence, LuckyJ `10.68` comparison or candidate-promotion evidence. The next
-task is `Run post-current-scope P7 transition review before defining any
-broader P7 implementation or P8 task`.
+task is `Define full P7 closure roadmap and remaining scope inventory after
+current-scope closure`.
 ```
 
 ## Current methodology
@@ -282,8 +292,8 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Run post-current-scope P7 transition review before defining any broader P7 implementation or P8 task.
-The post-current-scope P7 transition review must be docs-only. It must not add
+Define full P7 closure roadmap and remaining scope inventory after current-scope closure.
+The full-P7 roadmap / inventory task must be docs-only. It must not add
 production code, tests, fixtures, data files, parser, dataset reader,
 ingestion, actual feature extraction, actual label generation, supervised
 dataset construction, training, tuning, self-play, league, runner behavior,

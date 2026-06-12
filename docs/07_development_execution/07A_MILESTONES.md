@@ -90,6 +90,10 @@ Full P7, broader P7 implementation, training, source ingestion, parser /
 reader / ingestion, actual feature extraction, actual label generation, real
 data, model-output integration and P8-P12 remain unapproved. The next step is
 a docs-only post-current-scope P7 transition review.
+`docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md`
+completes that transition review, confirms full P7 remains open and selects
+docs-only full P7 closure roadmap / remaining-scope inventory definition as
+the next step.
 No source is approved for P7 training, source ingestion, parser / reader /
 ingestion, actual feature extraction or actual label generation. Broad P7
 implementation, training and P8-P12 entry remain unapproved.

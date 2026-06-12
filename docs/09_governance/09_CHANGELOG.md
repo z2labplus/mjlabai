@@ -1,5 +1,29 @@
 # 09_CHANGELOG
 
+## 2026-06-12 - v2.83
+
+- Ran the post-current-scope P7 transition review before defining any broader
+  P7 implementation or P8 task.
+- Added `docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md`.
+- Confirmed that P7 current scope is closed only for the exact docs-only
+  readiness chain plus accepted minimal synthetic/local supervised
+  feature-label smoke implementation.
+- Confirmed that full P7 remains open.
+- Confirmed that broader P7 implementation, training, training data source
+  approval, source ingestion, parser / reader / ingestion, actual feature
+  extraction, actual label generation, supervised dataset construction, model
+  architecture / trainer, real data, model-output integration, self-play,
+  league and P8-P12 remain unapproved.
+- Reviewed candidate next directions and selected:
+  `Define full P7 closure roadmap and remaining scope inventory after current-scope closure.`
+- This is post-current-scope P7 transition review evidence only.
+- No production code, implementation logic, tests, fixtures, data files,
+  parser, dataset reader, ingestion, actual feature extraction, actual label
+  generation, supervised dataset construction, training, model architecture,
+  trainer, model-output integration, CLI, real Tenhou, real haifu, external
+  logs, platform data, self-play, league, P8-P12 work or model-strength claim
+  was added.
+
 ## 2026-06-12 - v2.82
 
 - Ran the final P7 current-scope closure review gate.

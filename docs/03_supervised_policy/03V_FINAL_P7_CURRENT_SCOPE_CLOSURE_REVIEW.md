@@ -262,6 +262,17 @@ generation, supervised dataset construction, training, model architecture,
 model-output integration, real data, self-play, league, P8-P12 execution or
 model-strength claims.
 
+Post-current-scope transition review follow-up:
+
+```text
+docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md
+```
+
+That review confirms that P7 current scope is closed only for this exact
+current scope, full P7 remains open, broader P7 implementation and P8-P12
+remain unapproved, and the next docs-only task should define a full P7 closure
+roadmap and remaining scope inventory after current-scope closure.
+
 ## Evidence Grade
 
 ```text

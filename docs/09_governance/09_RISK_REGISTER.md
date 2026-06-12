@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — Post-current-scope P7 transition review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Post-current-scope transition review is mistaken for full P7 closure. | Governance / Scope | High | Medium | `12E`, `10_NEXT`, handoff and stage contract state that full P7 remains open. | Open |
+| Transition review is mistaken for broader P7 implementation or training approval. | Governance / Scope | High | Medium | `12E` selects only docs-only roadmap / inventory definition and keeps implementation/training unapproved. | Open |
+| Current-scope closure is used to imply source, parser, extraction or label-generation approval. | Data / Governance | High | Medium | `12E` keeps source approval, parser / reader / ingestion, actual feature extraction and actual label generation unapproved. | Open |
+| P8-P12 work is started because P7 current scope closed. | Governance / Stage Control | High | Medium | `12E` rejects P8 transition as premature and requires full P7 roadmap / remaining-scope inventory first. | Open |
+| Transition evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is post-current-scope P7 transition review evidence only with explicit non-evidence wording. | Open |
+
 ## 2026-06-12 — Final P7 current-scope closure review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
