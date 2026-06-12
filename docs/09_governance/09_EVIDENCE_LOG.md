@@ -8,6 +8,64 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-12 — P7 next current-scope supervised-learning task definition after minimal synthetic feature-label smoke acceptance
+
+- Type: internal documentation / P7 next current-scope supervised-learning task
+  definition evidence.
+- Stage: P7 supervised learning / docs-only task-definition gate.
+- Added task-definition document:
+  - `docs/03_supervised_policy/03R_P7_NEXT_CURRENT_SCOPE_SUPERVISED_LEARNING_TASK_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`
+- Reviewed context:
+  - `03Q` accepted the exact minimal synthetic/local supervised
+    feature-label smoke implementation as current-scope complete.
+  - P7 broad implementation remains unapproved.
+  - no training source is approved.
+  - parser / reader / ingestion, actual feature extraction and actual label
+    generation remain unapproved.
+  - P8-P12 remain unapproved.
+- Candidate next tasks reviewed:
+  - define current-scope closure criteria.
+  - define another readiness boundary.
+  - define another minimal implementation proposal.
+  - run a blocker / transition review.
+  - defer pending human / Web ChatGPT decision.
+- Recommended next task:
+  - `Define P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance.`
+- New next task:
+  - `Define P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance.`
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P7 next current-scope supervised-learning task definition evidence only.
+- Not evidence of:
+  - P7 broad implementation.
+  - P7 training.
+  - training-data source approval.
+  - source ingestion approval.
+  - parser, dataset reader or ingestion.
+  - actual feature extraction from logs.
+  - actual label generation.
+  - supervised dataset construction.
+  - model architecture, dataloader, optimizer, loss, trainer, checkpoint or
+    weights.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-12 — P7 minimal synthetic/local supervised feature-label smoke current-scope acceptance decision
 
 - Type: internal documentation / P7 minimal synthetic/local supervised

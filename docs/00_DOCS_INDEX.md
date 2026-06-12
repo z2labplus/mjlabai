@@ -83,6 +83,7 @@ docs/03_supervised_policy/03N_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_
 docs/03_supervised_policy/03O_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md
 docs/03_supervised_policy/03P_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_REVIEW.md
 docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md
+docs/03_supervised_policy/03R_P7_NEXT_CURRENT_SCOPE_SUPERVISED_LEARNING_TASK_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -241,6 +242,17 @@ supervised dataset construction, model architecture, trainer, real data,
 model-output integration, CLI, self-play, league, P8-P12 entry,
 model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
 evidence, LuckyJ `10.68` comparison or candidate promotion.
+
+`docs/03_supervised_policy/03R_P7_NEXT_CURRENT_SCOPE_SUPERVISED_LEARNING_TASK_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`
+defines the next P7 current-scope supervised-learning task after `03Q`
+acceptance. It evaluates candidate docs-only next tasks and selects
+`Define P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance`
+so P7 does not continue indefinitely through readiness / schema churn. It is
+next-task definition evidence only; it does not approve broad P7
+implementation, training, source ingestion, parser / reader / ingestion,
+actual feature extraction, actual label generation, real data, model-output
+integration, CLI, self-play, league, P8-P12, model-strength evidence, LuckyJ
+`10.68` comparison or candidate promotion.
 
 ## Data-system files
 

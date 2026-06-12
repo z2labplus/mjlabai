@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — P7 next current-scope supervised-learning task definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Next-task definition is mistaken for P7 current-scope closure. | Governance / Scope | High | Medium | `03R` states that closure criteria definition is next and does not close P7. | Open |
+| Closure criteria definition is mistaken for broad P7 implementation approval. | Governance / Scope | High | Medium | `03R`, `10_NEXT`, handoff and stage contract keep implementation, training, parser / reader / ingestion, feature extraction and label generation unapproved. | Open |
+| P7 continues indefinitely through more readiness / schema churn. | Governance / Process | Medium-High | Medium | `03R` selects current-scope closure criteria as the next task specifically to define a bounded closure path. | Open |
+| The next closure-criteria task drifts into code, tests, fixtures or data files. | Governance / Scope | High | Medium | `10_NEXT` defines the next task as docs-only and repeats no-code / no-test / no-fixture / no-data-file boundaries. | Open |
+| Next-task evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is next-task definition evidence only with explicit non-evidence warnings. | Open |
+| P8-P12 work is treated as implicitly approved by the next-task definition. | Governance / Stage Control | High | Medium | `03R`, stage contract and `10_NEXT` keep P8-P12 closed until separate transition reviews and approvals. | Open |
+
 ## 2026-06-12 — P7 minimal synthetic/local supervised feature-label smoke current-scope acceptance decision risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

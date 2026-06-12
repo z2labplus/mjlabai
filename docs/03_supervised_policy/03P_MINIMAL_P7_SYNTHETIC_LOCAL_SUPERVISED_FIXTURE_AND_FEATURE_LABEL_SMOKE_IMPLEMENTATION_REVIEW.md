@@ -266,6 +266,11 @@ implementation, source ingestion, parser / reader / ingestion, actual feature
 extraction, actual label generation, training, real data, model-output
 integration or P8-P12 entry.
 
+The next-task definition after acceptance is recorded in
+`docs/03_supervised_policy/03R_P7_NEXT_CURRENT_SCOPE_SUPERVISED_LEARNING_TASK_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`.
+It selects docs-only P7 current-scope closure criteria definition as the next
+task, without approving implementation or training.
+
 ## Evidence Grade
 
 ```text

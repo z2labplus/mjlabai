@@ -2,12 +2,14 @@
 
 ## Current stage
 
-P7 docs-only next-task definition gate after the exact minimal synthetic/local
-supervised fixture and feature-label smoke current-scope acceptance decision.
+P7 docs-only current-scope closure criteria definition gate after the exact
+minimal synthetic/local supervised fixture and feature-label smoke
+current-scope acceptance decision and next-task definition.
 `03M` and `03N` name and review candidate future files and guardrails only;
 `03O` approved only the exact minimal implementation task and exact files.
 That task is now implemented, reviewed in `03P` with `Review can close`, and
-accepted as current-scope complete in `03Q`, but it does not approve broad P7
+accepted as current-scope complete in `03Q`, followed by next-task definition
+in `03R`, but it does not approve broad P7
 implementation, parser / reader / ingestion, actual feature extraction,
 actual label generation, training, model-output integration, real data or
 P8-P12 entry. P5 evaluation foundation is
@@ -106,6 +108,7 @@ P7 minimal synthetic/local supervised fixture and feature-label smoke implementa
 P7 minimal synthetic/local supervised fixture and feature-label smoke implementation = complete in exact `03O` files only; helper validates JSON-safe synthetic/local smoke mappings and guardrails; fixture/tests are synthetic/local only; no parser / reader / ingestion, actual feature extraction, actual label generation, training, real data, model-output integration or P8-P12
 P7 minimal synthetic/local supervised fixture and feature-label smoke implementation review = complete in `03P`; review can close with no blocker; no broad P7 implementation, source approval, training-data approval, parser / reader / ingestion, actual feature extraction, actual label generation, training, real data, model-output integration or P8-P12 entry
 P7 minimal synthetic/local supervised feature-label smoke current-scope acceptance decision = complete in `03Q`; accepted as current-scope complete for the exact synthetic/local smoke scope only; no broad P7 implementation, training, source ingestion, parser / reader / ingestion, actual feature extraction, actual label generation, real data, model-output integration or P8-P12 entry
+P7 next current-scope supervised-learning task definition = complete in `03R`; selected docs-only current-scope closure criteria definition; no broad P7 implementation, training, source ingestion, parser / reader / ingestion, actual feature extraction, actual label generation, real data, model-output integration or P8-P12 entry
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
@@ -221,4 +224,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Define next P7 current-scope supervised-learning task after minimal synthetic feature-label smoke acceptance.
+Define P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance.

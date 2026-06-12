@@ -144,9 +144,17 @@ Because this decision is accepted, the next task should be:
 Define next P7 current-scope supervised-learning task after minimal synthetic feature-label smoke acceptance.
 ```
 
-The next task must be docs-only. It should decide the next P7 current-scope
-direction, such as closure criteria, another readiness boundary, a minimal
-implementation proposal or a transition/blocker review. It must not directly
+The next-task definition is now recorded in
+`docs/03_supervised_policy/03R_P7_NEXT_CURRENT_SCOPE_SUPERVISED_LEARNING_TASK_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`.
+It selects:
+
+```text
+Define P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance.
+```
+
+That follow-up task must remain docs-only. It may define closure criteria,
+deferred / blocked / not accepted items, an exit readiness checklist,
+validation commands and P8-P12 non-entry conditions. It must not directly
 enter implementation, training, parser, dataset reader, ingestion, feature
 extraction, label generation, real data, model-output integration, CLI,
 self-play, league or P8-P12.

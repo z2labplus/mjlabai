@@ -1,5 +1,37 @@
 # 09_CHANGELOG
 
+## 2026-06-12 - v2.78
+
+- Defined the next P7 current-scope supervised-learning task after minimal
+  synthetic feature-label smoke acceptance.
+- Added
+  `docs/03_supervised_policy/03R_P7_NEXT_CURRENT_SCOPE_SUPERVISED_LEARNING_TASK_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`.
+- Evaluated candidate next tasks:
+  - current-scope closure criteria.
+  - another readiness boundary.
+  - another minimal implementation proposal.
+  - blocker / transition review.
+  - deferred human / Web ChatGPT decision.
+- Recommended next task:
+  `Define P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance.`
+- Rationale:
+  P7 docs-only readiness chain plus one exact minimal synthetic/local smoke
+  implementation has been accepted, so the next safe step is to define
+  current-scope closure criteria and avoid endless readiness / schema churn.
+- New `10_NEXT` first item:
+  `Define P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance.`
+- This is P7 next current-scope supervised-learning task definition evidence
+  only.
+- No production code, implementation logic, tests, fixtures, data files,
+  replay schema code, parser, dataset reader, ingestion, actual feature
+  extraction, actual label generation, supervised dataset construction,
+  training, tuning, self-play, league, runner behavior, model architecture,
+  trainer, dataloader, optimizer, loss, checkpoint, weights, model-output
+  integration, CLI, broad file ingestion, real Tenhou, real haifu, external
+  logs, platform data, third-party binary call, latency measurement,
+  fixed-position exact-match, metric implementation, registry code change,
+  promotion criteria change, P8-P12 work or model-strength claim was added.
+
 ## 2026-06-12 - v2.77
 
 - Decided whether the minimal P7 synthetic/local supervised fixture and
