@@ -101,6 +101,7 @@ docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SY
 docs/03_supervised_policy/03T_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md
 docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md
 docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md
+docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -320,6 +321,18 @@ implementation, approve training, approve source ingestion, approve parser /
 reader / ingestion, approve actual feature extraction, approve actual label
 generation, approve real data, approve model-output integration, approve
 self-play, approve league, approve P8-P12 or provide model-strength evidence.
+
+`docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md`
+defines the full P7 closure roadmap and remaining scope inventory after
+current-scope closure. It records that P7 current scope is closed only for the
+exact docs-only readiness chain plus accepted minimal synthetic/local
+feature-label smoke implementation, classifies full-P7 remaining items as
+required / deferred / blocked / later-stage / out of scope, and selects a
+docs-only roadmap review gate as the next task. It is roadmap/inventory
+definition evidence only, not full P7 closure, broader implementation
+approval, training approval, source approval, parser / reader / ingestion
+approval, real-data approval, P8-P12 entry approval or model-strength
+evidence.
 
 ## Data-system files
 

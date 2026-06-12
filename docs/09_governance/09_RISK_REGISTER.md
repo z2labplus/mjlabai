@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — Full P7 roadmap and remaining scope inventory definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Full-P7 roadmap is mistaken for full P7 closure. | Governance / Scope | High | Medium | `03W`, `10_NEXT`, handoff and stage contract state that full P7 remains open. | Open |
+| Required items in `03W` are mistaken for implementation approval. | Governance / Scope | High | Medium | `03W` is roadmap/inventory definition only and selects a docs-only review gate next. | Open |
+| Deferred items are treated as approved future work without review. | Governance / Scope | Medium-High | Medium | `03W` states deferred items still need a later first `10_NEXT` task, scope, review and approval. | Open |
+| Blocked real/external/platform data items enter the project through roadmap follow-up. | Data / Compliance | High | Medium | `03W` keeps real Tenhou, real haifu, external logs, platform data and account/session/cookie/token handling blocked until separate approval. | Open |
+| Roadmap evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is full P7 roadmap / inventory definition evidence only with explicit non-evidence wording. | Open |
+
 ## 2026-06-12 — Post-current-scope P7 transition review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

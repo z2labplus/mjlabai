@@ -94,6 +94,10 @@ a docs-only post-current-scope P7 transition review.
 completes that transition review, confirms full P7 remains open and selects
 docs-only full P7 closure roadmap / remaining-scope inventory definition as
 the next step.
+`docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md`
+defines that roadmap / inventory, classifies remaining full-P7 items as
+required, deferred, blocked, later-stage or out of scope, and selects a
+docs-only review gate next.
 No source is approved for P7 training, source ingestion, parser / reader /
 ingestion, actual feature extraction or actual label generation. Broad P7
 implementation, training and P8-P12 entry remain unapproved.

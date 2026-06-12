@@ -88,6 +88,15 @@ definition and must not add production code, tests, fixtures, data files,
 parser / reader / ingestion, actual feature extraction, actual label
 generation, supervised dataset construction, training, model architecture,
 model-output integration, real data, self-play, league or P8-P12 work.
+`docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md`
+now defines that full P7 roadmap and remaining scope inventory. It classifies
+remaining items as required, deferred, blocked, later-stage or out of scope and
+keeps full P7 open. The next task is `Review full P7 closure roadmap and
+remaining scope inventory after current-scope closure`, a docs-only review
+gate that still must not approve broader P7 implementation, training, source
+ingestion, parser / reader / ingestion, actual feature extraction, actual
+label generation, model architecture / trainer, real data, model-output
+integration, self-play, league or P8-P12.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -292,8 +301,8 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define full P7 closure roadmap and remaining scope inventory after current-scope closure.
-The full-P7 roadmap / inventory task must be docs-only. It must not add
+Review full P7 closure roadmap and remaining scope inventory after current-scope closure.
+The full-P7 roadmap / inventory review task must be docs-only. It must not add
 production code, tests, fixtures, data files, parser, dataset reader,
 ingestion, actual feature extraction, actual label generation, supervised
 dataset construction, training, tuning, self-play, league, runner behavior,

@@ -14,6 +14,65 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-12 — DR-0071 — Define Full P7 Closure Roadmap And Remaining Scope Inventory
+
+Decision:
+
+```text
+Define the full P7 closure roadmap and remaining scope inventory after current-scope closure. Set the next task to a docs-only review gate.
+```
+
+Context:
+
+- `03V` closed P7 current scope only for the exact docs-only readiness chain
+  plus accepted minimal synthetic/local supervised feature-label smoke
+  implementation.
+- `12E` completed the post-current-scope P7 transition review and selected a
+  docs-only full-P7 roadmap / remaining-scope inventory task.
+- Full P7 remains open.
+- Broader P7 implementation, training, source ingestion, parser / reader /
+  ingestion, actual feature extraction, actual label generation, model
+  architecture, real data, model-output integration and P8-P12 remain
+  unapproved.
+
+Rationale:
+
+- The project needs a clear inventory before any broader P7 implementation.
+- Required, deferred, blocked, later-stage and out-of-scope items must be
+  separated to avoid endless P7 drift and unsafe jumps into training or later
+  stages.
+- A docs-only review gate should inspect the roadmap before any broader scope
+  definition or implementation approval.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review full P7 closure roadmap and remaining scope inventory after current-scope closure.`
+- Full P7 is not closed.
+- No production code, tests, fixtures, parser, reader, ingestion, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, training, model architecture, trainer, model-output
+  integration, CLI, real data, self-play, league or P8-P12 work is approved by
+  this decision.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/10_next/10_NEXT.md`
+- `docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md`
+- `docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md`
+- `docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md`
+
+Status:
+
+```text
+Accepted; docs-only full P7 roadmap / inventory review is next.
+```
+
 ## 2026-06-12 — DR-0070 — Complete Post-Current-Scope P7 Transition Review
 
 Decision:

@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Define full P7 closure roadmap and remaining scope inventory after current-scope closure.
+- [ ] Review full P7 closure roadmap and remaining scope inventory after current-scope closure.
 
 Current execution charter:
 
@@ -16,18 +16,19 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only full-P7 closure roadmap and remaining-scope inventory
-  task after the post-current-scope P7 transition review.
+- This is a docs-only review gate for the full-P7 closure roadmap and
+  remaining-scope inventory after current-scope closure.
 - P7 current scope is closed only for the exact docs-only supervised-learning
   readiness chain plus accepted minimal synthetic/local supervised
   feature-label smoke implementation.
 - Full P7 remains open.
-- This task must classify full-P7 remaining items as required, deferred,
-  blocked, later-stage or out of scope before any broader P7 implementation.
+- This task must review the full-P7 remaining-scope classification, roadmap,
+  required/deferred/blocked/later-stage/out-of-scope items, evidence grade and
+  next-task recommendation before any broader P7 implementation.
 - This task does not close full P7.
 - This task does not approve broader P7 implementation.
 - This task does not approve P8-P12 entry.
-- This task must remain docs-only roadmap / inventory definition.
+- This task must remain docs-only roadmap / inventory review.
 - Do not add production code.
 - Do not modify implementation logic.
 - Do not add tests.
@@ -63,6 +64,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-06-12 Defined full P7 closure roadmap and remaining scope inventory after current-scope closure: added `docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md`, recorded the exact P7 current-scope closure boundary, classified full-P7 remaining items as required, deferred, blocked, later-stage or out of scope, defined a conservative docs-first roadmap toward full P7 closure, explained why broader P7 implementation and P8-P12 remain premature, and selected `Review full P7 closure roadmap and remaining scope inventory after current-scope closure` as the next docs-only review gate. This is full P7 closure roadmap and remaining scope inventory definition evidence only. It does not close full P7, approve broader P7 implementation, approve training, approve a training data source, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-12 Ran post-current-scope P7 transition review before defining any broader P7 implementation or P8 task: added `docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md`, confirmed P7 current scope is closed only for the exact current scope, confirmed full P7 remains open, reviewed candidate next directions, rejected P8 transition as premature, and selected `Define full P7 closure roadmap and remaining scope inventory after current-scope closure` as the next docs-only task. This is post-current-scope P7 transition review evidence only. It does not close full P7, approve broader P7 implementation, approve training, approve a training data source, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-12 Ran final P7 current-scope closure review gate: added `docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md`, reviewed the `03E`-`03U` chain, confirmed C1-C26 final status, reran the required P7/P6 validation commands, synchronized governance, and recorded the decision `P7 current scope can close` for the exact current scope only: docs-only supervised-learning readiness chain plus accepted minimal synthetic/local supervised feature-label smoke implementation. This is P7 final current-scope closure review evidence only. It does not close full P7, approve broader P7 implementation, approve P7 training, approve a training data source, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-12 Finalized P7 current-scope handoff and evidence index after closure criteria review: added `docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`, recorded a finalization-ready P7 current-scope handoff summary, built an evidence index covering `03E`-`03U`, the accepted minimal synthetic/local feature-label smoke implementation artifacts, P6/P5 context and governance docs, confirmed evidence grade consistency, classified remaining required closure items, deferred / blocked / not accepted items and final closure review readiness, and selected `Run final P7 current-scope closure review gate` as the next docs-only task. This is P7 current-scope handoff and evidence-index finalization evidence only; it does not close P7 current scope, close full P7, approve broader P7 implementation, approve training, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.

@@ -8,6 +8,49 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-12 — Full P7 closure roadmap and remaining scope inventory definition
+
+- Type: internal documentation / full-P7 roadmap and remaining-scope inventory
+  definition evidence.
+- Stage: P7 supervised learning / docs-only full-P7 closure roadmap planning.
+- Added roadmap / inventory document:
+  - `docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md`
+- Defined:
+  - exact current-scope closure context.
+  - full-P7 remaining-scope inventory.
+  - required items before full P7 closure.
+  - deferred items.
+  - blocked items.
+  - later-stage items.
+  - out-of-scope / non-evidence items.
+  - conservative roadmap toward full P7 closure.
+  - reasons not to start broader P7 implementation now.
+  - reasons not to enter P8-P12 now.
+- New next task:
+  - `Review full P7 closure roadmap and remaining scope inventory after current-scope closure.`
+- Evidence grade:
+  - Full P7 closure roadmap and remaining scope inventory definition evidence
+    only.
+- Not evidence of:
+  - full P7 closure.
+  - broader P7 implementation.
+  - P7 training.
+  - source approval or training-data approval.
+  - parser, dataset reader or ingestion.
+  - actual feature extraction.
+  - actual label generation.
+  - supervised dataset construction.
+  - model architecture or trainer.
+  - model-output integration.
+  - real Tenhou / real haifu / external-log / platform-data ingestion.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-12 — Post-current-scope P7 transition review
 
 - Type: internal documentation / P7 transition-review evidence.

@@ -104,6 +104,16 @@ Rationale:
 - A roadmap/inventory task helps prevent both endless P7 extension and unsafe
   jumps into training, real data, model architecture or P8.
 
+Follow-up status:
+
+```text
+Defined in docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md.
+```
+
+That follow-up defines the full-P7 remaining-scope inventory and selects a
+docs-only review gate next. It does not close full P7 or approve
+implementation.
+
 ## Why Not Broader P7 Implementation Yet
 
 Broader P7 implementation is not approved because:

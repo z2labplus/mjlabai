@@ -1,5 +1,32 @@
 # 09_CHANGELOG
 
+## 2026-06-12 - v2.84
+
+- Defined the full P7 closure roadmap and remaining scope inventory after
+  current-scope closure.
+- Added
+  `docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md`.
+- Recorded the exact P7 current-scope closure boundary.
+- Classified full-P7 remaining items as required, deferred, blocked,
+  later-stage or out of scope.
+- Defined a conservative docs-first roadmap toward full P7 closure.
+- Confirmed that full P7 remains open.
+- Confirmed that broader P7 implementation, training, source ingestion,
+  parser / reader / ingestion, actual feature extraction, actual label
+  generation, supervised dataset construction, model architecture / trainer,
+  real data, model-output integration, self-play, league and P8-P12 remain
+  unapproved.
+- New `10_NEXT` first item:
+  `Review full P7 closure roadmap and remaining scope inventory after current-scope closure.`
+- This is full P7 closure roadmap and remaining scope inventory definition
+  evidence only.
+- No production code, implementation logic, tests, fixtures, data files,
+  parser, dataset reader, ingestion, actual feature extraction, actual label
+  generation, supervised dataset construction, training, model architecture,
+  trainer, model-output integration, CLI, real Tenhou, real haifu, external
+  logs, platform data, self-play, league, P8-P12 work or model-strength claim
+  was added.
+
 ## 2026-06-12 - v2.83
 
 - Ran the post-current-scope P7 transition review before defining any broader

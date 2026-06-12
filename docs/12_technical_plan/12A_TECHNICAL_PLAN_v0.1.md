@@ -28,8 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-Full P7 closure roadmap / remaining scope inventory planning after
-post-current-scope P7 transition review.
+Full P7 closure roadmap / remaining scope inventory review planning after
+roadmap definition.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -49,7 +49,9 @@ open. P7 broad implementation remains unapproved beyond the exact `03O`
 minimal synthetic/local smoke task; P8-P12 entry remains unapproved. `12E`
 completes the post-current-scope P7 transition review and selects the next
 docs-only task: define a full P7 closure roadmap and remaining scope inventory
-after current-scope closure.
+after current-scope closure. `03W` defines that roadmap and inventory,
+classifies full-P7 remaining items as required / deferred / blocked /
+later-stage / out of scope, and selects a docs-only roadmap review gate next.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
@@ -241,10 +243,13 @@ P7 post-current-scope transition review = complete in
 `docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md`;
 full P7 remains open and the next task is docs-only full P7 closure roadmap /
 remaining-scope inventory.
+P7 full closure roadmap and remaining scope inventory = defined in
+`docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md`;
+full P7 remains open and the next task is docs-only roadmap / inventory review.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = define full P7 closure roadmap and remaining scope inventory after
+Next = review full P7 closure roadmap and remaining scope inventory after
 current-scope closure.
 ```
 
@@ -379,7 +384,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Define full P7 closure roadmap and remaining scope inventory after current-scope closure.
+Review full P7 closure roadmap and remaining scope inventory after current-scope closure.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
@@ -399,8 +404,9 @@ runs the final current-scope closure review gate and records `P7 current scope
 can close` for the exact current scope only.
 `docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md`
 completes the post-current-scope transition review and selects docs-only full
-P7 closure roadmap / remaining-scope inventory as the next task. It must not
-add production code, tests, fixtures, data files, parser, dataset reader,
+P7 closure roadmap / remaining-scope inventory as the next task. `03W` now
+defines that roadmap / inventory and selects a docs-only review gate next. The
+review task must not add production code, tests, fixtures, data files, parser, dataset reader,
 ingestion, actual feature extraction, actual label generation, supervised
 dataset construction, training, model architecture, trainer, real Tenhou, real
 haifu, external logs, platform data, model-output integration, CLI, broad file
