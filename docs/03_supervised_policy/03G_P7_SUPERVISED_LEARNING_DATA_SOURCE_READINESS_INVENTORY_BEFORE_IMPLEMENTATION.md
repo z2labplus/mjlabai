@@ -291,6 +291,12 @@ feature extraction, label generation, real Tenhou, real haifu, external logs,
 platform data, model-output integration, CLI, self-play, league or P8-P12
 entry.
 
+`docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+later defines the P7 feature and label readiness boundary before
+implementation. It keeps all source, parser / reader / ingestion, feature
+extraction, label generation, training, real-data and P8-P12 implementation
+paths unapproved.
+
 ## Evidence Grade
 
 ```text

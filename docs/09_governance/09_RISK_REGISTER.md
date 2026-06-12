@@ -8,6 +8,20 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — P7 feature and label readiness boundary risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| P7 feature/label readiness boundary is mistaken for feature extraction approval. | Governance / Scope | High | Medium | `03I`, `10_NEXT`, evidence log and handoff state that no feature extraction implementation is approved. | Open |
+| P7 feature/label readiness boundary is mistaken for label generation approval. | Governance / Scope | High | Medium | `03I` defines label readiness requirements but keeps all candidate label families not approved for generation. | Open |
+| Hidden-information leakage enters future features. | Data / Leakage | High | Medium | `03I` requires public-information-only policy, hidden-info exclusion and validation before implementation. | Open |
+| Future-information leakage enters future features or labels. | Data / Leakage | High | Medium | `03I` requires decision-time boundary, future-info exclusion and validation before implementation. | Open |
+| Train/validation leakage is ignored during feature / label planning. | Data / Leakage | High | Medium | `03I` requires split leakage policy before supervised dataset construction. | Open |
+| Candidate feature or label families are treated as approved schemas. | Governance / Scope | High | Medium | `03I` marks every candidate family as planning only and implementation not allowed now. | Open |
+| Parser, reader or ingestion work creeps into feature/label review. | Governance / Scope | High | Medium | `03I` keeps parser / reader / ingestion as separate dependencies and `10_NEXT` forbids implementation. | Open |
+| P7 boundary evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is P7 feature/label readiness boundary definition evidence only with explicit non-evidence warnings. | Open |
+| P7 planning drifts into P8/P10 self-play or league label sources. | Governance / Stage Control | High | Medium | `03I` forbids self-play and league labels before later-stage approval. | Open |
+
 ## 2026-06-12 — P7 data/source readiness inventory review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

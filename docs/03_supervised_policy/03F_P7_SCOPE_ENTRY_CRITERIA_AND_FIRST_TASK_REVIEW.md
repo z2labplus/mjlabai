@@ -331,6 +331,16 @@ defines the recommended data/source readiness inventory. It does not approve
 source use, source ingestion, P7 implementation or training data.
 ```
 
+Later follow-up status:
+
+```text
+docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md
+defines the P7 feature and label readiness boundary before implementation. It
+does not approve feature extraction, label generation, parser, dataset reader,
+ingestion, training, real data, model-output integration, P7 implementation or
+P8-P12 entry.
+```
+
 ## Explicit Non-Evidence
 
 This review is not:

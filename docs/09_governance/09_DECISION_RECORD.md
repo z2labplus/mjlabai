@@ -14,6 +14,69 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-12 — DR-0055 — Define P7 Feature And Label Readiness Boundary Before Implementation
+
+Decision:
+
+```text
+P7 feature and label readiness boundary is defined before implementation. This does not approve P7 implementation, feature extraction, label generation, parser, dataset reader, ingestion, training, real data, model-output integration, self-play, league or P8-P12 entry.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- Full P6 is closed only for the documented P6 data-system scope recorded in
+  `02AA`.
+- `03E` defined P7 scope, entry criteria and first task before implementation.
+- `03F` reviewed that definition and recorded `Review can close`.
+- `03G` defined the P7 supervised-learning data/source readiness inventory.
+- `03H` reviewed that inventory and recorded `Review can close`.
+- No source is currently approved for P7 training, source ingestion, parser /
+  reader / ingestion, feature extraction or label generation.
+
+Rationale:
+
+- P7 supervised learning cannot safely proceed until feature inputs and label
+  targets have public-information-only, hidden-information, future-information
+  and split-leakage boundaries.
+- Candidate feature and label families need to be listed without implying
+  implementation approval.
+- The next safe step is a docs-only review gate for the boundary before any
+  implementation proposal.
+
+Consequences:
+
+- `docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+  records the boundary.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review P7 feature and label readiness boundary before implementation.`
+- P7 implementation is not approved.
+- P7 first-task execution is not approved.
+- P7 training data source is not approved.
+- Source ingestion is not approved.
+- Parser, dataset reader, ingestion, feature extraction and label generation
+  are not approved.
+- P8-P12 entry is not approved.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md`
+- `docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md`
+- `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
+- `docs/02_data_system/02AA_FINAL_FULL_P6_CLOSURE_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+
+Status:
+
+```text
+Accepted boundary-definition decision recorded.
+```
+
 ## 2026-06-12 — DR-0054 — Review P7 Data-Source Readiness Inventory Before Implementation
 
 Decision:

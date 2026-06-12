@@ -8,6 +8,54 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-12 — P7 feature and label readiness boundary definition
+
+- Type: internal documentation / P7 feature and label readiness boundary
+  definition evidence.
+- Stage: P7 supervised learning / docs-only feature and label readiness
+  boundary before implementation.
+- Added document:
+  - `docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- Defined:
+  - feature readiness boundary before extraction.
+  - label readiness boundary before generation.
+  - candidate feature families and current implementation status.
+  - candidate label families and current implementation status.
+  - forbidden feature / label scope.
+  - dependency order before any future implementation.
+  - leakage, source-approval and stage-drift risks.
+  - future evidence requirements.
+  - readiness vocabulary.
+  - planning decision.
+- Planning decision:
+  - `P7 feature and label readiness boundary is defined before implementation. This does not approve P7 implementation, feature extraction, label generation, parser, dataset reader, ingestion, training, real data, model-output integration, self-play, league or P8-P12 entry.`
+- New next task:
+  - `Review P7 feature and label readiness boundary before implementation.`
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P7 feature and label readiness boundary definition evidence only.
+- Not evidence of:
+  - P7 implementation.
+  - P7 first-task execution.
+  - P8-P12 entry approval.
+  - training, tuning, self-play, league or runner behavior.
+  - source approval or training-data approval.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - parser, dataset reader, ingestion, feature extraction or label generation.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-12 — P7 supervised-learning data/source readiness inventory review
 
 - Type: internal documentation / P7 data-source readiness inventory review

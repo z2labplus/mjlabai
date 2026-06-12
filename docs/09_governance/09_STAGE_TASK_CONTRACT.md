@@ -2,9 +2,9 @@
 
 ## Current stage
 
-P7 docs-only supervised-learning feature and label readiness boundary
-definition after `03H` reviewed the P7 data/source readiness inventory and
-recorded `Review can close`. P5 evaluation foundation is
+P7 docs-only supervised-learning feature and label readiness boundary review
+after `03I` defined the P7 feature and label readiness boundary before
+implementation. P5 evaluation foundation is
 closed for the current synthetic/local scope; general P6 implementation is not open, and the exact
 minimal replay schema / project-authored synthetic fixture task approved by
 `02N` is implemented, reviewed with no blocker and accepted as current-scope
@@ -18,7 +18,8 @@ next task. `02U` defines that roadmap / inventory and selects a docs-only
 review gate as the next task. `02V` reviews that roadmap / inventory with no
 blocker and selects a docs-only full P6 closure criteria definition as the next
 task. `02X` reviews the `02W` criteria with no blocker, and `02Y` finalizes
-the full P6 handoff / evidence index. P7-P12 entry remains unapproved.
+the full P6 handoff / evidence index. P7 implementation remains unapproved,
+and P8-P12 entry remains unapproved.
 
 Current focus:
 
@@ -88,11 +89,12 @@ Post-full-P6 transition review = complete in `12D`; P7 scope, entry criteria and
 P7 scope, entry criteria and first task review = complete in `03F`; review can close with no blocker
 P7 supervised-learning data/source readiness inventory = defined in `03G`; no source is approved for P7 training or ingestion
 P7 supervised-learning data/source readiness inventory review = complete in `03H`; review can close with no blocker
+P7 feature and label readiness boundary = defined in `03I`; feature extraction, label generation, parser, dataset reader, ingestion, training, real data and model-output integration remain unapproved
 Full P6 = closed for documented P6 data-system scope only
-P7-P12 entry = not approved
 P7 implementation = not approved
+P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = define P7 feature and label readiness boundary before implementation
+Next = review P7 feature and label readiness boundary before implementation
 ```
 
 ## AI role
@@ -102,9 +104,10 @@ Local Codex engineer + evidence keeper + scope controller.
 ## Stage goal
 
 Bridge from the closed documented P6 data-system scope through P7 data/source
-inventory review into a safe docs-only feature/label readiness boundary by
-keeping P7 implementation and P8-P12 unapproved until data/source,
-feature/label and later implementation approvals exist.
+inventory review and the newly defined P7 feature/label readiness boundary
+into a safe docs-only review gate by keeping P7 implementation and P8-P12
+unapproved until data/source, feature/label and later implementation approvals
+exist.
 
 This supports the north-star target by ensuring that any future supervised
 learning, RL, search, league or LuckyJ validation work starts only after the
@@ -201,4 +204,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Define P7 feature and label readiness boundary before implementation.
+Review P7 feature and label readiness boundary before implementation.

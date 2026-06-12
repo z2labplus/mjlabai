@@ -28,9 +28,9 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 docs-only supervised-learning feature and label readiness boundary
-definition after `03H` reviewed the P7 data/source readiness inventory and
-recorded `Review can close`.
+P7 docs-only supervised-learning feature and label readiness boundary review
+after `03I` defined the P7 feature and label readiness boundary before
+implementation.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -42,7 +42,7 @@ project-authored synthetic fixture scope only. `02AA` closes full P6 only for
 the documented P6 data-system scope: docs/governance/source-rights planning,
 accepted synthetic/local minimal replay schema and project-authored synthetic
 fixture smoke implementation, and deferred/blocked/later-stage inventory.
-P7-P12 entry remains unapproved.
+P7 implementation remains unapproved, and P8-P12 entry remains unapproved.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
@@ -129,10 +129,14 @@ reader / ingestion, feature extraction or label generation.
 P7 supervised-learning data/source readiness inventory review = complete in
 `docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md`;
 review can close with no blocker.
-P7-P12 entry = not approved.
+P7 feature and label readiness boundary = defined in
+`docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md`;
+feature extraction, label generation, parser, dataset reader, ingestion,
+training, real data and model-output integration remain unapproved.
 P7 implementation = not approved.
+P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = define P7 feature and label readiness boundary before implementation.
+Next = review P7 feature and label readiness boundary before implementation.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。

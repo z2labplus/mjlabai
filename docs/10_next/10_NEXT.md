@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Define P7 feature and label readiness boundary before implementation.
+- [ ] Review P7 feature and label readiness boundary before implementation.
 
 Current execution charter:
 
@@ -17,7 +17,7 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 Limits:
 
 - This is a docs-only P7 supervised-learning feature and label readiness
-  boundary definition before implementation.
+  boundary review gate before implementation.
 - P5 is closed only for the current synthetic/local evaluation groundwork scope.
 - Full P6 is closed only for the documented P6 data-system scope: docs/governance/source-rights planning, accepted synthetic/local minimal replay schema and project-authored synthetic fixture smoke implementation, and deferred/blocked/later-stage inventory.
 - Full P6 closure is not P7-P12 entry approval.
@@ -25,9 +25,9 @@ Limits:
 - `docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md` reviews `03E` and records `Review can close`.
 - `docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md` defines the P7 supervised-learning data/source readiness inventory.
 - `docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md` reviews `03G` and records `Review can close`.
-- This task may define only P7 feature and label readiness boundaries before
-  implementation.
-- This task must distinguish feature/label boundary definition from feature
+- `docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md` defines P7 feature and label readiness boundaries before implementation.
+- This task may only review `03I` and define the next P7-only docs task.
+- This task must distinguish feature/label boundary review from feature
   extraction, label generation, supervised dataset construction or training
   approval.
 - This is not P7 implementation.
@@ -64,6 +64,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-06-12 Defined P7 feature and label readiness boundary before implementation: added `docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md`, defining future supervised-learning feature and label readiness requirements, candidate feature families, candidate label families, forbidden feature / label scope, dependency map, leakage risks, evidence requirements, readiness vocabulary, planning decision and next review gate. This is P7 feature and label readiness boundary definition evidence only; it does not approve P7 implementation, P7 first-task execution, training data source, source ingestion, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence. The next task is `Review P7 feature and label readiness boundary before implementation`.
 - [x] 2026-06-12 Reviewed P7 supervised-learning data/source readiness inventory before implementation: added `docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md`, reviewed `03G` scope, candidate source categories, current `None` approved-for-training status, readiness vocabulary, training-data requirements, P6 source-rights consistency, parser / reader / ingestion dependency status, feature / label readiness status, risks, evidence requirements, governance synchronization and validation. Review decision: `Review can close.` The next task is `Define P7 feature and label readiness boundary before implementation`. This is P7 data/source readiness inventory review evidence only; it does not approve P7 implementation, P7 first-task execution, training data source, source ingestion, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
 - [x] 2026-06-08 Defined P7 supervised-learning data/source readiness inventory before implementation: added `docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md`, classifying candidate P7 source categories, readiness status vocabulary, training-data readiness requirements, P6 source-rights consistency, parser / reader / ingestion dependency status, feature / label readiness status, risks, evidence requirements, planning decision and the next review gate. The document records that no source is currently approved for P7 training, source ingestion, parser / reader / ingestion, feature extraction or label generation. This is P7 data/source readiness inventory definition evidence only; it does not approve P7 implementation, P7 first-task execution, training, training data source, source ingestion, parser, dataset reader, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.
 - [x] 2026-06-08 Reviewed P7 scope, entry criteria and first task before implementation: added `docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md`, reviewed `03E` against post-full-P6 context, allowed docs-only scope, forbidden scope, entry criteria, exit criteria draft, required inputs, risk requirements, evidence requirements, P8-P12 non-entry boundary and governance synchronization, and recorded the decision `Review can close`. The next task is `Define P7 supervised-learning data/source readiness inventory before implementation`. This is P7 scope / entry criteria / first-task review evidence only; it does not approve P7 implementation, P7 first-task execution, training, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence.

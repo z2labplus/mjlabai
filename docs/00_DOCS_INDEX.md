@@ -74,6 +74,7 @@ docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md
 docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md
 docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md
+docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -114,6 +115,15 @@ readiness status, risks, evidence requirements and governance synchronization
 are sufficient for the current review gate. Review decision: `Review can
 close.` It is review evidence only, not source approval, training-data
 approval, P7 implementation, feature/label approval or P8-P12 entry approval.
+
+`docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+defines P7 supervised-learning feature and label readiness boundaries before
+implementation. It records candidate feature and label families, forbidden
+feature / label scope, dependency order, leakage risks, evidence requirements
+and readiness vocabulary. It is boundary-definition evidence only: it does not
+approve feature extraction, label generation, parser, dataset reader,
+ingestion, training, real data, model-output integration, P7 implementation or
+P8-P12 entry.
 
 ## Data-system files
 

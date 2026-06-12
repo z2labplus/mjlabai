@@ -265,6 +265,12 @@ training, source ingestion, parser / reader / ingestion, feature extraction or
 label generation. It is inventory-definition evidence only, not source
 approval, training-data approval or implementation approval.
 
+`docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+later defines the P7 feature and label readiness boundary before
+implementation. That later boundary definition does not approve feature
+extraction, label generation, parser, dataset reader, ingestion, training,
+real data, model-output integration, P7 implementation or P8-P12 entry.
+
 ## Planning Decision
 
 ```text

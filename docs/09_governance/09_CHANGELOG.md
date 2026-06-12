@@ -1,5 +1,39 @@
 # 09_CHANGELOG
 
+## 2026-06-12 — v2.68
+
+- Defined P7 feature and label readiness boundary before implementation.
+- Added
+  `docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md`.
+- The boundary records:
+  - future feature readiness requirements.
+  - future label readiness requirements.
+  - candidate feature families.
+  - candidate label families.
+  - forbidden feature / label scope.
+  - dependency map before any implementation.
+  - hidden-information, future-information and train/test leakage risks.
+  - evidence requirements.
+  - readiness vocabulary.
+  - planning decision.
+- Planning decision:
+  `P7 feature and label readiness boundary is defined before implementation. This does not approve P7 implementation, feature extraction, label generation, parser, dataset reader, ingestion, training, real data, model-output integration, self-play, league or P8-P12 entry.`
+- New `10_NEXT` first item:
+  `Review P7 feature and label readiness boundary before implementation.`
+- This is P7 feature and label readiness boundary definition evidence only.
+- P7 implementation, P7 first-task execution, training data source, source
+  ingestion, parser, dataset reader, ingestion, feature extraction, label
+  generation, real Tenhou, real haifu, external logs, platform data,
+  model-output integration, CLI, self-play, league and P8-P12 remain
+  unapproved.
+- No production code, tests, fixtures, data files, replay schema code, parser,
+  dataset reader, ingestion, feature extraction, label generation, CLI, broad
+  file ingestion, model-output integration, real Tenhou, real haifu, external
+  logs, platform data, OpenAI / LLM / model API call, third-party binary call,
+  metric implementation, registry code change, promotion criteria change,
+  training, tuning, self-play, league, runner behavior, P7 implementation,
+  P8-P12 work or model-strength claim was added.
+
 ## 2026-06-12 — v2.67
 
 - Reviewed P7 supervised-learning data/source readiness inventory before

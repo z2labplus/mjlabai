@@ -320,6 +320,16 @@ Rationale:
   extraction, label generation, parser, reader, ingestion, training, model
   architecture, dataloader, optimizer, loss, checkpoint, CLI or real-data use.
 
+Follow-up status:
+
+```text
+docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md
+defines that feature and label readiness boundary before implementation. The
+next task is a docs-only review gate for `03I`, not feature extraction, label
+generation, parser, dataset reader, ingestion, training, real data,
+model-output integration or P8-P12 entry.
+```
+
 ## Explicit Non-Evidence
 
 This review is not:
