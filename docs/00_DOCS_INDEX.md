@@ -76,6 +76,7 @@ docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVEN
 docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md
 docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03J_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_REVIEW.md
+docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -134,6 +135,15 @@ evidence requirements, readiness vocabulary and governance synchronization are
 sufficient for the current review gate. It is review evidence only, not P7
 implementation, feature extraction, label generation, source approval,
 training-data approval or P8-P12 entry approval.
+
+`docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md`
+defines the P7 supervised-learning risk and evidence taxonomy before
+implementation. It records P7 risk categories, evidence grades, current P7
+evidence classification, future evidence requirements, evidence-to-claim
+mapping, forbidden evidence interpretations, dependency order, governance
+update requirements and P8-P12 non-entry boundaries. It is taxonomy-definition
+evidence only, not P7 implementation, source approval, feature extraction,
+label generation, training, model-strength evidence or P8-P12 entry approval.
 
 ## Data-system files
 

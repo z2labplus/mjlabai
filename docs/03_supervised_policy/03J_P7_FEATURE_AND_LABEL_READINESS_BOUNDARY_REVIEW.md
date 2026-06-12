@@ -425,6 +425,18 @@ Rationale:
   extraction, label generation, training, model-output integration, real data,
   CLI, self-play, league or P8-P12 work.
 
+## Taxonomy Status
+
+`docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md`
+defines the recommended P7 risk and evidence taxonomy. The next task is a
+docs-only review of that taxonomy before any P7 implementation proposal.
+
+That taxonomy definition does not approve P7 implementation, P7 first-task
+execution, source approval, source ingestion, parser, dataset reader,
+ingestion, feature extraction, label generation, training, real data,
+model-output integration, CLI, self-play, league, model-strength claims or
+P8-P12 entry.
+
 ## Evidence Grade
 
 ```text

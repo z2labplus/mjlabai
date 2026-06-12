@@ -8,6 +8,54 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-12 — P7 supervised-learning risk and evidence taxonomy definition
+
+- Type: internal documentation / P7 supervised-learning risk and evidence
+  taxonomy definition evidence.
+- Stage: P7 supervised learning / docs-only risk and evidence taxonomy before
+  implementation.
+- Added document:
+  - `docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md`
+- Defined:
+  - P7 risk taxonomy.
+  - P7 evidence taxonomy.
+  - current P7 evidence classification for `03E` through `03K`.
+  - future P7 evidence requirements.
+  - evidence-to-claim mapping.
+  - forbidden evidence interpretations.
+  - risk / evidence dependency map.
+  - evidence log / risk register update requirements.
+  - P8-P12 non-entry boundary.
+- Planning decision:
+  - `P7 supervised-learning risk and evidence taxonomy is defined before implementation. This does not approve P7 implementation, P7 first-task execution, training, source ingestion, parser, dataset reader, feature extraction, label generation, real data, model-output integration, self-play, league, model-strength claims or P8-P12 entry.`
+- New next task:
+  - `Review P7 supervised-learning risk and evidence taxonomy before implementation.`
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P7 supervised-learning risk and evidence taxonomy definition evidence
+    only.
+- Not evidence of:
+  - P7 implementation.
+  - P7 first-task execution.
+  - P8-P12 entry approval.
+  - training, tuning, self-play, league or runner behavior.
+  - source approval or training-data approval.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - parser, dataset reader, ingestion, feature extraction or label generation.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-12 — P7 feature and label readiness boundary review
 
 - Type: internal documentation / P7 feature and label readiness boundary

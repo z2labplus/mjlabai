@@ -28,9 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 docs-only supervised-learning risk and evidence taxonomy definition after
-`03J` reviewed the P7 feature and label readiness boundary and recorded
-`Review can close`.
+P7 docs-only supervised-learning risk and evidence taxonomy review gate after
+`03K` defined the P7 risk and evidence taxonomy before implementation.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -136,10 +135,14 @@ training, real data and model-output integration remain unapproved.
 P7 feature and label readiness boundary review = complete in
 `docs/03_supervised_policy/03J_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_REVIEW.md`;
 review can close with no blocker.
+P7 supervised-learning risk and evidence taxonomy = defined in
+`docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md`;
+P7 implementation, source approval, feature extraction, label generation,
+training, model-strength claims and P8-P12 entry remain unapproved.
 P7 implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = define P7 supervised-learning risk and evidence taxonomy before
+Next = review P7 supervised-learning risk and evidence taxonomy before
 implementation.
 ```
 

@@ -296,6 +296,11 @@ feature extraction, label generation, real Tenhou, real haifu, external logs,
 platform data, model-output integration, CLI, self-play, league or P8-P12
 entry.
 
+`docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md`
+now defines the follow-up P7 risk and evidence taxonomy. That taxonomy is also
+docs-only and does not approve feature extraction, label generation, source
+approval, training or P8-P12 entry.
+
 ## Planning Decision
 
 ```text

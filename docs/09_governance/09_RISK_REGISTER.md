@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — P7 supervised-learning risk and evidence taxonomy risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| P7 risk/evidence taxonomy is mistaken for P7 implementation approval. | Governance / Scope | High | Medium | `03K`, `10_NEXT`, handoff and evidence log state that taxonomy definition does not approve implementation or first-task execution. | Open |
+| P7 risk/evidence taxonomy is mistaken for source approval or training-data approval. | Data / Governance | High | Medium | `03K` maps source readiness evidence to readiness inventory claims only and requires separate source approval evidence. | Open |
+| Evidence grades are overread as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `03K` defines evidence-to-claim mapping and forbidden interpretations. | Open |
+| The next review task drifts into implementation, parser, reader, ingestion, feature extraction, label generation or training. | Governance / Scope | High | Medium | `10_NEXT` defines the next task as a docs-only review gate and forbids production code, tests, fixtures and implementation behavior. | Open |
+| Later P8/P10/P12 work is treated as implicitly approved by P7 taxonomy. | Governance / Stage Control | High | Medium | `03K` records a P8-P12 non-entry boundary requiring separate transition reviews and approvals. | Open |
+
 ## 2026-06-12 — P7 feature and label readiness boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

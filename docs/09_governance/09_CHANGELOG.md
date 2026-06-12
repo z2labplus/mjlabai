@@ -1,5 +1,49 @@
 # 09_CHANGELOG
 
+## 2026-06-12 — v2.70
+
+- Defined P7 supervised-learning risk and evidence taxonomy before
+  implementation.
+- Added
+  `docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md`.
+- The taxonomy records:
+  - P7 risk categories for scope/stage creep, source approval, training-data
+    approval, parser / reader / ingestion creep, feature/label approval
+    ambiguity, hidden-information leakage, future-information leakage,
+    train/validation/test leakage, early model-output integration, real-data
+    and platform-data leakage, account/cookie/token risk, third-party
+    binaries/weights/params, training-before-approval, model-artifact
+    provenance, evidence overclaiming, model-strength overclaiming,
+    LuckyJ/Tenhou/stable-dan overclaiming, P8/P10/P12 creep and candidate
+    promotion overclaiming.
+  - P7 evidence grades from docs-only scope evidence through future Tenhou
+    validation evidence candidates.
+  - current P7 evidence classification for `03E` through `03K`.
+  - future P7 evidence fields.
+  - evidence-to-claim mapping.
+  - forbidden evidence interpretations.
+  - risk/evidence dependency order.
+  - governance update requirements.
+  - P8-P12 non-entry boundaries.
+- Planning decision:
+  `P7 supervised-learning risk and evidence taxonomy is defined before implementation. This does not approve P7 implementation, P7 first-task execution, training, source ingestion, parser, dataset reader, feature extraction, label generation, real data, model-output integration, self-play, league, model-strength claims or P8-P12 entry.`
+- New `10_NEXT` first item:
+  `Review P7 supervised-learning risk and evidence taxonomy before implementation.`
+- This is P7 supervised-learning risk and evidence taxonomy definition
+  evidence only.
+- P7 implementation, P7 first-task execution, training data source, source
+  ingestion, parser, dataset reader, ingestion, feature extraction, label
+  generation, real Tenhou, real haifu, external logs, platform data,
+  model-output integration, CLI, self-play, league and P8-P12 remain
+  unapproved.
+- No production code, tests, fixtures, data files, replay schema code, parser,
+  dataset reader, ingestion, feature extraction, label generation, CLI, broad
+  file ingestion, model-output integration, real Tenhou, real haifu, external
+  logs, platform data, OpenAI / LLM / model API call, third-party binary call,
+  metric implementation, registry code change, promotion criteria change,
+  training, tuning, self-play, league, runner behavior, P7 implementation,
+  P8-P12 work or model-strength claim was added.
+
 ## 2026-06-12 — v2.69
 
 - Reviewed P7 feature and label readiness boundary before implementation.
