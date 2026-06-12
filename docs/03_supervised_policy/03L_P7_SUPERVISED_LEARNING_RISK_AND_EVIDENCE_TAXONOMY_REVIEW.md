@@ -419,6 +419,9 @@ now defines that proposal. The next task is a docs-only review of the proposal
 before any fixture, tests, production code, source approval, parser, dataset
 reader, ingestion, feature extraction, label generation, training,
 model-output integration, real data or P8-P12 work can be considered.
+`docs/03_supervised_policy/03N_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_REVIEW.md`
+now reviews that proposal and records `Review can close`; the next task is
+docs-only approval-decision preparation.
 
 ## Evidence Grade
 

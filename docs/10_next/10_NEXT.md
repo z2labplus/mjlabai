@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Review minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation.
+- [ ] Prepare approval decision for minimal P7 synthetic/local supervised fixture and feature-label smoke implementation task.
 
 Current execution charter:
 
@@ -16,7 +16,7 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only P7 proposal review gate before implementation.
+- This is a docs-only P7 approval-decision preparation task before implementation.
 - P5 is closed only for the current synthetic/local evaluation groundwork scope.
 - Full P6 is closed only for the documented P6 data-system scope: docs/governance/source-rights planning, accepted synthetic/local minimal replay schema and project-authored synthetic fixture smoke implementation, and deferred/blocked/later-stage inventory.
 - Full P6 closure is not P7-P12 entry approval.
@@ -29,9 +29,10 @@ Limits:
 - `docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md` defines P7 supervised-learning risk and evidence taxonomy before implementation.
 - `docs/03_supervised_policy/03L_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_REVIEW.md` reviews `03K` and records `Review can close`.
 - `docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_BEFORE_IMPLEMENTATION.md` defines a minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation.
-- This task may only review the `03M` proposal.
-- This task must decide whether the `03M` proposal can close and whether a later exact implementation approval decision is safe to consider.
-- This task must distinguish proposal review from fixture creation, tests,
+- `docs/03_supervised_policy/03N_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_REVIEW.md` reviews `03M` and records `Review can close`.
+- This task may only prepare a docs-only approval decision for the minimal P7 synthetic/local supervised fixture and feature-label smoke implementation task.
+- This task must decide whether to approve, reject or defer a later exact implementation task.
+- This task must distinguish approval-decision preparation from fixture creation, tests,
   production code, source approval, parser / dataset reader / ingestion,
   feature extraction, label generation, supervised dataset construction,
   training approval, model-strength evidence or candidate promotion.
@@ -39,8 +40,9 @@ Limits:
 - This is not P7 first-task implementation.
 - Do not define a P7 implementation prompt.
 - Do not execute any P7 implementation task.
-- Do not approve P7 implementation.
-- Do not approve P7 first-task execution.
+- Do not execute P7 first-task implementation.
+- Do not create implementation files even if the approval decision later selects an approval outcome.
+- Do not generate an implementation prompt unless a completed approval decision explicitly approves it.
 - Do not create `src/mjlabai/supervised/feature_label_schema.py`.
 - Do not create `tests/fixtures/supervised/synthetic_supervised_smoke.json`.
 - Do not create `tests/supervised/test_feature_label_schema.py`.
@@ -78,6 +80,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-06-12 Reviewed minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation: added `docs/03_supervised_policy/03N_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_REVIEW.md`, reviewed `03M` scope, minimal future implementation candidate classes, candidate exact files, synthetic/local fixture boundary, feature / label smoke boundary, validation-command distinction, future implementation approval conditions, stop conditions, proposal risks, evidence grade / non-evidence wording and governance synchronization. Review decision: `Review can close.` This is P7 minimal synthetic/local supervised fixture and feature-label smoke proposal review evidence only; it does not approve P7 implementation, P7 first-task execution, fixture creation, tests, production code, data files, source approval, parser, dataset reader, ingestion, feature extraction, label generation, training, model-output integration, real data, self-play, league, P8-P12 entry, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence. The next task is `Prepare approval decision for minimal P7 synthetic/local supervised fixture and feature-label smoke implementation task`.
 - [x] 2026-06-12 Defined minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation: added `docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_BEFORE_IMPLEMENTATION.md`, defining proposal scope, purpose, minimal future implementation candidate classes, exact candidate future files, synthetic/local fixture boundary, feature / label smoke boundary, future validation commands, future implementation approval conditions, stop conditions, proposal risks, planning decision, next task recommendation, evidence grade and explicit non-evidence. Planning decision: `A minimal P7 synthetic/local supervised fixture and feature-label smoke proposal is defined before implementation. This does not approve P7 implementation, fixture creation, tests, production code, data files, feature extraction, label generation, parser, dataset reader, ingestion, training, model-output integration, real data, self-play, league or P8-P12 entry.` This is P7 minimal synthetic/local supervised fixture and feature-label smoke proposal evidence only; it does not create or approve `src/mjlabai/supervised/feature_label_schema.py`, `tests/fixtures/supervised/synthetic_supervised_smoke.json`, `tests/supervised/test_feature_label_schema.py`, `tests/supervised/test_synthetic_supervised_fixture_schema.py`, source approval, parser, dataset reader, ingestion, feature extraction, label generation, training, model-output integration, real data, self-play, league, P8-P12 entry, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence. The next task is `Review minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation`.
 - [x] 2026-06-12 Reviewed P7 supervised-learning risk and evidence taxonomy before implementation: added `docs/03_supervised_policy/03L_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_REVIEW.md`, reviewed `03K` scope, risk taxonomy, evidence taxonomy, current P7 evidence classification, future evidence requirements, evidence-to-claim mapping, forbidden evidence interpretations, dependency map, governance update requirements, P8-P12 non-entry boundary, governance synchronization and validation. Review decision: `Review can close.` This is P7 supervised-learning risk and evidence taxonomy review evidence only; it does not approve P7 implementation, P7 first-task execution, training data source, source ingestion, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence. The next task is `Define minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation`.
 - [x] 2026-06-12 Defined P7 supervised-learning risk and evidence taxonomy before implementation: added `docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md`, defining P7 risk categories, evidence grades, current P7 evidence classification, future evidence requirements, evidence-to-claim mapping, forbidden evidence interpretations, risk/evidence dependency order, governance update requirements and P8-P12 non-entry boundaries. Planning decision: `P7 supervised-learning risk and evidence taxonomy is defined before implementation. This does not approve P7 implementation, P7 first-task execution, training, source ingestion, parser, dataset reader, feature extraction, label generation, real data, model-output integration, self-play, league, model-strength claims or P8-P12 entry.` This is P7 supervised-learning risk and evidence taxonomy definition evidence only; it does not approve P7 implementation, P7 first-task execution, training data source, source ingestion, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence. The next task is `Review P7 supervised-learning risk and evidence taxonomy before implementation`.

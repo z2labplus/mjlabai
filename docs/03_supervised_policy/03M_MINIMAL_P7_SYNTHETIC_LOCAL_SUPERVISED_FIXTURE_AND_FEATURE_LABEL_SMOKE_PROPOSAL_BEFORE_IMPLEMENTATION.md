@@ -233,6 +233,15 @@ Review minimal P7 synthetic/local supervised fixture and feature-label smoke pro
 The next task must be a docs-only review gate. It must not approve or execute
 implementation unless a later task separately records that decision.
 
+## Follow-Up Status
+
+`docs/03_supervised_policy/03N_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_REVIEW.md`
+now reviews this proposal and records `Review can close` with no blocker. The
+next task is docs-only approval-decision preparation. It must not create
+fixtures, tests, production code, data files, parser / dataset reader /
+ingestion, feature extraction, label generation, training, model-output
+integration, real data or P8-P12 work.
+
 ## Evidence Grade
 
 ```text

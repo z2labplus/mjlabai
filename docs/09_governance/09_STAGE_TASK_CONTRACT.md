@@ -2,12 +2,13 @@
 
 ## Current stage
 
-P7 docs-only review gate for the minimal synthetic/local supervised fixture
-and feature-label smoke proposal, after `03M` defined that proposal before
-implementation. `03M` names candidate future files and guardrails only; it does
-not approve fixture creation, tests, production code, data files, parser /
-reader / ingestion, feature extraction, label generation, training,
-model-output integration, real data or P8-P12 entry. P5 evaluation foundation is
+P7 docs-only approval-decision preparation for the minimal synthetic/local
+supervised fixture and feature-label smoke implementation task, after `03N`
+reviewed the `03M` proposal and recorded `Review can close`. `03M` and `03N`
+name and review candidate future files and guardrails only; they do not create
+fixtures, tests, production code, data files, parser / reader / ingestion,
+feature extraction, label generation, training, model-output integration, real
+data or P8-P12 entry. P5 evaluation foundation is
 closed for the current synthetic/local scope; general P6 implementation is not open, and the exact
 minimal replay schema / project-authored synthetic fixture task approved by
 `02N` is implemented, reviewed with no blocker and accepted as current-scope
@@ -97,11 +98,12 @@ P7 feature and label readiness boundary review = complete in `03J`; review can c
 P7 supervised-learning risk and evidence taxonomy = defined in `03K`; implementation, source approval, feature extraction, label generation, training and P8-P12 remain unapproved
 P7 supervised-learning risk and evidence taxonomy review = complete in `03L`; review can close with no blocker
 P7 minimal synthetic/local supervised fixture and feature-label smoke proposal = defined in `03M`; implementation, fixture creation, tests, production code, data files, source approval, parser / reader / ingestion, feature extraction, label generation, training and P8-P12 remain unapproved
+P7 minimal synthetic/local supervised fixture and feature-label smoke proposal review = complete in `03N`; review can close with no blocker; implementation, fixture creation, tests, production code, data files, source approval, parser / reader / ingestion, feature extraction, label generation, training and P8-P12 remain unapproved
 Full P6 = closed for documented P6 data-system scope only
 P7 implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = review minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation
+Next = prepare approval decision for minimal P7 synthetic/local supervised fixture and feature-label smoke implementation task
 ```
 
 ## AI role
@@ -211,4 +213,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation.
+Prepare approval decision for minimal P7 synthetic/local supervised fixture and feature-label smoke implementation task.

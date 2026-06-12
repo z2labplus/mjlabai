@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — P7 minimal synthetic/local supervised fixture proposal review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Proposal review closure is mistaken for P7 implementation approval. | Governance / Scope | High | Medium | `03N`, `10_NEXT`, handoff and evidence log state that review can close but implementation remains unapproved. | Open |
+| Proposal review closure is mistaken for fixture, test, production-code or data-file creation approval. | Governance / Scope | High | Medium | `03N` confirms candidate files are still candidate paths only and not created. | Open |
+| The next approval-decision preparation task drifts into implementation or implementation prompt generation. | Governance / Scope | High | Medium | `10_NEXT` defines the next task as docs-only approval-decision preparation and forbids code, tests, fixtures, data files and implementation prompts unless a completed approval decision explicitly approves them. | Open |
+| Proposal review closure is mistaken for source approval or training-data approval. | Data / Governance | High | Medium | `03N` confirms source approval, training-data approval, source ingestion and real data remain unapproved. | Open |
+| Parser, reader, ingestion, feature extraction or label generation creeps into the next approval-decision task. | Governance / Scope | High | Medium | `03N` and `10_NEXT` keep these as unapproved separate future tasks. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is proposal review evidence only with explicit non-evidence warnings. | Open |
+| P8/P10/P12 work is treated as implicitly approved by the proposal review. | Governance / Stage Control | High | Medium | `03N`, stage contract and `10_NEXT` keep P8-P12 closed until separate transition reviews and approvals. | Open |
+
 ## 2026-06-12 — P7 minimal synthetic/local supervised fixture proposal risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

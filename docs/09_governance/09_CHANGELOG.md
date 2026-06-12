@@ -1,5 +1,45 @@
 # 09_CHANGELOG
 
+## 2026-06-12 — v2.73
+
+- Reviewed the minimal P7 synthetic/local supervised fixture and feature-label
+  smoke proposal before implementation.
+- Added
+  `docs/03_supervised_policy/03N_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_REVIEW.md`.
+- The review confirms:
+  - `03M` scope is docs-only and correctly bounded before implementation.
+  - minimal future implementation candidate classes are narrow and
+    synthetic/local.
+  - candidate exact files are safe and remain candidate paths only.
+  - synthetic/local fixture boundary is sufficient.
+  - feature / label smoke boundary is sufficient and does not imply feature
+    extraction or label generation approval.
+  - current vs future validation commands are clearly distinguished.
+  - future implementation approval conditions and stop conditions are
+    sufficient.
+  - proposal risks and mitigations are sufficient.
+  - evidence grade and non-evidence warnings are conservative.
+  - governance synchronization is consistent.
+- Review decision:
+  `Review can close.`
+- New `10_NEXT` first item:
+  `Prepare approval decision for minimal P7 synthetic/local supervised fixture and feature-label smoke implementation task.`
+- This is P7 minimal synthetic/local supervised fixture and feature-label smoke
+  proposal review evidence only.
+- P7 implementation, P7 first-task execution, fixture creation, tests,
+  production code, data files, source approval, parser, dataset reader,
+  ingestion, feature extraction, label generation, supervised dataset
+  construction, training, model-output integration, real Tenhou, real haifu,
+  external logs, platform data, self-play, league and P8-P12 remain
+  unapproved.
+- No production code, tests, fixtures, data files, replay schema code, parser,
+  dataset reader, ingestion, feature extraction, label generation, CLI, broad
+  file ingestion, model-output integration, real Tenhou, real haifu, external
+  logs, platform data, OpenAI / LLM / model API call, third-party binary call,
+  metric implementation, registry code change, promotion criteria change,
+  training, tuning, self-play, league, runner behavior, P7 implementation,
+  P8-P12 work or model-strength claim was added.
+
 ## 2026-06-12 — v2.72
 
 - Defined a minimal P7 synthetic/local supervised fixture and feature-label

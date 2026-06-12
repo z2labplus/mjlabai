@@ -28,10 +28,9 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 docs-only minimal synthetic/local supervised fixture and feature-label
-smoke proposal definition before implementation, after `03L` reviewed the P7
-supervised-learning risk and evidence taxonomy and recorded `Review can
-close`.
+P7 docs-only approval-decision preparation for the minimal synthetic/local
+supervised fixture and feature-label smoke implementation task, after `03N`
+reviewed the `03M` proposal and recorded `Review can close`.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -152,11 +151,18 @@ candidate files are named for future review only and are not created. Fixture
 creation, tests, production code, data files, source approval, parser / reader
 / ingestion, feature extraction, label generation, training, model-output
 integration, real data, self-play, league and P8-P12 entry remain unapproved.
+P7 minimal synthetic/local supervised fixture and feature-label smoke proposal
+review = complete in
+`docs/03_supervised_policy/03N_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_REVIEW.md`;
+review can close with no blocker. Implementation, fixture creation, tests,
+production code, data files, source approval, parser / reader / ingestion,
+feature extraction, label generation, training, model-output integration, real
+data, self-play, league and P8-P12 entry remain unapproved.
 P7 implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = review minimal P7 synthetic/local supervised fixture and feature-label
-smoke proposal before implementation.
+Next = prepare approval decision for minimal P7 synthetic/local supervised
+fixture and feature-label smoke implementation task.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。

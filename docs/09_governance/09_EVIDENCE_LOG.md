@@ -8,6 +8,71 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-12 — P7 minimal synthetic/local supervised fixture and feature-label smoke proposal review
+
+- Type: internal documentation / P7 minimal synthetic/local supervised fixture
+  and feature-label smoke proposal review evidence.
+- Stage: P7 supervised learning / docs-only proposal review gate before
+  implementation.
+- Added review document:
+  - `docs/03_supervised_policy/03N_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_REVIEW.md`
+- Reviewed:
+  - `docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_BEFORE_IMPLEMENTATION.md`
+  - P7 scope / entry criteria and review docs.
+  - P7 data/source readiness inventory and review docs.
+  - P7 feature / label readiness boundary and review docs.
+  - P7 risk / evidence taxonomy and review docs.
+  - P5 closure and full-P6 closure context.
+  - accepted synthetic/local P6 replay schema artifacts as read-only context.
+  - governance and tracking documents.
+- Review decision:
+  - `Review can close.`
+- Confirmed:
+  - P7 implementation remains unapproved.
+  - P7 first-task execution remains unapproved.
+  - fixture creation remains unapproved.
+  - test creation remains unapproved.
+  - production code remains unapproved.
+  - data-file creation remains unapproved.
+  - P7 training data source remains unapproved.
+  - source ingestion remains unapproved.
+  - parser, dataset reader and ingestion remain unapproved.
+  - feature extraction and label generation remain unapproved.
+  - real Tenhou, real haifu, external logs and platform data remain
+    unapproved.
+  - P8-P12 entry remains unapproved.
+- New next task:
+  - `Prepare approval decision for minimal P7 synthetic/local supervised fixture and feature-label smoke implementation task.`
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P7 minimal synthetic/local supervised fixture and feature-label smoke
+    proposal review evidence only.
+- Not evidence of:
+  - P7 implementation.
+  - P7 first-task execution.
+  - fixture creation.
+  - tests creation.
+  - production code.
+  - data-file creation.
+  - P8-P12 entry approval.
+  - training, tuning, self-play, league or runner behavior.
+  - source approval or training-data approval.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - parser, dataset reader, ingestion, feature extraction or label generation.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-12 — P7 minimal synthetic/local supervised fixture and feature-label smoke proposal definition
 
 - Type: internal documentation / P7 minimal synthetic/local supervised fixture

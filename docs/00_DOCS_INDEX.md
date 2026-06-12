@@ -79,6 +79,7 @@ docs/03_supervised_policy/03J_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_REVIEW.md
 docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03L_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_REVIEW.md
 docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03N_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_REVIEW.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -168,6 +169,17 @@ fixture, tests, production code, data file, source approval, parser, dataset
 reader, ingestion, feature extraction, label generation, training,
 model-output integration, real data, self-play, league or P8-P12 entry is
 approved.
+
+`docs/03_supervised_policy/03N_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_REVIEW.md`
+reviews the `03M` proposal and records `Review can close` with no blocker. It
+confirms the scope, candidate classes, exact candidate future files,
+synthetic/local fixture boundary, feature / label smoke boundary, validation
+distinction, future approval conditions, stop conditions, risks, evidence
+grade and governance synchronization are sufficiently conservative. It is
+proposal-review evidence only, not P7 implementation, fixture creation, tests,
+production code, data-file creation, source approval, parser, dataset reader,
+ingestion, feature extraction, label generation, training, model-output
+integration, model-strength evidence or P8-P12 entry approval.
 
 ## Data-system files
 
