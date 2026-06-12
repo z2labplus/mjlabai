@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — P7 supervised-learning risk and evidence taxonomy review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| P7 risk/evidence taxonomy review closure is mistaken for P7 implementation approval. | Governance / Scope | High | Medium | `03L`, `10_NEXT`, handoff and evidence log state that review can close but implementation and first-task execution remain unapproved. | Open |
+| P7 risk/evidence taxonomy review closure is mistaken for source approval or training-data approval. | Data / Governance | High | Medium | `03L` confirms `03K` evidence mapping and keeps source ingestion and training-data approval as separate future gates. | Open |
+| The next proposal task drifts into fixture creation, tests, parser, reader, ingestion, feature extraction, label generation or training. | Governance / Scope | High | Medium | `10_NEXT` defines the next task as docs-only proposal definition and forbids code, tests, fixtures, data files and implementation behavior. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `03L` keeps the evidence grade at taxonomy review evidence only and repeats explicit non-evidence warnings. | Open |
+| Later P8/P10/P12 work is treated as implicitly approved by the review. | Governance / Stage Control | High | Medium | `03L` and `10_NEXT` keep P8-P12 closed until separate transition reviews, scope definitions and approvals. | Open |
+
 ## 2026-06-12 — P7 supervised-learning risk and evidence taxonomy risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

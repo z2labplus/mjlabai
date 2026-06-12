@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Review P7 supervised-learning risk and evidence taxonomy before implementation.
+- [ ] Define minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation.
 
 Current execution charter:
 
@@ -16,8 +16,7 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only P7 supervised-learning risk and evidence taxonomy
-  review gate before implementation.
+- This is a docs-only P7 proposal definition before implementation.
 - P5 is closed only for the current synthetic/local evaluation groundwork scope.
 - Full P6 is closed only for the documented P6 data-system scope: docs/governance/source-rights planning, accepted synthetic/local minimal replay schema and project-authored synthetic fixture smoke implementation, and deferred/blocked/later-stage inventory.
 - Full P6 closure is not P7-P12 entry approval.
@@ -28,9 +27,11 @@ Limits:
 - `docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md` defines P7 feature and label readiness boundaries before implementation.
 - `docs/03_supervised_policy/03J_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_REVIEW.md` reviews `03I` and records `Review can close`.
 - `docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md` defines P7 supervised-learning risk and evidence taxonomy before implementation.
-- This task may only review the P7 supervised-learning risk and evidence
-  taxonomy before implementation.
-- This task must distinguish risk/evidence taxonomy from source approval,
+- `docs/03_supervised_policy/03L_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_REVIEW.md` reviews `03K` and records `Review can close`.
+- This task may only define a minimal P7 synthetic/local supervised fixture
+  and feature-label smoke proposal before implementation.
+- This task must distinguish proposal definition from fixture creation, tests,
+  production code, source approval, parser / dataset reader / ingestion,
   feature extraction, label generation, supervised dataset construction,
   training approval, model-strength evidence or candidate promotion.
 - This is not P7 implementation.
@@ -48,6 +49,8 @@ Limits:
 - Do not vendor or copy third-party source into this repository.
 - Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or third-party build artifacts.
 - Do not add production code, tests, fixtures or data files.
+- Do not create a supervised fixture in this task.
+- Do not create feature or label smoke tests in this task.
 - Do not modify `src/mjlabai/data/replay_schema.py`.
 - Do not modify `tests/fixtures/data/synthetic_replay_smoke.json`.
 - Do not modify existing data tests.
@@ -70,6 +73,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-06-12 Reviewed P7 supervised-learning risk and evidence taxonomy before implementation: added `docs/03_supervised_policy/03L_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_REVIEW.md`, reviewed `03K` scope, risk taxonomy, evidence taxonomy, current P7 evidence classification, future evidence requirements, evidence-to-claim mapping, forbidden evidence interpretations, dependency map, governance update requirements, P8-P12 non-entry boundary, governance synchronization and validation. Review decision: `Review can close.` This is P7 supervised-learning risk and evidence taxonomy review evidence only; it does not approve P7 implementation, P7 first-task execution, training data source, source ingestion, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence. The next task is `Define minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation`.
 - [x] 2026-06-12 Defined P7 supervised-learning risk and evidence taxonomy before implementation: added `docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md`, defining P7 risk categories, evidence grades, current P7 evidence classification, future evidence requirements, evidence-to-claim mapping, forbidden evidence interpretations, risk/evidence dependency order, governance update requirements and P8-P12 non-entry boundaries. Planning decision: `P7 supervised-learning risk and evidence taxonomy is defined before implementation. This does not approve P7 implementation, P7 first-task execution, training, source ingestion, parser, dataset reader, feature extraction, label generation, real data, model-output integration, self-play, league, model-strength claims or P8-P12 entry.` This is P7 supervised-learning risk and evidence taxonomy definition evidence only; it does not approve P7 implementation, P7 first-task execution, training data source, source ingestion, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence. The next task is `Review P7 supervised-learning risk and evidence taxonomy before implementation`.
 - [x] 2026-06-12 Reviewed P7 feature and label readiness boundary before implementation: added `docs/03_supervised_policy/03J_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_REVIEW.md`, reviewed `03I` scope, feature readiness boundary, label readiness boundary, candidate feature families, candidate label families, forbidden feature / label scope, dependency map, risks, evidence requirements, readiness vocabulary, governance synchronization and validation. Review decision: `Review can close.` This is P7 feature and label readiness boundary review evidence only; it does not approve P7 implementation, P7 first-task execution, training data source, source ingestion, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence. The next task is `Define P7 supervised-learning risk and evidence taxonomy before implementation`.
 - [x] 2026-06-12 Defined P7 feature and label readiness boundary before implementation: added `docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md`, defining future supervised-learning feature and label readiness requirements, candidate feature families, candidate label families, forbidden feature / label scope, dependency map, leakage risks, evidence requirements, readiness vocabulary, planning decision and next review gate. This is P7 feature and label readiness boundary definition evidence only; it does not approve P7 implementation, P7 first-task execution, training data source, source ingestion, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry, model-strength claims, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence. The next task is `Review P7 feature and label readiness boundary before implementation`.

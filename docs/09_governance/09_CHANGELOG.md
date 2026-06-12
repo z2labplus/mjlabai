@@ -1,5 +1,43 @@
 # 09_CHANGELOG
 
+## 2026-06-12 — v2.71
+
+- Reviewed P7 supervised-learning risk and evidence taxonomy before
+  implementation.
+- Added
+  `docs/03_supervised_policy/03L_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_REVIEW.md`.
+- The review confirms:
+  - `03K` scope is docs-only and correctly bounded before implementation.
+  - risk taxonomy coverage is sufficient for the current P7 review gate.
+  - evidence taxonomy and evidence-to-claim mapping are conservative.
+  - current P7 evidence classification remains planning / review evidence
+    only.
+  - future evidence requirements do not approve source ingestion, feature
+    extraction, label generation or training.
+  - forbidden evidence interpretations prevent model-strength, Tenhou ranked,
+    stable-dan ranked-game, LuckyJ `10.68` and candidate-promotion overclaims.
+  - risk / evidence dependency order is auditable.
+  - governance synchronization requirements are clear.
+  - P8-P12 remain outside this task.
+- Review decision:
+  `Review can close.`
+- New `10_NEXT` first item:
+  `Define minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation.`
+- This is P7 supervised-learning risk and evidence taxonomy review evidence
+  only.
+- P7 implementation, P7 first-task execution, training data source, source
+  ingestion, parser, dataset reader, ingestion, feature extraction, label
+  generation, real Tenhou, real haifu, external logs, platform data,
+  model-output integration, CLI, self-play, league and P8-P12 remain
+  unapproved.
+- No production code, tests, fixtures, data files, replay schema code, parser,
+  dataset reader, ingestion, feature extraction, label generation, CLI, broad
+  file ingestion, model-output integration, real Tenhou, real haifu, external
+  logs, platform data, OpenAI / LLM / model API call, third-party binary call,
+  metric implementation, registry code change, promotion criteria change,
+  training, tuning, self-play, league, runner behavior, P7 implementation,
+  P8-P12 work or model-strength claim was added.
+
 ## 2026-06-12 — v2.70
 
 - Defined P7 supervised-learning risk and evidence taxonomy before

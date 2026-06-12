@@ -2,8 +2,10 @@
 
 ## Current stage
 
-P7 docs-only supervised-learning risk and evidence taxonomy review gate after
-`03K` defined the P7 risk and evidence taxonomy before implementation. P5 evaluation foundation is
+P7 docs-only minimal synthetic/local supervised fixture and feature-label
+smoke proposal definition before implementation, after `03L` reviewed the P7
+supervised-learning risk and evidence taxonomy and recorded `Review can
+close`. P5 evaluation foundation is
 closed for the current synthetic/local scope; general P6 implementation is not open, and the exact
 minimal replay schema / project-authored synthetic fixture task approved by
 `02N` is implemented, reviewed with no blocker and accepted as current-scope
@@ -91,11 +93,12 @@ P7 supervised-learning data/source readiness inventory review = complete in `03H
 P7 feature and label readiness boundary = defined in `03I`; feature extraction, label generation, parser, dataset reader, ingestion, training, real data and model-output integration remain unapproved
 P7 feature and label readiness boundary review = complete in `03J`; review can close with no blocker
 P7 supervised-learning risk and evidence taxonomy = defined in `03K`; implementation, source approval, feature extraction, label generation, training and P8-P12 remain unapproved
+P7 supervised-learning risk and evidence taxonomy review = complete in `03L`; review can close with no blocker
 Full P6 = closed for documented P6 data-system scope only
 P7 implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = review P7 supervised-learning risk and evidence taxonomy before implementation
+Next = define minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation
 ```
 
 ## AI role
@@ -105,10 +108,10 @@ Local Codex engineer + evidence keeper + scope controller.
 ## Stage goal
 
 Bridge from the closed documented P6 data-system scope through P7 data/source
-inventory review and the newly defined P7 feature/label readiness boundary
-into a safe docs-only review gate by keeping P7 implementation and P8-P12
-unapproved until data/source, feature/label and later implementation approvals
-exist.
+inventory review, feature/label readiness boundary and risk/evidence taxonomy
+review into a safe docs-only proposal-definition task by keeping P7
+implementation and P8-P12 unapproved until data/source, feature/label and later
+implementation approvals exist.
 
 This supports the north-star target by ensuring that any future supervised
 learning, RL, search, league or LuckyJ validation work starts only after the
@@ -205,4 +208,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review P7 supervised-learning risk and evidence taxonomy before implementation.
+Define minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation.

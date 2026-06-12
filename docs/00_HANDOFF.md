@@ -30,9 +30,10 @@ Current stage interpretation:
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
 Current active stage is P7 supervised learning docs-only readiness planning:
-`03K` defines P7 supervised-learning risk and evidence taxonomy before
-implementation; the next task is to review that taxonomy before any P7
-implementation proposal.
+`03L` reviews P7 supervised-learning risk and evidence taxonomy before
+implementation and records `Review can close`; the next task is to define a
+minimal P7 synthetic/local supervised fixture and feature-label smoke proposal
+before implementation.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -108,7 +109,8 @@ The minimal P6 replay schema and project-authored synthetic fixture implementati
 `docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md` reviews `03G` and records the decision `Review can close`. The review confirms that `03G` scope, candidate categories, current `None` approved-for-training status, readiness vocabulary, training-data requirements, P6 source-rights consistency, parser / reader / ingestion dependency status, feature / label readiness status, risks, evidence requirements and governance synchronization are sufficient for the current P7 review gate. This is inventory-review evidence only; it does not approve P7 implementation, P7 first-task execution, training data source, source ingestion, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry or model-strength claims. The next task is `Define P7 feature and label readiness boundary before implementation`.
 `docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md` defines P7 feature and label readiness boundaries before implementation. It records candidate feature families, candidate label families, forbidden feature / label scope, the dependency map, leakage risks, evidence requirements, readiness vocabulary and the planning decision that the boundary is defined. This is boundary-definition evidence only; it does not approve feature extraction, label generation, parser, dataset reader, ingestion, training, real data, model-output integration, P7 implementation or P8-P12 entry. The next task is `Review P7 feature and label readiness boundary before implementation`.
 `docs/03_supervised_policy/03J_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_REVIEW.md` reviews `03I` and records the decision `Review can close`. The review confirms that `03I` scope, feature readiness boundary, label readiness boundary, candidate feature families, candidate label families, forbidden scope, dependency map, risks, evidence requirements, readiness vocabulary, governance synchronization and validation are sufficient for the current P7 review gate. This is boundary-review evidence only; it does not approve P7 implementation, P7 first-task execution, training data source, source ingestion, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry or model-strength claims. That review selected `Define P7 supervised-learning risk and evidence taxonomy before implementation` as its follow-up.
-`docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md` defines the P7 supervised-learning risk and evidence taxonomy before implementation. It records scope/stage creep, source approval, training-data approval, parser/reader/ingestion, feature/label ambiguity, leakage, model-output, real-data, artifact, training-before-approval, evidence-overclaim, LuckyJ/Tenhou/stable-dan and P8/P10/P12 risks; it also defines evidence grades, current P7 evidence classification, future evidence fields, evidence-to-claim mapping, forbidden evidence interpretations, dependency order and governance update requirements. This is taxonomy-definition evidence only; it does not approve P7 implementation, P7 first-task execution, source approval, source ingestion, parser, dataset reader, ingestion, feature extraction, label generation, training, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry or model-strength claims. The next task is `Review P7 supervised-learning risk and evidence taxonomy before implementation`.
+`docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md` defines the P7 supervised-learning risk and evidence taxonomy before implementation. It records scope/stage creep, source approval, training-data approval, parser/reader/ingestion, feature/label ambiguity, leakage, model-output, real-data, artifact, training-before-approval, evidence-overclaim, LuckyJ/Tenhou/stable-dan and P8/P10/P12 risks; it also defines evidence grades, current P7 evidence classification, future evidence fields, evidence-to-claim mapping, forbidden evidence interpretations, dependency order and governance update requirements. This is taxonomy-definition evidence only; it does not approve P7 implementation, P7 first-task execution, source approval, source ingestion, parser, dataset reader, ingestion, feature extraction, label generation, training, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry or model-strength claims. Its follow-up review task was completed in `03L`.
+`docs/03_supervised_policy/03L_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_REVIEW.md` reviews `03K` and records the decision `Review can close`. The review confirms that `03K` scope, risk taxonomy, evidence taxonomy, current P7 evidence classification, future evidence requirements, evidence-to-claim mapping, forbidden interpretations, dependency map, evidence / risk governance update requirements, P8-P12 non-entry boundary, governance synchronization and validation are sufficient for the current P7 review gate. This is taxonomy-review evidence only; it does not approve P7 implementation, P7 first-task execution, training data source, source ingestion, parser, dataset reader, ingestion, feature extraction, label generation, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12 entry or model-strength claims. The next task is `Define minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation`.
 ```
 
 ## Current methodology
@@ -197,14 +199,15 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review P7 supervised-learning risk and evidence taxonomy before
-implementation.
-`03K` defines the P7 risk and evidence taxonomy. The next task must review
-only that taxonomy as a docs-only gate. It must not execute P7, approve source
-use, add production code, tests, fixtures, parser, dataset reader, ingestion,
-feature extraction, label generation, real Tenhou, real haifu, external logs,
-platform data, model-output integration, CLI, broad file ingestion, training,
-tuning, self-play, league, runner behavior or model-strength claims.
+Define minimal P7 synthetic/local supervised fixture and feature-label smoke
+proposal before implementation.
+`03L` reviews `03K` and records `Review can close`. The next task must define
+only a proposal for a future minimal synthetic/local P7 supervised fixture and
+feature-label smoke path. It must not execute P7, approve source use, add
+production code, tests, fixtures, parser, dataset reader, ingestion, feature
+extraction, label generation, real Tenhou, real haifu, external logs, platform
+data, model-output integration, CLI, broad file ingestion, training, tuning,
+self-play, league, runner behavior or model-strength claims.
 ```
 
 Latest Akochan F1 audit summary:

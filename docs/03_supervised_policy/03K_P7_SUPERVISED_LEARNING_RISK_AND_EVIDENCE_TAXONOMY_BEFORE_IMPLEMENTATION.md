@@ -234,13 +234,31 @@ Future P7 closure also must not automatically approve P8-P12. Each later stage
 requires a separate transition review, scope definition, entry criteria, risk
 review, evidence taxonomy and first-task approval.
 
+## Review Status
+
+`docs/03_supervised_policy/03L_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_REVIEW.md`
+reviews this taxonomy and records:
+
+```text
+Review can close.
+```
+
+That review does not approve P7 implementation, P7 first-task execution,
+source approval, source ingestion, parser, dataset reader, ingestion, feature
+extraction, label generation, training, model-output integration or P8-P12
+entry. It only allows the next docs-only proposal-definition task:
+
+```text
+Define minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation.
+```
+
 ## Planning Decision
 
 ```text
 P7 supervised-learning risk and evidence taxonomy is defined before implementation. This does not approve P7 implementation, P7 first-task execution, training, source ingestion, parser, dataset reader, feature extraction, label generation, real data, model-output integration, self-play, league, model-strength claims or P8-P12 entry.
 ```
 
-## Next Task Recommendation
+## Historical Next Task Recommendation
 
 Recommended next task:
 
@@ -248,10 +266,10 @@ Recommended next task:
 Review P7 supervised-learning risk and evidence taxonomy before implementation.
 ```
 
-This next task must be a docs-only review gate. It must not implement P7,
-approve P7 first-task execution, approve source ingestion, approve parser /
-dataset reader / ingestion, approve feature extraction, approve label
-generation, approve training or approve P8-P12.
+This recommended review gate was completed in `03L` and recorded `Review can
+close`. It did not implement P7, approve P7 first-task execution, approve
+source ingestion, approve parser / dataset reader / ingestion, approve feature
+extraction, approve label generation, approve training or approve P8-P12.
 
 ## Evidence Grade
 

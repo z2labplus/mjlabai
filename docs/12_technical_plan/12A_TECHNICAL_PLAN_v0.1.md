@@ -28,8 +28,10 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 docs-only supervised-learning risk and evidence taxonomy review gate after
-`03K` defined the P7 risk and evidence taxonomy before implementation.
+P7 docs-only minimal synthetic/local supervised fixture and feature-label
+smoke proposal definition before implementation, after `03L` reviewed the P7
+supervised-learning risk and evidence taxonomy and recorded `Review can
+close`.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -139,11 +141,15 @@ P7 supervised-learning risk and evidence taxonomy = defined in
 `docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md`;
 P7 implementation, source approval, feature extraction, label generation,
 training, model-strength claims and P8-P12 entry remain unapproved.
+P7 supervised-learning risk and evidence taxonomy review = complete in
+`docs/03_supervised_policy/03L_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_REVIEW.md`;
+review can close with no blocker. The next task is proposal definition only,
+not implementation.
 P7 implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = review P7 supervised-learning risk and evidence taxonomy before
-implementation.
+Next = define minimal P7 synthetic/local supervised fixture and feature-label
+smoke proposal before implementation.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
