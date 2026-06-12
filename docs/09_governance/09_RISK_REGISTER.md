@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — P7 current-scope closure criteria definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Closure criteria definition is mistaken for P7 current-scope closure. | Governance / Scope | High | Medium | `03S`, `10_NEXT`, handoff and stage contract state that final current-scope closure review is still pending. | Open |
+| Closure criteria are mistaken for broad P7 implementation approval. | Governance / Scope | High | Medium | `03S` keeps broad P7 implementation, parser / reader / ingestion, actual extraction, actual generation, training and model work unapproved. | Open |
+| Closure criteria are mistaken for training-data source or source-ingestion approval. | Data / Governance | High | Medium | `03S` classifies real sources and source-specific training data approval as blocked until separate source/legal/platform approval. | Open |
+| The next review gate drifts into code, tests, fixtures or data files. | Governance / Scope | High | Medium | `10_NEXT` defines the next task as docs-only review and repeats no-code / no-test / no-fixture / no-data-file boundaries. | Open |
+| Required remaining current-scope items are confused with broader P7 implementation items. | Governance / Process | Medium-High | Medium | `03S` lists only docs/review/closure items as required before current-scope closure and classifies implementation/training items as deferred or blocked. | Open |
+| Criteria definition evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is closure criteria definition evidence only with explicit non-evidence warnings. | Open |
+| P8-P12 work is treated as implicitly approved by closure criteria. | Governance / Stage Control | High | Medium | `03S` defines P8-P12 non-entry conditions and requires separate transition reviews, scope, entry criteria, risk/evidence taxonomy and first-task approval. | Open |
+
 ## 2026-06-12 — P7 next current-scope supervised-learning task definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

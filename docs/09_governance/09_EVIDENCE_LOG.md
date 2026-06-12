@@ -8,6 +8,59 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-12 — P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance
+
+- Type: internal documentation / P7 current-scope closure criteria definition
+  evidence.
+- Stage: P7 supervised learning / docs-only closure-criteria definition gate.
+- Added closure criteria document:
+  - `docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`
+- Defined:
+  - accepted current-scope P7 inventory.
+  - C1-C26 current-scope closure criteria.
+  - exit readiness checklist.
+  - required remaining docs/review/closure items.
+  - deferred / blocked / not accepted items.
+  - P8-P12 non-entry conditions.
+  - validation commands.
+  - planning decision and next task recommendation.
+- New next task:
+  - `Review P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance.`
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P7 current-scope closure criteria definition evidence only.
+- Not evidence of:
+  - P7 current-scope closure.
+  - P7 full closure.
+  - P7 broad implementation.
+  - P7 training.
+  - training-data source approval.
+  - source ingestion approval.
+  - parser, dataset reader or ingestion.
+  - actual feature extraction from logs.
+  - actual label generation.
+  - supervised dataset construction.
+  - model architecture, dataloader, optimizer, loss, trainer, checkpoint or
+    weights.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - real Tenhou ingestion.
+  - real haifu ingestion.
+  - external-log ingestion.
+  - platform-data ingestion.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-12 — P7 next current-scope supervised-learning task definition after minimal synthetic feature-label smoke acceptance
 
 - Type: internal documentation / P7 next current-scope supervised-learning task

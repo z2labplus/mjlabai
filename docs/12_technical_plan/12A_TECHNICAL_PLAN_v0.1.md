@@ -28,9 +28,10 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 docs-only current-scope closure criteria definition gate after the exact
+P7 docs-only current-scope closure criteria review gate after the exact
 minimal synthetic/local supervised fixture and feature-label smoke
-current-scope acceptance decision and next-task definition.
+current-scope acceptance decision, next-task definition and closure-criteria
+definition.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -43,8 +44,9 @@ the documented P6 data-system scope: docs/governance/source-rights planning,
 accepted synthetic/local minimal replay schema and project-authored synthetic
 fixture smoke implementation, and deferred/blocked/later-stage inventory.
 P7 broad implementation remains unapproved beyond the exact `03O` minimal
-synthetic/local smoke task reviewed in `03P`, accepted in `03Q`, and followed
-by the next-task definition in `03R`, and P8-P12 entry remains unapproved.
+synthetic/local smoke task reviewed in `03P`, accepted in `03Q`, followed by
+the next-task definition in `03R`, and bounded by the closure criteria defined
+in `03S`; P8-P12 entry remains unapproved.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
@@ -201,11 +203,19 @@ readiness / schema churn. It does not approve broad P7 implementation,
 training, source ingestion, parser / reader / ingestion, actual feature
 extraction, actual label generation, real data, model-output integration or
 P8-P12 entry.
+P7 current-scope closure criteria = defined in
+`docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`;
+defines accepted current-scope inventory, C1-C26 criteria, exit readiness,
+remaining docs/review/closure items, deferred / blocked / not accepted items,
+validation commands and P8-P12 non-entry conditions. It does not close P7
+current scope or approve broad P7 implementation, training, source ingestion,
+parser / reader / ingestion, actual feature extraction, actual label
+generation, real data, model-output integration or P8-P12 entry.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = define the next P7 current-scope supervised-learning task after minimal
-synthetic feature-label smoke acceptance.
+Next = review P7 current-scope closure criteria after minimal synthetic
+feature-label smoke acceptance.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -339,17 +349,19 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Define P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance.
+Review P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
 accepts the exact minimal synthetic/local smoke implementation as
 current-scope complete only.
 `docs/03_supervised_policy/03R_P7_NEXT_CURRENT_SCOPE_SUPERVISED_LEARNING_TASK_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`
-selects docs-only current-scope closure criteria definition as the next P7
-task. The next task may define accepted current-scope inventory, closure
-criteria, deferred / blocked / not accepted items, an exit readiness checklist,
-validation commands and P8-P12 non-entry conditions. It must not add
+selected docs-only current-scope closure criteria definition as the next P7
+task. `docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`
+now defines accepted current-scope inventory, closure criteria, deferred /
+blocked / not accepted items, an exit readiness checklist, validation commands
+and P8-P12 non-entry conditions. The next task must review those criteria and
+must not add
 production code, tests, fixtures, data files, parser, dataset reader,
 ingestion, actual feature extraction, actual label generation, supervised
 dataset construction, training, model architecture, trainer, real Tenhou, real

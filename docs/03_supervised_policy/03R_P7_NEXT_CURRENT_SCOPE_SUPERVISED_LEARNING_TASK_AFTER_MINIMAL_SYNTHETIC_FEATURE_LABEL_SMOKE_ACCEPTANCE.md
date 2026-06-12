@@ -106,6 +106,14 @@ Recommended next task:
 Define P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance.
 ```
 
+That task is now defined in
+`docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`.
+`03S` defines criteria, exit readiness, remaining docs/review/closure items and
+non-entry conditions only. It does not close P7 current scope or approve
+broader P7 implementation, training, source ingestion, parser / reader /
+ingestion, actual feature extraction, actual label generation, real data,
+model-output integration, self-play, league or P8-P12.
+
 Reasoning:
 
 - P7 docs-only readiness chain plus one exact minimal synthetic/local smoke

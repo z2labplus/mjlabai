@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Define P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance.
+- [ ] Review P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance.
 
 Current execution charter:
 
@@ -16,20 +16,23 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only P7 current-scope closure-criteria definition task after
-  the exact minimal synthetic/local supervised fixture and feature-label smoke
-  current-scope acceptance decision and next-task definition.
+- This is a docs-only P7 current-scope closure-criteria review gate after
+  closure criteria were defined in `03S`.
 - `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
   records `Accepted as current-scope complete` for the exact minimal
   synthetic/local smoke scope only.
 - `docs/03_supervised_policy/03R_P7_NEXT_CURRENT_SCOPE_SUPERVISED_LEARNING_TASK_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`
-  selects docs-only P7 current-scope closure criteria definition as the next
-  task.
-- This task may define the accepted current-scope P7 inventory, required
-  criteria before current-scope P7 closure, deferred / blocked / not accepted
-  items, exit readiness checklist, validation commands and P8-P12 non-entry
-  conditions.
+  selected docs-only P7 current-scope closure criteria definition.
+- `docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`
+  defines the accepted current-scope P7 inventory, required criteria before
+  current-scope P7 closure, deferred / blocked / not accepted items, an exit
+  readiness checklist, validation commands and P8-P12 non-entry conditions.
+- This task may review whether `03S` is sufficient, conservative and
+  consistent with current evidence and governance.
 - This task does not close P7.
+- This task does not approve P7 current-scope closure by itself unless the
+  review explicitly finds no blocker and schedules later handoff/evidence
+  finalization and final closure review gates.
 - Do not directly enter implementation.
 - Do not add production code.
 - Do not modify implementation logic.
@@ -72,6 +75,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-06-12 Defined P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance: added `docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`, recorded accepted current-scope P7 inventory, C1-C26 closure criteria, an exit readiness checklist, required remaining docs/review/closure items, deferred / blocked / not accepted items, P8-P12 non-entry conditions, validation commands, planning decision, next task recommendation and evidence grade. This is P7 current-scope closure criteria definition evidence only; it does not close P7 current scope, approve broader P7 implementation, approve training, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-12 Defined the next P7 current-scope supervised-learning task after minimal synthetic feature-label smoke acceptance: added `docs/03_supervised_policy/03R_P7_NEXT_CURRENT_SCOPE_SUPERVISED_LEARNING_TASK_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`, reviewed candidate next tasks, selected `Define P7 current-scope closure criteria after minimal synthetic feature-label smoke acceptance`, and recorded that this should prevent endless P7 readiness/schema churn without approving implementation. This is docs-only P7 next-task definition evidence only; it does not approve broad P7 implementation, training, source ingestion, parser, dataset reader, ingestion, actual feature extraction, actual label generation, supervised dataset construction, model architecture, trainer, checkpoint, weights, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12, model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ comparison or candidate promotion.
 - [x] 2026-06-12 Decided that minimal P7 synthetic/local supervised fixture and feature-label smoke implementation is accepted as current-scope complete: added `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`, selected `Accepted as current-scope complete`, and limited accepted scope to the exact helper, project-authored synthetic/local fixture, smoke tests and direct docs/governance synchronization approved by `03O` and reviewed by `03P`. Accepted behavior is only JSON-safe synthetic/local smoke mapping validation, candidate feature family validation, candidate label family validation, public-information-only placeholder checks, hidden/future information rejection, unsafe provenance / unsafe claim rejection and non-evidence guardrails. This does not accept or approve broader P7 implementation, training, training-data source, source ingestion, parser, dataset reader, ingestion, actual feature extraction, actual label generation, supervised dataset construction, model architecture, trainer, checkpoint, weights, real Tenhou, real haifu, external logs, platform data, model-output integration, CLI, self-play, league, P8-P12, model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ comparison or candidate promotion. The next task is `Define next P7 current-scope supervised-learning task after minimal synthetic feature-label smoke acceptance`.
 - [x] 2026-06-12 Reviewed minimal P7 synthetic/local supervised fixture and feature-label smoke implementation: added `docs/03_supervised_policy/03P_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_REVIEW.md`, confirmed the exact `03O` implementation file list was respected, the helper remains standard-library-only and in-memory, the fixture remains project-authored synthetic/local, tests cover the approved smoke scope, guardrails are sufficient, validation passes and governance is synchronized. Review decision: `Review can close.` This is P7 minimal synthetic/local supervised feature-label smoke implementation review evidence only; it does not approve broad P7 implementation, source approval, training-data approval, parser, dataset reader, ingestion, actual feature extraction, actual label generation, supervised dataset construction, training, model architecture, trainer, model-output integration, CLI, real data, self-play, league, P8-P12 entry, model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion evidence. The next task is `Decide whether minimal P7 synthetic/local supervised fixture and feature-label smoke implementation can be accepted as current-scope complete`.

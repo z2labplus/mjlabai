@@ -159,6 +159,14 @@ enter implementation, training, parser, dataset reader, ingestion, feature
 extraction, label generation, real data, model-output integration, CLI,
 self-play, league or P8-P12.
 
+The closure criteria definition is now recorded in
+`docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`.
+It keeps the acceptance boundary unchanged: P7 current scope is not closed by
+the criteria definition, and broader P7 implementation, training, source
+ingestion, parser / reader / ingestion, actual feature extraction, actual label
+generation, real data, model-output integration, self-play, league and P8-P12
+remain unapproved.
+
 ## Evidence Grade
 
 ```text

@@ -84,6 +84,7 @@ docs/03_supervised_policy/03O_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_
 docs/03_supervised_policy/03P_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_IMPLEMENTATION_REVIEW.md
 docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md
 docs/03_supervised_policy/03R_P7_NEXT_CURRENT_SCOPE_SUPERVISED_LEARNING_TASK_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md
+docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -253,6 +254,18 @@ implementation, training, source ingestion, parser / reader / ingestion,
 actual feature extraction, actual label generation, real data, model-output
 integration, CLI, self-play, league, P8-P12, model-strength evidence, LuckyJ
 `10.68` comparison or candidate promotion.
+
+`docs/03_supervised_policy/03S_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`
+defines P7 current-scope closure criteria after minimal synthetic feature-label
+smoke acceptance. It records accepted current-scope inventory, C1-C26 closure
+criteria, exit readiness, remaining docs/review/closure items, deferred /
+blocked / not accepted items, validation commands and P8-P12 non-entry
+conditions. It is closure-criteria definition evidence only: it does not close
+P7 current scope, approve broader P7 implementation, approve training, approve
+source ingestion, approve parser / reader / ingestion, approve actual feature
+extraction, approve actual label generation, approve real data, approve
+model-output integration, approve self-play, approve league or approve
+P8-P12.
 
 ## Data-system files
 
