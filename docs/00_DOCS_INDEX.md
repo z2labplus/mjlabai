@@ -78,6 +78,7 @@ docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMP
 docs/03_supervised_policy/03J_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_REVIEW.md
 docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03L_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_REVIEW.md
+docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -156,6 +157,17 @@ governance synchronization and validation are sufficient for the current review
 gate. It is review evidence only, not P7 implementation, source approval,
 feature extraction, label generation, training, model-strength evidence or
 P8-P12 entry approval.
+
+`docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_BEFORE_IMPLEMENTATION.md`
+defines a docs-only proposal for a future minimal P7 synthetic/local
+supervised fixture and feature-label smoke path before implementation. It
+names only candidate future files, candidate fixture boundaries, candidate
+feature / label smoke boundaries, future validation commands, approval
+conditions, stop conditions and risks. It is proposal evidence only: no
+fixture, tests, production code, data file, source approval, parser, dataset
+reader, ingestion, feature extraction, label generation, training,
+model-output integration, real data, self-play, league or P8-P12 entry is
+approved.
 
 ## Data-system files
 

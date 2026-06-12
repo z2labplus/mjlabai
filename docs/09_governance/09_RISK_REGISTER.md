@@ -8,6 +8,21 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — P7 minimal synthetic/local supervised fixture proposal risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Minimal P7 synthetic/local supervised fixture proposal is mistaken for P7 implementation approval. | Governance / Scope | High | Medium | `03M`, `10_NEXT`, handoff and evidence log state that this only defines a proposal and creates no fixture, tests, production code or data files. | Open |
+| Candidate future files are mistaken as already created or approved. | Governance / Scope | Medium-High | Medium | `03M` lists exact paths as candidate future files only and requires a later first `10_NEXT` approval before creation. | Open |
+| A future synthetic supervised fixture is mistaken for training data. | Data / Governance | High | Medium | `03M` says the candidate fixture may be smoke-only and must not be used as a training dataset. | Open |
+| Feature / label smoke planning is mistaken for feature extraction or label generation approval. | Leakage / Governance | High | Medium | `03M` allows only shape checks in a later task and forbids extraction, generation, parser, reader and ingestion behavior. | Open |
+| Real data is introduced through convenience examples. | Compliance / Data | High | Medium | `03M` forbids real Tenhou, real haifu, external logs, platform data, accounts, sessions, cookies and tokens. | Open |
+| Parser, reader or ingestion work creeps into the next review or future proposal. | Governance / Scope | High | Medium | `03M` and `10_NEXT` keep parser, reader and ingestion as unapproved separate tasks. | Open |
+| Training starts before source, feature and label approvals. | Governance / ML | High | Medium | `03M` forbids training, tuning, dataloaders, checkpoints, model artifacts and supervised dataset construction. | Open |
+| Proposal evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is proposal evidence only with explicit non-evidence warnings. | Open |
+| P8/P10/P12 work is treated as implicitly approved by the proposal. | Governance / Stage Control | High | Medium | `03M` states P8-P12 remain closed until separate transition reviews and approvals. | Open |
+| Additional files expand the future implementation scope silently. | Engineering / Scope | Medium-High | Medium | `03M` requires separate approval for any additional file, directory, module, fixture or test. | Open |
+
 ## 2026-06-12 — P7 supervised-learning risk and evidence taxonomy review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

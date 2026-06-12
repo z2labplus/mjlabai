@@ -86,6 +86,84 @@ Status:
 Accepted taxonomy-review decision recorded.
 ```
 
+## 2026-06-12 — DR-0059 — Define Minimal P7 Synthetic/Local Supervised Fixture And Feature-Label Smoke Proposal Before Implementation
+
+Decision:
+
+```text
+A minimal P7 synthetic/local supervised fixture and feature-label smoke proposal is defined before implementation. This does not approve P7 implementation, fixture creation, tests, production code, data files, feature extraction, label generation, parser, dataset reader, ingestion, training, model-output integration, real data, self-play, league or P8-P12 entry.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- Full P6 is closed only for the documented P6 data-system scope recorded in
+  `02AA`.
+- `03E` defined P7 scope, entry criteria and first task before implementation.
+- `03F` reviewed that definition and recorded `Review can close`.
+- `03G` defined the P7 supervised-learning data/source readiness inventory.
+- `03H` reviewed that inventory and recorded `Review can close`.
+- `03I` defined P7 feature and label readiness boundaries before
+  implementation.
+- `03J` reviewed that boundary and recorded `Review can close`.
+- `03K` defined P7 supervised-learning risk and evidence taxonomy before
+  implementation.
+- `03L` reviewed that taxonomy and recorded `Review can close`.
+- P7 implementation, source approval, feature extraction, label generation and
+  training remain unapproved before this decision.
+
+Rationale:
+
+- The project needs a narrow proposal before any supervised fixture or
+  feature/label smoke implementation can be considered.
+- Exact candidate future files, approval conditions, validation commands, stop
+  conditions and risks must be documented before code.
+- The safest next step is a docs-only review of the proposal, not
+  implementation.
+
+Consequences:
+
+- `docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_BEFORE_IMPLEMENTATION.md`
+  records the proposal.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation.`
+- Candidate future files are named only for later review:
+  `src/mjlabai/supervised/feature_label_schema.py`,
+  `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
+  `tests/supervised/test_feature_label_schema.py` and
+  `tests/supervised/test_synthetic_supervised_fixture_schema.py`.
+- No candidate file is created or approved by this decision.
+- P7 implementation is not approved.
+- P7 first-task execution is not approved.
+- P7 training data source is not approved.
+- Source ingestion is not approved.
+- Parser, dataset reader, ingestion, feature extraction and label generation
+  are not approved.
+- P8-P12 entry is not approved.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03L_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_REVIEW.md`
+- `docs/03_supervised_policy/03K_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03J_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_REVIEW.md`
+- `docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md`
+- `docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md`
+- `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
+- `docs/02_data_system/02AA_FINAL_FULL_P6_CLOSURE_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+
+Status:
+
+```text
+Accepted proposal-definition decision recorded.
+```
+
 ## 2026-06-12 — DR-0057 — Define P7 Supervised-Learning Risk And Evidence Taxonomy Before Implementation
 
 Decision:

@@ -145,10 +145,17 @@ P7 supervised-learning risk and evidence taxonomy review = complete in
 `docs/03_supervised_policy/03L_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_REVIEW.md`;
 review can close with no blocker. The next task is proposal definition only,
 not implementation.
+P7 minimal synthetic/local supervised fixture and feature-label smoke proposal =
+defined in
+`docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_BEFORE_IMPLEMENTATION.md`;
+candidate files are named for future review only and are not created. Fixture
+creation, tests, production code, data files, source approval, parser / reader
+/ ingestion, feature extraction, label generation, training, model-output
+integration, real data, self-play, league and P8-P12 entry remain unapproved.
 P7 implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = define minimal P7 synthetic/local supervised fixture and feature-label
+Next = review minimal P7 synthetic/local supervised fixture and feature-label
 smoke proposal before implementation.
 ```
 

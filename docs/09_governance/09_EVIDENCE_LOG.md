@@ -8,6 +8,60 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-12 — P7 minimal synthetic/local supervised fixture and feature-label smoke proposal definition
+
+- Type: internal documentation / P7 minimal synthetic/local supervised fixture
+  and feature-label smoke proposal evidence.
+- Stage: P7 supervised learning / docs-only proposal definition before
+  implementation.
+- Added document:
+  - `docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_BEFORE_IMPLEMENTATION.md`
+- Defined:
+  - proposal scope and purpose.
+  - minimal future implementation candidate classes.
+  - exact candidate future files.
+  - synthetic/local fixture boundary.
+  - feature / label smoke boundary.
+  - future validation commands.
+  - future implementation approval conditions.
+  - stop conditions.
+  - proposal risks.
+  - planning decision.
+  - next review-gate recommendation.
+- Planning decision:
+  - `A minimal P7 synthetic/local supervised fixture and feature-label smoke proposal is defined before implementation. This does not approve P7 implementation, fixture creation, tests, production code, data files, feature extraction, label generation, parser, dataset reader, ingestion, training, model-output integration, real data, self-play, league or P8-P12 entry.`
+- New next task:
+  - `Review minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation.`
+- Validation:
+  - `git diff --check`
+  - `python3 -m unittest tests/data/test_replay_schema.py`
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+- Evidence grade:
+  - P7 minimal synthetic/local supervised fixture and feature-label smoke
+    proposal evidence only.
+- Not evidence of:
+  - P7 implementation.
+  - P7 first-task execution.
+  - fixture creation.
+  - test creation.
+  - production code.
+  - data-file creation.
+  - source approval or training-data approval.
+  - parser, dataset reader or ingestion.
+  - feature extraction.
+  - label generation.
+  - supervised dataset construction.
+  - model-output integration.
+  - CLI or broad file ingestion.
+  - training, tuning, self-play, league or runner behavior.
+  - real Tenhou, real haifu, external-log or platform-data ingestion.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-12 — P7 supervised-learning risk and evidence taxonomy review
 
 - Type: internal documentation / P7 supervised-learning risk and evidence

@@ -1,5 +1,45 @@
 # 09_CHANGELOG
 
+## 2026-06-12 — v2.72
+
+- Defined a minimal P7 synthetic/local supervised fixture and feature-label
+  smoke proposal before implementation.
+- Added
+  `docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_BEFORE_IMPLEMENTATION.md`.
+- The proposal records:
+  - scope and purpose.
+  - minimal future implementation candidate classes.
+  - exact candidate future files:
+    `src/mjlabai/supervised/feature_label_schema.py`,
+    `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
+    `tests/supervised/test_feature_label_schema.py` and
+    `tests/supervised/test_synthetic_supervised_fixture_schema.py`.
+  - synthetic/local fixture boundaries.
+  - feature / label smoke boundaries.
+  - future validation commands.
+  - future implementation approval conditions.
+  - stop conditions.
+  - proposal risks.
+  - evidence grade and explicit non-evidence boundaries.
+- Planning decision:
+  `A minimal P7 synthetic/local supervised fixture and feature-label smoke proposal is defined before implementation. This does not approve P7 implementation, fixture creation, tests, production code, data files, feature extraction, label generation, parser, dataset reader, ingestion, training, model-output integration, real data, self-play, league or P8-P12 entry.`
+- New `10_NEXT` first item:
+  `Review minimal P7 synthetic/local supervised fixture and feature-label smoke proposal before implementation.`
+- This is P7 minimal synthetic/local supervised fixture and feature-label smoke
+  proposal evidence only.
+- P7 implementation, fixture creation, tests, production code, data files,
+  source approval, parser, dataset reader, ingestion, feature extraction,
+  label generation, supervised dataset construction, training,
+  model-output integration, real Tenhou, real haifu, external logs, platform
+  data, self-play, league and P8-P12 remain unapproved.
+- No production code, tests, fixtures, data files, replay schema code, parser,
+  dataset reader, ingestion, feature extraction, label generation, CLI, broad
+  file ingestion, model-output integration, real Tenhou, real haifu, external
+  logs, platform data, OpenAI / LLM / model API call, third-party binary call,
+  metric implementation, registry code change, promotion criteria change,
+  training, tuning, self-play, league, runner behavior, P7 implementation,
+  P8-P12 work or model-strength claim was added.
+
 ## 2026-06-12 — v2.71
 
 - Reviewed P7 supervised-learning risk and evidence taxonomy before

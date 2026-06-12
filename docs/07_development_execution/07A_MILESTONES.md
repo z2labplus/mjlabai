@@ -20,7 +20,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 | P4 | Unified mahjong environment and interface | Define shared state, legal actions, logs, replays and adapter contracts | Different candidates can run through the same interface | Future |
 | P5 | Unified evaluation system | Compare all models with Tenhou-oriented metrics under one harness | Stable comparison of baselines and project models | Closed for current synthetic/local evaluation groundwork scope |
 | P6 | Data system | Build replay, feature, label and quality pipelines for training and evaluation | Supervised training and offline evaluation datasets can be generated | Closed for documented P6 data-system scope only; parser / reader / ingestion / feature / label and real data remain unapproved |
-| P7 | Supervised policy model | Train a base strategy model from high-quality human play and key decisions | Model beats simple baselines in key offline scenarios and completes games | Data/source readiness inventory defined/reviewed; feature/label boundary defined/reviewed; risk/evidence taxonomy defined/reviewed; minimal synthetic/local supervised fixture proposal next; implementation unapproved |
+| P7 | Supervised policy model | Train a base strategy model from high-quality human play and key decisions | Model beats simple baselines in key offline scenarios and completes games | Data/source readiness inventory defined/reviewed; feature/label boundary defined/reviewed; risk/evidence taxonomy defined/reviewed; minimal synthetic/local supervised fixture proposal defined in `03M`; proposal review next; implementation unapproved |
 | P8 | Self-play reinforcement learning | Optimize toward Tenhou pt EV, placement and stable-dan objectives | RL checkpoint beats supervised checkpoint in the unified league | Future |
 | P9 | Search and risk model | Improve push/fold, deal-in risk, south-round rank control and oorasu decisions | Search-enhanced model beats non-search model in scenarios and league play | Future |
 | P10 | Model league and mainline selection | Run long comparisons among baselines, SL, RL, search and historical best versions | A candidate reliably beats the current mainline with uncertainty reported | Future |
@@ -54,9 +54,10 @@ reviews that boundary and records `Review can close`.
 defines the P7 supervised-learning risk and evidence taxonomy, and
 `docs/03_supervised_policy/03L_P7_SUPERVISED_LEARNING_RISK_AND_EVIDENCE_TAXONOMY_REVIEW.md`
 reviews that taxonomy and records `Review can close`.
-The current next step is a docs-only proposal definition for a minimal P7
-synthetic/local supervised fixture and feature-label smoke path before
-implementation.
+`docs/03_supervised_policy/03M_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FIXTURE_AND_FEATURE_LABEL_SMOKE_PROPOSAL_BEFORE_IMPLEMENTATION.md`
+defines the docs-only proposal for a minimal P7 synthetic/local supervised
+fixture and feature-label smoke path before implementation. The current next
+step is a docs-only review of that proposal.
 No source is approved for P7 training, source ingestion, parser / reader /
 ingestion, feature extraction or label generation. P7 implementation, P7
 first-task execution and P8-P12 entry remain unapproved.
