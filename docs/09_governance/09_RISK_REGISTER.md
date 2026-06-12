@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — P7 feature and label readiness boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| P7 feature/label readiness review closure is mistaken for feature extraction approval. | Governance / Scope | High | Medium | `03J`, `10_NEXT`, evidence log and handoff state that review can close but no feature extraction implementation is approved. | Open |
+| P7 feature/label readiness review closure is mistaken for label generation approval. | Governance / Scope | High | Medium | `03J` repeats that no candidate label family is approved for generation. | Open |
+| The next risk/evidence taxonomy task drifts into implementation or source approval. | Governance / Scope | High | Medium | `10_NEXT` defines the next task as docs-only taxonomy work and forbids implementation, source approval, feature extraction, label generation and training. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | `03J` evidence grade is boundary review evidence only with explicit non-evidence warnings. | Open |
+| P7 docs-only planning drifts into P8-P12, self-play, league or runner behavior. | Governance / Stage Control | High | Medium | `03J`, stage contract and `10_NEXT` keep P8-P12 closed until separate transition reviews. | Open |
+
 ## 2026-06-12 — P7 feature and label readiness boundary risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

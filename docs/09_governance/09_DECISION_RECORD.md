@@ -14,6 +14,75 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-12 — DR-0056 — Review P7 Feature And Label Readiness Boundary Before Implementation
+
+Decision:
+
+```text
+Review can close. The next task is a docs-only P7 supervised-learning risk and evidence taxonomy definition before implementation.
+```
+
+Context:
+
+- P5 is closed for the current synthetic/local evaluation groundwork scope.
+- Full P6 is closed only for the documented P6 data-system scope recorded in
+  `02AA`.
+- `03E` defined P7 scope, entry criteria and first task before implementation.
+- `03F` reviewed that definition and recorded `Review can close`.
+- `03G` defined the P7 supervised-learning data/source readiness inventory.
+- `03H` reviewed that inventory and recorded `Review can close`.
+- `03I` defined P7 feature and label readiness boundaries before
+  implementation.
+- P7 implementation, feature extraction, label generation, source approval and
+  training remain unapproved before this decision.
+
+Rationale:
+
+- `03I` correctly separates feature and label readiness boundaries from
+  feature extraction, label generation, parser, dataset reader, ingestion and
+  training approval.
+- `03I` covers candidate feature and label families, forbidden scope,
+  dependency order, leakage risks, evidence requirements and safe readiness
+  vocabulary.
+- Governance synchronization remains conservative and does not overclaim
+  P7 readiness evidence.
+- The safest next step is to define P7 risk and evidence taxonomy before any
+  implementation proposal.
+
+Consequences:
+
+- `docs/03_supervised_policy/03J_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_REVIEW.md`
+  records the review.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define P7 supervised-learning risk and evidence taxonomy before implementation.`
+- P7 implementation is not approved.
+- P7 first-task execution is not approved.
+- P7 training data source is not approved.
+- Source ingestion is not approved.
+- Parser, dataset reader, ingestion, feature extraction and label generation
+  are not approved.
+- P8-P12 entry is not approved.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03J_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_REVIEW.md`
+- `docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03H_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_REVIEW.md`
+- `docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03F_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW.md`
+- `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
+- `docs/02_data_system/02AA_FINAL_FULL_P6_CLOSURE_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+
+Status:
+
+```text
+Accepted review decision recorded.
+```
+
 ## 2026-06-12 — DR-0055 — Define P7 Feature And Label Readiness Boundary Before Implementation
 
 Decision:

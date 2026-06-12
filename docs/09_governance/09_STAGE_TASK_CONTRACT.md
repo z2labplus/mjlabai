@@ -2,9 +2,9 @@
 
 ## Current stage
 
-P7 docs-only supervised-learning feature and label readiness boundary review
-after `03I` defined the P7 feature and label readiness boundary before
-implementation. P5 evaluation foundation is
+P7 docs-only supervised-learning risk and evidence taxonomy definition after
+`03J` reviewed the P7 feature and label readiness boundary and recorded
+`Review can close`. P5 evaluation foundation is
 closed for the current synthetic/local scope; general P6 implementation is not open, and the exact
 minimal replay schema / project-authored synthetic fixture task approved by
 `02N` is implemented, reviewed with no blocker and accepted as current-scope
@@ -90,11 +90,12 @@ P7 scope, entry criteria and first task review = complete in `03F`; review can c
 P7 supervised-learning data/source readiness inventory = defined in `03G`; no source is approved for P7 training or ingestion
 P7 supervised-learning data/source readiness inventory review = complete in `03H`; review can close with no blocker
 P7 feature and label readiness boundary = defined in `03I`; feature extraction, label generation, parser, dataset reader, ingestion, training, real data and model-output integration remain unapproved
+P7 feature and label readiness boundary review = complete in `03J`; review can close with no blocker
 Full P6 = closed for documented P6 data-system scope only
 P7 implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = review P7 feature and label readiness boundary before implementation
+Next = define P7 supervised-learning risk and evidence taxonomy before implementation
 ```
 
 ## AI role
@@ -204,4 +205,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review P7 feature and label readiness boundary before implementation.
+Define P7 supervised-learning risk and evidence taxonomy before implementation.

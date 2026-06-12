@@ -1,5 +1,40 @@
 # 09_CHANGELOG
 
+## 2026-06-12 — v2.69
+
+- Reviewed P7 feature and label readiness boundary before implementation.
+- Added
+  `docs/03_supervised_policy/03J_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_REVIEW.md`.
+- The review confirms:
+  - `03I` scope is correct.
+  - feature readiness boundary is sufficient for the current pre-implementation gate.
+  - label readiness boundary is sufficient for the current pre-implementation gate.
+  - candidate feature families are planning-only and not approved for implementation.
+  - candidate label families are planning-only and not approved for generation.
+  - forbidden feature / label scope is strict enough.
+  - dependency map is correct and conservative.
+  - feature / label risks and mitigations are sufficient.
+  - evidence requirements are sufficient and conservative.
+  - readiness vocabulary is safe and cannot be read as approval.
+  - governance synchronization is consistent.
+- Review decision:
+  `Review can close.`
+- New `10_NEXT` first item:
+  `Define P7 supervised-learning risk and evidence taxonomy before implementation.`
+- This is P7 feature and label readiness boundary review evidence only.
+- P7 implementation, P7 first-task execution, training data source, source
+  ingestion, parser, dataset reader, ingestion, feature extraction, label
+  generation, real Tenhou, real haifu, external logs, platform data,
+  model-output integration, CLI, self-play, league and P8-P12 remain
+  unapproved.
+- No production code, tests, fixtures, data files, replay schema code, parser,
+  dataset reader, ingestion, feature extraction, label generation, CLI, broad
+  file ingestion, model-output integration, real Tenhou, real haifu, external
+  logs, platform data, OpenAI / LLM / model API call, third-party binary call,
+  metric implementation, registry code change, promotion criteria change,
+  training, tuning, self-play, league, runner behavior, P7 implementation,
+  P8-P12 work or model-strength claim was added.
+
 ## 2026-06-12 — v2.68
 
 - Defined P7 feature and label readiness boundary before implementation.

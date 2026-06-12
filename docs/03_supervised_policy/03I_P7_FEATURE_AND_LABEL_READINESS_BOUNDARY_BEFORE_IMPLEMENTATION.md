@@ -280,6 +280,22 @@ That next task must be a docs-only review gate. It must not implement feature
 extraction, label generation, parser, dataset reader, ingestion, training,
 model-output integration, CLI, broad file ingestion or P8-P12 work.
 
+## Review Status
+
+`docs/03_supervised_policy/03J_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_REVIEW.md`
+reviews this boundary and records:
+
+```text
+Review can close.
+```
+
+That review confirms this boundary is sufficient for the current docs-only P7
+review gate. It does not approve P7 implementation, P7 first-task execution,
+training data source, source ingestion, parser, dataset reader, ingestion,
+feature extraction, label generation, real Tenhou, real haifu, external logs,
+platform data, model-output integration, CLI, self-play, league or P8-P12
+entry.
+
 ## Planning Decision
 
 ```text
