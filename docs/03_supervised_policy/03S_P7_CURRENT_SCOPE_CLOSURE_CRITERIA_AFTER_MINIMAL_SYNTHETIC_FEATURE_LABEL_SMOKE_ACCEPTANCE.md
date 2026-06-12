@@ -220,6 +220,15 @@ extraction, actual label generation, supervised dataset construction,
 training, model architecture, model-output integration, real data, CLI,
 self-play, league or P8-P12 work.
 
+The closure criteria review is now recorded in
+`docs/03_supervised_policy/03T_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`.
+It records `Review can close` with no blocker and recommends docs-only
+handoff/evidence finalization next. That review does not close P7 current
+scope, approve broader P7 implementation, approve training, approve source
+ingestion, approve parser / reader / ingestion, approve actual feature
+extraction, approve actual label generation, approve real data, approve
+model-output integration or approve P8-P12.
+
 ## Evidence Grade
 
 ```text

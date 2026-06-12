@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-12 — P7 current-scope closure criteria review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Closure criteria review is mistaken for P7 current-scope closure. | Governance / Scope | High | Medium | `03T`, `10_NEXT`, handoff and stage contract state that P7 current scope remains open and final closure review is still pending. | Open |
+| `Review can close` is mistaken for broad P7 implementation approval. | Governance / Scope | High | Medium | `03T` explicitly limits the decision to the criteria review gate and keeps implementation, parser / reader / ingestion, extraction, generation and training unapproved. | Open |
+| Handoff/evidence finalization drifts into implementation, tests, fixtures or data files. | Governance / Scope | High | Medium | The new `10_NEXT` first item is docs-only handoff/evidence finalization and forbids code, tests, fixtures and data files. | Open |
+| The final closure path skips handoff/evidence finalization. | Governance / Process | Medium-High | Medium | `03T` recommends handoff/evidence finalization before any final current-scope closure review. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is closure criteria review evidence only with explicit non-evidence warnings. | Open |
+| P8-P12 work is treated as implicitly approved by the criteria review. | Governance / Stage Control | High | Medium | `03T` repeats P8-P12 non-entry and schedules only P7 handoff/evidence finalization next. | Open |
+
 ## 2026-06-12 — P7 current-scope closure criteria definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

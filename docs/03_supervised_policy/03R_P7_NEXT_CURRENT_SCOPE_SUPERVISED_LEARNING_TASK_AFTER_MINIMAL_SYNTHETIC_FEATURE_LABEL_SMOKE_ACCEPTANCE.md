@@ -114,6 +114,11 @@ broader P7 implementation, training, source ingestion, parser / reader /
 ingestion, actual feature extraction, actual label generation, real data,
 model-output integration, self-play, league or P8-P12.
 
+The criteria review is recorded in
+`docs/03_supervised_policy/03T_P7_CURRENT_SCOPE_CLOSURE_CRITERIA_REVIEW_AFTER_MINIMAL_SYNTHETIC_FEATURE_LABEL_SMOKE_ACCEPTANCE.md`.
+Review decision: `Review can close.` The next recommended task is docs-only
+P7 current-scope handoff/evidence finalization after closure criteria review.
+
 Reasoning:
 
 - P7 docs-only readiness chain plus one exact minimal synthetic/local smoke
