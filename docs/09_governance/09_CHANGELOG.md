@@ -1,5 +1,35 @@
 # 09_CHANGELOG
 
+## 2026-06-25 - v2.85
+
+- Reviewed the full P7 closure roadmap and remaining scope inventory after
+  current-scope closure.
+- Added
+  `docs/03_supervised_policy/03X_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW_AFTER_CURRENT_SCOPE_CLOSURE.md`.
+- Confirmed that `03W` scope is correct and does not close full P7 or approve
+  broader P7 implementation.
+- Confirmed that P7 current scope is closed only for the exact docs-only
+  readiness chain plus accepted minimal synthetic/local feature-label smoke
+  implementation.
+- Confirmed that full P7 remains open.
+- Confirmed that the `03W` remaining-scope inventory covers required,
+  deferred, blocked, later-stage and out-of-scope items with safe
+  classifications.
+- Confirmed that the `03W` roadmap is conservative, docs-first and does not
+  authorize direct implementation.
+- Review decision:
+  `Review can close.`
+- New `10_NEXT` first item:
+  `Define broader P7 scope, entry criteria and first task before implementation.`
+- This is full P7 closure roadmap and remaining scope inventory review
+  evidence only.
+- No production code, implementation logic, tests, fixtures, data files,
+  parser, dataset reader, ingestion, actual feature extraction, actual label
+  generation, supervised dataset construction, training, model architecture,
+  trainer, model-output integration, CLI, real Tenhou, real haifu, external
+  logs, platform data, self-play, league, P8-P12 work or model-strength claim
+  was added.
+
 ## 2026-06-12 - v2.84
 
 - Defined the full P7 closure roadmap and remaining scope inventory after

@@ -97,6 +97,17 @@ gate that still must not approve broader P7 implementation, training, source
 ingestion, parser / reader / ingestion, actual feature extraction, actual
 label generation, model architecture / trainer, real data, model-output
 integration, self-play, league or P8-P12.
+`docs/03_supervised_policy/03X_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW_AFTER_CURRENT_SCOPE_CLOSURE.md`
+reviews that roadmap / inventory and records `Review can close` with no
+blocker. It confirms that the `03W` scope, current-scope closure context,
+remaining-scope classification, docs-first roadmap, validation commands,
+evidence grade and governance synchronization are sufficient. Full P7 remains
+open. The next task is `Define broader P7 scope, entry criteria and first task
+before implementation`, and it is still docs-only: no broader P7
+implementation, training, source ingestion, parser / reader / ingestion,
+actual feature extraction, actual label generation, supervised dataset
+construction, model architecture / trainer, real data, model-output
+integration, self-play, league or P8-P12 is approved.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -301,8 +312,8 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review full P7 closure roadmap and remaining scope inventory after current-scope closure.
-The full-P7 roadmap / inventory review task must be docs-only. It must not add
+Define broader P7 scope, entry criteria and first task before implementation.
+The broader-P7 scope / entry / first-task definition must be docs-only. It must not add
 production code, tests, fixtures, data files, parser, dataset reader,
 ingestion, actual feature extraction, actual label generation, supervised
 dataset construction, training, tuning, self-play, league, runner behavior,

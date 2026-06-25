@@ -98,6 +98,13 @@ the next step.
 defines that roadmap / inventory, classifies remaining full-P7 items as
 required, deferred, blocked, later-stage or out of scope, and selects a
 docs-only review gate next.
+`docs/03_supervised_policy/03X_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW_AFTER_CURRENT_SCOPE_CLOSURE.md`
+reviews that roadmap / inventory and records `Review can close` with no
+blocker. The next step is a docs-only definition of broader P7 scope, entry
+criteria and first task before implementation; it does not approve broader P7
+implementation, training, source ingestion, parser / reader / ingestion,
+actual feature extraction, actual label generation, real data, model-output
+integration or P8-P12.
 No source is approved for P7 training, source ingestion, parser / reader /
 ingestion, actual feature extraction or actual label generation. Broad P7
 implementation, training and P8-P12 entry remain unapproved.

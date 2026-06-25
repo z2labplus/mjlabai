@@ -28,8 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-Full P7 closure roadmap / remaining scope inventory review planning after
-roadmap definition.
+Broader P7 scope / entry criteria / first-task definition planning after full
+P7 roadmap / inventory review.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -52,6 +52,12 @@ docs-only task: define a full P7 closure roadmap and remaining scope inventory
 after current-scope closure. `03W` defines that roadmap and inventory,
 classifies full-P7 remaining items as required / deferred / blocked /
 later-stage / out of scope, and selects a docs-only roadmap review gate next.
+`03X` reviews that roadmap / inventory with no blocker and records `Review can
+close`. The next task is docs-only: define broader P7 scope, entry criteria
+and first task before implementation. It does not approve broader P7
+implementation, training, source ingestion, parser / reader / ingestion,
+actual feature extraction, actual label generation, model architecture /
+trainer, real data, model-output integration, self-play, league or P8-P12.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
@@ -245,12 +251,15 @@ full P7 remains open and the next task is docs-only full P7 closure roadmap /
 remaining-scope inventory.
 P7 full closure roadmap and remaining scope inventory = defined in
 `docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md`;
-full P7 remains open and the next task is docs-only roadmap / inventory review.
+full P7 remains open.
+P7 full closure roadmap and remaining scope inventory review = complete in
+`docs/03_supervised_policy/03X_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW_AFTER_CURRENT_SCOPE_CLOSURE.md`;
+review can close with no blocker.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = review full P7 closure roadmap and remaining scope inventory after
-current-scope closure.
+Next = define broader P7 scope, entry criteria and first task before
+implementation.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -384,7 +393,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Review full P7 closure roadmap and remaining scope inventory after current-scope closure.
+Define broader P7 scope, entry criteria and first task before implementation.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
@@ -405,13 +414,17 @@ can close` for the exact current scope only.
 `docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md`
 completes the post-current-scope transition review and selects docs-only full
 P7 closure roadmap / remaining-scope inventory as the next task. `03W` now
-defines that roadmap / inventory and selects a docs-only review gate next. The
-review task must not add production code, tests, fixtures, data files, parser, dataset reader,
-ingestion, actual feature extraction, actual label generation, supervised
-dataset construction, training, model architecture, trainer, real Tenhou, real
-haifu, external logs, platform data, model-output integration, CLI, broad file
-ingestion, self-play, league, P8-P12 work, source approval, training-data
-approval or model-strength claims.
+defines that roadmap / inventory and selects a docs-only review gate next.
+`docs/03_supervised_policy/03X_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW_AFTER_CURRENT_SCOPE_CLOSURE.md`
+reviews that roadmap / inventory and records `Review can close` with no
+blocker. The next task is a docs-only broader-P7 scope / entry / first-task
+definition gate before implementation. It must not add production code, tests,
+fixtures, data files, parser, dataset reader, ingestion, actual feature
+extraction, actual label generation, supervised dataset construction,
+training, model architecture, trainer, real Tenhou, real haifu, external logs,
+platform data, model-output integration, CLI, broad file ingestion, self-play,
+league, P8-P12 work, source approval, training-data approval or model-strength
+claims.
 
 The exact P6 implementation approved by `02N` is complete and reviewed in
 `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`

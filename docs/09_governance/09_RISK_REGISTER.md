@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-25 — Full P7 roadmap and remaining scope inventory review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Roadmap review is mistaken for full P7 closure. | Governance / Scope | High | Medium | `03X`, `10_NEXT`, handoff and stage contract state that full P7 remains open. | Open |
+| `Review can close` is mistaken for broader P7 implementation approval. | Governance / Scope | High | Medium | `03X` closes only the review gate and selects a docs-only scope / entry / first-task definition next. | Open |
+| Next broader-P7 scope definition drifts into implementation. | Governance / Scope | High | Medium | `10_NEXT` forbids code, tests, fixtures, parser / reader / ingestion, feature/label implementation, training, real data and P8-P12. | Open |
+| Required/deferred/blocked/later-stage classifications are overread as approvals. | Governance / Scope | Medium-High | Medium | `03X` confirms classifications are safe and that deferred/blocked/later-stage items still need later review and approval. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is full P7 roadmap / inventory review evidence only with explicit non-evidence wording. | Open |
+
 ## 2026-06-12 — Full P7 roadmap and remaining scope inventory definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
