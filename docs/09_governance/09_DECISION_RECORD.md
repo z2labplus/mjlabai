@@ -14,6 +14,73 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-25 — DR-0074 — Review Broader P7 Scope Entry Criteria And First Task
+
+Decision:
+
+```text
+Review can close. Define broader P7 data/source readiness and source approval boundary before implementation as the next docs-only task.
+```
+
+Context:
+
+- P7 current scope is closed only for the exact docs-only readiness chain plus
+  accepted minimal synthetic/local supervised feature-label smoke
+  implementation.
+- Full P7 remains open.
+- `03W` defined the full P7 closure roadmap and remaining scope inventory.
+- `03X` reviewed that roadmap / inventory and recorded `Review can close`.
+- `03Y` defined broader P7 scope, entry criteria and first task before
+  implementation.
+- Broader P7 implementation, training, source approval, source ingestion,
+  parser / reader / ingestion, actual feature extraction, actual label
+  generation, supervised dataset construction, model architecture / trainer,
+  real data, model-output integration and P8-P12 remain unapproved.
+
+Rationale:
+
+- `03Y` scope, current context, allowed docs-only scope, forbidden scope,
+  broader entry criteria, implementation entry criteria, required upstream
+  artifacts, blocked / deferred / later-stage / out-of-scope classifications,
+  no-implementation reasoning, no-training reasoning, P8-P12 non-entry
+  reasoning, planning decision and evidence grade are sufficient for the
+  current review gate.
+- The next safe step is not implementation. It is to define broader P7
+  data/source readiness and source-approval boundaries before any source,
+  parser / reader / ingestion, feature extraction, label generation, dataset
+  construction or training work.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW_BEFORE_IMPLEMENTATION.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define broader P7 data/source readiness and source approval boundary before implementation.`
+- Full P7 is not closed.
+- No production code, tests, fixtures, parser, reader, ingestion, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, training, model architecture, trainer, source approval,
+  source ingestion, model-output integration, CLI, real data, self-play,
+  league or P8-P12 work is approved by this decision.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/10_next/10_NEXT.md`
+- `docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03Y_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03X_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW_AFTER_CURRENT_SCOPE_CLOSURE.md`
+- `docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md`
+- `docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md`
+
+Status:
+
+```text
+Accepted; docs-only broader P7 data/source readiness and source-approval boundary definition is next.
+```
+
 ## 2026-06-25 — DR-0073 — Define Broader P7 Scope Entry Criteria And First Task
 
 Decision:

@@ -8,6 +8,58 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-25 — Broader P7 scope, entry criteria and first-task review
+
+- Type: internal documentation / broader P7 scope, entry criteria and
+  first-task review evidence.
+- Stage: P7 supervised learning / docs-only broader P7 review before
+  implementation.
+- Added review document:
+  - `docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW_BEFORE_IMPLEMENTATION.md`
+- Reviewed:
+  - `03Y` scope.
+  - current context.
+  - allowed docs-only scope.
+  - forbidden scope.
+  - broader P7 entry criteria.
+  - implementation entry criteria.
+  - required upstream artifacts.
+  - blocked / deferred / later-stage / out-of-scope classifications.
+  - first task candidate.
+  - reasons not to start broader implementation.
+  - reasons not to train.
+  - reasons not to enter P8-P12.
+  - planning decision.
+  - evidence grade.
+  - governance synchronization.
+- Decision:
+  - `Review can close.`
+- New next task:
+  - `Define broader P7 data/source readiness and source approval boundary before implementation.`
+- Evidence grade:
+  - Broader P7 scope, entry criteria and first-task review evidence only.
+- Not evidence of:
+  - full P7 closure.
+  - broader P7 implementation or implementation approval.
+  - P7 training.
+  - source approval or training-data approval.
+  - source ingestion.
+  - parser, dataset reader or ingestion.
+  - actual feature extraction.
+  - actual label generation.
+  - supervised dataset construction.
+  - model architecture, dataloader, optimizer, loss or trainer.
+  - checkpoint, weights or snapshot approval.
+  - model-output integration.
+  - real Tenhou / real haifu / external-log / platform-data ingestion.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-25 — Broader P7 scope, entry criteria and first-task definition
 
 - Type: internal documentation / broader P7 scope, entry criteria and

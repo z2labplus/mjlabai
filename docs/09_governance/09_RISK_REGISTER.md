@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-25 — Broader P7 scope and entry criteria review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Broader P7 scope review is mistaken for broader P7 implementation approval. | Governance / Scope | High | Medium | `03Z`, `10_NEXT`, handoff and stage contract state that the review can close but implementation remains unapproved. | Open |
+| Review closure is mistaken for source approval or training-data approval. | Data / Governance | High | Medium | `03Z` selects a docs-only data/source readiness and source-approval boundary definition next, not source approval. | Open |
+| The next data/source boundary task drifts into real data, parser / reader / ingestion, feature extraction or label generation. | Data / Compliance | High | Medium | `10_NEXT` forbids source approval, data reads, parser / reader / ingestion behavior, actual feature extraction and actual label generation. | Open |
+| Training begins after review closure without source, dataset, split/leakage and model/trainer approvals. | Governance / ML | High | Medium | `03Z` repeats why training remains unapproved and keeps training outside the next task. | Open |
+| P8-P12 work is treated as implicitly approved by broader P7 review. | Governance / Stage Control | High | Medium | `03Z` requires separate transition reviews, scope, entry criteria, risk/evidence review and first-task approval for later stages. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 scope / entry criteria / first-task review evidence only with explicit non-evidence wording. | Open |
+
 ## 2026-06-25 — Broader P7 scope and entry criteria definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

@@ -104,6 +104,7 @@ docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md
 docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md
 docs/03_supervised_policy/03X_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW_AFTER_CURRENT_SCOPE_CLOSURE.md
 docs/03_supervised_policy/03Y_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -360,6 +361,19 @@ only, not broader P7 implementation approval, training approval, source
 approval, parser / reader / ingestion approval, actual feature extraction or
 label generation approval, real-data approval, P8-P12 entry approval or
 model-strength evidence.
+
+`docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW_BEFORE_IMPLEMENTATION.md`
+reviews the `03Y` broader P7 scope, entry criteria and first-task definition.
+It records `Review can close`, confirms that the `03Y` scope, context,
+allowed docs-only scope, forbidden scope, entry criteria, implementation entry
+criteria, upstream artifacts, classifications, evidence grade and governance
+synchronization are sufficient, and selects
+`Define broader P7 data/source readiness and source approval boundary before implementation`
+as the next docs-only task. It is review evidence only, not full P7 closure,
+broader implementation approval, training approval, source approval, parser /
+reader / ingestion approval, actual feature extraction or label generation
+approval, real-data approval, P8-P12 entry approval or model-strength
+evidence.
 
 ## Data-system files
 

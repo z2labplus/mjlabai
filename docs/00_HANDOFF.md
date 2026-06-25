@@ -29,8 +29,9 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
-Current active stage is post-current-scope P7 supervised learning transition
-review planning after final current-scope closure:
+Current active stage is broader P7 data/source readiness and source-approval
+boundary definition planning after broader P7 scope / entry criteria /
+first-task review:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -120,6 +121,16 @@ implementation, training, source ingestion, parser / reader / ingestion,
 actual feature extraction, actual label generation, supervised dataset
 construction, model architecture / trainer, real data, model-output
 integration, self-play, league or P8-P12 is approved.
+`docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW_BEFORE_IMPLEMENTATION.md`
+reviews that broader P7 scope / entry / first-task boundary and records
+`Review can close` with no blocker. It confirms that `03Y` is conservative
+enough as a docs-only pre-implementation boundary and selects
+`Define broader P7 data/source readiness and source approval boundary before
+implementation` as the next docs-only task. Full P7 remains open. Broader P7
+implementation, training, source approval, source ingestion, parser / reader /
+ingestion, actual feature extraction, actual label generation, supervised
+dataset construction, model architecture / trainer, real data, model-output
+integration, self-play, league and P8-P12 remain unapproved.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -324,13 +335,15 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review broader P7 scope, entry criteria and first task before implementation.
-The broader-P7 scope / entry / first-task review must be docs-only. It must
-not add production code, tests, fixtures, data files, parser, dataset reader,
-ingestion, actual feature extraction, actual label generation, supervised
-dataset construction, training, tuning, self-play, league, runner behavior,
-real Tenhou, real haifu, external logs, platform data, model-output
-integration, CLI, broad file ingestion, P8-P12 work or model-strength claims.
+Define broader P7 data/source readiness and source approval boundary before
+implementation.
+The broader-P7 data/source readiness and source-approval boundary task must be
+docs-only. It must not approve sources, read data, add production code, tests,
+fixtures, data files, parser, dataset reader, ingestion, actual feature
+extraction, actual label generation, supervised dataset construction,
+training, tuning, self-play, league, runner behavior, real Tenhou, real haifu,
+external logs, platform data, model-output integration, CLI, broad file
+ingestion, P8-P12 work or model-strength claims.
 ```
 
 Latest Akochan F1 audit summary:

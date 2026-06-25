@@ -1,5 +1,30 @@
 # 09_CHANGELOG
 
+## 2026-06-25 - v2.87
+
+- Reviewed broader P7 scope, entry criteria and first task before
+  implementation.
+- Added
+  `docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW_BEFORE_IMPLEMENTATION.md`.
+- Confirmed that `03Y` scope, current context, allowed docs-only scope,
+  forbidden scope, broader entry criteria, implementation entry criteria,
+  required upstream artifacts, blocked / deferred / later-stage / out-of-scope
+  classifications, first task candidate, no-implementation reasoning,
+  no-training reasoning, P8-P12 non-entry reasoning, planning decision and
+  evidence grade are sufficient for the current review gate.
+- Review decision:
+  `Review can close.`
+- Full P7 remains open.
+- New `10_NEXT` first item:
+  `Define broader P7 data/source readiness and source approval boundary before implementation.`
+- This is broader P7 scope / entry criteria / first-task review evidence only.
+- No production code, implementation logic, tests, fixtures, data files,
+  source approval, source ingestion, parser, dataset reader, ingestion, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, training, model architecture, trainer, model-output
+  integration, CLI, real Tenhou, real haifu, external logs, platform data,
+  self-play, league, P8-P12 work or model-strength claim was added.
+
 ## 2026-06-25 - v2.86
 
 - Defined broader P7 scope, entry criteria and first task before
