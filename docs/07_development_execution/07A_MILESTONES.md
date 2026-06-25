@@ -20,7 +20,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 | P4 | Unified mahjong environment and interface | Define shared state, legal actions, logs, replays and adapter contracts | Different candidates can run through the same interface | Future |
 | P5 | Unified evaluation system | Compare all models with Tenhou-oriented metrics under one harness | Stable comparison of baselines and project models | Closed for current synthetic/local evaluation groundwork scope |
 | P6 | Data system | Build replay, feature, label and quality pipelines for training and evaluation | Supervised training and offline evaluation datasets can be generated | Closed for documented P6 data-system scope only; parser / reader / ingestion / feature / label and real data remain unapproved |
-| P7 | Supervised policy model | Train a base strategy model from high-quality human play and key decisions | Model beats simple baselines in key offline scenarios and completes games | Current scope closed only for docs-only readiness chain plus exact minimal synthetic/local feature-label smoke implementation in `03V`; broader scope / entry criteria reviewed in `03Z`; broader data/source readiness and source-approval boundary defined in `03AA`; current next is docs-only review of that boundary; full P7, broad implementation, training, source approval, source ingestion, parser / reader / ingestion, actual feature extraction, actual label generation, model architecture / trainer, real data, model-output integration and P8-P12 remain unapproved |
+| P7 | Supervised policy model | Train a base strategy model from high-quality human play and key decisions | Model beats simple baselines in key offline scenarios and completes games | Current scope closed only for docs-only readiness chain plus exact minimal synthetic/local feature-label smoke implementation in `03V`; broader scope / entry criteria reviewed in `03Z`; broader data/source readiness and source-approval boundary defined in `03AA` and reviewed in `03AB`; current next is docs-only parser / reader / ingestion boundary definition; full P7, broad implementation, training, source approval, source ingestion, parser / reader / ingestion implementation, actual feature extraction, actual label generation, model architecture / trainer, real data, model-output integration and P8-P12 remain unapproved |
 | P8 | Self-play reinforcement learning | Optimize toward Tenhou pt EV, placement and stable-dan objectives | RL checkpoint beats supervised checkpoint in the unified league | Future |
 | P9 | Search and risk model | Improve push/fold, deal-in risk, south-round rank control and oorasu decisions | Search-enhanced model beats non-search model in scenarios and league play | Future |
 | P10 | Model league and mainline selection | Run long comparisons among baselines, SL, RL, search and historical best versions | A candidate reliably beats the current mainline with uncertainty reported | Future |
@@ -116,11 +116,12 @@ model-output integration and P8-P12 remain unapproved.
 `docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW_BEFORE_IMPLEMENTATION.md`
 reviews `03Y` and records `Review can close` with no blocker. It confirms that
 broader P7 scope, entry criteria and the first-task boundary are conservative
-enough before implementation. The next step is docs-only:
-`Define broader P7 data/source readiness and source approval boundary before
+enough before implementation. The broader data/source readiness and
+source-approval boundary has now been defined and reviewed. The next step is
+docs-only: `Define broader P7 parser, reader and ingestion boundary before
 implementation`. It does not approve full P7 closure, broad implementation,
-training, source approval, source ingestion, parser / reader / ingestion,
-actual feature extraction, actual label generation, real data,
+training, source approval, source ingestion, parser / reader / ingestion
+implementation, actual feature extraction, actual label generation, real data,
 model-output integration or P8-P12.
 `docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md`
 defines that broader P7 data/source readiness and source-approval boundary.
@@ -128,10 +129,13 @@ It records that no source is approved for P7 training, source ingestion,
 actual feature extraction or actual label generation. It also separates
 source readiness, source-specific approval, source ingestion approval,
 feature extraction approval, label generation approval, training-data approval
-and training-run approval. The next step is docs-only review of that boundary.
-It does not approve any source, source ingestion, parser / reader / ingestion,
-actual feature extraction, actual label generation, training, real data,
-model-output integration or P8-P12.
+and training-run approval.
+`docs/03_supervised_policy/03AB_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+reviews that boundary, records `Review can close` and selects
+`Define broader P7 parser, reader and ingestion boundary before implementation`
+as the next docs-only task. It does not approve any source, source ingestion,
+parser / reader / ingestion implementation, actual feature extraction, actual
+label generation, training, real data, model-output integration or P8-P12.
 No source is approved for P7 training, source ingestion, parser / reader /
 ingestion, actual feature extraction or actual label generation. Broad P7
 implementation, training and P8-P12 entry remain unapproved.

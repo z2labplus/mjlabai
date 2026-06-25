@@ -1,5 +1,31 @@
 # 09_CHANGELOG
 
+## 2026-06-25 - v2.89
+
+- Reviewed broader P7 data/source readiness and source approval boundary before
+  implementation.
+- Added
+  `docs/03_supervised_policy/03AB_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`.
+- Confirmed that `03AA` scope, purpose, current source status, source category
+  inventory, readiness / approval vocabulary, source-specific approval-record
+  requirements, concept separation, parser / reader / ingestion dependency,
+  feature / label dependency, risk controls, evidence requirements, first task
+  candidate, planning decision, governance synchronization and evidence grade
+  are sufficient for the current review gate.
+- Review decision:
+  `Review can close.`
+- New `10_NEXT` first item:
+  `Define broader P7 parser, reader and ingestion boundary before implementation.`
+- This is broader P7 data/source readiness and source-approval boundary review
+  evidence only.
+- No source approval, training-data approval, source ingestion approval,
+  parser / reader / ingestion implementation or approval, broad file ingestion,
+  CLI, production code, implementation logic, tests, fixtures, data files,
+  actual feature extraction, actual label generation, supervised dataset
+  construction, training, model architecture, trainer, model-output
+  integration, real Tenhou, real haifu, external logs, platform data,
+  self-play, league, P8-P12 work or model-strength claim was added.
+
 ## 2026-06-25 - v2.88
 
 - Defined broader P7 data/source readiness and source approval boundary before

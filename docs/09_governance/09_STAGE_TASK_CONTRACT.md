@@ -2,8 +2,8 @@
 
 ## Current stage
 
-Broader P7 data/source readiness and source-approval boundary review planning
-after broader P7 data/source boundary definition.
+Broader P7 parser / reader / ingestion boundary definition planning after
+broader P7 data/source readiness and source-approval boundary review.
 `03M` and `03N` name and review candidate future files and guardrails only;
 `03O` approved only the exact minimal implementation task and exact files.
 That task is now implemented, reviewed in `03P` with `Review can close`, and
@@ -26,10 +26,13 @@ criteria and first task before implementation and selects a docs-only review
 gate next. `03Z` reviews `03Y`, records `Review can close` and selects a
 docs-only data/source readiness and source-approval boundary definition task
 next. `03AA` defines that boundary and selects a docs-only review gate next.
-It does not approve broader P7 implementation, training, source approval,
-source ingestion, parser / reader / ingestion, actual feature extraction,
-actual label generation, model architecture / trainer, real data,
-model-output integration, self-play, league or P8-P12. P5 evaluation foundation is
+`03AB` reviews `03AA`, records `Review can close`, and selects
+`Define broader P7 parser, reader and ingestion boundary before implementation`
+as the next docs-only task. It does not approve broader P7 implementation,
+training, source approval, source ingestion, parser / reader / ingestion
+implementation, actual feature extraction, actual label generation, model
+architecture / trainer, real data, model-output integration, self-play,
+league or P8-P12. P5 evaluation foundation is
 closed for the current synthetic/local scope; general P6 implementation is not open, and the exact
 minimal replay schema / project-authored synthetic fixture task approved by
 `02N` is implemented, reviewed with no blocker and accepted as current-scope
@@ -134,13 +137,14 @@ P7 post-current-scope transition review = complete in `12E`; full P7 remains ope
 P7 full closure roadmap and remaining scope inventory = defined in `03W`; full P7 remains open
 P7 full closure roadmap and remaining scope inventory review = complete in `03X`; review can close with no blocker
 Broader P7 scope / entry criteria / first task = defined in `03Y` and reviewed in `03Z`; review can close with no blocker
-Broader P7 data/source readiness and source-approval boundary = defined in `03AA`; next is docs-only review before implementation
+Broader P7 data/source readiness and source-approval boundary = defined in `03AA` and reviewed in `03AB`; review can close with no blocker
+Broader P7 parser / reader / ingestion boundary = current docs-only next task before implementation
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = review broader P7 data/source readiness and source approval boundary before implementation
+Next = define broader P7 parser, reader and ingestion boundary before implementation
 ```
 
 ## AI role
@@ -251,4 +255,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review broader P7 data/source readiness and source approval boundary before implementation.
+Define broader P7 parser, reader and ingestion boundary before implementation.

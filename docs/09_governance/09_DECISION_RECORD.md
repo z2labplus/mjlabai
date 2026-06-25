@@ -14,6 +14,74 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-25 — DR-0076 — Review Broader P7 Data Source Readiness And Source Approval Boundary
+
+Decision:
+
+```text
+Review can close. Define broader P7 parser, reader and ingestion boundary before implementation as the next docs-only task.
+```
+
+Context:
+
+- P7 current scope is closed only for the exact docs-only readiness chain plus
+  accepted minimal synthetic/local supervised feature-label smoke
+  implementation.
+- Full P7 remains open.
+- `03Y` defined broader P7 scope, entry criteria and first task before
+  implementation.
+- `03Z` reviewed that boundary and recorded `Review can close`.
+- `03AA` defined broader P7 data/source readiness and source approval boundary
+  before implementation.
+- Broader P7 implementation, training, source approval, source ingestion,
+  parser / reader / ingestion, actual feature extraction, actual label
+  generation, supervised dataset construction, model architecture / trainer,
+  real data, model-output integration and P8-P12 remain unapproved.
+
+Rationale:
+
+- `03AA` sufficiently separates source readiness, source-specific approval,
+  source ingestion approval, parser / reader / ingestion approval, feature
+  extraction approval, label generation approval, training-data approval,
+  training-run approval and model-strength evidence.
+- The next unresolved dependency is a parser / reader / ingestion boundary,
+  but only as a docs-only boundary definition before any implementation.
+- The project must not start source ingestion, parser / reader / ingestion
+  implementation, broad file ingestion, CLI, feature extraction, label
+  generation or training from source-readiness review evidence.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03AB_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define broader P7 parser, reader and ingestion boundary before implementation.`
+- No source is approved for P7 training, source ingestion, actual feature
+  extraction or actual label generation.
+- No parser, dataset reader, ingestion behavior, broad file ingestion, CLI,
+  production code, tests, fixtures or data files are approved by this decision.
+- No real Tenhou, real haifu, external logs, platform data, accounts, sessions,
+  cookies or tokens may be read by this decision.
+- No training, model architecture, trainer, model-output integration,
+  self-play, league or P8-P12 work is approved by this decision.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/10_next/10_NEXT.md`
+- `docs/03_supervised_policy/03AB_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03Y_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_BEFORE_IMPLEMENTATION.md`
+
+Status:
+
+```text
+Accepted; docs-only broader P7 parser / reader / ingestion boundary definition is next.
+```
+
 ## 2026-06-25 — DR-0075 — Define Broader P7 Data Source Readiness And Source Approval Boundary
 
 Decision:

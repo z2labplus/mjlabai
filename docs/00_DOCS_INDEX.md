@@ -106,6 +106,7 @@ docs/03_supervised_policy/03X_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENT
 docs/03_supervised_policy/03Y_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03AB_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -389,6 +390,21 @@ boundary-definition evidence only, not source approval, training-data
 approval, source ingestion approval, parser / reader / ingestion approval,
 actual feature extraction or label generation approval, real-data approval,
 training approval, P8-P12 entry approval or model-strength evidence.
+
+`docs/03_supervised_policy/03AB_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+reviews the `03AA` broader P7 data/source readiness and source-approval
+boundary before implementation. It records `Review can close`, confirms that
+the scope, purpose, source status, source-category inventory, readiness /
+approval vocabulary, source-specific approval-record requirements, concept
+separation, parser / reader / ingestion dependency, feature / label
+dependency, risks, evidence requirements, first task candidate, planning
+decision and governance synchronization are sufficient. It selects
+`Define broader P7 parser, reader and ingestion boundary before implementation`
+as the next docs-only task. It is review evidence only, not full P7 closure,
+source approval, training-data approval, source ingestion approval, parser /
+reader / ingestion implementation or approval, actual feature extraction,
+label generation, training approval, real-data approval, P8-P12 entry approval
+or model-strength evidence.
 
 ## Data-system files
 

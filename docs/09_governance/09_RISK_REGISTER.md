@@ -8,6 +8,19 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-25 — Broader P7 data-source readiness boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `Review can close` is mistaken for source approval. | Governance / Scope | High | Medium | `03AB`, `10_NEXT`, handoff and stage contract state that the review closes only the docs gate and no source is approved. | Open |
+| Source-readiness review is mistaken for source ingestion approval. | Data / Governance | High | Medium | `03AB` repeats that source readiness, source-specific approval and source ingestion approval are separate and non-substitutable. | Open |
+| Parser / reader / ingestion boundary definition drifts into implementation. | Engineering / Scope | High | Medium | The new `10_NEXT` first item is docs-only and forbids parser, reader, ingestion, broad file ingestion, CLI, tests, fixtures and data files. | Open |
+| Review closure is used to read real Tenhou, real haifu, external logs or platform data. | Data / Compliance | High | Medium | `03AB` and `10_NEXT` keep real and external source files blocked until source-specific approval plus parser / reader / ingestion approval both exist. | Open |
+| Feature extraction, label generation or supervised dataset construction starts from the review result. | Data / Leakage | High | Medium | `03AB` preserves separate future feature / label boundaries and says this review does not approve actual extraction or labels. | Open |
+| Training begins after data/source readiness review without source, ingestion, feature, label and training-run approvals. | Governance / ML | High | Medium | `03AB` and `10_NEXT` keep training, model architecture, trainer, checkpoints and weights unapproved. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 data/source readiness and source-approval boundary review evidence only. | Open |
+| P8-P12 work is treated as implicitly approved by the next parser / reader / ingestion boundary step. | Governance / Stage Control | High | Medium | `10_NEXT` keeps P8-P12 closed and requires later separate transition reviews and approvals. | Open |
+
 ## 2026-06-25 — Broader P7 data-source readiness and source-approval boundary risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
