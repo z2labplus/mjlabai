@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Define broader P7 parser, reader and ingestion boundary before implementation.
+- [ ] Review broader P7 parser, reader and ingestion boundary before implementation.
 
 Current execution charter:
 
@@ -16,8 +16,8 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only boundary definition for broader P7 parser, reader and
-  ingestion behavior before any implementation.
+- This is a docs-only review gate for the broader P7 parser, reader and
+  ingestion boundary definition before implementation.
 - P7 current scope is closed only for the exact docs-only supervised-learning
   readiness chain plus accepted minimal synthetic/local supervised
   feature-label smoke implementation.
@@ -27,14 +27,19 @@ Limits:
   before implementation.
 - `docs/03_supervised_policy/03AB_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
   reviewed that boundary and recorded `Review can close`.
-- This task may define parser / reader / ingestion vocabulary, allowed and
-  forbidden boundaries, source-dependency rules, future approval-record
-  fields, evidence requirements, risk controls and a later review gate.
+- `docs/03_supervised_policy/03AC_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+  defines broader P7 parser / reader / ingestion vocabulary, dependency order,
+  candidate classes, future approval-record fields, allowed and forbidden
+  future behavior, stop conditions, risk controls and evidence requirements.
+- This task may review `03AC` scope, purpose, current parser / reader /
+  ingestion status, concept definitions, dependency map, candidate classes,
+  approval fields, allowed / forbidden scope, stop conditions, risks, evidence
+  grade and next first task candidate.
 - This task does not close full P7.
 - This task does not approve broader P7 implementation.
 - This task does not approve any source for training or evaluation.
 - This task does not approve source ingestion.
-- This task does not approve parser / reader / ingestion implementation.
+- This task does not approve parser / reader / ingestion.
 - This task does not implement parser, reader, ingestion, dataset reader,
   broad file ingestion or CLI data paths.
 - This task does not read real or external source files.
@@ -69,18 +74,19 @@ Limits:
 - Do not claim any P5 closure artifact, P6 closure artifact, P6
   synthetic/local schema artifact, P7 current-scope closure artifact,
   broader P7 source-readiness review artifact or parser / reader / ingestion
-  boundary artifact is model-strength evidence, Tenhou evidence, stable-dan
-  ranked-game evidence, LuckyJ `10.68` comparison or candidate-promotion
-  evidence.
+  boundary/review artifact is model-strength evidence, Tenhou evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
 - Stop before commit if new implementation logic, new tests, new fixtures,
   data files, real data, parser / reader / ingestion behavior, actual feature
   extraction, actual label generation, model-output path, CLI, broad
   ingestion, third-party artifact, overclaim, source approval, ingestion
-  approval, label approval, feature approval, training approval or P8-P12 drift
-  appears.
+  approval, parser / reader / ingestion approval, label approval, feature
+  approval, training approval or P8-P12 drift appears.
 
 ## Completed
 
+- [x] 2026-06-26 Defined broader P7 parser, reader and ingestion boundary before implementation: added `docs/03_supervised_policy/03AC_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_BEFORE_IMPLEMENTATION.md`, defined scope, purpose, current parser / reader / ingestion status, concept definitions, dependency map, future candidate classes, future approval-record fields, allowed future implementation boundary, forbidden parser / reader / ingestion scope, stop conditions, risk controls, evidence requirements, first task candidate, planning decision and evidence grade. The next task is `Review broader P7 parser, reader and ingestion boundary before implementation.` This is broader P7 parser, reader and ingestion boundary definition evidence only. It does not close full P7, approve any source, approve training-data source, approve source ingestion, approve parser / reader / ingestion, implement parser / reader / ingestion, approve broad file ingestion, approve CLI data paths, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve training, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-25 Reviewed broader P7 data/source readiness and source approval boundary before implementation: added `docs/03_supervised_policy/03AB_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`, reviewed `03AA` scope, purpose, current source status, source category inventory, readiness / approval vocabulary, source-specific approval record requirements, concept separation, parser / reader / ingestion dependency, feature / label dependency, risk controls, evidence requirements, first task candidate, planning decision, governance synchronization and evidence grade. Review decision: `Review can close.` The next task is `Define broader P7 parser, reader and ingestion boundary before implementation.` This is broader P7 data/source readiness and source-approval boundary review evidence only. It does not close full P7, approve any source, approve training-data source, approve source ingestion, approve parser / reader / ingestion, implement parser / reader / ingestion, approve broad file ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve training, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-25 Defined broader P7 data/source readiness and source approval boundary before implementation: added `docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md`, defined broader P7 data/source readiness purpose, current source status, source category inventory, readiness / approval vocabulary, source-specific approval record requirements, source approval vs ingestion vs training approval distinctions, parser / reader / ingestion dependency boundary, feature / label dependency boundary, smoke fixture non-training-source boundary, risk controls, evidence requirements, first task candidate, planning decision and evidence grade. The next task is `Review broader P7 data/source readiness and source approval boundary before implementation.` This is broader P7 data/source readiness and source-approval boundary definition evidence only. It does not close full P7, approve any source, approve training-data source, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve training, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-25 Reviewed broader P7 scope, entry criteria and first task before implementation: added `docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW_BEFORE_IMPLEMENTATION.md`, reviewed `03Y` scope, current context, allowed docs-only scope, forbidden scope, broader entry criteria, implementation entry criteria, required upstream artifacts, blocked / deferred / later-stage / out-of-scope classifications, first task candidate, reasons not to implement, reasons not to train, reasons not to enter P8-P12, planning decision, evidence grade and governance synchronization. Review decision: `Review can close.` The next task is `Define broader P7 data/source readiness and source approval boundary before implementation.` This is broader P7 scope / entry criteria / first-task review evidence only. It does not close full P7, approve broader P7 implementation, approve training, approve source approval, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.

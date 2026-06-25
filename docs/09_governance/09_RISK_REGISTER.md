@@ -8,6 +8,22 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-26 — Broader P7 parser reader ingestion boundary risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Parser / reader / ingestion boundary is mistaken for parser / reader / ingestion approval. | Governance / Scope | High | Medium | `03AC`, `10_NEXT`, handoff and stage contract state that the boundary is definition evidence only and the next task is review. | Open |
+| Future parser candidate classes are mistaken for approved implementation tasks. | Engineering / Scope | High | Medium | `03AC` marks every candidate class as not approved now and requires future proposal, approval decision and exact `10_NEXT` task. | Open |
+| Source approval is mistaken for source ingestion or reader approval. | Data / Governance | High | Medium | `03AC` preserves the dependency order and repeats that source-specific approval cannot substitute for parser / reader / ingestion approval. | Open |
+| Synthetic/local smoke fixtures are mistaken for real dataset reader evidence. | Data / Scope | High | Medium | `03AC` states that current smoke helpers and P6 replay schema helpers are not broader P7 parser / reader / ingestion approval. | Open |
+| Broad file ingestion or CLI path ingestion creeps into future P7 work. | Engineering / Scope | High | Medium | `03AC` forbids arbitrary filesystem ingestion, recursive ingestion and CLI user-supplied data paths unless separately reviewed. | Open |
+| Secret, account, session, cookie or token content is read by a future reader. | Security / Compliance | High | Medium | `03AC` forbids hidden files, `.env`, account/session/cookie/token readers and platform data readers now. | Open |
+| Parser output becomes feature tensors without feature boundary approval. | Data / Leakage | High | Medium | `03AC` requires parser behavior to stop before actual feature extraction unless separately approved. | Open |
+| Reader output becomes labels without label boundary approval. | Data / Leakage | High | Medium | `03AC` requires reader behavior to stop before actual label generation unless separately approved. | Open |
+| Ingestion constructs supervised datasets or splits before dataset policy. | Data / Training | High | Medium | `03AC` requires separate dataset construction boundary and training-data approval before examples/splits/batches. | Open |
+| Boundary definition evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 parser, reader and ingestion boundary definition evidence only. | Open |
+| P8-P12 work is treated as implicitly approved by parser / reader / ingestion planning. | Governance / Stage Control | High | Medium | `03AC` and `10_NEXT` keep P8-P12 closed and require later transition reviews and approvals. | Open |
+
 ## 2026-06-25 — Broader P7 data-source readiness boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

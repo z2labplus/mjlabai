@@ -8,6 +8,60 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-26 — Broader P7 parser, reader and ingestion boundary definition
+
+- Type: internal documentation / broader P7 parser, reader and ingestion
+  boundary definition evidence.
+- Stage: P7 supervised learning / docs-only broader P7 parser, reader and
+  ingestion boundary before implementation.
+- Added boundary document:
+  - `docs/03_supervised_policy/03AC_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- Defined:
+  - broader P7 parser / reader / ingestion scope.
+  - purpose and north-star relationship.
+  - current parser / reader / ingestion status.
+  - parser / reader / ingestion concept definitions.
+  - dependency order from source readiness through training approval.
+  - future parser / reader / ingestion candidate classes.
+  - future approval-record required fields.
+  - allowed future implementation boundary.
+  - forbidden parser / reader / ingestion scope.
+  - stop conditions.
+  - risk controls.
+  - evidence requirements.
+  - first task candidate.
+  - planning decision.
+- New next task:
+  - `Review broader P7 parser, reader and ingestion boundary before implementation.`
+- Evidence grade:
+  - Broader P7 parser, reader and ingestion boundary definition evidence only.
+- Not evidence of:
+  - parser implementation.
+  - reader implementation.
+  - ingestion implementation.
+  - parser / reader / ingestion approval.
+  - source approval.
+  - source ingestion approval.
+  - training-data approval.
+  - broad file ingestion.
+  - CLI.
+  - real-data use.
+  - actual feature extraction.
+  - actual label generation.
+  - supervised dataset construction.
+  - P7 training.
+  - model architecture, dataloader, optimizer, loss or trainer.
+  - checkpoint, weights or snapshot approval.
+  - model-output integration.
+  - real Tenhou / real haifu / external-log / platform-data ingestion.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-25 — Broader P7 data/source readiness and source-approval boundary review
 
 - Type: internal documentation / broader P7 data-source readiness and

@@ -1,5 +1,29 @@
 # 09_CHANGELOG
 
+## 2026-06-26 - v2.90
+
+- Defined broader P7 parser, reader and ingestion boundary before
+  implementation.
+- Added
+  `docs/03_supervised_policy/03AC_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_BEFORE_IMPLEMENTATION.md`.
+- Recorded scope, purpose, current parser / reader / ingestion status,
+  concept definitions, boundary dependency map, future candidate classes,
+  future approval-record fields, allowed future implementation boundary,
+  forbidden parser / reader / ingestion scope, stop conditions, risk controls,
+  evidence requirements, first task candidate, planning decision and evidence
+  grade.
+- New `10_NEXT` first item:
+  `Review broader P7 parser, reader and ingestion boundary before implementation.`
+- This is broader P7 parser, reader and ingestion boundary definition evidence
+  only.
+- No parser approval, reader approval, ingestion approval, source ingestion
+  approval, source approval, training-data approval, broad file ingestion, CLI,
+  production code, implementation logic, tests, fixtures, data files, actual
+  feature extraction, actual label generation, supervised dataset construction,
+  training, model architecture, trainer, model-output integration, real
+  Tenhou, real haifu, external logs, platform data, self-play, league,
+  P8-P12 work or model-strength claim was added.
+
 ## 2026-06-25 - v2.89
 
 - Reviewed broader P7 data/source readiness and source approval boundary before

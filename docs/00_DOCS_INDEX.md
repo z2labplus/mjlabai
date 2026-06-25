@@ -107,6 +107,7 @@ docs/03_supervised_policy/03Y_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_BEF
 docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AB_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03AC_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -404,6 +405,21 @@ as the next docs-only task. It is review evidence only, not full P7 closure,
 source approval, training-data approval, source ingestion approval, parser /
 reader / ingestion implementation or approval, actual feature extraction,
 label generation, training approval, real-data approval, P8-P12 entry approval
+or model-strength evidence.
+
+`docs/03_supervised_policy/03AC_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+defines the broader P7 parser, reader and ingestion boundary before
+implementation. It records current parser / reader / ingestion status,
+concept definitions, dependency order, future candidate classes,
+approval-record fields, allowed future implementation boundaries, forbidden
+scope, stop conditions, risk controls, evidence requirements, the next review
+gate, planning decision and evidence grade. It selects
+`Review broader P7 parser, reader and ingestion boundary before implementation`
+as the next docs-only task. It is boundary-definition evidence only, not parser
+implementation, reader implementation, ingestion implementation, parser /
+reader / ingestion approval, source ingestion approval, source approval,
+training-data approval, broad file ingestion, CLI, real-data use, actual
+feature extraction, label generation, training approval, P8-P12 entry approval
 or model-strength evidence.
 
 ## Data-system files
