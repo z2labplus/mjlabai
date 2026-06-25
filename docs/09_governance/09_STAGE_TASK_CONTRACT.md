@@ -2,8 +2,8 @@
 
 ## Current stage
 
-Broader P7 scope / entry criteria / first-task definition planning after full
-P7 roadmap / inventory review.
+Broader P7 scope / entry criteria / first-task review planning after broader
+P7 definition.
 `03M` and `03N` name and review candidate future files and guardrails only;
 `03O` approved only the exact minimal implementation task and exact files.
 That task is now implemented, reviewed in `03P` with `Review can close`, and
@@ -20,11 +20,13 @@ and selects the next docs-only task: define a full P7 closure roadmap and
 remaining scope inventory after current-scope closure. `03W` now defines that
 roadmap/inventory and selects a docs-only roadmap review gate next. `03X`
 reviews that roadmap/inventory with no blocker and records `Review can close`.
-The next task is docs-only: define broader P7 scope, entry criteria and first
-task before implementation. It does not approve broader P7 implementation,
-training, source ingestion, parser / reader / ingestion, actual feature
-extraction, actual label generation, model architecture / trainer, real data,
-model-output integration, self-play, league or P8-P12. P5 evaluation foundation is
+The follow-up was docs-only broader P7 scope, entry criteria and first-task
+definition before implementation. `03Y` now defines that broader P7 scope, entry
+criteria and first task before implementation and selects a docs-only review
+gate next. It does not approve broader P7 implementation, training, source
+ingestion, parser / reader / ingestion, actual feature extraction, actual
+label generation, model architecture / trainer, real data, model-output
+integration, self-play, league or P8-P12. P5 evaluation foundation is
 closed for the current synthetic/local scope; general P6 implementation is not open, and the exact
 minimal replay schema / project-authored synthetic fixture task approved by
 `02N` is implemented, reviewed with no blocker and accepted as current-scope
@@ -128,13 +130,13 @@ P7 final current-scope closure review = complete in `03V`; P7 current scope can 
 P7 post-current-scope transition review = complete in `12E`; full P7 remains open and the next task is docs-only full P7 closure roadmap / remaining-scope inventory
 P7 full closure roadmap and remaining scope inventory = defined in `03W`; full P7 remains open
 P7 full closure roadmap and remaining scope inventory review = complete in `03X`; review can close with no blocker
-Broader P7 scope / entry criteria / first task = next docs-only definition task before implementation
+Broader P7 scope / entry criteria / first task = defined in `03Y`; next is docs-only review before implementation
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = define broader P7 scope, entry criteria and first task before implementation
+Next = review broader P7 scope, entry criteria and first task before implementation
 ```
 
 ## AI role
@@ -245,4 +247,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Define broader P7 scope, entry criteria and first task before implementation.
+Review broader P7 scope, entry criteria and first task before implementation.

@@ -8,6 +8,53 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-25 — Broader P7 scope, entry criteria and first-task definition
+
+- Type: internal documentation / broader P7 scope, entry criteria and
+  first-task definition evidence.
+- Stage: P7 supervised learning / docs-only broader P7 scope definition before
+  implementation.
+- Added definition document:
+  - `docs/03_supervised_policy/03Y_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_BEFORE_IMPLEMENTATION.md`
+- Defined:
+  - broader P7 purpose.
+  - current context after P7 current-scope closure and full-P7 roadmap review.
+  - allowed docs-only scope.
+  - forbidden scope.
+  - broader P7 entry criteria before implementation.
+  - implementation entry criteria.
+  - required upstream artifacts.
+  - blocked / deferred / later-stage / out-of-scope items.
+  - first task candidate.
+  - why no broader implementation yet.
+  - why no training yet.
+  - why no P8-P12 yet.
+  - planning decision.
+- New next task:
+  - `Review broader P7 scope, entry criteria and first task before implementation.`
+- Evidence grade:
+  - Broader P7 scope, entry criteria and first-task definition evidence only.
+- Not evidence of:
+  - full P7 closure.
+  - broader P7 implementation or implementation approval.
+  - P7 training.
+  - source approval or training-data approval.
+  - parser, dataset reader or ingestion.
+  - actual feature extraction.
+  - actual label generation.
+  - supervised dataset construction.
+  - model architecture, dataloader, optimizer, loss or trainer.
+  - checkpoint, weights or snapshot approval.
+  - model-output integration.
+  - real Tenhou / real haifu / external-log / platform-data ingestion.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-25 — Full P7 closure roadmap and remaining scope inventory review
 
 - Type: internal documentation / full-P7 roadmap and remaining-scope inventory

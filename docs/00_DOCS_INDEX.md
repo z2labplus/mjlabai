@@ -103,6 +103,7 @@ docs/03_supervised_policy/03U_P7_CURRENT_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALI
 docs/03_supervised_policy/03V_FINAL_P7_CURRENT_SCOPE_CLOSURE_REVIEW.md
 docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md
 docs/03_supervised_policy/03X_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW_AFTER_CURRENT_SCOPE_CLOSURE.md
+docs/03_supervised_policy/03Y_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -345,6 +346,19 @@ are sufficient, and selects
 as the next docs-only task. It is review evidence only, not full P7 closure,
 broader implementation approval, training approval, source approval, parser /
 reader / ingestion approval, real-data approval, P8-P12 entry approval or
+model-strength evidence.
+
+`docs/03_supervised_policy/03Y_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_BEFORE_IMPLEMENTATION.md`
+defines broader P7 scope, entry criteria and first task before implementation.
+It records broader P7 purpose, allowed docs-only scope, forbidden scope,
+implementation entry criteria, required upstream artifacts, blocked /
+deferred / later-stage / out-of-scope items, reasons not to implement or train
+yet, reasons not to enter P8-P12, planning decision and evidence grade. It
+selects `Review broader P7 scope, entry criteria and first task before
+implementation` as the next docs-only review gate. It is definition evidence
+only, not broader P7 implementation approval, training approval, source
+approval, parser / reader / ingestion approval, actual feature extraction or
+label generation approval, real-data approval, P8-P12 entry approval or
 model-strength evidence.
 
 ## Data-system files

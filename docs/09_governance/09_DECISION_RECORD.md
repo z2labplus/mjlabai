@@ -14,6 +14,68 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-25 — DR-0073 — Define Broader P7 Scope Entry Criteria And First Task
+
+Decision:
+
+```text
+Broader P7 scope, entry criteria and first task are defined before implementation. Set the next task to a docs-only review gate.
+```
+
+Context:
+
+- P7 current scope is closed only for the exact docs-only readiness chain plus
+  accepted minimal synthetic/local supervised feature-label smoke
+  implementation.
+- `12E` completed the post-current-scope P7 transition review.
+- `03W` defined the full P7 closure roadmap and remaining scope inventory.
+- `03X` reviewed that roadmap / inventory and recorded `Review can close`.
+- Full P7 remains open.
+- Broader P7 implementation, training, source ingestion, parser / reader /
+  ingestion, actual feature extraction, actual label generation, supervised
+  dataset construction, model architecture / trainer, real data, model-output
+  integration and P8-P12 remain unapproved.
+
+Rationale:
+
+- The project needs broader P7 scope and entry criteria before any future
+  implementation can be considered.
+- Entry criteria must separate required upstream artifacts, source readiness,
+  parser / reader / ingestion readiness, feature / label readiness, dataset
+  policy, split / leakage policy, model / trainer planning, evidence
+  requirements and risk controls.
+- The next safe step is review, not implementation.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03Y_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_BEFORE_IMPLEMENTATION.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review broader P7 scope, entry criteria and first task before implementation.`
+- Full P7 is not closed.
+- No production code, tests, fixtures, parser, reader, ingestion, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, training, model architecture, trainer, model-output
+  integration, CLI, real data, self-play, league or P8-P12 work is approved by
+  this decision.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/10_next/10_NEXT.md`
+- `docs/03_supervised_policy/03Y_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03X_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW_AFTER_CURRENT_SCOPE_CLOSURE.md`
+- `docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_AFTER_CURRENT_SCOPE_CLOSURE.md`
+- `docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md`
+
+Status:
+
+```text
+Accepted; docs-only broader P7 scope / entry / first-task review is next.
+```
+
 ## 2026-06-25 — DR-0072 — Review Full P7 Closure Roadmap And Remaining Scope Inventory
 
 Decision:

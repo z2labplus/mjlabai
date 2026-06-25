@@ -105,6 +105,14 @@ criteria and first task before implementation; it does not approve broader P7
 implementation, training, source ingestion, parser / reader / ingestion,
 actual feature extraction, actual label generation, real data, model-output
 integration or P8-P12.
+`docs/03_supervised_policy/03Y_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_BEFORE_IMPLEMENTATION.md`
+defines broader P7 scope, entry criteria and first task before implementation.
+It records broader P7 purpose, implementation entry criteria, required upstream
+artifacts, blocked / deferred / later-stage / out-of-scope items and the next
+docs-only review gate. Full P7 remains open, and broader P7 implementation,
+training, source ingestion, parser / reader / ingestion, actual feature
+extraction, actual label generation, model architecture / trainer, real data,
+model-output integration and P8-P12 remain unapproved.
 No source is approved for P7 training, source ingestion, parser / reader /
 ingestion, actual feature extraction or actual label generation. Broad P7
 implementation, training and P8-P12 entry remain unapproved.

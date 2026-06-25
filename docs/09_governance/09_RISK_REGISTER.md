@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-25 — Broader P7 scope and entry criteria definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Broader P7 scope definition is mistaken for broader P7 implementation approval. | Governance / Scope | High | Medium | `03Y`, `10_NEXT`, handoff and stage contract state that the next task is a docs-only review gate and implementation remains unapproved. | Open |
+| Entry criteria are mistaken for criteria being satisfied. | Governance / Scope | High | Medium | `03Y` states that definitions are planning constraints only and do not satisfy themselves. | Open |
+| First task candidate is mistaken for approval to execute implementation. | Governance / Scope | High | Medium | `03Y` selects only a docs-only review gate as the next task and forbids implementation prompts. | Open |
+| Training begins before source, parser, feature, label, dataset and model gates are approved. | Governance / ML | High | Medium | `03Y` lists implementation entry criteria and records why training remains unapproved. | Open |
+| Source ingestion or real data enters through broader P7 planning. | Data / Compliance | High | Medium | `03Y` keeps real Tenhou, real haifu, external logs, platform data and account/session/cookie/token handling blocked. | Open |
+| P8-P12 work is treated as implicitly approved by broader P7 scope planning. | Governance / Stage Control | High | Medium | `03Y` repeats P8-P12 non-entry and requires separate transition reviews. | Open |
+| Definition evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 scope / entry criteria / first-task definition evidence only with explicit non-evidence wording. | Open |
+
 ## 2026-06-25 — Full P7 roadmap and remaining scope inventory review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

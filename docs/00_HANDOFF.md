@@ -108,6 +108,18 @@ implementation, training, source ingestion, parser / reader / ingestion,
 actual feature extraction, actual label generation, supervised dataset
 construction, model architecture / trainer, real data, model-output
 integration, self-play, league or P8-P12 is approved.
+`docs/03_supervised_policy/03Y_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_BEFORE_IMPLEMENTATION.md`
+defines that broader P7 scope / entry / first-task boundary. It records
+broader P7 purpose, allowed docs-only scope, forbidden scope, implementation
+entry criteria, required upstream artifacts, blocked / deferred / later-stage
+/ out-of-scope items, why broader implementation and training remain
+unapproved, why P8-P12 remain closed, and the evidence grade. Full P7 remains
+open. The next task is `Review broader P7 scope, entry criteria and first task
+before implementation`, and it is still docs-only: no broader P7
+implementation, training, source ingestion, parser / reader / ingestion,
+actual feature extraction, actual label generation, supervised dataset
+construction, model architecture / trainer, real data, model-output
+integration, self-play, league or P8-P12 is approved.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -312,9 +324,9 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define broader P7 scope, entry criteria and first task before implementation.
-The broader-P7 scope / entry / first-task definition must be docs-only. It must not add
-production code, tests, fixtures, data files, parser, dataset reader,
+Review broader P7 scope, entry criteria and first task before implementation.
+The broader-P7 scope / entry / first-task review must be docs-only. It must
+not add production code, tests, fixtures, data files, parser, dataset reader,
 ingestion, actual feature extraction, actual label generation, supervised
 dataset construction, training, tuning, self-play, league, runner behavior,
 real Tenhou, real haifu, external logs, platform data, model-output
