@@ -28,8 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-Broader P7 data/source readiness and source-approval boundary definition
-planning after broader P7 scope / entry criteria / first-task review.
+Broader P7 data/source readiness and source-approval boundary review planning
+after broader P7 data/source boundary definition.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -61,11 +61,12 @@ deferred / later-stage / out-of-scope items, reasons not to implement or
 train yet, and reasons not to enter P8-P12. `03Z` reviews `03Y`, records
 `Review can close` and selects the next docs-only task: define broader P7
 data/source readiness and source-approval boundary before implementation.
-Neither `03Y`, `03Z` nor the next boundary-definition task approves broader P7
-implementation, training, source approval, source ingestion, parser / reader /
-ingestion, actual feature extraction, actual label generation, model
-architecture / trainer, real data, model-output integration, self-play,
-league or P8-P12.
+`03AA` defines that broader P7 data/source readiness and source-approval
+boundary and selects a docs-only review gate next. None of `03Y`, `03Z`,
+`03AA` or the next review task approves broader P7 implementation, training,
+source approval, source ingestion, parser / reader / ingestion, actual feature
+extraction, actual label generation, model architecture / trainer, real data,
+model-output integration, self-play, league or P8-P12.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
@@ -268,10 +269,13 @@ Broader P7 scope / entry criteria / first task = defined in
 and reviewed in
 `docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW_BEFORE_IMPLEMENTATION.md`;
 review can close with no blocker.
+Broader P7 data/source readiness and source-approval boundary = defined in
+`docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md`;
+next is docs-only review before implementation.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = define broader P7 data/source readiness and source approval boundary
+Next = review broader P7 data/source readiness and source approval boundary
 before implementation.
 ```
 
@@ -406,7 +410,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Define broader P7 data/source readiness and source approval boundary before implementation.
+Review broader P7 data/source readiness and source approval boundary before implementation.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
@@ -431,14 +435,15 @@ defines that roadmap / inventory and selects a docs-only review gate next.
 `docs/03_supervised_policy/03X_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW_AFTER_CURRENT_SCOPE_CLOSURE.md`
 reviews that roadmap / inventory and records `Review can close` with no
 blocker. `03Y` now defines broader P7 scope / entry criteria / first task
-before implementation, and `03Z` reviews it with no blocker. The next task is
-docs-only data/source readiness and source-approval boundary definition before
-implementation. It must not add production code, tests, fixtures, data files,
-source approval, data reads, parser, dataset reader, ingestion, actual feature
-extraction, actual label generation, supervised dataset construction,
-training, model architecture, trainer, real Tenhou, real haifu, external logs,
-platform data, model-output integration, CLI, broad file ingestion, self-play,
-league, P8-P12 work, training-data approval or model-strength claims.
+before implementation, and `03Z` reviews it with no blocker. `03AA` defines
+broader P7 data/source readiness and source-approval boundary before
+implementation. The next task is docs-only review of that boundary. It must
+not add production code, tests, fixtures, data files, source approval, data
+reads, parser, dataset reader, ingestion, actual feature extraction, actual
+label generation, supervised dataset construction, training, model
+architecture, trainer, real Tenhou, real haifu, external logs, platform data,
+model-output integration, CLI, broad file ingestion, self-play, league,
+P8-P12 work, training-data approval or model-strength claims.
 
 The exact P6 implementation approved by `02N` is complete and reviewed in
 `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`

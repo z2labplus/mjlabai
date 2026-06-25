@@ -14,6 +14,73 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-25 — DR-0075 — Define Broader P7 Data Source Readiness And Source Approval Boundary
+
+Decision:
+
+```text
+Broader P7 data/source readiness and source approval boundary is defined before implementation. Set the next task to a docs-only review gate.
+```
+
+Context:
+
+- P7 current scope is closed only for the exact docs-only readiness chain plus
+  accepted minimal synthetic/local supervised feature-label smoke
+  implementation.
+- Full P7 remains open.
+- `03Y` defined broader P7 scope, entry criteria and first task before
+  implementation.
+- `03Z` reviewed that boundary and recorded `Review can close`.
+- Broader P7 implementation, training, source approval, source ingestion,
+  parser / reader / ingestion, actual feature extraction, actual label
+  generation, supervised dataset construction, model architecture / trainer,
+  real data, model-output integration and P8-P12 remain unapproved.
+
+Rationale:
+
+- Broader P7 cannot safely move toward implementation until source readiness,
+  source-specific approval requirements, source-ingestion boundaries,
+  parser / reader / ingestion dependencies, feature / label dependencies,
+  rights / provenance / storage / privacy / platform-terms requirements and
+  evidence requirements are separated.
+- The project must distinguish source readiness from source approval, source
+  ingestion approval, training-data approval and training-run approval.
+- The next safe step is review, not source approval or implementation.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review broader P7 data/source readiness and source approval boundary before implementation.`
+- No source is approved for P7 training, source ingestion, actual feature
+  extraction or actual label generation.
+- The current synthetic/local smoke fixture, repository docs and P6 synthetic
+  replay fixture are not training sources.
+- No production code, tests, fixtures, parser, reader, ingestion, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, training, model architecture, trainer, model-output
+  integration, CLI, real data, self-play, league or P8-P12 work is approved by
+  this decision.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/10_next/10_NEXT.md`
+- `docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03Y_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03G_P7_SUPERVISED_LEARNING_DATA_SOURCE_READINESS_INVENTORY_BEFORE_IMPLEMENTATION.md`
+- `docs/02_data_system/02A_DATA_SOURCES.md`
+
+Status:
+
+```text
+Accepted; docs-only broader P7 data/source readiness and source-approval boundary review is next.
+```
+
 ## 2026-06-25 — DR-0074 — Review Broader P7 Scope Entry Criteria And First Task
 
 Decision:

@@ -30,8 +30,7 @@ Current stage interpretation:
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
 Current active stage is broader P7 data/source readiness and source-approval
-boundary definition planning after broader P7 scope / entry criteria /
-first-task review:
+boundary review planning after broader P7 data/source boundary definition:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -131,6 +130,20 @@ implementation, training, source approval, source ingestion, parser / reader /
 ingestion, actual feature extraction, actual label generation, supervised
 dataset construction, model architecture / trainer, real data, model-output
 integration, self-play, league and P8-P12 remain unapproved.
+`docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+defines broader P7 data/source readiness and source-approval boundary before
+implementation. It records that no source is approved for P7 training, source
+ingestion, actual feature extraction or actual label generation; the accepted
+synthetic/local smoke fixture, repository docs and P6 synthetic replay fixture
+are not training sources; real Tenhou, real haifu, external logs, platform
+data, model outputs, self-play outputs, league outputs, human labels,
+generated labels and third-party artifacts remain unapproved or blocked. The
+next task is `Review broader P7 data/source readiness and source approval
+boundary before implementation`, and it is docs-only. It does not approve any
+source, training-data source, source ingestion, parser / reader / ingestion,
+actual feature extraction, actual label generation, supervised dataset
+construction, training, model architecture / trainer, real data, model-output
+integration, self-play, league or P8-P12.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -335,11 +348,11 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define broader P7 data/source readiness and source approval boundary before
+Review broader P7 data/source readiness and source approval boundary before
 implementation.
-The broader-P7 data/source readiness and source-approval boundary task must be
-docs-only. It must not approve sources, read data, add production code, tests,
-fixtures, data files, parser, dataset reader, ingestion, actual feature
+The broader-P7 data/source readiness and source-approval boundary review must
+be docs-only. It must not approve sources, read data, add production code,
+tests, fixtures, data files, parser, dataset reader, ingestion, actual feature
 extraction, actual label generation, supervised dataset construction,
 training, tuning, self-play, league, runner behavior, real Tenhou, real haifu,
 external logs, platform data, model-output integration, CLI, broad file

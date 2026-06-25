@@ -105,6 +105,7 @@ docs/03_supervised_policy/03W_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENT
 docs/03_supervised_policy/03X_FULL_P7_CLOSURE_ROADMAP_AND_REMAINING_SCOPE_INVENTORY_REVIEW_AFTER_CURRENT_SCOPE_CLOSURE.md
 docs/03_supervised_policy/03Y_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REVIEW_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -374,6 +375,20 @@ broader implementation approval, training approval, source approval, parser /
 reader / ingestion approval, actual feature extraction or label generation
 approval, real-data approval, P8-P12 entry approval or model-strength
 evidence.
+
+`docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+defines broader P7 data/source readiness and source-approval boundary before
+implementation. It records current source status, source category inventory,
+readiness / approval vocabulary, source-specific approval-record requirements,
+source approval vs ingestion vs training approval distinctions, parser /
+reader / ingestion dependency, feature / label dependency, risk controls,
+evidence requirements, first task candidate, planning decision and evidence
+grade. It selects `Review broader P7 data/source readiness and source approval
+boundary before implementation` as the next docs-only review gate. It is
+boundary-definition evidence only, not source approval, training-data
+approval, source ingestion approval, parser / reader / ingestion approval,
+actual feature extraction or label generation approval, real-data approval,
+training approval, P8-P12 entry approval or model-strength evidence.
 
 ## Data-system files
 

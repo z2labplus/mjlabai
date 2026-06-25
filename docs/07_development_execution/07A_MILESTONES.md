@@ -20,7 +20,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 | P4 | Unified mahjong environment and interface | Define shared state, legal actions, logs, replays and adapter contracts | Different candidates can run through the same interface | Future |
 | P5 | Unified evaluation system | Compare all models with Tenhou-oriented metrics under one harness | Stable comparison of baselines and project models | Closed for current synthetic/local evaluation groundwork scope |
 | P6 | Data system | Build replay, feature, label and quality pipelines for training and evaluation | Supervised training and offline evaluation datasets can be generated | Closed for documented P6 data-system scope only; parser / reader / ingestion / feature / label and real data remain unapproved |
-| P7 | Supervised policy model | Train a base strategy model from high-quality human play and key decisions | Model beats simple baselines in key offline scenarios and completes games | Current scope closed only for docs-only readiness chain plus exact minimal synthetic/local feature-label smoke implementation in `03V`; broader scope / entry criteria reviewed in `03Z`; current next is docs-only broader data/source readiness and source-approval boundary definition; full P7, broad implementation, training, source approval, source ingestion, parser / reader / ingestion, actual feature extraction, actual label generation, model architecture / trainer, real data, model-output integration and P8-P12 remain unapproved |
+| P7 | Supervised policy model | Train a base strategy model from high-quality human play and key decisions | Model beats simple baselines in key offline scenarios and completes games | Current scope closed only for docs-only readiness chain plus exact minimal synthetic/local feature-label smoke implementation in `03V`; broader scope / entry criteria reviewed in `03Z`; broader data/source readiness and source-approval boundary defined in `03AA`; current next is docs-only review of that boundary; full P7, broad implementation, training, source approval, source ingestion, parser / reader / ingestion, actual feature extraction, actual label generation, model architecture / trainer, real data, model-output integration and P8-P12 remain unapproved |
 | P8 | Self-play reinforcement learning | Optimize toward Tenhou pt EV, placement and stable-dan objectives | RL checkpoint beats supervised checkpoint in the unified league | Future |
 | P9 | Search and risk model | Improve push/fold, deal-in risk, south-round rank control and oorasu decisions | Search-enhanced model beats non-search model in scenarios and league play | Future |
 | P10 | Model league and mainline selection | Run long comparisons among baselines, SL, RL, search and historical best versions | A candidate reliably beats the current mainline with uncertainty reported | Future |
@@ -121,6 +121,16 @@ enough before implementation. The next step is docs-only:
 implementation`. It does not approve full P7 closure, broad implementation,
 training, source approval, source ingestion, parser / reader / ingestion,
 actual feature extraction, actual label generation, real data,
+model-output integration or P8-P12.
+`docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+defines that broader P7 data/source readiness and source-approval boundary.
+It records that no source is approved for P7 training, source ingestion,
+actual feature extraction or actual label generation. It also separates
+source readiness, source-specific approval, source ingestion approval,
+feature extraction approval, label generation approval, training-data approval
+and training-run approval. The next step is docs-only review of that boundary.
+It does not approve any source, source ingestion, parser / reader / ingestion,
+actual feature extraction, actual label generation, training, real data,
 model-output integration or P8-P12.
 No source is approved for P7 training, source ingestion, parser / reader /
 ingestion, actual feature extraction or actual label generation. Broad P7

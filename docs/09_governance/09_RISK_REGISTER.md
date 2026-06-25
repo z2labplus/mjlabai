@@ -8,6 +8,22 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-25 — Broader P7 data-source readiness and source-approval boundary risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Data/source readiness is mistaken for source approval. | Governance / Scope | High | Medium | `03AA`, `10_NEXT`, handoff and stage contract state that readiness, inventory and docs context are not approved sources. | Open |
+| Source category inventory is mistaken for an approved dataset. | Data / Governance | High | Medium | `03AA` sets `approved_for_training = no` for current categories and repeats that smoke fixtures and docs are not training data. | Open |
+| Current P7 smoke fixture or P6 replay fixture is used as training data. | Data / Leakage | High | Medium | `03AA` classifies both as synthetic/local smoke only and not training sources. | Open |
+| A future source-specific approval is confused with source ingestion approval. | Governance / Scope | High | Medium | `03AA` separates source readiness, source approval, ingestion approval, feature approval, label approval and training approval. | Open |
+| Real Tenhou, real haifu, external logs or platform data are read before approval. | Data / Compliance | High | Medium | `03AA` and `10_NEXT` forbid reading real or external source files and require source-specific rights/privacy/platform review first. | Open |
+| Parser / reader / ingestion creeps into source-readiness work. | Engineering / Scope | High | Medium | `03AA` requires separate boundary, review and explicit `10_NEXT` approval before any parser / reader / ingestion behavior. | Open |
+| Feature / label work starts from source readiness without separate approval. | Data / Leakage | High | Medium | `03AA` requires separate feature / label boundaries and leakage controls. | Open |
+| Training begins before source, ingestion, feature, label, dataset and split/leakage approvals. | Governance / ML | High | Medium | `03AA` states why training remains unapproved and keeps training outside the next review task. | Open |
+| Third-party weights, binaries, params or checkpoints are introduced through source planning. | Artifact / Governance | High | Medium | `03AA` classifies third-party binaries / weights / params / checkpoints as prohibited artifacts. | Open |
+| Boundary evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 data/source readiness and source-approval boundary definition evidence only. | Open |
+| P8-P12 work is treated as implicitly approved by broader P7 source planning. | Governance / Stage Control | High | Medium | `03AA` repeats P8-P12 non-entry and requires separate transition reviews and approvals. | Open |
+
 ## 2026-06-25 — Broader P7 scope and entry criteria review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
