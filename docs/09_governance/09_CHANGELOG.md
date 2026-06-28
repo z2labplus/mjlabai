@@ -1,5 +1,33 @@
 # 09_CHANGELOG
 
+## 2026-06-28 - v2.93
+
+- Reviewed broader P7 actual feature extraction and label generation boundary
+  before implementation.
+- Added
+  `docs/03_supervised_policy/03AF_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`.
+- Confirmed that `03AE` scope, purpose, current feature / label status,
+  concept definitions, dependency map, parser / reader / ingestion separation,
+  synthetic/local smoke boundary, candidate feature families, candidate label
+  families, feature rules, label rules, approval-record fields, allowed future
+  boundary, forbidden scope, stop conditions, risk controls, evidence
+  requirements, first task candidate, planning decision, evidence grade and
+  governance synchronization are sufficient.
+- Review decision:
+  `Review can close.`
+- New `10_NEXT` first item:
+  `Define broader P7 supervised dataset construction, split and leakage boundary before implementation.`
+- This is broader P7 actual feature extraction and label generation boundary
+  review evidence only.
+- No source approval, training-data approval, source ingestion, parser /
+  reader / ingestion implementation or approval, broad file ingestion, CLI,
+  production code, implementation logic, tests, fixtures, data files, actual
+  feature extraction, actual label generation, feature tensors, labels,
+  targets, examples, splits, supervised dataset construction,
+  leakage-test implementation, training, model architecture, trainer,
+  model-output integration, real Tenhou, real haifu, external logs, platform
+  data, self-play, league, P8-P12 work or model-strength claim was added.
+
 ## 2026-06-28 - v2.92
 
 - Defined broader P7 actual feature extraction and label generation boundary

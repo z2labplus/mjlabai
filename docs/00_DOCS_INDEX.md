@@ -110,6 +110,7 @@ docs/03_supervised_policy/03AB_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPRO
 docs/03_supervised_policy/03AC_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AD_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AE_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03AF_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -452,6 +453,16 @@ implementation, label generation implementation, feature / label approval,
 source approval, source ingestion, parser / reader / ingestion approval,
 supervised dataset construction, training, model architecture, real-data use,
 P8-P12 entry or model-strength evidence.
+
+`docs/03_supervised_policy/03AF_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+reviews the broader P7 actual feature extraction and label generation boundary
+before implementation. It records `Review can close` with no blocker and
+selects `Define broader P7 supervised dataset construction, split and leakage
+boundary before implementation` as the next docs-only task. It is boundary
+review evidence only, not actual feature extraction approval, label generation
+approval, supervised dataset construction approval, split creation, leakage
+test implementation, training approval, P8-P12 entry or model-strength
+evidence.
 
 ## Data-system files
 

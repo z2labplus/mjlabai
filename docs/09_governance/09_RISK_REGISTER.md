@@ -8,6 +8,19 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-28 — Broader P7 feature label boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Feature / label boundary review closure is mistaken for actual feature extraction or label generation approval. | Governance / Scope | High | Medium | `03AF`, `10_NEXT`, handoff and stage contract state that `Review can close` closes only the review gate and approves no feature / label implementation. | Open |
+| The next dataset construction / split / leakage boundary task is mistaken for supervised dataset construction approval. | Data / Governance | High | Medium | The new first `10_NEXT` item is docs-only and forbids dataset implementation, split creation, leakage-test implementation, feature tensors, labels, examples and training data. | Open |
+| Source approval, source ingestion or parser / reader / ingestion approval is assumed from feature / label boundary review. | Data / Governance | High | Medium | `03AF` preserves the dependency map and reiterates that these approvals are separate and non-substitutable. | Open |
+| Feature tensors, labels, targets, examples or splits are generated before the future dataset boundary is approved. | Data / Training | High | Medium | `03AF` and `10_NEXT` explicitly forbid tensors, labels, targets, examples, splits and supervised dataset records. | Open |
+| Split leakage or label leakage is underdefined before future training. | Data / Leakage | High | Medium | The selected next task is a docs-only dataset construction / split / leakage boundary before implementation. | Open |
+| Real Tenhou, real haifu, external logs or platform data are used as feature / label or dataset sources before approval. | Data / Compliance | High | Medium | `03AF` keeps real/external/platform data blocked until source-specific approval, parser / reader / ingestion approval and later feature / label / dataset approvals exist. | Open |
+| Boundary review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 actual feature extraction and label generation boundary review evidence only. | Open |
+| P8-P12 work is treated as implicitly approved after feature / label review. | Governance / Stage Control | High | Medium | `03AF`, stage contract and `10_NEXT` keep P8-P12 closed and require later transition reviews. | Open |
+
 ## 2026-06-28 — Broader P7 actual feature and label boundary risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

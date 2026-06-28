@@ -8,6 +8,66 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-28 — Broader P7 actual feature extraction and label generation boundary review
+
+- Type: internal documentation / broader P7 actual feature extraction and
+  label generation boundary review evidence.
+- Stage: P7 supervised learning / docs-only broader P7 actual feature
+  extraction and label generation boundary review before implementation.
+- Added review document:
+  - `docs/03_supervised_policy/03AF_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+- Reviewed:
+  - `03AE` scope.
+  - purpose.
+  - current feature / label status.
+  - concept definitions.
+  - dependency map.
+  - parser / reader / ingestion relationship.
+  - current synthetic/local smoke boundary.
+  - candidate feature families.
+  - candidate label families.
+  - feature boundary rules.
+  - label boundary rules.
+  - future approval-record fields.
+  - allowed future boundary.
+  - forbidden scope.
+  - stop conditions.
+  - risk controls.
+  - evidence requirements.
+  - first task candidate.
+  - planning decision.
+  - governance synchronization.
+- Decision:
+  - `Review can close.`
+- New next task:
+  - `Define broader P7 supervised dataset construction, split and leakage boundary before implementation.`
+- Evidence grade:
+  - Broader P7 actual feature extraction and label generation boundary review
+    evidence only.
+- Not evidence of:
+  - actual feature extraction implementation.
+  - actual label generation implementation.
+  - feature extraction approval.
+  - label generation approval.
+  - source approval.
+  - source ingestion approval.
+  - parser / reader / ingestion approval.
+  - supervised dataset construction.
+  - split creation.
+  - leakage-test implementation.
+  - P7 training.
+  - model architecture, dataloader, optimizer, loss or trainer.
+  - checkpoint, weights or snapshot approval.
+  - model-output integration.
+  - real Tenhou / real haifu / external-log / platform-data use.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-28 — Broader P7 actual feature extraction and label generation boundary definition
 
 - Type: internal documentation / broader P7 actual feature extraction and

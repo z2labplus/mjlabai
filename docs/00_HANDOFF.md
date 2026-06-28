@@ -29,9 +29,9 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
-Current active stage is broader P7 actual feature extraction and label
-generation boundary review planning after broader P7 feature / label boundary
-definition:
+Current active stage is broader P7 supervised dataset construction, split and
+leakage boundary definition planning after broader P7 feature / label boundary
+review:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -197,6 +197,14 @@ approve actual feature extraction, actual label generation, source approval,
 source ingestion, parser / reader / ingestion, broad file ingestion, CLI,
 feature tensors, labels, targets, examples, splits, supervised dataset
 construction, training, model architecture / trainer, real-data use,
+model-output integration, self-play, league or P8-P12.
+`docs/03_supervised_policy/03AF_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+reviews that feature / label boundary, records `Review can close` with no
+blocker and selects `Define broader P7 supervised dataset construction, split
+and leakage boundary before implementation` as the next docs-only task. It
+does not approve actual feature extraction, actual label generation, feature
+tensors, labels, targets, examples, splits, supervised dataset construction,
+training-data approval, training, parser / reader / ingestion, real data,
 model-output integration, self-play, league or P8-P12.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
