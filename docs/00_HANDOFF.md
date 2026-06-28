@@ -29,9 +29,9 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
-Current active stage is broader P7 supervised dataset construction, split and
-leakage boundary review planning after broader P7 dataset / split / leakage
-boundary definition:
+Current active stage is broader P7 training-data approval and training-run
+boundary definition planning after broader P7 dataset / split / leakage
+boundary review:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -222,6 +222,17 @@ source approval, source ingestion, parser / reader / ingestion, actual feature
 extraction, actual label generation, feature tensors, labels, targets,
 examples, model architecture / trainer, real data, model-output integration,
 self-play, league or P8-P12.
+`docs/03_supervised_policy/03AH_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+reviews that boundary and records `Review can close` with no blocker. It
+confirms that `03AG` is sufficient as a docs-only boundary and does not
+approve supervised dataset construction, split creation, leakage-test
+implementation, training-data construction, training-run approval, training,
+source approval, source ingestion, parser / reader / ingestion, actual
+feature extraction, actual label generation, feature tensors, labels, targets,
+examples, model architecture / trainer, real data, model-output integration,
+self-play, league or P8-P12. The next task is `Define broader P7 training-data
+approval and training-run boundary before implementation`, and it is still
+docs-only.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -426,12 +437,13 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review broader P7 data/source readiness and source approval boundary before
+Define broader P7 training-data approval and training-run boundary before
 implementation.
-The broader-P7 data/source readiness and source-approval boundary review must
-be docs-only. It must not approve sources, read data, add production code,
-tests, fixtures, data files, parser, dataset reader, ingestion, actual feature
-extraction, actual label generation, supervised dataset construction,
+The broader-P7 training-data approval and training-run boundary definition
+must be docs-only. It must not approve training data, approve a training run,
+read data, add production code, tests, fixtures, data files, parser, dataset
+reader, ingestion, actual feature extraction, actual label generation,
+supervised dataset construction, split creation, leakage-test implementation,
 training, tuning, self-play, league, runner behavior, real Tenhou, real haifu,
 external logs, platform data, model-output integration, CLI, broad file
 ingestion, P8-P12 work or model-strength claims.

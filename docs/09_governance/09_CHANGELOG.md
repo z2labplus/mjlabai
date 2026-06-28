@@ -1,5 +1,34 @@
 # 09_CHANGELOG
 
+## 2026-06-28 - v2.95
+
+- Reviewed broader P7 supervised dataset construction, split and leakage
+  boundary before implementation.
+- Added
+  `docs/03_supervised_policy/03AH_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`.
+- Confirmed that `03AG` scope, non-approval wording, purpose, current
+  no-dataset / no-split / no-leakage status, concept definitions, dependency
+  map, dataset construction boundary, split boundary, leakage boundary, future
+  approval-record fields, candidate classes, allowed future boundary,
+  forbidden scope, stop conditions, risk controls, evidence requirements,
+  first task candidate, planning decision, evidence grade and governance
+  synchronization are sufficient.
+- Review decision:
+  `Review can close.`
+- New `10_NEXT` first item:
+  `Define broader P7 training-data approval and training-run boundary before implementation.`
+- This is broader P7 supervised dataset construction, split and leakage
+  boundary review evidence only.
+- No supervised dataset construction, split creation, leakage-test
+  implementation, training-data construction, training-data approval,
+  training-run approval, training, source approval, source ingestion, parser /
+  reader / ingestion implementation, production code, implementation logic,
+  tests, fixtures, data files, actual feature extraction, actual label
+  generation, feature tensors, labels, targets, examples, model architecture,
+  trainer, model-output integration, real Tenhou, real haifu, external logs,
+  platform data, self-play, league, P8-P12 work or model-strength claim was
+  added.
+
 ## 2026-06-28 - v2.94
 
 - Defined broader P7 supervised dataset construction, split and leakage

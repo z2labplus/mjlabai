@@ -2,8 +2,8 @@
 
 ## Current stage
 
-Broader P7 supervised dataset construction, split and leakage boundary review
-planning after broader P7 dataset / split / leakage boundary definition.
+Broader P7 training-data approval and training-run boundary definition
+planning after broader P7 dataset / split / leakage boundary review.
 `03M` and `03N` name and review candidate future files and guardrails only;
 `03O` approved only the exact minimal implementation task and exact files.
 That task is now implemented, reviewed in `03P` with `Review can close`, and
@@ -37,12 +37,16 @@ review gate next. `03AF` reviews that boundary, records `Review can close`
 with no blocker and selects `Define broader P7 supervised dataset
 construction, split and leakage boundary before implementation` as the next
 docs-only task. `03AG` defines that dataset / split / leakage boundary and
-selects a docs-only review gate next. It does not approve broader P7
-implementation, training, source approval, source ingestion, parser / reader /
-ingestion implementation, actual feature extraction, actual label generation,
-feature tensors, labels, targets, examples, splits, supervised dataset
-construction, leakage-test implementation, model architecture / trainer, real
-data, model-output integration, self-play, league or P8-P12.
+selects a docs-only review gate next. `03AH` reviews `03AG`, records
+`Review can close` with no blocker and selects `Define broader P7 training-data
+approval and training-run boundary before implementation` as the next
+docs-only task. It does not approve broader P7 implementation, training,
+training-data construction, training-run approval, source approval, source
+ingestion, parser / reader / ingestion implementation, actual feature
+extraction, actual label generation, feature tensors, labels, targets,
+examples, splits, supervised dataset construction, leakage-test
+implementation, model architecture / trainer, real data, model-output
+integration, self-play, league or P8-P12.
 P5 evaluation foundation is
 closed for the current synthetic/local scope; general P6 implementation is not open, and the exact
 minimal replay schema / project-authored synthetic fixture task approved by
@@ -151,13 +155,13 @@ Broader P7 scope / entry criteria / first task = defined in `03Y` and reviewed i
 Broader P7 data/source readiness and source-approval boundary = defined in `03AA` and reviewed in `03AB`; review can close with no blocker
 Broader P7 parser / reader / ingestion boundary = defined in `03AC` and reviewed in `03AD`; review can close with no blocker
 Broader P7 actual feature extraction and label generation boundary = defined in `03AE` and reviewed in `03AF`; review can close with no blocker
-Broader P7 supervised dataset construction, split and leakage boundary = defined in `03AG`; next docs-only review task selected
+Broader P7 supervised dataset construction, split and leakage boundary = defined in `03AG` and reviewed in `03AH`; review can close with no blocker
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = review broader P7 supervised dataset construction, split and leakage boundary before implementation
+Next = define broader P7 training-data approval and training-run boundary before implementation
 ```
 
 ## AI role
@@ -268,4 +272,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review broader P7 supervised dataset construction, split and leakage boundary before implementation.
+Define broader P7 training-data approval and training-run boundary before implementation.

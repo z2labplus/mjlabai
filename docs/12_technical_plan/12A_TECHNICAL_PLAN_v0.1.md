@@ -74,13 +74,17 @@ reviews that boundary, records `Review can close` with no blocker and selects
 `Define broader P7 supervised dataset construction, split and leakage boundary
 before implementation` as the next docs-only task. `03AG` defines that
 dataset / split / leakage boundary and selects a docs-only review gate next.
-None of `03Y`, `03Z`, `03AA`, `03AB`, `03AC`, `03AD`, `03AE`, `03AF`, `03AG`
-or the next dataset / split / leakage review task approves broader P7
+`03AH` reviews `03AG`, records `Review can close` with no blocker and selects
+`Define broader P7 training-data approval and training-run boundary before
+implementation` as the next docs-only task.
+None of `03Y`, `03Z`, `03AA`, `03AB`, `03AC`, `03AD`, `03AE`, `03AF`, `03AG`,
+`03AH` or the next training-data approval / training-run boundary task approves broader P7
 implementation, training, source approval, source ingestion, parser / reader /
 ingestion implementation, actual feature extraction, actual label generation,
 feature tensors, labels, targets, examples, splits, supervised dataset
-construction, leakage-test implementation, model architecture / trainer, real
-data, model-output integration, self-play, league or P8-P12.
+construction, leakage-test implementation, training-data construction,
+training-run approval, model architecture / trainer, real data, model-output
+integration, self-play, league or P8-P12.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
@@ -301,11 +305,15 @@ review can close with no blocker.
 Broader P7 supervised dataset construction, split and leakage boundary =
 defined in
 `docs/03_supervised_policy/03AG_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_BEFORE_IMPLEMENTATION.md`.
+Broader P7 supervised dataset construction, split and leakage boundary review =
+complete in
+`docs/03_supervised_policy/03AH_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`;
+review can close with no blocker.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = review broader P7 supervised dataset construction, split and leakage
-boundary before implementation.
+Next = define broader P7 training-data approval and training-run boundary
+before implementation.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -439,7 +447,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Review broader P7 supervised dataset construction, split and leakage boundary before implementation.
+Define broader P7 training-data approval and training-run boundary before implementation.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
@@ -473,16 +481,18 @@ records `Review can close`, and selects a docs-only actual feature extraction
 and label generation boundary definition next. `03AE` defines that boundary
 and selects a docs-only review gate next. `03AF` reviews that boundary, records
 `Review can close`, and selects a docs-only supervised dataset construction /
-split / leakage boundary definition next. `03AG` now defines that boundary and
-selects this docs-only review gate. The next task must not add production
-code, tests, fixtures, data files, source approval, source ingestion approval,
-data reads, parser implementation, dataset reader implementation, ingestion
-implementation, actual feature extraction, actual label generation, feature
-tensors, labels, examples, splits, supervised dataset construction,
-leakage-test implementation, training, model architecture, trainer, real
-Tenhou, real haifu, external logs, platform data, model-output integration,
-CLI, broad file ingestion, self-play, league, P8-P12 work, training-data
-approval or model-strength claims.
+split / leakage boundary definition next. `03AG` defines that boundary and
+selects a docs-only review gate. `03AH` reviews it, records `Review can close`
+and selects this docs-only training-data approval / training-run boundary
+definition next. The next task must not add production code, tests, fixtures,
+data files, source approval, source ingestion approval, data reads, parser
+implementation, dataset reader implementation, ingestion implementation,
+actual feature extraction, actual label generation, feature tensors, labels,
+examples, splits, supervised dataset construction, leakage-test
+implementation, training-data construction, training-run approval, training,
+model architecture, trainer, real Tenhou, real haifu, external logs, platform
+data, model-output integration, CLI, broad file ingestion, self-play, league,
+P8-P12 work or model-strength claims.
 
 The exact P6 implementation approved by `02N` is complete and reviewed in
 `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`

@@ -8,6 +8,68 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-28 — Broader P7 supervised dataset construction split leakage boundary review
+
+- Type: internal documentation / broader P7 supervised dataset construction,
+  split and leakage boundary review evidence.
+- Stage: P7 supervised learning / docs-only broader P7 supervised dataset
+  construction, split and leakage boundary review before implementation.
+- Added review document:
+  - `docs/03_supervised_policy/03AH_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+- Reviewed:
+  - `03AG` scope.
+  - non-approval wording for dataset construction, split creation,
+    leakage-test implementation, training-data approval and training-run
+    approval.
+  - purpose and north-star relationship.
+  - current no-dataset / no-split / no-leakage-implementation status.
+  - concept definitions.
+  - dependency map.
+  - dataset construction boundary.
+  - split boundary.
+  - leakage boundary.
+  - future approval-record fields.
+  - candidate dataset / split / leakage classes.
+  - allowed future implementation boundary.
+  - forbidden scope.
+  - stop conditions.
+  - risk controls.
+  - evidence requirements.
+  - first task candidate.
+  - planning decision.
+  - governance synchronization.
+- Decision:
+  - `Review can close.`
+- New next task:
+  - `Define broader P7 training-data approval and training-run boundary before implementation.`
+- Evidence grade:
+  - Broader P7 supervised dataset construction, split and leakage boundary
+    review evidence only.
+- Not evidence of:
+  - supervised dataset construction implementation.
+  - split creation.
+  - leakage-test implementation.
+  - training-data construction.
+  - training-data approval.
+  - training-run approval.
+  - source approval.
+  - source ingestion approval.
+  - parser / reader / ingestion approval.
+  - actual feature extraction implementation or approval.
+  - actual label generation implementation or approval.
+  - feature tensors, labels, targets, examples or manifests.
+  - model architecture, dataloader, optimizer, loss or trainer.
+  - checkpoint, weights or snapshot approval.
+  - model-output integration.
+  - real Tenhou / real haifu / external-log / platform-data use.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-28 — Broader P7 supervised dataset construction split leakage boundary definition
 
 - Type: internal documentation / broader P7 supervised dataset construction,

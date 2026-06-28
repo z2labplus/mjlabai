@@ -112,6 +112,7 @@ docs/03_supervised_policy/03AD_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_REVIE
 docs/03_supervised_policy/03AE_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AF_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AG_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03AH_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -477,6 +478,15 @@ evidence grade. It is boundary-definition evidence only, not supervised
 dataset construction approval, split creation, leakage-test implementation,
 training-data approval, training approval, P8-P12 entry or model-strength
 evidence.
+
+`docs/03_supervised_policy/03AH_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+reviews the broader P7 supervised dataset construction, split and leakage
+boundary before implementation. It records `Review can close` with no blocker
+and selects `Define broader P7 training-data approval and training-run boundary
+before implementation` as the next docs-only task. It is boundary-review
+evidence only, not supervised dataset construction approval, split creation,
+leakage-test implementation, training-data approval, training-run approval,
+training approval, P8-P12 entry or model-strength evidence.
 
 ## Data-system files
 
