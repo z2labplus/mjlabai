@@ -8,6 +8,22 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-28 — Broader P7 actual feature and label boundary risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Feature / label boundary definition is mistaken for actual feature extraction or label generation approval. | Governance / Scope | High | Medium | `03AE`, `10_NEXT`, handoff and stage contract state that this is docs-only boundary definition evidence and selects a review gate next. | Open |
+| Parser / reader / ingestion approval is assumed from feature / label planning. | Data / Governance | High | Medium | `03AE` preserves parser / reader / ingestion as a separate predecessor and says no parser, reader or ingestion is approved. | Open |
+| Current synthetic/local smoke fixture is mistaken for training data. | Data / Scope | High | Medium | `03AE` classifies current smoke artifacts as schema / guardrail smoke only, not training data or broader feature / label approval. | Open |
+| Hidden information or future information leaks into future features. | Data / Leakage | High | Medium | `03AE` requires public-information-only policy, hidden-information exclusion, future-information exclusion and timestamp policy before implementation. | Open |
+| Labels leak into decision-time feature inputs. | Data / Leakage | High | Medium | `03AE` requires separate observation timestamp and target timestamp policy and keeps labels separate from features. | Open |
+| Feature tensors, labels, examples or splits are produced before dataset construction approval. | Data / Training | High | Medium | `03AE` forbids tensors, labels, targets, examples, splits and supervised dataset records until later approval. | Open |
+| Broad file ingestion or CLI data paths creep into future feature / label work. | Engineering / Scope | High | Medium | `03AE` keeps broad ingestion and CLI data paths unapproved and requires separate review if ever considered. | Open |
+| Real Tenhou, real haifu, external logs or platform data are used as feature / label sources before approval. | Data / Compliance | High | Medium | `03AE` blocks real/external/platform data until source-specific approval, reader approval and feature / label approval exist. | Open |
+| Model-output, self-play or league labels enter too early. | Governance / Stage Control | High | Medium | `03AE` keeps model-output labels, self-play labels and league labels blocked until separate later-stage policy. | Open |
+| Boundary evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 actual feature extraction and label generation boundary definition evidence only. | Open |
+| P8-P12 work is treated as implicitly approved by feature / label boundary planning. | Governance / Stage Control | High | Medium | `03AE`, stage contract and `10_NEXT` keep P8-P12 closed and require later transition reviews. | Open |
+
 ## 2026-06-28 — Broader P7 parser reader ingestion boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

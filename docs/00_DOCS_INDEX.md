@@ -109,6 +109,7 @@ docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPRO
 docs/03_supervised_policy/03AB_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AC_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AD_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03AE_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -438,6 +439,19 @@ ingestion approval, source approval, training-data approval, broad file
 ingestion, CLI, real-data use, actual feature extraction, actual label
 generation, supervised dataset construction, training approval, P8-P12 entry
 approval or model-strength evidence.
+
+`docs/03_supervised_policy/03AE_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+defines the broader P7 actual feature extraction and label generation boundary
+before implementation. It records feature / label vocabulary, current status,
+dependency order, parser / reader / ingestion separation, synthetic/local smoke
+non-training boundary, candidate feature and label families, future approval
+fields, allowed / forbidden scope, stop conditions, risk controls, evidence
+requirements, first task candidate, planning decision and evidence grade. It
+is boundary-definition evidence only, not actual feature extraction
+implementation, label generation implementation, feature / label approval,
+source approval, source ingestion, parser / reader / ingestion approval,
+supervised dataset construction, training, model architecture, real-data use,
+P8-P12 entry or model-strength evidence.
 
 ## Data-system files
 

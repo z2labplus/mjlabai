@@ -1,5 +1,30 @@
 # 09_CHANGELOG
 
+## 2026-06-28 - v2.92
+
+- Defined broader P7 actual feature extraction and label generation boundary
+  before implementation.
+- Added
+  `docs/03_supervised_policy/03AE_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_BEFORE_IMPLEMENTATION.md`.
+- Recorded feature / label vocabulary, current feature / label status,
+  dependency order, parser / reader / ingestion separation, synthetic/local
+  smoke non-training boundary, candidate feature families, candidate label
+  families, feature boundary rules, label boundary rules, future approval
+  fields, allowed / forbidden scope, stop conditions, risk controls, evidence
+  requirements, first task candidate, planning decision and evidence grade.
+- New `10_NEXT` first item:
+  `Review broader P7 actual feature extraction and label generation boundary before implementation.`
+- This is broader P7 actual feature extraction and label generation boundary
+  definition evidence only.
+- No source approval, training-data approval, source ingestion, parser /
+  reader / ingestion implementation or approval, broad file ingestion, CLI,
+  production code, implementation logic, tests, fixtures, data files, actual
+  feature extraction, actual label generation, feature tensors, labels,
+  targets, examples, splits, supervised dataset construction, training, model
+  architecture, trainer, model-output integration, real Tenhou, real haifu,
+  external logs, platform data, self-play, league, P8-P12 work or
+  model-strength claim was added.
+
 ## 2026-06-28 - v2.91
 
 - Reviewed broader P7 parser, reader and ingestion boundary before

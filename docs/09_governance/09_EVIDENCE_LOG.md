@@ -8,6 +8,63 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-28 — Broader P7 actual feature extraction and label generation boundary definition
+
+- Type: internal documentation / broader P7 actual feature extraction and
+  label generation boundary definition evidence.
+- Stage: P7 supervised learning / docs-only broader P7 actual feature
+  extraction and label generation boundary before implementation.
+- Added boundary document:
+  - `docs/03_supervised_policy/03AE_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- Defined:
+  - feature extraction vocabulary.
+  - label generation vocabulary.
+  - current broader P7 feature / label status.
+  - dependency order from source readiness through training approval.
+  - parser / reader / ingestion separation.
+  - current synthetic/local smoke non-training boundary.
+  - candidate feature families.
+  - candidate label families.
+  - feature boundary rules.
+  - label boundary rules.
+  - future approval-record required fields.
+  - allowed future implementation boundary.
+  - forbidden feature / label scope.
+  - stop conditions.
+  - risk controls.
+  - evidence requirements.
+  - first task candidate.
+  - planning decision.
+- New next task:
+  - `Review broader P7 actual feature extraction and label generation boundary before implementation.`
+- Evidence grade:
+  - Broader P7 actual feature extraction and label generation boundary
+    definition evidence only.
+- Not evidence of:
+  - actual feature extraction implementation.
+  - actual label generation implementation.
+  - feature extraction approval.
+  - label generation approval.
+  - source approval.
+  - source ingestion approval.
+  - parser / reader / ingestion approval.
+  - broad file ingestion.
+  - CLI.
+  - feature tensors, labels, targets, examples, splits or batches.
+  - supervised dataset construction.
+  - P7 training.
+  - model architecture, dataloader, optimizer, loss or trainer.
+  - checkpoint, weights or snapshot approval.
+  - model-output integration.
+  - real Tenhou / real haifu / external-log / platform-data use.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-28 — Broader P7 parser, reader and ingestion boundary review
 
 - Type: internal documentation / broader P7 parser, reader and ingestion

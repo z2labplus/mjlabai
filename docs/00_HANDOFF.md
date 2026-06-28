@@ -30,8 +30,8 @@ Current stage interpretation:
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
 Current active stage is broader P7 actual feature extraction and label
-generation boundary definition planning after broader P7 parser / reader /
-ingestion boundary review:
+generation boundary review planning after broader P7 feature / label boundary
+definition:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -183,6 +183,21 @@ extraction, actual label generation, parser, reader, ingestion, source
 ingestion, broad file ingestion, CLI, source approval, training-data approval,
 supervised dataset construction, training, model architecture / trainer,
 real-data use, model-output integration, self-play, league or P8-P12.
+`docs/03_supervised_policy/03AE_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+defines the broader P7 actual feature extraction and label generation
+boundary before implementation. It records feature / label vocabulary, current
+feature / label status, dependency order, parser / reader / ingestion
+separation, synthetic/local smoke non-training boundary, candidate feature and
+label families, feature and label boundary rules, future approval-record
+fields, allowed / forbidden scope, stop conditions, risk controls, evidence
+requirements, first task candidate, planning decision and evidence grade. The
+next task is `Review broader P7 actual feature extraction and label generation
+boundary before implementation`, and it is still docs-only. It does not
+approve actual feature extraction, actual label generation, source approval,
+source ingestion, parser / reader / ingestion, broad file ingestion, CLI,
+feature tensors, labels, targets, examples, splits, supervised dataset
+construction, training, model architecture / trainer, real-data use,
+model-output integration, self-play, league or P8-P12.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.

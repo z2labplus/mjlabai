@@ -28,8 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-Broader P7 actual feature extraction and label generation boundary definition
-planning after broader P7 parser / reader / ingestion boundary review.
+Broader P7 actual feature extraction and label generation boundary review
+planning after broader P7 feature / label boundary definition.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -68,12 +68,14 @@ and ingestion boundary before implementation` as the next docs-only task.
 `03AC` defines that boundary and selects a docs-only review gate next. `03AD`
 reviews that boundary, records `Review can close` with no blocker and selects
 `Define broader P7 actual feature extraction and label generation boundary
-before implementation` as the next docs-only task. None of `03Y`, `03Z`,
-`03AA`, `03AB`, `03AC`, `03AD` or the next feature / label boundary definition
-task approves broader P7 implementation, training, source approval, source
-ingestion, parser / reader / ingestion implementation, actual feature
-extraction, actual label generation, model architecture / trainer, real data,
-model-output integration, self-play, league or P8-P12.
+before implementation` as the next docs-only task. `03AE` defines that
+feature / label boundary and selects a docs-only review gate next. None of
+`03Y`, `03Z`, `03AA`, `03AB`, `03AC`, `03AD`, `03AE` or the next feature /
+label boundary review task approves broader P7 implementation, training,
+source approval, source ingestion, parser / reader / ingestion implementation,
+actual feature extraction, actual label generation, feature tensors, labels,
+targets, examples, splits, supervised dataset construction, model architecture
+/ trainer, real data, model-output integration, self-play, league or P8-P12.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
@@ -286,12 +288,13 @@ Broader P7 parser / reader / ingestion boundary = defined in
 reviewed in
 `docs/03_supervised_policy/03AD_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`;
 review can close with no blocker.
-Broader P7 actual feature extraction and label generation boundary = next
-docs-only definition task.
+Broader P7 actual feature extraction and label generation boundary = defined
+in `docs/03_supervised_policy/03AE_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_BEFORE_IMPLEMENTATION.md`;
+review gate is next.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = define broader P7 actual feature extraction and label generation boundary before
+Next = review broader P7 actual feature extraction and label generation boundary before
 implementation.
 ```
 
@@ -457,7 +460,8 @@ implementation. `03AB` reviews it, records `Review can close`, and selects a
 docs-only parser / reader / ingestion boundary definition next. `03AC` defines
 that boundary and selects a docs-only review gate next. `03AD` reviews it,
 records `Review can close`, and selects a docs-only actual feature extraction
-and label generation boundary definition next. The next task must not add
+and label generation boundary definition next. `03AE` defines that boundary
+and selects a docs-only review gate next. The next task must not add
 production code, tests, fixtures, data files, source approval, source
 ingestion approval, data reads, parser implementation, dataset reader
 implementation, ingestion implementation, actual feature extraction, actual
