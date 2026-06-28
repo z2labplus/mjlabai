@@ -14,6 +14,80 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-28 — DR-0078 — Review Broader P7 Parser Reader Ingestion Boundary
+
+Decision:
+
+```text
+Review can close. Define broader P7 actual feature extraction and label generation boundary before implementation as the next docs-only task.
+```
+
+Context:
+
+- P7 current scope is closed only for the exact docs-only readiness chain plus
+  accepted minimal synthetic/local supervised feature-label smoke
+  implementation.
+- Full P7 remains open.
+- `03AA` defined broader P7 data/source readiness and source approval
+  boundary before implementation.
+- `03AB` reviewed that boundary and recorded `Review can close`.
+- `03AC` defined the broader P7 parser, reader and ingestion boundary before
+  implementation.
+- Broader P7 implementation, training, source approval, source ingestion,
+  parser / reader / ingestion, actual feature extraction, actual label
+  generation, supervised dataset construction, model architecture / trainer,
+  real data, model-output integration and P8-P12 remain unapproved.
+
+Rationale:
+
+- `03AC` sufficiently defines parser / reader / ingestion vocabulary, current
+  status, dependency order, future candidate classes, approval-record fields,
+  allowed / forbidden future behavior, stop conditions, risk controls and
+  evidence requirements.
+- Source readiness and source-specific approval remain separate from parser /
+  reader / ingestion approval.
+- Parser / reader / ingestion remains separate from actual feature extraction,
+  actual label generation, supervised dataset construction and training.
+- The next unresolved boundary is actual feature extraction and label
+  generation, but only as a docs-only boundary definition before any
+  implementation or approval.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03AD_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define broader P7 actual feature extraction and label generation boundary before implementation.`
+- No parser, dataset reader, ingestion behavior, broad file ingestion, CLI,
+  production code, tests, fixtures or data files are approved by this decision.
+- No source is approved for P7 training, source ingestion, actual feature
+  extraction or actual label generation.
+- No actual feature extraction, label generation, supervised dataset
+  construction, feature tensor, label, target, example or split may be created
+  by this decision.
+- No real Tenhou, real haifu, external logs, platform data, accounts,
+  sessions, cookies or tokens may be read by this decision.
+- No training, model architecture, trainer, model-output integration,
+  self-play, league or P8-P12 work is approved by this decision.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/10_next/10_NEXT.md`
+- `docs/03_supervised_policy/03AD_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03AC_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03AB_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03I_P7_FEATURE_AND_LABEL_READINESS_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+
+Status:
+
+```text
+Accepted; docs-only broader P7 actual feature extraction and label generation boundary definition is next.
+```
+
 ## 2026-06-26 — DR-0077 — Define Broader P7 Parser Reader Ingestion Boundary
 
 Decision:

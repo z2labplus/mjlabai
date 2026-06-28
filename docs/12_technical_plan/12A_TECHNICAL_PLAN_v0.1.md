@@ -28,8 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-Broader P7 parser / reader / ingestion boundary review planning after broader
-P7 parser / reader / ingestion boundary definition.
+Broader P7 actual feature extraction and label generation boundary definition
+planning after broader P7 parser / reader / ingestion boundary review.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -65,12 +65,15 @@ data/source readiness and source-approval boundary before implementation.
 boundary and selects a docs-only review gate next. `03AB` reviews that boundary
 and records `Review can close`; it selects `Define broader P7 parser, reader
 and ingestion boundary before implementation` as the next docs-only task.
-`03AC` defines that boundary and selects a docs-only review gate next. None of
-`03Y`, `03Z`, `03AA`, `03AB`, `03AC` or the next parser / reader / ingestion
-boundary review task approves broader P7 implementation, training, source
-approval, source ingestion, parser / reader / ingestion implementation, actual
-feature extraction, actual label generation, model architecture / trainer, real
-data, model-output integration, self-play, league or P8-P12.
+`03AC` defines that boundary and selects a docs-only review gate next. `03AD`
+reviews that boundary, records `Review can close` with no blocker and selects
+`Define broader P7 actual feature extraction and label generation boundary
+before implementation` as the next docs-only task. None of `03Y`, `03Z`,
+`03AA`, `03AB`, `03AC`, `03AD` or the next feature / label boundary definition
+task approves broader P7 implementation, training, source approval, source
+ingestion, parser / reader / ingestion implementation, actual feature
+extraction, actual label generation, model architecture / trainer, real data,
+model-output integration, self-play, league or P8-P12.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
@@ -280,11 +283,15 @@ and reviewed in
 review can close with no blocker.
 Broader P7 parser / reader / ingestion boundary = defined in
 `docs/03_supervised_policy/03AC_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_BEFORE_IMPLEMENTATION.md`;
-next is docs-only review before implementation.
+reviewed in
+`docs/03_supervised_policy/03AD_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`;
+review can close with no blocker.
+Broader P7 actual feature extraction and label generation boundary = next
+docs-only definition task.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = review broader P7 parser, reader and ingestion boundary before
+Next = define broader P7 actual feature extraction and label generation boundary before
 implementation.
 ```
 
@@ -448,14 +455,17 @@ before implementation, and `03Z` reviews it with no blocker. `03AA` defines
 broader P7 data/source readiness and source-approval boundary before
 implementation. `03AB` reviews it, records `Review can close`, and selects a
 docs-only parser / reader / ingestion boundary definition next. `03AC` defines
-that boundary and selects a docs-only review gate next. The next task must not
-add production code, tests, fixtures, data files, source approval, source
+that boundary and selects a docs-only review gate next. `03AD` reviews it,
+records `Review can close`, and selects a docs-only actual feature extraction
+and label generation boundary definition next. The next task must not add
+production code, tests, fixtures, data files, source approval, source
 ingestion approval, data reads, parser implementation, dataset reader
 implementation, ingestion implementation, actual feature extraction, actual
-label generation, supervised dataset construction, training, model
-architecture, trainer, real Tenhou, real haifu, external logs, platform data,
-model-output integration, CLI, broad file ingestion, self-play, league,
-P8-P12 work, training-data approval or model-strength claims.
+label generation, feature tensors, labels, examples, splits, supervised
+dataset construction, training, model architecture, trainer, real Tenhou, real
+haifu, external logs, platform data, model-output integration, CLI, broad file
+ingestion, self-play, league, P8-P12 work, training-data approval or
+model-strength claims.
 
 The exact P6 implementation approved by `02N` is complete and reviewed in
 `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`

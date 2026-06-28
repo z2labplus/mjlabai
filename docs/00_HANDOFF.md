@@ -29,8 +29,9 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
-Current active stage is broader P7 parser / reader / ingestion boundary review
-planning after broader P7 parser / reader / ingestion boundary definition:
+Current active stage is broader P7 actual feature extraction and label
+generation boundary definition planning after broader P7 parser / reader /
+ingestion boundary review:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -169,6 +170,19 @@ CLI, source approval, training-data approval, real-data use, actual feature
 extraction, actual label generation, supervised dataset construction,
 training, model architecture / trainer, model-output integration, self-play,
 league or P8-P12.
+`docs/03_supervised_policy/03AD_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+reviews that boundary and records `Review can close` with no blocker. It
+confirms that `03AC` scope, purpose, current parser / reader / ingestion
+status, concept definitions, dependency map, candidate classes, approval
+fields, allowed / forbidden scope, stop conditions, risk controls, evidence
+requirements, first task candidate, planning decision, evidence grade and
+governance synchronization are sufficient. The next task is `Define broader
+P7 actual feature extraction and label generation boundary before
+implementation`, and it is still docs-only. It does not approve actual feature
+extraction, actual label generation, parser, reader, ingestion, source
+ingestion, broad file ingestion, CLI, source approval, training-data approval,
+supervised dataset construction, training, model architecture / trainer,
+real-data use, model-output integration, self-play, league or P8-P12.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.

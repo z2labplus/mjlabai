@@ -108,6 +108,7 @@ docs/03_supervised_policy/03Z_BROADER_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK_REV
 docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AB_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AC_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03AD_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -421,6 +422,22 @@ reader / ingestion approval, source ingestion approval, source approval,
 training-data approval, broad file ingestion, CLI, real-data use, actual
 feature extraction, label generation, training approval, P8-P12 entry approval
 or model-strength evidence.
+
+`docs/03_supervised_policy/03AD_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+reviews the `03AC` broader P7 parser, reader and ingestion boundary before
+implementation. It records `Review can close`, confirms that scope, purpose,
+current parser / reader / ingestion status, concept definitions, dependency
+map, candidate classes, future approval fields, allowed / forbidden boundary,
+stop conditions, risk controls, evidence requirements, first task candidate,
+planning decision, evidence grade and governance synchronization are
+sufficient, and selects `Define broader P7 actual feature extraction and label
+generation boundary before implementation` as the next docs-only task. It is
+review evidence only, not parser implementation, reader implementation,
+ingestion implementation, parser / reader / ingestion approval, source
+ingestion approval, source approval, training-data approval, broad file
+ingestion, CLI, real-data use, actual feature extraction, actual label
+generation, supervised dataset construction, training approval, P8-P12 entry
+approval or model-strength evidence.
 
 ## Data-system files
 

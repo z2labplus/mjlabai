@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-28 — Broader P7 parser reader ingestion boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Parser / reader / ingestion review closure is mistaken for parser / reader / ingestion approval. | Governance / Scope | High | Medium | `03AD`, `10_NEXT`, handoff and stage contract state that `Review can close` closes only the review gate and approves no parser, reader or ingestion behavior. | Open |
+| The next feature / label boundary task is mistaken for actual feature extraction or label generation approval. | Data / Leakage | High | Medium | New `10_NEXT` first item is docs-only and forbids feature tensors, labels, targets, examples, splits, supervised dataset construction and implementation logic. | Open |
+| Source readiness or source-specific approval is mistaken for source ingestion or reader approval. | Data / Governance | High | Medium | `03AD` confirms the `03AC` dependency map and concept separation remain non-substitutable. | Open |
+| Broad file ingestion or CLI data paths creep into the next boundary task. | Engineering / Scope | High | Medium | `03AD` and `10_NEXT` keep broad ingestion and CLI data paths unapproved and require separate future approval if ever considered. | Open |
+| Actual feature extraction / label generation starts before parser / reader / ingestion and feature / label approvals exist. | Data / Leakage | High | Medium | The next task may only define boundary vocabulary and approval conditions; implementation and approval remain forbidden. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 parser, reader and ingestion boundary review evidence only. | Open |
+| P8-P12 work is treated as implicitly approved after parser / reader / ingestion boundary review. | Governance / Stage Control | High | Medium | `03AD`, stage contract and `10_NEXT` keep P8-P12 closed and require later transition reviews. | Open |
+
 ## 2026-06-26 — Broader P7 parser reader ingestion boundary risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

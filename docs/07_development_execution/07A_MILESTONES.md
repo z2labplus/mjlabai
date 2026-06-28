@@ -20,7 +20,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 | P4 | Unified mahjong environment and interface | Define shared state, legal actions, logs, replays and adapter contracts | Different candidates can run through the same interface | Future |
 | P5 | Unified evaluation system | Compare all models with Tenhou-oriented metrics under one harness | Stable comparison of baselines and project models | Closed for current synthetic/local evaluation groundwork scope |
 | P6 | Data system | Build replay, feature, label and quality pipelines for training and evaluation | Supervised training and offline evaluation datasets can be generated | Closed for documented P6 data-system scope only; parser / reader / ingestion / feature / label and real data remain unapproved |
-| P7 | Supervised policy model | Train a base strategy model from high-quality human play and key decisions | Model beats simple baselines in key offline scenarios and completes games | Current scope closed only for docs-only readiness chain plus exact minimal synthetic/local feature-label smoke implementation in `03V`; broader scope / entry criteria reviewed in `03Z`; broader data/source readiness and source-approval boundary defined in `03AA` and reviewed in `03AB`; broader parser / reader / ingestion boundary defined in `03AC`; current next is docs-only review of `03AC`; full P7, broad implementation, training, source approval, source ingestion, parser / reader / ingestion implementation, actual feature extraction, actual label generation, model architecture / trainer, real data, model-output integration and P8-P12 remain unapproved |
+| P7 | Supervised policy model | Train a base strategy model from high-quality human play and key decisions | Model beats simple baselines in key offline scenarios and completes games | Current scope closed only for docs-only readiness chain plus exact minimal synthetic/local feature-label smoke implementation in `03V`; broader scope / entry criteria reviewed in `03Z`; broader data/source readiness and source-approval boundary defined in `03AA` and reviewed in `03AB`; broader parser / reader / ingestion boundary defined in `03AC` and reviewed in `03AD`; current next is docs-only actual feature extraction and label generation boundary definition; full P7, broad implementation, training, source approval, source ingestion, parser / reader / ingestion implementation, actual feature extraction, actual label generation, model architecture / trainer, real data, model-output integration and P8-P12 remain unapproved |
 | P8 | Self-play reinforcement learning | Optimize toward Tenhou pt EV, placement and stable-dan objectives | RL checkpoint beats supervised checkpoint in the unified league | Future |
 | P9 | Search and risk model | Improve push/fold, deal-in risk, south-round rank control and oorasu decisions | Search-enhanced model beats non-search model in scenarios and league play | Future |
 | P10 | Model league and mainline selection | Run long comparisons among baselines, SL, RL, search and historical best versions | A candidate reliably beats the current mainline with uncertainty reported | Future |
@@ -145,6 +145,14 @@ stop conditions, risk controls and evidence requirements. It selects
 as the next docs-only task. It does not approve parser, reader, ingestion,
 source ingestion, broad file ingestion, CLI, source approval, actual feature
 extraction, actual label generation, training, real data or P8-P12.
+`docs/03_supervised_policy/03AD_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+reviews `03AC` and records `Review can close` with no blocker. It confirms
+that the parser / reader / ingestion boundary is conservative enough for the
+current gate and selects `Define broader P7 actual feature extraction and label
+generation boundary before implementation` as the next docs-only task. It does
+not approve parser, reader, ingestion, source ingestion, broad file ingestion,
+CLI, source approval, actual feature extraction, actual label generation,
+training, real data or P8-P12.
 No source is approved for P7 training, source ingestion, parser / reader /
 ingestion, actual feature extraction or actual label generation. Broad P7
 implementation, training and P8-P12 entry remain unapproved.
