@@ -8,6 +8,65 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-28 — Broader P7 supervised dataset construction split leakage boundary definition
+
+- Type: internal documentation / broader P7 supervised dataset construction,
+  split and leakage boundary definition evidence.
+- Stage: P7 supervised learning / docs-only broader P7 supervised dataset
+  construction, split and leakage boundary before implementation.
+- Added boundary document:
+  - `docs/03_supervised_policy/03AG_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- Defined:
+  - current no-dataset / no-split / no-leakage-implementation status.
+  - supervised dataset construction vocabulary.
+  - supervised example, feature tensor, label target, training target,
+    dataset record, dataset manifest and split manifest vocabulary.
+  - train / validation / test split and holdout vocabulary.
+  - hidden-info, future-info, source, table/game, player/seat, duplicate,
+    label, target, temporal and synthetic-smoke-as-training-data leakage
+    vocabulary.
+  - dependency order from source readiness through training-run approval.
+  - dataset construction boundary.
+  - split boundary.
+  - leakage boundary.
+  - future approval-record fields.
+  - candidate dataset / split / leakage classes.
+  - allowed future implementation boundary.
+  - forbidden scope.
+  - stop conditions.
+  - risk controls.
+  - evidence requirements.
+  - first task candidate.
+  - planning decision.
+- New next task:
+  - `Review broader P7 supervised dataset construction, split and leakage boundary before implementation.`
+- Evidence grade:
+  - Broader P7 supervised dataset construction, split and leakage boundary
+    definition evidence only.
+- Not evidence of:
+  - supervised dataset construction implementation.
+  - split creation.
+  - leakage-test implementation.
+  - training-data approval.
+  - training-run approval.
+  - source approval.
+  - source ingestion approval.
+  - parser / reader / ingestion approval.
+  - actual feature extraction implementation or approval.
+  - actual label generation implementation or approval.
+  - feature tensors, labels, targets, examples or manifests.
+  - model architecture, dataloader, optimizer, loss or trainer.
+  - checkpoint, weights or snapshot approval.
+  - model-output integration.
+  - real Tenhou / real haifu / external-log / platform-data use.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-28 — Broader P7 actual feature extraction and label generation boundary review
 
 - Type: internal documentation / broader P7 actual feature extraction and

@@ -111,6 +111,7 @@ docs/03_supervised_policy/03AC_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_BEFOR
 docs/03_supervised_policy/03AD_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AE_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AF_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03AG_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -462,6 +463,19 @@ boundary before implementation` as the next docs-only task. It is boundary
 review evidence only, not actual feature extraction approval, label generation
 approval, supervised dataset construction approval, split creation, leakage
 test implementation, training approval, P8-P12 entry or model-strength
+evidence.
+
+`docs/03_supervised_policy/03AG_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+defines the broader P7 supervised dataset construction, split and leakage
+boundary before implementation. It records dataset construction vocabulary,
+current no-dataset / no-split / no-leakage-implementation status, dependency
+order, dataset construction boundary, split boundary, leakage boundary, future
+approval-record fields, candidate dataset / split / leakage classes, allowed
+future implementation boundary, forbidden scope, stop conditions, risk
+controls, evidence requirements, first task candidate, planning decision and
+evidence grade. It is boundary-definition evidence only, not supervised
+dataset construction approval, split creation, leakage-test implementation,
+training-data approval, training approval, P8-P12 entry or model-strength
 evidence.
 
 ## Data-system files

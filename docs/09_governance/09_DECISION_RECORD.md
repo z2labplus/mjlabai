@@ -14,6 +14,85 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-28 — DR-0081 — Define Broader P7 Dataset Split Leakage Boundary
+
+Decision:
+
+```text
+Broader P7 supervised dataset construction, split and leakage boundary is defined before implementation. Set the next task to a docs-only review gate.
+```
+
+Context:
+
+- P7 current scope is closed only for the exact docs-only readiness chain plus
+  accepted minimal synthetic/local supervised feature-label smoke
+  implementation.
+- Full P7 remains open.
+- `03AA` / `03AB` defined and reviewed broader P7 data/source readiness and
+  source approval boundary before implementation.
+- `03AC` / `03AD` defined and reviewed broader P7 parser, reader and
+  ingestion boundary before implementation.
+- `03AE` / `03AF` defined and reviewed broader P7 actual feature extraction
+  and label generation boundary before implementation.
+- Broader P7 implementation, training, source approval, source ingestion,
+  parser / reader / ingestion, actual feature extraction, actual label
+  generation, supervised dataset construction, split creation, leakage-test
+  implementation, model architecture / trainer, real data, model-output
+  integration and P8-P12 remain unapproved.
+
+Rationale:
+
+- Future P7 supervised learning needs explicit dataset construction, split and
+  leakage vocabulary before any implementation can be considered.
+- Dataset construction approval must stay separate from source approval,
+  source ingestion approval, parser / reader / ingestion approval, feature
+  extraction approval, label generation approval, training-data approval and
+  training-run approval.
+- Split and leakage policy must be defined before any examples, manifests,
+  splits or training data can be created.
+- The next safe task is a docs-only review of the new boundary, not
+  implementation.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03AG_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_BEFORE_IMPLEMENTATION.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review broader P7 supervised dataset construction, split and leakage boundary before implementation.`
+- No source is approved for P7 training, source ingestion, actual feature
+  extraction or actual label generation.
+- No parser, dataset reader, ingestion behavior, broad file ingestion, CLI,
+  production code, tests, fixtures or data files are approved by this decision.
+- No feature tensor, label, target, example, split, dataset record, dataset
+  manifest or split manifest may be created by this decision.
+- No supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval or training-run approval is granted
+  by this decision.
+- No real Tenhou, real haifu, external logs, platform data, accounts,
+  sessions, cookies or tokens may be read by this decision.
+- No training, model architecture, trainer, model-output integration,
+  self-play, league or P8-P12 work is approved by this decision.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/10_next/10_NEXT.md`
+- `docs/03_supervised_policy/03AG_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03AF_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03AE_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03AD_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03AC_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03AB_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+
+Status:
+
+```text
+Accepted; docs-only broader P7 supervised dataset construction, split and leakage boundary review is next.
+```
+
 ## 2026-06-28 — DR-0080 — Review Broader P7 Feature Label Boundary
 
 Decision:

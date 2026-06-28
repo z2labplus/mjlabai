@@ -8,6 +8,20 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-28 — Broader P7 dataset split leakage boundary risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Dataset / split / leakage boundary definition is mistaken for supervised dataset construction approval. | Governance / Scope | High | Medium | `03AG`, `10_NEXT`, handoff and stage contract state that this is docs-only boundary definition and selects a review gate next. | Open |
+| Current synthetic/local supervised smoke fixture is mistaken for training data. | Data / Scope | High | Medium | `03AG` classifies the smoke fixture as schema / guardrail smoke only, not a supervised dataset or training data. | Open |
+| Feature tensors, labels, targets, examples, dataset records or manifests are generated before approval. | Data / Training | High | Medium | `03AG` and `10_NEXT` explicitly forbid emitting tensors, labels, targets, examples, records, manifests and splits. | Open |
+| Split creation starts before split unit, grouping and duplicate policy are approved. | Data / Leakage | High | Medium | `03AG` requires split unit, seed, grouping and duplicate policy in a future approval record. | Open |
+| Leakage-test implementation starts before exact checks and files are approved. | Data / Leakage | High | Medium | `03AG` defines leakage categories only and requires a separate future implementation approval. | Open |
+| Source, parser / reader / ingestion, feature or label approvals are assumed from dataset boundary planning. | Data / Governance | High | Medium | `03AG` preserves the dependency order and states these approvals remain separate and non-substitutable. | Open |
+| Real Tenhou, real haifu, external logs or platform data are read as dataset inputs before approval. | Data / Compliance | High | Medium | `03AG` keeps real/external/platform data blocked until source-specific approvals and later implementation approvals exist. | Open |
+| Boundary evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 supervised dataset construction, split and leakage boundary definition evidence only. | Open |
+| P8-P12 work is treated as implicitly approved after dataset / split / leakage boundary definition. | Governance / Stage Control | High | Medium | `03AG`, stage contract and `10_NEXT` keep P8-P12 closed and require later transition reviews. | Open |
+
 ## 2026-06-28 — Broader P7 feature label boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

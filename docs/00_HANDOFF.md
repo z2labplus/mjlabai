@@ -30,8 +30,8 @@ Current stage interpretation:
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
 Current active stage is broader P7 supervised dataset construction, split and
-leakage boundary definition planning after broader P7 feature / label boundary
-review:
+leakage boundary review planning after broader P7 dataset / split / leakage
+boundary definition:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -206,6 +206,22 @@ does not approve actual feature extraction, actual label generation, feature
 tensors, labels, targets, examples, splits, supervised dataset construction,
 training-data approval, training, parser / reader / ingestion, real data,
 model-output integration, self-play, league or P8-P12.
+`docs/03_supervised_policy/03AG_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+defines the broader P7 supervised dataset construction, split and leakage
+boundary before implementation. It records current no-dataset / no-split /
+no-leakage-implementation status, concept definitions, dependency order,
+dataset construction boundary, split boundary, leakage boundary, future
+approval-record fields, candidate dataset / split / leakage classes, allowed
+future implementation boundary, forbidden scope, stop conditions, risk
+controls, evidence requirements, first task candidate, planning decision and
+evidence grade. The next task is `Review broader P7 supervised dataset
+construction, split and leakage boundary before implementation`, and it is
+still docs-only. It does not approve supervised dataset construction, split
+creation, leakage-test implementation, training-data approval, training,
+source approval, source ingestion, parser / reader / ingestion, actual feature
+extraction, actual label generation, feature tensors, labels, targets,
+examples, model architecture / trainer, real data, model-output integration,
+self-play, league or P8-P12.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
