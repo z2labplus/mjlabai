@@ -14,6 +14,77 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-29 — DR-0084 — Review Broader P7 Training-Data Training-Run Boundary
+
+Decision:
+
+```text
+Review can close. Define broader P7 model architecture and trainer planning boundary before implementation as the next docs-only task.
+```
+
+Context:
+
+- P7 current scope is closed only for the exact docs-only readiness chain plus
+  accepted minimal synthetic/local supervised feature-label smoke
+  implementation.
+- Full P7 remains open.
+- Broader P7 data/source readiness, parser / reader / ingestion, actual
+  feature extraction / label generation, supervised dataset construction /
+  split / leakage and training-data approval / training-run boundaries have
+  been defined and reviewed through `03AI`.
+- No training data, training-data construction, training run, training,
+  source approval, parser / reader / ingestion, feature extraction, label
+  generation, supervised dataset construction, model architecture, trainer,
+  checkpoint, weights, real data, model-output integration or P8-P12 work is
+  approved.
+
+Rationale:
+
+- `03AI` sufficiently separates training-data approval from training-run
+  approval and training.
+- `03AI` records no-training-data / no-training-run status, concept
+  definitions, dependency map, approval boundaries, approval record fields,
+  candidate classes, allowed and forbidden scope, stop conditions, risks,
+  evidence requirements and non-evidence warnings.
+- The next unresolved boundary before any training-run discussion is model
+  architecture and trainer planning, but only as docs-only boundary definition.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03AJ_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define broader P7 model architecture and trainer planning boundary before implementation.`
+- No training data, training-data construction, training run, training-run
+  implementation or training is approved by this decision.
+- No model architecture, dataloader, optimizer, loss, trainer, checkpoint,
+  weights or snapshot is approved by this decision.
+- No source approval, source ingestion, parser / reader / ingestion
+  implementation, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation or leakage-test
+  implementation is approved by this decision.
+- No real Tenhou, real haifu, external logs, platform data, accounts,
+  sessions, cookies or tokens may be read by this decision.
+- No model-output integration, self-play, league or P8-P12 work is approved by
+  this decision.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03AJ_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03AI_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Accepted; docs-only broader P7 model architecture and trainer planning
+boundary definition is next.
+
 ## 2026-06-29 — DR-0083 — Define Broader P7 Training-Data Training-Run Boundary
 
 Decision:

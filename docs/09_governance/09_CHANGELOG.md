@@ -1,5 +1,34 @@
 # 09_CHANGELOG
 
+## 2026-06-29 - v2.97
+
+- Reviewed broader P7 training-data approval and training-run boundary before
+  implementation.
+- Added
+  `docs/03_supervised_policy/03AJ_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`.
+- Confirmed that `03AI` scope, purpose, current no-training-data /
+  no-training-run status, concept definitions, dependency order,
+  training-data approval boundary, training-run boundary, future approval
+  record fields, candidate classes, allowed future boundary, forbidden scope,
+  stop conditions, risk controls, evidence requirements, first task candidate,
+  planning decision, evidence grade and governance synchronization are
+  sufficient.
+- Review decision:
+  `Review can close.`
+- New `10_NEXT` first item:
+  `Define broader P7 model architecture and trainer planning boundary before implementation.`
+- This is broader P7 training-data approval and training-run boundary review
+  evidence only.
+- No training data was approved or constructed. No training run was approved,
+  implemented or executed. No model architecture, trainer, dataloader,
+  optimizer, loss, checkpoint, weights, source approval, source ingestion,
+  parser / reader / ingestion implementation, feature extraction, label
+  generation, supervised dataset construction, split creation, leakage-test
+  implementation, production code, implementation logic, tests, fixtures, data
+  files, real Tenhou, real haifu, external logs, platform data, model-output
+  integration, self-play, league, P8-P12 work or model-strength claim was
+  added.
+
 ## 2026-06-29 - v2.96
 
 - Defined broader P7 training-data approval and training-run boundary before

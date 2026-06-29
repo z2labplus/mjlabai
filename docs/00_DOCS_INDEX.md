@@ -114,6 +114,7 @@ docs/03_supervised_policy/03AF_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_REVIEW_BEFO
 docs/03_supervised_policy/03AG_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AH_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AI_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03AJ_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -500,6 +501,15 @@ is boundary-definition evidence only, not training-data approval,
 training-data construction, training-run approval, training, model
 architecture / trainer approval, checkpoint / weights approval, P8-P12 entry
 or model-strength evidence.
+
+`docs/03_supervised_policy/03AJ_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+reviews the broader P7 training-data approval and training-run boundary before
+implementation. It records `Review can close` with no blocker and selects
+`Define broader P7 model architecture and trainer planning boundary before
+implementation` as the next docs-only task. It is boundary-review evidence
+only, not training-data approval, training-data construction, training-run
+approval, training, model architecture / trainer approval, checkpoint /
+weights approval, P8-P12 entry or model-strength evidence.
 
 ## Data-system files
 

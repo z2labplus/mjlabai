@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-29 — Broader P7 training-data approval and training-run boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Training-data / training-run boundary review closure is mistaken for training-data approval. | Governance / Training | High | Medium | `03AJ`, `10_NEXT`, handoff and stage contract state that `Review can close` closes only the review gate and approves no training data. | Open |
+| Training-data / training-run boundary review closure is mistaken for training-run approval or permission to train. | Governance / Training | High | Medium | `03AJ` keeps training-data approval, training-run approval and training separate and selects only a docs-only model/trainer planning boundary next. | Open |
+| The next model architecture / trainer planning boundary is mistaken for model architecture or trainer implementation approval. | Governance / Scope | High | Medium | New `10_NEXT` first item is docs-only and forbids model architecture, dataloader, optimizer, loss, trainer, checkpoint and weights implementation. | Open |
+| Model architecture / trainer planning is mistaken for model-strength evidence. | Evaluation / Governance | High | Medium | Evidence grade remains boundary / review evidence only; model-strength, Tenhou ranked, stable-dan and LuckyJ claims remain forbidden. | Open |
+| Source, parser / reader / ingestion, feature / label or dataset approvals are inferred from training-data / training-run review closure. | Data / Governance | High | Medium | `03AJ` preserves dependency order and reiterates that these approvals remain separate and non-substitutable. | Open |
+| P8-P12 work is treated as implicitly approved after selecting model/trainer planning boundary. | Governance / Stage Control | High | Medium | `03AJ`, stage contract and `10_NEXT` keep P8-P12 closed and require later transition reviews. | Open |
+
 ## 2026-06-29 — Broader P7 training-data approval and training-run boundary risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
