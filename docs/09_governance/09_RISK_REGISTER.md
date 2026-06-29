@@ -8,6 +8,21 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-29 — Broader P7 model architecture and trainer planning boundary risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Model architecture planning boundary definition is mistaken for architecture implementation approval. | Governance / Model | High | Medium | `03AK`, `10_NEXT`, handoff and stage contract state that this is docs-only boundary definition and selects only a review gate next. | Open |
+| Trainer planning is mistaken for permission to implement a trainer or train. | Governance / Training | High | Medium | `03AK` keeps trainer planning, trainer approval, training-run approval and training separate. | Open |
+| Dataloader, optimizer, loss or training-loop implementation creeps into planning. | Engineering / Scope | High | Medium | `03AK` and `10_NEXT` forbid production code, tests, fixtures and implementation logic in this task. | Open |
+| Checkpoint, weights, snapshot or model artifact policy is mistaken for artifact creation approval. | Artifact / Governance | High | Medium | `03AK` forbids checkpoint, weights, snapshot and model artifact creation or loading until separate approval. | Open |
+| Training-data, source, parser, feature, label, dataset or split approvals are inferred from model/trainer planning. | Data / Governance | High | Medium | `03AK` preserves dependency order and states each approval remains separate and non-substitutable. | Open |
+| Current smoke fixtures or docs are mistaken as model input training data. | Data / Scope | High | Medium | `03AK` classifies smoke fixtures and repo docs as non-training artifacts. | Open |
+| Real Tenhou, real haifu, external logs or platform data enter model/trainer planning. | Data / Compliance | High | Medium | `03AK` keeps real/external/platform data blocked until source-specific and implementation approvals exist. | Open |
+| Third-party binaries, params, checkpoints or weights enter through model/trainer planning. | Artifact / Governance | High | Medium | `03AK` rejects third-party artifacts and unknown weights without rights/provenance review and explicit approval. | Open |
+| Boundary evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 model architecture and trainer planning boundary definition evidence only. | Open |
+| P8-P12 work is treated as implicitly approved after model/trainer planning. | Governance / Stage Control | High | Medium | `03AK`, stage contract and `10_NEXT` keep P8-P12 closed and require later transition reviews. | Open |
+
 ## 2026-06-29 — Broader P7 training-data approval and training-run boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

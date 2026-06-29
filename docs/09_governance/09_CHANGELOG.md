@@ -1,5 +1,32 @@
 # 09_CHANGELOG
 
+## 2026-06-29 - v2.98
+
+- Defined broader P7 model architecture and trainer planning boundary before
+  implementation.
+- Added
+  `docs/03_supervised_policy/03AK_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_BEFORE_IMPLEMENTATION.md`.
+- Recorded current no-model / no-trainer / no-training status, concept
+  definitions, dependency order, model architecture planning boundary, trainer
+  planning boundary, future approval-record fields, candidate model / trainer
+  classes, allowed and forbidden future scope, stop conditions, risk controls,
+  evidence requirements, first task candidate, planning decision and evidence
+  grade.
+- New `10_NEXT` first item:
+  `Review broader P7 model architecture and trainer planning boundary before implementation.`
+- This is broader P7 model architecture and trainer planning boundary
+  definition evidence only.
+- No model architecture, model config, encoder, policy head, value head,
+  auxiliary head, decision head, dataloader, optimizer, loss, trainer,
+  training loop, checkpoint, weights, snapshot, model artifact, training-data
+  approval, training-data construction, training-run approval, training,
+  source approval, source ingestion, parser / reader / ingestion
+  implementation, feature extraction, label generation, supervised dataset
+  construction, split creation, leakage-test implementation, production code,
+  tests, fixtures, data files, real Tenhou, real haifu, external logs,
+  platform data, model-output integration, self-play, league, P8-P12 work or
+  model-strength claim was added.
+
 ## 2026-06-29 - v2.97
 
 - Reviewed broader P7 training-data approval and training-run boundary before

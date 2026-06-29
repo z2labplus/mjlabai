@@ -115,6 +115,7 @@ docs/03_supervised_policy/03AG_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_
 docs/03_supervised_policy/03AH_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AI_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AJ_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03AK_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -510,6 +511,18 @@ implementation` as the next docs-only task. It is boundary-review evidence
 only, not training-data approval, training-data construction, training-run
 approval, training, model architecture / trainer approval, checkpoint /
 weights approval, P8-P12 entry or model-strength evidence.
+
+`docs/03_supervised_policy/03AK_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+defines the broader P7 model architecture and trainer planning boundary before
+implementation. It records current no-model / no-trainer / no-training status,
+concept definitions, dependency order, model architecture planning boundary,
+trainer planning boundary, future approval-record fields, candidate classes,
+allowed and forbidden future scope, stop conditions, risk controls, evidence
+requirements, first task candidate, planning decision and evidence grade. It
+is boundary-definition evidence only, not model architecture approval, trainer
+approval, dataloader / optimizer / loss approval, checkpoint / weights
+approval, training-data approval, training-run approval, training, P8-P12 entry
+or model-strength evidence.
 
 ## Data-system files
 

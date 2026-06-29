@@ -256,6 +256,19 @@ training-data construction, training-run approval, training, model
 architecture implementation, trainer implementation, dataloader / optimizer /
 loss implementation, checkpoint / weights creation, real data, model-output
 integration, self-play, league or P8-P12.
+`docs/03_supervised_policy/03AK_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+defines the broader P7 model architecture and trainer planning boundary before
+implementation. It records current no-architecture / no-trainer / no-training
+status, concept definitions, dependency order, model architecture planning
+boundary, trainer planning boundary, future approval-record fields, candidate
+classes, allowed and forbidden future scope, stop conditions, risk controls,
+evidence requirements, first task candidate, planning decision and evidence
+grade. The next task is `Review broader P7 model architecture and trainer
+planning boundary before implementation`, and it is still docs-only. It does
+not approve model architecture implementation, trainer implementation,
+dataloader / optimizer / loss implementation, checkpoint / weights creation,
+training-data approval, training-run approval, training, real data,
+model-output integration, self-play, league or P8-P12.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -460,10 +473,10 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define broader P7 model architecture and trainer planning boundary before
+Review broader P7 model architecture and trainer planning boundary before
 implementation.
-The broader-P7 model architecture / trainer planning boundary task must be
-docs-only. It must not implement model architecture, trainer, dataloader,
+The broader-P7 model architecture / trainer planning boundary review task must
+be docs-only. It must not implement model architecture, trainer, dataloader,
 optimizer, loss, checkpoint, weights, training, training-run approval,
 training-data approval, parser, dataset reader, ingestion, actual feature
 extraction, actual label generation, supervised dataset construction, split
