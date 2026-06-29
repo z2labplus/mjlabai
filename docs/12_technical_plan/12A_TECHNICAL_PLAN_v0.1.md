@@ -76,9 +76,12 @@ before implementation` as the next docs-only task. `03AG` defines that
 dataset / split / leakage boundary and selects a docs-only review gate next.
 `03AH` reviews `03AG`, records `Review can close` with no blocker and selects
 `Define broader P7 training-data approval and training-run boundary before
-implementation` as the next docs-only task.
+implementation` as the next docs-only task. `03AI` defines that
+training-data approval / training-run boundary and selects a docs-only review
+gate next.
 None of `03Y`, `03Z`, `03AA`, `03AB`, `03AC`, `03AD`, `03AE`, `03AF`, `03AG`,
-`03AH` or the next training-data approval / training-run boundary task approves broader P7
+`03AH`, `03AI` or the next training-data approval / training-run boundary
+review task approves broader P7
 implementation, training, source approval, source ingestion, parser / reader /
 ingestion implementation, actual feature extraction, actual label generation,
 feature tensors, labels, targets, examples, splits, supervised dataset
@@ -309,10 +312,14 @@ Broader P7 supervised dataset construction, split and leakage boundary review =
 complete in
 `docs/03_supervised_policy/03AH_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`;
 review can close with no blocker.
+Broader P7 training-data approval and training-run boundary = defined in
+`docs/03_supervised_policy/03AI_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_BEFORE_IMPLEMENTATION.md`;
+no training data is approved, no training run is approved and the next task is
+a docs-only review gate.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = define broader P7 training-data approval and training-run boundary
+Next = review broader P7 training-data approval and training-run boundary
 before implementation.
 ```
 
@@ -447,7 +454,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Define broader P7 training-data approval and training-run boundary before implementation.
+Review broader P7 training-data approval and training-run boundary before implementation.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
@@ -484,15 +491,17 @@ and selects a docs-only review gate next. `03AF` reviews that boundary, records
 split / leakage boundary definition next. `03AG` defines that boundary and
 selects a docs-only review gate. `03AH` reviews it, records `Review can close`
 and selects this docs-only training-data approval / training-run boundary
-definition next. The next task must not add production code, tests, fixtures,
-data files, source approval, source ingestion approval, data reads, parser
+definition next. `03AI` defines that boundary and selects a docs-only review
+gate next. The next task must not add production code, tests, fixtures, data
+files, source approval, source ingestion approval, data reads, parser
 implementation, dataset reader implementation, ingestion implementation,
 actual feature extraction, actual label generation, feature tensors, labels,
 examples, splits, supervised dataset construction, leakage-test
-implementation, training-data construction, training-run approval, training,
-model architecture, trainer, real Tenhou, real haifu, external logs, platform
-data, model-output integration, CLI, broad file ingestion, self-play, league,
-P8-P12 work or model-strength claims.
+implementation, training-data construction, training-data approval,
+training-run approval, training-run implementation, training, model
+architecture, trainer, checkpoint, weights, real Tenhou, real haifu, external
+logs, platform data, model-output integration, CLI, broad file ingestion,
+self-play, league, P8-P12 work or model-strength claims.
 
 The exact P6 implementation approved by `02N` is complete and reviewed in
 `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`

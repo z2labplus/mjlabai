@@ -8,6 +8,20 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-29 — Broader P7 training-data approval and training-run boundary risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Training-data approval boundary definition is mistaken for actual training-data approval. | Governance / Training | High | Medium | `03AI`, `10_NEXT`, handoff and stage contract state that this is docs-only boundary definition and approves no training data. | Open |
+| Training-run boundary definition is mistaken for permission to run training. | Governance / Training | High | Medium | `03AI` separates training-data approval from training-run approval and forbids training, trainer, checkpoints and weights. | Open |
+| Current synthetic/local supervised smoke fixture is mistaken for training data. | Data / Scope | High | Medium | `03AI` classifies smoke artifacts as schema / guardrail smoke only, not a supervised dataset or training data. | Open |
+| Source approval, parser / reader / ingestion, feature / label or dataset approvals are assumed from the training-data boundary. | Data / Governance | High | Medium | `03AI` preserves dependency order and states each approval remains separate and non-substitutable. | Open |
+| Dataset records, splits, examples, tensors, labels, manifests, checkpoints or weights are created before approval. | Data / Training | High | Medium | `03AI` and `10_NEXT` forbid data creation, split creation, training-data construction and training-run implementation. | Open |
+| Real Tenhou, real haifu, external logs or platform data enter training planning before approval. | Data / Compliance | High | Medium | `03AI` blocks real/external/platform data until source-specific and implementation approvals exist. | Open |
+| Model-output, self-play or league outputs are treated as training data too early. | Governance / Stage Control | High | Medium | `03AI` keeps model-output, self-play and league-derived data deferred until separate later-stage approval. | Open |
+| Boundary evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 training-data approval and training-run boundary definition evidence only. | Open |
+| P8-P12 work is treated as implicitly approved after training-data / training-run boundary planning. | Governance / Stage Control | High | Medium | `03AI`, stage contract and `10_NEXT` keep P8-P12 closed and require later transition reviews. | Open |
+
 ## 2026-06-28 — Broader P7 dataset split leakage boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

@@ -2,8 +2,8 @@
 
 ## Current stage
 
-Broader P7 training-data approval and training-run boundary definition
-planning after broader P7 dataset / split / leakage boundary review.
+Broader P7 training-data approval and training-run boundary review planning
+after broader P7 training-data approval / training-run boundary definition.
 `03M` and `03N` name and review candidate future files and guardrails only;
 `03O` approved only the exact minimal implementation task and exact files.
 That task is now implemented, reviewed in `03P` with `Review can close`, and
@@ -40,8 +40,10 @@ docs-only task. `03AG` defines that dataset / split / leakage boundary and
 selects a docs-only review gate next. `03AH` reviews `03AG`, records
 `Review can close` with no blocker and selects `Define broader P7 training-data
 approval and training-run boundary before implementation` as the next
-docs-only task. It does not approve broader P7 implementation, training,
-training-data construction, training-run approval, source approval, source
+docs-only task. `03AI` defines that training-data approval / training-run
+boundary and selects a docs-only review gate next. It does not approve broader
+P7 implementation, training, training-data construction, training-data
+approval, training-run approval, source approval, source
 ingestion, parser / reader / ingestion implementation, actual feature
 extraction, actual label generation, feature tensors, labels, targets,
 examples, splits, supervised dataset construction, leakage-test
@@ -156,12 +158,13 @@ Broader P7 data/source readiness and source-approval boundary = defined in `03AA
 Broader P7 parser / reader / ingestion boundary = defined in `03AC` and reviewed in `03AD`; review can close with no blocker
 Broader P7 actual feature extraction and label generation boundary = defined in `03AE` and reviewed in `03AF`; review can close with no blocker
 Broader P7 supervised dataset construction, split and leakage boundary = defined in `03AG` and reviewed in `03AH`; review can close with no blocker
+Broader P7 training-data approval and training-run boundary = defined in `03AI`; no training data is approved, no training run is approved and the next task is a docs-only review gate
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = define broader P7 training-data approval and training-run boundary before implementation
+Next = review broader P7 training-data approval and training-run boundary before implementation
 ```
 
 ## AI role
@@ -272,4 +275,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Define broader P7 training-data approval and training-run boundary before implementation.
+Review broader P7 training-data approval and training-run boundary before implementation.

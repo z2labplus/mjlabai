@@ -30,8 +30,8 @@ Current stage interpretation:
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
 Current active stage is broader P7 training-data approval and training-run
-boundary definition planning after broader P7 dataset / split / leakage
-boundary review:
+boundary review planning after broader P7 training-data / training-run
+boundary definition:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -233,6 +233,21 @@ examples, model architecture / trainer, real data, model-output integration,
 self-play, league or P8-P12. The next task is `Define broader P7 training-data
 approval and training-run boundary before implementation`, and it is still
 docs-only.
+`docs/03_supervised_policy/03AI_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+defines the broader P7 training-data approval and training-run boundary before
+implementation. It records current no-training-data / no-training-run status,
+concept definitions, dependency order, training-data approval boundary,
+training-run boundary, future approval-record fields, candidate classes,
+allowed / forbidden future scope, stop conditions, risk controls, evidence
+requirements, first task candidate, planning decision and evidence grade. The
+next task is `Review broader P7 training-data approval and training-run
+boundary before implementation`, and it is still docs-only. It does not
+approve training data, training-data construction, training-run approval,
+training, source approval, training-data source, source ingestion, parser /
+reader / ingestion, actual feature extraction, actual label generation,
+supervised dataset construction, split creation, leakage-test implementation,
+model architecture / trainer, checkpoint / weights, real data,
+model-output integration, self-play, league or P8-P12.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -437,14 +452,15 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define broader P7 training-data approval and training-run boundary before
+Review broader P7 training-data approval and training-run boundary before
 implementation.
-The broader-P7 training-data approval and training-run boundary definition
-must be docs-only. It must not approve training data, approve a training run,
-read data, add production code, tests, fixtures, data files, parser, dataset
+The broader-P7 training-data approval and training-run boundary review must be
+docs-only. It must not approve training data, approve a training run, read
+data, add production code, tests, fixtures, data files, parser, dataset
 reader, ingestion, actual feature extraction, actual label generation,
 supervised dataset construction, split creation, leakage-test implementation,
-training, tuning, self-play, league, runner behavior, real Tenhou, real haifu,
+training-data construction, training, tuning, self-play, league, runner
+behavior, real Tenhou, real haifu,
 external logs, platform data, model-output integration, CLI, broad file
 ingestion, P8-P12 work or model-strength claims.
 ```

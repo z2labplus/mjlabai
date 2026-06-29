@@ -8,6 +8,57 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-29 — Broader P7 training-data approval and training-run boundary definition
+
+- Type: internal documentation / broader P7 training-data approval and
+  training-run boundary definition evidence.
+- Stage: P7 supervised learning / docs-only broader P7 training-data approval
+  and training-run boundary before implementation.
+- Added boundary document:
+  - `docs/03_supervised_policy/03AI_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- Defined:
+  - training-data approval and training-run approval vocabulary.
+  - current status: no approved P7 training data and no approved P7 training
+    run.
+  - dependency order from source approval through parser / reader / ingestion,
+    feature / label approval, dataset / split / leakage approval,
+    training-data approval and training-run approval.
+  - training-data approval boundary and training-run boundary.
+  - future approval-record fields.
+  - candidate training-data / training-run classes.
+  - allowed and forbidden future scope.
+  - stop conditions.
+  - risk controls.
+  - evidence requirements.
+  - first task candidate and planning decision.
+- New next task:
+  - `Review broader P7 training-data approval and training-run boundary before implementation.`
+- Evidence grade:
+  - Broader P7 training-data approval and training-run boundary definition
+    evidence only.
+- Not evidence of:
+  - training-data approval.
+  - training-data construction.
+  - training-run approval.
+  - training-run implementation.
+  - training.
+  - source approval or source ingestion approval.
+  - parser / reader / ingestion approval or implementation.
+  - actual feature extraction or label generation approval.
+  - supervised dataset construction.
+  - split creation.
+  - leakage-test implementation.
+  - model architecture, trainer, checkpoint, weights or snapshot approval.
+  - real Tenhou / real haifu / external-log / platform-data use.
+  - model-output integration.
+  - self-play, league or runner behavior.
+  - P8-P12 entry approval.
+  - model strength.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+
 ### 2026-06-28 — Broader P7 supervised dataset construction split leakage boundary review
 
 - Type: internal documentation / broader P7 supervised dataset construction,

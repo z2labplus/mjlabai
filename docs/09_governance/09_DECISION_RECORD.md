@@ -14,6 +14,71 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-29 — DR-0083 — Define Broader P7 Training-Data Training-Run Boundary
+
+Decision:
+
+```text
+Broader P7 training-data approval and training-run boundary is defined before implementation. Set the next task to a docs-only review gate.
+```
+
+Context:
+
+- P7 current scope is closed only for the exact docs-only readiness chain plus
+  accepted minimal synthetic/local supervised feature-label smoke
+  implementation.
+- Full P7 remains open.
+- Broader P7 data/source readiness, source approval, parser / reader /
+  ingestion, actual feature extraction / label generation and supervised
+  dataset construction / split / leakage boundaries have been defined and
+  reviewed.
+- No source, parser, reader, ingestion path, feature extraction, label
+  generation, dataset, split, leakage test, training data or training run has
+  been approved for broader P7 implementation.
+
+Rationale:
+
+- Training-data approval and training-run approval are separate gates and
+  should be defined before any data construction or training can be considered.
+- The current synthetic/local supervised smoke fixture is useful as a schema
+  and guardrail artifact only; it is not training data.
+- The next safest step is to review the boundary document before any
+  implementation, approval, data construction or training.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03AI_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_BEFORE_IMPLEMENTATION.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review broader P7 training-data approval and training-run boundary before implementation.`
+- No training data, training-data construction, training run, training-run
+  implementation or training is approved by this decision.
+- No source approval, source ingestion, parser / reader / ingestion
+  implementation, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation or leakage-test
+  implementation is approved by this decision.
+- No model architecture, trainer, checkpoint, weights, snapshot,
+  model-output integration, self-play, league or P8-P12 work is approved by
+  this decision.
+- No real Tenhou, real haifu, external logs, platform data, accounts,
+  sessions, cookies or tokens may be read by this decision.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03AI_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Accepted; docs-only broader P7 training-data approval and training-run
+boundary review is next.
+
 ## 2026-06-28 — DR-0082 — Review Broader P7 Dataset Split Leakage Boundary
 
 Decision:

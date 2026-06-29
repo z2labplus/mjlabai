@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Define broader P7 training-data approval and training-run boundary before implementation.
+- [ ] Review broader P7 training-data approval and training-run boundary before implementation.
 
 Current execution charter:
 
@@ -16,8 +16,8 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only boundary definition task for broader P7 training-data
-  approval and training-run boundary before implementation.
+- This is a docs-only review gate for the broader P7 training-data approval
+  and training-run boundary before implementation.
 - P7 current scope is closed only for the exact docs-only supervised-learning
   readiness chain plus accepted minimal synthetic/local supervised
   feature-label smoke implementation.
@@ -51,14 +51,20 @@ Limits:
   reviews `03AG`, records `Review can close` with no blocker and selects this
   docs-only training-data approval / training-run boundary definition task
   next.
-- This task may define training-data approval and training-run vocabulary,
-  prerequisites, allowed and forbidden future scope, risk controls, evidence
-  requirements and future approval-record fields before implementation.
+- `docs/03_supervised_policy/03AI_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+  defines training-data approval and training-run vocabulary, current status,
+  dependency order, future approval-record fields, allowed and forbidden
+  future scope, stop conditions, risk controls, evidence requirements and the
+  next docs-only review gate before implementation.
+- This task may review `03AI`, confirm whether it can close and define the
+  next P7-only task.
 - This task does not close full P7.
 - This task does not approve broader P7 implementation.
 - This task does not approve any source for training or evaluation.
 - This task does not approve training data.
 - This task does not approve a training run.
+- This task does not approve training-data construction.
+- This task does not approve training-run implementation.
 - This task does not approve source ingestion.
 - This task does not approve parser / reader / ingestion.
 - This task does not implement parser, reader, ingestion, dataset reader,
@@ -92,6 +98,8 @@ Limits:
 - Do not construct a dataset manifest.
 - Do not create train/validation/test splits.
 - Do not implement leakage checks.
+- Do not construct training data.
+- Do not run training or tuning.
 - Do not define this boundary as approval to train.
 - Do not run real-data, Tenhou, self-play, league, training, model-output
   integration, Akochan `system.exe`, `libai.so`, third-party binary or unknown
@@ -121,6 +129,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-06-29 Defined broader P7 training-data approval and training-run boundary before implementation: added `docs/03_supervised_policy/03AI_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_BEFORE_IMPLEMENTATION.md`, defining training-data approval purpose, training-run boundary purpose, current no-training-data / no-training-run status, concept definitions, dependency order, training-data approval boundary, training-run boundary, future approval-record fields, candidate training-data / training-run classes, allowed future boundary, forbidden scope, stop conditions, risk controls, evidence requirements, first task candidate, planning decision and evidence grade. The next task is `Review broader P7 training-data approval and training-run boundary before implementation.` This is broader P7 training-data approval and training-run boundary definition evidence only. It does not close full P7, approve training data, approve training-data construction, approve training-run approval, approve training, approve source approval, approve training-data source, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve split creation, approve leakage-test implementation, approve model architecture / trainer, approve checkpoint / weights, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-28 Reviewed broader P7 supervised dataset construction, split and leakage boundary before implementation: added `docs/03_supervised_policy/03AH_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`, confirmed that `03AG` scope, non-approval wording, purpose, current no-dataset / no-split / no-leakage status, concept definitions, dependency map, dataset construction boundary, split boundary, leakage boundary, future approval-record fields, candidate classes, allowed future boundary, forbidden scope, stop conditions, risk controls, evidence requirements, first task candidate, planning decision, evidence grade and governance synchronization are sufficient, and recorded `Review can close`. The next task is `Define broader P7 training-data approval and training-run boundary before implementation.` This is broader P7 supervised dataset construction, split and leakage boundary review evidence only. It does not close full P7, approve any source, approve training-data source, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve feature tensors, approve labels, approve targets, approve examples, approve split creation, approve supervised dataset construction, approve leakage-test implementation, approve training-data construction, approve training-run approval, approve training, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-28 Defined broader P7 supervised dataset construction, split and leakage boundary before implementation: added `docs/03_supervised_policy/03AG_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_BEFORE_IMPLEMENTATION.md`, defined supervised dataset construction vocabulary, current no-dataset / no-split / no-leakage-implementation status, dependency order, dataset construction boundary, split boundary, leakage boundary, future approval-record fields, candidate dataset / split / leakage classes, allowed future implementation boundary, forbidden scope, stop conditions, risk controls, evidence requirements, first task candidate, planning decision and evidence grade. The next task is `Review broader P7 supervised dataset construction, split and leakage boundary before implementation.` This is broader P7 supervised dataset construction, split and leakage boundary definition evidence only. It does not close full P7, approve any source, approve training-data source, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve feature tensors, approve labels, approve targets, approve examples, approve split creation, approve supervised dataset construction, approve leakage-test implementation, approve training, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-28 Reviewed broader P7 actual feature extraction and label generation boundary before implementation: added `docs/03_supervised_policy/03AF_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`, confirmed that `03AE` scope, purpose, current feature/label status, concept definitions, dependency map, parser / reader / ingestion separation, synthetic/local smoke boundary, candidate feature families, candidate label families, feature rules, label rules, approval-record fields, allowed future boundary, forbidden scope, stop conditions, risk controls, evidence requirements, first task candidate, planning decision, evidence grade and governance synchronization are sufficient, and recorded `Review can close`. The next task is `Define broader P7 supervised dataset construction, split and leakage boundary before implementation.` This is broader P7 actual feature extraction and label generation boundary review evidence only. It does not close full P7, approve any source, approve training-data source, approve source ingestion, approve parser / reader / ingestion, implement parser / reader / ingestion, approve broad file ingestion, approve CLI data paths, approve actual feature extraction, approve actual label generation, approve feature tensors, approve labels, approve targets, approve examples, approve splits, approve supervised dataset construction, approve training, approve model architecture / trainer, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
