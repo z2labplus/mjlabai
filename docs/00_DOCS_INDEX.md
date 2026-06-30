@@ -117,6 +117,7 @@ docs/03_supervised_policy/03AI_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RU
 docs/03_supervised_policy/03AJ_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AK_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AL_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03AM_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -534,6 +535,17 @@ evidence only, not model architecture approval, trainer approval, evaluation
 implementation, checkpoint / weights approval, training, P8-P12 entry,
 model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ `10.68`
 comparison or candidate-promotion evidence.
+
+`docs/03_supervised_policy/03AM_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+defines the broader P7 evaluation dependency and model-strength evidence
+boundary before implementation. It records current no-strength-evidence
+status, dependency order, evidence vocabulary, future evidence-record fields,
+Tenhou / stable-dan / LuckyJ evidence prerequisites, stop conditions, risk
+controls and non-evidence warnings. It is boundary-definition evidence only:
+it does not approve evaluation implementation, metric implementation, an
+evaluation runner, benchmark harness, model-output integration, model-strength
+evidence, Tenhou evidence, stable-dan ranked-game evidence, LuckyJ comparison,
+candidate promotion, training or P8-P12 entry.
 
 ## Data-system files
 

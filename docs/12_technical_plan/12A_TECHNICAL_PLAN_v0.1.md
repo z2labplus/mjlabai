@@ -28,9 +28,9 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-Broader P7 evaluation dependency and model-strength evidence boundary
-definition after broader P7 model architecture / trainer planning boundary
-review.
+Broader P7 evaluation dependency and model-strength evidence boundary review
+after broader P7 evaluation dependency and model-strength evidence boundary
+definition.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -86,10 +86,11 @@ that model architecture / trainer planning boundary and selects a docs-only
 review gate next. `03AL` reviews `03AK`, records `Review can close` with no
 blocker and selects `Define broader P7 evaluation dependency and
 model-strength evidence boundary before implementation` as the next docs-only
-task.
+task. `03AM` defines that evaluation dependency / model-strength evidence
+boundary and selects a docs-only review gate next.
 None of `03Y`, `03Z`, `03AA`, `03AB`, `03AC`, `03AD`, `03AE`, `03AF`, `03AG`,
-`03AH`, `03AI`, `03AJ`, `03AK`, `03AL` or the next evaluation dependency /
-model-strength evidence boundary task approves broader P7
+`03AH`, `03AI`, `03AJ`, `03AK`, `03AL`, `03AM` or the next evaluation
+dependency / model-strength evidence boundary review task approves broader P7
 implementation, training, source approval, source ingestion, parser / reader /
 ingestion implementation, actual feature extraction, actual label generation,
 feature tensors, labels, targets, examples, splits, supervised dataset
@@ -339,10 +340,17 @@ Broader P7 model architecture and trainer planning boundary review = complete
 in
 `docs/03_supervised_policy/03AL_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`;
 review can close with no blocker.
+Broader P7 evaluation dependency and model-strength evidence boundary =
+defined in
+`docs/03_supervised_policy/03AM_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_BEFORE_IMPLEMENTATION.md`;
+no evaluation implementation, metric implementation, evaluation runner,
+benchmark harness, model-output integration, model-strength evidence, Tenhou
+evidence, stable-dan evidence, LuckyJ comparison or candidate promotion is
+approved.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = define broader P7 evaluation dependency and model-strength evidence
+Next = review broader P7 evaluation dependency and model-strength evidence
 boundary before implementation.
 ```
 
@@ -477,7 +485,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Define broader P7 evaluation dependency and model-strength evidence boundary before implementation.
+Review broader P7 evaluation dependency and model-strength evidence boundary before implementation.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
@@ -519,8 +527,9 @@ gate next. `03AJ` reviews it, records `Review can close`, and selects a
 docs-only model architecture / trainer planning boundary definition next.
 `03AK` defines that boundary and selects a docs-only review gate next. `03AL`
 reviews it, records `Review can close`, and selects a docs-only evaluation
-dependency / model-strength evidence boundary definition next. The next task
-must not add production code, tests, fixtures, data files, source
+dependency / model-strength evidence boundary definition next. `03AM` defines
+that boundary and selects a docs-only review gate next. The next task must not
+add production code, tests, fixtures, data files, source
 approval, source ingestion approval, data reads, parser
 implementation, dataset reader implementation, ingestion implementation,
 actual feature extraction, actual label generation, feature tensors, labels,

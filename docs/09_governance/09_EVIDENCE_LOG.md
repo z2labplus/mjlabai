@@ -8,6 +8,59 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-30 — Broader P7 evaluation dependency and model-strength evidence boundary definition
+
+- Type: internal documentation / broader P7 evaluation dependency and
+  model-strength evidence boundary definition evidence.
+- Stage: P7 supervised learning / docs-only broader P7 evaluation dependency
+  and model-strength evidence boundary before implementation.
+- Added boundary document:
+  - `docs/03_supervised_policy/03AM_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- Defined:
+  - current no-model-strength-evidence status.
+  - engineering validation, synthetic/local evidence, training-run evidence,
+    offline evaluation evidence, model-output evidence, model-strength
+    evidence, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ
+    comparison evidence and candidate-promotion evidence vocabulary.
+  - dependency order from source approval through model-output integration,
+    evaluation implementation approval, offline evaluation execution,
+    model-strength evidence review and candidate promotion review.
+  - evaluation dependency boundary.
+  - model-strength evidence boundary.
+  - Tenhou / stable-dan / LuckyJ evidence prerequisites.
+  - future evidence-record fields.
+  - candidate evaluation / evidence classes.
+  - allowed future boundary.
+  - forbidden evaluation / evidence scope.
+  - stop conditions.
+  - risk controls.
+  - evidence requirements.
+  - first task candidate and planning decision.
+- New next task:
+  - `Review broader P7 evaluation dependency and model-strength evidence boundary before implementation.`
+- Evidence grade:
+  - Broader P7 evaluation dependency and model-strength evidence boundary
+    definition evidence only.
+- Not evidence of:
+  - evaluation implementation.
+  - metric implementation.
+  - evaluation runner or benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - source approval or source ingestion approval.
+  - parser / reader / ingestion approval or implementation.
+  - actual feature extraction or label generation approval.
+  - supervised dataset construction.
+  - training-data approval.
+  - training-run approval.
+  - training.
+  - model architecture or trainer implementation.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-06-30 — Broader P7 model architecture and trainer planning boundary review
 
 - Type: internal documentation / broader P7 model architecture and trainer

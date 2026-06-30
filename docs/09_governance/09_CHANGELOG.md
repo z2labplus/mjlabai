@@ -1,5 +1,33 @@
 # 09_CHANGELOG
 
+## 2026-06-30 - v3.00
+
+- Defined broader P7 evaluation dependency and model-strength evidence
+  boundary before implementation.
+- Added
+  `docs/03_supervised_policy/03AM_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_BEFORE_IMPLEMENTATION.md`.
+- Recorded current no-strength-evidence status, evaluation and evidence
+  vocabulary, dependency order, evaluation dependency boundary,
+  model-strength evidence boundary, Tenhou / stable-dan / LuckyJ evidence
+  boundary, future evidence-record fields, candidate evidence classes, allowed
+  future boundary, forbidden scope, stop conditions, risk controls, evidence
+  requirements, first task candidate, planning decision and evidence grade.
+- New `10_NEXT` first item:
+  `Review broader P7 evaluation dependency and model-strength evidence boundary before implementation.`
+- This is broader P7 evaluation dependency and model-strength evidence
+  boundary definition evidence only.
+- No evaluation implementation, metric implementation, evaluation runner,
+  benchmark harness, model-output integration, model-strength evidence,
+  Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68`
+  comparison, candidate-promotion evidence, source approval, source
+  ingestion, parser / reader / ingestion implementation, actual feature
+  extraction, actual label generation, supervised dataset construction,
+  training-data approval, training-run approval, training, model architecture
+  implementation, trainer implementation, dataloader, optimizer, loss,
+  checkpoint, weights, production code, tests, fixtures, data files, real
+  Tenhou, real haifu, external logs, platform data, self-play, league or
+  P8-P12 work was added.
+
 ## 2026-06-30 - v2.99
 
 - Reviewed broader P7 model architecture and trainer planning boundary before

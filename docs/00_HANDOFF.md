@@ -30,8 +30,8 @@ Current stage interpretation:
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
 Current active stage is broader P7 evaluation dependency and model-strength
-evidence boundary definition after broader P7 model architecture / trainer
-planning boundary review:
+evidence boundary review after broader P7 evaluation dependency /
+model-strength evidence boundary definition:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -278,6 +278,23 @@ loss implementation, checkpoint / weights creation, evaluation
 implementation, model-strength evidence, Tenhou evidence, stable-dan evidence,
 LuckyJ `10.68` comparison, candidate promotion, training, real data,
 model-output integration, self-play, league or P8-P12.
+`docs/03_supervised_policy/03AM_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+defines the broader P7 evaluation dependency and model-strength evidence
+boundary before implementation. It records current no-strength-evidence
+status, evaluation and evidence vocabulary, dependency order, evaluation
+dependency boundary, model-strength evidence boundary, Tenhou / stable-dan /
+LuckyJ evidence prerequisites, future evidence-record fields, candidate
+evidence classes, allowed and forbidden future scope, stop conditions, risk
+controls, evidence requirements, planning decision and evidence grade. The
+next task is `Review broader P7 evaluation dependency and model-strength
+evidence boundary before implementation`, and it remains docs-only. It does
+not approve evaluation implementation, metric implementation, evaluation
+runner, benchmark harness, model-output integration, source approval, source
+ingestion, parser / reader / ingestion, actual feature extraction, actual
+label generation, supervised dataset construction, training data, training
+run, training, model architecture / trainer implementation, self-play, league,
+P8-P12, model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ
+`10.68` comparison or candidate promotion.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -482,11 +499,11 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define broader P7 evaluation dependency and model-strength evidence boundary
+Review broader P7 evaluation dependency and model-strength evidence boundary
 before implementation.
-The broader-P7 evaluation dependency / model-strength evidence boundary task
-must be docs-only. It must not implement evaluation, produce strength evidence,
-approve model architecture or trainer work, approve training, approve
+The broader-P7 evaluation dependency / model-strength evidence boundary review
+task must be docs-only. It must not implement evaluation, produce strength
+evidence, approve model architecture or trainer work, approve training, approve
 training-data approval, approve parser, dataset reader, ingestion, actual
 feature extraction, actual label generation, supervised dataset construction,
 split creation, leakage-test implementation, real Tenhou, real haifu, external

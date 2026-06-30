@@ -2,9 +2,9 @@
 
 ## Current stage
 
-Broader P7 evaluation dependency and model-strength evidence boundary
-definition after broader P7 model architecture / trainer planning boundary
-review.
+Broader P7 evaluation dependency and model-strength evidence boundary review
+after broader P7 evaluation dependency and model-strength evidence boundary
+definition.
 `03M` and `03N` name and review candidate future files and guardrails only;
 `03O` approved only the exact minimal implementation task and exact files.
 That task is now implemented, reviewed in `03P` with `Review can close`, and
@@ -49,7 +49,9 @@ docs-only task. `03AK` defines that model architecture / trainer planning
 boundary and selects a docs-only review gate next. `03AL` reviews it, records
 `Review can close` with no blocker and selects `Define broader P7 evaluation
 dependency and model-strength evidence boundary before implementation` as the
-next docs-only task. It does not approve broader P7 implementation, training,
+next docs-only task. `03AM` defines that evaluation dependency /
+model-strength evidence boundary and selects a docs-only review gate next. It
+does not approve broader P7 implementation, training,
 training-data construction, training-data approval, training-run approval,
 model architecture implementation, trainer implementation, dataloader,
 optimizer, loss, checkpoint, weights, evaluation implementation,
@@ -171,12 +173,13 @@ Broader P7 training-data approval and training-run boundary = defined in `03AI`;
 Broader P7 training-data approval and training-run boundary review = complete in `03AJ`; review can close with no blocker
 Broader P7 model architecture and trainer planning boundary = defined in `03AK`; no model architecture, trainer, dataloader, optimizer, loss, checkpoint, weights, training data, training run or training is approved
 Broader P7 model architecture and trainer planning boundary review = complete in `03AL`; review can close with no blocker
+Broader P7 evaluation dependency and model-strength evidence boundary = defined in `03AM`; no evaluation implementation, metric implementation, evaluation runner, benchmark harness, model-output integration, model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ comparison or candidate promotion is approved
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = define broader P7 evaluation dependency and model-strength evidence boundary before implementation
+Next = review broader P7 evaluation dependency and model-strength evidence boundary before implementation
 ```
 
 ## AI role
@@ -287,4 +290,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Define broader P7 evaluation dependency and model-strength evidence boundary before implementation.
+Review broader P7 evaluation dependency and model-strength evidence boundary before implementation.

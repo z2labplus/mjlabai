@@ -14,6 +14,72 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-30 — DR-0087 — Define Broader P7 Evaluation Evidence Boundary
+
+Decision:
+
+```text
+Broader P7 evaluation dependency and model-strength evidence boundary is defined before implementation. Set the next task to a docs-only review gate.
+```
+
+Context:
+
+- P7 current scope is closed only for the exact docs-only readiness chain plus
+  accepted minimal synthetic/local supervised feature-label smoke
+  implementation.
+- Full P7 remains open.
+- Broader P7 source readiness, source approval, parser / reader / ingestion,
+  actual feature extraction / label generation, supervised dataset
+  construction / split / leakage, training-data approval / training-run and
+  model architecture / trainer planning boundaries have been defined and
+  reviewed through `03AL`.
+- No evaluation implementation, metric implementation, evaluation runner,
+  benchmark harness, model-output integration, model-strength evidence,
+  Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68`
+  comparison or candidate-promotion evidence is approved.
+
+Rationale:
+
+- Future evidence claims must stay downstream of approved sources, model
+  artifacts, model outputs, protocols, sample size, uncertainty and leakage
+  controls.
+- Synthetic/local smoke, training-run logs and boundary documents must not be
+  overclaimed as model-strength evidence.
+- The next safest step is a docs-only review gate for `03AM`, not evaluation
+  implementation.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03AM_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_BEFORE_IMPLEMENTATION.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review broader P7 evaluation dependency and model-strength evidence boundary before implementation.`
+- No evaluation implementation, metric implementation, evaluation runner,
+  benchmark harness or model-output integration is approved by this decision.
+- No model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
+  evidence, LuckyJ `10.68` comparison or candidate promotion is created by
+  this decision.
+- No source approval, source ingestion, parser / reader / ingestion, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, training-data approval, training-run approval or training is
+  approved by this decision.
+- No model architecture implementation, trainer implementation, checkpoint,
+  weights, self-play, league or P8-P12 work is approved by this decision.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03AM_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03AL_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Accepted; docs-only broader P7 evaluation dependency and model-strength
+evidence boundary review is next.
+
 ## 2026-06-30 — DR-0086 — Review Broader P7 Model Trainer Boundary
 
 Decision:

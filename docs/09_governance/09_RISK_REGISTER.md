@@ -8,6 +8,19 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-30 — Broader P7 evaluation dependency and model-strength evidence boundary risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Evaluation dependency boundary definition is mistaken for evaluation implementation approval. | Evaluation / Governance | High | Medium | `03AM`, `10_NEXT`, handoff and stage contract state that no evaluation logic, metric implementation, runner or benchmark harness is approved. | Open |
+| Synthetic/local smoke evidence is mistaken for model-strength evidence. | Evaluation / Governance | High | Medium | `03AM` requires evidence grades and non-evidence warnings; synthetic/local smoke remains engineering validation only. | Open |
+| Training-run evidence is mistaken for model-strength evidence. | Training / Evaluation | High | Medium | `03AM` separates training-run evidence from model-strength evidence and requires separate approved evaluation. | Open |
+| Stable-dan or LuckyJ wording is overclaimed without approved source, sample size or uncertainty. | Evaluation / Research | High | Medium | `03AM` requires approved source, denominator, sample size, confidence method and separate review before stable-dan or LuckyJ claims. | Open |
+| Model-output evidence appears before model-output integration approval. | Evaluation / Governance | High | Medium | `03AM` treats unapproved model output as a stop condition. | Open |
+| Real Tenhou, real haifu, external logs or platform data enter evaluation planning before approval. | Data / Compliance | High | Medium | `03AM` requires source approval, rights/platform review and parser / reader / ingestion approval before any real-data evaluation. | Open |
+| Candidate promotion is inferred from boundary planning. | Governance / Funnel | High | Medium | `03AM` requires separate model-strength evidence review, risk review, promotion criteria and decision record. | Open |
+| P8-P12 work is treated as implicitly approved after evidence boundary definition. | Governance / Stage Control | High | Medium | `03AM`, stage contract and `10_NEXT` keep P8-P12 closed and require later transition reviews. | Open |
+
 ## 2026-06-30 — Broader P7 model architecture and trainer planning boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
