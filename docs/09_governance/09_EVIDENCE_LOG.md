@@ -8,6 +8,57 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-30 — Broader P7 minimal implementation proposal-boundary definition
+
+- Type: internal documentation / broader P7 minimal implementation
+  proposal-boundary definition evidence.
+- Stage: P7 supervised learning / docs-only broader P7 minimal implementation
+  proposal boundary after readiness checklist review.
+- Added boundary document:
+  - `docs/03_supervised_policy/03AQ_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_AFTER_READINESS_CHECKLIST_REVIEW.md`
+- Defined:
+  - proposal lifecycle vocabulary.
+  - candidate proposal classes.
+  - minimal proposal required sections.
+  - exact-scope requirements.
+  - forbidden proposal scope.
+  - future approval-decision separation.
+  - future proposal approval prerequisites.
+  - stop conditions.
+  - risk controls.
+  - evidence requirements.
+  - current proposal-boundary decision.
+  - first task candidate.
+  - planning decision.
+  - evidence grade.
+- Current proposal-boundary decision:
+  - `Broader P7 minimal implementation proposal boundary is defined, but no proposal is approved and no broader P7 implementation is approved.`
+- New next task:
+  - `Review broader P7 minimal implementation proposal boundary after readiness checklist review.`
+- Evidence grade:
+  - Broader P7 minimal implementation proposal-boundary definition evidence
+    only.
+- Not evidence of:
+  - minimal implementation proposal approval.
+  - broader P7 implementation approval.
+  - production code, tests, fixtures or data files.
+  - source approval or source ingestion approval.
+  - parser / reader / ingestion approval or implementation.
+  - actual feature extraction or label generation approval.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-06-30 — Broader P7 implementation readiness checklist review
 
 - Type: internal documentation / broader P7 implementation readiness

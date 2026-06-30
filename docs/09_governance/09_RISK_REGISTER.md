@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-30 — Broader P7 minimal implementation proposal-boundary risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Proposal-boundary definition is mistaken for a minimal implementation proposal. | Governance / Scope | High | Medium | `03AQ`, `10_NEXT`, handoff and stage contract state that no proposal is approved and the next task is only a docs-only review gate. | Open |
+| Proposal-boundary definition is mistaken for broader P7 implementation approval. | Governance / Scope | High | Medium | `03AQ` separates boundary definition, proposal draft, proposal review, approval decision, execution, review and acceptance. | Open |
+| Exact file paths in a future proposal are mistaken for edit permission. | Governance / Scope | High | Medium | `03AQ` requires a separate approval decision before any named file can be edited. | Open |
+| Candidate proposal classes are treated as executable implementation classes. | Governance / Scope | High | Medium | The `03AQ` class matrix has `Approved now = No` for every class and separates `may be drafted` from execution. | Open |
+| Future validation commands are mistaken for permission to add tests, fixtures or code. | Governance / Execution | Medium | Medium | `03AQ` says validation commands are required proposal content, not implementation permission. | Open |
+| Proposal evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 minimal implementation proposal-boundary definition evidence only. | Open |
+| P8-P12 work is treated as implicitly approved after proposal-boundary definition. | Governance / Stage Control | High | Medium | `03AQ`, stage contract and `10_NEXT` classify self-play, league and P8-P12 as prohibited/later-stage. | Open |
+
 ## 2026-06-30 — Broader P7 implementation readiness checklist review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

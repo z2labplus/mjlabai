@@ -121,6 +121,7 @@ docs/03_supervised_policy/03AM_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENG
 docs/03_supervised_policy/03AN_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AO_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_AFTER_BOUNDARY_CHAIN_REVIEW.md
 docs/03_supervised_policy/03AP_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW_AFTER_BOUNDARY_CHAIN_REVIEW.md
+docs/03_supervised_policy/03AQ_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_AFTER_READINESS_CHECKLIST_REVIEW.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -589,6 +590,20 @@ ingestion, actual feature extraction, actual label generation, supervised
 dataset construction, training, model / trainer implementation, evaluation
 implementation, model-output integration, strength evidence, real data,
 self-play, league or P8-P12.
+
+`docs/03_supervised_policy/03AQ_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_AFTER_READINESS_CHECKLIST_REVIEW.md`
+defines the broader P7 minimal implementation proposal boundary after the
+`03AP` readiness checklist review. It records proposal lifecycle vocabulary,
+candidate proposal classes, required proposal sections, exact-scope
+requirements, forbidden proposal scope, approval-decision separation,
+approval prerequisites, stop conditions, risk controls, evidence
+requirements, current proposal-boundary decision, first task candidate and
+evidence grade. It is proposal-boundary definition evidence only: it does not
+approve a proposal, approve broader P7 implementation, add production code,
+tests, fixtures or data files, approve source approval, ingestion, parser /
+reader, feature extraction, label generation, dataset construction, training,
+model / trainer implementation, evaluation, model-output integration,
+strength evidence, real data, self-play, league or P8-P12.
 
 ## Data-system files
 

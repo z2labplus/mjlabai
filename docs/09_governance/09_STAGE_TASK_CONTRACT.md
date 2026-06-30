@@ -2,8 +2,8 @@
 
 ## Current stage
 
-Broader P7 minimal implementation proposal boundary definition after broader
-P7 implementation readiness checklist review.
+Broader P7 minimal implementation proposal-boundary review after broader P7
+implementation readiness checklist review.
 `03M` and `03N` name and review candidate future files and guardrails only;
 `03O` approved only the exact minimal implementation task and exact files.
 That task is now implemented, reviewed in `03P` with `Review can close`, and
@@ -61,9 +61,14 @@ readiness decision that no broader P7 implementation class is approved now.
 `03AP` reviews that readiness checklist, records `Review can close` with no
 blocker, and selects `Define broader P7 minimal implementation proposal
 boundary after readiness checklist review` as the next docs-only task. That
-next task does not approve a proposal, approve broader P7 implementation,
-approve training, approve training-data construction, training-data approval,
-training-run approval,
+task defined the proposal lifecycle vocabulary, candidate proposal classes,
+required proposal sections, exact-scope requirements, forbidden proposal
+scope, approval-decision separation, prerequisites, stop conditions, risk
+controls and evidence requirements in `03AQ`. The next task is `Review
+broader P7 minimal implementation proposal boundary after readiness checklist
+review`. Neither `03AQ` nor its review gate approves a proposal, approve
+broader P7 implementation, approve training, approve training-data
+construction, training-data approval, training-run approval,
 model architecture implementation, trainer implementation, dataloader,
 optimizer, loss, checkpoint, weights, evaluation implementation,
 model-strength evidence, source approval, source ingestion, parser / reader /
@@ -188,12 +193,13 @@ Broader P7 evaluation dependency and model-strength evidence boundary = defined 
 Broader P7 evaluation dependency and model-strength evidence boundary review = complete in `03AN`; review can close with no blocker
 Broader P7 implementation readiness checklist = defined in `03AO`; no broader P7 implementation class is approved and the next task is a docs-only review gate
 Broader P7 implementation readiness checklist review = complete in `03AP`; review can close with no blocker and the next task is a docs-only minimal implementation proposal-boundary definition
+Broader P7 minimal implementation proposal boundary = defined in `03AQ`; no proposal or broader P7 implementation is approved and the next task is a docs-only proposal-boundary review gate
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = define broader P7 minimal implementation proposal boundary after readiness checklist review
+Next = review broader P7 minimal implementation proposal boundary after readiness checklist review
 ```
 
 ## AI role
@@ -304,4 +310,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Define broader P7 minimal implementation proposal boundary after readiness checklist review.
+Review broader P7 minimal implementation proposal boundary after readiness checklist review.

@@ -29,8 +29,8 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
-Current active stage is broader P7 minimal implementation proposal boundary
-definition after broader P7 implementation readiness checklist review:
+Current active stage is broader P7 minimal implementation proposal-boundary
+review after broader P7 implementation readiness checklist review:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -339,6 +339,22 @@ actual label generation, supervised dataset construction, split creation,
 leakage-test implementation, training data, training, model / trainer
 implementation, evaluation, model-output integration, real data, self-play,
 league or P8-P12.
+`docs/03_supervised_policy/03AQ_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_AFTER_READINESS_CHECKLIST_REVIEW.md`
+defines the broader P7 minimal implementation proposal boundary after the
+`03AP` readiness checklist review. It records proposal lifecycle vocabulary,
+candidate proposal classes, required proposal sections, exact-scope
+requirements, forbidden proposal scope, approval-decision separation,
+approval prerequisites, stop conditions, risk controls, evidence
+requirements, current proposal-boundary decision, first task candidate,
+planning decision and evidence grade. The next task is `Review broader P7
+minimal implementation proposal boundary after readiness checklist review`.
+That next task remains a docs-only review gate. `03AQ` does not approve a
+minimal implementation proposal, approve broader P7 implementation, add code,
+tests, fixtures, data files, source approval, source ingestion, parser /
+reader / ingestion, actual feature extraction, actual label generation,
+dataset construction, training data, training, model / trainer
+implementation, evaluation, model-output integration, real data, self-play,
+league or P8-P12.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -543,21 +559,23 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define broader P7 minimal implementation proposal boundary after readiness
+Review broader P7 minimal implementation proposal boundary after readiness
 checklist review.
-The broader-P7 minimal implementation proposal boundary task must be
-docs-only. It may define the required structure, exact-scope fields, approval
-separation, risk controls and stop conditions for a future minimal
-implementation proposal. It must not approve a proposal or implementation. It
-must not add production code, tests, fixtures, data files, source approval,
-source ingestion, parser / reader / ingestion, actual feature extraction,
-actual label generation, supervised dataset construction, split creation,
-leakage-test implementation, training data, training-run approval, training,
-model architecture or trainer implementation, evaluation implementation,
-metric implementation, evaluation runner, benchmark harness, real Tenhou,
-real haifu, external logs, platform data, model-output integration, CLI,
-broad file ingestion, self-play, league, P8-P12 work, Tenhou evidence,
-stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion claims.
+The broader-P7 minimal implementation proposal-boundary review task must be
+docs-only. It may review whether `03AQ` sufficiently defines lifecycle
+vocabulary, candidate proposal classes, required sections, exact-scope
+fields, approval separation, risk controls, evidence requirements and stop
+conditions for a future minimal implementation proposal. It must not approve a
+proposal or implementation. It must not add production code, tests, fixtures,
+data files, source approval, source ingestion, parser / reader / ingestion,
+actual feature extraction, actual label generation, supervised dataset
+construction, split creation, leakage-test implementation, training data,
+training-run approval, training, model architecture or trainer
+implementation, evaluation implementation, metric implementation, evaluation
+runner, benchmark harness, real Tenhou, real haifu, external logs, platform
+data, model-output integration, CLI, broad file ingestion, self-play, league,
+P8-P12 work, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison
+or candidate-promotion claims.
 ```
 
 Latest Akochan F1 audit summary:
@@ -836,12 +854,13 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is a docs-only broader P7 minimal implementation proposal
-  boundary definition after readiness checklist review. Full P7 remains open,
-  and `03AP` review closure is not proposal approval, implementation approval
-  or P8-P12 entry approval. Do not implement production code, tests, fixtures,
-  data files, parser, dataset reader, ingestion, feature extraction, label
-  generation, supervised dataset construction, CLI, model-output integration,
-  train, tune, self-play, league, connect to real Tenhou or treat review
-  closure as model-strength evidence.
+- Current next work is a docs-only broader P7 minimal implementation
+  proposal-boundary review after readiness checklist review. Full P7 remains
+  open, and `03AQ` proposal-boundary definition is not proposal approval,
+  implementation approval or P8-P12 entry approval. Do not implement
+  production code, tests, fixtures, data files, parser, dataset reader,
+  ingestion, feature extraction, label generation, supervised dataset
+  construction, CLI, model-output integration, train, tune, self-play, league,
+  connect to real Tenhou or treat boundary / review closure as model-strength
+  evidence.
 - Technical decisions from Web ChatGPT Pro must be written into Git + docs before becoming project facts.
