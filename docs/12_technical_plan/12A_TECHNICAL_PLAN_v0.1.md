@@ -28,8 +28,9 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-Broader P7 model architecture and trainer planning boundary review planning
-after broader P7 model architecture / trainer planning boundary definition.
+Broader P7 evaluation dependency and model-strength evidence boundary
+definition after broader P7 model architecture / trainer planning boundary
+review.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -82,17 +83,22 @@ gate next. `03AJ` reviews `03AI`, records `Review can close` with no blocker
 and selects `Define broader P7 model architecture and trainer planning
 boundary before implementation` as the next docs-only task. `03AK` defines
 that model architecture / trainer planning boundary and selects a docs-only
-review gate next.
+review gate next. `03AL` reviews `03AK`, records `Review can close` with no
+blocker and selects `Define broader P7 evaluation dependency and
+model-strength evidence boundary before implementation` as the next docs-only
+task.
 None of `03Y`, `03Z`, `03AA`, `03AB`, `03AC`, `03AD`, `03AE`, `03AF`, `03AG`,
-`03AH`, `03AI`, `03AJ`, `03AK` or the next model architecture / trainer
-planning boundary review task approves broader P7
+`03AH`, `03AI`, `03AJ`, `03AK`, `03AL` or the next evaluation dependency /
+model-strength evidence boundary task approves broader P7
 implementation, training, source approval, source ingestion, parser / reader /
 ingestion implementation, actual feature extraction, actual label generation,
 feature tensors, labels, targets, examples, splits, supervised dataset
 construction, leakage-test implementation, training-data construction,
 training-run approval, model architecture / trainer implementation,
 dataloader / optimizer / loss implementation, checkpoint / weights creation,
-real data, model-output integration, self-play, league or P8-P12.
+evaluation implementation, model-strength evidence, Tenhou evidence,
+stable-dan evidence, LuckyJ comparison, real data, model-output integration,
+self-play, league or P8-P12.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
@@ -328,13 +334,16 @@ review can close with no blocker.
 Broader P7 model architecture and trainer planning boundary = defined in
 `docs/03_supervised_policy/03AK_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_BEFORE_IMPLEMENTATION.md`;
 no model architecture, trainer, dataloader, optimizer, loss, checkpoint,
-weights, training data, training run or training is approved and the next task
-is a docs-only review gate.
+weights, training data, training run or training is approved.
+Broader P7 model architecture and trainer planning boundary review = complete
+in
+`docs/03_supervised_policy/03AL_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`;
+review can close with no blocker.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = review broader P7 model architecture and trainer planning boundary
-before implementation.
+Next = define broader P7 evaluation dependency and model-strength evidence
+boundary before implementation.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -468,7 +477,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Review broader P7 model architecture and trainer planning boundary before implementation.
+Define broader P7 evaluation dependency and model-strength evidence boundary before implementation.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
@@ -508,8 +517,10 @@ and selects this docs-only training-data approval / training-run boundary
 definition next. `03AI` defines that boundary and selects a docs-only review
 gate next. `03AJ` reviews it, records `Review can close`, and selects a
 docs-only model architecture / trainer planning boundary definition next.
-`03AK` defines that boundary and selects a docs-only review gate next. The next
-task must not add production code, tests, fixtures, data files, source
+`03AK` defines that boundary and selects a docs-only review gate next. `03AL`
+reviews it, records `Review can close`, and selects a docs-only evaluation
+dependency / model-strength evidence boundary definition next. The next task
+must not add production code, tests, fixtures, data files, source
 approval, source ingestion approval, data reads, parser
 implementation, dataset reader implementation, ingestion implementation,
 actual feature extraction, actual label generation, feature tensors, labels,
@@ -517,9 +528,11 @@ examples, splits, supervised dataset construction, leakage-test
 implementation, training-data construction, training-data approval,
 training-run approval, training-run implementation, training, model
 architecture implementation, trainer implementation, dataloader, optimizer,
-loss, checkpoint, weights, real Tenhou, real haifu, external logs, platform
-data, model-output integration, CLI, broad file ingestion, self-play, league,
-P8-P12 work or model-strength claims.
+loss, checkpoint, weights, evaluation implementation, model-strength evidence,
+Tenhou evidence, stable-dan evidence, LuckyJ comparison, candidate promotion,
+real Tenhou, real haifu, external logs, platform data, model-output
+integration, CLI, broad file ingestion, self-play, league, P8-P12 work or
+model-strength claims.
 
 The exact P6 implementation approved by `02N` is complete and reviewed in
 `docs/02_data_system/02O_P6_MINIMAL_REPLAY_SCHEMA_AND_SYNTHETIC_FIXTURE_IMPLEMENTATION_REVIEW.md`

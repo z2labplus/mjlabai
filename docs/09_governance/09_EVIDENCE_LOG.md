@@ -8,6 +8,63 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-30 — Broader P7 model architecture and trainer planning boundary review
+
+- Type: internal documentation / broader P7 model architecture and trainer
+  planning boundary review evidence.
+- Stage: P7 supervised learning / docs-only broader P7 model architecture and
+  trainer planning boundary review before implementation.
+- Added review document:
+  - `docs/03_supervised_policy/03AL_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+- Reviewed:
+  - `03AK` scope.
+  - purpose and north-star relationship.
+  - current no-model / no-trainer status.
+  - concept definitions.
+  - dependency map.
+  - model architecture planning boundary.
+  - trainer planning boundary.
+  - future model architecture approval record fields.
+  - future trainer approval record fields.
+  - candidate model / trainer classes.
+  - allowed future boundary.
+  - forbidden model architecture / trainer scope.
+  - stop conditions.
+  - risk controls.
+  - evidence requirements.
+  - first task candidate.
+  - planning decision.
+  - governance synchronization.
+- Decision:
+  - `Review can close.`
+- New next task:
+  - `Define broader P7 evaluation dependency and model-strength evidence boundary before implementation.`
+- Evidence grade:
+  - Broader P7 model architecture and trainer planning boundary review
+    evidence only.
+- Not evidence of:
+  - model architecture approval or implementation.
+  - model config, encoder, policy head, value head, auxiliary head or decision
+    head approval.
+  - dataloader, optimizer, loss, trainer or training-loop approval.
+  - checkpoint, weights, snapshot or model artifact approval.
+  - training-data approval or construction.
+  - training-run approval.
+  - training.
+  - source approval or source ingestion approval.
+  - parser / reader / ingestion approval or implementation.
+  - actual feature extraction or label generation approval.
+  - supervised dataset construction.
+  - split creation.
+  - leakage-test implementation.
+  - evaluation implementation.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-06-29 — Broader P7 model architecture and trainer planning boundary definition
 
 - Type: internal documentation / broader P7 model architecture and trainer

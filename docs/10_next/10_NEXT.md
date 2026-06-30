@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Review broader P7 model architecture and trainer planning boundary before implementation.
+- [ ] Define broader P7 evaluation dependency and model-strength evidence boundary before implementation.
 
 Current execution charter:
 
@@ -16,137 +16,66 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only review gate for the broader P7 model architecture and
-  trainer planning boundary before implementation.
+- This is a docs-only boundary definition task for broader P7 evaluation
+  dependency and model-strength evidence before implementation.
 - P7 current scope is closed only for the exact docs-only supervised-learning
   readiness chain plus accepted minimal synthetic/local supervised
   feature-label smoke implementation.
 - Full P7 remains open.
-- `docs/03_supervised_policy/03AA_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_BEFORE_IMPLEMENTATION.md`
-  defined the broader P7 data/source readiness and source-approval boundary
-  before implementation.
-- `docs/03_supervised_policy/03AB_BROADER_P7_DATA_SOURCE_READINESS_AND_SOURCE_APPROVAL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
-  reviewed that boundary and recorded `Review can close`.
-- `docs/03_supervised_policy/03AC_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_BEFORE_IMPLEMENTATION.md`
-  defines broader P7 parser / reader / ingestion vocabulary, dependency order,
-  candidate classes, future approval-record fields, allowed and forbidden
-  future behavior, stop conditions, risk controls and evidence requirements.
-- `docs/03_supervised_policy/03AD_BROADER_P7_PARSER_READER_INGESTION_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
-  reviews `03AC` and records `Review can close`.
-- `docs/03_supervised_policy/03AE_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_BEFORE_IMPLEMENTATION.md`
-  defines broader P7 actual feature extraction and label generation
-  vocabulary, current status, dependency order, future approval fields,
-  allowed and forbidden scope, stop conditions, risk controls, evidence
-  requirements and the next docs-only review gate before implementation.
-- `docs/03_supervised_policy/03AF_BROADER_P7_FEATURE_AND_LABEL_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
-  reviews `03AE`, records `Review can close` with no blocker and selects this
-  docs-only supervised dataset construction / split / leakage boundary task
-  next.
-- `docs/03_supervised_policy/03AG_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_BEFORE_IMPLEMENTATION.md`
-  defines supervised dataset construction vocabulary, split policy vocabulary,
-  leakage-control vocabulary, future approval prerequisites, allowed and
-  forbidden future scope, stop conditions, risk controls and evidence
-  requirements before any implementation can be considered.
-- `docs/03_supervised_policy/03AH_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_LEAKAGE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
-  reviews `03AG`, records `Review can close` with no blocker and selects this
-  docs-only training-data approval / training-run boundary definition task
-  next.
-- `docs/03_supervised_policy/03AI_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_BEFORE_IMPLEMENTATION.md`
-  defines training-data approval and training-run vocabulary, current status,
-  dependency order, future approval-record fields, allowed and forbidden
-  future scope, stop conditions, risk controls, evidence requirements and the
-  next docs-only review gate before implementation.
-- `docs/03_supervised_policy/03AJ_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
-  reviews `03AI`, records `Review can close` with no blocker and selected the
-  now-completed docs-only model architecture / trainer planning boundary
-  definition task.
 - `docs/03_supervised_policy/03AK_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_BEFORE_IMPLEMENTATION.md`
-  defines broader P7 model architecture / trainer planning vocabulary, current
-  no-model / no-trainer status, dependency order, future approval-record
-  fields, allowed and forbidden future behavior, stop conditions, risk
-  controls, evidence requirements and the next docs-only review gate before
-  implementation.
-- This task may review the model architecture / trainer planning boundary,
-  confirm whether it can close, and define the next P7-only task.
+  defined the broader P7 model architecture and trainer planning boundary
+  before implementation.
+- `docs/03_supervised_policy/03AL_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+  reviews `03AK`, records `Review can close` with no blocker and selects this
+  docs-only evaluation dependency / model-strength evidence boundary task next.
+- This task may define vocabulary, prerequisites, dependency order, allowed
+  and forbidden future scope, stop conditions, risk controls and evidence
+  requirements for future broader P7 evaluation dependencies and
+  model-strength evidence.
 - This task does not close full P7.
 - This task does not approve broader P7 implementation.
+- This task does not implement evaluation.
+- This task does not produce model-strength evidence.
+- This task does not provide Tenhou evidence, stable-dan ranked-game evidence,
+  LuckyJ `10.68` comparison or candidate-promotion evidence.
 - This task does not approve any source for training or evaluation.
-- This task does not approve training data.
-- This task does not approve a training run.
-- This task does not approve training-data construction.
-- This task does not approve training-run implementation.
-- This task does not approve model architecture implementation.
-- This task does not approve trainer implementation.
-- This task does not approve dataloader, optimizer or loss implementation.
-- This task does not approve checkpoint, weights or snapshot creation.
-- This task does not approve source ingestion.
-- This task does not approve parser / reader / ingestion.
-- This task does not implement parser, reader, ingestion, dataset reader,
-  broad file ingestion or CLI data paths.
-- This task does not read real or external source files.
-- This task does not approve or implement actual feature extraction.
-- This task does not approve or implement actual label generation.
-- This task does not approve or implement supervised dataset construction.
-- This task does not approve training-data construction.
-- This task does not approve split creation.
-- This task does not approve leakage-test implementation.
-- This task does not approve training.
-- This task does not approve model-output integration.
-- This task does not approve real Tenhou, real haifu, external logs, platform
-  data, accounts, sessions, cookies or tokens.
-- This task does not approve self-play, league or P8-P12 entry.
+- This task does not approve source ingestion, parser / reader / ingestion,
+  feature extraction, label generation, supervised dataset construction,
+  split creation, leakage-test implementation, training-data construction,
+  training-data approval, training-run approval or training.
+- This task does not approve model architecture implementation, trainer
+  implementation, dataloader, optimizer, loss, checkpoint, weights, snapshot,
+  model artifact, model-output integration, self-play, league or P8-P12 entry.
 - Do not add production code.
 - Do not modify implementation logic.
 - Do not add tests.
 - Do not add fixtures.
 - Do not add data files.
 - Do not read real or external source files.
-- Do not approve a source, source ingestion, parser / reader / ingestion,
-  feature extraction, label generation, supervised dataset construction,
-  split policy execution, leakage-test implementation, training data,
-  training-data construction, training-run approval or training by implication.
-- Do not emit feature tensors, labels, targets, examples, splits or supervised
-  dataset records.
-- Do not implement model architecture, model config, encoder, policy head,
-  value head, auxiliary head, decision head, dataloader, optimizer, loss,
-  trainer or training loop.
-- Do not construct a dataset manifest.
-- Do not create train/validation/test splits.
-- Do not implement leakage checks.
-- Do not construct training data.
-- Do not run training or tuning.
-- Do not define this boundary as approval to train.
-- Do not implement model architecture.
-- Do not implement dataloader, optimizer, loss or trainer.
-- Do not create checkpoint, weights or snapshot.
-- Do not run real-data, Tenhou, self-play, league, training, model-output
-  integration, Akochan `system.exe`, `libai.so`, third-party binary or unknown
-  model artifact commands.
+- Do not implement evaluation logic, metric implementation, evaluation runner,
+  benchmark harness, CLI, broad file ingestion, parser, reader, ingestion,
+  feature extraction, label generation, dataset construction, split creation,
+  leakage checks, dataloader, optimizer, loss, trainer, training loop,
+  checkpoint creation or weight loading.
+- Do not run training, tuning, self-play, league, real Tenhou, real haifu,
+  external-log, platform-data, model-output, Akochan `system.exe`, `libai.so`,
+  third-party binary or unknown model artifact commands.
 - Do not create platform automation, scraping, evasion or account tooling.
 - Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint`
   or `snapshot` files.
-- Do not vendor or copy third-party source into this repository.
-- Do not vendor or save Akochan `system.exe`, `libai.so`, `params/` or
-  third-party build artifacts.
-- Do not claim any P5 closure artifact, P6 closure artifact, P6
-  synthetic/local schema artifact, P7 current-scope closure artifact,
-  broader P7 source-readiness review artifact, parser / reader / ingestion
-  boundary/review artifact, actual feature / label boundary artifact, or
-  dataset / split / leakage boundary artifact is model-strength evidence,
-  Tenhou evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison
-  or candidate-promotion evidence.
+- Do not vendor or copy third-party source, binaries, params or artifacts into
+  this repository.
 - Stop before commit if new implementation logic, new tests, new fixtures,
-  data files, real data, parser / reader / ingestion behavior, actual feature
-  extraction, actual label generation, feature tensors, labels, targets,
-  examples, splits, supervised dataset construction, dataset manifests,
-  leakage-check implementation, model-output path, CLI, broad ingestion,
-  third-party artifact, overclaim, source approval, ingestion approval, parser
-  / reader / ingestion approval, label approval, feature approval, dataset
-  approval, training-data approval, training-run approval, training approval
-  or P8-P12 drift appears.
+  data files, real data, evaluation implementation, model-strength evidence,
+  Tenhou evidence, stable-dan ranked-game evidence, LuckyJ comparison,
+  candidate-promotion evidence, source approval, ingestion approval, parser /
+  reader / ingestion approval, feature approval, label approval, dataset
+  approval, training-data approval, training-run approval, training approval or
+  P8-P12 drift appears.
 
 ## Completed
 
+- [x] 2026-06-30 Reviewed broader P7 model architecture and trainer planning boundary before implementation: added `docs/03_supervised_policy/03AL_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`, reviewed `03AK` scope, purpose, current no-model / no-trainer status, concept definitions, dependency map, model architecture planning boundary, trainer planning boundary, future approval-record fields, candidate model / trainer classes, allowed future boundary, forbidden scope, stop conditions, risk controls, evidence requirements, first task candidate, planning decision, evidence grade and governance synchronization, and recorded `Review can close`. The next task is `Define broader P7 evaluation dependency and model-strength evidence boundary before implementation.` This is broader P7 model architecture and trainer planning boundary review evidence only. It does not close full P7, approve broader P7 implementation, approve evaluation implementation, approve model architecture implementation, approve trainer implementation, approve dataloader / optimizer / loss implementation, approve checkpoint / weights creation, approve training data, approve training-run approval, approve training, approve source approval, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve split creation, approve leakage-test implementation, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-29 Defined broader P7 model architecture and trainer planning boundary before implementation: added `docs/03_supervised_policy/03AK_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_BEFORE_IMPLEMENTATION.md`, defining current no-architecture / no-trainer / no-training status, concept definitions, dependency order, model architecture planning boundary, trainer planning boundary, future approval-record fields, candidate model / trainer classes, allowed and forbidden future scope, stop conditions, risk controls, evidence requirements, first task candidate, planning decision and evidence grade. The next task is `Review broader P7 model architecture and trainer planning boundary before implementation.` This is broader P7 model architecture and trainer planning boundary definition evidence only. It does not close full P7, approve broader P7 implementation, approve model architecture implementation, approve model config, approve encoder / policy head / value head / auxiliary head / decision head implementation, approve dataloader / optimizer / loss / trainer / training-loop implementation, approve checkpoint / weights / snapshot / model artifact creation, approve training data, approve training-data construction, approve training-run approval, approve training, approve source approval, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve split creation, approve leakage-test implementation, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-29 Reviewed broader P7 training-data approval and training-run boundary before implementation: added `docs/03_supervised_policy/03AJ_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`, reviewed `03AI` scope, purpose, current no-training-data / no-training-run status, concept definitions, dependency order, training-data approval boundary, training-run boundary, future approval-record fields, candidate training-data / training-run classes, allowed future boundary, forbidden scope, stop conditions, risk controls, evidence requirements, first task candidate, planning decision, evidence grade and governance synchronization, and recorded `Review can close`. The next task is `Define broader P7 model architecture and trainer planning boundary before implementation.` This is broader P7 training-data approval and training-run boundary review evidence only. It does not close full P7, approve training data, approve training-data construction, approve training-run approval, approve training, approve source approval, approve training-data source, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve split creation, approve leakage-test implementation, approve model architecture / trainer, approve checkpoint / weights, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.
 - [x] 2026-06-29 Defined broader P7 training-data approval and training-run boundary before implementation: added `docs/03_supervised_policy/03AI_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_BEFORE_IMPLEMENTATION.md`, defining training-data approval purpose, training-run boundary purpose, current no-training-data / no-training-run status, concept definitions, dependency order, training-data approval boundary, training-run boundary, future approval-record fields, candidate training-data / training-run classes, allowed future boundary, forbidden scope, stop conditions, risk controls, evidence requirements, first task candidate, planning decision and evidence grade. The next task is `Review broader P7 training-data approval and training-run boundary before implementation.` This is broader P7 training-data approval and training-run boundary definition evidence only. It does not close full P7, approve training data, approve training-data construction, approve training-run approval, approve training, approve source approval, approve training-data source, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve split creation, approve leakage-test implementation, approve model architecture / trainer, approve checkpoint / weights, approve real data, approve model-output integration, approve self-play, approve league, approve P8-P12, or provide model-strength, Tenhou ranked, stable-dan ranked-game, LuckyJ comparison or candidate-promotion evidence.

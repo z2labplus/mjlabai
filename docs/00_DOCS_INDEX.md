@@ -116,6 +116,7 @@ docs/03_supervised_policy/03AH_BROADER_P7_SUPERVISED_DATASET_CONSTRUCTION_SPLIT_
 docs/03_supervised_policy/03AI_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AJ_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RUN_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AK_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03AL_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -523,6 +524,16 @@ is boundary-definition evidence only, not model architecture approval, trainer
 approval, dataloader / optimizer / loss approval, checkpoint / weights
 approval, training-data approval, training-run approval, training, P8-P12 entry
 or model-strength evidence.
+
+`docs/03_supervised_policy/03AL_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+reviews the broader P7 model architecture and trainer planning boundary before
+implementation. It records `Review can close` with no blocker and selects
+`Define broader P7 evaluation dependency and model-strength evidence boundary
+before implementation` as the next docs-only task. It is boundary-review
+evidence only, not model architecture approval, trainer approval, evaluation
+implementation, checkpoint / weights approval, training, P8-P12 entry,
+model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ `10.68`
+comparison or candidate-promotion evidence.
 
 ## Data-system files
 

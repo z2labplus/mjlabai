@@ -29,9 +29,9 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
-Current active stage is broader P7 model architecture and trainer planning
-boundary definition after broader P7 training-data / training-run boundary
-review:
+Current active stage is broader P7 evaluation dependency and model-strength
+evidence boundary definition after broader P7 model architecture / trainer
+planning boundary review:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -269,6 +269,15 @@ not approve model architecture implementation, trainer implementation,
 dataloader / optimizer / loss implementation, checkpoint / weights creation,
 training-data approval, training-run approval, training, real data,
 model-output integration, self-play, league or P8-P12.
+`docs/03_supervised_policy/03AL_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+reviews that boundary, records `Review can close` with no blocker and selects
+`Define broader P7 evaluation dependency and model-strength evidence boundary
+before implementation` as the next docs-only task. It does not approve model
+architecture implementation, trainer implementation, dataloader / optimizer /
+loss implementation, checkpoint / weights creation, evaluation
+implementation, model-strength evidence, Tenhou evidence, stable-dan evidence,
+LuckyJ `10.68` comparison, candidate promotion, training, real data,
+model-output integration, self-play, league or P8-P12.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -473,16 +482,17 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review broader P7 model architecture and trainer planning boundary before
-implementation.
-The broader-P7 model architecture / trainer planning boundary review task must
-be docs-only. It must not implement model architecture, trainer, dataloader,
-optimizer, loss, checkpoint, weights, training, training-run approval,
-training-data approval, parser, dataset reader, ingestion, actual feature
-extraction, actual label generation, supervised dataset construction, split
-creation, leakage-test implementation, real Tenhou, real haifu, external logs,
-platform data, model-output integration, CLI, broad file ingestion, self-play,
-league, P8-P12 work or model-strength claims.
+Define broader P7 evaluation dependency and model-strength evidence boundary
+before implementation.
+The broader-P7 evaluation dependency / model-strength evidence boundary task
+must be docs-only. It must not implement evaluation, produce strength evidence,
+approve model architecture or trainer work, approve training, approve
+training-data approval, approve parser, dataset reader, ingestion, actual
+feature extraction, actual label generation, supervised dataset construction,
+split creation, leakage-test implementation, real Tenhou, real haifu, external
+logs, platform data, model-output integration, CLI, broad file ingestion,
+self-play, league, P8-P12 work, Tenhou evidence, stable-dan evidence, LuckyJ
+`10.68` comparison or candidate-promotion claims.
 ```
 
 Latest Akochan F1 audit summary:

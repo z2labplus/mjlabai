@@ -14,6 +14,80 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-30 — DR-0086 — Review Broader P7 Model Trainer Boundary
+
+Decision:
+
+```text
+Review can close. Define broader P7 evaluation dependency and model-strength evidence boundary before implementation as the next docs-only task.
+```
+
+Context:
+
+- P7 current scope is closed only for the exact docs-only readiness chain plus
+  accepted minimal synthetic/local supervised feature-label smoke
+  implementation.
+- Full P7 remains open.
+- Broader P7 source readiness, source approval, parser / reader / ingestion,
+  actual feature extraction / label generation, supervised dataset
+  construction / split / leakage, training-data approval / training-run and
+  model architecture / trainer planning boundaries have been defined.
+- No model architecture, model config, dataloader, optimizer, loss, trainer,
+  training loop, checkpoint, weights, training data, training run, training,
+  source approval, parser / reader / ingestion, feature extraction, label
+  generation, supervised dataset, evaluation implementation, real data,
+  model-output integration or P8-P12 work is approved.
+
+Rationale:
+
+- `03AK` sufficiently defines model architecture / trainer planning
+  vocabulary, current no-model / no-trainer status, dependency map, approval
+  record fields, candidate classes, allowed and forbidden future scope, stop
+  conditions, risk controls and evidence requirements.
+- The next unresolved boundary before broader implementation can be discussed
+  is evaluation dependency and model-strength evidence, but only as docs-only
+  boundary definition.
+- Review closure must not be read as model, trainer, checkpoint, training or
+  model-strength approval.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03AL_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define broader P7 evaluation dependency and model-strength evidence boundary before implementation.`
+- No model architecture implementation, model config, encoder, policy head,
+  value head, auxiliary head, decision head, dataloader, optimizer, loss,
+  trainer, training loop, checkpoint, weights, snapshot or model artifact is
+  approved by this decision.
+- No training data, training-data construction, training-run approval,
+  training-run implementation or training is approved by this decision.
+- No source approval, source ingestion, parser / reader / ingestion
+  implementation, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation, leakage-test implementation
+  or evaluation implementation is approved by this decision.
+- No real Tenhou, real haifu, external logs, platform data, accounts,
+  sessions, cookies or tokens may be read by this decision.
+- No model-output integration, self-play, league or P8-P12 work is approved by
+  this decision.
+- This decision is not model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison or
+  candidate-promotion evidence.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03AL_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+- `docs/03_supervised_policy/03AK_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_BEFORE_IMPLEMENTATION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Accepted; docs-only broader P7 evaluation dependency and model-strength
+evidence boundary definition is next.
+
 ## 2026-06-29 — DR-0085 — Define Broader P7 Model Trainer Boundary
 
 Decision:
