@@ -8,6 +8,58 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-01 — Broader P7 minimal synthetic/local parser-reader smoke implementation review
+
+- Type: internal documentation / broader P7 exact minimal synthetic/local
+  parser-reader smoke implementation review evidence.
+- Stage: P7 supervised learning / docs-only broader P7 minimal
+  synthetic/local parser-reader smoke implementation review gate.
+- Added review document:
+  - `docs/03_supervised_policy/03AV_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_REVIEW.md`
+- Reviewed:
+  - `docs/03_supervised_policy/03AU_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
+  - `docs/03_supervised_policy/03AS_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_FOR_REVIEW_AFTER_PROPOSAL_BOUNDARY_REVIEW.md`
+  - `docs/03_supervised_policy/03AT_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md`
+  - `src/mjlabai/supervised/synthetic_parser_reader_smoke.py`
+  - `tests/supervised/test_synthetic_parser_reader_smoke.py`
+  - current supervised/data synthetic-local support artifacts.
+- Review findings:
+  - exact approved implementation files were respected.
+  - no fixture/data file was added.
+  - no existing fixture was modified.
+  - module scope is in-memory synthetic/local only.
+  - test scope is synthetic/local and read-only for existing fixtures.
+  - input and output boundaries are safe.
+  - non-evidence boundaries are safe.
+  - validation passed.
+  - governance is synchronized.
+- Review decision:
+  - `Review can close.`
+- New next task:
+  - `Decide whether broader P7 minimal synthetic/local parser-reader smoke implementation can be accepted as current-scope complete.`
+- Evidence grade:
+  - Broader P7 minimal synthetic/local parser-reader smoke implementation
+    review evidence only.
+- Not evidence of:
+  - broader P7 implementation approval.
+  - source approval or source ingestion approval.
+  - broad parser / reader / ingestion approval.
+  - actual feature extraction or label generation.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - real-data approval.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-06-30 — Broader P7 minimal synthetic/local parser-reader smoke implementation
 
 - Type: internal implementation / broader P7 exact minimal synthetic/local

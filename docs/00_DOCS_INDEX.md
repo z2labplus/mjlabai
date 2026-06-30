@@ -126,6 +126,7 @@ docs/03_supervised_policy/03AR_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDA
 docs/03_supervised_policy/03AS_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_FOR_REVIEW_AFTER_PROPOSAL_BOUNDARY_REVIEW.md
 docs/03_supervised_policy/03AT_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md
 docs/03_supervised_policy/03AU_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md
+docs/03_supervised_policy/03AV_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_REVIEW.md
 src/mjlabai/supervised/synthetic_parser_reader_smoke.py
 tests/supervised/test_synthetic_parser_reader_smoke.py
 ```
@@ -677,6 +678,15 @@ inputs and unsafe provenance / hidden / future information, and returns only a
 JSON-safe guardrail summary. It is not a broad parser, reader, ingestion path,
 feature extractor, label generator, dataset builder, model-output integration,
 training path or strength evidence.
+
+`docs/03_supervised_policy/03AV_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_REVIEW.md`
+reviews that exact implementation, confirms the approved file scope was
+respected, confirms no fixture/data file or unrelated implementation file was
+added, records validation passing and records `Review can close`. It is
+implementation review evidence only, not broader P7 implementation approval,
+source approval, ingestion approval, feature extraction, label generation,
+dataset construction, training, evaluation, model-output integration,
+model-strength evidence or P8-P12 entry.
 
 ## Data-system files
 
