@@ -8,6 +8,62 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-30 — Broader P7 evaluation dependency and model-strength evidence boundary review
+
+- Type: internal documentation / broader P7 evaluation dependency and
+  model-strength evidence boundary review evidence.
+- Stage: P7 supervised learning / docs-only broader P7 evaluation dependency
+  and model-strength evidence boundary review before implementation.
+- Added review document:
+  - `docs/03_supervised_policy/03AN_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+- Reviewed:
+  - `03AM` scope.
+  - purpose and north-star relationship.
+  - current no-model-strength-evidence status.
+  - concept definitions.
+  - dependency map.
+  - evaluation dependency boundary.
+  - model-strength evidence boundary.
+  - Tenhou / stable-dan / LuckyJ evidence boundary.
+  - future evidence-record fields.
+  - candidate evaluation / evidence classes.
+  - allowed future boundary.
+  - forbidden evaluation / evidence scope.
+  - stop conditions.
+  - risk controls.
+  - evidence requirements.
+  - first task candidate.
+  - planning decision.
+  - governance synchronization.
+- Decision:
+  - `Review can close.`
+- New next task:
+  - `Define broader P7 implementation readiness checklist after boundary-chain review.`
+- Evidence grade:
+  - Broader P7 evaluation dependency and model-strength evidence boundary
+    review evidence only.
+- Not evidence of:
+  - broader P7 implementation approval.
+  - evaluation implementation.
+  - metric implementation.
+  - evaluation runner or benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - source approval or source ingestion approval.
+  - parser / reader / ingestion approval or implementation.
+  - actual feature extraction or label generation approval.
+  - supervised dataset construction.
+  - split creation or leakage-test implementation.
+  - training-data approval.
+  - training-run approval.
+  - training.
+  - model architecture or trainer implementation.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-06-30 — Broader P7 evaluation dependency and model-strength evidence boundary definition
 
 - Type: internal documentation / broader P7 evaluation dependency and

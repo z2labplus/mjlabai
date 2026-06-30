@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-30 — Broader P7 evaluation dependency and model-strength evidence boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Review closure is mistaken for broader P7 implementation approval. | Governance / Scope | High | Medium | `03AN`, `10_NEXT`, handoff and stage contract state that `Review can close` closes only the review gate and approves no implementation. | Open |
+| Review closure is mistaken for evaluation implementation, metric implementation, runner or benchmark harness approval. | Evaluation / Governance | High | Medium | `03AN` preserves `03AM` boundaries and selects only a docs-only readiness checklist task next. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 evaluation dependency and model-strength evidence boundary review evidence only. | Open |
+| The next readiness checklist task is mistaken for implementation approval. | Governance / Scope | High | Medium | New `10_NEXT` item says readiness checklist only and forbids code, tests, fixtures, data files, source approval, ingestion, training and evaluation implementation. | Open |
+| Source, parser, feature, label, dataset, training-data or training-run approvals are inferred from review closure. | Data / Training / Governance | High | Medium | `03AN` repeats that all upstream approvals remain separate and unapproved. | Open |
+| P8-P12 work is treated as implicitly approved after evidence-boundary review closure. | Governance / Stage Control | High | Medium | `03AN`, stage contract and `10_NEXT` keep P8-P12 closed and require later transition reviews. | Open |
+
 ## 2026-06-30 — Broader P7 evaluation dependency and model-strength evidence boundary risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

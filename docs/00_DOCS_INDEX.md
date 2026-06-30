@@ -118,6 +118,7 @@ docs/03_supervised_policy/03AJ_BROADER_P7_TRAINING_DATA_APPROVAL_AND_TRAINING_RU
 docs/03_supervised_policy/03AK_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AL_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AM_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03AN_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -546,6 +547,17 @@ it does not approve evaluation implementation, metric implementation, an
 evaluation runner, benchmark harness, model-output integration, model-strength
 evidence, Tenhou evidence, stable-dan ranked-game evidence, LuckyJ comparison,
 candidate promotion, training or P8-P12 entry.
+
+`docs/03_supervised_policy/03AN_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+reviews the broader P7 evaluation dependency and model-strength evidence
+boundary before implementation. It records `Review can close` with no blocker
+and selects `Define broader P7 implementation readiness checklist after
+boundary-chain review` as the next docs-only task. It is boundary-review
+evidence only, not evaluation implementation, metric implementation, an
+evaluation runner, benchmark harness, model-output integration,
+model-strength evidence, Tenhou evidence, stable-dan ranked-game evidence,
+LuckyJ `10.68` comparison, candidate promotion, training, broader P7
+implementation approval or P8-P12 entry approval.
 
 ## Data-system files
 
