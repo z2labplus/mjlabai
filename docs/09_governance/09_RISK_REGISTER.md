@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-30 — Broader P7 implementation readiness checklist review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Readiness checklist review closure is mistaken for broader P7 implementation approval. | Governance / Scope | High | Medium | `03AP`, `10_NEXT`, handoff and stage contract state that `Review can close` closes only the review gate and approves no implementation. | Open |
+| The next minimal implementation proposal-boundary task is mistaken for proposal approval or implementation approval. | Governance / Scope | High | Medium | New `10_NEXT` first item is docs-only proposal-boundary definition and forbids approval, code, tests, fixtures, data files and execution. | Open |
+| `proposal_ready_candidate` statuses are treated as executable tasks. | Governance / Scope | High | Medium | `03AP` reaffirms that `proposal_ready_candidate` means proposal drafting readiness only and requires a later approval decision before execution. | Open |
+| Future proposal fields are treated as satisfying upstream approvals. | Governance / Data | High | Medium | `03AP` preserves separate upstream approvals for source, ingestion, feature / label, dataset, training-data, model / trainer and evaluation work. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 implementation readiness checklist review evidence only. | Open |
+| P8-P12 work is treated as implicitly approved after checklist review closure. | Governance / Stage Control | High | Medium | `03AP`, stage contract and `10_NEXT` keep self-play, league and P8-P12 closed until separate transition and approval records exist. | Open |
+
 ## 2026-06-30 — Broader P7 implementation readiness checklist risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

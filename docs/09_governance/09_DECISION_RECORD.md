@@ -14,6 +14,75 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-30 — DR-0090 — Review Broader P7 Implementation Readiness Checklist
+
+Decision:
+
+```text
+Review can close. Define broader P7 minimal implementation proposal boundary after readiness checklist review as the next docs-only task.
+```
+
+Context:
+
+- P7 current scope is closed only for the exact docs-only readiness chain plus
+  accepted minimal synthetic/local supervised feature-label smoke
+  implementation.
+- Full P7 remains open.
+- `03AO` defines the broader P7 implementation readiness checklist after the
+  reviewed boundary chain from `03Y` through `03AN`.
+- No broader P7 implementation class is approved by `03AO`.
+- No source approval, source ingestion, parser / reader / ingestion, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, split creation, leakage-test implementation, training-data
+  approval, training-run approval, training, model architecture / trainer
+  implementation, evaluation implementation, model-output integration or
+  P8-P12 entry is approved.
+
+Rationale:
+
+- The readiness checklist safely separates boundary readiness, proposal
+  drafting readiness, approval decisions and execution.
+- The checklist's readiness vocabulary, upstream artifact checks, candidate
+  implementation matrix, future proposal fields, future approval-decision
+  fields, stop conditions, risk controls and evidence requirements are
+  sufficient.
+- The next safest step is a docs-only proposal-boundary definition, not
+  proposal approval or implementation.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03AP_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW_AFTER_BOUNDARY_CHAIN_REVIEW.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define broader P7 minimal implementation proposal boundary after readiness checklist review.`
+- This decision does not approve a minimal implementation proposal.
+- This decision does not approve broader P7 implementation.
+- No production code, tests, fixtures or data files are added by this
+  decision.
+- No source approval, source ingestion, parser / reader / ingestion, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, split creation, leakage-test implementation, training-data
+  approval, training-run approval, training, model architecture / trainer
+  implementation, evaluation implementation, metric implementation,
+  evaluation runner, benchmark harness, model-output integration,
+  model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ
+  `10.68` comparison, candidate promotion, self-play, league or P8-P12 entry
+  is approved by this decision.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03AP_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW_AFTER_BOUNDARY_CHAIN_REVIEW.md`
+- `docs/03_supervised_policy/03AO_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_AFTER_BOUNDARY_CHAIN_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Accepted; docs-only broader P7 minimal implementation proposal-boundary
+definition is next.
+
 ## 2026-06-30 — DR-0089 — Define Broader P7 Implementation Readiness Checklist
 
 Decision:

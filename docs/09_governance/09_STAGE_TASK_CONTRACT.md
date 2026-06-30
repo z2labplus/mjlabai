@@ -2,8 +2,8 @@
 
 ## Current stage
 
-Broader P7 implementation readiness checklist review after broader P7
-boundary-chain readiness checklist definition.
+Broader P7 minimal implementation proposal boundary definition after broader
+P7 implementation readiness checklist review.
 `03M` and `03N` name and review candidate future files and guardrails only;
 `03O` approved only the exact minimal implementation task and exact files.
 That task is now implemented, reviewed in `03P` with `Review can close`, and
@@ -58,10 +58,12 @@ status vocabulary, required upstream artifacts, candidate implementation class
 readiness matrix, future proposal fields, future approval-decision fields,
 stop conditions, risk controls, evidence requirements and the current
 readiness decision that no broader P7 implementation class is approved now.
-The next task is `Review broader P7 implementation readiness checklist after
-boundary-chain review`, a docs-only review gate. It does not approve broader
-P7 implementation, training,
-training-data construction, training-data approval, training-run approval,
+`03AP` reviews that readiness checklist, records `Review can close` with no
+blocker, and selects `Define broader P7 minimal implementation proposal
+boundary after readiness checklist review` as the next docs-only task. That
+next task does not approve a proposal, approve broader P7 implementation,
+approve training, approve training-data construction, training-data approval,
+training-run approval,
 model architecture implementation, trainer implementation, dataloader,
 optimizer, loss, checkpoint, weights, evaluation implementation,
 model-strength evidence, source approval, source ingestion, parser / reader /
@@ -185,12 +187,13 @@ Broader P7 model architecture and trainer planning boundary review = complete in
 Broader P7 evaluation dependency and model-strength evidence boundary = defined in `03AM`; no evaluation implementation, metric implementation, evaluation runner, benchmark harness, model-output integration, model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ comparison or candidate promotion is approved
 Broader P7 evaluation dependency and model-strength evidence boundary review = complete in `03AN`; review can close with no blocker
 Broader P7 implementation readiness checklist = defined in `03AO`; no broader P7 implementation class is approved and the next task is a docs-only review gate
+Broader P7 implementation readiness checklist review = complete in `03AP`; review can close with no blocker and the next task is a docs-only minimal implementation proposal-boundary definition
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = review broader P7 implementation readiness checklist after boundary-chain review
+Next = define broader P7 minimal implementation proposal boundary after readiness checklist review
 ```
 
 ## AI role
@@ -301,4 +304,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review broader P7 implementation readiness checklist after boundary-chain review.
+Define broader P7 minimal implementation proposal boundary after readiness checklist review.

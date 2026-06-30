@@ -120,6 +120,7 @@ docs/03_supervised_policy/03AL_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNIN
 docs/03_supervised_policy/03AM_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AN_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AO_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_AFTER_BOUNDARY_CHAIN_REVIEW.md
+docs/03_supervised_policy/03AP_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW_AFTER_BOUNDARY_CHAIN_REVIEW.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -574,6 +575,20 @@ training data, training run, training, model architecture / trainer
 implementation, evaluation implementation, model-output integration,
 model-strength evidence, Tenhou evidence, LuckyJ comparison, candidate
 promotion, self-play, league or P8-P12 entry.
+
+`docs/03_supervised_policy/03AP_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW_AFTER_BOUNDARY_CHAIN_REVIEW.md`
+reviews the `03AO` broader P7 implementation readiness checklist and records
+`Review can close` with no blocker. It confirms that readiness vocabulary,
+upstream artifact checks, candidate implementation class statuses, proposal
+fields, approval-decision fields, stop conditions, risk controls, evidence
+requirements and governance synchronization are sufficient before a later
+minimal implementation proposal-boundary definition. It is readiness-checklist
+review evidence only: it does not approve a proposal, broader P7
+implementation, source approval, source ingestion, parser / reader /
+ingestion, actual feature extraction, actual label generation, supervised
+dataset construction, training, model / trainer implementation, evaluation
+implementation, model-output integration, strength evidence, real data,
+self-play, league or P8-P12.
 
 ## Data-system files
 

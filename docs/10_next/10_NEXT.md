@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Review broader P7 implementation readiness checklist after boundary-chain review.
+- [ ] Define broader P7 minimal implementation proposal boundary after readiness checklist review.
 
 Current execution charter:
 
@@ -16,23 +16,19 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only readiness-checklist review gate after the broader P7
-  implementation readiness checklist definition.
+- This is a docs-only minimal implementation proposal-boundary definition
+  after the broader P7 implementation readiness checklist review.
+- `docs/03_supervised_policy/03AP_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW_AFTER_BOUNDARY_CHAIN_REVIEW.md`
+  reviewed `03AO` and recorded `Review can close`.
 - P7 current scope is closed only for the exact docs-only supervised-learning
   readiness chain plus accepted minimal synthetic/local supervised
   feature-label smoke implementation.
 - Full P7 remains open.
-- `docs/03_supervised_policy/03AN_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
-  reviewed the broader P7 evaluation dependency and model-strength evidence
-  boundary and recorded `Review can close`.
-- `docs/03_supervised_policy/03AO_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_AFTER_BOUNDARY_CHAIN_REVIEW.md`
-  defines the broader P7 implementation readiness checklist after
-  boundary-chain review.
-- This task may review readiness vocabulary, upstream artifact checks,
-  candidate implementation class statuses, future proposal fields, future
-  approval-decision fields, stop conditions, risk controls and evidence
-  requirements before any broader P7 implementation proposal.
+- This task may define what a future broader P7 minimal implementation proposal
+  must contain, how it must separate proposal drafting from approval, and what
+  stop conditions must block later implementation.
 - This task does not close full P7.
+- This task does not approve a broader P7 implementation proposal.
 - This task does not approve broader P7 implementation.
 - This task does not approve source approval, source ingestion, parser /
   reader / ingestion, actual feature extraction, actual label generation,
@@ -43,20 +39,6 @@ Limits:
   evaluation runner, benchmark harness, model-output integration,
   model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
   evidence, LuckyJ `10.68` comparison or candidate promotion.
-- This task does not implement or change evaluation logic.
-- This task does not implement or change metric logic.
-- This task does not implement an evaluation runner or benchmark harness.
-- This task does not produce model-strength evidence.
-- This task does not provide Tenhou evidence, stable-dan ranked-game evidence,
-  LuckyJ `10.68` comparison or candidate-promotion evidence.
-- This task does not approve any source for training or evaluation.
-- This task does not approve source ingestion, parser / reader / ingestion,
-  feature extraction, label generation, supervised dataset construction,
-  split creation, leakage-test implementation, training-data construction,
-  training-data approval, training-run approval or training.
-- This task does not approve model architecture implementation, trainer
-  implementation, dataloader, optimizer, loss, checkpoint, weights, snapshot,
-  model artifact, model-output integration, self-play, league or P8-P12 entry.
 - Do not add production code.
 - Do not modify implementation logic.
 - Do not add tests.
@@ -76,16 +58,18 @@ Limits:
   or `snapshot` files.
 - Do not vendor or copy third-party source, binaries, params or artifacts into
   this repository.
-- Stop before commit if new implementation logic, new tests, new fixtures,
-  data files, real data, evaluation implementation, metric implementation,
-  model-strength evidence, Tenhou evidence, stable-dan ranked-game evidence,
-  LuckyJ comparison, candidate-promotion evidence, source approval, ingestion
-  approval, parser / reader / ingestion approval, feature approval, label
-  approval, dataset approval, training-data approval, training-run approval,
-  training approval or P8-P12 drift appears.
+- Stop before commit if this task turns into proposal approval, implementation
+  approval, new implementation logic, new tests, new fixtures, data files,
+  real data, source approval, ingestion approval, parser / reader / ingestion
+  approval, feature approval, label approval, dataset approval,
+  training-data approval, training-run approval, training approval,
+  evaluation approval, model-strength evidence, Tenhou evidence,
+  stable-dan ranked-game evidence, LuckyJ comparison, candidate-promotion
+  evidence or P8-P12 drift.
 
 ## Completed
 
+- [x] 2026-06-30 Reviewed broader P7 implementation readiness checklist after boundary-chain review: added `docs/03_supervised_policy/03AP_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW_AFTER_BOUNDARY_CHAIN_REVIEW.md`, reviewed `03AO` scope, purpose, boundary-chain coverage, readiness vocabulary, upstream artifact checklist, candidate implementation class matrix, future implementation proposal fields, future approval decision fields, stop conditions, risk controls, evidence requirements, readiness decision vocabulary, current readiness decision, first task candidate, planning decision, governance synchronization and evidence grade, and recorded `Review can close`. The next task is `Define broader P7 minimal implementation proposal boundary after readiness checklist review.` This is broader P7 implementation readiness checklist review evidence only. It does not close full P7, approve a minimal implementation proposal, approve broader P7 implementation, approve source approval, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve split creation, approve leakage-test implementation, approve training data, approve training run, approve training, approve model architecture / trainer implementation, approve evaluation implementation, approve metric implementation, approve evaluation runner, approve benchmark harness, approve model-output integration, approve model-strength evidence, approve Tenhou ranked evidence, approve stable-dan ranked-game evidence, approve LuckyJ `10.68` comparison, approve candidate promotion, approve real data, approve self-play, approve league or approve P8-P12.
 - [x] 2026-06-30 Defined broader P7 implementation readiness checklist after boundary-chain review: added `docs/03_supervised_policy/03AO_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_AFTER_BOUNDARY_CHAIN_REVIEW.md`, summarizing `03Y` through `03AN`, defining readiness status vocabulary, required upstream artifacts, candidate implementation class readiness matrix, future implementation proposal fields, future approval decision fields, stop conditions, risk controls, evidence requirements, readiness decision vocabulary, current readiness decision, first task candidate, planning decision and evidence grade. The next task is `Review broader P7 implementation readiness checklist after boundary-chain review.` This is broader P7 implementation readiness checklist definition evidence only. It does not close full P7, approve broader P7 implementation, approve source approval, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve split creation, approve leakage-test implementation, approve training data, approve training run, approve training, approve model architecture / trainer implementation, approve evaluation implementation, approve metric implementation, approve evaluation runner, approve benchmark harness, approve model-output integration, approve model-strength evidence, approve Tenhou ranked evidence, approve stable-dan ranked-game evidence, approve LuckyJ `10.68` comparison, approve candidate promotion, approve real data, approve self-play, approve league or approve P8-P12.
 - [x] 2026-06-30 Reviewed broader P7 evaluation dependency and model-strength evidence boundary before implementation: added `docs/03_supervised_policy/03AN_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`, reviewed `03AM` scope, purpose, current no-strength-evidence status, concept definitions, dependency map, evaluation dependency boundary, model-strength evidence boundary, Tenhou / stable-dan / LuckyJ evidence boundary, future evidence-record fields, candidate evaluation / evidence classes, allowed future boundary, forbidden scope, stop conditions, risk controls, evidence requirements, first task candidate, planning decision, evidence grade and governance synchronization, and recorded `Review can close`. The next task is `Define broader P7 implementation readiness checklist after boundary-chain review.` This is broader P7 evaluation dependency and model-strength evidence boundary review evidence only. It does not close full P7, approve broader P7 implementation, approve source approval, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve split creation, approve leakage-test implementation, approve training data, approve training run, approve training, approve model architecture / trainer implementation, approve evaluation implementation, approve metric implementation, approve evaluation runner, approve benchmark harness, approve model-output integration, approve model-strength evidence, approve Tenhou ranked evidence, approve stable-dan ranked-game evidence, approve LuckyJ `10.68` comparison, approve candidate promotion, approve self-play, approve league or approve P8-P12.
 - [x] 2026-06-30 Defined broader P7 evaluation dependency and model-strength evidence boundary before implementation: added `docs/03_supervised_policy/03AM_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_BEFORE_IMPLEMENTATION.md`, defining evaluation and evidence vocabulary, current no-strength-evidence status, dependency map, evaluation dependency boundary, model-strength evidence boundary, Tenhou / stable-dan / LuckyJ evidence boundary, future evidence record fields, candidate evidence classes, allowed future boundary, forbidden scope, stop conditions, risk controls, evidence requirements, first task candidate, planning decision and evidence grade. The next task is `Review broader P7 evaluation dependency and model-strength evidence boundary before implementation.` This is broader P7 evaluation dependency and model-strength evidence boundary definition evidence only. It does not close full P7, approve broader P7 implementation, approve evaluation implementation, approve metric implementation, approve evaluation runner, approve benchmark harness, approve model-output integration, approve model-strength evidence, approve Tenhou ranked evidence, approve stable-dan ranked-game evidence, approve LuckyJ `10.68` comparison, approve candidate promotion, approve source approval, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve training data, approve training run, approve model architecture / trainer, approve training, approve self-play, approve league or approve P8-P12.

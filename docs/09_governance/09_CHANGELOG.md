@@ -1,5 +1,37 @@
 # 09_CHANGELOG
 
+## 2026-06-30 - v3.03
+
+- Reviewed broader P7 implementation readiness checklist after boundary-chain
+  review.
+- Added
+  `docs/03_supervised_policy/03AP_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW_AFTER_BOUNDARY_CHAIN_REVIEW.md`.
+- Confirmed that `03AO` scope, purpose, boundary-chain coverage, readiness
+  status vocabulary, required upstream artifact checklist, candidate
+  implementation class matrix, future implementation proposal fields, future
+  approval-decision fields, stop conditions, risk controls, evidence
+  requirements, readiness decision vocabulary, current readiness decision,
+  first task candidate, planning decision, governance synchronization and
+  evidence grade are sufficient.
+- Review decision:
+  `Review can close.`
+- New `10_NEXT` first item:
+  `Define broader P7 minimal implementation proposal boundary after readiness checklist review.`
+- This is broader P7 implementation readiness checklist review evidence only.
+- No minimal implementation proposal was approved.
+- No broader P7 implementation, production code, tests, fixtures, data files,
+  source approval, source ingestion, parser / reader / ingestion
+  implementation, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval, training-run approval, training,
+  model architecture implementation, trainer implementation, dataloader,
+  optimizer, loss, checkpoint, weights, evaluation implementation, metric
+  implementation, evaluation runner, benchmark harness, model-output
+  integration, model-strength evidence, Tenhou ranked evidence, stable-dan
+  ranked-game evidence, LuckyJ `10.68` comparison, candidate promotion, real
+  Tenhou, real haifu, external logs, platform data, self-play, league or
+  P8-P12 work was added.
+
 ## 2026-06-30 - v3.02
 
 - Defined broader P7 implementation readiness checklist after boundary-chain
