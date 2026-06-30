@@ -1,5 +1,36 @@
 # 09_CHANGELOG
 
+## 2026-06-30 - v3.02
+
+- Defined broader P7 implementation readiness checklist after boundary-chain
+  review.
+- Added
+  `docs/03_supervised_policy/03AO_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_AFTER_BOUNDARY_CHAIN_REVIEW.md`.
+- Summarized the reviewed broader P7 boundary chain from `03Y` through `03AN`
+  and recorded readiness status vocabulary, required upstream artifacts,
+  candidate implementation class readiness matrix, future implementation
+  proposal fields, future approval-decision fields, stop conditions, risk
+  controls, evidence requirements, current readiness decision, first task
+  candidate, planning decision and evidence grade.
+- Current readiness decision:
+  `Boundary chain is reviewed enough to define an implementation readiness checklist, but no broader P7 implementation class is approved.`
+- New `10_NEXT` first item:
+  `Review broader P7 implementation readiness checklist after boundary-chain review.`
+- This is broader P7 implementation readiness checklist definition evidence
+  only.
+- No broader P7 implementation, production code, tests, fixtures, data files,
+  source approval, source ingestion, parser / reader / ingestion
+  implementation, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval, training-run approval, training,
+  model architecture implementation, trainer implementation, dataloader,
+  optimizer, loss, checkpoint, weights, evaluation implementation, metric
+  implementation, evaluation runner, benchmark harness, model-output
+  integration, model-strength evidence, Tenhou ranked evidence, stable-dan
+  ranked-game evidence, LuckyJ `10.68` comparison, candidate promotion, real
+  Tenhou, real haifu, external logs, platform data, self-play, league or
+  P8-P12 work was added.
+
 ## 2026-06-30 - v3.01
 
 - Reviewed broader P7 evaluation dependency and model-strength evidence

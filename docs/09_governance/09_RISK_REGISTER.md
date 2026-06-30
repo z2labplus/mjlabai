@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-30 — Broader P7 implementation readiness checklist risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Readiness checklist definition is mistaken for broader P7 implementation approval. | Governance / Scope | High | Medium | `03AO`, `10_NEXT`, handoff and stage contract state that no broader implementation class is approved now. | Open |
+| Candidate implementation class marked `proposal_ready_candidate` is mistaken for execution approval. | Governance / Scope | High | Medium | `03AO` defines proposal readiness as proposal-drafting readiness only and requires a separate approval decision before execution. | Open |
+| Review gate after `03AO` is mistaken for permission to implement. | Governance / Scope | High | Medium | New `10_NEXT` item is a docs-only review gate and forbids code, tests, fixtures, data files, source approval, ingestion, feature / label output, dataset construction, training and evaluation implementation. | Open |
+| Upstream artifact checklist is treated as satisfying upstream approvals. | Governance / Data | High | Medium | `03AO` separates boundary review, source approval, ingestion approval, feature/label approval, dataset approval, training-data approval, model/trainer approval and evaluation approval. | Open |
+| Readiness evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 implementation readiness checklist definition evidence only. | Open |
+| P8-P12 work is treated as implicitly approved after readiness checklist definition. | Governance / Stage Control | High | Medium | `03AO`, stage contract and `10_NEXT` keep self-play, league and P8-P12 closed until separate transition and approval records exist. | Open |
+
 ## 2026-06-30 — Broader P7 evaluation dependency and model-strength evidence boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

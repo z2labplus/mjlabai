@@ -8,6 +8,54 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-30 — Broader P7 implementation readiness checklist definition
+
+- Type: internal documentation / broader P7 implementation readiness
+  checklist definition evidence.
+- Stage: P7 supervised learning / docs-only broader P7 implementation
+  readiness checklist after boundary-chain review.
+- Added checklist document:
+  - `docs/03_supervised_policy/03AO_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_AFTER_BOUNDARY_CHAIN_REVIEW.md`
+- Defined:
+  - boundary-chain coverage from `03Y` through `03AN`.
+  - readiness status vocabulary.
+  - required upstream artifact checklist.
+  - candidate implementation class readiness matrix.
+  - future implementation proposal required fields.
+  - future approval-decision required fields.
+  - stop conditions.
+  - risk controls.
+  - evidence requirements.
+  - readiness decision vocabulary.
+  - current readiness decision.
+  - first task candidate.
+  - planning decision.
+- Current readiness decision:
+  - `Boundary chain is reviewed enough to define an implementation readiness checklist, but no broader P7 implementation class is approved.`
+- New next task:
+  - `Review broader P7 implementation readiness checklist after boundary-chain review.`
+- Evidence grade:
+  - Broader P7 implementation readiness checklist definition evidence only.
+- Not evidence of:
+  - broader P7 implementation approval.
+  - production code, tests, fixtures or data files.
+  - source approval or source ingestion approval.
+  - parser / reader / ingestion approval or implementation.
+  - actual feature extraction or label generation approval.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-06-30 — Broader P7 evaluation dependency and model-strength evidence boundary review
 
 - Type: internal documentation / broader P7 evaluation dependency and

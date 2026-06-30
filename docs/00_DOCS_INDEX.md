@@ -119,6 +119,7 @@ docs/03_supervised_policy/03AK_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNIN
 docs/03_supervised_policy/03AL_BROADER_P7_MODEL_ARCHITECTURE_AND_TRAINER_PLANNING_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AM_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_BEFORE_IMPLEMENTATION.md
 docs/03_supervised_policy/03AN_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md
+docs/03_supervised_policy/03AO_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_AFTER_BOUNDARY_CHAIN_REVIEW.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -558,6 +559,21 @@ evaluation runner, benchmark harness, model-output integration,
 model-strength evidence, Tenhou evidence, stable-dan ranked-game evidence,
 LuckyJ `10.68` comparison, candidate promotion, training, broader P7
 implementation approval or P8-P12 entry approval.
+
+`docs/03_supervised_policy/03AO_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_AFTER_BOUNDARY_CHAIN_REVIEW.md`
+defines the broader P7 implementation readiness checklist after the reviewed
+boundary chain from `03Y` through `03AN`. It records readiness status
+vocabulary, required upstream artifacts, candidate implementation class
+statuses, future implementation proposal fields, future approval-decision
+fields, stop conditions, risk controls, evidence requirements and the next
+review gate. It is readiness-checklist definition evidence only: it does not
+approve broader P7 implementation, source approval, source ingestion, parser /
+reader / ingestion, actual feature extraction, actual label generation,
+supervised dataset construction, split creation, leakage-test implementation,
+training data, training run, training, model architecture / trainer
+implementation, evaluation implementation, model-output integration,
+model-strength evidence, Tenhou evidence, LuckyJ comparison, candidate
+promotion, self-play, league or P8-P12 entry.
 
 ## Data-system files
 

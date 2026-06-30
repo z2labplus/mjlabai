@@ -14,6 +14,72 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-30 — DR-0089 — Define Broader P7 Implementation Readiness Checklist
+
+Decision:
+
+```text
+Broader P7 implementation readiness checklist is defined after boundary-chain review. Set the next task to a docs-only review gate.
+```
+
+Context:
+
+- P7 current scope is closed only for the exact docs-only readiness chain plus
+  accepted minimal synthetic/local supervised feature-label smoke
+  implementation.
+- Full P7 remains open.
+- The broader P7 boundary chain from scope / entry criteria through
+  evaluation dependency and model-strength evidence has been defined and
+  reviewed from `03Y` through `03AN`.
+- No broader P7 implementation, source approval, source ingestion, parser /
+  reader / ingestion, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval, training-run approval, training,
+  model architecture / trainer implementation, evaluation implementation,
+  model-output integration or P8-P12 entry is approved.
+
+Rationale:
+
+- The boundary chain is reviewed enough to define an auditable readiness
+  checklist before any future broader P7 implementation proposal.
+- A readiness checklist must separate `proposal_ready_candidate` from
+  implementation approval and must require separate approval-decision records.
+- The next safest step is a docs-only review gate for the checklist, not
+  implementation.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03AO_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_AFTER_BOUNDARY_CHAIN_REVIEW.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review broader P7 implementation readiness checklist after boundary-chain review.`
+- No broader P7 implementation class is approved by this decision.
+- No production code, tests, fixtures or data files are added by this
+  decision.
+- No source approval, source ingestion, parser / reader / ingestion, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, split creation, leakage-test implementation, training-data
+  approval, training-run approval, training, model architecture / trainer
+  implementation, evaluation implementation, metric implementation,
+  evaluation runner, benchmark harness, model-output integration,
+  model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ
+  `10.68` comparison, candidate promotion, self-play, league or P8-P12 entry
+  is approved by this decision.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03AO_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_AFTER_BOUNDARY_CHAIN_REVIEW.md`
+- `docs/03_supervised_policy/03AN_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENGTH_EVIDENCE_BOUNDARY_REVIEW_BEFORE_IMPLEMENTATION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Accepted; docs-only broader P7 implementation readiness checklist review is
+next.
+
 ## 2026-06-30 — DR-0088 — Review Broader P7 Evaluation Evidence Boundary
 
 Decision:

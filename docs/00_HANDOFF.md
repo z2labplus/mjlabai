@@ -29,9 +29,8 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
-Current active stage is broader P7 implementation readiness checklist
-definition after broader P7 evaluation dependency / model-strength evidence
-boundary review:
+Current active stage is broader P7 implementation readiness checklist review
+after broader P7 boundary-chain readiness checklist definition:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -306,6 +305,24 @@ promotion, source approval, source ingestion, parser / reader / ingestion,
 actual feature extraction, actual label generation, supervised dataset
 construction, training-data approval, training-run approval, training, model
 architecture / trainer implementation, self-play, league or P8-P12.
+`docs/03_supervised_policy/03AO_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_AFTER_BOUNDARY_CHAIN_REVIEW.md`
+defines the broader P7 implementation readiness checklist after the reviewed
+boundary chain from `03Y` through `03AN`. It records readiness status
+vocabulary, required upstream artifacts, candidate implementation class
+statuses, future implementation proposal fields, future approval-decision
+fields, stop conditions, risk controls, evidence requirements, current
+readiness decision, planning decision and evidence grade. It records that no
+broader P7 implementation class is approved now. The next task is
+`Review broader P7 implementation readiness checklist after boundary-chain
+review`, and it remains a docs-only review gate. Full P7 remains open.
+Broader P7 implementation, source approval, source ingestion, parser / reader
+/ ingestion, actual feature extraction, actual label generation, supervised
+dataset construction, split creation, leakage-test implementation,
+training-data approval, training-run approval, training, model architecture /
+trainer implementation, evaluation implementation, model-output integration,
+model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ
+`10.68` comparison, candidate promotion, self-play, league and P8-P12 remain
+unapproved.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -510,18 +527,21 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define broader P7 implementation readiness checklist after boundary-chain
+Review broader P7 implementation readiness checklist after boundary-chain
 review.
-The broader-P7 implementation readiness checklist task must be docs-only. It
-must define readiness items and stop conditions after the boundary chain, not
-approve implementation. It must not implement evaluation, produce strength
-evidence, approve model architecture or trainer work, approve training,
-approve training-data approval, approve parser, dataset reader, ingestion,
-actual feature extraction, actual label generation, supervised dataset
-construction, split creation, leakage-test implementation, real Tenhou, real
-haifu, external logs, platform data, model-output integration, CLI, broad file
-ingestion, self-play, league, P8-P12 work, Tenhou evidence, stable-dan
-evidence, LuckyJ `10.68` comparison or candidate-promotion claims.
+The broader-P7 implementation readiness checklist review task must be
+docs-only. It may review readiness vocabulary, upstream artifact checks,
+candidate implementation class statuses, future proposal fields, future
+approval-decision fields, stop conditions, risk controls and evidence
+requirements. It must not approve implementation. It must not implement
+evaluation, produce strength evidence, approve model architecture or trainer
+work, approve training, approve training-data approval, approve parser,
+dataset reader, ingestion, actual feature extraction, actual label generation,
+supervised dataset construction, split creation, leakage-test implementation,
+real Tenhou, real haifu, external logs, platform data, model-output
+integration, CLI, broad file ingestion, self-play, league, P8-P12 work, Tenhou
+evidence, stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion
+claims.
 ```
 
 Latest Akochan F1 audit summary:
