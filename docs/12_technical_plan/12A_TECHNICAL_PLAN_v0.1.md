@@ -28,8 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-Broader P7 minimal implementation proposal-boundary review after broader P7
-implementation readiness checklist review.
+Broader P7 minimal implementation proposal drafting after proposal-boundary
+review.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -105,10 +105,13 @@ lifecycle vocabulary, candidate proposal classes, required proposal sections,
 exact-scope requirements, forbidden proposal scope, approval-decision
 separation, approval prerequisites, stop conditions, risk controls and
 evidence requirements. The next task is `Review broader P7 minimal
-implementation proposal boundary after readiness checklist review`.
+implementation proposal boundary after readiness checklist review`. `03AR`
+reviews that proposal-boundary definition, records `Review can close` with no
+blocker and selects `Draft broader P7 minimal implementation proposal for
+review after proposal-boundary review` as the next docs-only task.
 None of `03Y`, `03Z`, `03AA`, `03AB`, `03AC`, `03AD`, `03AE`, `03AF`, `03AG`,
 `03AH`, `03AI`, `03AJ`, `03AK`, `03AL`, `03AM`, `03AN`, `03AO`, `03AP`,
-`03AQ` or the next proposal-boundary review task approves broader P7
+`03AQ`, `03AR` or the next proposal-drafting task approves broader P7
 implementation, training, source approval, source ingestion, parser / reader /
 ingestion implementation, actual feature extraction, actual label generation,
 feature tensors, labels, targets, examples, splits, supervised dataset
@@ -381,11 +384,15 @@ Broader P7 minimal implementation proposal boundary = defined in
 `docs/03_supervised_policy/03AQ_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_AFTER_READINESS_CHECKLIST_REVIEW.md`;
 no proposal or broader P7 implementation is approved, and the next task is a
 docs-only proposal-boundary review gate.
+Broader P7 minimal implementation proposal-boundary review = complete in
+`docs/03_supervised_policy/03AR_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW_AFTER_READINESS_CHECKLIST_REVIEW.md`;
+review can close with no blocker, and the next task is docs-only proposal
+drafting for later review.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = review broader P7 minimal implementation proposal boundary after
-readiness checklist review.
+Next = draft broader P7 minimal implementation proposal for review after
+proposal-boundary review.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -519,7 +526,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Review broader P7 minimal implementation proposal boundary after readiness checklist review.
+Draft broader P7 minimal implementation proposal for review after proposal-boundary review.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
@@ -568,8 +575,9 @@ checklist definition next. `03AO` defines that checklist and selects a
 docs-only readiness checklist review gate. `03AP` reviews that checklist,
 records `Review can close`, and selects a docs-only minimal implementation
 proposal-boundary definition next. `03AQ` defines that proposal boundary and
-selects this docs-only proposal-boundary review gate next. The next task must
-not add
+selects a docs-only proposal-boundary review gate next. `03AR` reviews that
+proposal boundary, records `Review can close`, and selects this docs-only
+proposal drafting task next. The next task must not add
 production code, tests, fixtures, data files, source
 approval, source ingestion approval, data reads, parser
 implementation, dataset reader implementation, ingestion implementation,

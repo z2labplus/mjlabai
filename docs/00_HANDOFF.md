@@ -29,8 +29,8 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
-Current active stage is broader P7 minimal implementation proposal-boundary
-review after broader P7 implementation readiness checklist review:
+Current active stage is broader P7 minimal implementation proposal drafting
+after proposal-boundary review:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -355,6 +355,20 @@ reader / ingestion, actual feature extraction, actual label generation,
 dataset construction, training data, training, model / trainer
 implementation, evaluation, model-output integration, real data, self-play,
 league or P8-P12.
+`docs/03_supervised_policy/03AR_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW_AFTER_READINESS_CHECKLIST_REVIEW.md`
+reviews the `03AQ` proposal-boundary definition, confirms that scope,
+purpose, lifecycle vocabulary, candidate proposal classes, required sections,
+exact-scope requirements, forbidden scope, approval separation, prerequisites,
+stop conditions, risk controls, evidence requirements, current decision,
+first task candidate, planning decision, evidence grade and governance
+synchronization are sufficient, and records `Review can close`. The next task
+is `Draft broader P7 minimal implementation proposal for review after
+proposal-boundary review`. That next task remains docs-only proposal drafting;
+it does not approve the proposal, approve implementation, add code, tests,
+fixtures, data files, source approval, ingestion, parser / reader / ingestion,
+actual feature extraction, actual label generation, dataset construction,
+training, model / trainer implementation, evaluation, model-output
+integration, real data, self-play, league or P8-P12.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -559,23 +573,20 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review broader P7 minimal implementation proposal boundary after readiness
-checklist review.
-The broader-P7 minimal implementation proposal-boundary review task must be
-docs-only. It may review whether `03AQ` sufficiently defines lifecycle
-vocabulary, candidate proposal classes, required sections, exact-scope
-fields, approval separation, risk controls, evidence requirements and stop
-conditions for a future minimal implementation proposal. It must not approve a
-proposal or implementation. It must not add production code, tests, fixtures,
-data files, source approval, source ingestion, parser / reader / ingestion,
-actual feature extraction, actual label generation, supervised dataset
-construction, split creation, leakage-test implementation, training data,
-training-run approval, training, model architecture or trainer
-implementation, evaluation implementation, metric implementation, evaluation
-runner, benchmark harness, real Tenhou, real haifu, external logs, platform
-data, model-output integration, CLI, broad file ingestion, self-play, league,
-P8-P12 work, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison
-or candidate-promotion claims.
+Draft broader P7 minimal implementation proposal for review after
+proposal-boundary review.
+The broader-P7 minimal implementation proposal drafting task must be
+docs-only. It may draft an exact-scope proposal for later review, but it must
+not approve the proposal, approve implementation or execute implementation.
+It must not add production code, tests, fixtures, data files, source approval,
+source ingestion, parser / reader / ingestion, actual feature extraction,
+actual label generation, supervised dataset construction, split creation,
+leakage-test implementation, training data, training-run approval, training,
+model architecture or trainer implementation, evaluation implementation,
+metric implementation, evaluation runner, benchmark harness, real Tenhou,
+real haifu, external logs, platform data, model-output integration, CLI,
+broad file ingestion, self-play, league, P8-P12 work, Tenhou evidence,
+stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion claims.
 ```
 
 Latest Akochan F1 audit summary:
@@ -854,13 +865,12 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is a docs-only broader P7 minimal implementation
-  proposal-boundary review after readiness checklist review. Full P7 remains
-  open, and `03AQ` proposal-boundary definition is not proposal approval,
-  implementation approval or P8-P12 entry approval. Do not implement
-  production code, tests, fixtures, data files, parser, dataset reader,
-  ingestion, feature extraction, label generation, supervised dataset
-  construction, CLI, model-output integration, train, tune, self-play, league,
-  connect to real Tenhou or treat boundary / review closure as model-strength
-  evidence.
+- Current next work is docs-only broader P7 minimal implementation proposal
+  drafting for later review. Full P7 remains open, and `03AR` review closure
+  is not proposal approval, implementation approval or P8-P12 entry approval.
+  Do not implement production code, tests, fixtures, data files, parser,
+  dataset reader, ingestion, feature extraction, label generation, supervised
+  dataset construction, CLI, model-output integration, train, tune,
+  self-play, league, connect to real Tenhou or treat proposal drafting /
+  review closure as model-strength evidence.
 - Technical decisions from Web ChatGPT Pro must be written into Git + docs before becoming project facts.

@@ -14,6 +14,78 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-30 — DR-0092 — Review Broader P7 Minimal Implementation Proposal Boundary
+
+Decision:
+
+```text
+Review can close. Draft broader P7 minimal implementation proposal for review after proposal-boundary review as the next docs-only task.
+```
+
+Context:
+
+- P7 current scope is closed only for the exact docs-only readiness chain plus
+  accepted minimal synthetic/local supervised feature-label smoke
+  implementation.
+- Full P7 remains open.
+- `03AQ` defines the broader P7 minimal implementation proposal boundary after
+  the readiness checklist review.
+- `03AQ` approves no minimal implementation proposal and no broader P7
+  implementation.
+- No source approval, source ingestion, parser / reader / ingestion, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, split creation, leakage-test implementation, training-data
+  approval, training-run approval, training, model architecture / trainer
+  implementation, evaluation implementation, model-output integration or
+  P8-P12 entry is approved.
+
+Rationale:
+
+- The `03AQ` proposal-boundary definition is conservative enough to support a
+  later docs-only proposal draft.
+- It separates proposal boundary, proposal draft, proposal review, approval
+  decision, implementation execution, implementation review and acceptance.
+- Its candidate proposal classes, required sections, exact-scope rules,
+  forbidden scope, approval prerequisites, stop conditions, risk controls and
+  evidence requirements are sufficient.
+- The next safest step is docs-only proposal drafting for later review, not
+  approval or implementation.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03AR_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW_AFTER_READINESS_CHECKLIST_REVIEW.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Draft broader P7 minimal implementation proposal for review after proposal-boundary review.`
+- This decision does not approve a minimal implementation proposal.
+- This decision does not approve broader P7 implementation.
+- No production code, tests, fixtures or data files are added by this
+  decision.
+- No source approval, source ingestion, parser / reader / ingestion, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, split creation, leakage-test implementation, training-data
+  approval, training-run approval, training, model architecture / trainer
+  implementation, evaluation implementation, metric implementation,
+  evaluation runner, benchmark harness, model-output integration,
+  model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ
+  `10.68` comparison, candidate promotion, self-play, league or P8-P12 entry
+  is approved by this decision.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03AR_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW_AFTER_READINESS_CHECKLIST_REVIEW.md`
+- `docs/03_supervised_policy/03AQ_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_AFTER_READINESS_CHECKLIST_REVIEW.md`
+- `docs/03_supervised_policy/03AP_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW_AFTER_BOUNDARY_CHAIN_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Accepted; docs-only broader P7 minimal implementation proposal drafting for
+later review is next.
+
 ## 2026-06-30 — DR-0091 — Define Broader P7 Minimal Implementation Proposal Boundary
 
 Decision:

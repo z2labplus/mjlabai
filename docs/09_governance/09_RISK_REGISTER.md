@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-30 — Broader P7 minimal implementation proposal-boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Proposal-boundary review closure is mistaken for minimal implementation proposal approval. | Governance / Scope | High | Medium | `03AR`, `10_NEXT`, handoff and stage contract state that `Review can close` approves no proposal and selects only docs-only proposal drafting. | Open |
+| The next proposal drafting task is mistaken for implementation approval. | Governance / Scope | High | Medium | New `10_NEXT` first item states proposal drafting is not proposal approval, implementation approval or execution. | Open |
+| A future draft proposal is written with executable wording. | Governance / Scope | High | Medium | `03AR` requires the next task to remain docs-only and forbids code, tests, fixtures, data files and implementation prompts. | Open |
+| Proposal-ready classes are treated as approved implementation classes after review. | Governance / Scope | High | Medium | `03AR` confirms every eligible class remains not approved and requires a later approval decision. | Open |
+| Proposal-boundary review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 minimal implementation proposal-boundary review evidence only. | Open |
+| Real data, source approval, ingestion, feature/label output, dataset, training, model or evaluation work enters the next draft. | Governance / Stage Control | High | Medium | `03AR` preserves `03AQ` forbidden scope and stop conditions; next task must remain docs-only proposal drafting. | Open |
+| P8-P12 work is treated as implicitly approved after proposal-boundary review. | Governance / Stage Control | High | Medium | `03AR`, stage contract and `10_NEXT` keep self-play, league and P8-P12 closed. | Open |
+
 ## 2026-06-30 — Broader P7 minimal implementation proposal-boundary risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

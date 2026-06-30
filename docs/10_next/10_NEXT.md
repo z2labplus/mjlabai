@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Review broader P7 minimal implementation proposal boundary after readiness checklist review.
+- [ ] Draft broader P7 minimal implementation proposal for review after proposal-boundary review.
 
 Current execution charter:
 
@@ -16,8 +16,8 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only review gate for the broader P7 minimal implementation
-  proposal-boundary definition after the readiness checklist review.
+- This is a docs-only minimal implementation proposal drafting task after the
+  proposal-boundary review.
 - `docs/03_supervised_policy/03AP_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW_AFTER_BOUNDARY_CHAIN_REVIEW.md`
   reviewed `03AO` and recorded `Review can close`.
 - `docs/03_supervised_policy/03AQ_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_AFTER_READINESS_CHECKLIST_REVIEW.md`
@@ -25,13 +25,17 @@ Limits:
   required proposal sections, exact-scope requirements, forbidden proposal
   scope, approval-decision separation, prerequisites, stop conditions, risk
   controls and evidence requirements.
+- `docs/03_supervised_policy/03AR_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW_AFTER_READINESS_CHECKLIST_REVIEW.md`
+  reviews `03AQ`, records `Review can close`, and recommends drafting a
+  broader P7 minimal implementation proposal for later review.
 - P7 current scope is closed only for the exact docs-only supervised-learning
   readiness chain plus accepted minimal synthetic/local supervised
   feature-label smoke implementation.
 - Full P7 remains open.
-- This task may review whether the `03AQ` proposal-boundary definition is
-  sufficient and may define the next P7-only docs task.
+- This task may draft a proposal document for later review, but it must not
+  approve the proposal or execute implementation.
 - This task does not close full P7.
+- This task does not approve the drafted proposal.
 - This task does not approve a proposal.
 - This task does not approve a broader P7 implementation proposal.
 - This task does not approve broader P7 implementation.
@@ -74,6 +78,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-06-30 Reviewed broader P7 minimal implementation proposal boundary after readiness checklist review: added `docs/03_supervised_policy/03AR_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW_AFTER_READINESS_CHECKLIST_REVIEW.md`, reviewed `03AQ` scope, purpose, proposal lifecycle vocabulary, candidate proposal classes, minimal proposal required sections, exact-scope requirements, forbidden proposal scope, approval-decision separation, approval prerequisites, stop conditions, risk controls, evidence requirements, current proposal-boundary decision, first task candidate, planning decision, evidence grade, governance synchronization and validation scope, and recorded `Review can close`. The next task is `Draft broader P7 minimal implementation proposal for review after proposal-boundary review.` This is broader P7 minimal implementation proposal-boundary review evidence only. It does not close full P7, approve a proposal, approve broader P7 implementation, approve source approval, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve split creation, approve leakage-test implementation, approve training data, approve training run, approve training, approve model architecture / trainer implementation, approve evaluation implementation, approve metric implementation, approve evaluation runner, approve benchmark harness, approve model-output integration, approve model-strength evidence, approve Tenhou ranked evidence, approve stable-dan ranked-game evidence, approve LuckyJ `10.68` comparison, approve candidate promotion, approve real data, approve self-play, approve league or approve P8-P12.
 - [x] 2026-06-30 Defined broader P7 minimal implementation proposal boundary after readiness checklist review: added `docs/03_supervised_policy/03AQ_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_AFTER_READINESS_CHECKLIST_REVIEW.md`, defining proposal lifecycle vocabulary, candidate proposal classes, minimal proposal required sections, exact-scope requirements, forbidden proposal scope, future approval-decision separation, approval prerequisites, stop conditions, risk controls, evidence requirements, current proposal-boundary decision, first task candidate, planning decision and evidence grade. The next task is `Review broader P7 minimal implementation proposal boundary after readiness checklist review.` This is broader P7 minimal implementation proposal-boundary definition evidence only. It does not close full P7, approve a proposal, approve broader P7 implementation, approve source approval, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve split creation, approve leakage-test implementation, approve training data, approve training run, approve training, approve model architecture / trainer implementation, approve evaluation implementation, approve metric implementation, approve evaluation runner, approve benchmark harness, approve model-output integration, approve model-strength evidence, approve Tenhou ranked evidence, approve stable-dan ranked-game evidence, approve LuckyJ `10.68` comparison, approve candidate promotion, approve real data, approve self-play, approve league or approve P8-P12.
 - [x] 2026-06-30 Reviewed broader P7 implementation readiness checklist after boundary-chain review: added `docs/03_supervised_policy/03AP_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW_AFTER_BOUNDARY_CHAIN_REVIEW.md`, reviewed `03AO` scope, purpose, boundary-chain coverage, readiness vocabulary, upstream artifact checklist, candidate implementation class matrix, future implementation proposal fields, future approval decision fields, stop conditions, risk controls, evidence requirements, readiness decision vocabulary, current readiness decision, first task candidate, planning decision, governance synchronization and evidence grade, and recorded `Review can close`. The next task is `Define broader P7 minimal implementation proposal boundary after readiness checklist review.` This is broader P7 implementation readiness checklist review evidence only. It does not close full P7, approve a minimal implementation proposal, approve broader P7 implementation, approve source approval, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve split creation, approve leakage-test implementation, approve training data, approve training run, approve training, approve model architecture / trainer implementation, approve evaluation implementation, approve metric implementation, approve evaluation runner, approve benchmark harness, approve model-output integration, approve model-strength evidence, approve Tenhou ranked evidence, approve stable-dan ranked-game evidence, approve LuckyJ `10.68` comparison, approve candidate promotion, approve real data, approve self-play, approve league or approve P8-P12.
 - [x] 2026-06-30 Defined broader P7 implementation readiness checklist after boundary-chain review: added `docs/03_supervised_policy/03AO_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_AFTER_BOUNDARY_CHAIN_REVIEW.md`, summarizing `03Y` through `03AN`, defining readiness status vocabulary, required upstream artifacts, candidate implementation class readiness matrix, future implementation proposal fields, future approval decision fields, stop conditions, risk controls, evidence requirements, readiness decision vocabulary, current readiness decision, first task candidate, planning decision and evidence grade. The next task is `Review broader P7 implementation readiness checklist after boundary-chain review.` This is broader P7 implementation readiness checklist definition evidence only. It does not close full P7, approve broader P7 implementation, approve source approval, approve source ingestion, approve parser / reader / ingestion, approve actual feature extraction, approve actual label generation, approve supervised dataset construction, approve split creation, approve leakage-test implementation, approve training data, approve training run, approve training, approve model architecture / trainer implementation, approve evaluation implementation, approve metric implementation, approve evaluation runner, approve benchmark harness, approve model-output integration, approve model-strength evidence, approve Tenhou ranked evidence, approve stable-dan ranked-game evidence, approve LuckyJ `10.68` comparison, approve candidate promotion, approve real data, approve self-play, approve league or approve P8-P12.

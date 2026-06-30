@@ -1,5 +1,38 @@
 # 09_CHANGELOG
 
+## 2026-06-30 - v3.05
+
+- Reviewed broader P7 minimal implementation proposal boundary after readiness
+  checklist review.
+- Added
+  `docs/03_supervised_policy/03AR_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW_AFTER_READINESS_CHECKLIST_REVIEW.md`.
+- Confirmed that `03AQ` scope, purpose, proposal lifecycle vocabulary,
+  candidate proposal classes, minimal proposal required sections, exact-scope
+  requirements, forbidden proposal scope, approval-decision separation,
+  approval prerequisites, stop conditions, risk controls, evidence
+  requirements, current proposal-boundary decision, first task candidate,
+  planning decision, evidence grade and governance synchronization are
+  sufficient.
+- Review decision:
+  `Review can close.`
+- New `10_NEXT` first item:
+  `Draft broader P7 minimal implementation proposal for review after proposal-boundary review.`
+- This is broader P7 minimal implementation proposal-boundary review evidence
+  only.
+- No minimal implementation proposal was approved.
+- No broader P7 implementation, production code, tests, fixtures, data files,
+  source approval, source ingestion, parser / reader / ingestion
+  implementation, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval, training-run approval, training,
+  model architecture implementation, trainer implementation, dataloader,
+  optimizer, loss, checkpoint, weights, evaluation implementation, metric
+  implementation, evaluation runner, benchmark harness, model-output
+  integration, model-strength evidence, Tenhou ranked evidence, stable-dan
+  ranked-game evidence, LuckyJ `10.68` comparison, candidate promotion, real
+  Tenhou, real haifu, external logs, platform data, self-play, league or
+  P8-P12 work was added.
+
 ## 2026-06-30 - v3.04
 
 - Defined broader P7 minimal implementation proposal boundary after readiness

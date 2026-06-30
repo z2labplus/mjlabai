@@ -122,6 +122,7 @@ docs/03_supervised_policy/03AN_BROADER_P7_EVALUATION_DEPENDENCY_AND_MODEL_STRENG
 docs/03_supervised_policy/03AO_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_AFTER_BOUNDARY_CHAIN_REVIEW.md
 docs/03_supervised_policy/03AP_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW_AFTER_BOUNDARY_CHAIN_REVIEW.md
 docs/03_supervised_policy/03AQ_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_AFTER_READINESS_CHECKLIST_REVIEW.md
+docs/03_supervised_policy/03AR_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW_AFTER_READINESS_CHECKLIST_REVIEW.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -604,6 +605,21 @@ tests, fixtures or data files, approve source approval, ingestion, parser /
 reader, feature extraction, label generation, dataset construction, training,
 model / trainer implementation, evaluation, model-output integration,
 strength evidence, real data, self-play, league or P8-P12.
+
+`docs/03_supervised_policy/03AR_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW_AFTER_READINESS_CHECKLIST_REVIEW.md`
+reviews the `03AQ` proposal-boundary definition and records `Review can
+close` with no blocker. It confirms that scope, purpose, lifecycle
+vocabulary, candidate proposal classes, required proposal sections,
+exact-scope requirements, forbidden scope, approval separation, approval
+prerequisites, stop conditions, risk controls, evidence requirements,
+current decision, first task candidate, planning decision and governance
+synchronization are sufficient before a later proposal draft. It is
+proposal-boundary review evidence only: it does not approve a proposal,
+approve broader P7 implementation, add production code, tests, fixtures or
+data files, approve source, ingestion, parser / reader, feature extraction,
+label generation, dataset construction, training, model / trainer
+implementation, evaluation, model-output integration, strength evidence, real
+data, self-play, league or P8-P12.
 
 ## Data-system files
 
