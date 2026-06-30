@@ -124,6 +124,7 @@ docs/03_supervised_policy/03AP_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_REV
 docs/03_supervised_policy/03AQ_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_AFTER_READINESS_CHECKLIST_REVIEW.md
 docs/03_supervised_policy/03AR_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW_AFTER_READINESS_CHECKLIST_REVIEW.md
 docs/03_supervised_policy/03AS_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_FOR_REVIEW_AFTER_PROPOSAL_BOUNDARY_REVIEW.md
+docs/03_supervised_policy/03AT_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -631,6 +632,21 @@ status, candidate validation commands, rollback plan, stop conditions, risk
 controls, evidence requirements, approval separation, planning decision and
 evidence grade. It is proposal draft evidence only: it does not approve the
 proposal, approve broader P7 implementation, add production code, tests,
+fixtures or data files, approve source, ingestion, parser / reader, feature
+extraction, label generation, dataset construction, training, model / trainer
+implementation, evaluation, model-output integration, strength evidence, real
+data, self-play, league or P8-P12.
+
+`docs/03_supervised_policy/03AT_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md`
+reviews the `03AS` broader P7 minimal implementation proposal before any
+approval decision. It confirms that the project-authored synthetic/local
+parser-reader smoke candidate is conservative, that current status remains
+not approved, that candidate future files are not edit permission, and that
+allowed inputs / outputs, dependency status, validation commands, rollback,
+stop conditions, risk controls, evidence requirements, approval separation
+and governance synchronization are sufficient. Review decision:
+`Review can close.` It is proposal review evidence only: it does not approve
+the proposal, approve broader P7 implementation, add production code, tests,
 fixtures or data files, approve source, ingestion, parser / reader, feature
 extraction, label generation, dataset construction, training, model / trainer
 implementation, evaluation, model-output integration, strength evidence, real

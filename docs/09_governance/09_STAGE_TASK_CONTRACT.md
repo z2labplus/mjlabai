@@ -2,7 +2,8 @@
 
 ## Current stage
 
-Broader P7 minimal implementation proposal review before approval decision.
+Broader P7 minimal synthetic/local parser-reader smoke approval-decision
+preparation after proposal review.
 `03M` and `03N` name and review candidate future files and guardrails only;
 `03O` approved only the exact minimal implementation task and exact files.
 That task is now implemented, reviewed in `03P` with `Review can close`, and
@@ -72,16 +73,21 @@ proposal for later review, selects `Project-authored synthetic/local
 parser-reader smoke proposal` as the most conservative
 proposal-boundary-eligible candidate and records that the proposal is drafted
 but not approved. The next task is `Review broader P7 minimal implementation
-proposal before approval decision`. Neither `03AQ`, `03AR`, `03AS` nor the
-next proposal-review task approves a proposal, approve broader P7
-implementation, approve training, approve training-data
-construction, training-data approval, training-run approval,
+proposal before approval decision`. `03AT` reviews that proposal, records
+`Review can close` with no blocker, and selects `Prepare approval decision for
+broader P7 minimal synthetic/local parser-reader smoke implementation` as the
+next docs-only task. Neither `03AQ`, `03AR`, `03AS` nor `03AT` approves an
+implementation. The next approval-decision preparation task may record an
+approval, rejection or deferral decision for the exact `03AS`
+synthetic/local parser-reader smoke candidate, but it must not execute
+implementation, approve broad P7 implementation, approve training, approve
+training-data construction, training-data approval, training-run approval,
 model architecture implementation, trainer implementation, dataloader,
 optimizer, loss, checkpoint, weights, evaluation implementation,
-model-strength evidence, source approval, source ingestion, parser / reader /
-ingestion implementation, actual feature extraction, actual label generation,
-feature tensors, labels, targets, examples, splits, supervised dataset
-construction, leakage-test implementation, real data, model-output
+model-strength evidence, source approval, source ingestion, broad parser /
+reader / ingestion implementation, actual feature extraction, actual label
+generation, feature tensors, labels, targets, examples, splits, supervised
+dataset construction, leakage-test implementation, real data, model-output
 integration, self-play, league or P8-P12.
 P5 evaluation foundation is
 closed for the current synthetic/local scope; general P6 implementation is not open, and the exact
@@ -203,12 +209,13 @@ Broader P7 implementation readiness checklist review = complete in `03AP`; revie
 Broader P7 minimal implementation proposal boundary = defined in `03AQ`; no proposal or broader P7 implementation is approved and the next task is a docs-only proposal-boundary review gate
 Broader P7 minimal implementation proposal-boundary review = complete in `03AR`; review can close with no blocker and the next task is docs-only proposal drafting for later review
 Broader P7 minimal implementation proposal draft = complete in `03AS`; proposal is drafted for review only, not approved, and the next task is docs-only proposal review before approval decision
+Broader P7 minimal implementation proposal review = complete in `03AT`; review can close with no blocker and the next task is docs-only approval-decision preparation for the synthetic/local parser-reader smoke candidate
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = review broader P7 minimal implementation proposal before approval decision
+Next = prepare approval decision for broader P7 minimal synthetic/local parser-reader smoke implementation
 ```
 
 ## AI role
@@ -319,4 +326,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review broader P7 minimal implementation proposal before approval decision.
+Prepare approval decision for broader P7 minimal synthetic/local parser-reader smoke implementation.

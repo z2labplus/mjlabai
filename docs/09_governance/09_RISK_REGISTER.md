@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-30 — Broader P7 minimal implementation proposal review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Proposal review closure is mistaken for minimal implementation proposal approval. | Governance / Scope | High | Medium | `03AT`, `10_NEXT`, handoff and stage contract state that `Review can close` approves no proposal and selects only docs-only approval-decision preparation. | Open |
+| Approval-decision preparation is mistaken for implementation execution. | Governance / Scope | High | Medium | New `10_NEXT` first item explicitly forbids implementation, code, tests, fixtures, data files and execution. | Open |
+| Candidate future files are treated as approved edit scope after review. | Governance / Scope | High | Medium | `03AT` confirms `03AS` candidate files are not approved for editing, creation or execution. | Open |
+| Synthetic/local parser-reader smoke review drifts into source ingestion approval. | Governance / Data | High | Medium | `03AT` preserves no source approval, no source ingestion, no real data, no broad ingestion and no CLI. | Open |
+| Proposal review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 minimal implementation proposal review evidence only. | Open |
+| P8-P12 work is treated as implicitly approved after proposal review closure. | Governance / Stage Control | High | Medium | `03AT`, stage contract and `10_NEXT` keep self-play, league and P8-P12 closed. | Open |
+
 ## 2026-06-30 — Broader P7 minimal implementation proposal draft risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

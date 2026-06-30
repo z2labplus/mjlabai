@@ -14,6 +14,77 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-06-30 — DR-0094 — Review Broader P7 Minimal Implementation Proposal
+
+Decision:
+
+```text
+Review can close. Prepare approval decision for broader P7 minimal synthetic/local parser-reader smoke implementation as the next docs-only task.
+```
+
+Context:
+
+- P7 current scope is closed only for the exact docs-only readiness chain plus
+  accepted minimal synthetic/local supervised feature-label smoke
+  implementation.
+- Full P7 remains open.
+- `03AS` drafts a broader P7 minimal implementation proposal for review.
+- The selected candidate class is `Project-authored synthetic/local
+  parser-reader smoke proposal`.
+- `03AS` records `approved_now = No` and `execution_allowed_now = No`.
+- No source approval, source ingestion, parser / reader / ingestion, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, split creation, leakage-test implementation, training-data
+  approval, training-run approval, training, model architecture / trainer
+  implementation, evaluation implementation, model-output integration or
+  P8-P12 entry is approved.
+
+Rationale:
+
+- The `03AS` proposal draft is conservative enough to proceed to a separate
+  docs-only approval-decision preparation task.
+- It keeps candidate future files as candidate-only paths, not edit
+  permission.
+- It limits future inputs and outputs to project-authored synthetic/local
+  smoke boundaries.
+- It defines dependency status, validation command candidates, rollback, stop
+  conditions, risk controls, evidence requirements and approval separation.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03AT_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Prepare approval decision for broader P7 minimal synthetic/local parser-reader smoke implementation.`
+- This decision does not approve the proposal.
+- This decision does not approve broader P7 implementation.
+- This decision does not add production code, tests, fixtures or data files.
+- No source approval, source ingestion, parser / reader / ingestion, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, split creation, leakage-test implementation, training-data
+  approval, training-run approval, training, model architecture / trainer
+  implementation, evaluation implementation, metric implementation,
+  evaluation runner, benchmark harness, model-output integration,
+  model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ
+  `10.68` comparison, candidate promotion, self-play, league or P8-P12 entry
+  is approved by this decision.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03AT_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md`
+- `docs/03_supervised_policy/03AS_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_FOR_REVIEW_AFTER_PROPOSAL_BOUNDARY_REVIEW.md`
+- `docs/03_supervised_policy/03AR_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW_AFTER_READINESS_CHECKLIST_REVIEW.md`
+- `docs/03_supervised_policy/03AQ_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_AFTER_READINESS_CHECKLIST_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Accepted; docs-only broader P7 minimal synthetic/local parser-reader smoke
+approval-decision preparation is next.
+
 ## 2026-06-30 — DR-0093 — Draft Broader P7 Minimal Implementation Proposal
 
 Decision:

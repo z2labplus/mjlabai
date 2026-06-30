@@ -29,8 +29,8 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
-Current active stage is broader P7 minimal implementation proposal review
-before approval decision:
+Current active stage is broader P7 minimal synthetic/local parser-reader smoke
+approval-decision preparation after proposal review:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -384,6 +384,18 @@ files, source approval, ingestion, parser / reader / ingestion, actual
 feature extraction, actual label generation, dataset construction, training,
 model / trainer implementation, evaluation, model-output integration, real
 data, self-play, league or P8-P12.
+`docs/03_supervised_policy/03AT_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md`
+reviews that proposal draft, confirms that the project-authored
+synthetic/local parser-reader smoke candidate is conservative, verifies that
+candidate future files are not edit permission, and records `Review can
+close` with no blocker. The next task is `Prepare approval decision for
+broader P7 minimal synthetic/local parser-reader smoke implementation`. That
+next task remains docs-only approval-decision preparation; it must not execute
+implementation, add code, tests, fixtures, data files, source approval,
+source ingestion, parser / reader / ingestion, actual feature extraction,
+actual label generation, dataset construction, training, model / trainer
+implementation, evaluation, model-output integration, real data, self-play,
+league or P8-P12.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -588,10 +600,11 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review broader P7 minimal implementation proposal before approval decision.
-The broader-P7 minimal implementation proposal review task must be docs-only.
-It may review the `03AS` proposal draft, but it must not approve the proposal,
-approve implementation or execute implementation.
+Prepare approval decision for broader P7 minimal synthetic/local parser-reader
+smoke implementation.
+The broader-P7 approval-decision preparation task must be docs-only. It may
+prepare the decision record for the exact synthetic/local parser-reader smoke
+candidate, but it must not execute implementation.
 It must not add production code, tests, fixtures, data files, source approval,
 source ingestion, parser / reader / ingestion, actual feature extraction,
 actual label generation, supervised dataset construction, split creation,
@@ -879,12 +892,13 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is docs-only broader P7 minimal implementation proposal
-  review before approval decision. Full P7 remains open, and `03AS` proposal
-  drafting is not proposal approval, implementation approval or P8-P12 entry
-  approval. Do not implement production code, tests, fixtures, data files,
-  parser, dataset reader, ingestion, feature extraction, label generation,
-  supervised dataset construction, CLI, model-output integration, train, tune,
-  self-play, league, connect to real Tenhou or treat proposal drafting /
-  review closure as model-strength evidence.
+- Current next work is docs-only broader P7 minimal synthetic/local
+  parser-reader smoke approval-decision preparation after proposal review.
+  Full P7 remains open, and `03AT` review closure is not implementation
+  execution or P8-P12 entry approval. Do not implement production code, tests,
+  fixtures, data files, parser, dataset reader, ingestion, feature extraction,
+  label generation, supervised dataset construction, CLI, model-output
+  integration, train, tune, self-play, league, connect to real Tenhou or
+  treat proposal review / approval-decision preparation as model-strength
+  evidence.
 - Technical decisions from Web ChatGPT Pro must be written into Git + docs before becoming project facts.
