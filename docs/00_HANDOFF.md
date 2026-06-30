@@ -30,7 +30,21 @@ Current stage interpretation:
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
 Current active stage is broader P7 minimal synthetic/local parser-reader smoke
-exact implementation task after approval decision:
+implementation review gate after exact implementation:
+`src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
+`tests/supervised/test_synthetic_parser_reader_smoke.py` now implement the
+exact `03AU`-approved in-memory synthetic/local parser-reader smoke helper and
+tests. The helper delegates to `feature_label_schema`, rejects path-like
+inputs, real-data flags, model-output flags, source-approval claims,
+hidden/future information and non-JSON-safe values, and returns only a
+JSON-safe guardrail summary. It emits no feature tensors, labels, targets,
+supervised examples, datasets, splits, model input, model output, evaluation
+result or model-strength fields. No fixture/data file, broad parser / reader /
+ingestion, source approval, actual feature extraction, actual label
+generation, supervised dataset construction, training, model-output
+integration, real data or P8-P12 work was added. The next task is `Review
+broader P7 minimal synthetic/local parser-reader smoke implementation`.
+Earlier P7 context:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -612,14 +626,14 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Implement broader P7 minimal synthetic/local parser-reader smoke only.
-The exact implementation task is approved by `03AU` and may touch only
-`src/mjlabai/supervised/synthetic_parser_reader_smoke.py`,
-`tests/supervised/test_synthetic_parser_reader_smoke.py` and directly related
-docs/governance records. It must not add fixtures or data files by default.
-It must not approve or perform source approval, source ingestion, broad parser
-/ reader / ingestion, actual feature extraction, actual label generation,
-supervised dataset construction, split creation, leakage-test implementation,
+Review broader P7 minimal synthetic/local parser-reader smoke implementation.
+The exact implementation task approved by `03AU` has been completed in
+`src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
+`tests/supervised/test_synthetic_parser_reader_smoke.py`; the current next task
+is the review gate. It must not add fixtures or data files. It must not approve
+or perform source approval, source ingestion, broad parser / reader /
+ingestion, actual feature extraction, actual label generation, supervised
+dataset construction, split creation, leakage-test implementation,
 training data, training-run approval, training, model architecture or trainer
 implementation, evaluation implementation, metric implementation, evaluation
 runner, benchmark harness, real Tenhou, real haifu, external logs, platform

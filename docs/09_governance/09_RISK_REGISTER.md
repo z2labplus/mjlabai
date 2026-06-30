@@ -8,6 +8,15 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-30 — Broader P7 parser-reader smoke implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Exact parser-reader smoke implementation is mistaken for broad parser / reader / ingestion approval. | Governance / Scope | High | Medium | The helper accepts only already-loaded in-memory synthetic/local mappings and `10_NEXT` now requires an implementation review gate. | Open |
+| Parser-reader smoke summary is mistaken for generated feature tensors, labels or a dataset. | Governance / Stage Control | High | Medium | The summary intentionally excludes feature tensors, labels, targets, supervised examples, datasets, splits, model input and model output. | Open |
+| Existing fixture read in tests is mistaken for a new data source or ingestion path. | Governance / Data | Medium | Medium | The test reads only the existing project-authored synthetic/local supervised smoke fixture; production helper rejects path-like inputs. | Open |
+| Synthetic/local smoke evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log and handoff classify this as exact minimal synthetic/local parser-reader smoke implementation evidence only. | Open |
+
 ## 2026-06-30 — Broader P7 parser-reader smoke approval-decision risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

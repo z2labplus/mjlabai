@@ -1,5 +1,33 @@
 # 09_CHANGELOG
 
+## 2026-06-30 - v3.09
+
+- Implemented the exact broader P7 minimal synthetic/local parser-reader smoke
+  task approved by `03AU`.
+- Added:
+  - `src/mjlabai/supervised/synthetic_parser_reader_smoke.py`
+  - `tests/supervised/test_synthetic_parser_reader_smoke.py`
+- The helper accepts only already-loaded in-memory project-authored
+  synthetic/local feature-label smoke mappings and delegates guardrail
+  validation to `feature_label_schema`.
+- The helper rejects path-like inputs, real-data flags, model-output flags,
+  source-approval claims, hidden/future information and non-JSON-safe values.
+- The returned summary is JSON-safe and intentionally excludes feature
+  tensors, labels, targets, supervised examples, datasets, splits, model
+  input, model output, evaluation results and model-strength fields.
+- New `10_NEXT` first item:
+  `Review broader P7 minimal synthetic/local parser-reader smoke implementation.`
+- This is broader P7 exact minimal synthetic/local parser-reader smoke
+  implementation evidence only.
+- No fixture/data file, real data, source approval, source ingestion, broad
+  parser / reader / ingestion, CLI, actual feature extraction, actual label
+  generation, supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval, training-run approval, training,
+  model architecture / trainer implementation, evaluation implementation,
+  metric implementation, evaluation runner, benchmark harness, model-output
+  integration, self-play, league, P8-P12 work or model-strength evidence was
+  added.
+
 ## 2026-06-30 - v3.08
 
 - Prepared the approval decision for broader P7 minimal synthetic/local

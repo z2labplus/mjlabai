@@ -28,8 +28,19 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-Broader P7 minimal synthetic/local parser-reader smoke exact implementation
-task after approval decision.
+Broader P7 minimal synthetic/local parser-reader smoke implementation review
+gate after exact implementation.
+The exact `03AU`-approved implementation added
+`src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
+`tests/supervised/test_synthetic_parser_reader_smoke.py`. The helper accepts
+only already-loaded in-memory project-authored synthetic/local feature-label
+smoke mappings, delegates guardrail validation to `feature_label_schema`,
+rejects path-like inputs, real-data flags, model-output flags, source-approval
+claims, hidden/future information and non-JSON-safe values, and returns only a
+JSON-safe guardrail summary. It emits no feature tensors, labels, targets,
+supervised examples, datasets, splits, model input, model output, evaluation
+result or model-strength fields. The next task is `Review broader P7 minimal
+synthetic/local parser-reader smoke implementation`.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -416,10 +427,12 @@ complete in
 `docs/03_supervised_policy/03AU_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`;
 approved only the next exact implementation task and exact two implementation
 files, with no fixture/data file by default.
+Broader P7 minimal synthetic/local parser-reader smoke implementation =
+complete in the exact approved files only; pending review gate.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = implement broader P7 minimal synthetic/local parser-reader smoke only.
+Next = review broader P7 minimal synthetic/local parser-reader smoke implementation.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -553,7 +566,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Implement broader P7 minimal synthetic/local parser-reader smoke only.
+Review broader P7 minimal synthetic/local parser-reader smoke implementation.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`

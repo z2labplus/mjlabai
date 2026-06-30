@@ -126,6 +126,8 @@ docs/03_supervised_policy/03AR_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDA
 docs/03_supervised_policy/03AS_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_FOR_REVIEW_AFTER_PROPOSAL_BOUNDARY_REVIEW.md
 docs/03_supervised_policy/03AT_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md
 docs/03_supervised_policy/03AU_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md
+src/mjlabai/supervised/synthetic_parser_reader_smoke.py
+tests/supervised/test_synthetic_parser_reader_smoke.py
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -665,6 +667,16 @@ implementation, source approval, source ingestion, broad parser / reader /
 ingestion, actual feature extraction, actual label generation, dataset
 construction, training, evaluation, model-output integration, strength
 evidence, real data, self-play, league or P8-P12.
+
+`src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
+`tests/supervised/test_synthetic_parser_reader_smoke.py` implement and test the
+exact `03AU`-approved in-memory synthetic/local parser-reader smoke helper.
+The helper accepts already-loaded synthetic/local feature-label smoke mappings,
+delegates guardrail validation to `feature_label_schema`, rejects path-like
+inputs and unsafe provenance / hidden / future information, and returns only a
+JSON-safe guardrail summary. It is not a broad parser, reader, ingestion path,
+feature extractor, label generator, dataset builder, model-output integration,
+training path or strength evidence.
 
 ## Data-system files
 

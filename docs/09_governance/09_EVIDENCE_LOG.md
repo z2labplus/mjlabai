@@ -8,6 +8,50 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-30 — Broader P7 minimal synthetic/local parser-reader smoke implementation
+
+- Type: internal implementation / broader P7 exact minimal synthetic/local
+  parser-reader smoke evidence.
+- Stage: P7 supervised learning / exact minimal synthetic-local parser-reader
+  smoke implementation.
+- Added implementation files:
+  - `src/mjlabai/supervised/synthetic_parser_reader_smoke.py`
+  - `tests/supervised/test_synthetic_parser_reader_smoke.py`
+- Scope:
+  - accepts only already-loaded in-memory project-authored synthetic/local
+    feature-label smoke mappings.
+  - delegates guardrail validation to `feature_label_schema`.
+  - returns a JSON-safe parser-reader smoke summary.
+  - rejects path-like inputs, real-data flags, model-output flags,
+    source-approval claims, hidden/future information and non-JSON-safe values.
+  - emits no feature tensors, labels, targets, supervised examples, datasets,
+    splits, model input, model output, evaluation result or model-strength
+    fields.
+- Validation:
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`
+- Evidence grade:
+  - Broader P7 exact minimal synthetic/local parser-reader smoke
+    implementation evidence only.
+- Not evidence of:
+  - broader P7 implementation approval.
+  - source approval or source ingestion approval.
+  - broad parser / reader / ingestion approval.
+  - actual feature extraction or label generation.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - real-data approval.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-06-30 — Broader P7 minimal synthetic/local parser-reader smoke approval decision
 
 - Type: internal documentation / broader P7 exact minimal implementation
