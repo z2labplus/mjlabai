@@ -1,5 +1,39 @@
 # 09_CHANGELOG
 
+## 2026-06-30 - v3.06
+
+- Drafted broader P7 minimal implementation proposal for review after
+  proposal-boundary review.
+- Added
+  `docs/03_supervised_policy/03AS_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_FOR_REVIEW_AFTER_PROPOSAL_BOUNDARY_REVIEW.md`.
+- Selected `Project-authored synthetic/local parser-reader smoke proposal` as
+  the most conservative proposal-boundary-eligible candidate.
+- Recorded exact scope, proposal summary, candidate class, current status,
+  exact goal, exact non-goals, candidate future exact files, explicitly
+  excluded files, allowed / forbidden inputs, allowed / forbidden outputs,
+  dependency status, candidate future validation commands, rollback plan, stop
+  conditions, risk controls, evidence requirements, approval separation,
+  current proposal decision, first task candidate, planning decision, evidence
+  grade and explicit non-evidence warnings.
+- Current proposal decision:
+  `The proposal is drafted for review, but not approved.`
+- New `10_NEXT` first item:
+  `Review broader P7 minimal implementation proposal before approval decision.`
+- This is broader P7 minimal implementation proposal draft evidence only.
+- No minimal implementation proposal was approved.
+- No broader P7 implementation, production code, tests, fixtures, data files,
+  source approval, source ingestion, parser / reader / ingestion
+  implementation, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval, training-run approval, training,
+  model architecture implementation, trainer implementation, dataloader,
+  optimizer, loss, checkpoint, weights, evaluation implementation, metric
+  implementation, evaluation runner, benchmark harness, model-output
+  integration, model-strength evidence, Tenhou ranked evidence, stable-dan
+  ranked-game evidence, LuckyJ `10.68` comparison, candidate promotion, real
+  Tenhou, real haifu, external logs, platform data, self-play, league or
+  P8-P12 work was added.
+
 ## 2026-06-30 - v3.05
 
 - Reviewed broader P7 minimal implementation proposal boundary after readiness

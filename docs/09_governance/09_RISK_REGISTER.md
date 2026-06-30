@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-30 — Broader P7 minimal implementation proposal draft risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Proposal draft is mistaken for minimal implementation proposal approval. | Governance / Scope | High | Medium | `03AS`, `10_NEXT`, handoff and stage contract state `approved_now = No` and require a later proposal review plus separate approval decision. | Open |
+| Candidate future files are mistaken for edit permission. | Governance / Scope | High | Medium | `03AS` marks all candidate future files as not approved for editing, creation or execution in this task. | Open |
+| Synthetic/local parser-reader smoke proposal is mistaken for source ingestion approval. | Governance / Data | High | Medium | `03AS` forbids source approval, real data, broad file ingestion, CLI paths and arbitrary user-supplied paths. | Open |
+| Parser-reader smoke drifts into actual feature extraction or label generation. | Governance / Stage Control | High | Medium | `03AS` forbids feature tensors, labels, targets, supervised examples, dataset construction and training data. | Open |
+| Proposal draft evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is broader P7 minimal implementation proposal draft evidence only. | Open |
+| The next review gate is mistaken for approval or implementation. | Governance / Scope | High | Medium | New `10_NEXT` first item is docs-only proposal review before approval decision and forbids code, tests, fixtures, data files and execution. | Open |
+
 ## 2026-06-30 — Broader P7 minimal implementation proposal-boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

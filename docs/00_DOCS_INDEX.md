@@ -123,6 +123,7 @@ docs/03_supervised_policy/03AO_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_AFT
 docs/03_supervised_policy/03AP_BROADER_P7_IMPLEMENTATION_READINESS_CHECKLIST_REVIEW_AFTER_BOUNDARY_CHAIN_REVIEW.md
 docs/03_supervised_policy/03AQ_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_AFTER_READINESS_CHECKLIST_REVIEW.md
 docs/03_supervised_policy/03AR_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW_AFTER_READINESS_CHECKLIST_REVIEW.md
+docs/03_supervised_policy/03AS_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_FOR_REVIEW_AFTER_PROPOSAL_BOUNDARY_REVIEW.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -618,6 +619,20 @@ proposal-boundary review evidence only: it does not approve a proposal,
 approve broader P7 implementation, add production code, tests, fixtures or
 data files, approve source, ingestion, parser / reader, feature extraction,
 label generation, dataset construction, training, model / trainer
+implementation, evaluation, model-output integration, strength evidence, real
+data, self-play, league or P8-P12.
+
+`docs/03_supervised_policy/03AS_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_FOR_REVIEW_AFTER_PROPOSAL_BOUNDARY_REVIEW.md`
+drafts the broader P7 minimal implementation proposal for later review after
+`03AR`. It selects the project-authored synthetic/local parser-reader smoke
+proposal class and records exact scope, exact non-goals, candidate future
+files, excluded files, allowed / forbidden inputs and outputs, dependency
+status, candidate validation commands, rollback plan, stop conditions, risk
+controls, evidence requirements, approval separation, planning decision and
+evidence grade. It is proposal draft evidence only: it does not approve the
+proposal, approve broader P7 implementation, add production code, tests,
+fixtures or data files, approve source, ingestion, parser / reader, feature
+extraction, label generation, dataset construction, training, model / trainer
 implementation, evaluation, model-output integration, strength evidence, real
 data, self-play, league or P8-P12.
 
