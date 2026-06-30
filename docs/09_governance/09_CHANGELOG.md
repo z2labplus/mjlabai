@@ -1,5 +1,36 @@
 # 09_CHANGELOG
 
+## 2026-06-30 - v3.08
+
+- Prepared the approval decision for broader P7 minimal synthetic/local
+  parser-reader smoke implementation.
+- Added
+  `docs/03_supervised_policy/03AU_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`.
+- Decision:
+  `Approved for next exact minimal implementation task.`
+- Approved next task:
+  `Implement broader P7 minimal synthetic/local parser-reader smoke only.`
+- Approved future files only:
+  - `src/mjlabai/supervised/synthetic_parser_reader_smoke.py`
+  - `tests/supervised/test_synthetic_parser_reader_smoke.py`
+- No new fixture or data file is approved by default.
+- New `10_NEXT` first item:
+  `Implement broader P7 minimal synthetic/local parser-reader smoke only.`
+- This is broader P7 minimal synthetic/local parser-reader smoke
+  approval-decision evidence only.
+- No implementation was executed in this task.
+- No broader P7 implementation, source approval, source ingestion, broad
+  parser / reader / ingestion, actual feature extraction, actual label
+  generation, supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval, training-run approval, training,
+  model architecture implementation, trainer implementation, dataloader,
+  optimizer, loss, checkpoint, weights, evaluation implementation, metric
+  implementation, evaluation runner, benchmark harness, model-output
+  integration, model-strength evidence, Tenhou ranked evidence, stable-dan
+  ranked-game evidence, LuckyJ `10.68` comparison, candidate promotion, real
+  Tenhou, real haifu, external logs, platform data, self-play, league or
+  P8-P12 work was added.
+
 ## 2026-06-30 - v3.07
 
 - Reviewed broader P7 minimal implementation proposal before approval

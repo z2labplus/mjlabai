@@ -30,7 +30,7 @@ Current stage interpretation:
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
 Current active stage is broader P7 minimal synthetic/local parser-reader smoke
-approval-decision preparation after proposal review:
+exact implementation task after approval decision:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
 `tests/fixtures/supervised/synthetic_supervised_smoke.json`,
@@ -396,6 +396,18 @@ source ingestion, parser / reader / ingestion, actual feature extraction,
 actual label generation, dataset construction, training, model / trainer
 implementation, evaluation, model-output integration, real data, self-play,
 league or P8-P12.
+`docs/03_supervised_policy/03AU_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
+records the approval decision for that candidate. Decision: `Approved for
+next exact minimal implementation task.` The approval is limited to the next
+task `Implement broader P7 minimal synthetic/local parser-reader smoke only`
+and the exact future files
+`src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
+`tests/supervised/test_synthetic_parser_reader_smoke.py`, plus direct
+docs/governance synchronization. It does not approve broader P7
+implementation, source approval, source ingestion, broad parser / reader /
+ingestion, actual feature extraction, actual label generation, dataset
+construction, training data, training, model / trainer implementation,
+evaluation, model-output integration, real data, self-play, league or P8-P12.
 The active project work has just closed P5 evaluation groundwork for the
 current synthetic/local scope.
 Mortal F1 runnable-baseline path is paused because no lawful, verifiable and usable trained model artifact is currently available.
@@ -600,20 +612,20 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Prepare approval decision for broader P7 minimal synthetic/local parser-reader
-smoke implementation.
-The broader-P7 approval-decision preparation task must be docs-only. It may
-prepare the decision record for the exact synthetic/local parser-reader smoke
-candidate, but it must not execute implementation.
-It must not add production code, tests, fixtures, data files, source approval,
-source ingestion, parser / reader / ingestion, actual feature extraction,
-actual label generation, supervised dataset construction, split creation,
-leakage-test implementation, training data, training-run approval, training,
-model architecture or trainer implementation, evaluation implementation,
-metric implementation, evaluation runner, benchmark harness, real Tenhou,
-real haifu, external logs, platform data, model-output integration, CLI,
-broad file ingestion, self-play, league, P8-P12 work, Tenhou evidence,
-stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion claims.
+Implement broader P7 minimal synthetic/local parser-reader smoke only.
+The exact implementation task is approved by `03AU` and may touch only
+`src/mjlabai/supervised/synthetic_parser_reader_smoke.py`,
+`tests/supervised/test_synthetic_parser_reader_smoke.py` and directly related
+docs/governance records. It must not add fixtures or data files by default.
+It must not approve or perform source approval, source ingestion, broad parser
+/ reader / ingestion, actual feature extraction, actual label generation,
+supervised dataset construction, split creation, leakage-test implementation,
+training data, training-run approval, training, model architecture or trainer
+implementation, evaluation implementation, metric implementation, evaluation
+runner, benchmark harness, real Tenhou, real haifu, external logs, platform
+data, model-output integration, CLI, broad file ingestion, self-play, league,
+P8-P12 work, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison
+or candidate-promotion claims.
 ```
 
 Latest Akochan F1 audit summary:
@@ -892,13 +904,12 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is docs-only broader P7 minimal synthetic/local
-  parser-reader smoke approval-decision preparation after proposal review.
-  Full P7 remains open, and `03AT` review closure is not implementation
-  execution or P8-P12 entry approval. Do not implement production code, tests,
-  fixtures, data files, parser, dataset reader, ingestion, feature extraction,
-  label generation, supervised dataset construction, CLI, model-output
-  integration, train, tune, self-play, league, connect to real Tenhou or
-  treat proposal review / approval-decision preparation as model-strength
-  evidence.
+- Current next work is broader P7 minimal synthetic/local parser-reader smoke
+  exact implementation after `03AU` approval decision. Full P7 remains open,
+  and the approval is limited to two exact files plus direct docs/governance
+  synchronization. Do not add fixtures, data files, broad parser / reader /
+  ingestion, source approval, source ingestion, feature extraction, label
+  generation, supervised dataset construction, CLI, model-output integration,
+  train, tune, self-play, league, connect to real Tenhou or treat this smoke
+  implementation as model-strength evidence.
 - Technical decisions from Web ChatGPT Pro must be written into Git + docs before becoming project facts.

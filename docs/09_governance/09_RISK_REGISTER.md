@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-06-30 — Broader P7 parser-reader smoke approval-decision risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Exact parser-reader smoke approval is mistaken for broad P7 implementation approval. | Governance / Scope | High | Medium | `03AU`, `10_NEXT`, handoff and stage contract state that approval is limited to two exact files and direct docs/governance synchronization. | Open |
+| Future implementation creates a new fixture/data file despite default no-fixture approval. | Governance / Execution | Medium | Medium | `03AU` explicitly does not approve `tests/fixtures/supervised/synthetic_parser_reader_smoke.json`; future task must stop if a fixture/data file is needed. | Open |
+| Synthetic/local parser-reader smoke drifts into feature extraction or label generation. | Governance / Stage Control | High | Medium | `03AU` forbids feature tensors, labels, targets, examples, datasets, splits and leakage checks. | Open |
+| Future parser-reader smoke reads real or external data. | Governance / Data | High | Medium | `03AU` permits only in-memory synthetic/local mappings and optional read-only existing synthetic fixture use; real Tenhou, real haifu, external logs and platform data are forbidden. | Open |
+| Future validation command is mistaken for current test creation or execution. | Governance / Execution | Medium | Medium | `03AU` says the future `test_synthetic_parser_reader_smoke.py` command is for the next implementation task and was not run in the approval-decision task. | Open |
+
 ## 2026-06-30 — Broader P7 minimal implementation proposal review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

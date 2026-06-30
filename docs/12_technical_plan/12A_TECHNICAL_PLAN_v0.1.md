@@ -28,8 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-Broader P7 minimal synthetic/local parser-reader smoke approval-decision
-preparation after proposal review.
+Broader P7 minimal synthetic/local parser-reader smoke exact implementation
+task after approval decision.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -116,22 +116,25 @@ but not approved. The next task is `Review broader P7 minimal implementation
 proposal before approval decision`. `03AT` reviews that proposal, records
 `Review can close` with no blocker and selects `Prepare approval decision for
 broader P7 minimal synthetic/local parser-reader smoke implementation` as the
-next docs-only task.
+next docs-only task. `03AU` records that approval decision: `Approved for next
+exact minimal implementation task.` The approved next task is limited to
+`Implement broader P7 minimal synthetic/local parser-reader smoke only` and
+the exact files `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
+`tests/supervised/test_synthetic_parser_reader_smoke.py`, plus direct
+docs/governance synchronization.
 None of `03Y`, `03Z`, `03AA`, `03AB`, `03AC`, `03AD`, `03AE`, `03AF`, `03AG`,
 `03AH`, `03AI`, `03AJ`, `03AK`, `03AL`, `03AM`, `03AN`, `03AO`, `03AP`,
-`03AQ`, `03AR`, `03AS` or `03AT` approves an implementation. The next
-approval-decision preparation task may record an approval, rejection or
-deferral decision for the exact `03AS` synthetic/local parser-reader smoke
-candidate, but it must not execute implementation, approve broad P7
-implementation, training, source approval, source ingestion, broad parser /
-reader / ingestion implementation, actual feature extraction, actual label
-generation, feature tensors, labels, targets, examples, splits, supervised
-dataset construction, leakage-test implementation, training-data
-construction, training-run approval, model architecture / trainer
-implementation, dataloader / optimizer / loss implementation, checkpoint /
-weights creation, evaluation implementation, model-strength evidence, Tenhou
-evidence, stable-dan evidence, LuckyJ comparison, real data, model-output
-integration, self-play, league or P8-P12.
+`03AQ`, `03AR`, `03AS` or `03AT` approves an implementation. `03AU` approves
+only the next exact synthetic/local parser-reader smoke task and exact files;
+it does not approve broad P7 implementation, training, source approval, source
+ingestion, broad parser / reader / ingestion implementation, actual feature
+extraction, actual label generation, feature tensors, labels, targets,
+examples, splits, supervised dataset construction, leakage-test
+implementation, training-data construction, training-run approval, model
+architecture / trainer implementation, dataloader / optimizer / loss
+implementation, checkpoint / weights creation, evaluation implementation,
+model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ
+comparison, real data, model-output integration, self-play, league or P8-P12.
 Mortal = F1 paused as runnable baseline / ReferenceOnly.
 Akochan = F1 Conditional Pass; F2 fixed-sample real-exe wrapper validation passed in workflow run `26629344590`; not strength evidence.
 Tenhou stable-dan calculator = deterministic point estimate implemented and tested.
@@ -408,11 +411,15 @@ Broader P7 minimal implementation proposal review = complete in
 review can close with no blocker and the next task is docs-only
 approval-decision preparation for the synthetic/local parser-reader smoke
 candidate.
+Broader P7 minimal synthetic/local parser-reader smoke approval decision =
+complete in
+`docs/03_supervised_policy/03AU_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`;
+approved only the next exact implementation task and exact two implementation
+files, with no fixture/data file by default.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = prepare approval decision for broader P7 minimal synthetic/local
-parser-reader smoke implementation.
+Next = implement broader P7 minimal synthetic/local parser-reader smoke only.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -546,7 +553,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Prepare approval decision for broader P7 minimal synthetic/local parser-reader smoke implementation.
+Implement broader P7 minimal synthetic/local parser-reader smoke only.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
@@ -599,14 +606,14 @@ selects a docs-only proposal-boundary review gate next. `03AR` reviews that
 proposal boundary, records `Review can close`, and selects a docs-only
 proposal drafting task next. `03AS` drafts that proposal for review only and
 does not approve it. `03AT` reviews that proposal and records `Review can
-close`. The next task must not add
-production code, tests, fixtures, data files, source
-approval, source ingestion approval, data reads, parser
-implementation, dataset reader implementation, ingestion implementation,
-actual feature extraction, actual label generation, feature tensors, labels,
-examples, splits, supervised dataset construction, leakage-test
-implementation, training-data construction, training-data approval,
-training-run approval, training-run implementation, training, model
+close`. `03AU` approves only the next exact synthetic/local parser-reader
+smoke implementation task and exact two implementation files. The next task
+must not add fixtures, data files, source approval, source ingestion approval,
+real data reads, broad parser implementation, dataset reader implementation,
+ingestion implementation, actual feature extraction, actual label generation,
+feature tensors, labels, examples, splits, supervised dataset construction,
+leakage-test implementation, training-data construction, training-data
+approval, training-run approval, training-run implementation, training, model
 architecture implementation, trainer implementation, dataloader, optimizer,
 loss, checkpoint, weights, evaluation implementation, model-strength evidence,
 Tenhou evidence, stable-dan evidence, LuckyJ comparison, candidate promotion,

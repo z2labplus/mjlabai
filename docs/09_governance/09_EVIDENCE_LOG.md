@@ -8,6 +8,59 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-06-30 — Broader P7 minimal synthetic/local parser-reader smoke approval decision
+
+- Type: internal documentation / broader P7 exact minimal implementation
+  approval-decision evidence.
+- Stage: P7 supervised learning / broader P7 minimal synthetic/local
+  parser-reader smoke approval decision.
+- Added approval-decision document:
+  - `docs/03_supervised_policy/03AU_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
+- Reviewed:
+  - `03AS` proposal draft.
+  - `03AT` proposal review.
+  - approval options.
+  - exact approved future task.
+  - exact approved future files.
+  - explicitly excluded files.
+  - allowed / forbidden future inputs.
+  - allowed / forbidden future outputs.
+  - future validation commands.
+  - future stop conditions.
+  - future rollback plan.
+  - risk controls.
+  - evidence requirements.
+  - next task.
+- Decision:
+  - `Approved for next exact minimal implementation task.`
+- Approved future task:
+  - `Implement broader P7 minimal synthetic/local parser-reader smoke only.`
+- Approved future files:
+  - `src/mjlabai/supervised/synthetic_parser_reader_smoke.py`
+  - `tests/supervised/test_synthetic_parser_reader_smoke.py`
+- Evidence grade:
+  - Broader P7 minimal synthetic/local parser-reader smoke approval-decision evidence only.
+- Not evidence of:
+  - implementation execution in this task.
+  - broader P7 implementation approval.
+  - source approval or source ingestion approval.
+  - broad parser / reader / ingestion approval.
+  - actual feature extraction or label generation approval.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - real-data approval.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-06-30 — Broader P7 minimal implementation proposal review
 
 - Type: internal documentation / broader P7 minimal implementation proposal

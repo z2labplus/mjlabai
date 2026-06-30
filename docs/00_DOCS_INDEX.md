@@ -125,6 +125,7 @@ docs/03_supervised_policy/03AQ_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDA
 docs/03_supervised_policy/03AR_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_BOUNDARY_REVIEW_AFTER_READINESS_CHECKLIST_REVIEW.md
 docs/03_supervised_policy/03AS_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_FOR_REVIEW_AFTER_PROPOSAL_BOUNDARY_REVIEW.md
 docs/03_supervised_policy/03AT_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md
+docs/03_supervised_policy/03AU_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`
@@ -651,6 +652,19 @@ fixtures or data files, approve source, ingestion, parser / reader, feature
 extraction, label generation, dataset construction, training, model / trainer
 implementation, evaluation, model-output integration, strength evidence, real
 data, self-play, league or P8-P12.
+
+`docs/03_supervised_policy/03AU_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
+records the approval decision for the broader P7 minimal synthetic/local
+parser-reader smoke candidate. Decision: `Approved for next exact minimal
+implementation task.` It approves only the next task `Implement broader P7
+minimal synthetic/local parser-reader smoke only`, limited to
+`src/mjlabai/supervised/synthetic_parser_reader_smoke.py`,
+`tests/supervised/test_synthetic_parser_reader_smoke.py` and direct
+docs/governance synchronization. It does not approve broader P7
+implementation, source approval, source ingestion, broad parser / reader /
+ingestion, actual feature extraction, actual label generation, dataset
+construction, training, evaluation, model-output integration, strength
+evidence, real data, self-play, league or P8-P12.
 
 ## Data-system files
 
