@@ -14,6 +14,65 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-01 — DR-0101 — Draft P7 Minimal Implementation Proposal After Full-Scope Review
+
+Decision:
+
+```text
+P7 minimal implementation proposal is drafted for review only.
+```
+
+Context:
+
+- `03AX` reviewed the P7 full scope expansion plan and recorded
+  `Review can close`.
+- The next required step was a docs-only proposal draft for exactly one safe
+  future implementation candidate.
+
+Rationale:
+
+- The selected candidate class, `Project-authored synthetic/local
+  parser-reader smoke extension proposal`, is the safest next candidate after
+  accepted synthetic/local parser-reader smoke current-scope work.
+- It requires no real data, source approval, source ingestion, broad parser /
+  reader / ingestion, feature extraction, label generation, dataset
+  construction, training, evaluation, model-output integration or P8-P12
+  entry.
+- The proposal records exact goals, non-goals, candidate future files,
+  input/output boundaries, dependency status, validation commands, rollback,
+  stop conditions, risk controls, evidence grade and approval separation.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03AY_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_AFTER_FULL_SCOPE_REVIEW.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review P7 minimal implementation proposal before approval decision.`
+- This decision does not approve the proposal.
+- This decision does not approve implementation, production code, tests,
+  fixtures, data files, source approval, source ingestion, broad parser /
+  reader / ingestion, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval, training-run approval, training,
+  model architecture / trainer implementation, evaluation implementation,
+  metric implementation, evaluation runner, benchmark harness,
+  model-output integration, model-strength evidence, Tenhou evidence,
+  stable-dan evidence, LuckyJ `10.68` comparison, candidate promotion,
+  real-data use, self-play, league or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03AY_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_AFTER_FULL_SCOPE_REVIEW.md`
+- `docs/03_supervised_policy/03AX_P7_FULL_SCOPE_EXPANSION_PLAN_REVIEW_AFTER_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Drafted for docs-only review; not approved for implementation.
+
 ## 2026-07-01 — DR-0100 — Review P7 Full Scope Expansion Plan After Current-Scope Acceptance
 
 Decision:

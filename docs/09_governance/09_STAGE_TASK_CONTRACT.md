@@ -2,8 +2,8 @@
 
 ## Current stage
 
-P7 minimal implementation proposal drafting after the broader P7 full scope
-expansion plan review.
+P7 minimal implementation proposal review before approval decision after the
+broader P7 full scope expansion plan review.
 The exact `03AU`-approved implementation added
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py`. The helper accepts
@@ -24,12 +24,18 @@ non-approved scope, a workstream inventory, expansion sequence, candidate
 future implementation classes, deferred / blocked / later-stage inventory,
 risk controls, evidence requirements and full P7 closure preparation. The
 `03AX` reviews that plan, records `Review can close`, and confirms that the
-plan is sufficient while approving no implementation. The current first task
-is `Draft P7 minimal implementation proposal (docs-only, no implementation)`;
-that proposal task must not add production code, tests, fixtures, data files,
-source approval, source ingestion, broad parser / reader / ingestion, actual
-feature extraction, actual label generation, dataset construction, training,
-model-output integration, real data, self-play, league or P8-P12 work.
+plan is sufficient while approving no implementation. `03AY` drafts a P7
+minimal implementation proposal for a project-authored synthetic/local
+parser-reader smoke extension candidate and records exact goals, non-goals,
+candidate future files, input/output boundaries, dependency status, validation
+commands, rollback, stop conditions, risk controls, evidence grade and
+approval separation. `03AY` is proposal draft evidence only and does not
+approve the proposal, implementation, production code, tests, fixtures, data
+files, source approval, source ingestion, broad parser / reader / ingestion,
+actual feature extraction, actual label generation, dataset construction,
+training, model-output integration, real data, self-play, league or P8-P12
+work. The current first task is `Review P7 minimal implementation proposal
+before approval decision`.
 `03M` and `03N` name and review candidate future files and guardrails only;
 `03O` approved only the exact minimal implementation task and exact files.
 That task is now implemented, reviewed in `03P` with `Review can close`, and
@@ -241,12 +247,13 @@ Broader P7 minimal implementation proposal review = complete in `03AT`; review c
 Broader P7 minimal synthetic/local parser-reader smoke approval decision = complete in `03AU`; approved only the next exact minimal implementation task and exact two implementation files, with no fixture/data file by default
 Broader P7 minimal synthetic/local parser-reader smoke implementation = complete in exact approved files only; implementation review complete in `03AV` with `Review can close`; accepted as current-scope complete on 2026-07-01 for that exact synthetic/local parser-reader smoke scope only
 P7 full scope expansion plan = defined in `03AW` and reviewed in `03AX`; review can close with no blocker
+P7 minimal implementation proposal = drafted in `03AY` for review only; proposal and implementation remain unapproved
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = draft P7 minimal implementation proposal (docs-only, no implementation)
+Next = review P7 minimal implementation proposal before approval decision
 ```
 
 ## AI role
@@ -357,4 +364,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Draft P7 minimal implementation proposal (docs-only, no implementation).
+Review P7 minimal implementation proposal before approval decision.

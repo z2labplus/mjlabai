@@ -1,5 +1,40 @@
 # 09_CHANGELOG
 
+## 2026-07-01 - v3.14
+
+- Drafted the P7 minimal implementation proposal after full-scope review.
+- Added:
+  - `docs/03_supervised_policy/03AY_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_AFTER_FULL_SCOPE_REVIEW.md`
+- Selected future candidate class:
+  `Project-authored synthetic/local parser-reader smoke extension proposal`.
+- The proposal draft records:
+  - exact goal and exact non-goals.
+  - candidate future files, not created and not approved.
+  - explicitly excluded files.
+  - allowed / forbidden inputs.
+  - allowed / forbidden outputs.
+  - dependency status.
+  - candidate future validation commands and current validation commands.
+  - rollback plan.
+  - stop conditions.
+  - risk controls.
+  - evidence grade.
+  - approval separation.
+- New `10_NEXT` first item:
+  `Review P7 minimal implementation proposal before approval decision.`
+- This is P7 minimal implementation proposal draft evidence only.
+- No proposal approval, implementation approval, production code, tests,
+  fixtures, data files, source approval, source ingestion, broad parser /
+  reader / ingestion, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval, training-run approval, training,
+  model architecture / trainer implementation, evaluation implementation,
+  metric implementation, evaluation runner, benchmark harness,
+  model-output integration, model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison, candidate
+  promotion, real Tenhou, real haifu, external logs, platform data, self-play,
+  league or P8-P12 work was added.
+
 ## 2026-07-01 - v3.13
 
 - Reviewed the P7 full scope expansion plan after current-scope acceptance.

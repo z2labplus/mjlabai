@@ -8,6 +8,58 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-01 — P7 minimal implementation proposal draft after full-scope review
+
+- Type: internal documentation / P7 minimal implementation proposal draft
+  evidence.
+- Stage: P7 supervised learning / minimal implementation proposal drafting
+  after full-scope review.
+- Added proposal document:
+  - `docs/03_supervised_policy/03AY_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_AFTER_FULL_SCOPE_REVIEW.md`
+- Candidate class:
+  - `Project-authored synthetic/local parser-reader smoke extension proposal`
+- Proposal contents:
+  - proposal summary.
+  - exact goal.
+  - exact non-goals.
+  - candidate future files, not created and not approved.
+  - explicitly excluded files.
+  - allowed and forbidden inputs.
+  - allowed and forbidden outputs.
+  - dependency status.
+  - candidate future validation commands and current validation commands.
+  - rollback plan.
+  - stop conditions.
+  - risk controls.
+  - evidence grade.
+  - approval separation.
+- New next task:
+  - `Review P7 minimal implementation proposal before approval decision.`
+- Evidence grade:
+  - P7 minimal implementation proposal draft evidence only.
+- Not evidence of:
+  - proposal approval.
+  - implementation approval.
+  - production code.
+  - tests, fixtures or data files.
+  - source approval or source ingestion approval.
+  - broad parser / reader / ingestion approval.
+  - actual feature extraction or label generation.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - real-data approval.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-07-01 — P7 full scope expansion plan review after current-scope acceptance
 
 - Type: internal documentation / P7 full scope expansion plan review evidence.

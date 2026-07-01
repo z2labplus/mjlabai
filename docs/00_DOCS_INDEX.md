@@ -129,6 +129,7 @@ docs/03_supervised_policy/03AU_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_
 docs/03_supervised_policy/03AV_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_REVIEW.md
 docs/03_supervised_policy/03AW_P7_FULL_SCOPE_EXPANSION_PLAN_AFTER_CURRENT_SCOPE_ACCEPTANCE.md
 docs/03_supervised_policy/03AX_P7_FULL_SCOPE_EXPANSION_PLAN_REVIEW_AFTER_CURRENT_SCOPE_ACCEPTANCE.md
+docs/03_supervised_policy/03AY_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_AFTER_FULL_SCOPE_REVIEW.md
 src/mjlabai/supervised/synthetic_parser_reader_smoke.py
 tests/supervised/test_synthetic_parser_reader_smoke.py
 ```
@@ -720,6 +721,19 @@ closure, source approval, ingestion, feature extraction, label generation,
 dataset construction, training, evaluation, model-output integration,
 strength evidence, real data, self-play, league or P8-P12. The next task is
 docs-only minimal implementation proposal drafting.
+
+`docs/03_supervised_policy/03AY_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_AFTER_FULL_SCOPE_REVIEW.md`
+drafts a P7 minimal implementation proposal after the full-scope review. It
+selects `Project-authored synthetic/local parser-reader smoke extension
+proposal` as the safest future candidate class and records exact goals,
+non-goals, candidate future files, allowed / forbidden inputs and outputs,
+dependency status, candidate validation commands, rollback, stop conditions,
+risk controls, evidence grade and approval separation. It is proposal draft
+evidence only: it does not approve the proposal, implementation, code, tests,
+fixtures, data files, source approval, ingestion, feature extraction, label
+generation, dataset construction, training, evaluation, model-output
+integration, real data, self-play, league or P8-P12. The next task is a
+docs-only proposal review before any approval decision.
 
 ## Data-system files
 

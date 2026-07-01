@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-01 — P7 minimal implementation proposal draft risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The `03AY` proposal draft is mistaken for proposal approval. | Governance / Scope | High | Medium | `03AY`, evidence log and `10_NEXT` mark `approved_now = No` and require a separate proposal review plus later approval decision. | Open |
+| Candidate future files are mistaken for edit or creation permission. | Governance / Scope | High | Medium | `03AY` names candidate future files only and states they are not approved for editing or creation now. | Open |
+| Synthetic/local parser-reader smoke extension is mistaken for broad ingestion or real-data reader approval. | Governance / Data | High | Medium | `03AY` allows only project-authored synthetic/local in-memory records or later explicitly approved existing synthetic/local fixtures, and forbids arbitrary paths, CLI, real Tenhou, real haifu, external logs and platform data. | Open |
+| Proposal review drifts into approval or implementation. | Governance / Stage Control | High | Medium | New `10_NEXT` first item is docs-only proposal review before approval decision and forbids code, tests, fixtures, data files and execution. | Open |
+| Proposal evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is P7 minimal implementation proposal draft evidence only with explicit non-evidence warnings. | Open |
+| P8-P12 work is treated as implicitly approved after proposal drafting. | Governance / Stage Control | High | Medium | `03AY`, stage contract and `10_NEXT` keep self-play, league, RL and P8-P12 closed. | Open |
+
 ## 2026-07-01 — P7 full scope expansion plan review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

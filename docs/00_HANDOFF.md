@@ -29,8 +29,8 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
-Current active stage is P7 minimal implementation proposal drafting after the
-broader P7 full scope expansion plan review:
+Current active stage is P7 minimal implementation proposal review before
+approval decision after the broader P7 full scope expansion plan review:
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py` now implement the
 exact `03AU`-approved in-memory synthetic/local parser-reader smoke helper and
@@ -58,8 +58,16 @@ ingestion, actual feature extraction, actual label generation, supervised
 dataset construction, training, evaluation, model-output integration, real
 data or P8-P12. `03AX` reviews that plan, records `Review can close`, and
 confirms that `03AW` is sufficient as a planning artifact while approving no
-implementation. The next task is `Draft P7 minimal implementation proposal
-(docs-only, no implementation)`.
+implementation. `03AY` drafts a P7 minimal implementation proposal for the
+`Project-authored synthetic/local parser-reader smoke extension proposal`
+candidate class and records exact goals, non-goals, candidate future files,
+input/output boundaries, dependency status, validation commands, rollback,
+stop conditions, risk controls, evidence grade and approval separation. `03AY`
+is proposal draft evidence only: it does not approve the proposal,
+implementation, source approval, ingestion, feature extraction, label
+generation, dataset construction, training, evaluation, real data or P8-P12.
+The next task is `Review P7 minimal implementation proposal before approval
+decision`.
 Earlier P7 context:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
@@ -642,24 +650,27 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Draft P7 minimal implementation proposal (docs-only, no implementation).
+Review P7 minimal implementation proposal before approval decision.
 The exact implementation task approved by `03AU` has been completed in
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py`; `03AV` reviewed it
 with `Review can close`, and the 2026-07-01 current-scope acceptance decision
 accepted that exact synthetic/local parser-reader smoke implementation as
 current-scope complete only. `03AW` defines the full P7 expansion plan, and
-`03AX` reviews it with `Review can close`. The current next task is docs-only
-minimal implementation proposal drafting. It must not add fixtures or data
-files. It must not approve or perform source approval, source ingestion, broad
-parser / reader / ingestion, actual feature extraction, actual label
-generation, supervised dataset construction, split creation, leakage-test
-implementation, training data, training-run approval, training, model
-architecture or trainer implementation, evaluation implementation, metric
-implementation, evaluation runner, benchmark harness, real Tenhou, real haifu,
-external logs, platform data, model-output integration, CLI, broad file
-ingestion, self-play, league, P8-P12 work, Tenhou evidence, stable-dan
-evidence, LuckyJ `10.68` comparison or candidate-promotion claims.
+`03AX` reviews it with `Review can close`. `03AY` now drafts the next minimal
+implementation proposal for a project-authored synthetic/local parser-reader
+smoke extension, but that proposal is not approved. The current next task is
+docs-only proposal review before any approval decision. It must not add
+fixtures or data files. It must not approve or perform source approval,
+source ingestion, broad parser / reader / ingestion, actual feature
+extraction, actual label generation, supervised dataset construction, split
+creation, leakage-test implementation, training data, training-run approval,
+training, model architecture or trainer implementation, evaluation
+implementation, metric implementation, evaluation runner, benchmark harness,
+real Tenhou, real haifu, external logs, platform data, model-output
+integration, CLI, broad file ingestion, self-play, league, P8-P12 work,
+Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison or
+candidate-promotion claims.
 ```
 
 Latest Akochan F1 audit summary:
