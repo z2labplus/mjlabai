@@ -128,6 +128,7 @@ docs/03_supervised_policy/03AT_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW
 docs/03_supervised_policy/03AU_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md
 docs/03_supervised_policy/03AV_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_REVIEW.md
 docs/03_supervised_policy/03AW_P7_FULL_SCOPE_EXPANSION_PLAN_AFTER_CURRENT_SCOPE_ACCEPTANCE.md
+docs/03_supervised_policy/03AX_P7_FULL_SCOPE_EXPANSION_PLAN_REVIEW_AFTER_CURRENT_SCOPE_ACCEPTANCE.md
 src/mjlabai/supervised/synthetic_parser_reader_smoke.py
 tests/supervised/test_synthetic_parser_reader_smoke.py
 ```
@@ -709,6 +710,16 @@ source approval, source ingestion, broad parser / reader / ingestion, actual
 feature extraction, actual label generation, dataset construction, training,
 evaluation, model-output integration, real data, self-play, league, P8-P12 or
 strength claims. The next task is a docs-only review gate for this plan.
+
+`docs/03_supervised_policy/03AX_P7_FULL_SCOPE_EXPANSION_PLAN_REVIEW_AFTER_CURRENT_SCOPE_ACCEPTANCE.md`
+reviews `03AW`, confirms the full-P7 workstream inventory, dependency order,
+non-approval boundaries, P8-P12 separation, evidence grade, risk controls and
+deferred / blocked / later-stage classification are sufficient, and records
+`Review can close`. It is review evidence only: it does not approve full P7
+closure, source approval, ingestion, feature extraction, label generation,
+dataset construction, training, evaluation, model-output integration,
+strength evidence, real data, self-play, league or P8-P12. The next task is
+docs-only minimal implementation proposal drafting.
 
 ## Data-system files
 

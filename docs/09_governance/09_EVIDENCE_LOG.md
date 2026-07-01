@@ -8,6 +8,53 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-01 — P7 full scope expansion plan review after current-scope acceptance
+
+- Type: internal documentation / P7 full scope expansion plan review evidence.
+- Stage: P7 supervised learning / full scope expansion plan review after
+  current-scope acceptance.
+- Added review document:
+  - `docs/03_supervised_policy/03AX_P7_FULL_SCOPE_EXPANSION_PLAN_REVIEW_AFTER_CURRENT_SCOPE_ACCEPTANCE.md`
+- Reviewed:
+  - `docs/03_supervised_policy/03AW_P7_FULL_SCOPE_EXPANSION_PLAN_AFTER_CURRENT_SCOPE_ACCEPTANCE.md`
+- Review decision:
+  - `Review can close.`
+- Review findings:
+  - full P7 workstream inventory is complete enough for the current planning
+    gate.
+  - dependency ordering is reasonable.
+  - no premature implementation approval is present.
+  - no source / ingestion authorization is present.
+  - no feature / label / dataset authorization is present.
+  - no training / evaluation authorization is present.
+  - no P8-P12 leakage is present.
+  - no model-strength or benchmark overclaim is present.
+  - governance, risk and evidence requirements are present.
+  - deferred / blocked / later-stage classification is correct.
+- New next task:
+  - `Draft P7 minimal implementation proposal (docs-only, no implementation).`
+- Evidence grade:
+  - P7 full scope expansion plan review evidence only.
+- Not evidence of:
+  - full P7 closure.
+  - source approval or source ingestion approval.
+  - broad parser / reader / ingestion approval.
+  - actual feature extraction or label generation.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - real-data approval.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-07-01 — P7 full scope expansion plan after current-scope acceptance
 
 - Type: internal documentation / P7 full scope expansion plan definition

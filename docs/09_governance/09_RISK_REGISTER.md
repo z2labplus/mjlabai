@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-01 — P7 full scope expansion plan review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Review closure is mistaken for full P7 closure. | Governance / Scope | High | Medium | `03AX`, evidence log and `10_NEXT` state that full P7 remains open and only a proposal-drafting task is next. | Open |
+| Review closure is mistaken for implementation approval. | Governance / Scope | High | Medium | `03AX` records explicit non-approvals; next task is docs-only proposal drafting and must not create code, tests, fixtures or data files. | Open |
+| Proposal drafting drifts into implementation design with executable scope. | Governance / Stage Control | High | Medium | New `10_NEXT` requires a proposal only, future file names only and explicit approval separation. | Open |
+| Synthetic/local parser-reader candidate is mistaken for broad ingestion or real-data reader approval. | Governance / Data | High | Medium | Proposal drafting must keep source, ingestion, parser/reader, feature, label, dataset, training and evaluation statuses as `NOT APPROVED`. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is P7 full scope expansion plan review evidence only; non-evidence warnings are recorded. | Open |
+| P8-P12 work is treated as available after review closure. | Governance / Stage Control | High | Medium | `03AX`, stage contract and `10_NEXT` keep self-play, league, RL and P8-P12 explicitly unapproved. | Open |
+
 ## 2026-07-01 — P7 full scope expansion plan risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
