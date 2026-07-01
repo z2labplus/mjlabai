@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-01 — P7 minimal implementation proposal review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The `03AZ` review closure is mistaken for proposal approval. | Governance / Scope | High | Medium | `03AZ`, evidence log and `10_NEXT` state that the review can close but does not approve the proposal; a separate approval-decision task is required. | Open |
+| The next approval-decision preparation task is mistaken for implementation execution. | Governance / Scope | High | Medium | New `10_NEXT` first item is docs-only approval-decision preparation and forbids code, tests, fixtures, data files and execution. | Open |
+| Candidate future files are treated as approved edit scope after review. | Governance / Scope | High | Medium | `03AZ` confirms the files remain future candidates only and are not approved now. | Open |
+| Synthetic/local parser-reader smoke extension is mistaken for broad ingestion or real-data reader approval. | Governance / Data | High | Medium | `03AZ` confirms source, ingestion, broad parser / reader / ingestion, real Tenhou, real haifu, external logs and platform data remain unapproved. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is P7 minimal implementation proposal review evidence only with explicit non-evidence warnings. | Open |
+| P8-P12 work is treated as implicitly approved after proposal review. | Governance / Stage Control | High | Medium | `03AZ`, stage contract and `10_NEXT` keep self-play, league, RL and P8-P12 closed. | Open |
+
 ## 2026-07-01 — P7 minimal implementation proposal draft risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

@@ -1,5 +1,40 @@
 # 09_CHANGELOG
 
+## 2026-07-01 - v3.15
+
+- Reviewed the P7 minimal implementation proposal before approval decision.
+- Added:
+  - `docs/03_supervised_policy/03AZ_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md`
+- Reviewed:
+  - `docs/03_supervised_policy/03AY_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_AFTER_FULL_SCOPE_REVIEW.md`
+- Review decision:
+  `Review can close.`
+- The review confirms:
+  - `03AY` is proposal draft only.
+  - candidate class is conservative:
+    `Project-authored synthetic/local parser-reader smoke extension proposal`.
+  - candidate future files are clear and not approved now.
+  - input and output boundaries remain synthetic/local and JSON-safe.
+  - source, ingestion, feature / label, dataset, training, evaluation,
+    model-output, real-data and P8-P12 dependencies remain not approved,
+    out of scope, blocked or later-stage.
+  - approval separation is clear.
+  - evidence grade is proposal-review evidence only.
+- New `10_NEXT` first item:
+  `Prepare approval decision for P7 minimal synthetic/local parser-reader smoke extension implementation.`
+- This is P7 minimal implementation proposal review evidence only.
+- No proposal approval, implementation approval, production code, tests,
+  fixtures, data files, source approval, source ingestion, broad parser /
+  reader / ingestion, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval, training-run approval, training,
+  model architecture / trainer implementation, evaluation implementation,
+  metric implementation, evaluation runner, benchmark harness,
+  model-output integration, model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison, candidate
+  promotion, real Tenhou, real haifu, external logs, platform data, self-play,
+  league or P8-P12 work was added.
+
 ## 2026-07-01 - v3.14
 
 - Drafted the P7 minimal implementation proposal after full-scope review.

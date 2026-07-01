@@ -8,6 +8,59 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-01 — P7 minimal implementation proposal review before approval decision
+
+- Type: internal documentation / P7 minimal implementation proposal review
+  evidence.
+- Stage: P7 supervised learning / minimal implementation proposal review
+  before approval decision.
+- Added review document:
+  - `docs/03_supervised_policy/03AZ_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md`
+- Reviewed:
+  - `docs/03_supervised_policy/03AY_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_AFTER_FULL_SCOPE_REVIEW.md`
+- Review decision:
+  - `Review can close.`
+- Review findings:
+  - `03AY` is proposal draft only.
+  - candidate class is clear and conservative.
+  - status fields record no approval and no execution permission.
+  - exact goal is narrow and synthetic/local only.
+  - non-goals are complete enough for this gate.
+  - candidate future files are not approved now.
+  - excluded files, input boundaries and output boundaries are sufficient.
+  - dependency status keeps source, ingestion, feature / label, dataset,
+    training, evaluation, model-output, real-data and P8-P12 work unapproved,
+    blocked, out of scope or later-stage.
+  - validation command separation is clear.
+  - rollback, stop conditions and risk controls are sufficient.
+  - approval lifecycle separation is clear.
+- New next task:
+  - `Prepare approval decision for P7 minimal synthetic/local parser-reader smoke extension implementation.`
+- Evidence grade:
+  - P7 minimal implementation proposal review evidence only.
+- Not evidence of:
+  - proposal approval.
+  - implementation approval.
+  - production code.
+  - tests, fixtures or data files.
+  - source approval or source ingestion approval.
+  - broad parser / reader / ingestion approval.
+  - actual feature extraction or label generation.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - real-data approval.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-07-01 — P7 minimal implementation proposal draft after full-scope review
 
 - Type: internal documentation / P7 minimal implementation proposal draft

@@ -130,6 +130,7 @@ docs/03_supervised_policy/03AV_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_
 docs/03_supervised_policy/03AW_P7_FULL_SCOPE_EXPANSION_PLAN_AFTER_CURRENT_SCOPE_ACCEPTANCE.md
 docs/03_supervised_policy/03AX_P7_FULL_SCOPE_EXPANSION_PLAN_REVIEW_AFTER_CURRENT_SCOPE_ACCEPTANCE.md
 docs/03_supervised_policy/03AY_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_AFTER_FULL_SCOPE_REVIEW.md
+docs/03_supervised_policy/03AZ_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md
 src/mjlabai/supervised/synthetic_parser_reader_smoke.py
 tests/supervised/test_synthetic_parser_reader_smoke.py
 ```
@@ -734,6 +735,17 @@ fixtures, data files, source approval, ingestion, feature extraction, label
 generation, dataset construction, training, evaluation, model-output
 integration, real data, self-play, league or P8-P12. The next task is a
 docs-only proposal review before any approval decision.
+
+`docs/03_supervised_policy/03AZ_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md`
+reviews `03AY`, confirms that the proposal scope, candidate class, future
+files, input/output boundaries, dependency statuses, validation command
+separation, rollback, stop conditions, risk controls, evidence grade and
+approval separation are sufficient, and records `Review can close`. It is
+proposal-review evidence only: it does not approve the proposal,
+implementation, code, tests, fixtures, data files, source approval, ingestion,
+feature extraction, label generation, dataset construction, training,
+evaluation, model-output integration, real data, self-play, league or P8-P12.
+The next task is docs-only approval-decision preparation.
 
 ## Data-system files
 

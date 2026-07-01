@@ -14,6 +14,70 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-01 — DR-0102 — Review P7 Minimal Implementation Proposal Before Approval Decision
+
+Decision:
+
+```text
+Review can close.
+```
+
+Context:
+
+- `03AY` drafted a P7 minimal implementation proposal after the full-scope
+  review.
+- The proposal selected a project-authored synthetic/local parser-reader
+  smoke extension candidate.
+- The next required step was a docs-only review gate before any approval
+  decision.
+
+Rationale:
+
+- `03AY` clearly states it is proposal draft only.
+- The candidate class is conservative, synthetic/local only and close to the
+  accepted parser-reader smoke current scope.
+- Candidate future files are named but not approved.
+- Input and output boundaries forbid real data, broad ingestion, feature
+  tensors, labels, targets, datasets, training data, model inputs, model
+  outputs and evaluation results.
+- Dependency statuses keep source approval, source ingestion, feature /
+  label, dataset, training, model/trainer, evaluation, model-output, real-data
+  and P8-P12 work unapproved, out of scope, blocked or later-stage.
+- Approval separation is explicit: proposal review is not approval decision
+  and not implementation.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03AZ_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Prepare approval decision for P7 minimal synthetic/local parser-reader smoke extension implementation.`
+- This decision does not approve the proposal.
+- This decision does not approve implementation, production code, tests,
+  fixtures, data files, source approval, source ingestion, broad parser /
+  reader / ingestion, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval, training-run approval, training,
+  model architecture / trainer implementation, evaluation implementation,
+  metric implementation, evaluation runner, benchmark harness,
+  model-output integration, model-strength evidence, Tenhou evidence,
+  stable-dan evidence, LuckyJ `10.68` comparison, candidate promotion,
+  real-data use, self-play, league or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03AZ_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md`
+- `docs/03_supervised_policy/03AY_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_AFTER_FULL_SCOPE_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Accepted as proposal-review gate closure; pending docs-only approval-decision
+preparation.
+
 ## 2026-07-01 — DR-0101 — Draft P7 Minimal Implementation Proposal After Full-Scope Review
 
 Decision:
