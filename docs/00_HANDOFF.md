@@ -29,8 +29,9 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
-Current active stage is broader P7 full scope expansion planning after the
-minimal synthetic/local parser-reader smoke current-scope acceptance decision:
+Current active stage is broader P7 full scope expansion plan review after the
+minimal synthetic/local parser-reader smoke current-scope acceptance decision
+and after `03AW` plan definition:
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py` now implement the
 exact `03AU`-approved in-memory synthetic/local parser-reader smoke helper and
@@ -47,12 +48,17 @@ integration, real data or P8-P12 work was added.
 reviews that exact implementation, records `Review can close`, confirms
 validation passed and finds no blocker. The 2026-07-01 current-scope
 acceptance decision is `ACCEPTED as current-scope complete` for that exact
-synthetic/local parser-reader smoke scope only. The acceptance does not close
-full P7 and does not approve broader P7 implementation, source approval,
-source ingestion, broad parser / reader / ingestion, actual feature
-extraction, actual label generation, supervised dataset construction,
-training, evaluation, model-output integration, real data or P8-P12. The next
-task is `Define P7 full scope expansion plan (docs-only, no implementation)`.
+synthetic/local parser-reader smoke scope only. `03AW` now defines the full
+P7 expansion plan after that acceptance: accepted current scope,
+non-approved scope, workstream inventory, expansion sequence, later candidate
+implementation classes, deferred / blocked / later-stage inventory, risk
+controls, evidence requirements and full P7 closure preparation. The
+acceptance and `03AW` do not close full P7 and do not approve broader P7
+implementation, source approval, source ingestion, broad parser / reader /
+ingestion, actual feature extraction, actual label generation, supervised
+dataset construction, training, evaluation, model-output integration, real
+data or P8-P12. The next task is `Review P7 full scope expansion plan after
+current-scope acceptance`.
 Earlier P7 context:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
@@ -635,23 +641,23 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define P7 full scope expansion plan (docs-only, no implementation).
+Review P7 full scope expansion plan after current-scope acceptance.
 The exact implementation task approved by `03AU` has been completed in
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py`; `03AV` reviewed it
 with `Review can close`, and the 2026-07-01 current-scope acceptance decision
 accepted that exact synthetic/local parser-reader smoke implementation as
-current-scope complete only. The current next task is docs-only full P7 scope
-expansion planning. It must not add fixtures or data files. It must not approve
-or perform source approval, source ingestion, broad parser / reader /
-ingestion, actual feature extraction, actual label generation, supervised
-dataset construction, split creation, leakage-test implementation, training
-data, training-run approval, training, model architecture or trainer
-implementation, evaluation implementation, metric implementation, evaluation
-runner, benchmark harness, real Tenhou, real haifu, external logs, platform
-data, model-output integration, CLI, broad file ingestion, self-play, league,
-P8-P12 work, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison
-or candidate-promotion claims.
+current-scope complete only. `03AW` now defines the full P7 expansion plan.
+The current next task is a docs-only review of that plan. It must not add
+fixtures or data files. It must not approve or perform source approval, source
+ingestion, broad parser / reader / ingestion, actual feature extraction,
+actual label generation, supervised dataset construction, split creation,
+leakage-test implementation, training data, training-run approval, training,
+model architecture or trainer implementation, evaluation implementation,
+metric implementation, evaluation runner, benchmark harness, real Tenhou,
+real haifu, external logs, platform data, model-output integration, CLI,
+broad file ingestion, self-play, league, P8-P12 work, Tenhou evidence,
+stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion claims.
 ```
 
 Latest Akochan F1 audit summary:

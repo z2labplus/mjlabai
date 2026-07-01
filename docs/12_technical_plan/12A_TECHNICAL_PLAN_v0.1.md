@@ -28,8 +28,9 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-Broader P7 full scope expansion planning after the minimal synthetic/local
-parser-reader smoke current-scope acceptance decision.
+Broader P7 full scope expansion plan review after the minimal synthetic/local
+parser-reader smoke current-scope acceptance decision and after `03AW` plan
+definition.
 The exact `03AU`-approved implementation added
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py`. The helper accepts
@@ -44,8 +45,16 @@ result or model-strength fields.
 reviews the exact implementation, records `Review can close`, confirms
 validation passed and finds no blocker. The 2026-07-01 current-scope
 acceptance decision is `ACCEPTED as current-scope complete` for that exact
-synthetic/local parser-reader smoke scope only. The next task is `Define P7
-full scope expansion plan (docs-only, no implementation)`.
+synthetic/local parser-reader smoke scope only.
+`docs/03_supervised_policy/03AW_P7_FULL_SCOPE_EXPANSION_PLAN_AFTER_CURRENT_SCOPE_ACCEPTANCE.md`
+now defines the full P7 expansion plan: accepted scope, non-approved scope,
+workstream inventory, expansion sequence, candidate future implementation
+classes, deferred / blocked / later-stage inventory, risk controls, evidence
+requirements and full P7 closure preparation. `03AW` is planning evidence
+only and does not approve source approval, ingestion, feature extraction,
+label generation, dataset construction, training, evaluation, real data,
+model-output integration, self-play, league or P8-P12. The next task is
+`Review P7 full scope expansion plan after current-scope acceptance`.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -437,10 +446,11 @@ complete in the exact approved files only; implementation review complete in
 `03AV` with `Review can close`; the 2026-07-01 current-scope acceptance
 decision is `ACCEPTED as current-scope complete` for that exact
 synthetic/local parser-reader smoke scope only.
+P7 full scope expansion plan = defined in `03AW`; pending docs-only review.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = define P7 full scope expansion plan (docs-only, no implementation).
+Next = review P7 full scope expansion plan after current-scope acceptance.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -574,7 +584,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Define P7 full scope expansion plan (docs-only, no implementation).
+Review P7 full scope expansion plan after current-scope acceptance.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`

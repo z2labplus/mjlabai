@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-01 — P7 full scope expansion plan risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Full scope expansion plan is mistaken for full P7 closure. | Governance / Scope | High | Medium | `03AW`, `10_NEXT`, handoff and evidence log state that full P7 remains open and the next task is only a docs-only review gate. | Open |
+| Full scope expansion plan is mistaken for broader P7 implementation approval. | Governance / Scope | High | Medium | The plan records no approved implementation class, no exact files and no execution permission; future implementation requires proposal, review and approval decision. | Open |
+| Workstream inventory is treated as a task list to execute directly. | Governance / Stage Control | High | Medium | `03AW` separates inventory, candidate classes, upstream artifacts and likely gates; no candidate is approved now. | Open |
+| Source / parser / feature / label / dataset / training approvals are inferred from the plan. | Data / Training / Governance | High | Medium | Each approval remains a separate future gate with required upstream artifacts and evidence records. | Open |
+| Synthetic/local smoke evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is P7 full scope expansion plan definition evidence only; explicit non-evidence warnings are recorded. | Open |
+| The next review gate drifts into implementation or P8-P12 planning. | Governance / Stage Control | High | Medium | New `10_NEXT` first item is docs-only and forbids production code, tests, fixtures, data files, real data, training, evaluation, self-play, league and P8-P12. | Open |
+
 ## 2026-07-01 — Broader P7 parser-reader smoke current-scope acceptance risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

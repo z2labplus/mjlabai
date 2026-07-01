@@ -127,6 +127,7 @@ docs/03_supervised_policy/03AS_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_FOR_RE
 docs/03_supervised_policy/03AT_BROADER_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md
 docs/03_supervised_policy/03AU_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md
 docs/03_supervised_policy/03AV_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_REVIEW.md
+docs/03_supervised_policy/03AW_P7_FULL_SCOPE_EXPANSION_PLAN_AFTER_CURRENT_SCOPE_ACCEPTANCE.md
 src/mjlabai/supervised/synthetic_parser_reader_smoke.py
 tests/supervised/test_synthetic_parser_reader_smoke.py
 ```
@@ -697,6 +698,17 @@ feature extraction, actual label generation, supervised dataset construction,
 training, evaluation, model-output integration, model-strength evidence,
 Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison,
 candidate-promotion evidence or P8-P12 entry.
+
+`docs/03_supervised_policy/03AW_P7_FULL_SCOPE_EXPANSION_PLAN_AFTER_CURRENT_SCOPE_ACCEPTANCE.md`
+defines the full P7 expansion plan after current-scope acceptance. It records
+accepted P7 scope, non-approved scope, a workstream inventory, expansion
+sequence, candidate future implementation classes, deferred / blocked /
+later-stage inventory, risk controls, evidence requirements and full P7
+closure preparation. It is planning evidence only: it does not approve
+source approval, source ingestion, broad parser / reader / ingestion, actual
+feature extraction, actual label generation, dataset construction, training,
+evaluation, model-output integration, real data, self-play, league, P8-P12 or
+strength claims. The next task is a docs-only review gate for this plan.
 
 ## Data-system files
 

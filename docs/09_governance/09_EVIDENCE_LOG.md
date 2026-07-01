@@ -8,6 +8,51 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-01 — P7 full scope expansion plan after current-scope acceptance
+
+- Type: internal documentation / P7 full scope expansion plan definition
+  evidence.
+- Stage: P7 supervised learning / full scope expansion planning after exact
+  synthetic/local parser-reader smoke current-scope acceptance.
+- Added plan document:
+  - `docs/03_supervised_policy/03AW_P7_FULL_SCOPE_EXPANSION_PLAN_AFTER_CURRENT_SCOPE_ACCEPTANCE.md`
+- Planning decision:
+  - `P7 full scope expansion plan is defined for review.`
+- Plan contents:
+  - current accepted P7 scope.
+  - current non-approved scope.
+  - full-P7 workstream inventory.
+  - expansion sequence.
+  - near-term docs-only candidate tasks.
+  - later implementation candidate classes, none approved now.
+  - deferred / blocked / later-stage inventory.
+  - risk controls.
+  - evidence requirements.
+  - full P7 closure preparation.
+- New next task:
+  - `Review P7 full scope expansion plan after current-scope acceptance.`
+- Evidence grade:
+  - P7 full scope expansion plan definition evidence only.
+- Not evidence of:
+  - full P7 closure.
+  - source approval or source ingestion approval.
+  - broad parser / reader / ingestion approval.
+  - actual feature extraction or label generation.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - real-data approval.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-07-01 — Broader P7 minimal synthetic/local parser-reader smoke current-scope acceptance decision
 
 - Type: internal governance / broader P7 exact minimal synthetic/local

@@ -14,6 +14,62 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-01 — DR-0099 — Define P7 Full Scope Expansion Plan After Current-Scope Acceptance
+
+Decision:
+
+```text
+P7 full scope expansion plan is defined for review.
+```
+
+Context:
+
+- The exact broader P7 minimal synthetic/local parser-reader smoke
+  implementation was accepted as current-scope complete.
+- Full P7 remains open.
+- The project needs a consolidated inventory, sequence and gate map before
+  any further broader P7 implementation proposal.
+
+Rationale:
+
+- The accepted current scope is narrow and synthetic/local only.
+- Remaining full-P7 work includes source approval, ingestion, feature
+  extraction, label generation, dataset construction, split/leakage controls,
+  training-data approval, training-run approval, model/trainer planning,
+  evaluation dependencies, model-output integration, governance and later
+  transition boundaries.
+- Defining the expansion plan before implementation reduces scope drift,
+  approval confusion and evidence overclaim risk.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03AW_P7_FULL_SCOPE_EXPANSION_PLAN_AFTER_CURRENT_SCOPE_ACCEPTANCE.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review P7 full scope expansion plan after current-scope acceptance.`
+- This decision does not close full P7.
+- This decision does not approve source approval, source ingestion, broad
+  parser / reader / ingestion, actual feature extraction, actual label
+  generation, supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval, training-run approval, training,
+  model architecture / trainer implementation, evaluation implementation,
+  metric implementation, evaluation runner, benchmark harness,
+  model-output integration, model-strength evidence, Tenhou evidence,
+  stable-dan evidence, LuckyJ `10.68` comparison, candidate promotion,
+  real-data use, self-play, league or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03AW_P7_FULL_SCOPE_EXPANSION_PLAN_AFTER_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Defined for review; pending separate docs-only review gate.
+
 ## 2026-07-01 — DR-0098 — Accept Exact Broader P7 Synthetic/Local Parser-Reader Smoke as Current-Scope Complete
 
 Decision:

@@ -2,8 +2,9 @@
 
 ## Current stage
 
-Broader P7 full scope expansion planning after the minimal synthetic/local
-parser-reader smoke current-scope acceptance decision.
+Broader P7 full scope expansion plan review after the minimal synthetic/local
+parser-reader smoke current-scope acceptance decision and after `03AW` plan
+definition.
 The exact `03AU`-approved implementation added
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py`. The helper accepts
@@ -18,12 +19,17 @@ result or model-strength fields.
 reviews that exact implementation, records `Review can close`, confirms
 validation passed and finds no blocker. The 2026-07-01 current-scope
 acceptance decision is `ACCEPTED as current-scope complete` for that exact
-synthetic/local parser-reader smoke scope only. The current first task is
-`Define P7 full scope expansion plan (docs-only, no implementation)`; that
-planning task must not add production code, tests, fixtures, data files,
-source approval, source ingestion, broad parser / reader / ingestion, actual
-feature extraction, actual label generation, dataset construction, training,
-model-output integration, real data, self-play, league or P8-P12 work.
+synthetic/local parser-reader smoke scope only. `03AW` now defines the full
+P7 expansion plan after current-scope acceptance, including accepted scope,
+non-approved scope, a workstream inventory, expansion sequence, candidate
+future implementation classes, deferred / blocked / later-stage inventory,
+risk controls, evidence requirements and full P7 closure preparation. The
+current first task is `Review P7 full scope expansion plan after
+current-scope acceptance`; that review task must not add production code,
+tests, fixtures, data files, source approval, source ingestion, broad parser /
+reader / ingestion, actual feature extraction, actual label generation,
+dataset construction, training, model-output integration, real data,
+self-play, league or P8-P12 work.
 `03M` and `03N` name and review candidate future files and guardrails only;
 `03O` approved only the exact minimal implementation task and exact files.
 That task is now implemented, reviewed in `03P` with `Review can close`, and
@@ -234,12 +240,13 @@ Broader P7 minimal implementation proposal draft = complete in `03AS`; proposal 
 Broader P7 minimal implementation proposal review = complete in `03AT`; review can close with no blocker and the next task is docs-only approval-decision preparation for the synthetic/local parser-reader smoke candidate
 Broader P7 minimal synthetic/local parser-reader smoke approval decision = complete in `03AU`; approved only the next exact minimal implementation task and exact two implementation files, with no fixture/data file by default
 Broader P7 minimal synthetic/local parser-reader smoke implementation = complete in exact approved files only; implementation review complete in `03AV` with `Review can close`; accepted as current-scope complete on 2026-07-01 for that exact synthetic/local parser-reader smoke scope only
+P7 full scope expansion plan = defined in `03AW`; pending docs-only review
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = define P7 full scope expansion plan (docs-only, no implementation)
+Next = review P7 full scope expansion plan after current-scope acceptance
 ```
 
 ## AI role
@@ -350,4 +357,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Define P7 full scope expansion plan (docs-only, no implementation).
+Review P7 full scope expansion plan after current-scope acceptance.

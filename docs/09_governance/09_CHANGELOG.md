@@ -1,5 +1,42 @@
 # 09_CHANGELOG
 
+## 2026-07-01 - v3.12
+
+- Defined the P7 full scope expansion plan after accepting the exact broader
+  P7 minimal synthetic/local parser-reader smoke scope as current-scope
+  complete.
+- Added:
+  - `docs/03_supervised_policy/03AW_P7_FULL_SCOPE_EXPANSION_PLAN_AFTER_CURRENT_SCOPE_ACCEPTANCE.md`
+- The plan records:
+  - accepted current P7 scope.
+  - current non-approved full-P7 scope.
+  - a workstream inventory for source approval, parser / reader / ingestion,
+    actual feature extraction, label generation, dataset construction,
+    split/leakage controls, training-data approval, training-run approval,
+    model/trainer work, evaluation dependencies, model-output integration,
+    real data, governance, full P7 closure and P8-P12 transition.
+  - expansion sequence.
+  - later implementation candidate classes, none approved now.
+  - deferred / blocked / later-stage inventory.
+  - risk controls and evidence requirements.
+  - full P7 closure preparation.
+- Planning decision:
+  `P7 full scope expansion plan is defined for review.`
+- New `10_NEXT` first item:
+  `Review P7 full scope expansion plan after current-scope acceptance.`
+- This is P7 full scope expansion plan definition evidence only.
+- No production code, tests, fixtures, data files, implementation logic
+  changes, source approval, source ingestion, broad parser / reader /
+  ingestion, actual feature extraction, actual label generation, supervised
+  dataset construction, split creation, leakage-test implementation,
+  training-data approval, training-run approval, training, model architecture /
+  trainer implementation, evaluation implementation, metric implementation,
+  evaluation runner, benchmark harness, model-output integration,
+  model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
+  evidence, LuckyJ `10.68` comparison, candidate promotion, real Tenhou, real
+  haifu, external logs, platform data, self-play, league or P8-P12 work was
+  added.
+
 ## 2026-07-01 - v3.11
 
 - Decided whether the broader P7 minimal synthetic/local parser-reader smoke
