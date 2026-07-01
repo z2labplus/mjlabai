@@ -30,7 +30,7 @@ Current stage interpretation:
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
 Current active stage is P7 minimal synthetic/local parser-reader smoke
-extension approval-decision preparation after proposal review:
+extension implementation after approval decision:
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py` now implement the
 exact `03AU`-approved in-memory synthetic/local parser-reader smoke helper and
@@ -73,8 +73,18 @@ implementation prompt, add code, add tests, add fixtures, add data files,
 approve source approval, approve ingestion, approve feature extraction,
 approve label generation, approve dataset construction, approve training,
 approve evaluation, approve model-output integration, approve real data or
-approve P8-P12. The next task is `Prepare approval decision for P7 minimal
-synthetic/local parser-reader smoke extension implementation`.
+approve P8-P12. `03BA` records the approval decision:
+`Approved for next exact minimal implementation task.` The approved future
+task is `Implement P7 minimal synthetic/local parser-reader smoke extension
+only`, limited to `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`,
+`tests/supervised/test_synthetic_parser_reader_smoke_extension.py` and direct
+docs/governance synchronization. `03BA` does not execute implementation,
+approve broader P7 implementation, approve source approval, approve source
+ingestion, approve broad parser / reader / ingestion, approve actual feature
+extraction, approve actual label generation, approve dataset construction,
+approve training, approve evaluation, approve model-output integration,
+approve real data or approve P8-P12. The next task is `Implement P7 minimal
+synthetic/local parser-reader smoke extension only`.
 Earlier P7 context:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
@@ -657,8 +667,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Prepare approval decision for P7 minimal synthetic/local parser-reader smoke
-extension implementation.
+Implement P7 minimal synthetic/local parser-reader smoke extension only.
 The exact implementation task approved by `03AU` has been completed in
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py`; `03AV` reviewed it
@@ -667,19 +676,22 @@ accepted that exact synthetic/local parser-reader smoke implementation as
 current-scope complete only. `03AW` defines the full P7 expansion plan, and
 `03AX` reviews it with `Review can close`. `03AY` drafts the next minimal
 implementation proposal for a project-authored synthetic/local parser-reader
-smoke extension, but that proposal is not approved. `03AZ` reviews `03AY` and
-records `Review can close`; it is proposal-review evidence only and still does
-not approve implementation. The current next task is docs-only
-approval-decision preparation. It must not execute implementation, add
-fixtures or data files, or approve / perform source approval, source
-ingestion, broad parser / reader / ingestion, actual feature extraction,
-actual label generation, supervised dataset construction, split creation,
-leakage-test implementation, training data, training-run approval, training,
-model architecture or trainer implementation, evaluation implementation,
-metric implementation, evaluation runner, benchmark harness, real Tenhou,
-real haifu, external logs, platform data, model-output integration, CLI,
-broad file ingestion, self-play, league, P8-P12 work, Tenhou evidence,
-stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion claims.
+smoke extension. `03AZ` reviews `03AY` and records `Review can close`; it is
+proposal-review evidence only. `03BA` records `Approved for next exact minimal
+implementation task`, limited to
+`src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`,
+`tests/supervised/test_synthetic_parser_reader_smoke_extension.py` and direct
+docs/governance synchronization. The current next task is that exact
+implementation task. It must not add fixtures or data files, or approve /
+perform source approval, source ingestion, broad parser / reader / ingestion,
+actual feature extraction, actual label generation, supervised dataset
+construction, split creation, leakage-test implementation, training data,
+training-run approval, training, model architecture or trainer implementation,
+evaluation implementation, metric implementation, evaluation runner,
+benchmark harness, real Tenhou, real haifu, external logs, platform data,
+model-output integration, CLI, broad file ingestion, self-play, league,
+P8-P12 work, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison
+or candidate-promotion claims.
 ```
 
 Latest Akochan F1 audit summary:

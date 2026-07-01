@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Prepare approval decision for P7 minimal synthetic/local parser-reader smoke extension implementation.
+- [ ] Implement P7 minimal synthetic/local parser-reader smoke extension only.
 
 Current execution charter:
 
@@ -16,14 +16,13 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only approval-decision preparation task after `03AZ`
-  reviewed the P7 minimal implementation proposal and recorded
-  `Review can close`.
-- The task may decide whether to approve, reject or defer a later exact
-  implementation task, but it must not execute implementation.
-- The task must not add code, tests, fixtures or data files.
-- The task must not generate an implementation prompt beyond naming a
-  potential next `10_NEXT` task if approved.
+- This is the exact implementation task approved by `03BA`.
+- The approved scope is limited to these exact files:
+  - `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`
+  - `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+- Direct docs/governance synchronization may be updated only as needed to
+  record implementation evidence, validation results, risks and the next task.
+- No fixture or data file is approved by default.
 - Full P7 remains open.
 - Source approval, source ingestion, broad parser / reader / ingestion,
   actual feature extraction, actual label generation, supervised dataset
@@ -32,9 +31,7 @@ Limits:
   evaluation implementation, metric implementation, evaluation runner,
   benchmark harness, model-output integration, real data, self-play, league
   and P8-P12 remain unapproved.
-- Do not add production code.
-- Do not modify implementation logic.
-- Do not add tests.
+- Do not modify existing implementation logic outside the exact approved files.
 - Do not add fixtures.
 - Do not add data files.
 - Do not read real or external source files.
@@ -52,16 +49,18 @@ Limits:
   or `snapshot` files.
 - Do not vendor or copy third-party source, binaries, params or artifacts into
   this repository.
-- Stop before commit if this proposal task needs production logic changes, a
-  new test, a new fixture, a data file, real data, source approval, ingestion
-  approval, broad parser / reader / ingestion approval, actual feature
-  extraction, label generation, dataset construction, training-data approval,
-  training-run approval, training approval, evaluation approval,
-  model-strength evidence, Tenhou evidence, stable-dan ranked-game evidence,
-  LuckyJ comparison, candidate-promotion evidence or P8-P12 drift.
+- Stop before commit if the implementation needs any file outside the exact
+  approved scope, a fixture, a data file, real data, source approval,
+  ingestion approval, broad parser / reader / ingestion approval, CLI,
+  arbitrary path reading, actual feature extraction, label generation,
+  dataset construction, training-data approval, training-run approval,
+  training approval, evaluation approval, model-strength evidence, Tenhou
+  evidence, stable-dan ranked-game evidence, LuckyJ comparison,
+  candidate-promotion evidence or P8-P12 drift.
 
 ## Completed
 
+- [x] 2026-07-01 Prepared approval decision for P7 minimal synthetic/local parser-reader smoke extension implementation: added `docs/03_supervised_policy/03BA_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_APPROVAL_DECISION.md`, reviewed the `03AY` proposal and `03AZ` proposal review, selected `Approved for next exact minimal implementation task`, approved only `Implement P7 minimal synthetic/local parser-reader smoke extension only`, approved only `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py` and `tests/supervised/test_synthetic_parser_reader_smoke_extension.py` plus direct docs/governance synchronization, and did not execute implementation. This is P7 minimal synthetic/local parser-reader smoke extension approval-decision evidence only. It does not approve broader P7 implementation, source approval, source ingestion, broad parser / reader / ingestion, actual feature extraction, actual label generation, supervised dataset construction, split creation, leakage-test implementation, training data, training run, training, model architecture / trainer implementation, evaluation implementation, metric implementation, evaluation runner, benchmark harness, model-output integration, model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison, candidate promotion, real data, self-play, league or P8-P12.
 - [x] 2026-07-01 Reviewed P7 minimal implementation proposal before approval decision: added `docs/03_supervised_policy/03AZ_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md`, reviewed `03AY` scope, candidate class, status, exact goal, non-goals, candidate future files, excluded files, input/output boundaries, dependency status, validation command separation, rollback, stop conditions, risk controls, evidence grade and approval separation, and recorded `Review can close`. This is P7 minimal implementation proposal review evidence only. It does not approve the proposal, approve implementation, add production code, tests, fixtures or data files, approve source approval, source ingestion, broad parser / reader / ingestion, actual feature extraction, actual label generation, supervised dataset construction, split creation, leakage-test implementation, training-data approval, training-run approval, training, model architecture / trainer implementation, evaluation implementation, metric implementation, evaluation runner, benchmark harness, model-output integration, model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison, candidate promotion, real data, self-play, league or P8-P12. The next task is `Prepare approval decision for P7 minimal synthetic/local parser-reader smoke extension implementation.`
 - [x] 2026-07-01 Drafted P7 minimal implementation proposal after full-scope review: added `docs/03_supervised_policy/03AY_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_AFTER_FULL_SCOPE_REVIEW.md`, selected `Project-authored synthetic/local parser-reader smoke extension proposal` as the safest future candidate class, and documented exact goals, non-goals, candidate future files, excluded files, allowed / forbidden inputs and outputs, dependency statuses, candidate future validation commands, rollback plan, stop conditions, risk controls, evidence grade and approval separation. This is P7 minimal implementation proposal draft evidence only. It does not approve the proposal, implementation, production code, tests, fixtures, data files, source approval, source ingestion, broad parser / reader / ingestion, actual feature extraction, actual label generation, supervised dataset construction, split creation, leakage-test implementation, training-data approval, training-run approval, training, model architecture / trainer implementation, evaluation implementation, metric implementation, evaluation runner, benchmark harness, model-output integration, model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison, candidate promotion, real data, self-play, league or P8-P12. The next task is `Review P7 minimal implementation proposal before approval decision.`
 - [x] 2026-07-01 Reviewed P7 full scope expansion plan after current-scope acceptance: added `docs/03_supervised_policy/03AX_P7_FULL_SCOPE_EXPANSION_PLAN_REVIEW_AFTER_CURRENT_SCOPE_ACCEPTANCE.md`, reviewed `03AW` workstream inventory, dependency ordering, non-approval wording, source / ingestion / feature / label / dataset / training / evaluation boundaries, P8-P12 boundary, evidence grade, governance requirements and deferred / blocked / later-stage classification, and recorded `Review can close`. This is P7 full scope expansion plan review evidence only. It does not approve full P7 closure, source approval, source ingestion, broad parser / reader / ingestion, actual feature extraction, actual label generation, dataset construction, split creation, leakage-test implementation, training-data approval, training-run approval, training, model architecture / trainer implementation, evaluation implementation, metric implementation, evaluation runner, benchmark harness, model-output integration, real data, self-play, league, P8-P12, model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate promotion. The next task is `Draft P7 minimal implementation proposal (docs-only, no implementation).`

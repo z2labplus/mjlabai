@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-01 — P7 minimal parser-reader smoke extension approval-decision risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The `03BA` approval decision is mistaken for implementation execution. | Governance / Scope | High | Medium | `03BA`, evidence log and `10_NEXT` state that this task records approval only; implementation is the next exact task. | Open |
+| Narrow approval is mistaken for broad P7 implementation approval. | Governance / Scope | High | Medium | `03BA` approves only two exact future files and direct docs/governance synchronization; full P7 remains open. | Open |
+| Candidate future files are created or edited outside the next exact task. | Governance / Execution | High | Medium | `03BA` states candidate files are approved only for the next `10_NEXT` implementation task, not for the approval-decision task. | Open |
+| Future smoke extension drifts into source approval or source ingestion. | Governance / Data | High | Medium | Source dependency and source approval dependency remain not approved; real/external data, arbitrary paths, broad directories and CLI are forbidden. | Open |
+| Future smoke extension emits feature tensors, labels, examples, datasets or training data. | Governance / Stage Control | High | Medium | `03BA` forbids feature tensors, labels, targets, supervised examples, datasets, splits and training data as future outputs. | Open |
+| Approval-decision evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is P7 minimal synthetic/local parser-reader smoke extension approval-decision evidence only with explicit non-evidence warnings. | Open |
+| P8-P12 work is treated as implicitly approved after narrow approval. | Governance / Stage Control | High | Medium | `03BA`, stage contract and `10_NEXT` keep self-play, league, RL and P8-P12 closed. | Open |
+
 ## 2026-07-01 — P7 minimal implementation proposal review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

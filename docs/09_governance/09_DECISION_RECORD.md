@@ -14,6 +14,71 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-01 — DR-0103 — Prepare P7 Minimal Parser-Reader Smoke Extension Approval Decision
+
+Decision:
+
+```text
+Approved for next exact minimal implementation task.
+```
+
+Context:
+
+- `03AY` drafted a P7 minimal implementation proposal after full-scope review.
+- `03AZ` reviewed that proposal and recorded `Review can close` with no
+  blocker.
+- The current task was to prepare and record a separate approval decision
+  without executing implementation.
+
+Rationale:
+
+- The candidate remains the safest available P7 candidate class after
+  `03AY` / `03AZ`: project-authored synthetic/local parser-reader smoke
+  extension.
+- The approved future task is exact and narrow:
+  `Implement P7 minimal synthetic/local parser-reader smoke extension only.`
+- The exact approved future files are limited to:
+  `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py` and
+  `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`.
+- No fixture or data file is approved by default.
+- Source approval, source ingestion, broad parser / reader / ingestion,
+  feature extraction, label generation, dataset construction, training,
+  evaluation, model-output integration, real data and P8-P12 remain
+  unapproved.
+
+Consequences:
+
+- Added
+  `docs/03_supervised_policy/03BA_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_APPROVAL_DECISION.md`.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Implement P7 minimal synthetic/local parser-reader smoke extension only.`
+- This decision does not execute implementation.
+- This decision does not approve broader P7 implementation, source approval,
+  source ingestion, broad parser / reader / ingestion, actual feature
+  extraction, actual label generation, supervised dataset construction, split
+  creation, leakage-test implementation, training-data approval,
+  training-run approval, training, model architecture / trainer
+  implementation, evaluation implementation, metric implementation,
+  evaluation runner, benchmark harness, model-output integration,
+  model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ
+  `10.68` comparison, candidate promotion, real-data use, self-play, league
+  or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03BA_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_APPROVAL_DECISION.md`
+- `docs/03_supervised_policy/03AZ_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md`
+- `docs/03_supervised_policy/03AY_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_AFTER_FULL_SCOPE_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Approved only for the next exact minimal implementation task; implementation
+has not been executed in this decision task.
+
 ## 2026-07-01 — DR-0102 — Review P7 Minimal Implementation Proposal Before Approval Decision
 
 Decision:

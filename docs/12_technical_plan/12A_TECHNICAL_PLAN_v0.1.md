@@ -28,8 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 minimal synthetic/local parser-reader smoke extension approval-decision
-preparation after proposal review.
+P7 minimal synthetic/local parser-reader smoke extension implementation after
+approval decision.
 The exact `03AU`-approved implementation added
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py`. The helper accepts
@@ -73,8 +73,19 @@ add code, add tests, add fixtures, add data files, approve source approval,
 approve ingestion, approve feature extraction, approve label generation,
 approve dataset construction, approve training, approve evaluation, approve
 model-output integration, approve real data or approve P8-P12. The next task
-is `Prepare approval decision for P7 minimal synthetic/local parser-reader
-smoke extension implementation`.
+was `Prepare approval decision for P7 minimal synthetic/local parser-reader
+smoke extension implementation`. `03BA` records that approval decision:
+`Approved for next exact minimal implementation task.` It approves only the
+future task `Implement P7 minimal synthetic/local parser-reader smoke
+extension only`, only
+`src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`,
+`tests/supervised/test_synthetic_parser_reader_smoke_extension.py` and direct
+docs/governance synchronization. It does not execute implementation, approve
+broader P7 implementation, source approval, source ingestion, broad parser /
+reader / ingestion, actual feature extraction, actual label generation,
+dataset construction, training, evaluation, model-output integration, real
+data, self-play, league or P8-P12. The next task is `Implement P7 minimal
+synthetic/local parser-reader smoke extension only`.
 P5 evaluation foundation is closed for the current synthetic/local scope.
 General P6 data-system implementation is not open; the exact minimal replay
 schema and project-authored synthetic fixture task approved by `02N` is
@@ -473,11 +484,14 @@ proposal and implementation remain unapproved.
 P7 minimal implementation proposal review = complete in `03AZ`; review can
 close with no blocker and the next task is docs-only approval-decision
 preparation.
+P7 minimal synthetic/local parser-reader smoke extension approval decision =
+complete in `03BA`; approved only the next exact implementation task and exact
+two future files, with no fixture/data file by default.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = prepare approval decision for P7 minimal synthetic/local parser-reader
-smoke extension implementation.
+Next = implement P7 minimal synthetic/local parser-reader smoke extension
+only.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -611,8 +625,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Prepare approval decision for P7 minimal synthetic/local parser-reader smoke
-extension implementation.
+Implement P7 minimal synthetic/local parser-reader smoke extension only.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`

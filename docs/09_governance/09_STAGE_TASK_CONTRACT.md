@@ -2,8 +2,8 @@
 
 ## Current stage
 
-P7 minimal synthetic/local parser-reader smoke extension approval-decision
-preparation after proposal review.
+P7 minimal synthetic/local parser-reader smoke extension implementation after
+approval decision.
 The exact `03AU`-approved implementation added
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py`. The helper accepts
@@ -41,8 +41,18 @@ implementation, add code, add tests, add fixtures, add data files, approve
 source approval, approve ingestion, approve feature extraction, approve label
 generation, approve dataset construction, approve training, approve
 evaluation, approve model-output integration, approve real data or approve
-P8-P12. The current first task is `Prepare approval decision for P7 minimal
-synthetic/local parser-reader smoke extension implementation`.
+P8-P12. `03BA` records the approval decision: `Approved for next exact
+minimal implementation task.` It approves only `Implement P7 minimal
+synthetic/local parser-reader smoke extension only`, only
+`src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`,
+`tests/supervised/test_synthetic_parser_reader_smoke_extension.py` and direct
+docs/governance synchronization. It does not execute implementation, approve
+broader P7 implementation, approve source approval, approve source ingestion,
+approve broad parser / reader / ingestion, approve actual feature extraction,
+approve actual label generation, approve dataset construction, approve
+training, approve evaluation, approve model-output integration, approve real
+data or approve P8-P12. The current first task is `Implement P7 minimal
+synthetic/local parser-reader smoke extension only`.
 `03M` and `03N` name and review candidate future files and guardrails only;
 `03O` approved only the exact minimal implementation task and exact files.
 That task is now implemented, reviewed in `03P` with `Review can close`, and
@@ -256,12 +266,13 @@ Broader P7 minimal synthetic/local parser-reader smoke implementation = complete
 P7 full scope expansion plan = defined in `03AW` and reviewed in `03AX`; review can close with no blocker
 P7 minimal implementation proposal = drafted in `03AY` for review only; proposal and implementation remain unapproved
 P7 minimal implementation proposal review = complete in `03AZ`; review can close with no blocker and does not approve implementation
+P7 minimal synthetic/local parser-reader smoke extension approval decision = complete in `03BA`; approved only the next exact implementation task and exact two future files, with no fixture/data file by default
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = prepare approval decision for P7 minimal synthetic/local parser-reader smoke extension implementation
+Next = implement P7 minimal synthetic/local parser-reader smoke extension only
 ```
 
 ## AI role
@@ -372,5 +383,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Prepare approval decision for P7 minimal synthetic/local parser-reader smoke
-extension implementation.
+Implement P7 minimal synthetic/local parser-reader smoke extension only.

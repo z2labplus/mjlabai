@@ -8,6 +8,57 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-01 — P7 minimal synthetic/local parser-reader smoke extension approval decision
+
+- Type: internal documentation / P7 minimal implementation approval-decision
+  evidence.
+- Stage: P7 supervised learning / minimal synthetic-local parser-reader smoke
+  extension approval-decision preparation after proposal review.
+- Added approval-decision document:
+  - `docs/03_supervised_policy/03BA_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_APPROVAL_DECISION.md`
+- Reviewed proposal chain:
+  - `docs/03_supervised_policy/03AY_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_AFTER_FULL_SCOPE_REVIEW.md`
+  - `docs/03_supervised_policy/03AZ_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_APPROVAL_DECISION.md`
+- Decision:
+  - `Approved for next exact minimal implementation task.`
+- Approved future task:
+  - `Implement P7 minimal synthetic/local parser-reader smoke extension only.`
+- Exact approved future files:
+  - `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`
+  - `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+- Approval notes:
+  - no fixture or data file is approved by default.
+  - direct docs/governance synchronization is allowed only to record future
+    implementation evidence, validation, risks and next task.
+  - existing project-authored synthetic/local fixtures may be used only if a
+    later task explicitly allows read-only test input.
+- New next task:
+  - `Implement P7 minimal synthetic/local parser-reader smoke extension only.`
+- Evidence grade:
+  - P7 minimal synthetic/local parser-reader smoke extension
+    approval-decision evidence only.
+- Not evidence of:
+  - implementation execution.
+  - production code.
+  - tests, fixtures or data files.
+  - source approval or source ingestion approval.
+  - broad parser / reader / ingestion approval.
+  - actual feature extraction or label generation.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - real-data approval.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-07-01 — P7 minimal implementation proposal review before approval decision
 
 - Type: internal documentation / P7 minimal implementation proposal review
