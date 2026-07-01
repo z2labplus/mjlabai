@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-01 — Broader P7 parser-reader smoke current-scope acceptance risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Current-scope acceptance is mistaken for full P7 closure. | Governance / Scope | High | Medium | `10_NEXT`, handoff, evidence log and stage contract state that only the exact broader P7 minimal synthetic/local parser-reader smoke implementation is accepted; full P7 remains open. | Open |
+| Current-scope acceptance is mistaken for broader P7 implementation approval. | Governance / Scope | High | Medium | The acceptance records no source approval, no source ingestion, no broad parser / reader / ingestion, no actual feature extraction, no label generation, no dataset construction and no training approval. | Open |
+| Accepted parser-reader smoke is treated as a real-data ingestion path. | Governance / Data | High | Medium | Accepted scope is in-memory synthetic/local only, with no real Tenhou, real haifu, external logs, platform data, arbitrary paths, CLI or broad file ingestion. | Open |
+| Acceptance evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is current-scope synthetic/local parser-reader smoke acceptance evidence only; it is not ranking, promotion or strength evidence. | Open |
+| The next full-scope expansion plan is treated as implementation approval. | Governance / Stage Control | High | Medium | New `10_NEXT` first task is docs-only planning and explicitly forbids production code, tests, fixtures, data files, real data, training, evaluation and P8-P12. | Open |
+
 ## 2026-07-01 — Broader P7 parser-reader smoke implementation review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

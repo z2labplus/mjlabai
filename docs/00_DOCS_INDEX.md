@@ -688,6 +688,16 @@ source approval, ingestion approval, feature extraction, label generation,
 dataset construction, training, evaluation, model-output integration,
 model-strength evidence or P8-P12 entry.
 
+The 2026-07-01 current-scope acceptance decision records
+`ACCEPTED as current-scope complete` for the exact broader P7 minimal
+synthetic/local parser-reader smoke implementation only. It is current-scope
+acceptance evidence, not full P7 closure, broader implementation approval,
+source approval, source ingestion, broad parser / reader / ingestion, actual
+feature extraction, actual label generation, supervised dataset construction,
+training, evaluation, model-output integration, model-strength evidence,
+Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison,
+candidate-promotion evidence or P8-P12 entry.
+
 ## Data-system files
 
 ```text

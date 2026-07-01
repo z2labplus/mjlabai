@@ -29,8 +29,8 @@ Current stage interpretation:
 ```text
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
-Current active stage is broader P7 minimal synthetic/local parser-reader smoke
-current-scope acceptance decision after implementation review:
+Current active stage is broader P7 full scope expansion planning after the
+minimal synthetic/local parser-reader smoke current-scope acceptance decision:
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py` now implement the
 exact `03AU`-approved in-memory synthetic/local parser-reader smoke helper and
@@ -45,9 +45,14 @@ generation, supervised dataset construction, training, model-output
 integration, real data or P8-P12 work was added.
 `docs/03_supervised_policy/03AV_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_REVIEW.md`
 reviews that exact implementation, records `Review can close`, confirms
-validation passed and finds no blocker. The next task is `Decide whether
-broader P7 minimal synthetic/local parser-reader smoke implementation can be
-accepted as current-scope complete`.
+validation passed and finds no blocker. The 2026-07-01 current-scope
+acceptance decision is `ACCEPTED as current-scope complete` for that exact
+synthetic/local parser-reader smoke scope only. The acceptance does not close
+full P7 and does not approve broader P7 implementation, source approval,
+source ingestion, broad parser / reader / ingestion, actual feature
+extraction, actual label generation, supervised dataset construction,
+training, evaluation, model-output integration, real data or P8-P12. The next
+task is `Define P7 full scope expansion plan (docs-only, no implementation)`.
 Earlier P7 context:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
@@ -630,16 +635,18 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Decide whether broader P7 minimal synthetic/local parser-reader smoke implementation can be accepted as current-scope complete.
+Define P7 full scope expansion plan (docs-only, no implementation).
 The exact implementation task approved by `03AU` has been completed in
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py`; `03AV` reviewed it
-with `Review can close`, and the current next task is the docs-only acceptance
-decision. It must not add fixtures or data files. It must not approve or
-perform source approval, source ingestion, broad parser / reader / ingestion,
-actual feature extraction, actual label generation, supervised dataset
-construction, split creation, leakage-test implementation,
-training data, training-run approval, training, model architecture or trainer
+with `Review can close`, and the 2026-07-01 current-scope acceptance decision
+accepted that exact synthetic/local parser-reader smoke implementation as
+current-scope complete only. The current next task is docs-only full P7 scope
+expansion planning. It must not add fixtures or data files. It must not approve
+or perform source approval, source ingestion, broad parser / reader /
+ingestion, actual feature extraction, actual label generation, supervised
+dataset construction, split creation, leakage-test implementation, training
+data, training-run approval, training, model architecture or trainer
 implementation, evaluation implementation, metric implementation, evaluation
 runner, benchmark harness, real Tenhou, real haifu, external logs, platform
 data, model-output integration, CLI, broad file ingestion, self-play, league,

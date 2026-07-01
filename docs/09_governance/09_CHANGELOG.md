@@ -1,5 +1,42 @@
 # 09_CHANGELOG
 
+## 2026-07-01 - v3.11
+
+- Decided whether the broader P7 minimal synthetic/local parser-reader smoke
+  implementation can be accepted as current-scope complete.
+- Decision:
+  `ACCEPTED as current-scope complete.`
+- Accepted scope:
+  - `src/mjlabai/supervised/synthetic_parser_reader_smoke.py`
+  - `tests/supervised/test_synthetic_parser_reader_smoke.py`
+  - existing supervised smoke schema integration used read-only.
+  - existing replay/schema tests used read-only for validation.
+- Acceptance reason:
+  - implementation strictly follows the exact `03AU` scope.
+  - `03AV` records `Review can close`.
+  - no real-data leakage, ingestion behavior, feature extraction, label
+    generation, dataset construction, training or evaluation behavior was
+    found.
+  - no scope drift into broad parser / reader / ingestion was found.
+  - no unapproved file modification was found.
+  - validation passed.
+  - no model-strength, evidence or ranking leakage was found.
+- New `10_NEXT` first item:
+  `Define P7 full scope expansion plan (docs-only, no implementation).`
+- This is broader P7 minimal synthetic/local parser-reader smoke
+  current-scope acceptance evidence only.
+- No production code, tests, fixtures, data files, implementation logic
+  changes, source approval, source ingestion, broad parser / reader /
+  ingestion, CLI, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval, training-run approval, training,
+  model architecture / trainer implementation, evaluation implementation,
+  metric implementation, evaluation runner, benchmark harness, model-output
+  integration, model-strength evidence, Tenhou ranked evidence, stable-dan
+  ranked-game evidence, LuckyJ `10.68` comparison, candidate promotion, real
+  Tenhou, real haifu, external logs, platform data, self-play, league or
+  P8-P12 work was added.
+
 ## 2026-07-01 - v3.10
 
 - Reviewed the exact broader P7 minimal synthetic/local parser-reader smoke

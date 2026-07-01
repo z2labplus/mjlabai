@@ -14,6 +14,69 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-01 — DR-0098 — Accept Exact Broader P7 Synthetic/Local Parser-Reader Smoke as Current-Scope Complete
+
+Decision:
+
+```text
+ACCEPTED as current-scope complete.
+```
+
+Context:
+
+- `03AU` approved only the exact broader P7 minimal synthetic/local
+  parser-reader smoke implementation task.
+- The implementation used only
+  `src/mjlabai/supervised/synthetic_parser_reader_smoke.py`,
+  `tests/supervised/test_synthetic_parser_reader_smoke.py` and direct
+  docs/governance synchronization.
+- `03AV` reviewed the exact implementation, found no blocker and recorded
+  `Review can close`.
+- A separate current-scope acceptance decision is required before planning
+  the next broader P7 step.
+
+Rationale:
+
+- The implementation strictly follows the `03AU` exact scope.
+- No real-data leakage, ingestion behavior, actual feature extraction, actual
+  label generation, supervised dataset construction, training or evaluation
+  behavior was found.
+- No scope drift into broad parser / reader / ingestion was found.
+- No unapproved file modification was found.
+- Tests validate the relevant boundary constraints.
+- No model-strength, evidence or ranking leakage was found.
+
+Consequences:
+
+- The exact broader P7 minimal synthetic/local parser-reader smoke
+  implementation is accepted as current-scope complete.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define P7 full scope expansion plan (docs-only, no implementation).`
+- This decision does not close full P7.
+- This decision does not approve broader P7 implementation, source approval,
+  source ingestion, broad parser / reader / ingestion, actual feature
+  extraction, actual label generation, supervised dataset construction, split
+  creation, leakage-test implementation, training-data approval,
+  training-run approval, training, model architecture / trainer
+  implementation, evaluation implementation, metric implementation,
+  evaluation runner, benchmark harness, model-output integration,
+  model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ
+  `10.68` comparison, candidate promotion, self-play, league or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03AV_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_REVIEW.md`
+- `docs/03_supervised_policy/03AU_BROADER_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Accepted as current-scope complete for the exact synthetic/local
+parser-reader smoke implementation only; full P7 remains open.
+
 ## 2026-06-30 — DR-0095 — Approve Exact Broader P7 Synthetic/Local Parser-Reader Smoke Task
 
 Decision:
