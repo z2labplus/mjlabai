@@ -8,6 +8,15 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-01 — P7 minimal parser-reader smoke extension implementation review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Review blocker is ignored and the implementation is accepted despite missing explicit edge-case test coverage. | Governance / Validation | Medium | Medium | `03BB` records that review cannot close and `10_NEXT` now requires a docs-only blocker-resolution approval decision before any test change or acceptance decision. | Open |
+| Passing validation is mistaken for complete review closure. | Governance / Scope | Medium | Medium | Evidence log distinguishes passing commands from the missing explicit test coverage blocker. | Open |
+| Blocker resolution drifts into production code changes. | Governance / Scope | High | Medium | Next task is docs-only approval-decision preparation; no production code or tests may be modified until a later exact task is approved. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is P7 minimal synthetic/local parser-reader smoke extension implementation review evidence only with explicit non-evidence warnings. | Open |
+
 ## 2026-07-01 — P7 minimal parser-reader smoke extension implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

@@ -1,5 +1,44 @@
 # 09_CHANGELOG
 
+## 2026-07-01 - v3.18
+
+- Reviewed the P7 minimal synthetic/local parser-reader smoke extension
+  implementation.
+- Added:
+  - `docs/03_supervised_policy/03BB_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW.md`
+- Reviewed exact `03BA` implementation files:
+  - `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`
+  - `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+- Review findings:
+  - exact file scope was respected.
+  - no fixture or data file was added.
+  - no existing fixture was modified.
+  - no existing parser-reader smoke implementation logic was modified.
+  - no feature-label schema or replay schema was modified.
+  - module input/output and non-evidence boundaries are safe.
+  - validation commands passed.
+- Review decision:
+  `Review cannot close because blockers exist.`
+- Blocker:
+  the extension test does not explicitly cover top-level `bytes`,
+  top-level `bytearray` or top-level `Mapping` rejection, although the module
+  contains those guards.
+- New `10_NEXT` first item:
+  `Prepare P7 parser-reader smoke extension review blocker resolution approval decision (docs-only, no implementation).`
+- This is P7 minimal synthetic/local parser-reader smoke extension
+  implementation review evidence only.
+- No production code, tests, fixtures, data files, implementation logic
+  changes, source approval, source ingestion, broad parser / reader /
+  ingestion, CLI, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval, training-run approval, training,
+  model architecture / trainer implementation, evaluation implementation,
+  metric implementation, evaluation runner, benchmark harness,
+  model-output integration, model-strength evidence, Tenhou ranked evidence,
+  stable-dan ranked-game evidence, LuckyJ `10.68` comparison, candidate
+  promotion, real Tenhou, real haifu, external logs, platform data, self-play,
+  league or P8-P12 work was added.
+
 ## 2026-07-01 - v3.17
 
 - Implemented the P7 minimal synthetic/local parser-reader smoke extension

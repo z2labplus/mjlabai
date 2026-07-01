@@ -14,6 +14,68 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-01 — DR-0105 — Review P7 Parser-Reader Smoke Extension Implementation
+
+Decision:
+
+```text
+Review cannot close because blockers exist.
+```
+
+Context:
+
+- `03BA` approved the exact minimal implementation task.
+- Commit `854a8037880b4621023ee45e941bb3e84a400d00` implemented the exact
+  extension files:
+  - `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`
+  - `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+- The current task reviewed that implementation without changing production
+  code or tests.
+
+Rationale:
+
+- Exact file scope was respected.
+- No fixture or data file was added.
+- Existing parser-reader smoke implementation logic, feature-label schema,
+  replay schema and existing fixtures were not modified.
+- Module input/output and non-evidence boundaries are safe.
+- Required validation commands passed.
+- However, the extension test does not explicitly cover top-level `bytes`,
+  top-level `bytearray` or top-level `Mapping` rejection, although the module
+  contains those guards and the review prompt required confirming coverage.
+
+Consequences:
+
+- Added:
+  - `docs/03_supervised_policy/03BB_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW.md`
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Prepare P7 parser-reader smoke extension review blocker resolution approval decision (docs-only, no implementation).`
+- This decision does not approve review closure.
+- This decision does not approve current-scope acceptance.
+- This decision does not approve broader P7 implementation, source approval,
+  source ingestion, broad parser / reader / ingestion, actual feature
+  extraction, actual label generation, supervised dataset construction, split
+  creation, leakage-test implementation, training-data approval,
+  training-run approval, training, model architecture / trainer
+  implementation, evaluation implementation, metric implementation,
+  evaluation runner, benchmark harness, model-output integration,
+  model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ
+  `10.68` comparison, candidate promotion, real-data use, self-play, league
+  or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03BB_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW.md`
+- `docs/03_supervised_policy/03BA_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_APPROVAL_DECISION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Review blocked pending a docs-only blocker-resolution approval decision.
+
 ## 2026-07-01 — DR-0104 — Implement P7 Minimal Parser-Reader Smoke Extension
 
 Decision:
