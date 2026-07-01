@@ -2,8 +2,28 @@
 
 ## Current stage
 
-P7 minimal synthetic/local parser-reader smoke extension implementation after
-approval decision.
+P7 minimal synthetic/local parser-reader smoke extension implementation review
+gate.
+The exact `03BA`-approved extension is implemented in
+`src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py` and tested
+in `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`.
+The extension accepts only already-loaded in-memory project-authored
+synthetic/local smoke records, delegates each record to the existing
+parser-reader smoke validation path, rejects top-level and per-record
+path-like inputs, rejects empty record sequences, aggregates JSON-safe
+manifest guardrail summaries and emits no feature tensors, labels, targets,
+supervised examples, datasets, splits, model input, model output, evaluation
+result or model-strength fields. No fixture/data file, existing parser-reader
+smoke logic, feature-label schema, replay schema, source approval, source
+ingestion, broad parser / reader / ingestion, CLI, actual feature extraction,
+actual label generation, supervised dataset construction, split creation,
+leakage-test implementation, training data, training, model architecture /
+trainer implementation, evaluation implementation, metric implementation,
+evaluation runner, benchmark harness, model-output integration, real data,
+self-play, league or P8-P12 work was added. The current first task is
+`Review P7 minimal synthetic/local parser-reader smoke extension implementation`.
+
+Earlier context:
 The exact `03AU`-approved implementation added
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py`. The helper accepts
@@ -51,8 +71,9 @@ broader P7 implementation, approve source approval, approve source ingestion,
 approve broad parser / reader / ingestion, approve actual feature extraction,
 approve actual label generation, approve dataset construction, approve
 training, approve evaluation, approve model-output integration, approve real
-data or approve P8-P12. The current first task is `Implement P7 minimal
-synthetic/local parser-reader smoke extension only`.
+data or approve P8-P12. That exact extension implementation has now been
+added in the approved files only, and the current first task is `Review P7
+minimal synthetic/local parser-reader smoke extension implementation`.
 `03M` and `03N` name and review candidate future files and guardrails only;
 `03O` approved only the exact minimal implementation task and exact files.
 That task is now implemented, reviewed in `03P` with `Review can close`, and
@@ -267,12 +288,13 @@ P7 full scope expansion plan = defined in `03AW` and reviewed in `03AX`; review 
 P7 minimal implementation proposal = drafted in `03AY` for review only; proposal and implementation remain unapproved
 P7 minimal implementation proposal review = complete in `03AZ`; review can close with no blocker and does not approve implementation
 P7 minimal synthetic/local parser-reader smoke extension approval decision = complete in `03BA`; approved only the next exact implementation task and exact two future files, with no fixture/data file by default
+P7 minimal synthetic/local parser-reader smoke extension implementation = complete in exact approved files only; no fixture/data file, real data, source ingestion, feature extraction, label generation, dataset construction, training, evaluation, model-output integration, self-play, league or P8-P12 was added
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = implement P7 minimal synthetic/local parser-reader smoke extension only
+Next = review P7 minimal synthetic/local parser-reader smoke extension implementation
 ```
 
 ## AI role
@@ -383,4 +405,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement P7 minimal synthetic/local parser-reader smoke extension only.
+Review P7 minimal synthetic/local parser-reader smoke extension implementation.

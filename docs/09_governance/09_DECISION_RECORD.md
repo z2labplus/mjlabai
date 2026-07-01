@@ -14,6 +14,71 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-01 — DR-0104 — Implement P7 Minimal Parser-Reader Smoke Extension
+
+Decision:
+
+```text
+Implemented exact minimal synthetic/local parser-reader smoke extension.
+```
+
+Context:
+
+- `03BA` approved only the next exact minimal implementation task.
+- The approved task was:
+  `Implement P7 minimal synthetic/local parser-reader smoke extension only.`
+- The exact approved files were:
+  `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py` and
+  `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`.
+
+Rationale:
+
+- The extension remains the safest available P7 implementation increment
+  after the accepted synthetic/local parser-reader smoke current scope.
+- It accepts only already-loaded in-memory project-authored synthetic/local
+  smoke records.
+- It rejects top-level and per-record path-like inputs.
+- It delegates each record to the existing parser-reader smoke validation
+  path.
+- It builds only a JSON-safe manifest-style guardrail summary.
+- It emits no feature tensors, labels, targets, supervised examples,
+  datasets, splits, model input, model output, evaluation result or
+  model-strength fields.
+
+Consequences:
+
+- Added:
+  - `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`
+  - `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+- No fixture or data file was added.
+- No existing parser-reader smoke logic, feature-label schema, replay schema,
+  existing tests or existing fixtures were modified.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review P7 minimal synthetic/local parser-reader smoke extension implementation.`
+- This decision does not approve broader P7 implementation, source approval,
+  source ingestion, broad parser / reader / ingestion, actual feature
+  extraction, actual label generation, supervised dataset construction, split
+  creation, leakage-test implementation, training-data approval,
+  training-run approval, training, model architecture / trainer
+  implementation, evaluation implementation, metric implementation,
+  evaluation runner, benchmark harness, model-output integration,
+  model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ
+  `10.68` comparison, candidate promotion, real-data use, self-play, league
+  or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03BA_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_APPROVAL_DECISION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Implemented for the exact approved synthetic/local smoke extension scope;
+pending implementation review gate.
+
 ## 2026-07-01 — DR-0103 — Prepare P7 Minimal Parser-Reader Smoke Extension Approval Decision
 
 Decision:

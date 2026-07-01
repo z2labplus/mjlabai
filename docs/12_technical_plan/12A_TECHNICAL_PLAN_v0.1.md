@@ -28,8 +28,28 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 minimal synthetic/local parser-reader smoke extension implementation after
-approval decision.
+P7 minimal synthetic/local parser-reader smoke extension implementation review
+gate.
+The exact `03BA`-approved extension is now implemented in
+`src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py` and tested
+in `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`.
+The extension accepts only already-loaded in-memory project-authored
+synthetic/local smoke records, delegates each record to the existing
+parser-reader smoke validation path, rejects top-level and per-record
+path-like inputs, rejects empty record sequences, aggregates JSON-safe
+manifest guardrail summaries and emits no feature tensors, labels, targets,
+supervised examples, datasets, splits, model input, model output, evaluation
+result or model-strength fields. No fixture/data file, existing parser-reader
+smoke logic, feature-label schema, replay schema, source approval, source
+ingestion, broad parser / reader / ingestion, CLI, actual feature extraction,
+actual label generation, supervised dataset construction, split creation,
+leakage-test implementation, training data, training, model architecture /
+trainer implementation, evaluation implementation, metric implementation,
+evaluation runner, benchmark harness, model-output integration, real data,
+self-play, league or P8-P12 work was added. The next task is `Review P7
+minimal synthetic/local parser-reader smoke extension implementation`.
+
+Earlier context:
 The exact `03AU`-approved implementation added
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py`. The helper accepts
@@ -487,11 +507,16 @@ preparation.
 P7 minimal synthetic/local parser-reader smoke extension approval decision =
 complete in `03BA`; approved only the next exact implementation task and exact
 two future files, with no fixture/data file by default.
+P7 minimal synthetic/local parser-reader smoke extension implementation =
+complete in exact approved files only; no fixture/data file, real data,
+source ingestion, feature extraction, label generation, dataset construction,
+training, evaluation, model-output integration, self-play, league or P8-P12
+was added.
 P7 broad implementation = not approved.
 P8-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
-Next = implement P7 minimal synthetic/local parser-reader smoke extension
-only.
+Next = review P7 minimal synthetic/local parser-reader smoke extension
+implementation.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -625,7 +650,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Implement P7 minimal synthetic/local parser-reader smoke extension only.
+Review P7 minimal synthetic/local parser-reader smoke extension implementation.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`

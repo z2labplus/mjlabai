@@ -1,5 +1,39 @@
 # 09_CHANGELOG
 
+## 2026-07-01 - v3.17
+
+- Implemented the P7 minimal synthetic/local parser-reader smoke extension
+  under the exact `03BA` approval.
+- Added:
+  - `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`
+  - `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+- The extension:
+  - accepts only already-loaded in-memory project-authored synthetic/local
+    smoke records.
+  - rejects top-level and per-record path-like inputs.
+  - rejects empty record sequences.
+  - delegates each record to the existing parser-reader smoke validation path.
+  - builds only a JSON-safe manifest-style guardrail summary.
+  - emits no feature tensors, labels, targets, supervised examples, datasets,
+    splits, model input, model output, evaluation result or model-strength
+    fields.
+- New `10_NEXT` first item:
+  `Review P7 minimal synthetic/local parser-reader smoke extension implementation.`
+- This is P7 minimal synthetic/local parser-reader smoke extension
+  implementation evidence only.
+- No fixture or data file was added.
+- No existing parser-reader smoke logic, feature-label schema, replay schema,
+  existing tests or existing fixtures were modified.
+- No real data, source approval, source ingestion, broad parser / reader /
+  ingestion, CLI, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation, leakage-test
+  implementation, training data, training, model architecture / trainer
+  implementation, evaluation implementation, metric implementation,
+  evaluation runner, benchmark harness, model-output integration,
+  model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
+  evidence, LuckyJ `10.68` comparison, candidate promotion, self-play, league
+  or P8-P12 work was added.
+
 ## 2026-07-01 - v3.16
 
 - Prepared the approval decision for P7 minimal synthetic/local

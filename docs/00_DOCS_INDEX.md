@@ -134,6 +134,8 @@ docs/03_supervised_policy/03AZ_P7_MINIMAL_IMPLEMENTATION_PROPOSAL_REVIEW_BEFORE_
 docs/03_supervised_policy/03BA_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_APPROVAL_DECISION.md
 src/mjlabai/supervised/synthetic_parser_reader_smoke.py
 tests/supervised/test_synthetic_parser_reader_smoke.py
+src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py
+tests/supervised/test_synthetic_parser_reader_smoke_extension.py
 ```
 
 `docs/03_supervised_policy/03E_P7_SCOPE_ENTRY_CRITERIA_AND_FIRST_TASK.md`

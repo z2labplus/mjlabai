@@ -8,6 +8,49 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-01 — P7 minimal synthetic/local parser-reader smoke extension implementation
+
+- Type: internal implementation / P7 minimal synthetic-local parser-reader
+  smoke extension evidence.
+- Stage: P7 supervised learning / exact minimal synthetic-local parser-reader
+  smoke extension implementation after approval decision.
+- Implemented exact `03BA`-approved files:
+  - `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`
+  - `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+- Implementation notes:
+  - accepts only already-loaded in-memory project-authored synthetic/local
+    smoke records.
+  - rejects top-level and per-record path-like inputs.
+  - rejects empty record sequences.
+  - delegates record validation to the existing parser-reader smoke helper.
+  - returns only a JSON-safe manifest-style guardrail summary.
+  - emits no feature tensors, labels, targets, supervised examples, datasets,
+    splits, model input, model output, evaluation result or model-strength
+    fields.
+- New next task:
+  - `Review P7 minimal synthetic/local parser-reader smoke extension implementation.`
+- Evidence grade:
+  - P7 minimal synthetic/local parser-reader smoke extension implementation
+    evidence only.
+- Not evidence of:
+  - source approval or source ingestion approval.
+  - broad parser / reader / ingestion approval.
+  - actual feature extraction or label generation.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - real-data approval.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-07-01 — P7 minimal synthetic/local parser-reader smoke extension approval decision
 
 - Type: internal documentation / P7 minimal implementation approval-decision

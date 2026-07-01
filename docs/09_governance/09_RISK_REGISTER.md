@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-01 — P7 minimal parser-reader smoke extension implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The extension implementation is mistaken for broad parser / reader / ingestion approval. | Governance / Scope | High | Medium | The helper accepts only already-loaded in-memory synthetic/local records, rejects path-like inputs and `10_NEXT` now requires a review gate. | Open |
+| Manifest output is mistaken for feature extraction, label generation or dataset construction. | Governance / Stage Control | High | Medium | The manifest intentionally excludes feature tensors, labels, targets, supervised examples, datasets, splits, model input and model output. | Open |
+| The new tests are mistaken for approval to add fixtures or data files. | Governance / Data | Medium | Medium | The extension tests construct in-memory synthetic/local records and add no fixture or data file. | Open |
+| Synthetic/local smoke extension evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log and handoff classify this as P7 minimal synthetic/local parser-reader smoke extension implementation evidence only. | Open |
+| P8-P12 work is treated as implicitly approved after this narrow implementation. | Governance / Stage Control | High | Medium | `10_NEXT`, stage contract and risk register keep self-play, league, RL and P8-P12 closed. | Open |
+
 ## 2026-07-01 — P7 minimal parser-reader smoke extension approval-decision risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
