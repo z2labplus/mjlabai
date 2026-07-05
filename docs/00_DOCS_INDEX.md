@@ -135,6 +135,7 @@ docs/03_supervised_policy/03BA_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EX
 docs/03_supervised_policy/03BB_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW.md
 docs/03_supervised_policy/03BC_P7_PARSER_READER_SMOKE_EXTENSION_REVIEW_BLOCKER_RESOLUTION_APPROVAL_DECISION.md
 docs/03_supervised_policy/03BD_P7_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW_AFTER_BLOCKER_FIX.md
+docs/03_supervised_policy/03BE_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE_DECISION.md
 src/mjlabai/supervised/synthetic_parser_reader_smoke.py
 tests/supervised/test_synthetic_parser_reader_smoke.py
 src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py
@@ -766,6 +767,37 @@ ingestion, approve broad parser / reader / ingestion, approve actual feature
 extraction, approve actual label generation, approve dataset construction,
 approve training, approve evaluation, approve model-output integration,
 approve real data, approve self-play, approve league or approve P8-P12.
+
+`docs/03_supervised_policy/03BB_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW.md`
+reviews the exact `03BA` implementation and records a blocker: missing
+explicit test coverage for top-level `bytes`, top-level `bytearray` and
+top-level `Mapping` rejection. It is implementation-review evidence only and
+does not approve broader P7 implementation, source approval, ingestion,
+feature extraction, label generation, dataset construction, training,
+evaluation, real data, self-play, league or P8-P12.
+
+`docs/03_supervised_policy/03BC_P7_PARSER_READER_SMOKE_EXTENSION_REVIEW_BLOCKER_RESOLUTION_APPROVAL_DECISION.md`
+approves only the next exact test-only blocker-resolution task in
+`tests/supervised/test_synthetic_parser_reader_smoke_extension.py`. It does
+not execute the fix and does not approve production code, fixtures, data files,
+source approval, ingestion, feature extraction, label generation, dataset
+construction, training, evaluation, real data, self-play, league or P8-P12.
+
+`docs/03_supervised_policy/03BD_P7_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW_AFTER_BLOCKER_FIX.md`
+reruns the implementation review after the exact `03BC` blocker fix. It
+records `Review can close`, confirms the blocker is resolved, validation
+passes and no scope drift was found. It is review-rerun evidence only and does
+not accept current scope by itself.
+
+`docs/03_supervised_policy/03BE_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+records decision `A. ACCEPTED as current-scope complete` for the exact P7
+minimal synthetic/local parser-reader smoke extension scope only. It accepts
+only the exact `03BA` module/test files, the exact `03BC` test-only blocker
+fix, validation evidence and direct docs/governance synchronization. It does
+not close full P7 or approve broader P7 implementation, source approval,
+source ingestion, broad parser / reader / ingestion, feature extraction, label
+generation, supervised dataset construction, training, evaluation,
+model-output integration, real data, self-play, league or P8-P12.
 
 ## Data-system files
 

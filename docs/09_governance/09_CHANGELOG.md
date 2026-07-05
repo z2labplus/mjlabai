@@ -1,5 +1,35 @@
 # 09_CHANGELOG
 
+## 2026-07-06 - v3.22
+
+- Accepted the exact P7 minimal synthetic/local parser-reader smoke extension
+  implementation as current-scope complete.
+- Added:
+  - `docs/03_supervised_policy/03BE_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+- Decision:
+  `A. ACCEPTED as current-scope complete.`
+- Accepted scope is limited to:
+  - `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`
+  - `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+  - the exact `03BC` test-only blocker fix for top-level `bytes`, top-level
+    `bytearray` and top-level `Mapping` rejection.
+  - validation evidence and direct docs/governance synchronization.
+- New `10_NEXT` first item:
+  `Define next P7 full-scope planning step after parser-reader smoke extension current-scope acceptance.`
+- This is P7 minimal synthetic/local parser-reader smoke extension
+  current-scope acceptance decision evidence only.
+- No production code, tests, fixtures, data files, implementation logic,
+  source approval, source ingestion, broad parser / reader / ingestion, CLI,
+  actual feature extraction, actual label generation, supervised dataset
+  construction, split creation, leakage-test implementation,
+  training-data approval, training-run approval, training, model architecture
+  / trainer implementation, evaluation implementation, metric implementation,
+  evaluation runner, benchmark harness, model-output integration,
+  model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
+  evidence, LuckyJ `10.68` comparison, candidate promotion, real Tenhou, real
+  haifu, external logs, platform data, self-play, league or P8-P12 work was
+  added or approved.
+
 ## 2026-07-06 - v3.21
 
 - Reran the P7 parser-reader smoke extension implementation review after the

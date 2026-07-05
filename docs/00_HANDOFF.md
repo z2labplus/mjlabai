@@ -27,20 +27,25 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P7 parser-reader smoke extension current-scope
-acceptance decision:
-`03BD` reran the implementation review after the exact `03BC` test-only
-blocker fix. It confirmed that the `03BB` blocker is resolved by explicit
-top-level `bytes`, top-level `bytearray` and top-level `Mapping` rejection
-tests, that exact files were respected, that module/test/input/output and
-non-evidence boundaries remain safe, and that validation passed. `03BD`
-records `Review can close`. No production code, tests, fixtures, data files,
-source approval, source ingestion, broad parser / reader / ingestion, feature
-extraction, label generation, dataset construction, training, evaluation,
+Current active stage is P7 full-scope planning after parser-reader smoke
+extension current-scope acceptance:
+`03BE` records decision `A. ACCEPTED as current-scope complete` for the exact
+P7 minimal synthetic/local parser-reader smoke extension implementation. The
+accepted scope is limited to the exact `03BA` module
+`src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`, exact
+tests `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`, the
+exact `03BC` test-only blocker fix for top-level `bytes`, top-level
+`bytearray` and top-level `Mapping` rejection, validation evidence and direct
+docs/governance synchronization. This acceptance is not full P7 closure and
+does not approve broader P7 implementation, source approval, source ingestion,
+broad parser / reader / ingestion, actual feature extraction, actual label
+generation, supervised dataset construction, split creation, leakage-test
+implementation, training-data approval, training-run approval, training, model
+architecture / trainer implementation, evaluation implementation,
 model-output integration, model-strength evidence, real data, self-play,
-league or P8-P12 work was added in the review rerun. The next task is
-`Decide whether P7 minimal synthetic/local parser-reader smoke extension
-implementation can be accepted as current-scope complete`.
+league or P8-P12. The next task is
+`Define next P7 full-scope planning step after parser-reader smoke extension
+current-scope acceptance`.
 
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
@@ -686,43 +691,25 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Decide whether P7 minimal synthetic/local parser-reader smoke extension
-implementation can be accepted as current-scope complete.
-The exact implementation task approved by `03AU` has been completed in
-`src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
-`tests/supervised/test_synthetic_parser_reader_smoke.py`; `03AV` reviewed it
-with `Review can close`, and the 2026-07-01 current-scope acceptance decision
-accepted that exact synthetic/local parser-reader smoke implementation as
-current-scope complete only. `03AW` defines the full P7 expansion plan, and
-`03AX` reviews it with `Review can close`. `03AY` drafts the next minimal
-implementation proposal for a project-authored synthetic/local parser-reader
-smoke extension. `03AZ` reviews `03AY` and records `Review can close`; it is
-proposal-review evidence only. `03BA` records `Approved for next exact minimal
-implementation task`, limited to
-`src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`,
-`tests/supervised/test_synthetic_parser_reader_smoke_extension.py` and direct
-docs/governance synchronization. That exact extension implementation has now
-been added. `03BB` reviewed it and found that implementation scope is safe but
-the review cannot close because the extension test does not explicitly cover
-top-level `bytes`, top-level `bytearray` or top-level `Mapping` rejection. The
-`03BC` blocker-resolution approval decision now approves only an exact
-test-only next task. That exact test-only task is now complete: only
-`tests/supervised/test_synthetic_parser_reader_smoke_extension.py` changed, and
-only to add explicit top-level `bytes`, top-level `bytearray` and top-level
-`Mapping` rejection tests. `03BD` reran the implementation review after that
-blocker fix, confirmed the blocker is resolved, and recorded `Review can
-close`. The current next task is a docs-only current-scope acceptance decision
-for that exact parser-reader smoke extension implementation. It must not add
-fixtures or data files, modify production code or tests, or approve / perform
-source approval, source ingestion, broad parser / reader / ingestion, actual
-feature extraction, actual label generation, supervised dataset construction,
-split creation, leakage-test implementation, training data, training-run
-approval, training, model architecture or trainer implementation, evaluation
-implementation, metric implementation, evaluation runner, benchmark harness,
-real Tenhou, real haifu, external logs, platform data, model-output
-integration, CLI, broad file ingestion, self-play, league, P8-P12 work,
-Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison or
-candidate-promotion claims.
+Define next P7 full-scope planning step after parser-reader smoke extension
+current-scope acceptance.
+`03BE` accepted the exact P7 minimal synthetic/local parser-reader smoke
+extension implementation as current-scope complete. The accepted scope is
+limited to `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`,
+`tests/supervised/test_synthetic_parser_reader_smoke_extension.py`, the exact
+`03BC` test-only blocker fix for top-level `bytes`, top-level `bytearray` and
+top-level `Mapping` rejection, validation evidence and direct docs/governance
+synchronization. Full P7 remains open. The next task must be docs-only
+planning and must not add fixtures or data files, modify production code or
+tests, or approve / perform source approval, source ingestion, broad parser /
+reader / ingestion, actual feature extraction, actual label generation,
+supervised dataset construction, split creation, leakage-test implementation,
+training data, training-run approval, training, model architecture or trainer
+implementation, evaluation implementation, metric implementation, evaluation
+runner, benchmark harness, real Tenhou, real haifu, external logs, platform
+data, model-output integration, CLI, broad file ingestion, self-play, league,
+P8-P12 work, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison
+or candidate-promotion claims.
 ```
 
 Latest Akochan F1 audit summary:

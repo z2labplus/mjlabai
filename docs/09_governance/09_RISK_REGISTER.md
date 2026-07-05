@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-06 — P7 parser-reader smoke extension acceptance risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Current-scope acceptance is mistaken for full P7 closure. | Governance / Scope | High | Medium | `03BE`, `10_NEXT` and stage contract state full P7 remains open. | Open |
+| Acceptance is mistaken for broader P7 implementation approval. | Governance / Scope | High | Medium | `03BE` limits acceptance to the exact `03BA` / `03BC` module, tests, blocker fix and validation evidence. | Open |
+| Acceptance is mistaken for source approval or source ingestion approval. | Governance / Data | High | Medium | `03BE` and the stage contract keep source approval, source ingestion and broad parser / reader / ingestion unapproved. | Open |
+| Smoke manifest acceptance is over-read as feature, label, dataset or training readiness. | Governance / Stage Control | High | Medium | `03BE` explicitly excludes feature extraction, label generation, dataset construction, split creation, leakage-test implementation and training. | Open |
+| Acceptance evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log classifies this as P7 synthetic/local current-scope acceptance decision evidence only. | Open |
+| P8-P12 work is treated as implicitly approved after this acceptance. | Governance / Stage Control | High | Medium | New next task is docs-only planning and keeps self-play, league and P8-P12 closed. | Open |
+
 ## 2026-07-06 — P7 parser-reader smoke extension review-rerun risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

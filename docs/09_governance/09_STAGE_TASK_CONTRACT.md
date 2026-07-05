@@ -2,17 +2,18 @@
 
 ## Current stage
 
-P7 parser-reader smoke extension current-scope acceptance decision.
-`03BD` reran the exact parser-reader smoke extension implementation review
-after the `03BC` test-only blocker fix. It confirmed that the `03BB` blocker
-is resolved, exact files were respected, module/test/input/output and
-non-evidence boundaries remain safe, validation passed and `Review can close`.
-Production code, tests, fixtures, data files, source approval, source
-ingestion, broad parser / reader / ingestion, feature extraction, label
-generation, dataset construction, training, evaluation, model-output
-integration, self-play, league and P8-P12 remain unapproved. The current first
-task is `Decide whether P7 minimal synthetic/local parser-reader smoke
-extension implementation can be accepted as current-scope complete`.
+P7 full-scope planning after parser-reader smoke extension current-scope
+acceptance.
+`03BE` records decision `A. ACCEPTED as current-scope complete` for the exact
+P7 minimal synthetic/local parser-reader smoke extension implementation. The
+accepted scope is limited to the exact `03BA` module/tests, the exact `03BC`
+test-only blocker fix, validation evidence and direct docs/governance
+synchronization. Production code, tests, fixtures, data files, source
+approval, source ingestion, broad parser / reader / ingestion, feature
+extraction, label generation, dataset construction, training, evaluation,
+model-output integration, self-play, league and P8-P12 remain unapproved. The
+current first task is `Define next P7 full-scope planning step after
+parser-reader smoke extension current-scope acceptance`.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -284,12 +285,13 @@ P7 minimal synthetic/local parser-reader smoke extension implementation review =
 P7 parser-reader smoke extension blocker-resolution approval decision = complete in `03BC`; approved only the next exact test-only blocker-resolution task in `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
 P7 parser-reader smoke extension exact test-only blocker fix = complete; only `tests/supervised/test_synthetic_parser_reader_smoke_extension.py` changed with top-level `bytes`, top-level `bytearray` and top-level `Mapping` rejection tests
 P7 parser-reader smoke extension implementation review after blocker fix = complete in `03BD`; review can close
+P7 parser-reader smoke extension current-scope acceptance decision = complete in `03BE`; accepted exact scope only
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = decide whether P7 minimal synthetic/local parser-reader smoke extension implementation can be accepted as current-scope complete
+Next = define next P7 full-scope planning step after parser-reader smoke extension current-scope acceptance
 ```
 
 ## AI role
@@ -400,5 +402,5 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Decide whether P7 minimal synthetic/local parser-reader smoke extension
-implementation can be accepted as current-scope complete.
+Define next P7 full-scope planning step after parser-reader smoke extension
+current-scope acceptance.

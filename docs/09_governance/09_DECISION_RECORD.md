@@ -14,6 +14,68 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-06 — DR-0109 — Accept P7 Parser-Reader Smoke Extension Current Scope
+
+Decision:
+
+```text
+A. ACCEPTED as current-scope complete.
+```
+
+Context:
+
+- `03BA` approved only the exact P7 minimal synthetic/local parser-reader
+  smoke extension implementation.
+- Commit `854a8037880b4621023ee45e941bb3e84a400d00` implemented the exact
+  approved module and tests.
+- `03BB` found a review blocker for missing explicit top-level `bytes`,
+  top-level `bytearray` and top-level `Mapping` rejection tests.
+- `03BC` approved only the exact test-only blocker fix.
+- Commit `188336b3983f042b7e9174f1d9e51da970d92a44` added those exact tests.
+- `03BD` reran the implementation review after blocker fix and recorded
+  `Review can close`.
+
+Rationale:
+
+- The exact implementation scope remains respected.
+- The `03BB` blocker is resolved.
+- The blocker fix modified only the approved test file.
+- No fixture or data file was added.
+- The helper accepts only already-loaded in-memory project-authored
+  synthetic/local records and returns only JSON-safe guardrail summaries.
+- Validation passes and governance is synchronized.
+
+Consequences:
+
+- Added:
+  - `docs/03_supervised_policy/03BE_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+- The exact parser-reader smoke extension implementation is accepted as
+  current-scope complete only for the `03BA` / `03BC` scope.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define next P7 full-scope planning step after parser-reader smoke extension current-scope acceptance.`
+- This decision does not close full P7 and does not approve broader P7
+  implementation, source approval, source ingestion, broad parser / reader /
+  ingestion, feature extraction, label generation, dataset construction,
+  training, evaluation, model-output integration, model-strength evidence,
+  Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison, candidate
+  promotion, real-data use, self-play, league or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03BE_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+- `docs/03_supervised_policy/03BD_P7_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW_AFTER_BLOCKER_FIX.md`
+- `docs/03_supervised_policy/03BC_P7_PARSER_READER_SMOKE_EXTENSION_REVIEW_BLOCKER_RESOLUTION_APPROVAL_DECISION.md`
+- `docs/03_supervised_policy/03BA_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_APPROVAL_DECISION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Accepted for exact current scope only; full P7 remains open and the next task
+is docs-only full-scope planning.
+
 ## 2026-07-06 — DR-0108 — Rerun P7 Parser-Reader Smoke Extension Review After Blocker Fix
 
 Decision:

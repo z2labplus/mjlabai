@@ -28,20 +28,23 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 parser-reader smoke extension current-scope acceptance decision.
-`03BD` reran the exact parser-reader smoke extension implementation review
-after the `03BC` test-only blocker fix. It confirmed that the `03BB` blocker
-is resolved, exact files were respected, module/test/input/output and
-non-evidence boundaries remain safe, validation passed and `Review can close`.
-No production code, tests, fixtures, data files, source approval, source
-ingestion, broad parser / reader / ingestion, actual feature extraction,
-actual label generation, supervised dataset construction, split creation,
-leakage-test implementation, training data, training, model architecture /
-trainer implementation, evaluation implementation, metric implementation,
-evaluation runner, benchmark harness, model-output integration, real data,
-self-play, league or P8-P12 work was added in the review rerun. The next task
-is `Decide whether P7 minimal synthetic/local parser-reader smoke extension
-implementation can be accepted as current-scope complete`.
+P7 full-scope planning after parser-reader smoke extension current-scope
+acceptance.
+`03BE` accepted the exact P7 minimal synthetic/local parser-reader smoke
+extension implementation as current-scope complete. The accepted scope is
+limited to the exact `03BA` module
+`src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`, exact
+tests `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`, the
+exact `03BC` test-only blocker fix, validation evidence and direct
+docs/governance synchronization. This does not close full P7 and does not
+approve broader P7 implementation, source approval, source ingestion, broad
+parser / reader / ingestion, actual feature extraction, actual label
+generation, supervised dataset construction, split creation, leakage-test
+implementation, training data, training, model architecture / trainer
+implementation, evaluation implementation, metric implementation, evaluation
+runner, benchmark harness, model-output integration, real data, self-play,
+league or P8-P12. The next task is `Define next P7 full-scope planning step
+after parser-reader smoke extension current-scope acceptance`.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -522,8 +525,10 @@ adding top-level `bytes`, top-level `bytearray` and top-level `Mapping`
 rejection tests.
 P7 parser-reader smoke extension implementation review after blocker fix =
 complete in `03BD`; review can close.
-Next = decide whether P7 minimal synthetic/local parser-reader smoke extension
-implementation can be accepted as current-scope complete.
+P7 parser-reader smoke extension current-scope acceptance decision =
+complete in `03BE`; accepted exact scope only.
+Next = define next P7 full-scope planning step after parser-reader smoke
+extension current-scope acceptance.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -657,9 +662,20 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Decide whether P7 minimal synthetic/local parser-reader smoke extension
-implementation can be accepted as current-scope complete.
+Define next P7 full-scope planning step after parser-reader smoke extension
+current-scope acceptance.
 ```
+
+`docs/03_supervised_policy/03BE_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+records decision `A. ACCEPTED as current-scope complete` for the exact P7
+minimal synthetic/local parser-reader smoke extension scope only. This
+acceptance is limited to the exact `03BA` module/tests, the exact `03BC`
+test-only blocker fix, validation evidence and direct docs/governance
+synchronization. It does not close full P7 and does not approve broader P7
+implementation, source approval, source ingestion, broad parser / reader /
+ingestion, feature extraction, label generation, dataset construction,
+training, evaluation, model-output integration, real data, self-play, league
+or P8-P12.
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
 accepts the exact minimal synthetic/local smoke implementation as
