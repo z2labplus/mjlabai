@@ -28,26 +28,20 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 parser-reader smoke extension implementation review rerun after blocker
-fix.
-The exact `03BA`-approved extension is implemented in
-`src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py` and tested
-in `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`.
-`03BB` reviewed it and recorded a review blocker because the test file did not
-explicitly cover top-level `bytes`, top-level `bytearray` or top-level
-`Mapping` rejection. `03BC` approved only the exact test-only blocker fix in
-`tests/supervised/test_synthetic_parser_reader_smoke_extension.py`. That
-blocker fix is now complete: only that approved test file was modified, adding
-explicit top-level `bytes`, top-level `bytearray` and top-level `Mapping`
-rejection tests. No production code, fixtures, data files, source approval,
-source ingestion, broad parser / reader / ingestion, actual feature
-extraction, actual label generation, supervised dataset construction, split
-creation, leakage-test implementation, training data, training, model
-architecture / trainer implementation, evaluation implementation, metric
-implementation, evaluation runner, benchmark harness, model-output
-integration, real data, self-play, league or P8-P12 work was added. The next
-task is `Rerun P7 parser-reader smoke extension implementation review after
-blocker fix`.
+P7 parser-reader smoke extension current-scope acceptance decision.
+`03BD` reran the exact parser-reader smoke extension implementation review
+after the `03BC` test-only blocker fix. It confirmed that the `03BB` blocker
+is resolved, exact files were respected, module/test/input/output and
+non-evidence boundaries remain safe, validation passed and `Review can close`.
+No production code, tests, fixtures, data files, source approval, source
+ingestion, broad parser / reader / ingestion, actual feature extraction,
+actual label generation, supervised dataset construction, split creation,
+leakage-test implementation, training data, training, model architecture /
+trainer implementation, evaluation implementation, metric implementation,
+evaluation runner, benchmark harness, model-output integration, real data,
+self-play, league or P8-P12 work was added in the review rerun. The next task
+is `Decide whether P7 minimal synthetic/local parser-reader smoke extension
+implementation can be accepted as current-scope complete`.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -526,8 +520,10 @@ P7 parser-reader smoke extension exact test-only blocker fix = complete; only
 `tests/supervised/test_synthetic_parser_reader_smoke_extension.py` changed,
 adding top-level `bytes`, top-level `bytearray` and top-level `Mapping`
 rejection tests.
-Next = rerun P7 parser-reader smoke extension implementation review after
-blocker fix.
+P7 parser-reader smoke extension implementation review after blocker fix =
+complete in `03BD`; review can close.
+Next = decide whether P7 minimal synthetic/local parser-reader smoke extension
+implementation can be accepted as current-scope complete.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -661,8 +657,8 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Rerun P7 parser-reader smoke extension implementation review after blocker
-fix.
+Decide whether P7 minimal synthetic/local parser-reader smoke extension
+implementation can be accepted as current-scope complete.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`

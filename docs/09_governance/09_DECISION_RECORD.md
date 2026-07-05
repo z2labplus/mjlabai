@@ -14,6 +14,62 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-06 — DR-0108 — Rerun P7 Parser-Reader Smoke Extension Review After Blocker Fix
+
+Decision:
+
+```text
+Review can close.
+```
+
+Context:
+
+- `03BB` recorded a review blocker for missing explicit top-level `bytes`,
+  top-level `bytearray` and top-level `Mapping` rejection tests.
+- `03BC` approved only the exact test-only blocker fix in
+  `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`.
+- Commit `188336b3983f042b7e9174f1d9e51da970d92a44` added those exact tests.
+- This task reruns the implementation review after that blocker fix.
+
+Rationale:
+
+- The blocker is resolved by explicit test coverage.
+- Exact file scope was respected.
+- The blocker fix modified only the approved test file.
+- The extension module still accepts only already-loaded in-memory
+  project-authored synthetic/local records and returns only a JSON-safe
+  guardrail manifest.
+- Validation passes and governance is synchronized.
+
+Consequences:
+
+- Added:
+  - `docs/03_supervised_policy/03BD_P7_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW_AFTER_BLOCKER_FIX.md`
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Decide whether P7 minimal synthetic/local parser-reader smoke extension implementation can be accepted as current-scope complete.`
+- This decision does not accept the implementation as current-scope complete;
+  it only closes the implementation review rerun.
+- This decision does not approve production code, fixtures, data files,
+  source approval, source ingestion, broad parser / reader / ingestion,
+  feature extraction, label generation, dataset construction, training,
+  evaluation, model-output integration, model-strength evidence, Tenhou
+  evidence, stable-dan evidence, LuckyJ `10.68` comparison, candidate
+  promotion, real-data use, self-play, league or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03BD_P7_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW_AFTER_BLOCKER_FIX.md`
+- `docs/03_supervised_policy/03BB_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW.md`
+- `docs/03_supervised_policy/03BC_P7_PARSER_READER_SMOKE_EXTENSION_REVIEW_BLOCKER_RESOLUTION_APPROVAL_DECISION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Review rerun closed; docs-only current-scope acceptance decision is next.
+
 ## 2026-07-05 — DR-0107 — Add P7 Parser-Reader Smoke Extension Rejection Tests
 
 Decision:

@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-06 — P7 parser-reader smoke extension review-rerun risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `Review can close` is mistaken for current-scope acceptance. | Governance / Review | Medium | Medium | `03BD` sets the next task to a separate docs-only acceptance decision. | Open |
+| Review-rerun closure is mistaken for full P7 closure or broader P7 implementation approval. | Governance / Scope | High | Medium | `03BD`, `10_NEXT` and stage contract state full P7 and broader implementation remain unapproved. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log classifies this as P7 synthetic/local implementation review evidence only. | Open |
+| Acceptance decision drifts into code, tests, fixtures or data files. | Governance / Execution | High | Medium | New `10_NEXT` first item is docs-only acceptance decision and forbids code/test/fixture/data changes. | Open |
+| Source approval, ingestion, feature/label, dataset, training, evaluation or P8-P12 work is treated as implicitly approved. | Governance / Stage Control | High | Medium | Stage contract and handoff keep those workstreams explicitly unapproved. | Open |
+
 ## 2026-07-05 — P7 parser-reader smoke extension exact test-only blocker-resolution risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

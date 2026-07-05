@@ -27,25 +27,24 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P7 parser-reader smoke extension implementation review
-rerun after blocker fix:
-`03BB` reviewed the exact `03BA` parser-reader smoke extension implementation
-and found one review blocker: the extension tests did not explicitly cover
-top-level `bytes`, top-level `bytearray` or top-level `Mapping` rejection.
-`03BC` approved only an exact test-only blocker-resolution task in
-`tests/supervised/test_synthetic_parser_reader_smoke_extension.py`. That
-test-only blocker fix is now complete: only that approved test file changed,
-adding the three explicit rejection tests. No production code, fixtures, data
-files, source approval, source ingestion, broad parser / reader / ingestion,
-feature extraction, label generation, dataset construction, training,
-evaluation, model-output integration, model-strength evidence, real data,
-self-play, league or P8-P12 work was added. The next task is `Rerun P7
-parser-reader smoke extension implementation review after blocker fix`.
+Current active stage is P7 parser-reader smoke extension current-scope
+acceptance decision:
+`03BD` reran the implementation review after the exact `03BC` test-only
+blocker fix. It confirmed that the `03BB` blocker is resolved by explicit
+top-level `bytes`, top-level `bytearray` and top-level `Mapping` rejection
+tests, that exact files were respected, that module/test/input/output and
+non-evidence boundaries remain safe, and that validation passed. `03BD`
+records `Review can close`. No production code, tests, fixtures, data files,
+source approval, source ingestion, broad parser / reader / ingestion, feature
+extraction, label generation, dataset construction, training, evaluation,
+model-output integration, model-strength evidence, real data, self-play,
+league or P8-P12 work was added in the review rerun. The next task is
+`Decide whether P7 minimal synthetic/local parser-reader smoke extension
+implementation can be accepted as current-scope complete`.
 
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
-Current active stage is P7 minimal synthetic/local parser-reader smoke
-extension implementation after approval decision:
+Earlier P7 minimal synthetic/local parser-reader smoke implementation context:
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py` now implement the
 exact `03AU`-approved in-memory synthetic/local parser-reader smoke helper and
@@ -687,8 +686,8 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Rerun P7 parser-reader smoke extension implementation review after blocker
-fix.
+Decide whether P7 minimal synthetic/local parser-reader smoke extension
+implementation can be accepted as current-scope complete.
 The exact implementation task approved by `03AU` has been completed in
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py`; `03AV` reviewed it
@@ -710,9 +709,11 @@ top-level `bytes`, top-level `bytearray` or top-level `Mapping` rejection. The
 test-only next task. That exact test-only task is now complete: only
 `tests/supervised/test_synthetic_parser_reader_smoke_extension.py` changed, and
 only to add explicit top-level `bytes`, top-level `bytearray` and top-level
-`Mapping` rejection tests. The current next task is a docs-only implementation
-review rerun. It must not add fixtures or data files, modify production code
-or tests without a separate blocker-resolution task, or approve / perform
+`Mapping` rejection tests. `03BD` reran the implementation review after that
+blocker fix, confirmed the blocker is resolved, and recorded `Review can
+close`. The current next task is a docs-only current-scope acceptance decision
+for that exact parser-reader smoke extension implementation. It must not add
+fixtures or data files, modify production code or tests, or approve / perform
 source approval, source ingestion, broad parser / reader / ingestion, actual
 feature extraction, actual label generation, supervised dataset construction,
 split creation, leakage-test implementation, training data, training-run

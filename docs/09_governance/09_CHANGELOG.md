@@ -1,5 +1,36 @@
 # 09_CHANGELOG
 
+## 2026-07-06 - v3.21
+
+- Reran the P7 parser-reader smoke extension implementation review after the
+  exact `03BC` test-only blocker fix.
+- Added:
+  - `docs/03_supervised_policy/03BD_P7_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW_AFTER_BLOCKER_FIX.md`
+- Review decision:
+  `Review can close.`
+- Confirmed the `03BB` blocker is resolved:
+  - top-level `bytes` rejection is explicitly tested.
+  - top-level `bytearray` rejection is explicitly tested.
+  - top-level `Mapping` as records collection rejection is explicitly tested.
+- Confirmed the blocker fix modified only the approved test file and did not
+  modify production code, fixtures or data files.
+- Confirmed module/test/input/output/non-evidence boundaries remain safe.
+- New `10_NEXT` first item:
+  `Decide whether P7 minimal synthetic/local parser-reader smoke extension implementation can be accepted as current-scope complete.`
+- This is P7 minimal synthetic/local parser-reader smoke extension
+  implementation review after blocker fix evidence only.
+- No implementation, production code, tests, fixtures, data files, source
+  approval, source ingestion, broad parser / reader / ingestion, CLI, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, split creation, leakage-test implementation,
+  training-data approval, training-run approval, training, model architecture
+  / trainer implementation, evaluation implementation, metric implementation,
+  evaluation runner, benchmark harness, model-output integration,
+  model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
+  evidence, LuckyJ `10.68` comparison, candidate promotion, real Tenhou, real
+  haifu, external logs, platform data, self-play, league or P8-P12 work was
+  added.
+
 ## 2026-07-05 - v3.20
 
 - Added the exact P7 parser-reader smoke extension rejection tests approved by
