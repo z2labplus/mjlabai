@@ -8,6 +8,58 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-05 — P7 parser-reader smoke extension exact test-only blocker resolution
+
+- Type: internal test / P7 parser-reader smoke extension exact test-only
+  blocker-resolution evidence.
+- Stage: P7 supervised learning / parser-reader smoke extension exact
+  test-only blocker resolution.
+- Modified only:
+  - `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+- Added explicit rejection tests for:
+  - top-level `bytes` input.
+  - top-level `bytearray` input.
+  - top-level `Mapping` as the records collection.
+- Validation:
+  - `git diff --check` passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+    passed with 15 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`
+    passed with 11 tests.
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`
+    passed with 11 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`
+    passed with 1 test.
+  - `python3 -m unittest tests/data/test_replay_schema.py` passed with 7
+    tests.
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`
+    passed with 1 test.
+- New next task:
+  - `Rerun P7 parser-reader smoke extension implementation review after blocker fix.`
+- Evidence grade:
+  - P7 parser-reader smoke extension exact test-only blocker-resolution
+    evidence only.
+- Not evidence of:
+  - production code approval or change.
+  - fixture or data-file creation.
+  - source approval or source ingestion approval.
+  - broad parser / reader / ingestion approval.
+  - actual feature extraction or label generation.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - real-data approval.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-07-05 — P7 parser-reader smoke extension blocker-resolution approval decision
 
 - Type: internal documentation / P7 parser-reader smoke extension

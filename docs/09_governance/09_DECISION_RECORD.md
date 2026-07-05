@@ -14,6 +14,62 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-05 — DR-0107 — Add P7 Parser-Reader Smoke Extension Rejection Tests
+
+Decision:
+
+```text
+Exact test-only blocker fix completed.
+```
+
+Context:
+
+- `03BB` recorded a review blocker for missing explicit top-level `bytes`,
+  top-level `bytearray` and top-level `Mapping` rejection tests.
+- `03BC` approved only one exact test-only blocker-resolution task in
+  `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`.
+- The current task executed only that approved test change.
+
+Rationale:
+
+- The implementation already contained the rejection guards.
+- Adding explicit tests resolves the review blocker without production-code,
+  fixture, data, source-ingestion, feature, label, dataset, training,
+  evaluation or P8-P12 expansion.
+- A separate review rerun is still required before the implementation review
+  can close.
+
+Consequences:
+
+- Modified only:
+  - `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+- Added explicit rejection tests for:
+  - top-level `bytes` input.
+  - top-level `bytearray` input.
+  - top-level `Mapping` as the records collection.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Rerun P7 parser-reader smoke extension implementation review after blocker fix.`
+- This decision does not approve production code, fixtures, data files,
+  source approval, source ingestion, broad parser / reader / ingestion,
+  feature extraction, label generation, dataset construction, training,
+  evaluation, model-output integration, model-strength evidence, Tenhou
+  evidence, stable-dan evidence, LuckyJ `10.68` comparison, candidate
+  promotion, real-data use, self-play, league or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03BB_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW.md`
+- `docs/03_supervised_policy/03BC_P7_PARSER_READER_SMOKE_EXTENSION_REVIEW_BLOCKER_RESOLUTION_APPROVAL_DECISION.md`
+- `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Exact test-only blocker fix completed; implementation review rerun is next.
+
 ## 2026-07-05 — DR-0106 — Prepare P7 Parser-Reader Smoke Extension Blocker Fix Approval
 
 Decision:

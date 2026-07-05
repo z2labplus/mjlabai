@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-05 — P7 parser-reader smoke extension exact test-only blocker-resolution risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The exact test-only blocker fix is mistaken for production-code approval. | Governance / Scope | High | Medium | Only `tests/supervised/test_synthetic_parser_reader_smoke_extension.py` changed; production code remains unchanged and unapproved for this task. | Open |
+| The blocker fix is mistaken for closure of the implementation review. | Governance / Review | Medium | Medium | `10_NEXT` now requires a separate docs-only implementation review rerun after the blocker fix. | Open |
+| The three explicit rejection tests are over-read as broad parser / reader / ingestion coverage. | Governance / Scope | High | Medium | Evidence log classifies the task as exact test-only blocker-resolution evidence, not broad parser / ingestion evidence. | Open |
+| Test coverage is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Changelog, evidence log and handoff explicitly mark the task as non-strength evidence. | Open |
+| P8-P12 work is treated as implicitly approved after the blocker fix. | Governance / Stage Control | High | Medium | Stage contract and `10_NEXT` keep training, self-play, league and P8-P12 closed. | Open |
+
 ## 2026-07-05 — P7 parser-reader smoke extension blocker-resolution approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

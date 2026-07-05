@@ -198,6 +198,29 @@ class SyntheticParserReaderSmokeExtensionTest(unittest.TestCase):
                 ):
                     build_synthetic_parser_reader_smoke_extension_manifest(value)  # type: ignore[arg-type]
 
+    def test_top_level_bytes_input_is_rejected(self) -> None:
+        with self.assertRaisesRegex(
+            SyntheticParserReaderSmokeExtensionError,
+            "path-like inputs",
+        ):
+            build_synthetic_parser_reader_smoke_extension_manifest(b"not records")  # type: ignore[arg-type]
+
+    def test_top_level_bytearray_input_is_rejected(self) -> None:
+        with self.assertRaisesRegex(
+            SyntheticParserReaderSmokeExtensionError,
+            "path-like inputs",
+        ):
+            build_synthetic_parser_reader_smoke_extension_manifest(bytearray(b"not records"))  # type: ignore[arg-type]
+
+    def test_top_level_mapping_as_records_collection_is_rejected(self) -> None:
+        with self.assertRaisesRegex(
+            SyntheticParserReaderSmokeExtensionError,
+            "not a mapping",
+        ):
+            build_synthetic_parser_reader_smoke_extension_manifest(  # type: ignore[arg-type]
+                {"fixture_id": "not a sequence"}
+            )
+
     def test_record_path_like_entries_are_rejected(self) -> None:
         for value in ("synthetic_supervised_smoke.json", Path(".")):
             with self.subTest(value=type(value).__name__):

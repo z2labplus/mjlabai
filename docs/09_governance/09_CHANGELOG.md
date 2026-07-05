@@ -1,5 +1,31 @@
 # 09_CHANGELOG
 
+## 2026-07-05 - v3.20
+
+- Added the exact P7 parser-reader smoke extension rejection tests approved by
+  `03BC`.
+- Modified only:
+  - `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+- Added explicit rejection coverage for:
+  - top-level `bytes` input.
+  - top-level `bytearray` input.
+  - top-level `Mapping` as the records collection.
+- No production code changed.
+- No fixtures, data files, source approval, source ingestion, broad parser /
+  reader / ingestion, actual feature extraction, actual label generation,
+  supervised dataset construction, split creation, leakage-test
+  implementation, training-data approval, training-run approval, training,
+  model architecture / trainer implementation, evaluation implementation,
+  metric implementation, evaluation runner, benchmark harness, model-output
+  integration, model-strength evidence, Tenhou ranked evidence, stable-dan
+  ranked-game evidence, LuckyJ `10.68` comparison, candidate promotion, real
+  Tenhou, real haifu, external logs, platform data, self-play, league or
+  P8-P12 work was added.
+- New `10_NEXT` first item:
+  `Rerun P7 parser-reader smoke extension implementation review after blocker fix.`
+- This is P7 parser-reader smoke extension exact test-only
+  blocker-resolution evidence only.
+
 ## 2026-07-05 - v3.19
 
 - Prepared the P7 parser-reader smoke extension review blocker-resolution
