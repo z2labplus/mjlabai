@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P7 parser-reader smoke extension review blocker
-resolution approval-decision preparation:
+Current active stage is P7 parser-reader smoke extension exact test-only
+blocker resolution:
 `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke_extension.py` now
 implement the exact `03BA`-approved extension. The extension accepts only
@@ -45,15 +45,26 @@ supervised dataset construction, split creation, leakage-test implementation,
 training data, training, model architecture / trainer implementation,
 evaluation implementation, metric implementation, evaluation runner,
 benchmark harness, model-output integration, real data, self-play, league or
-P8-P12 work was added. The next task is `Review P7 minimal synthetic/local
-parser-reader smoke extension implementation`. `03BB` now reviews that
+P8-P12 work was added. The previous next task was `Review P7 minimal
+synthetic/local parser-reader smoke extension implementation`. `03BB` now
+reviews that
 implementation, confirms exact file scope, safe module input/output and
 non-evidence boundaries, and passing validation, but records
 `Review cannot close because blockers exist` because the extension test does
 not explicitly cover top-level `bytes`, top-level `bytearray` or top-level
 `Mapping` rejection. The next task is `Prepare P7 parser-reader smoke
 extension review blocker resolution approval decision (docs-only, no
-implementation)`.
+implementation)`. `03BC` now records the blocker-resolution approval decision:
+`Approved for next exact test-only blocker-resolution task`. It approves only
+`Add explicit P7 parser-reader smoke extension rejection tests only` in
+`tests/supervised/test_synthetic_parser_reader_smoke_extension.py`, limited to
+explicit top-level `bytes`, top-level `bytearray` and top-level `Mapping`
+rejection tests. It does not execute the blocker fix, approve production code,
+approve fixtures/data, approve source approval, approve source ingestion,
+approve broad parser / reader / ingestion, approve feature extraction, approve
+label generation, approve dataset construction, approve training, approve
+evaluation, approve model-output integration or approve P8-P12. The next task
+is `Add explicit P7 parser-reader smoke extension rejection tests only`.
 
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
@@ -114,8 +125,10 @@ approve training, approve evaluation, approve model-output integration,
 approve real data or approve P8-P12. That exact extension implementation has
 now been added in the approved files only. `03BB` reviewed it and found a
 test-coverage blocker for top-level `bytes`, top-level `bytearray` and
-top-level `Mapping` rejection coverage. The next task is the docs-only
-blocker-resolution approval decision.
+top-level `Mapping` rejection coverage. `03BC` approved only the next exact
+test-only blocker-resolution task for
+`tests/supervised/test_synthetic_parser_reader_smoke_extension.py`. The next
+task is to add only those explicit rejection tests.
 Earlier P7 context:
 the exact `03O` minimal synthetic/local supervised fixture and feature-label
 smoke task has been implemented in `src/mjlabai/supervised/feature_label_schema.py`,
@@ -698,8 +711,7 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Prepare P7 parser-reader smoke extension review blocker resolution approval
-decision (docs-only, no implementation).
+Add explicit P7 parser-reader smoke extension rejection tests only.
 The exact implementation task approved by `03AU` has been completed in
 `src/mjlabai/supervised/synthetic_parser_reader_smoke.py` and
 `tests/supervised/test_synthetic_parser_reader_smoke.py`; `03AV` reviewed it
@@ -717,15 +729,18 @@ docs/governance synchronization. That exact extension implementation has now
 been added. `03BB` reviewed it and found that implementation scope is safe but
 the review cannot close because the extension test does not explicitly cover
 top-level `bytes`, top-level `bytearray` or top-level `Mapping` rejection. The
-current next task is a docs-only blocker-resolution approval decision. It must
-not add fixtures or data files, modify code/tests directly, or approve /
-perform source approval, source ingestion, broad parser / reader / ingestion,
-actual feature extraction, actual label generation, supervised dataset
-construction, split creation, leakage-test implementation, training data,
-training-run approval, training, model architecture or trainer implementation,
-evaluation implementation, metric implementation, evaluation runner,
-benchmark harness, real Tenhou, real haifu, external logs, platform data,
-model-output integration, CLI, broad file ingestion, self-play, league,
+`03BC` blocker-resolution approval decision now approves only an exact
+test-only next task. The current next task may modify only
+`tests/supervised/test_synthetic_parser_reader_smoke_extension.py` to add
+explicit top-level `bytes`, top-level `bytearray` and top-level `Mapping`
+rejection tests. It must not add fixtures or data files, modify production
+code, or approve / perform source approval, source ingestion, broad parser /
+reader / ingestion, actual feature extraction, actual label generation,
+supervised dataset construction, split creation, leakage-test implementation,
+training data, training-run approval, training, model architecture or trainer
+implementation, evaluation implementation, metric implementation, evaluation
+runner, benchmark harness, real Tenhou, real haifu, external logs, platform
+data, model-output integration, CLI, broad file ingestion, self-play, league,
 P8-P12 work, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison
 or candidate-promotion claims.
 ```

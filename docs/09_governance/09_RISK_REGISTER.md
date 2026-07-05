@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-05 — P7 parser-reader smoke extension blocker-resolution approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| The `03BC` approval decision is mistaken for blocker fix execution. | Governance / Scope | Medium | Medium | `03BC`, `10_NEXT` and evidence log state that this task records approval only and executes no test change. | Open |
+| Test-only blocker-resolution approval is mistaken for production-code approval. | Governance / Scope | High | Medium | `03BC` approves only `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`; all production code is excluded by default. | Open |
+| The future blocker fix expands beyond the three missing explicit rejection tests. | Governance / Validation | Medium | Medium | Allowed future additions are limited to top-level `bytes`, top-level `bytearray` and top-level `Mapping` rejection coverage. | Open |
+| Fixture/data creep occurs during blocker resolution. | Governance / Data | Medium | Medium | `03BC` forbids fixture and data-file edits; future task must stop if fixtures/data are needed. | Open |
+| Real-data, source-ingestion, feature/label, dataset, training or evaluation creep occurs. | Governance / Stage Control | High | Medium | `03BC` keeps source approval, source ingestion, broad parser / reader / ingestion, feature extraction, label generation, dataset construction, training, evaluation and model-output integration unapproved. | Open |
+| Approval-decision evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence grade is P7 parser-reader smoke extension blocker-resolution approval-decision evidence only with explicit non-evidence warnings. | Open |
+| P8-P12 work is treated as implicitly approved after the blocker-resolution approval decision. | Governance / Stage Control | High | Medium | `03BC`, stage contract and `10_NEXT` keep self-play, league and P8-P12 closed. | Open |
+
 ## 2026-07-01 — P7 minimal parser-reader smoke extension implementation review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

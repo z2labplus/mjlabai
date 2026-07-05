@@ -28,8 +28,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 parser-reader smoke extension review blocker resolution approval-decision
-preparation.
+P7 parser-reader smoke extension exact test-only blocker resolution.
 The exact `03BA`-approved extension is now implemented in
 `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py` and tested
 in `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`.
@@ -52,7 +51,16 @@ and passing validation, but recorded `Review cannot close because blockers
 exist` because the extension test does not explicitly cover top-level
 `bytes`, top-level `bytearray` or top-level `Mapping` rejection. The next task
 is `Prepare P7 parser-reader smoke extension review blocker resolution
-approval decision (docs-only, no implementation)`.
+approval decision (docs-only, no implementation)`. `03BC` now records the
+blocker-resolution approval decision: `Approved for next exact test-only
+blocker-resolution task`. It approves only `Add explicit P7 parser-reader
+smoke extension rejection tests only` in
+`tests/supervised/test_synthetic_parser_reader_smoke_extension.py`, limited to
+explicit top-level `bytes`, top-level `bytearray` and top-level `Mapping`
+rejection tests. It does not execute the blocker fix or approve production
+code, fixtures, data files, source approval, source ingestion, broad parser /
+reader / ingestion, feature extraction, label generation, dataset construction,
+training, evaluation, model-output integration or P8-P12.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -524,8 +532,10 @@ P7 minimal synthetic/local parser-reader smoke extension implementation review
 = complete in `03BB`; review cannot close because explicit test coverage is
 missing for top-level `bytes`, top-level `bytearray` and top-level `Mapping`
 rejection.
-Next = prepare P7 parser-reader smoke extension review blocker resolution
-approval decision.
+P7 parser-reader smoke extension blocker-resolution approval decision =
+complete in `03BC`; approved only the next exact test-only blocker-resolution
+task in `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`.
+Next = add explicit P7 parser-reader smoke extension rejection tests only.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -659,8 +669,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Prepare P7 parser-reader smoke extension review blocker resolution approval
-decision (docs-only, no implementation).
+Add explicit P7 parser-reader smoke extension rejection tests only.
 ```
 
 `docs/03_supervised_policy/03Q_MINIMAL_P7_SYNTHETIC_LOCAL_SUPERVISED_FEATURE_LABEL_SMOKE_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`

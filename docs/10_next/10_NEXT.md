@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Prepare P7 parser-reader smoke extension review blocker resolution approval decision (docs-only, no implementation).
+- [ ] Add explicit P7 parser-reader smoke extension rejection tests only.
 
 Current execution charter:
 
@@ -16,17 +16,18 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only blocker-resolution approval-decision preparation task
-  after `03BB` found that the extension review cannot close.
-- The blocker is limited to missing explicit test coverage for:
+- This is an exact test-only blocker-resolution task approved by `03BC`.
+- Modify only:
+  - `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+- Add only explicit test coverage for:
   - top-level `bytes` rejection.
   - top-level `bytearray` rejection.
   - top-level `Mapping` rejection as the records collection.
-- Do not modify production code or tests in this approval-decision task.
+- Do not modify production code.
+- Do not modify fixtures or data files.
 - Do not add fixtures or data files.
-- Do not execute the blocker fix in this task.
-- The next exact blocker-resolution implementation, if approved later, must
-  remain test-only unless the approval decision explicitly says otherwise.
+- If the test-only change reveals that production code must change, stop and
+  create a separate approval path.
 - Full P7 remains open.
 - Source approval, source ingestion, broad parser / reader / ingestion,
   actual feature extraction, actual label generation, supervised dataset
@@ -46,6 +47,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-07-05 Prepared P7 parser-reader smoke extension review blocker resolution approval decision: added `docs/03_supervised_policy/03BC_P7_PARSER_READER_SMOKE_EXTENSION_REVIEW_BLOCKER_RESOLUTION_APPROVAL_DECISION.md`, reviewed the `03BB` blocker, selected `Approved for next exact test-only blocker-resolution task`, and approved only `Add explicit P7 parser-reader smoke extension rejection tests only` for `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`. The approved future additions are limited to explicit top-level `bytes`, top-level `bytearray` and top-level `Mapping` rejection tests. No blocker fix was executed in this task. No production code, tests, fixtures, data files, source approval, source ingestion, broad parser / reader / ingestion, feature extraction, label generation, dataset construction, training, evaluation, model-output integration, model-strength evidence, real data, self-play, league or P8-P12 work was added. The next task is `Add explicit P7 parser-reader smoke extension rejection tests only.`
 - [x] 2026-07-01 Reviewed P7 minimal synthetic/local parser-reader smoke extension implementation: added `docs/03_supervised_policy/03BB_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW.md`, reviewed the exact `03BA` implementation files `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py` and `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`, confirmed exact file scope, no fixture/data file, safe module input/output/non-evidence boundaries and passing validation, but recorded `Review cannot close because blockers exist` because the extension test does not explicitly cover top-level `bytes`, top-level `bytearray` or top-level `Mapping` rejection even though the implementation contains those guards. This is P7 minimal synthetic/local parser-reader smoke extension implementation review evidence only. It does not approve broader P7 implementation, full P7 closure, source approval, source ingestion, broad parser / reader / ingestion, feature extraction, label generation, dataset construction, training, evaluation, model-output integration, model-strength evidence, real data, self-play, league or P8-P12. The next task is `Prepare P7 parser-reader smoke extension review blocker resolution approval decision (docs-only, no implementation).`
 - [x] 2026-07-01 Implemented P7 minimal synthetic/local parser-reader smoke extension only: added `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py` and `tests/supervised/test_synthetic_parser_reader_smoke_extension.py` under the exact `03BA` approval. The extension accepts only already-loaded in-memory project-authored synthetic/local smoke records, delegates each record to the existing parser-reader smoke validation path, rejects top-level and per-record path-like inputs, rejects empty record sequences, aggregates JSON-safe manifest guardrail summaries and emits no feature tensors, labels, targets, supervised examples, datasets, splits, model input, model output, evaluation result or model-strength fields. No fixture/data file, real data, source approval, source ingestion, broad parser / reader / ingestion, CLI, actual feature extraction, actual label generation, supervised dataset construction, split creation, leakage-test implementation, training data, training, model architecture / trainer implementation, evaluation implementation, metric implementation, evaluation runner, benchmark harness, model-output integration, self-play, league, P8-P12 work or strength evidence was added. The next task is `Review P7 minimal synthetic/local parser-reader smoke extension implementation.`
 - [x] 2026-07-01 Prepared approval decision for P7 minimal synthetic/local parser-reader smoke extension implementation: added `docs/03_supervised_policy/03BA_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_APPROVAL_DECISION.md`, reviewed the `03AY` proposal and `03AZ` proposal review, selected `Approved for next exact minimal implementation task`, approved only `Implement P7 minimal synthetic/local parser-reader smoke extension only`, approved only `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py` and `tests/supervised/test_synthetic_parser_reader_smoke_extension.py` plus direct docs/governance synchronization, and did not execute implementation. This is P7 minimal synthetic/local parser-reader smoke extension approval-decision evidence only. It does not approve broader P7 implementation, source approval, source ingestion, broad parser / reader / ingestion, actual feature extraction, actual label generation, supervised dataset construction, split creation, leakage-test implementation, training data, training run, training, model architecture / trainer implementation, evaluation implementation, metric implementation, evaluation runner, benchmark harness, model-output integration, model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison, candidate promotion, real data, self-play, league or P8-P12.

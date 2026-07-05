@@ -14,6 +14,71 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-05 — DR-0106 — Prepare P7 Parser-Reader Smoke Extension Blocker Fix Approval
+
+Decision:
+
+```text
+Approved for next exact test-only blocker-resolution task.
+```
+
+Context:
+
+- `03BB` reviewed the exact `03BA` parser-reader smoke extension
+  implementation and recorded `Review cannot close because blockers exist`.
+- The blocker is missing explicit test coverage for top-level `bytes`,
+  top-level `bytearray` and top-level `Mapping` rejection.
+- The implementation logic already contains those guards.
+- Existing validation commands pass.
+- This task records an approval decision only and does not execute the blocker
+  fix.
+
+Rationale:
+
+- The blocker is a test coverage completeness blocker rather than
+  implementation scope drift or a production-code defect.
+- The safest blocker-resolution path is an exact test-only task.
+- The future task can be limited to one file:
+  `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`.
+- No production code, fixture, data file, source approval, source ingestion,
+  broad parser / reader / ingestion, feature extraction, label generation,
+  dataset construction, training, evaluation, model-output integration or
+  P8-P12 work is required or approved.
+
+Consequences:
+
+- Added:
+  - `docs/03_supervised_policy/03BC_P7_PARSER_READER_SMOKE_EXTENSION_REVIEW_BLOCKER_RESOLUTION_APPROVAL_DECISION.md`
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Add explicit P7 parser-reader smoke extension rejection tests only.`
+- The approved future task may modify only:
+  - `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+- The approved future task may add only explicit tests for:
+  - top-level `bytes` rejection.
+  - top-level `bytearray` rejection.
+  - top-level `Mapping` rejection as the records collection.
+- This decision does not execute the blocker fix.
+- This decision does not approve production code, fixtures, data files,
+  source approval, source ingestion, broad parser / reader / ingestion,
+  feature extraction, label generation, dataset construction, training,
+  evaluation, model-output integration, model-strength evidence, Tenhou
+  evidence, stable-dan evidence, LuckyJ `10.68` comparison, candidate
+  promotion, real-data use, self-play, league or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03BC_P7_PARSER_READER_SMOKE_EXTENSION_REVIEW_BLOCKER_RESOLUTION_APPROVAL_DECISION.md`
+- `docs/03_supervised_policy/03BB_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Approved for next exact test-only blocker-resolution task; blocker fix not
+executed in this decision task.
+
 ## 2026-07-01 — DR-0105 — Review P7 Parser-Reader Smoke Extension Implementation
 
 Decision:

@@ -1,5 +1,41 @@
 # 09_CHANGELOG
 
+## 2026-07-05 - v3.19
+
+- Prepared the P7 parser-reader smoke extension review blocker-resolution
+  approval decision.
+- Added:
+  - `docs/03_supervised_policy/03BC_P7_PARSER_READER_SMOKE_EXTENSION_REVIEW_BLOCKER_RESOLUTION_APPROVAL_DECISION.md`
+- Reviewed `03BB` blocker:
+  - missing explicit top-level `bytes` rejection test.
+  - missing explicit top-level `bytearray` rejection test.
+  - missing explicit top-level `Mapping` rejection-as-records-collection
+    test.
+- Decision:
+  `Approved for next exact test-only blocker-resolution task.`
+- Approved future task:
+  `Add explicit P7 parser-reader smoke extension rejection tests only.`
+- Exact approved future file:
+  - `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`
+- Allowed future additions are limited to explicit top-level `bytes`,
+  top-level `bytearray` and top-level `Mapping` rejection tests.
+- New `10_NEXT` first item:
+  `Add explicit P7 parser-reader smoke extension rejection tests only.`
+- This is P7 parser-reader smoke extension review blocker-resolution
+  approval-decision evidence only.
+- No blocker fix was executed in this task.
+- No production code, tests, fixtures, data files, source approval, source
+  ingestion, broad parser / reader / ingestion, CLI, actual feature
+  extraction, actual label generation, supervised dataset construction, split
+  creation, leakage-test implementation, training-data approval,
+  training-run approval, training, model architecture / trainer
+  implementation, evaluation implementation, metric implementation,
+  evaluation runner, benchmark harness, model-output integration,
+  model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
+  evidence, LuckyJ `10.68` comparison, candidate promotion, real Tenhou, real
+  haifu, external logs, platform data, self-play, league or P8-P12 work was
+  added.
+
 ## 2026-07-01 - v3.18
 
 - Reviewed the P7 minimal synthetic/local parser-reader smoke extension
