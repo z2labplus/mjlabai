@@ -14,6 +14,63 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-06 — DR-0114 — Review P7 Full-Scope Handoff and Evidence Index
+
+Decision:
+
+```text
+Review can close.
+```
+
+Context:
+
+- `03BI` finalized the P7 full-scope handoff and evidence index after `03BH`
+  reviewed the full P7 closure criteria.
+- The review needed to confirm that `03BI` is complete and conservative before
+  any later risk/source-rights/evidence consistency review.
+- Full P7 remains open.
+- Final full P7 closure review, broader implementation, source approval,
+  source ingestion, feature extraction, label generation, dataset
+  construction, training, evaluation, model-output integration, real data,
+  self-play, league and P8-P12 remain unapproved.
+
+Rationale:
+
+- `03BI` correctly separates accepted current-scope synthetic/local evidence
+  from full P7 remaining scope.
+- Its evidence index covers the required closure criteria chain, accepted
+  current-scope artifacts, P5/P6 context and governance records.
+- No handoff/evidence-index review blocker was found.
+
+Consequences:
+
+- Added:
+  - `docs/03_supervised_policy/03BJ_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_REVIEW_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review P7 full-scope risk, source-rights and evidence consistency before final closure review.`
+- This decision does not close full P7, run final full P7 closure review or
+  approve broader P7 implementation, source approval, source ingestion, broad
+  parser / reader / ingestion, feature extraction, label generation, dataset
+  construction, training, evaluation, model-output integration,
+  model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ
+  `10.68` comparison, candidate promotion, real-data use, self-play, league
+  or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03BJ_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_REVIEW_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+- `docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+- `docs/03_supervised_policy/03BH_FULL_P7_CLOSURE_CRITERIA_REVIEW_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Handoff and evidence-index review can close; full P7 remains open. A
+risk/source-rights/evidence consistency review is next.
+
 ## 2026-07-06 — DR-0113 — Finalize P7 Full-Scope Handoff and Evidence Index
 
 Decision:

@@ -27,24 +27,22 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P7 full-scope handoff and evidence-index review after
-closure criteria review:
-`03BI` finalized the P7 full-scope handoff and evidence index after `03BH`
-reviewed the full P7 closure criteria and recorded `Review can close`. It
-indexes the closure criteria chain, accepted parser-reader smoke extension
-chain, accepted current-scope implementation artifacts, P5/P6 closure context
-and governance docs. It records accepted current-scope evidence, full P7
-remaining required/deferred/blocked/later-stage scope, risk/evidence
-consistency notes, validation results, governance synchronization and
-finalization decision. This does not close full P7 and does not approve
+Current active stage is P7 full-scope risk, source-rights and evidence
+consistency review before final closure review:
+`03BJ` reviewed the P7 full-scope handoff and evidence index after `03BI`
+finalized it and recorded `Review can close`. The review confirmed `03BI`
+scope, reviewed closure criteria chain, full-scope handoff summary, evidence
+index, accepted current-scope evidence boundaries, full P7 remaining scope,
+risk/evidence consistency, validation and governance synchronization. This
+does not close full P7 and does not approve final full P7 closure review,
 broader P7 implementation, source approval, source ingestion, broad parser /
 reader / ingestion, actual feature extraction, actual label generation,
 supervised dataset construction, split creation, leakage-test implementation,
 training-data approval, training-run approval, training, model architecture /
 trainer implementation, evaluation implementation, model-output integration,
 model-strength evidence, real data, self-play, league or P8-P12. The next task
-is `Review P7 full-scope handoff and evidence index after closure criteria
-review`.
+is `Review P7 full-scope risk, source-rights and evidence consistency before
+final closure review`.
 
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
@@ -690,13 +688,14 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review P7 full-scope handoff and evidence index after closure criteria
-review.
-`03BI` finalized the full-scope handoff and evidence index after the `03BH`
-closure-criteria review. The next task must review that finalization only. It
-must not close full P7, run final full P7 closure review, add fixtures or data
-files, modify production code or tests, or approve / perform source approval,
-source ingestion, broad parser / reader / ingestion, actual feature
+Review P7 full-scope risk, source-rights and evidence consistency before
+final closure review.
+`03BJ` reviewed the full-scope handoff and evidence index after `03BI` and
+recorded `Review can close`. The next task must review only risk,
+source-rights and evidence consistency before any later final closure review.
+It must not close full P7, run final full P7 closure review, add fixtures or
+data files, modify production code or tests, or approve / perform source
+approval, source ingestion, broad parser / reader / ingestion, actual feature
 extraction, actual label generation, supervised dataset construction, split
 creation, leakage-test implementation, training data, training-run approval,
 training, model architecture or trainer implementation, evaluation

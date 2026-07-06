@@ -1,5 +1,39 @@
 # 09_CHANGELOG
 
+## 2026-07-06 - v3.27
+
+- Reviewed P7 full-scope handoff and evidence index after closure criteria
+  review.
+- Added:
+  - `docs/03_supervised_policy/03BJ_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_REVIEW_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+- Review decision:
+  - `Review can close.`
+- Reviewed:
+  - `03BI` scope.
+  - reviewed closure criteria chain.
+  - full-scope handoff summary.
+  - evidence index completeness.
+  - accepted current-scope evidence boundaries.
+  - full P7 remaining scope index.
+  - risk / evidence consistency.
+  - validation results.
+  - governance synchronization.
+- New `10_NEXT` first item:
+  `Review P7 full-scope risk, source-rights and evidence consistency before final closure review.`
+- This is P7 full-scope handoff and evidence-index review evidence only.
+- No full P7 closure, final full P7 closure review, production code, tests,
+  fixtures, data files, implementation logic, source approval, source
+  ingestion, broad parser / reader / ingestion, CLI, actual feature
+  extraction, actual label generation, supervised dataset construction, split
+  creation, leakage-test implementation, training-data approval,
+  training-run approval, training, model architecture / trainer
+  implementation, checkpoint / weights, evaluation implementation, metric
+  implementation, evaluation runner, benchmark harness, model-output
+  integration, model-strength evidence, Tenhou ranked evidence, stable-dan
+  ranked-game evidence, LuckyJ `10.68` comparison, candidate promotion, real
+  Tenhou, real haifu, external logs, platform data, self-play, league or
+  P8-P12 work was added or approved.
+
 ## 2026-07-06 - v3.26
 
 - Finalized P7 full-scope handoff and evidence index after closure criteria

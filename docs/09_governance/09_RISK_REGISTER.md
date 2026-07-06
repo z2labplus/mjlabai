@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-06 — P7 full-scope handoff and evidence-index review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `Review can close` for `03BI` is mistaken for full P7 closure. | Governance / Scope | High | Medium | `03BJ`, `10_NEXT` and stage contract state this is handoff/evidence-index review only and the next task is a consistency review before final closure review. | Open |
+| The reviewed evidence index is mistaken for approval of source, ingestion, feature/label, dataset, training or evaluation workstreams. | Governance / Scope | High | Medium | `03BJ` confirms those workstreams remain unapproved and keeps accepted current-scope evidence bounded. | Open |
+| The next consistency review is mistaken for final full P7 closure review. | Governance / Execution | High | Medium | New `10_NEXT` first item is docs-only risk/source-rights/evidence consistency review before final closure review, not final closure review itself. | Open |
+| Source-rights review language is mistaken for source approval or real-data permission. | Governance / Data | High | Medium | `03BJ` and next-task limits keep source approval, source ingestion, real Tenhou, real haifu, external logs and platform data unapproved. | Open |
+| Handoff/evidence-index review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log classifies this as P7 full-scope handoff and evidence-index review evidence only. | Open |
+
 ## 2026-07-06 — P7 full-scope handoff and evidence-index finalization risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

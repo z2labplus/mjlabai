@@ -140,6 +140,7 @@ docs/03_supervised_policy/03BF_P7_NEXT_FULL_SCOPE_PLANNING_STEP_AFTER_PARSER_REA
 docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md
 docs/03_supervised_policy/03BH_FULL_P7_CLOSURE_CRITERIA_REVIEW_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md
 docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md
+docs/03_supervised_policy/03BJ_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_REVIEW_AFTER_CLOSURE_CRITERIA_REVIEW.md
 src/mjlabai/supervised/synthetic_parser_reader_smoke.py
 tests/supervised/test_synthetic_parser_reader_smoke.py
 src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py
@@ -856,6 +857,18 @@ closure review or approve broader P7 implementation, source approval, source
 ingestion, broad parser / reader / ingestion, feature extraction, label
 generation, dataset construction, training, evaluation, model-output
 integration, real data, self-play, league or P8-P12.
+
+`docs/03_supervised_policy/03BJ_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_REVIEW_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+reviews the `03BI` P7 full-scope handoff and evidence index after closure
+criteria review and records `Review can close`. It confirms the `03BI` scope,
+reviewed closure criteria chain, handoff summary, evidence index, accepted
+current-scope evidence boundaries, full P7 remaining scope index,
+risk/evidence consistency, validation and governance synchronization. It is
+handoff/evidence-index review evidence only. It does not close full P7, run
+final full P7 closure review or approve broader P7 implementation, source
+approval, source ingestion, broad parser / reader / ingestion, feature
+extraction, label generation, dataset construction, training, evaluation,
+model-output integration, real data, self-play, league or P8-P12.
 
 ## Data-system files
 
