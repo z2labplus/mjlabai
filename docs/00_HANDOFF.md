@@ -27,25 +27,20 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P7 full-scope planning after parser-reader smoke
-extension current-scope acceptance:
-`03BE` records decision `A. ACCEPTED as current-scope complete` for the exact
-P7 minimal synthetic/local parser-reader smoke extension implementation. The
-accepted scope is limited to the exact `03BA` module
-`src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`, exact
-tests `tests/supervised/test_synthetic_parser_reader_smoke_extension.py`, the
-exact `03BC` test-only blocker fix for top-level `bytes`, top-level
-`bytearray` and top-level `Mapping` rejection, validation evidence and direct
-docs/governance synchronization. This acceptance is not full P7 closure and
-does not approve broader P7 implementation, source approval, source ingestion,
-broad parser / reader / ingestion, actual feature extraction, actual label
-generation, supervised dataset construction, split creation, leakage-test
-implementation, training-data approval, training-run approval, training, model
-architecture / trainer implementation, evaluation implementation,
-model-output integration, model-strength evidence, real data, self-play,
-league or P8-P12. The next task is
-`Define next P7 full-scope planning step after parser-reader smoke extension
-current-scope acceptance`.
+Current active stage is P7 full-scope closure criteria definition after
+parser-reader smoke extension current-scope acceptance:
+`03BF` defines the next P7 full-scope planning step after `03BE` accepted the
+exact parser-reader smoke extension current scope. It reviews current accepted
+P7 current-scope items, full P7 open scope, remaining workstreams and
+candidate next directions, then selects `Define full P7 closure criteria after
+parser-reader smoke extension current-scope acceptance` as the next docs-only
+task. This does not close full P7 and does not approve broader P7
+implementation, source approval, source ingestion, broad parser / reader /
+ingestion, actual feature extraction, actual label generation, supervised
+dataset construction, split creation, leakage-test implementation,
+training-data approval, training-run approval, training, model architecture /
+trainer implementation, evaluation implementation, model-output integration,
+model-strength evidence, real data, self-play, league or P8-P12.
 
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
@@ -691,16 +686,12 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define next P7 full-scope planning step after parser-reader smoke extension
+Define full P7 closure criteria after parser-reader smoke extension
 current-scope acceptance.
-`03BE` accepted the exact P7 minimal synthetic/local parser-reader smoke
-extension implementation as current-scope complete. The accepted scope is
-limited to `src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py`,
-`tests/supervised/test_synthetic_parser_reader_smoke_extension.py`, the exact
-`03BC` test-only blocker fix for top-level `bytes`, top-level `bytearray` and
-top-level `Mapping` rejection, validation evidence and direct docs/governance
-synchronization. Full P7 remains open. The next task must be docs-only
-planning and must not add fixtures or data files, modify production code or
+`03BF` selected this as the next docs-only planning step after `03BE`. The
+criteria task must define what full P7 closure would require, what remains
+deferred / blocked / later-stage, and what cannot count as closure. It must
+not close full P7, add fixtures or data files, modify production code or
 tests, or approve / perform source approval, source ingestion, broad parser /
 reader / ingestion, actual feature extraction, actual label generation,
 supervised dataset construction, split creation, leakage-test implementation,

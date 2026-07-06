@@ -14,6 +14,65 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-06 — DR-0110 — Define Next P7 Full-Scope Planning Step
+
+Decision:
+
+```text
+Define full P7 closure criteria after parser-reader smoke extension current-scope acceptance.
+```
+
+Context:
+
+- `03BE` accepted the exact P7 minimal synthetic/local parser-reader smoke
+  extension implementation as current-scope complete.
+- Full P7 remains open.
+- Current accepted P7 scope is synthetic/local smoke plus docs/governance
+  readiness evidence only.
+- Source approval, source ingestion, broad parser / reader / ingestion,
+  actual feature extraction, actual label generation, supervised dataset
+  construction, training, evaluation, model-output integration, real data,
+  self-play, league and P8-P12 remain unapproved.
+
+Rationale:
+
+- P7 has accumulated multiple accepted current-scope synthetic/local smoke
+  artifacts.
+- `03AW` / `03AX` already define and review full-P7 expansion planning.
+- Another implementation-proposal loop would risk extending P7 without a clear
+  closure target.
+- Full P7 closure criteria are needed before any final closure review or
+  post-P7 transition can be considered.
+
+Consequences:
+
+- Added:
+  - `docs/03_supervised_policy/03BF_P7_NEXT_FULL_SCOPE_PLANNING_STEP_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define full P7 closure criteria after parser-reader smoke extension current-scope acceptance.`
+- This decision does not close full P7 and does not approve broader P7
+  implementation, source approval, source ingestion, broad parser / reader /
+  ingestion, feature extraction, label generation, dataset construction,
+  training, evaluation, model-output integration, model-strength evidence,
+  Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison, candidate
+  promotion, real-data use, self-play, league or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03BF_P7_NEXT_FULL_SCOPE_PLANNING_STEP_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/03_supervised_policy/03BE_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+- `docs/03_supervised_policy/03AW_P7_FULL_SCOPE_EXPANSION_PLAN_AFTER_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/03_supervised_policy/03AX_P7_FULL_SCOPE_EXPANSION_PLAN_REVIEW_AFTER_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Next full-scope planning step defined; full P7 closure criteria definition is
+next and remains docs-only.
+
 ## 2026-07-06 — DR-0109 — Accept P7 Parser-Reader Smoke Extension Current Scope
 
 Decision:

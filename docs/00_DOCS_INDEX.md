@@ -136,6 +136,7 @@ docs/03_supervised_policy/03BB_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EX
 docs/03_supervised_policy/03BC_P7_PARSER_READER_SMOKE_EXTENSION_REVIEW_BLOCKER_RESOLUTION_APPROVAL_DECISION.md
 docs/03_supervised_policy/03BD_P7_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW_AFTER_BLOCKER_FIX.md
 docs/03_supervised_policy/03BE_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE_DECISION.md
+docs/03_supervised_policy/03BF_P7_NEXT_FULL_SCOPE_PLANNING_STEP_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md
 src/mjlabai/supervised/synthetic_parser_reader_smoke.py
 tests/supervised/test_synthetic_parser_reader_smoke.py
 src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py
@@ -798,6 +799,18 @@ not close full P7 or approve broader P7 implementation, source approval,
 source ingestion, broad parser / reader / ingestion, feature extraction, label
 generation, supervised dataset construction, training, evaluation,
 model-output integration, real data, self-play, league or P8-P12.
+
+`docs/03_supervised_policy/03BF_P7_NEXT_FULL_SCOPE_PLANNING_STEP_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+defines the next P7 full-scope planning step after `03BE`. It reviews current
+accepted P7 current-scope items, full P7 open scope, remaining workstreams and
+candidate next directions, then selects `Define full P7 closure criteria after
+parser-reader smoke extension current-scope acceptance` as the next docs-only
+task. It is next-task definition evidence only and does not close full P7,
+approve broader P7 implementation, approve source approval, approve source
+ingestion, approve broad parser / reader / ingestion, approve feature
+extraction, approve label generation, approve supervised dataset construction,
+approve training, approve evaluation, approve model-output integration,
+approve real data, approve self-play, approve league or approve P8-P12.
 
 ## Data-system files
 

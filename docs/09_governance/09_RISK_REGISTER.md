@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-06 — P7 next full-scope planning step definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Closure-criteria planning is mistaken for full P7 closure. | Governance / Scope | High | Medium | `03BF`, `10_NEXT` and stage contract state the next task defines criteria only and does not close full P7. | Open |
+| Selecting closure criteria is mistaken for broader P7 implementation approval. | Governance / Scope | High | Medium | `03BF` explicitly rejects immediate implementation and keeps exact files unapproved. | Open |
+| Source/data planning candidates are mistaken for source or real-data approval. | Governance / Data | High | Medium | `03BF` defers source approval / data-readiness process and keeps source approval, ingestion and real data unapproved. | Open |
+| Full P7 closure criteria task drifts into implementation or test/fixture creation. | Governance / Execution | High | Medium | New `10_NEXT` first item is docs-only criteria definition and forbids production code, tests, fixtures and data files. | Open |
+| Criteria evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log classifies this as P7 next full-scope planning step definition evidence only. | Open |
+| P8-P12 work is treated as available after selecting closure criteria. | Governance / Stage Control | High | Medium | `03BF` rejects P8-P12 entry and requires full P7 closure plus separate transition review first. | Open |
+
 ## 2026-07-06 — P7 parser-reader smoke extension acceptance risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
