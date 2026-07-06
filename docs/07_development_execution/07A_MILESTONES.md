@@ -27,6 +27,18 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 | P11 | Large-scale training and stability validation | Expand compute only after the route is justified by previous gates | Internal evaluation approaches or exceeds the LuckyJ 10.68 target line | Future |
 | P12 | Tenhou target validation | Validate whether the system can exceed LuckyJ 10.68 under compliant conditions | Long-term stable dan, pt EV, rank metrics, latency and logs are verified | Final |
 
+## 2026-07-07 P8 Planning Milestone Update
+
+`12I` now defines P8 scope, P8-E1 through P8-E15 entry criteria, non-entry
+conditions, a P8 workstream inventory, risk controls, evidence requirements
+and the next docs-only review gate after the reviewed P8-P12 transition-scope
+document in `12H`.
+
+This milestone update does not approve P8 entry, P8 implementation,
+self-play, reinforcement-learning execution, training, evaluation, league,
+source approval, source ingestion, real data, model-output integration,
+model-strength evidence or P9-P12 entry.
+
 ## Current position
 
 ```text

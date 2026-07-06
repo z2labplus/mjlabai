@@ -39,6 +39,7 @@ docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md
 docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md
 docs/12_technical_plan/12G_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK.md
 docs/12_technical_plan/12H_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_REVIEW.md
+docs/12_technical_plan/12I_P8_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_AFTER_P8_P12_TRANSITION_SCOPE_REVIEW.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -109,6 +110,18 @@ planning task after P8-P12 transition-scope review.` It is review evidence
 only, not P8-P12 entry approval, P8 implementation approval, an implementation
 prompt, training approval, evaluation approval, self-play approval, league
 approval, real-data approval or model-strength evidence.
+
+`docs/12_technical_plan/12I_P8_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_AFTER_P8_P12_TRANSITION_SCOPE_REVIEW.md`
+defines P8 scope, P8 entry criteria and the first P8 planning task after the
+reviewed P8-P12 transition-scope document. It interprets P8 only as a
+docs-only planning boundary for the roadmap label `self-play reinforcement
+learning`, defines P8-E1 through P8-E15 entry criteria, non-entry conditions,
+forbidden current scope, a P8 workstream inventory, risk controls, future
+evidence fields and the next docs-only review gate. It is P8 scope-definition
+evidence only, not P8 entry approval, P8 implementation approval, a P8
+implementation prompt, self-play approval, reinforcement-learning execution,
+training approval, evaluation approval, league approval, real-data approval,
+P9-P12 entry approval or model-strength evidence.
 
 ## Supervised-policy files
 

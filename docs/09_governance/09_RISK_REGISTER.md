@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-07 — P8 scope definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12I` is mistaken for P8 entry approval. | Governance / Stage Control | High | Medium | `12I`, `10_NEXT`, handoff, evidence log and decision record state that this is scope-definition evidence only and selects a review gate next. | Open |
+| P8 entry criteria are mistaken for P8 implementation approval. | Governance / Execution | High | Medium | The next task is a docs-only review gate; any implementation requires a separate approval chain and explicit `10_NEXT` authorization. | Open |
+| The roadmap label `self-play reinforcement learning` is mistaken for self-play or RL execution approval. | Governance / Stage Control | High | Medium | `12I` states P8 is currently only a planning boundary and does not approve self-play, reinforcement-learning execution, training or league. | Open |
+| P8-specific planning drifts into training, evaluation, model-output integration, self-play or league. | Governance / Execution | High | Medium | `12I` defines non-entry conditions and keeps training, evaluation, model-output integration, self-play and league forbidden in current scope. | Open |
+| Source approval, source ingestion or real-data prerequisites are skipped during P8 planning. | Governance / Data | High | Medium | `12I` requires source-rights, privacy and platform-policy review before real/platform data work. | Open |
+| P8 scope-definition evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log classifies `12I` as P8 scope, entry criteria and first planning task definition evidence only. | Open |
+| P9-P12 are treated as implicitly approved after P8 scope definition. | Governance / Stage Control | High | Medium | `12I` keeps P9-P12 unapproved and rejects P9-P12 scope work as the current next direction. | Open |
+
 ## 2026-07-07 — P8-P12 transition scope review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

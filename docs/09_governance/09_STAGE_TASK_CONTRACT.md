@@ -2,7 +2,7 @@
 
 ## Current stage
 
-P8 scope / entry criteria / first planning task definition after P8-P12
+P8 scope / entry criteria / first planning task review after P8-P12
 transition-scope review.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
@@ -10,12 +10,15 @@ the post-full-P7 transition review and recorded `A. No post-full-P7 transition
 blocker found for defining P8-P12 docs-only scope / entry criteria / first
 planning task.` `12G` defines that transition scope, entry criteria and first
 planning task and selected a docs-only review gate as the next step. `12H`
-reviews `12G` and records `A. Review can close.` Production code, tests,
-fixtures, data files, source approval, source ingestion, broad parser / reader
-/ ingestion, feature extraction, label generation, dataset construction,
-training, evaluation, model-output integration, self-play, league and P8-P12
-remain unapproved. The current first task is `Define P8 scope, entry criteria
-and first planning task after P8-P12 transition-scope review`.
+reviews `12G` and records `A. Review can close.` `12I` defines the P8
+docs-only scope boundary, P8-E1 through P8-E15 entry criteria, non-entry
+conditions, workstream inventory, risk controls, evidence requirements and
+the next review gate. Production code, tests, fixtures, data files, source
+approval, source ingestion, broad parser / reader / ingestion, feature
+extraction, label generation, dataset construction, training, evaluation,
+model-output integration, self-play, reinforcement-learning execution, league
+and P8-P12 remain unapproved. The current first task is `Review P8 scope,
+entry criteria and first planning task after P8-P12 transition-scope review`.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -415,4 +418,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Define P8 scope, entry criteria and first planning task after P8-P12 transition-scope review.
+Review P8 scope, entry criteria and first planning task after P8-P12 transition-scope review.

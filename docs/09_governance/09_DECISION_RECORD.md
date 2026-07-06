@@ -14,6 +14,64 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-07 — DR-0120 — P8 Scope Definition
+
+Decision:
+
+```text
+P8 scope, entry criteria and first planning task are defined after P8-P12 transition-scope review.
+```
+
+Context:
+
+- `12H` reviewed the P8-P12 transition-scope definition in `12G` and recorded
+  `A. Review can close.`
+- Full P7 is closed only for the documented P7 supervised-learning scope.
+- P8-P12 entry, P8 implementation, source approval, source ingestion, real
+  data, training, evaluation, self-play, league, model-output integration and
+  model-strength evidence remained unapproved before this decision.
+
+Rationale:
+
+- A P8-specific scope and entry-criteria artifact is required after the
+  broader P8-P12 transition-scope review.
+- P8 must be interpreted conservatively as a docs-only planning boundary for
+  the roadmap label `self-play reinforcement learning`.
+- The safest next task is a docs-only review gate for the P8 scope definition,
+  not P8 entry approval or implementation.
+
+Consequences:
+
+- Added:
+  - `docs/12_technical_plan/12I_P8_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_AFTER_P8_P12_TRANSITION_SCOPE_REVIEW.md`
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review P8 scope, entry criteria and first planning task after P8-P12 transition-scope review.`
+- This decision does not approve P8 entry, P8 implementation, a P8
+  implementation prompt, P9-P12 entry, source approval, source ingestion,
+  parser / reader / ingestion, feature extraction, label generation, dataset
+  construction, training, evaluation, model-output integration,
+  model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ
+  `10.68` comparison, candidate promotion, real-data use, self-play,
+  reinforcement-learning execution or league.
+
+Linked docs:
+
+- `docs/12_technical_plan/12I_P8_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_AFTER_P8_P12_TRANSITION_SCOPE_REVIEW.md`
+- `docs/12_technical_plan/12H_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_REVIEW.md`
+- `docs/12_technical_plan/12G_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK.md`
+- `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`
+- `docs/03_supervised_policy/03BL_FINAL_FULL_P7_CLOSURE_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+P8 scope, entry criteria and first planning task are defined. The next task is
+a docs-only review gate; P8 entry, implementation and P9-P12 remain
+unapproved.
+
 ## 2026-07-07 — DR-0119 — P8-P12 Transition Scope Review
 
 Decision:
