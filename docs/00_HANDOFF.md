@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P8 risk and evidence taxonomy review before any
-implementation:
+Current active stage is P8 self-play / reinforcement-learning dependency map
+definition before any implementation:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -46,9 +46,11 @@ evidence families E1-E25, evidence-grade vocabulary, current evidence
 classification, workstream risk/evidence matrix, model-strength / Tenhou /
 stable-dan / LuckyJ / promotion boundaries, source / real-data / platform
 boundaries, self-play / RL boundaries, stop conditions and candidate next
-directions. The next first task is `Review P8 risk and evidence taxonomy
-before any implementation.` This next task remains docs-only and does not
-approve P8-P12 entry, P8 implementation,
+directions. `12L` reviews that taxonomy and records `A. Review can close.`
+The next first task is `Define P8 self-play / reinforcement-learning
+dependency map before any implementation.` This next task remains docs-only
+dependency-map definition and does not approve P8-P12 entry, P8
+implementation,
 implementation prompts, broader P7 implementation, source approval, source
 ingestion, broad parser / reader / ingestion, actual feature extraction,
 actual label generation, supervised dataset construction, split creation,

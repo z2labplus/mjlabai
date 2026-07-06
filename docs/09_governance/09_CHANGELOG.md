@@ -1,5 +1,41 @@
 # 09_CHANGELOG
 
+## 2026-07-07 - v3.36
+
+- Reviewed P8 risk and evidence taxonomy before any implementation.
+- Added:
+  - `docs/12_technical_plan/12L_P8_RISK_AND_EVIDENCE_TAXONOMY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- Review decision:
+  - `A. Review can close.`
+- Reviewed:
+  - `12K` scope.
+  - Full P7 / P8 scope recap.
+  - P8 non-approval baseline.
+  - risk taxonomy R1-R20.
+  - evidence taxonomy E1-E25.
+  - evidence-grade vocabulary.
+  - current evidence classification.
+  - P8 workstream risk / evidence matrix.
+  - model-strength evidence boundary.
+  - Tenhou / stable-dan / LuckyJ / promotion boundary.
+  - source / real-data / platform boundary.
+  - self-play / RL boundary.
+  - stop conditions.
+  - candidate next directions.
+  - governance synchronization.
+- New `10_NEXT` first item:
+  `Define P8 self-play / reinforcement-learning dependency map before any implementation.`
+- This is P8 risk/evidence taxonomy review evidence only.
+- No P8 entry approval, P8 implementation approval, P8 implementation prompt,
+  P9-P12 entry approval, production code, tests, fixtures, data files, source
+  approval, source ingestion, parser / reader / ingestion, feature extraction,
+  label generation, supervised dataset construction, training-data approval,
+  training-run approval, training, evaluation, model-output integration,
+  self-play, league, reinforcement-learning execution, real-data use,
+  model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
+  evidence, LuckyJ `10.68` comparison or candidate-promotion work was added or
+  approved.
+
 ## 2026-07-07 - v3.35
 
 - Defined P8 risk and evidence taxonomy before any implementation.

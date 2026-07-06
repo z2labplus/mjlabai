@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-07 — P8 risk/evidence taxonomy review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12L` review closure is mistaken for P8 entry approval. | Governance / Stage Control | High | Medium | `12L`, `10_NEXT`, handoff, evidence log and decision record state that this is taxonomy-review evidence only and selects a docs-only dependency-map task next. | Open |
+| The next self-play / RL dependency-map task is mistaken for self-play or RL execution approval. | Governance / Execution | High | Medium | New `10_NEXT` first item is docs-only dependency-map definition and forbids self-play execution, RL execution, training, evaluation, league and implementation. | Open |
+| Dependency mapping drifts into implementation prompt generation. | Governance / Execution | High | Medium | `10_NEXT` forbids implementation prompts, approval decisions, code, tests, fixtures, data and P8-P12 implementation work. | Open |
+| Taxonomy review evidence is overclaimed as model-strength, Tenhou, stable-dan, LuckyJ or promotion evidence. | Evidence / Governance | High | Medium | Evidence log classifies `12L` as P8 risk/evidence taxonomy review evidence only. | Open |
+| P9-P12 are treated as implicitly approved after taxonomy review closure. | Governance / Stage Control | High | Medium | `12L` and `10_NEXT` keep P9-P12 unapproved and limit the next task to P8 dependency-map definition. | Open |
+| Source approval or real-data permission is assumed for future self-play/RL dependency mapping. | Governance / Data | High | Medium | `12L` and `10_NEXT` state that source approval, source ingestion, real Tenhou, real haifu, external logs, platform data and account material remain unapproved. | Open |
+
 ## 2026-07-07 — P8 risk/evidence taxonomy definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

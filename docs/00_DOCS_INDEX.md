@@ -42,6 +42,7 @@ docs/12_technical_plan/12H_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLAN
 docs/12_technical_plan/12I_P8_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_AFTER_P8_P12_TRANSITION_SCOPE_REVIEW.md
 docs/12_technical_plan/12J_P8_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_REVIEW.md
 docs/12_technical_plan/12K_P8_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12L_P8_RISK_AND_EVIDENCE_TAXONOMY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -151,6 +152,20 @@ implementation approval, a P8 implementation prompt, self-play approval,
 reinforcement-learning execution, training approval, evaluation approval,
 league approval, real-data approval, P9-P12 entry approval or model-strength
 evidence.
+
+`docs/12_technical_plan/12L_P8_RISK_AND_EVIDENCE_TAXONOMY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+reviews `12K`, confirms the scope, Full P7 / P8 recap, non-approval baseline,
+risk taxonomy R1-R20, evidence taxonomy E1-E25, evidence-grade vocabulary,
+current evidence classification, P8 workstream risk/evidence matrix,
+model-strength / Tenhou / stable-dan / LuckyJ / promotion boundaries, source /
+real-data / platform boundaries, self-play / RL boundaries, stop conditions,
+candidate next directions and governance synchronization, and records
+`A. Review can close.` It selects `Define P8 self-play / reinforcement-learning
+dependency map before any implementation` as the next docs-only task. It is
+taxonomy-review evidence only, not P8 entry approval, implementation approval,
+a P8 implementation prompt, self-play approval, reinforcement-learning
+execution, training approval, evaluation approval, league approval, real-data
+approval, P9-P12 entry approval or model-strength evidence.
 
 ## Supervised-policy files
 

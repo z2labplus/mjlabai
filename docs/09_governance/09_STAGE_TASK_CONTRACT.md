@@ -2,7 +2,8 @@
 
 ## Current stage
 
-P8 risk and evidence taxonomy review before any implementation.
+P8 self-play / reinforcement-learning dependency map definition before any
+implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -19,12 +20,14 @@ families, E1-E25 evidence families, evidence-grade vocabulary, current
 evidence classification, P8 workstream risk/evidence matrix, source /
 real-data / platform boundaries, self-play / RL boundaries, model-strength /
 Tenhou / stable-dan / LuckyJ / promotion boundaries, stop conditions and
-candidate next directions. The current first task is `Review P8 risk and
-evidence taxonomy before any implementation.` Production code, tests,
-fixtures, data files, source approval, source ingestion, broad parser /
-reader / ingestion, feature extraction, label generation, dataset
-construction, training, evaluation, model-output integration, self-play,
-reinforcement-learning execution, league and P8-P12 remain unapproved.
+candidate next directions. `12L` reviews that taxonomy and records
+`A. Review can close.` The current first task is `Define P8 self-play /
+reinforcement-learning dependency map before any implementation.` Production
+code, tests, fixtures, data files, source approval, source ingestion, broad
+parser / reader / ingestion, feature extraction, label generation, dataset
+construction, training, evaluation, model-output integration, self-play
+execution, reinforcement-learning execution, league and P8-P12 remain
+unapproved.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -425,4 +428,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review P8 risk and evidence taxonomy before any implementation.
+Define P8 self-play / reinforcement-learning dependency map before any implementation.
