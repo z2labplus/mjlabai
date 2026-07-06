@@ -1,5 +1,42 @@
 # 09_CHANGELOG
 
+## 2026-07-06 - v3.26
+
+- Finalized P7 full-scope handoff and evidence index after closure criteria
+  review.
+- Added:
+  - `docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+- Indexed:
+  - `03AW` / `03AX` full-scope expansion plan and review.
+  - `03BF` / `03BG` / `03BH` closure criteria chain.
+  - `03BA`-`03BE` parser-reader smoke extension proposal / approval /
+    review / acceptance chain.
+  - accepted current-scope implementation artifacts.
+  - P5 and P6 closure context.
+  - governance artifacts.
+- Recorded:
+  - accepted current-scope evidence.
+  - full P7 remaining required, deferred, blocked and later-stage scope.
+  - risk / evidence consistency notes.
+  - validation results.
+  - governance synchronization.
+  - finalization decision.
+- New `10_NEXT` first item:
+  `Review P7 full-scope handoff and evidence index after closure criteria review.`
+- This is P7 full-scope handoff and evidence-index finalization evidence only.
+- No full P7 closure, final full P7 closure review, production code, tests,
+  fixtures, data files, implementation logic, source approval, source
+  ingestion, broad parser / reader / ingestion, CLI, actual feature
+  extraction, actual label generation, supervised dataset construction, split
+  creation, leakage-test implementation, training-data approval,
+  training-run approval, training, model architecture / trainer
+  implementation, checkpoint / weights, evaluation implementation, metric
+  implementation, evaluation runner, benchmark harness, model-output
+  integration, model-strength evidence, Tenhou ranked evidence, stable-dan
+  ranked-game evidence, LuckyJ `10.68` comparison, candidate promotion, real
+  Tenhou, real haifu, external logs, platform data, self-play, league or
+  P8-P12 work was added or approved.
+
 ## 2026-07-06 - v3.25
 
 - Reviewed full P7 closure criteria after parser-reader smoke extension

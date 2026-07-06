@@ -14,6 +14,67 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-06 — DR-0113 — Finalize P7 Full-Scope Handoff and Evidence Index
+
+Decision:
+
+```text
+P7 full-scope handoff and evidence index is finalized after closure criteria review.
+```
+
+Context:
+
+- `03BG` defined full P7 closure criteria after parser-reader smoke extension
+  current-scope acceptance.
+- `03BH` reviewed those criteria and recorded `Review can close`.
+- Current accepted P7 evidence remains exact synthetic/local smoke plus
+  docs/governance readiness evidence only.
+- Full P7 remains open.
+- Source approval, source ingestion, broad parser / reader / ingestion,
+  actual feature extraction, actual label generation, supervised dataset
+  construction, training, evaluation, model-output integration, real data,
+  self-play, league and P8-P12 remain unapproved.
+
+Rationale:
+
+- Full P7 closure criteria have now been defined and reviewed.
+- The accepted current-scope evidence chain and remaining full-P7 gaps need a
+  single handoff / evidence-index artifact before a later review gate can
+  inspect them.
+- The evidence index must preserve conservative evidence grades and prevent
+  synthetic/local smoke artifacts from being overclaimed as full supervised
+  learning readiness.
+
+Consequences:
+
+- Added:
+  - `docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review P7 full-scope handoff and evidence index after closure criteria review.`
+- This decision does not close full P7, run final full P7 closure review or
+  approve broader P7 implementation, source approval, source ingestion, broad
+  parser / reader / ingestion, feature extraction, label generation, dataset
+  construction, training, evaluation, model-output integration,
+  model-strength evidence, Tenhou evidence, stable-dan evidence, LuckyJ
+  `10.68` comparison, candidate promotion, real-data use, self-play, league
+  or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+- `docs/03_supervised_policy/03BH_FULL_P7_CLOSURE_CRITERIA_REVIEW_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/03_supervised_policy/03BE_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Handoff and evidence index finalized; full P7 remains open. Review of this
+finalization is next.
+
 ## 2026-07-06 — DR-0112 — Review Full P7 Closure Criteria
 
 Decision:

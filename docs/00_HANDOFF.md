@@ -27,23 +27,23 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P7 full-scope handoff and evidence-index finalization
-after closure criteria review:
-`03BG` defined full P7 closure criteria after parser-reader smoke extension
-current-scope acceptance. `03BH` reviewed those criteria, checked accepted
-current-scope inventory, full P7 open scope, current-scope vs full-scope
-separation, why full P7 cannot close now, P8-P12 non-entry, closure
-vocabulary, workstream matrix, C1-C24, exit readiness checklist,
-remaining/deferred/blocked/later-stage items, evidence requirements,
-non-closure evidence and governance synchronization requirements, and recorded
-`Review can close`. This does not close full P7 and does not approve broader
-P7 implementation, source approval, source ingestion, broad parser / reader /
-ingestion, actual feature extraction, actual label generation, supervised
-dataset construction, split creation, leakage-test implementation,
+Current active stage is P7 full-scope handoff and evidence-index review after
+closure criteria review:
+`03BI` finalized the P7 full-scope handoff and evidence index after `03BH`
+reviewed the full P7 closure criteria and recorded `Review can close`. It
+indexes the closure criteria chain, accepted parser-reader smoke extension
+chain, accepted current-scope implementation artifacts, P5/P6 closure context
+and governance docs. It records accepted current-scope evidence, full P7
+remaining required/deferred/blocked/later-stage scope, risk/evidence
+consistency notes, validation results, governance synchronization and
+finalization decision. This does not close full P7 and does not approve
+broader P7 implementation, source approval, source ingestion, broad parser /
+reader / ingestion, actual feature extraction, actual label generation,
+supervised dataset construction, split creation, leakage-test implementation,
 training-data approval, training-run approval, training, model architecture /
 trainer implementation, evaluation implementation, model-output integration,
 model-strength evidence, real data, self-play, league or P8-P12. The next task
-is `Finalize P7 full-scope handoff and evidence index after closure criteria
+is `Review P7 full-scope handoff and evidence index after closure criteria
 review`.
 
 P0 / P1 / P2 are basically established.
@@ -690,20 +690,21 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Finalize P7 full-scope handoff and evidence index after closure criteria
+Review P7 full-scope handoff and evidence index after closure criteria
 review.
-`03BH` reviewed the `03BG` full P7 closure criteria and recorded
-`Review can close`. The next task must finalize the handoff and evidence index
-only. It must not close full P7, add fixtures or data files, modify production
-code or tests, or approve / perform source approval, source ingestion, broad
-parser / reader / ingestion, actual feature extraction, actual label
-generation, supervised dataset construction, split creation, leakage-test
-implementation, training data, training-run approval, training, model
-architecture or trainer implementation, evaluation implementation, metric
-implementation, evaluation runner, benchmark harness, real Tenhou, real
-haifu, external logs, platform data, model-output integration, CLI, broad file
-ingestion, self-play, league, P8-P12 work, Tenhou evidence, stable-dan
-evidence, LuckyJ `10.68` comparison or candidate-promotion claims.
+`03BI` finalized the full-scope handoff and evidence index after the `03BH`
+closure-criteria review. The next task must review that finalization only. It
+must not close full P7, run final full P7 closure review, add fixtures or data
+files, modify production code or tests, or approve / perform source approval,
+source ingestion, broad parser / reader / ingestion, actual feature
+extraction, actual label generation, supervised dataset construction, split
+creation, leakage-test implementation, training data, training-run approval,
+training, model architecture or trainer implementation, evaluation
+implementation, metric implementation, evaluation runner, benchmark harness,
+real Tenhou, real haifu, external logs, platform data, model-output
+integration, CLI, broad file ingestion, self-play, league, P8-P12 work, Tenhou
+evidence, stable-dan evidence, LuckyJ `10.68` comparison or
+candidate-promotion claims.
 ```
 
 Latest Akochan F1 audit summary:

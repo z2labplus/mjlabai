@@ -28,24 +28,24 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 full-scope handoff and evidence-index finalization after closure criteria
+P7 full-scope handoff and evidence-index review after closure criteria
 review.
-`03BG` defines full P7 closure criteria after `03BE` / `03BF`. `03BH`
-reviews those criteria and records `Review can close` after checking accepted
-current-scope inventory, full P7 open scope, current-scope vs full-scope
-separation, why full P7 cannot close now, P8-P12 non-entry, closure
-vocabulary, workstream criteria, C1-C24, exit readiness,
-remaining/deferred/blocked/later-stage items, evidence requirements,
-non-closure evidence and governance synchronization requirements. This does
-not close full P7 and does not approve broader P7 implementation, source
-approval, source ingestion, broad parser / reader / ingestion, actual feature
-extraction, actual label generation, supervised dataset construction, split
-creation, leakage-test implementation, training data, training, model
-architecture / trainer implementation, evaluation implementation, metric
-implementation, evaluation runner, benchmark harness, model-output
-integration, real data, self-play, league or P8-P12. The next task is
-`Finalize P7 full-scope handoff and evidence index after closure criteria
-review`.
+`03BI` finalizes the P7 full-scope handoff and evidence index after `03BH`
+reviewed the full P7 closure criteria and recorded `Review can close`. It
+indexes the closure criteria chain, accepted parser-reader smoke extension
+chain, accepted current-scope implementation artifacts, P5/P6 closure context
+and governance docs. It records accepted current-scope evidence, full P7
+remaining required/deferred/blocked/later-stage scope, risk/evidence
+consistency notes, validation results, governance synchronization and
+finalization decision. This does not close full P7 and does not approve
+broader P7 implementation, source approval, source ingestion, broad parser /
+reader / ingestion, actual feature extraction, actual label generation,
+supervised dataset construction, split creation, leakage-test implementation,
+training data, training, model architecture / trainer implementation,
+evaluation implementation, metric implementation, evaluation runner,
+benchmark harness, model-output integration, real data, self-play, league or
+P8-P12. The next task is `Review P7 full-scope handoff and evidence index
+after closure criteria review`.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -663,7 +663,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Finalize P7 full-scope handoff and evidence index after closure criteria
+Review P7 full-scope handoff and evidence index after closure criteria
 review.
 ```
 
@@ -684,6 +684,15 @@ full P7 and does not approve broader P7 implementation, source approval,
 source ingestion, broad parser / reader / ingestion, feature extraction,
 label generation, dataset construction, training, evaluation, model-output
 integration, real data, self-play, league or P8-P12.
+
+`docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+finalizes the P7 full-scope handoff and evidence index after `03BH`. It
+selects `Review P7 full-scope handoff and evidence index after closure
+criteria review` as the next docs-only review gate. It does not close full P7,
+run final full P7 closure review, approve broader P7 implementation, source
+approval, source ingestion, broad parser / reader / ingestion, feature
+extraction, label generation, dataset construction, training, evaluation,
+model-output integration, real data, self-play, league or P8-P12.
 
 `docs/03_supervised_policy/03BF_P7_NEXT_FULL_SCOPE_PLANNING_STEP_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
 defines the previous P7 full-scope planning step after `03BE` and selected

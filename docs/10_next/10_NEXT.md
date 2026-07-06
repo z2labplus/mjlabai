@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Finalize P7 full-scope handoff and evidence index after closure criteria review.
+- [ ] Review P7 full-scope handoff and evidence index after closure criteria review.
 
 Current execution charter:
 
@@ -16,12 +16,12 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only handoff and evidence-index finalization task after
-  `03BH` reviewed the full P7 closure criteria and recorded `Review can
-  close`.
-- Finalize the full-P7 handoff and evidence index after closure-criteria
-  review.
+- This is a docs-only review gate after `03BI` finalized the P7 full-scope
+  handoff and evidence index.
+- Review only the P7 full-scope handoff and evidence index after closure
+  criteria review.
 - Do not close full P7.
+- Do not run final full P7 closure review.
 - Do not add implementation.
 - Do not add or modify code.
 - Do not add or modify tests.
@@ -45,6 +45,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-07-06 Finalized P7 full-scope handoff and evidence index after closure criteria review: added `docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`, indexed the closure criteria chain (`03BF`, `03BG`, `03BH`), accepted parser-reader smoke extension chain (`03BA`-`03BE`), full-scope expansion plan/review (`03AW`, `03AX`), accepted current-scope implementation artifacts, P5/P6 closure context and governance docs. The finalization records accepted current-scope evidence, full P7 remaining required/deferred/blocked/later-stage scope, risk/evidence consistency notes, validation results, governance synchronization and finalization decision. This is P7 full-scope handoff and evidence-index finalization evidence only. It does not close full P7, run final full P7 closure review, approve broader P7 implementation, source approval, source ingestion, broad parser / reader / ingestion, actual feature extraction, actual label generation, supervised dataset construction, split creation, leakage-test implementation, training-data approval, training-run approval, training, model architecture / trainer implementation, checkpoint / weights, evaluation implementation, metric implementation, evaluation runner, benchmark harness, model-output integration, model-strength evidence, real data, self-play, league or P8-P12. The next task is `Review P7 full-scope handoff and evidence index after closure criteria review.`
 - [x] 2026-07-06 Reviewed full P7 closure criteria after parser-reader smoke extension current-scope acceptance: added `docs/03_supervised_policy/03BH_FULL_P7_CLOSURE_CRITERIA_REVIEW_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`, reviewed `03BG` scope, accepted current-scope inventory, full P7 open scope, current-scope vs full-scope separation, why full P7 cannot close now, P8-P12 non-entry, closure vocabulary, workstream matrix, C1-C24, exit readiness checklist, remaining/deferred/blocked/later-stage items, evidence requirements, non-closure evidence and governance synchronization requirements, and recorded `Review can close`. This is full P7 closure criteria review evidence only. It does not close full P7, approve broader P7 implementation, source approval, source ingestion, broad parser / reader / ingestion, actual feature extraction, actual label generation, supervised dataset construction, split creation, leakage-test implementation, training-data approval, training-run approval, training, model architecture / trainer implementation, checkpoint / weights, evaluation implementation, metric implementation, evaluation runner, benchmark harness, model-output integration, model-strength evidence, real data, self-play, league or P8-P12. The next task is `Finalize P7 full-scope handoff and evidence index after closure criteria review.`
 - [x] 2026-07-06 Defined full P7 closure criteria after parser-reader smoke extension current-scope acceptance: added `docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`, defined closure vocabulary, current accepted P7 current scope, full P7 open scope, why current-scope smoke artifacts do not close full P7, workstream closure criteria matrix, required closure criteria, exit readiness checklist, required remaining items, deferred items, blocked items, later-stage / out-of-scope items, evidence requirements, non-closure evidence and P8-P12 non-entry conditions. This is full P7 closure criteria definition evidence only. It does not close full P7, approve broader P7 implementation, source approval, source ingestion, broad parser / reader / ingestion, actual feature extraction, actual label generation, supervised dataset construction, split creation, leakage-test implementation, training-data approval, training-run approval, training, model architecture / trainer implementation, checkpoint / weights, evaluation implementation, metric implementation, evaluation runner, benchmark harness, model-output integration, model-strength evidence, real data, self-play, league or P8-P12. The next task is `Review full P7 closure criteria after parser-reader smoke extension current-scope acceptance.`
 - [x] 2026-07-06 Defined next P7 full-scope planning step after parser-reader smoke extension current-scope acceptance: added `docs/03_supervised_policy/03BF_P7_NEXT_FULL_SCOPE_PLANNING_STEP_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`, reviewed current accepted P7 current-scope items, full P7 open scope, candidate next directions and selected `Define full P7 closure criteria after parser-reader smoke extension current-scope acceptance` as the next docs-only task. This is P7 next full-scope planning step definition evidence only. It does not close full P7, approve broader P7 implementation, source approval, source ingestion, broad parser / reader / ingestion, actual feature extraction, actual label generation, supervised dataset construction, split creation, leakage-test implementation, training-data approval, training-run approval, training, model architecture / trainer implementation, evaluation implementation, model-output integration, model-strength evidence, real data, self-play, league or P8-P12. The next task is `Define full P7 closure criteria after parser-reader smoke extension current-scope acceptance.`

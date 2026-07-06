@@ -2,18 +2,18 @@
 
 ## Current stage
 
-P7 full-scope handoff and evidence-index finalization after closure criteria
-review.
-`03BG` defines full P7 closure criteria after `03BE` / `03BF`; `03BH`
-reviews those criteria and records `Review can close`. The review checked
-accepted exact synthetic/local P7 current-scope artifacts, full P7 open scope,
-workstream closure criteria, required/deferred/blocked/later-stage items,
-evidence requirements, non-closure evidence and P8-P12 non-entry conditions.
+P7 full-scope handoff and evidence-index review after closure criteria review.
+`03BI` finalizes the P7 full-scope handoff and evidence index after `03BH`
+reviewed the full P7 closure criteria and recorded `Review can close`. It
+indexes accepted exact synthetic/local P7 current-scope artifacts, the closure
+criteria chain, full P7 open scope, required/deferred/blocked/later-stage
+items, evidence requirements, non-closure evidence, P8-P12 non-entry
+conditions and governance synchronization.
 Production code, tests, fixtures, data files, source approval, source
 ingestion, broad parser / reader / ingestion, feature extraction, label
 generation, dataset construction, training, evaluation, model-output
 integration, self-play, league and P8-P12 remain unapproved. The current first
-task is `Finalize P7 full-scope handoff and evidence index after closure
+task is `Review P7 full-scope handoff and evidence index after closure
 criteria review`.
 
 Earlier context:
@@ -290,6 +290,7 @@ P7 parser-reader smoke extension current-scope acceptance decision = complete in
 P7 next full-scope planning step definition = complete in `03BF`; selected full P7 closure criteria definition as next
 Full P7 closure criteria definition = complete in `03BG`; selected closure criteria review as next
 Full P7 closure criteria review = complete in `03BH`; review can close and selected handoff/evidence-index finalization as next
+P7 full-scope handoff/evidence-index finalization = complete in `03BI`; selected handoff/evidence-index review as next
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
@@ -406,5 +407,5 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Finalize P7 full-scope handoff and evidence index after closure criteria
+Review P7 full-scope handoff and evidence index after closure criteria
 review.

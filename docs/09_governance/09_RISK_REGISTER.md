@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-06 — P7 full-scope handoff and evidence-index finalization risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Handoff/evidence-index finalization is mistaken for full P7 closure. | Governance / Scope | High | Medium | `03BI`, `10_NEXT` and stage contract state this is finalization only and the next task is a review gate, not full P7 closure. | Open |
+| The evidence index is mistaken for approval of source, ingestion, feature/label, dataset, training or evaluation workstreams. | Governance / Scope | High | Medium | `03BI` marks those workstreams not approved, blocked or later-stage and records no implementation approval. | Open |
+| Accepted current-scope smoke artifacts are over-read as full supervised-learning readiness. | Governance / Evidence | High | Medium | `03BI` separates accepted current-scope evidence from full P7 remaining scope and explicit non-evidence. | Open |
+| The next review gate drifts into final full P7 closure review or implementation approval. | Governance / Execution | High | Medium | New `10_NEXT` first item is docs-only review of `03BI` and forbids final closure review, code, tests, fixtures and data. | Open |
+| P8-P12 entry is treated as available after handoff finalization. | Governance / Stage Control | High | Medium | `03BI` keeps P8-P12 blocked until full P7 closure and a separate post-full-P7 transition review. | Open |
+| Finalization evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log classifies this as P7 full-scope handoff and evidence-index finalization evidence only. | Open |
+
 ## 2026-07-06 — Full P7 closure criteria review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

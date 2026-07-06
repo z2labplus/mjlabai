@@ -139,6 +139,7 @@ docs/03_supervised_policy/03BE_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EX
 docs/03_supervised_policy/03BF_P7_NEXT_FULL_SCOPE_PLANNING_STEP_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md
 docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md
 docs/03_supervised_policy/03BH_FULL_P7_CLOSURE_CRITERIA_REVIEW_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md
+docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md
 src/mjlabai/supervised/synthetic_parser_reader_smoke.py
 tests/supervised/test_synthetic_parser_reader_smoke.py
 src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py
@@ -841,6 +842,20 @@ broader P7 implementation, source approval, source ingestion, broad parser /
 reader / ingestion, feature extraction, label generation, dataset
 construction, training, evaluation, model-output integration, real data,
 self-play, league or P8-P12.
+
+`docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+finalizes the P7 full-scope handoff and evidence index after the `03BH`
+closure-criteria review. It indexes `03AW` / `03AX`, `03BF` / `03BG` /
+`03BH`, the `03BA`-`03BE` parser-reader smoke extension chain, accepted
+current-scope implementation artifacts, P5/P6 closure context and governance
+docs. It records accepted current-scope evidence, full P7 remaining
+required/deferred/blocked/later-stage scope, risk/evidence consistency notes,
+validation results and the next review gate. It is handoff/evidence-index
+finalization evidence only. It does not close full P7, run final full P7
+closure review or approve broader P7 implementation, source approval, source
+ingestion, broad parser / reader / ingestion, feature extraction, label
+generation, dataset construction, training, evaluation, model-output
+integration, real data, self-play, league or P8-P12.
 
 ## Data-system files
 
