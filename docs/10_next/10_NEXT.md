@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Define P8 risk and evidence taxonomy before any implementation.
+- [ ] Review P8 risk and evidence taxonomy before any implementation.
 
 Current execution charter:
 
@@ -16,11 +16,12 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only P8 risk / evidence taxonomy definition task before any
+- This is a docs-only P8 risk / evidence taxonomy review gate before any
   implementation.
 - Do not approve P8 entry.
 - Do not approve P8 implementation.
 - Do not define or generate a P8 implementation prompt.
+- Do not prepare an implementation approval decision.
 - Do not implement any P8-P12 task.
 - Keep P9-P12 unapproved.
 - Do not add implementation.
@@ -45,6 +46,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-07-07 Defined P8 risk and evidence taxonomy before any implementation: added `docs/12_technical_plan/12K_P8_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_ANY_IMPLEMENTATION.md`, defined risk families R1-R20, evidence families E1-E25, evidence-grade vocabulary, current evidence classification, a P8 workstream risk/evidence matrix, model-strength / Tenhou / stable-dan / LuckyJ / promotion boundaries, source / real-data / platform boundaries, self-play / RL boundaries, stop conditions and candidate next directions. Planning decision: `P8 risk and evidence taxonomy is defined before any implementation.` This is P8 risk/evidence taxonomy definition evidence only. It does not approve P8 entry, P8 implementation, a P8 implementation prompt, P9-P12 entry, source approval, source ingestion, parser / reader / ingestion, feature extraction, label generation, dataset construction, training-data approval, training-run approval, training, evaluation, model-output integration, self-play, league, reinforcement-learning execution, real-data use, model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate promotion. The next task is `Review P8 risk and evidence taxonomy before any implementation.`
 - [x] 2026-07-07 Reviewed P8 scope, entry criteria and first planning task after P8-P12 transition-scope review: added `docs/12_technical_plan/12J_P8_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_REVIEW.md`, reviewed `12I`, full P7 / P8-P12 transition recap, P8 stage interpretation, P8 non-approval baseline, P8 scope boundary, P8-E1 through P8-E15 entry criteria, non-entry conditions, forbidden current scope, workstream inventory, risk controls, evidence requirements, candidate next directions, P9-P12 non-approval and governance synchronization. Decision: `A. Review can close.` This is P8 scope / entry criteria / first planning task review evidence only. It does not approve P8 entry, P8 implementation, a P8 implementation prompt, P9-P12 entry, source approval, source ingestion, parser / reader / ingestion, feature extraction, label generation, dataset construction, training-data approval, training-run approval, training, evaluation, model-output integration, real data, self-play, league, reinforcement-learning execution, model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate promotion. The next task is `Define P8 risk and evidence taxonomy before any implementation.`
 - [x] 2026-07-07 Defined P8 scope, entry criteria and first planning task after P8-P12 transition-scope review: added `docs/12_technical_plan/12I_P8_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_AFTER_P8_P12_TRANSITION_SCOPE_REVIEW.md`, recorded the full P7 / P8-P12 transition recap, P8 stage interpretation, P8 non-approval baseline, docs-only P8 scope boundary, P8-E1 through P8-E15 entry criteria, non-entry conditions, forbidden current scope, P8 workstream inventory, risk controls, evidence requirements, candidate next directions and planning decision. This is P8 scope, entry criteria and first planning task definition evidence only. It does not approve P8 entry, P8 implementation, a P8 implementation prompt, P9-P12 entry, source approval, source ingestion, parser / reader / ingestion, feature extraction, label generation, dataset construction, training, evaluation, model-output integration, model-strength evidence, real data, self-play, league, reinforcement-learning execution, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68` comparison or candidate promotion. The next task is `Review P8 scope, entry criteria and first planning task after P8-P12 transition-scope review.`
 - [x] 2026-07-07 Reviewed P8-P12 transition scope, entry criteria and first planning task after post-full-P7 transition review: added `docs/12_technical_plan/12H_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_REVIEW.md`, reviewed `12G` scope, full P7 closure recap, P8-P12 non-approval baseline, transition scope, candidate workstream inventory, E1-E12 entry criteria, non-entry conditions, forbidden current scope, risk controls, evidence requirements, candidate next directions and governance synchronization. Decision: `A. Review can close.` This is P8-P12 transition scope / entry criteria / first planning task review evidence only. It does not approve P8-P12 entry, define a P8-P12 implementation task, generate an implementation prompt, approve P8 implementation, add code, add tests, add fixtures, add data files, approve source approval, source ingestion, parser / reader / ingestion, feature extraction, label generation, dataset construction, training-data approval, training-run approval, training, evaluation, model-output integration, model-strength evidence, real data, self-play or league. The next task is `Define P8 scope, entry criteria and first planning task after P8-P12 transition-scope review.`

@@ -2,7 +2,7 @@
 
 ## Current stage
 
-P8 risk and evidence taxonomy definition before any implementation.
+P8 risk and evidence taxonomy review before any implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -14,11 +14,17 @@ docs-only scope boundary, P8-E1 through P8-E15 entry criteria, non-entry
 conditions, workstream inventory, risk controls, evidence requirements and
 the next review gate. `12J` reviews `12I`, records `A. Review can close`, and
 selects `Define P8 risk and evidence taxonomy before any implementation` as
-the current first task. Production code, tests, fixtures, data files, source
-approval, source ingestion, broad parser / reader / ingestion, feature
-extraction, label generation, dataset construction, training, evaluation,
-model-output integration, self-play, reinforcement-learning execution, league
-and P8-P12 remain unapproved.
+the next first task. `12K` defines that taxonomy, including R1-R20 risk
+families, E1-E25 evidence families, evidence-grade vocabulary, current
+evidence classification, P8 workstream risk/evidence matrix, source /
+real-data / platform boundaries, self-play / RL boundaries, model-strength /
+Tenhou / stable-dan / LuckyJ / promotion boundaries, stop conditions and
+candidate next directions. The current first task is `Review P8 risk and
+evidence taxonomy before any implementation.` Production code, tests,
+fixtures, data files, source approval, source ingestion, broad parser /
+reader / ingestion, feature extraction, label generation, dataset
+construction, training, evaluation, model-output integration, self-play,
+reinforcement-learning execution, league and P8-P12 remain unapproved.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -419,4 +425,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Define P8 risk and evidence taxonomy before any implementation.
+Review P8 risk and evidence taxonomy before any implementation.

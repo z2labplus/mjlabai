@@ -50,6 +50,23 @@ implementation prompt, self-play, reinforcement-learning execution, training,
 evaluation, league, source approval, source ingestion, real data,
 model-output integration, model-strength evidence or P9-P12 entry.
 
+## 2026-07-07 P8 Risk/Evidence Taxonomy Milestone Update
+
+`12K` now defines the P8 risk and evidence taxonomy before any
+implementation. It records R1-R20 risk families, E1-E25 evidence families,
+evidence-grade vocabulary, current evidence classification, a P8 workstream
+risk/evidence matrix, model-strength / Tenhou / stable-dan / LuckyJ /
+promotion boundaries, source / real-data / platform boundaries, self-play / RL
+boundaries, stop conditions and candidate next directions.
+
+The next docs-only task is `Review P8 risk and evidence taxonomy before any
+implementation`.
+
+This milestone update does not approve P8 entry, P8 implementation, an
+implementation prompt, self-play, reinforcement-learning execution, training,
+evaluation, league, source approval, source ingestion, real data,
+model-output integration, model-strength evidence or P9-P12 entry.
+
 ## Current position
 
 ```text

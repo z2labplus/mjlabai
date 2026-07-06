@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-07 — P8 risk/evidence taxonomy definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12K` taxonomy definition is mistaken for P8 entry approval. | Governance / Stage Control | High | Medium | `12K`, `10_NEXT`, handoff, evidence log and decision record state that this is taxonomy-definition evidence only and selects a docs-only review gate next. | Open |
+| The taxonomy review gate is mistaken for P8 implementation approval. | Governance / Execution | High | Medium | New `10_NEXT` first item is review-only and forbids P8 entry, implementation prompts, production code, tests, fixtures, data files, training, evaluation, self-play, league, source approval, real data and model-output integration. | Open |
+| Risk/evidence vocabulary is overread as approval for self-play, RL, training, evaluation or model-output work. | Governance / Stage Control | High | Medium | `12K` classifies those workstreams as future-only / unapproved and requires later dependency maps, reviews and approval decisions. | Open |
+| Future evidence families are overclaimed as current evidence. | Evidence / Governance | High | Medium | `12K` separates allowed-current E1-E3/E25 classes from future-only model-strength, Tenhou, stable-dan, LuckyJ and promotion evidence. | Open |
+| P9-P12 are treated as implicitly approved after P8 taxonomy definition. | Governance / Stage Control | High | Medium | `12K` and `10_NEXT` keep P9-P12 unapproved and reject P9-P12 scope work as a current next direction. | Open |
+| Governance drift changes `10_NEXT` to an implementation task without approval. | Governance / Execution | High | Medium | `12K` stop conditions require stopping if `10_NEXT` becomes implementation without a separate approval chain. | Open |
+
 ## 2026-07-07 — P8 scope review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
