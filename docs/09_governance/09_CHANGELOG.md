@@ -1,5 +1,42 @@
 # 09_CHANGELOG
 
+## 2026-07-07 - v3.34
+
+- Reviewed P8 scope, entry criteria and first planning task after the P8-P12
+  transition-scope review.
+- Added:
+  - `docs/12_technical_plan/12J_P8_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_REVIEW.md`
+- Review decision:
+  - `A. Review can close.`
+- Reviewed:
+  - `12I` scope.
+  - full P7 / P8-P12 transition recap.
+  - P8 stage interpretation.
+  - P8 non-approval baseline.
+  - P8 scope boundary.
+  - P8-E1 through P8-E15 entry criteria.
+  - P8 non-entry conditions.
+  - forbidden current scope.
+  - P8 workstream inventory.
+  - P8 risk controls.
+  - future evidence requirements.
+  - candidate next directions.
+  - P9-P12 non-approval.
+  - governance synchronization.
+- New `10_NEXT` first item:
+  `Define P8 risk and evidence taxonomy before any implementation.`
+- This is P8 scope, entry criteria and first planning task review evidence
+  only.
+- No P8 entry approval, P8 implementation approval, P8 implementation prompt,
+  P9-P12 entry approval, production code, tests, fixtures, data files, source
+  approval, source ingestion, parser / reader / ingestion, feature extraction,
+  label generation, supervised dataset construction, training-data approval,
+  training-run approval, training, evaluation, model-output integration,
+  self-play, league, reinforcement-learning execution, real-data use,
+  model-strength evidence, Tenhou ranked evidence, stable-dan ranked-game
+  evidence, LuckyJ `10.68` comparison or candidate-promotion work was added or
+  approved.
+
 ## 2026-07-07 - v3.33
 
 - Defined P8 scope, entry criteria and first planning task after the P8-P12

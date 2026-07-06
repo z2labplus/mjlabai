@@ -40,6 +40,7 @@ docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md
 docs/12_technical_plan/12G_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK.md
 docs/12_technical_plan/12H_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_REVIEW.md
 docs/12_technical_plan/12I_P8_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_AFTER_P8_P12_TRANSITION_SCOPE_REVIEW.md
+docs/12_technical_plan/12J_P8_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_REVIEW.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -122,6 +123,19 @@ evidence only, not P8 entry approval, P8 implementation approval, a P8
 implementation prompt, self-play approval, reinforcement-learning execution,
 training approval, evaluation approval, league approval, real-data approval,
 P9-P12 entry approval or model-strength evidence.
+
+`docs/12_technical_plan/12J_P8_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_REVIEW.md`
+reviews the `12I` P8 scope, entry criteria and first planning task definition,
+confirms the full P7 / P8-P12 transition recap, P8 stage interpretation,
+P8 non-approval baseline, P8-E1 through P8-E15 criteria, non-entry conditions,
+forbidden current scope, workstream inventory, risk controls, evidence
+requirements and candidate next directions, and records `A. Review can close.`
+It selects `Define P8 risk and evidence taxonomy before any implementation`
+as the next docs-only task. It is review evidence only, not P8 entry approval,
+P8 implementation approval, an implementation prompt, self-play approval,
+reinforcement-learning execution, training approval, evaluation approval,
+league approval, real-data approval, P9-P12 entry approval or model-strength
+evidence.
 
 ## Supervised-policy files
 

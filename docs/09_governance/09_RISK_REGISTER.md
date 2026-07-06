@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-07 — P8 scope review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12J` review closure is mistaken for P8 entry approval. | Governance / Stage Control | High | Medium | `12J`, `10_NEXT`, handoff, evidence log and decision record state that this is review evidence only and selects a docs-only taxonomy task next. | Open |
+| The next risk / evidence taxonomy task is mistaken for implementation approval. | Governance / Execution | High | Medium | New `10_NEXT` first item is docs-only and forbids P8 entry, implementation prompts, production code, tests, fixtures, data files, training, evaluation, self-play, league, source approval, real data and model-output integration. | Open |
+| P8 review closure is overread as self-play or reinforcement-learning execution permission. | Governance / Stage Control | High | Medium | `12J` repeats that P8 is currently only a planning boundary and keeps self-play, RL execution, training and league unapproved. | Open |
+| Taxonomy planning drifts into training, evaluation, model-output integration, self-play or league. | Governance / Execution | High | Medium | The next task must define vocabulary and evidence controls only; any executable task requires a separate review and approval chain. | Open |
+| P9-P12 are treated as implicitly approved after P8 scope review closure. | Governance / Stage Control | High | Medium | `12J` and `10_NEXT` keep P9-P12 unapproved and forbid P9-P12 implementation work. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log classifies `12J` as P8 scope / entry criteria review evidence only. | Open |
+
 ## 2026-07-07 — P8 scope definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

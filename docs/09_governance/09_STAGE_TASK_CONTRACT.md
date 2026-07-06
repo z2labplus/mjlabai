@@ -2,8 +2,7 @@
 
 ## Current stage
 
-P8 scope / entry criteria / first planning task review after P8-P12
-transition-scope review.
+P8 risk and evidence taxonomy definition before any implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -13,12 +12,13 @@ planning task and selected a docs-only review gate as the next step. `12H`
 reviews `12G` and records `A. Review can close.` `12I` defines the P8
 docs-only scope boundary, P8-E1 through P8-E15 entry criteria, non-entry
 conditions, workstream inventory, risk controls, evidence requirements and
-the next review gate. Production code, tests, fixtures, data files, source
+the next review gate. `12J` reviews `12I`, records `A. Review can close`, and
+selects `Define P8 risk and evidence taxonomy before any implementation` as
+the current first task. Production code, tests, fixtures, data files, source
 approval, source ingestion, broad parser / reader / ingestion, feature
 extraction, label generation, dataset construction, training, evaluation,
 model-output integration, self-play, reinforcement-learning execution, league
-and P8-P12 remain unapproved. The current first task is `Review P8 scope,
-entry criteria and first planning task after P8-P12 transition-scope review`.
+and P8-P12 remain unapproved.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -300,12 +300,14 @@ Final full P7 closure review gate = complete in `03BL`; full P7 can close only f
 Post-full-P7 transition review = complete in `12F`; no blocker found for defining P8-P12 docs-only scope / entry criteria / first planning task
 P8-P12 transition scope, entry criteria and first planning task = defined in `12G`; selected docs-only review gate as next
 P8-P12 transition scope, entry criteria and first planning task review = complete in `12H`; review can close and selected P8 scope / entry criteria / first planning task definition as next
+P8 scope, entry criteria and first planning task = defined in `12I`; selected docs-only review gate as next
+P8 scope, entry criteria and first planning task review = complete in `12J`; review can close and selected risk / evidence taxonomy definition as next
 Full P7 = closed for documented supervised-learning scope only
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = define P8 scope, entry criteria and first planning task after P8-P12 transition-scope review
+Next = define P8 risk and evidence taxonomy before any implementation
 ```
 
 ## AI role
@@ -314,12 +316,11 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Define the docs-only P8 scope / entry criteria / first planning task after the
-P8-P12 transition-scope review while keeping P8 entry, P8 implementation,
-implementation prompts, source approval, source ingestion, real data, feature
-extraction, label generation, dataset construction, training, evaluation,
-self-play, league, P9-P12 and model-strength claims unapproved until separate
-later approvals exist.
+Define the docs-only P8 risk and evidence taxonomy before any implementation
+while keeping P8 entry, P8 implementation, implementation prompts, source
+approval, source ingestion, real data, feature extraction, label generation,
+dataset construction, training, evaluation, self-play, league, P9-P12 and
+model-strength claims unapproved until separate later approvals exist.
 
 This supports the north-star target by ensuring that any future supervised
 learning, RL, search, league or LuckyJ validation work starts only after the
@@ -418,4 +419,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review P8 scope, entry criteria and first planning task after P8-P12 transition-scope review.
+Define P8 risk and evidence taxonomy before any implementation.

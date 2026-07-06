@@ -39,6 +39,17 @@ self-play, reinforcement-learning execution, training, evaluation, league,
 source approval, source ingestion, real data, model-output integration,
 model-strength evidence or P9-P12 entry.
 
+## 2026-07-07 P8 Scope Review Milestone Update
+
+`12J` now reviews the `12I` P8 scope, entry criteria and first planning task
+definition and records `A. Review can close.` The next docs-only task is
+`Define P8 risk and evidence taxonomy before any implementation`.
+
+This milestone update does not approve P8 entry, P8 implementation, an
+implementation prompt, self-play, reinforcement-learning execution, training,
+evaluation, league, source approval, source ingestion, real data,
+model-output integration, model-strength evidence or P9-P12 entry.
+
 ## Current position
 
 ```text
