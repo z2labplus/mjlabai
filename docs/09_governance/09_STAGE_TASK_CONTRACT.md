@@ -2,18 +2,19 @@
 
 ## Current stage
 
-P7 final full P7 closure review gate.
-`03BK` reviews P7 full-scope risk, source-rights and evidence consistency
-after `03BJ` reviewed the full-scope handoff and evidence index. It records
-`No risk/source-rights/evidence consistency blocker found` after checking
-source-rights posture, risk register coverage, evidence-grade consistency,
-decision-record consistency, handoff / technical-plan alignment, `10_NEXT`
-alignment and final-closure-readiness preconditions.
+Post-full-P7 transition review before defining any P8-P12 task.
+`03BL` runs the final full P7 closure review gate and records `A. Full P7 can
+close` only for the documented P7 supervised-learning scope: accepted
+current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
+proposal / review / approval / acceptance chain, full-scope expansion
+plan/review, closure criteria definition/review, handoff/evidence index
+finalization/review, risk/source-rights/evidence consistency review,
+governance synchronization and validation evidence.
 Production code, tests, fixtures, data files, source approval, source
 ingestion, broad parser / reader / ingestion, feature extraction, label
 generation, dataset construction, training, evaluation, model-output
 integration, self-play, league and P8-P12 remain unapproved. The current first
-task is `Run final full P7 closure review gate`.
+task is `Run post-full-P7 transition review before defining any P8-P12 task`.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -291,12 +292,13 @@ Full P7 closure criteria definition = complete in `03BG`; selected closure crite
 Full P7 closure criteria review = complete in `03BH`; review can close and selected handoff/evidence-index finalization as next
 P7 full-scope handoff/evidence-index review = complete in `03BJ`; selected risk/source-rights/evidence consistency review as next
 P7 full-scope risk/source-rights/evidence consistency review = complete in `03BK`; no consistency blocker found; selected final full P7 closure review gate as next
-Full P7 = not closed
+Final full P7 closure review gate = complete in `03BL`; full P7 can close only for documented P7 supervised-learning scope
+Full P7 = closed for documented supervised-learning scope only
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = run final full P7 closure review gate
+Next = run post-full-P7 transition review before defining any P8-P12 task
 ```
 
 ## AI role
@@ -407,4 +409,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Run final full P7 closure review gate.
+Run post-full-P7 transition review before defining any P8-P12 task.

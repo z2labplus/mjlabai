@@ -142,6 +142,7 @@ docs/03_supervised_policy/03BH_FULL_P7_CLOSURE_CRITERIA_REVIEW_AFTER_PARSER_READ
 docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md
 docs/03_supervised_policy/03BJ_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_REVIEW_AFTER_CLOSURE_CRITERIA_REVIEW.md
 docs/03_supervised_policy/03BK_P7_FULL_SCOPE_RISK_SOURCE_RIGHTS_AND_EVIDENCE_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md
+docs/03_supervised_policy/03BL_FINAL_FULL_P7_CLOSURE_REVIEW.md
 src/mjlabai/supervised/synthetic_parser_reader_smoke.py
 tests/supervised/test_synthetic_parser_reader_smoke.py
 src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py
@@ -883,6 +884,21 @@ broader P7 implementation, source approval, source ingestion, broad parser /
 reader / ingestion, feature extraction, label generation, dataset
 construction, training, evaluation, model-output integration, real data,
 self-play or league.
+
+`docs/03_supervised_policy/03BL_FINAL_FULL_P7_CLOSURE_REVIEW.md`
+runs the final full P7 closure review gate and records `A. Full P7 can close`
+for the documented P7 supervised-learning scope only. The closure scope is
+limited to accepted current-scope synthetic/local smoke artifacts, docs-only
+readiness / boundary / proposal / review / approval / acceptance chain,
+full-scope expansion plan/review, closure criteria definition/review,
+handoff/evidence index finalization/review, risk/source-rights/evidence
+consistency review, governance synchronization and validation evidence. It is
+final full P7 closure review evidence only. It does not approve P8-P12, define
+a P8-P12 task, run post-full-P7 transition review, approve broader P7
+implementation, source approval, source ingestion, broad parser / reader /
+ingestion, feature extraction, label generation, dataset construction,
+training, evaluation, model-output integration, real data, self-play or
+league.
 
 ## Data-system files
 

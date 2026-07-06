@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-06 — Final full P7 closure review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Full P7 closure is mistaken for P8-P12 entry approval. | Governance / Stage Control | High | Medium | `03BL`, `10_NEXT` and stage contract require a separate post-full-P7 transition review before defining any P8-P12 scope or first task. | Open |
+| Full P7 closure is mistaken for source approval, real-data permission or source ingestion approval. | Governance / Data | High | Medium | `03BL` keeps source approval, source ingestion, real Tenhou, real haifu, external logs, platform data and account material unapproved. | Open |
+| Full P7 closure is mistaken for approval of feature extraction, label generation, dataset construction, training or evaluation. | Governance / Scope | High | Medium | `03BL` closure scope is limited to documented P7 supervised-learning scope and accepted synthetic/local smoke evidence; broader workstreams remain unapproved. | Open |
+| Final closure review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log classifies `03BL` as final full P7 closure review evidence only, not strength evidence. | Open |
+| Post-full-P7 transition review drifts into implementation or P8-P12 task execution. | Governance / Execution | High | Medium | New `10_NEXT` first item is docs-only transition review and forbids implementation, code, tests, fixtures, data files, training, evaluation, self-play and league. | Open |
+
 ## 2026-07-06 — P7 risk/source-rights/evidence consistency review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

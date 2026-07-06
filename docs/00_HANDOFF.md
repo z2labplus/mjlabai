@@ -27,22 +27,26 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P7 final full P7 closure review gate:
-`03BK` reviewed P7 full-scope risk, source-rights and evidence consistency
-after `03BJ` reviewed the full-scope handoff and evidence index. `03BK`
-confirmed source-rights posture, risk register coverage, evidence-grade
-consistency, decision-record consistency, handoff / technical-plan alignment,
-`10_NEXT` alignment and final-closure-readiness preconditions, and recorded
-`No risk/source-rights/evidence consistency blocker found.` Required
-validation commands passed for the current synthetic/local smoke scope. This
-does not close full P7 and does not approve P8-P12, broader P7 implementation, source
-approval, source ingestion, broad parser / reader / ingestion, actual feature
-extraction, actual label generation, supervised dataset construction, split
-creation, leakage-test implementation, training-data approval,
-training-run approval, training, model architecture / trainer implementation,
-evaluation implementation, model-output integration, model-strength evidence,
-real data, self-play or league. The next task is `Run final full P7 closure
-review gate`.
+Current active stage is post-full-P7 transition review before defining any
+P8-P12 task:
+`03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
+close.` Full P7 is closed only for the documented P7 supervised-learning scope:
+accepted current-scope synthetic/local supervised feature-label smoke,
+accepted current-scope synthetic/local parser-reader smoke, accepted
+current-scope synthetic/local parser-reader smoke extension, the exact
+test-only blocker fix, docs-only readiness / boundary / proposal / review /
+approval / acceptance chain, full-scope expansion plan and review, closure
+criteria definition and review, handoff / evidence index finalization and
+review, risk/source-rights/evidence consistency review, governance
+synchronization and validation evidence. This does not approve P8-P12,
+post-full-P7 transition execution beyond the next review gate, broader P7
+implementation, source approval, source ingestion, broad parser / reader /
+ingestion, actual feature extraction, actual label generation, supervised
+dataset construction, split creation, leakage-test implementation,
+training-data approval, training-run approval, training, model architecture /
+trainer implementation, evaluation implementation, model-output integration,
+model-strength evidence, real data, self-play or league. The next task is
+`Run post-full-P7 transition review before defining any P8-P12 task`.
 
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
@@ -688,21 +692,19 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Run final full P7 closure review gate.
-`03BK` reviewed risk, source-rights and evidence consistency after `03BJ` and
-recorded no consistency blocker. The next task may decide only whether full P7
-can close, cannot close or can close with constraints. It must not approve
-P8-P12, define a P8-P12 first task, run post-full-P7 transition review, add
-fixtures or data files, modify production code or tests, or approve / perform
-source approval, source ingestion, broad parser / reader / ingestion, actual
-feature extraction, actual label generation, supervised dataset construction,
-split creation, leakage-test implementation, training data,
-training-run approval, training, model architecture or trainer implementation,
-evaluation implementation, metric implementation, evaluation runner,
-benchmark harness, real Tenhou, real haifu, external logs, platform data,
-model-output integration, CLI, broad file ingestion, self-play, league, Tenhou
-evidence, stable-dan evidence, LuckyJ `10.68` comparison or
-candidate-promotion claims.
+Run post-full-P7 transition review before defining any P8-P12 task.
+`03BL` closed full P7 only for the documented P7 supervised-learning scope.
+The next task must be a docs-only transition review and must not approve
+P8-P12 by default, define a P8-P12 implementation task, add fixtures or data
+files, modify production code or tests, or approve / perform source approval,
+source ingestion, broad parser / reader / ingestion, actual feature
+extraction, actual label generation, supervised dataset construction, split
+creation, leakage-test implementation, training data, training-run approval,
+training, model architecture or trainer implementation, evaluation
+implementation, metric implementation, evaluation runner, benchmark harness,
+real Tenhou, real haifu, external logs, platform data, model-output
+integration, CLI, broad file ingestion, self-play, league, Tenhou evidence,
+stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion claims.
 ```
 
 Latest Akochan F1 audit summary:

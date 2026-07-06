@@ -14,6 +14,74 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-06 — DR-0116 — Final Full P7 Closure Review
+
+Decision:
+
+```text
+A. Full P7 can close.
+```
+
+Context:
+
+- `03BK` reviewed P7 full-scope risk, source-rights and evidence consistency
+  and found no consistency blocker.
+- The project needed a final full P7 closure review gate before any
+  post-full-P7 transition review.
+- P8-P12 entry, broader implementation, source approval, source ingestion,
+  feature extraction, label generation, dataset construction, training,
+  evaluation, model-output integration, real data, self-play and league
+  remained unapproved before this decision.
+
+Rationale:
+
+- Accepted current-scope synthetic/local P7 smoke artifacts are indexed,
+  reviewed and accepted.
+- Full-scope expansion plan and review are complete.
+- Full P7 closure criteria were defined and reviewed.
+- Full-scope handoff and evidence index were finalized and reviewed.
+- Risk/source-rights/evidence consistency review found no blocker.
+- Validation commands pass.
+- Governance docs are synchronized.
+- Evidence grades remain conservative.
+
+Consequences:
+
+- Added:
+  - `docs/03_supervised_policy/03BL_FINAL_FULL_P7_CLOSURE_REVIEW.md`
+- Full P7 is closed only for the documented P7 supervised-learning scope:
+  accepted synthetic/local smoke artifacts, docs-only readiness / boundary /
+  proposal / review / approval / acceptance chain, full-scope expansion and
+  closure-preparation chain, governance synchronization and validation
+  evidence.
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Run post-full-P7 transition review before defining any P8-P12 task.`
+- This decision does not approve P8-P12, define a P8-P12 task, run
+  post-full-P7 transition review, approve broader P7 implementation, source
+  approval, source ingestion, broad parser / reader / ingestion, feature
+  extraction, label generation, dataset construction, training, evaluation,
+  model-output integration, model-strength evidence, Tenhou evidence,
+  stable-dan evidence, LuckyJ `10.68` comparison, candidate promotion,
+  real-data use, self-play or league.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03BL_FINAL_FULL_P7_CLOSURE_REVIEW.md`
+- `docs/03_supervised_policy/03BK_P7_FULL_SCOPE_RISK_SOURCE_RIGHTS_AND_EVIDENCE_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`
+- `docs/03_supervised_policy/03BJ_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_REVIEW_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+- `docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+- `docs/03_supervised_policy/03BH_FULL_P7_CLOSURE_CRITERIA_REVIEW_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Full P7 is closed for the documented supervised-learning scope only. A
+post-full-P7 transition review is next before any P8-P12 task may be defined.
+
 ## 2026-07-06 — DR-0115 — Review P7 Risk Source-Rights Evidence Consistency
 
 Decision:

@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Run final full P7 closure review gate.
+- [ ] Run post-full-P7 transition review before defining any P8-P12 task.
 
 Current execution charter:
 
@@ -16,14 +16,13 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only final full P7 closure review gate after `03BK`
-  reviewed P7 full-scope risk, source-rights and evidence consistency and
-  recorded no consistency blocker.
-- Decide only whether full P7 can close, cannot close, or can close with
-  constraints for the documented P7 supervised-learning scope.
-- Do not approve P8-P12 entry.
-- Do not define any P8-P12 task.
-- Do not run post-full-P7 transition review.
+- This is a docs-only post-full-P7 transition review after `03BL` recorded
+  `A. Full P7 can close` for the documented P7 supervised-learning scope.
+- Review only whether any P8-P12 scope, entry criteria and first task may be
+  defined in a later step.
+- Do not approve P8-P12 entry by default.
+- Do not implement any P8-P12 task.
+- Do not define a P8-P12 implementation task.
 - Do not add implementation.
 - Do not add or modify code.
 - Do not add or modify tests.
@@ -47,6 +46,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-07-06 Ran final full P7 closure review gate: added `docs/03_supervised_policy/03BL_FINAL_FULL_P7_CLOSURE_REVIEW.md`, reviewed P5/P6 context, P7 full-scope expansion plan/review, closure criteria definition/review, handoff/evidence index finalization/review, risk/source-rights/evidence consistency review, accepted current-scope implementation artifacts, current-scope review/acceptance decisions, validation evidence and governance synchronization. Decision: `A. Full P7 can close.` Full P7 is closed only for the documented P7 supervised-learning scope consisting of accepted current-scope synthetic/local supervised feature-label smoke, accepted current-scope synthetic/local parser-reader smoke, accepted current-scope synthetic/local parser-reader smoke extension, exact test-only blocker fix, docs-only readiness/boundary/proposal/review/approval/acceptance chain, full-scope expansion plan/review, closure criteria definition/review, handoff/evidence index finalization/review, risk/source-rights/evidence consistency review, governance synchronization and validation evidence. This is final full P7 closure review evidence only. It does not approve P8-P12, define a P8-P12 task, run post-full-P7 transition review, approve broader P7 implementation, source approval, source ingestion, broad parser / reader / ingestion, actual feature extraction, actual label generation, supervised dataset construction, split creation, leakage-test implementation, training-data approval, training-run approval, training, model architecture / trainer implementation, checkpoint / weights, evaluation implementation, metric implementation, evaluation runner, benchmark harness, model-output integration, model-strength evidence, real data, self-play or league. The next task is `Run post-full-P7 transition review before defining any P8-P12 task.`
 - [x] 2026-07-06 Reviewed P7 full-scope risk, source-rights and evidence consistency before final closure review: added `docs/03_supervised_policy/03BK_P7_FULL_SCOPE_RISK_SOURCE_RIGHTS_AND_EVIDENCE_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`, reviewed scope consistency, source-rights posture, risk register coverage, evidence-grade consistency, decision-record consistency, handoff / technical-plan consistency, `10_NEXT` alignment, full-P7 final closure readiness preconditions, validation and governance synchronization, and recorded `No risk/source-rights/evidence consistency blocker found.` This is P7 full-scope risk/source-rights/evidence consistency review evidence only. It does not close full P7, run the final full P7 closure review, approve P8-P12, approve broader P7 implementation, source approval, source ingestion, broad parser / reader / ingestion, actual feature extraction, actual label generation, supervised dataset construction, split creation, leakage-test implementation, training-data approval, training-run approval, training, model architecture / trainer implementation, checkpoint / weights, evaluation implementation, metric implementation, evaluation runner, benchmark harness, model-output integration, model-strength evidence, real data, self-play or league. The next task is `Run final full P7 closure review gate.`
 - [x] 2026-07-06 Reviewed P7 full-scope handoff and evidence index after closure criteria review: added `docs/03_supervised_policy/03BJ_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_REVIEW_AFTER_CLOSURE_CRITERIA_REVIEW.md`, reviewed `03BI` scope, reviewed closure criteria chain coverage, full-scope handoff summary, evidence index completeness, accepted current-scope evidence boundaries, full P7 remaining scope index, risk/evidence consistency, validation results and governance synchronization, and recorded `Review can close`. This is P7 full-scope handoff and evidence-index review evidence only. It does not close full P7, run final full P7 closure review, approve broader P7 implementation, source approval, source ingestion, broad parser / reader / ingestion, actual feature extraction, actual label generation, supervised dataset construction, split creation, leakage-test implementation, training-data approval, training-run approval, training, model architecture / trainer implementation, checkpoint / weights, evaluation implementation, metric implementation, evaluation runner, benchmark harness, model-output integration, model-strength evidence, real data, self-play, league or P8-P12. The next task is `Review P7 full-scope risk, source-rights and evidence consistency before final closure review.`
 - [x] 2026-07-06 Finalized P7 full-scope handoff and evidence index after closure criteria review: added `docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`, indexed the closure criteria chain (`03BF`, `03BG`, `03BH`), accepted parser-reader smoke extension chain (`03BA`-`03BE`), full-scope expansion plan/review (`03AW`, `03AX`), accepted current-scope implementation artifacts, P5/P6 closure context and governance docs. The finalization records accepted current-scope evidence, full P7 remaining required/deferred/blocked/later-stage scope, risk/evidence consistency notes, validation results, governance synchronization and finalization decision. This is P7 full-scope handoff and evidence-index finalization evidence only. It does not close full P7, run final full P7 closure review, approve broader P7 implementation, source approval, source ingestion, broad parser / reader / ingestion, actual feature extraction, actual label generation, supervised dataset construction, split creation, leakage-test implementation, training-data approval, training-run approval, training, model architecture / trainer implementation, checkpoint / weights, evaluation implementation, metric implementation, evaluation runner, benchmark harness, model-output integration, model-strength evidence, real data, self-play, league or P8-P12. The next task is `Review P7 full-scope handoff and evidence index after closure criteria review.`

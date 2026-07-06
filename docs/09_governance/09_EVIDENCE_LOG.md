@@ -8,6 +8,70 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-06 — Final full P7 closure review
+
+- Type: internal documentation / final full P7 closure review evidence.
+- Stage: post-full-P7 transition review before defining any P8-P12 task.
+- Added review document:
+  - `docs/03_supervised_policy/03BL_FINAL_FULL_P7_CLOSURE_REVIEW.md`
+- Primary reviewed artifacts:
+  - `docs/03_supervised_policy/03BK_P7_FULL_SCOPE_RISK_SOURCE_RIGHTS_AND_EVIDENCE_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`
+  - `docs/03_supervised_policy/03BJ_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_REVIEW_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+  - `docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+  - `docs/03_supervised_policy/03BH_FULL_P7_CLOSURE_CRITERIA_REVIEW_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+  - `docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+  - accepted current-scope synthetic/local smoke artifacts and validation.
+  - governance docs.
+- Final closure decision:
+  - `A. Full P7 can close.`
+- Closure scope:
+  - documented P7 supervised-learning scope only.
+  - accepted current-scope synthetic/local supervised feature-label smoke.
+  - accepted current-scope synthetic/local parser-reader smoke.
+  - accepted current-scope synthetic/local parser-reader smoke extension.
+  - exact test-only blocker fix.
+  - docs-only readiness / boundary / proposal / review / approval /
+    acceptance chain.
+  - full-scope expansion plan/review.
+  - closure criteria definition/review.
+  - handoff/evidence index finalization/review.
+  - risk/source-rights/evidence consistency review.
+  - governance synchronization and validation evidence.
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke_extension.py`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`: passed.
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`: passed.
+  - `python3 -m unittest tests/data/test_replay_schema.py`: passed.
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`: passed.
+- New next task:
+  - `Run post-full-P7 transition review before defining any P8-P12 task.`
+- Evidence grade:
+  - final full P7 closure review evidence only.
+- Not evidence of:
+  - P8-P12 entry approval.
+  - post-full-P7 transition review.
+  - broader P7 implementation approval.
+  - source approval or source ingestion approval.
+  - broad parser / reader / ingestion approval.
+  - actual feature extraction or label generation.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - checkpoint / weights approval.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - real-data approval.
+  - self-play, league or P8-P12 work.
+
 ### 2026-07-06 — P7 full-scope risk/source-rights/evidence consistency review before final closure
 
 - Type: internal documentation / P7 full-scope risk, source-rights and evidence

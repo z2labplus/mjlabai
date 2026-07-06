@@ -28,21 +28,23 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 final full P7 closure review gate.
-`03BK` reviews P7 full-scope risk, source-rights and evidence consistency
-after `03BJ` reviewed the full-scope handoff and evidence index, confirms
-source-rights posture, risk register coverage, evidence-grade consistency,
-decision-record consistency, handoff / technical-plan alignment, `10_NEXT`
-alignment and final-closure-readiness preconditions, and records `No
-risk/source-rights/evidence consistency blocker found.` This does not close
-full P7 and does not approve P8-P12, broader P7 implementation, source
-approval, source ingestion, broad parser / reader / ingestion, actual feature
-extraction, actual label generation, supervised dataset construction, split
-creation, leakage-test implementation, training data, training, model
-architecture / trainer implementation, evaluation implementation, metric
-implementation, evaluation runner, benchmark harness, model-output
-integration, real data, self-play or league. The next task is `Run final full
-P7 closure review gate`.
+Post-full-P7 transition review before defining any P8-P12 task.
+`03BL` runs the final full P7 closure review gate and records `A. Full P7 can
+close` only for the documented P7 supervised-learning scope: accepted
+current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
+proposal / review / approval / acceptance chain, full-scope expansion
+plan/review, closure criteria definition/review, handoff/evidence index
+finalization/review, risk/source-rights/evidence consistency review,
+governance synchronization and validation evidence. This closure does not
+approve P8-P12, post-full-P7 transition execution beyond the next review gate,
+broader P7 implementation, source approval, source ingestion, broad parser /
+reader / ingestion, actual feature extraction, actual label generation,
+supervised dataset construction, split creation, leakage-test implementation,
+training data, training, model architecture / trainer implementation,
+evaluation implementation, metric implementation, evaluation runner,
+benchmark harness, model-output integration, real data, self-play or league.
+The next task is `Run post-full-P7 transition review before defining any
+P8-P12 task`.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -660,7 +662,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Run final full P7 closure review gate.
+Run post-full-P7 transition review before defining any P8-P12 task.
 ```
 
 `docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
@@ -711,6 +713,19 @@ implementation, source approval, source ingestion, broad parser / reader /
 ingestion, feature extraction, label generation, dataset construction,
 training, evaluation, model-output integration, real data, self-play or
 league.
+
+`docs/03_supervised_policy/03BL_FINAL_FULL_P7_CLOSURE_REVIEW.md`
+runs the final full P7 closure review gate and records `A. Full P7 can close`
+for the documented P7 supervised-learning scope only. It closes the accepted
+synthetic/local smoke artifacts, docs-only readiness/boundary/proposal/review
+chain, full-scope expansion and closure-preparation chain, governance
+synchronization and validation evidence. It does not approve P8-P12, run
+post-full-P7 transition review, approve broader P7 implementation, source
+approval, source ingestion, broad parser / reader / ingestion, feature
+extraction, label generation, dataset construction, training, evaluation,
+model-output integration, real data, self-play or league. It selects `Run
+post-full-P7 transition review before defining any P8-P12 task` as the next
+docs-only task.
 
 `docs/03_supervised_policy/03BF_P7_NEXT_FULL_SCOPE_PLANNING_STEP_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
 defines the previous P7 full-scope planning step after `03BE` and selected

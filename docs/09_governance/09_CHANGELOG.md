@@ -1,5 +1,41 @@
 # 09_CHANGELOG
 
+## 2026-07-06 - v3.29
+
+- Ran final full P7 closure review gate.
+- Added:
+  - `docs/03_supervised_policy/03BL_FINAL_FULL_P7_CLOSURE_REVIEW.md`
+- Final closure decision:
+  - `A. Full P7 can close.`
+- Closure scope:
+  - documented P7 supervised-learning scope only.
+  - accepted current-scope synthetic/local supervised feature-label smoke.
+  - accepted current-scope synthetic/local parser-reader smoke.
+  - accepted current-scope synthetic/local parser-reader smoke extension.
+  - exact test-only blocker fix.
+  - docs-only readiness / boundary / proposal / review / approval /
+    acceptance chain.
+  - full-scope expansion plan/review.
+  - closure criteria definition/review.
+  - handoff/evidence index finalization/review.
+  - risk/source-rights/evidence consistency review.
+  - governance synchronization and validation evidence.
+- New `10_NEXT` first item:
+  `Run post-full-P7 transition review before defining any P8-P12 task.`
+- This is final full P7 closure review evidence only.
+- No P8-P12 approval, P8-P12 task definition, post-full-P7 transition review,
+  production code, tests, fixtures, data files, implementation logic, source
+  approval, source ingestion, broad parser / reader / ingestion, CLI, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, split creation, leakage-test implementation, training-data
+  approval, training-run approval, training, model architecture / trainer
+  implementation, checkpoint / weights, evaluation implementation, metric
+  implementation, evaluation runner, benchmark harness, model-output
+  integration, model-strength evidence, Tenhou ranked evidence, stable-dan
+  ranked-game evidence, LuckyJ `10.68` comparison, candidate promotion, real
+  Tenhou, real haifu, external logs, platform data, self-play or league work
+  was added or approved.
+
 ## 2026-07-06 - v3.28
 
 - Reviewed P7 full-scope risk, source-rights and evidence consistency before
