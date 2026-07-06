@@ -28,8 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8-P12 transition scope / entry criteria / first planning task review after
-post-full-P7 transition review.
+P8 scope / entry criteria / first planning task definition after P8-P12
+transition-scope review.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
@@ -40,15 +40,17 @@ governance synchronization and validation evidence. `12F` completed the
 post-full-P7 transition review and recorded `A. No post-full-P7 transition
 blocker found for defining P8-P12 docs-only scope / entry criteria / first
 planning task.` `12G` defines that docs-only transition scope, entry criteria
-and first planning task. It does not approve P8-P12 entry, implementation,
+and first planning task. `12H` reviews `12G` and records `A. Review can
+close.` These documents do not approve P8-P12 entry, P8 implementation,
 implementation prompts, broader P7 implementation, source approval, source
 ingestion, broad parser / reader / ingestion, actual feature extraction,
 actual label generation, supervised dataset construction, split creation,
 leakage-test implementation, training data, training, model architecture /
 trainer implementation, evaluation implementation, metric implementation,
 evaluation runner, benchmark harness, model-output integration, real data,
-self-play or league. The next task is `Review P8-P12 transition scope, entry
-criteria and first planning task after post-full-P7 transition review`.
+self-play or league. The next task is `Define P8 scope, entry criteria and
+first planning task after P8-P12 transition-scope review`; it is docs-only,
+not P8 entry approval, and P9-P12 remain unapproved.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -666,18 +668,20 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Review P8-P12 transition scope, entry criteria and first planning task after post-full-P7 transition review.
+Define P8 scope, entry criteria and first planning task after P8-P12 transition-scope review.
 ```
 
 `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`
 completes the post-full-P7 transition review after `03BL` and records:
 `A. No post-full-P7 transition blocker found for defining P8-P12 docs-only
 scope / entry criteria / first planning task.` `12G` defines that transition
-scope, entry criteria and first planning task and selects the next docs-only
-review gate. The next task does not approve P8-P12 entry, implementation,
-implementation prompts, source approval, source ingestion, feature extraction,
-label generation, dataset construction, training, evaluation, model-output
-integration, real data, self-play, league or model-strength claims.
+scope, entry criteria and first planning task and selected a docs-only review
+gate. `12H` reviews `12G` and records `A. Review can close.` The next task
+defines P8 scope / entry criteria / first planning task only. It does not
+approve P8 entry, P8 implementation, P8 implementation prompts, P8-P12
+implementation, source approval, source ingestion, feature extraction, label
+generation, dataset construction, training, evaluation, model-output
+integration, real data, self-play, league, P9-P12 or model-strength claims.
 
 `docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
 defines full P7 closure criteria after `03BE` / `03BF`. It selects

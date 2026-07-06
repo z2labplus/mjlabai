@@ -2,20 +2,20 @@
 
 ## Current stage
 
-P8-P12 transition scope / entry criteria / first planning task review after
-post-full-P7 transition review.
+P8 scope / entry criteria / first planning task definition after P8-P12
+transition-scope review.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
 blocker found for defining P8-P12 docs-only scope / entry criteria / first
 planning task.` `12G` defines that transition scope, entry criteria and first
-planning task and selects a docs-only review gate as the next step. Production
-code, tests, fixtures, data files, source approval, source ingestion, broad
-parser / reader / ingestion, feature extraction, label generation, dataset
-construction, training, evaluation, model-output integration, self-play,
-league and P8-P12 remain unapproved. The current first task is `Review
-P8-P12 transition scope, entry criteria and first planning task after
-post-full-P7 transition review`.
+planning task and selected a docs-only review gate as the next step. `12H`
+reviews `12G` and records `A. Review can close.` Production code, tests,
+fixtures, data files, source approval, source ingestion, broad parser / reader
+/ ingestion, feature extraction, label generation, dataset construction,
+training, evaluation, model-output integration, self-play, league and P8-P12
+remain unapproved. The current first task is `Define P8 scope, entry criteria
+and first planning task after P8-P12 transition-scope review`.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -296,12 +296,13 @@ P7 full-scope risk/source-rights/evidence consistency review = complete in `03BK
 Final full P7 closure review gate = complete in `03BL`; full P7 can close only for documented P7 supervised-learning scope
 Post-full-P7 transition review = complete in `12F`; no blocker found for defining P8-P12 docs-only scope / entry criteria / first planning task
 P8-P12 transition scope, entry criteria and first planning task = defined in `12G`; selected docs-only review gate as next
+P8-P12 transition scope, entry criteria and first planning task review = complete in `12H`; review can close and selected P8 scope / entry criteria / first planning task definition as next
 Full P7 = closed for documented supervised-learning scope only
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = review P8-P12 transition scope, entry criteria and first planning task after post-full-P7 transition review
+Next = define P8 scope, entry criteria and first planning task after P8-P12 transition-scope review
 ```
 
 ## AI role
@@ -310,11 +311,12 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Review the docs-only P8-P12 transition-scope definition after full P7 closure
-while keeping P8-P12 entry, implementation, implementation prompts, source
-approval, source ingestion, real data, feature extraction, label generation,
-dataset construction, training, evaluation, self-play, league and
-model-strength claims unapproved until separate later approvals exist.
+Define the docs-only P8 scope / entry criteria / first planning task after the
+P8-P12 transition-scope review while keeping P8 entry, P8 implementation,
+implementation prompts, source approval, source ingestion, real data, feature
+extraction, label generation, dataset construction, training, evaluation,
+self-play, league, P9-P12 and model-strength claims unapproved until separate
+later approvals exist.
 
 This supports the north-star target by ensuring that any future supervised
 learning, RL, search, league or LuckyJ validation work starts only after the
@@ -328,6 +330,8 @@ and first-task boundaries.
 - `docs/00_HANDOFF.md`
 - `docs/00_DOCS_INDEX.md`
 - `docs/10_next/10_NEXT.md`
+- `docs/12_technical_plan/12G_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK.md`
+- `docs/12_technical_plan/12H_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_REVIEW.md`
 - `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md`
 - `docs/04_rl_selfplay/04G_ALGORITHM_RACING_FUNNEL.md`
 - `docs/05_evaluation/05G_RACING_FUNNEL_EVALUATION.md`
@@ -411,4 +415,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review P8-P12 transition scope, entry criteria and first planning task after post-full-P7 transition review.
+Define P8 scope, entry criteria and first planning task after P8-P12 transition-scope review.

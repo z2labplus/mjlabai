@@ -27,23 +27,24 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P8-P12 transition scope / entry criteria / first
-planning task review after post-full-P7 transition review:
+Current active stage is P8 scope / entry criteria / first planning task
+definition after P8-P12 transition-scope review:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
 `A. No post-full-P7 transition blocker found for defining P8-P12 docs-only
 scope / entry criteria / first planning task.` `12G` defines that docs-only
-transition scope, entry criteria and first planning task and selects a separate
-review gate as the next step. This does not approve P8-P12 entry,
-implementation, implementation prompts, broader P7 implementation, source
-approval, source ingestion, broad parser / reader / ingestion, actual feature
-extraction, actual label generation, supervised dataset construction, split
-creation, leakage-test implementation, training-data approval, training-run
-approval, training, model architecture / trainer implementation, evaluation
-implementation, model-output integration, model-strength evidence, real data,
-self-play or league. The next task is `Review P8-P12 transition scope, entry
-criteria and first planning task after post-full-P7 transition review`.
+transition scope, entry criteria and first planning task and selected a
+separate review gate. `12H` reviews `12G` and records `A. Review can close.`
+This does not approve P8-P12 entry, P8 implementation, implementation prompts,
+broader P7 implementation, source approval, source ingestion, broad parser /
+reader / ingestion, actual feature extraction, actual label generation,
+supervised dataset construction, split creation, leakage-test implementation,
+training-data approval, training-run approval, training, model architecture /
+trainer implementation, evaluation implementation, model-output integration,
+model-strength evidence, real data, self-play or league. The next task is
+`Define P8 scope, entry criteria and first planning task after P8-P12
+transition-scope review`; it is docs-only and P9-P12 remain unapproved.
 
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.

@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-07 — P8-P12 transition scope review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12H` review closure is mistaken for P8-P12 entry approval. | Governance / Stage Control | High | Medium | `12H`, `10_NEXT`, stage contract and evidence log state that this is review evidence only and P8-P12 remain unapproved. | Open |
+| The next P8 scope-definition task is mistaken for P8 implementation approval. | Governance / Execution | High | Medium | New `10_NEXT` first item is docs-only and forbids P8 entry approval, P8 implementation and P8 implementation prompts. | Open |
+| P8-specific planning drifts into training, evaluation, self-play or league. | Governance / Execution | High | Medium | The next task must define scope / entry criteria only and keep training, evaluation, self-play and league forbidden. | Open |
+| Source approval, source ingestion or real-data prerequisites are skipped after the transition review. | Governance / Data | High | Medium | `12H` keeps source approval, source ingestion, real Tenhou, real haifu, external logs, platform data and account material unapproved. | Open |
+| Transition review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log classifies `12H` as P8-P12 transition-scope review evidence only. | Open |
+
 ## 2026-07-06 — P8-P12 transition scope definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

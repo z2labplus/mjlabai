@@ -38,6 +38,7 @@ docs/12_technical_plan/12D_POST_FULL_P6_TRANSITION_REVIEW.md
 docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md
 docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md
 docs/12_technical_plan/12G_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK.md
+docs/12_technical_plan/12H_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_REVIEW.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -96,6 +97,18 @@ gate. It is transition-scope definition evidence only, not P8-P12 entry
 approval, P8 implementation approval, training approval, evaluation approval,
 self-play approval, league approval, real-data approval or model-strength
 evidence.
+
+`docs/12_technical_plan/12H_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_REVIEW.md`
+reviews the `12G` P8-P12 transition-scope definition, confirms the full P7
+closure recap, P8-P12 non-approval baseline, transition scope, workstream
+inventory, E1-E12 entry criteria, non-entry conditions, forbidden current
+scope, risk controls, evidence requirements and candidate next directions are
+complete enough for the current gate, and records `A. Review can close.` It
+selects the next docs-only task `Define P8 scope, entry criteria and first
+planning task after P8-P12 transition-scope review.` It is review evidence
+only, not P8-P12 entry approval, P8 implementation approval, an implementation
+prompt, training approval, evaluation approval, self-play approval, league
+approval, real-data approval or model-strength evidence.
 
 ## Supervised-policy files
 
