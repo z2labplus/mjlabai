@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-06 — Post-full-P7 transition review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12F` is mistaken for P8-P12 entry approval. | Governance / Stage Control | High | Medium | `12F`, `10_NEXT` and the stage contract state that it only permits a future docs-only scope / entry criteria / first planning task definition. | Open |
+| The next P8-P12 transition-scope task drifts into implementation prompt generation. | Governance / Execution | High | Medium | New `10_NEXT` first item forbids implementation, implementation prompts, code, tests, fixtures, data files, training, evaluation, self-play and league. | Open |
+| P8-P12 transition planning is mistaken for source approval or real-data permission. | Governance / Data | High | Medium | `12F` keeps source approval, source ingestion, real Tenhou, real haifu, external logs, platform data and account material unapproved. | Open |
+| P8-P12 transition planning is mistaken for approval of feature/label, dataset, training or evaluation workstreams. | Governance / Scope | High | Medium | `12F` selects only docs-only transition planning and keeps all workstreams unapproved pending separate scope, entry criteria, risk review and approval. | Open |
+| Post-full-P7 transition review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log classifies `12F` as post-full-P7 transition review evidence only, not strength evidence. | Open |
+
 ## 2026-07-06 — Final full P7 closure review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

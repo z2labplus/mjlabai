@@ -14,6 +14,62 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-06 — DR-0117 — Post-Full-P7 Transition Review
+
+Decision:
+
+```text
+A. No post-full-P7 transition blocker found for defining P8-P12 docs-only scope / entry criteria / first planning task.
+```
+
+Context:
+
+- `03BL` recorded `A. Full P7 can close` only for the documented P7
+  supervised-learning scope.
+- The project needed a post-full-P7 transition review before defining any
+  P8-P12 scope, entry criteria or first planning task.
+- P8-P12 entry, implementation, source approval, source ingestion, feature
+  extraction, label generation, dataset construction, training, evaluation,
+  model-output integration, real data, self-play and league remained
+  unapproved before this decision.
+
+Rationale:
+
+- Full P7 closure is bounded and conservative.
+- P8-P12 remain unapproved, so the next safe step is a docs-only transition
+  scope / entry criteria / first planning task definition.
+- No blocker was found that would require reopening P7 before defining that
+  docs-only transition task.
+- The selected next task can be constrained to non-implementation planning.
+
+Consequences:
+
+- Added:
+  - `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Define P8-P12 transition scope, entry criteria and first planning task after post-full-P7 transition review.`
+- This decision does not approve P8-P12 entry, P8 implementation,
+  implementation prompts, source approval, source ingestion, parser / reader /
+  ingestion, feature extraction, label generation, dataset construction,
+  training, evaluation, model-output integration, model-strength evidence,
+  Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison, candidate
+  promotion, real-data use, self-play or league.
+
+Linked docs:
+
+- `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`
+- `docs/03_supervised_policy/03BL_FINAL_FULL_P7_CLOSURE_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Post-full-P7 transition review is complete. The next task is docs-only P8-P12
+transition scope / entry criteria / first planning task definition; P8-P12
+entry and implementation remain unapproved.
+
 ## 2026-07-06 — DR-0116 — Final Full P7 Closure Review
 
 Decision:

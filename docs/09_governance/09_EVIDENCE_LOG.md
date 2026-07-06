@@ -8,6 +8,49 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-06 — Post-full-P7 transition review
+
+- Type: internal documentation / post-full-P7 transition review evidence.
+- Stage: P8-P12 transition scope / entry criteria / first planning task
+  definition after post-full-P7 transition review.
+- Added review document:
+  - `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`
+- Primary reviewed artifacts:
+  - `docs/03_supervised_policy/03BL_FINAL_FULL_P7_CLOSURE_REVIEW.md`
+  - `docs/10_next/10_NEXT.md`
+  - governance docs.
+- Transition review decision:
+  - `A. No post-full-P7 transition blocker found for defining P8-P12 docs-only scope / entry criteria / first planning task.`
+- Selected next task:
+  - `Define P8-P12 transition scope, entry criteria and first planning task after post-full-P7 transition review.`
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke_extension.py`: passed, 15 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`: passed, 1 test.
+  - `python3 -m unittest tests/data/test_replay_schema.py`: passed, 7 tests.
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`: passed, 1 test.
+- Evidence grade:
+  - post-full-P7 transition review evidence only.
+- Not evidence of:
+  - P8-P12 entry approval.
+  - P8 implementation approval.
+  - implementation prompts.
+  - source approval or source ingestion approval.
+  - parser / reader / ingestion approval.
+  - feature extraction, label generation or dataset approval.
+  - training-data approval, training-run approval or training.
+  - evaluation implementation, metric implementation or evaluation runner.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - real-data approval.
+  - self-play, league or P8-P12 work.
+
 ### 2026-07-06 — Final full P7 closure review
 
 - Type: internal documentation / final full P7 closure review evidence.

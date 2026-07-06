@@ -36,6 +36,7 @@ docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
 docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md
 docs/12_technical_plan/12D_POST_FULL_P6_TRANSITION_REVIEW.md
 docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md
+docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -74,6 +75,16 @@ current-scope closure. It is transition-review evidence only, not full P7
 closure, broader implementation approval, training approval, parser / reader /
 ingestion approval, real-data approval, P8-P12 entry approval or
 model-strength evidence.
+
+`docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`
+records the post-full-P7 transition review after final full P7 closure. It
+confirms that full P7 is closed only for the documented supervised-learning
+scope and records `A. No post-full-P7 transition blocker found for defining
+P8-P12 docs-only scope / entry criteria / first planning task.` It selects the
+next docs-only transition-planning task and remains transition-review evidence
+only, not P8-P12 entry approval, implementation approval, training approval,
+real-data approval, self-play approval, league approval or model-strength
+evidence.
 
 ## Supervised-policy files
 

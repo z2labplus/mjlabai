@@ -1,5 +1,32 @@
 # 09_CHANGELOG
 
+## 2026-07-06 - v3.30
+
+- Completed post-full-P7 transition review before defining any P8-P12 task.
+- Added:
+  - `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`
+- Transition review decision:
+  - `A. No post-full-P7 transition blocker found for defining P8-P12 docs-only scope / entry criteria / first planning task.`
+- Reviewed:
+  - `03BL` final full P7 closure decision.
+  - Full P7 closure boundary.
+  - P8-P12 non-entry status.
+  - candidate next directions after full P7 closure.
+  - evidence grade and non-evidence boundaries.
+- New `10_NEXT` first item:
+  `Define P8-P12 transition scope, entry criteria and first planning task after post-full-P7 transition review.`
+- This is post-full-P7 transition review evidence only.
+- No P8-P12 entry approval, P8 implementation approval, implementation
+  prompt, production code, tests, fixtures, data files, source approval,
+  source ingestion, parser / reader / ingestion, actual feature extraction,
+  actual label generation, supervised dataset construction, training-data
+  approval, training-run approval, training, model architecture / trainer
+  implementation, checkpoint / weights, evaluation implementation, metric
+  implementation, evaluation runner, benchmark harness, model-output
+  integration, real-data use, self-play, league, model-strength evidence,
+  Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ `10.68`
+  comparison or candidate-promotion work was added or approved.
+
 ## 2026-07-06 - v3.29
 
 - Ran final full P7 closure review gate.
