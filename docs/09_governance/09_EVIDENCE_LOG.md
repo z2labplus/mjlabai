@@ -8,6 +8,67 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-06 — P7 full-scope risk/source-rights/evidence consistency review before final closure
+
+- Type: internal documentation / P7 full-scope risk, source-rights and evidence
+  consistency review evidence.
+- Stage: P7 supervised learning / final full P7 closure review gate.
+- Added review document:
+  - `docs/03_supervised_policy/03BK_P7_FULL_SCOPE_RISK_SOURCE_RIGHTS_AND_EVIDENCE_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`
+- Primary reviewed artifacts:
+  - `docs/03_supervised_policy/03BJ_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_REVIEW_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+  - `docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+  - `docs/03_supervised_policy/03BH_FULL_P7_CLOSURE_CRITERIA_REVIEW_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+  - `docs/09_governance/09_RISK_REGISTER.md`
+  - `docs/09_governance/09_DECISION_RECORD.md`
+  - `docs/10_next/10_NEXT.md`
+- Review decision:
+  - `No risk/source-rights/evidence consistency blocker found.`
+- Reviewed:
+  - scope consistency.
+  - source-rights posture.
+  - risk register coverage.
+  - evidence-grade consistency.
+  - decision-record consistency.
+  - handoff / technical-plan consistency.
+  - `10_NEXT` consistency.
+  - final full P7 closure review readiness preconditions.
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke_extension.py`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`: passed.
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`: passed.
+  - `python3 -m unittest tests/data/test_replay_schema.py`: passed.
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`: passed.
+- New next task:
+  - `Run final full P7 closure review gate.`
+- Evidence grade:
+  - P7 full-scope risk/source-rights/evidence consistency review evidence only.
+- Not evidence of:
+  - full P7 closure.
+  - final full P7 closure review.
+  - P8-P12 entry approval.
+  - broader P7 implementation approval.
+  - source approval or source ingestion approval.
+  - broad parser / reader / ingestion approval.
+  - actual feature extraction or label generation.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - checkpoint / weights approval.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - real-data approval.
+  - self-play, league or P8-P12 work.
+
 ### 2026-07-06 — P7 full-scope handoff and evidence-index review after closure criteria review
 
 - Type: internal documentation / P7 full-scope handoff and evidence-index

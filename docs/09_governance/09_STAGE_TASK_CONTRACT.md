@@ -2,19 +2,18 @@
 
 ## Current stage
 
-P7 full-scope risk, source-rights and evidence consistency review before final
-closure review.
-`03BJ` reviews the P7 full-scope handoff and evidence index after `03BI`
-finalized it and records `Review can close`. It confirms the `03BI` scope,
-reviewed closure criteria chain, handoff summary, evidence index, accepted
-current-scope evidence boundaries, full P7 remaining scope, risk/evidence
-consistency, validation and governance synchronization.
+P7 final full P7 closure review gate.
+`03BK` reviews P7 full-scope risk, source-rights and evidence consistency
+after `03BJ` reviewed the full-scope handoff and evidence index. It records
+`No risk/source-rights/evidence consistency blocker found` after checking
+source-rights posture, risk register coverage, evidence-grade consistency,
+decision-record consistency, handoff / technical-plan alignment, `10_NEXT`
+alignment and final-closure-readiness preconditions.
 Production code, tests, fixtures, data files, source approval, source
 ingestion, broad parser / reader / ingestion, feature extraction, label
 generation, dataset construction, training, evaluation, model-output
 integration, self-play, league and P8-P12 remain unapproved. The current first
-task is `Review P7 full-scope risk, source-rights and evidence consistency
-before final closure review`.
+task is `Run final full P7 closure review gate`.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -291,12 +290,13 @@ P7 next full-scope planning step definition = complete in `03BF`; selected full 
 Full P7 closure criteria definition = complete in `03BG`; selected closure criteria review as next
 Full P7 closure criteria review = complete in `03BH`; review can close and selected handoff/evidence-index finalization as next
 P7 full-scope handoff/evidence-index review = complete in `03BJ`; selected risk/source-rights/evidence consistency review as next
+P7 full-scope risk/source-rights/evidence consistency review = complete in `03BK`; no consistency blocker found; selected final full P7 closure review gate as next
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = review full P7 closure criteria after parser-reader smoke extension current-scope acceptance
+Next = run final full P7 closure review gate
 ```
 
 ## AI role
@@ -407,5 +407,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review P7 full-scope risk, source-rights and evidence consistency before
-final closure review.
+Run final full P7 closure review gate.

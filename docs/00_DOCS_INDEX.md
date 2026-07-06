@@ -141,6 +141,7 @@ docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOK
 docs/03_supervised_policy/03BH_FULL_P7_CLOSURE_CRITERIA_REVIEW_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md
 docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md
 docs/03_supervised_policy/03BJ_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_REVIEW_AFTER_CLOSURE_CRITERIA_REVIEW.md
+docs/03_supervised_policy/03BK_P7_FULL_SCOPE_RISK_SOURCE_RIGHTS_AND_EVIDENCE_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md
 src/mjlabai/supervised/synthetic_parser_reader_smoke.py
 tests/supervised/test_synthetic_parser_reader_smoke.py
 src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py
@@ -869,6 +870,19 @@ final full P7 closure review or approve broader P7 implementation, source
 approval, source ingestion, broad parser / reader / ingestion, feature
 extraction, label generation, dataset construction, training, evaluation,
 model-output integration, real data, self-play, league or P8-P12.
+
+`docs/03_supervised_policy/03BK_P7_FULL_SCOPE_RISK_SOURCE_RIGHTS_AND_EVIDENCE_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`
+reviews P7 full-scope risk, source-rights and evidence consistency before any
+final full P7 closure review. It records no risk/source-rights/evidence
+consistency blocker, confirms source rights remain unapproved, confirms
+evidence grades remain bounded, confirms decision records do not approve
+broader workstreams, and selects `Run final full P7 closure review gate` as the
+next docs-only task. It is consistency review evidence only. It does not close
+full P7, run the final full P7 closure review, approve P8-P12 or approve
+broader P7 implementation, source approval, source ingestion, broad parser /
+reader / ingestion, feature extraction, label generation, dataset
+construction, training, evaluation, model-output integration, real data,
+self-play or league.
 
 ## Data-system files
 

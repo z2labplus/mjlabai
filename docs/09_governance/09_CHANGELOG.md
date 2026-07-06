@@ -1,5 +1,40 @@
 # 09_CHANGELOG
 
+## 2026-07-06 - v3.28
+
+- Reviewed P7 full-scope risk, source-rights and evidence consistency before
+  final closure review.
+- Added:
+  - `docs/03_supervised_policy/03BK_P7_FULL_SCOPE_RISK_SOURCE_RIGHTS_AND_EVIDENCE_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`
+- Review decision:
+  - `No risk/source-rights/evidence consistency blocker found.`
+- Reviewed:
+  - scope consistency.
+  - source-rights posture.
+  - risk register coverage.
+  - evidence-grade consistency.
+  - decision-record consistency.
+  - handoff / technical-plan consistency.
+  - `10_NEXT` consistency.
+  - final full P7 closure review readiness preconditions.
+  - validation and governance synchronization.
+- New `10_NEXT` first item:
+  `Run final full P7 closure review gate.`
+- This is P7 full-scope risk/source-rights/evidence consistency review
+  evidence only.
+- No full P7 closure, final full P7 closure review, P8-P12 approval,
+  production code, tests, fixtures, data files, implementation logic, source
+  approval, source ingestion, broad parser / reader / ingestion, CLI, actual
+  feature extraction, actual label generation, supervised dataset
+  construction, split creation, leakage-test implementation, training-data
+  approval, training-run approval, training, model architecture / trainer
+  implementation, checkpoint / weights, evaluation implementation, metric
+  implementation, evaluation runner, benchmark harness, model-output
+  integration, model-strength evidence, Tenhou ranked evidence, stable-dan
+  ranked-game evidence, LuckyJ `10.68` comparison, candidate promotion, real
+  Tenhou, real haifu, external logs, platform data, self-play or league work
+  was added or approved.
+
 ## 2026-07-06 - v3.27
 
 - Reviewed P7 full-scope handoff and evidence index after closure criteria

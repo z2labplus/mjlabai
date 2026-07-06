@@ -8,6 +8,16 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-06 — P7 risk/source-rights/evidence consistency review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `No consistency blocker found` in `03BK` is mistaken for full P7 closure. | Governance / Scope | High | Medium | `03BK`, `10_NEXT` and stage contract state that this is only consistency review evidence and the next task is a separate final full P7 closure review gate. | Open |
+| The final full P7 closure review gate is mistaken for P8-P12 entry approval. | Governance / Stage Control | High | Medium | `10_NEXT` requires the next task to remain docs-only and forbids P8-P12 approval or task definition; a separate post-full-P7 transition review remains required. | Open |
+| Source-rights consistency is mistaken for source approval or real-data permission. | Governance / Data | High | Medium | `03BK` states that source rights remain unapproved and real Tenhou, real haifu, external logs, platform data and account material remain forbidden. | Open |
+| Risk/evidence review is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log classifies `03BK` as P7 full-scope risk/source-rights/evidence consistency review evidence only. | Open |
+| The final review gate drifts into implementation, source approval, feature/label, dataset, training or evaluation work. | Governance / Execution | High | Medium | `10_NEXT` forbids production code, tests, fixtures, data files, source approval, source ingestion, feature/label, dataset, training, evaluation, model-output integration, self-play and league. | Open |
+
 ## 2026-07-06 — P7 full-scope handoff and evidence-index review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

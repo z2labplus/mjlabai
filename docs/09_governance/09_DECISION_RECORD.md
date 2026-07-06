@@ -14,6 +14,67 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-06 — DR-0115 — Review P7 Risk Source-Rights Evidence Consistency
+
+Decision:
+
+```text
+No risk/source-rights/evidence consistency blocker found.
+```
+
+Context:
+
+- `03BJ` reviewed the P7 full-scope handoff and evidence index and recorded
+  `Review can close`.
+- Before any final full P7 closure review, the project needed to confirm that
+  risk, source-rights, evidence grades, decision records, handoff, technical
+  plan and `10_NEXT` remained consistent.
+- Full P7 remained open before this decision.
+- Final full P7 closure review, P8-P12 entry, broader implementation, source
+  approval, source ingestion, feature extraction, label generation, dataset
+  construction, training, evaluation, model-output integration, real data,
+  self-play and league remained unapproved.
+
+Rationale:
+
+- Source rights remain conservative: no real source, real Tenhou, real haifu,
+  external log, platform data or account material is approved.
+- Evidence grades remain bounded to docs-only review or exact synthetic/local
+  smoke evidence.
+- The risk register covers source-rights ambiguity, evidence overclaim,
+  implementation drift and P8-P12 creep.
+- Decision records do not approve broader workstreams or full P7 closure.
+- Handoff, technical plan, stage contract and `10_NEXT` are aligned.
+
+Consequences:
+
+- Added:
+  - `docs/03_supervised_policy/03BK_P7_FULL_SCOPE_RISK_SOURCE_RIGHTS_AND_EVIDENCE_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Run final full P7 closure review gate.`
+- This decision does not close full P7, run final full P7 closure review,
+  approve P8-P12, approve broader P7 implementation, source approval, source
+  ingestion, broad parser / reader / ingestion, feature extraction, label
+  generation, dataset construction, training, evaluation, model-output
+  integration, model-strength evidence, Tenhou evidence, stable-dan evidence,
+  LuckyJ `10.68` comparison, candidate promotion, real-data use, self-play or
+  league.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03BK_P7_FULL_SCOPE_RISK_SOURCE_RIGHTS_AND_EVIDENCE_CONSISTENCY_REVIEW_BEFORE_FINAL_CLOSURE.md`
+- `docs/03_supervised_policy/03BJ_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_REVIEW_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+- `docs/03_supervised_policy/03BI_P7_FULL_SCOPE_HANDOFF_AND_EVIDENCE_INDEX_FINALIZATION_AFTER_CLOSURE_CRITERIA_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Risk/source-rights/evidence consistency review can close; full P7 remains open
+until the separate final full P7 closure review gate runs.
+
 ## 2026-07-06 — DR-0114 — Review P7 Full-Scope Handoff and Evidence Index
 
 Decision:
