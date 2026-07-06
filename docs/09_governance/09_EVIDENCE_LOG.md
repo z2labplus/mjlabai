@@ -8,6 +8,58 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-06 — Full P7 closure criteria review after parser-reader smoke extension acceptance
+
+- Type: internal documentation / full P7 closure criteria review evidence.
+- Stage: P7 supervised learning / full-scope handoff and evidence-index
+  finalization after closure criteria review.
+- Added review document:
+  - `docs/03_supervised_policy/03BH_FULL_P7_CLOSURE_CRITERIA_REVIEW_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- Reviewed primary artifact:
+  - `docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- Review decision:
+  - `Review can close.`
+- Reviewed:
+  - scope and non-implementation boundary.
+  - accepted current-scope P7 inventory.
+  - full P7 open scope.
+  - current-scope vs full-scope separation.
+  - why full P7 cannot close now.
+  - P8-P12 non-entry.
+  - closure vocabulary.
+  - workstream matrix.
+  - C1-C24 required criteria.
+  - exit readiness checklist.
+  - required remaining, deferred, blocked and later-stage items.
+  - evidence requirements.
+  - non-closure evidence.
+  - governance synchronization requirements.
+- New next task:
+  - `Finalize P7 full-scope handoff and evidence index after closure criteria review.`
+- Evidence grade:
+  - Full P7 closure criteria review evidence only.
+- Not evidence of:
+  - full P7 closure.
+  - broader P7 implementation approval.
+  - source approval or source ingestion approval.
+  - broad parser / reader / ingestion approval.
+  - actual feature extraction or label generation.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - checkpoint / weights approval.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - real-data approval.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-07-06 — Full P7 closure criteria definition after parser-reader smoke extension acceptance
 
 - Type: internal documentation / full P7 closure criteria definition evidence.

@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-06 — Full P7 closure criteria review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `Review can close` is mistaken for full P7 closure. | Governance / Scope | High | Medium | `03BH`, `10_NEXT` and stage contract state this is criteria review only and the next task is handoff/evidence-index finalization, not full P7 closure. | Open |
+| Handoff/evidence-index finalization is mistaken for implementation approval. | Governance / Scope | High | Medium | New `10_NEXT` first item is docs-only and forbids code, tests, fixtures, data files, source approval, ingestion, feature/label, dataset, training and evaluation work. | Open |
+| The reviewed criteria matrix is mistaken for approval of source, ingestion, feature/label, dataset, training or evaluation workstreams. | Governance / Scope | High | Medium | `03BH` accepts only the sufficiency of `03BG` as a criteria artifact and keeps those workstreams unapproved. | Open |
+| Full P7 handoff/evidence index overclaims synthetic/local smoke as supervised-learning readiness. | Governance / Evidence | High | Medium | `03BH` states synthetic/local smoke, unit tests and review alone are not full P7 closure evidence. | Open |
+| P8-P12 entry is treated as available after criteria review. | Governance / Stage Control | High | Medium | `03BH` keeps P8-P12 blocked until full P7 closure plus a separate transition review. | Open |
+| Review evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log classifies this as full P7 closure criteria review evidence only. | Open |
+
 ## 2026-07-06 — Full P7 closure criteria definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

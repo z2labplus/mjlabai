@@ -14,6 +14,65 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-06 — DR-0112 — Review Full P7 Closure Criteria
+
+Decision:
+
+```text
+Review can close.
+```
+
+Context:
+
+- `03BG` defined full P7 closure criteria after parser-reader smoke extension
+  current-scope acceptance.
+- Current accepted P7 scope remains exact synthetic/local smoke plus
+  docs/governance readiness evidence only.
+- Full P7 remains open.
+- Source approval, source ingestion, broad parser / reader / ingestion,
+  actual feature extraction, actual label generation, supervised dataset
+  construction, training, evaluation, model-output integration, real data,
+  self-play, league and P8-P12 remain unapproved.
+
+Rationale:
+
+- `03BG` sufficiently covers accepted current-scope inventory, full P7 open
+  scope, current-scope vs full-scope separation, why full P7 cannot close now,
+  P8-P12 non-entry, vocabulary, workstream closure criteria, C1-C24, exit
+  readiness, remaining/deferred/blocked/later-stage items, evidence
+  requirements and non-closure evidence.
+- No blocker was found in the closure-criteria artifact.
+- The next step should finalize handoff and evidence indexing before any
+  future final full P7 closure review.
+
+Consequences:
+
+- Added:
+  - `docs/03_supervised_policy/03BH_FULL_P7_CLOSURE_CRITERIA_REVIEW_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Finalize P7 full-scope handoff and evidence index after closure criteria review.`
+- This decision does not close full P7 and does not approve broader P7
+  implementation, source approval, source ingestion, broad parser / reader /
+  ingestion, feature extraction, label generation, dataset construction,
+  training, evaluation, model-output integration, model-strength evidence,
+  Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison, candidate
+  promotion, real-data use, self-play, league or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03BH_FULL_P7_CLOSURE_CRITERIA_REVIEW_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/03_supervised_policy/03BE_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Review closed; full P7 remains open. Handoff and evidence-index finalization
+is next.
+
 ## 2026-07-06 — DR-0111 — Define Full P7 Closure Criteria
 
 Decision:

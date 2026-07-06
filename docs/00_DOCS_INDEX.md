@@ -138,6 +138,7 @@ docs/03_supervised_policy/03BD_P7_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_R
 docs/03_supervised_policy/03BE_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE_DECISION.md
 docs/03_supervised_policy/03BF_P7_NEXT_FULL_SCOPE_PLANNING_STEP_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md
 docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md
+docs/03_supervised_policy/03BH_FULL_P7_CLOSURE_CRITERIA_REVIEW_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md
 src/mjlabai/supervised/synthetic_parser_reader_smoke.py
 tests/supervised/test_synthetic_parser_reader_smoke.py
 src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py
@@ -826,6 +827,20 @@ ingestion, approve broad parser / reader / ingestion, approve feature
 extraction, approve label generation, approve supervised dataset construction,
 approve training, approve evaluation, approve model-output integration,
 approve real data, approve self-play, approve league or approve P8-P12.
+
+`docs/03_supervised_policy/03BH_FULL_P7_CLOSURE_CRITERIA_REVIEW_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+reviews the `03BG` full P7 closure criteria after parser-reader smoke
+extension current-scope acceptance. It records `Review can close` after
+checking scope, accepted current-scope inventory, full P7 open scope,
+current-scope vs full-scope separation, why full P7 cannot close now,
+P8-P12 non-entry, vocabulary, workstream matrix, C1-C24, exit readiness,
+remaining/deferred/blocked/later-stage items, evidence requirements,
+non-closure evidence and governance synchronization requirements. It is
+closure-criteria review evidence only. It does not close full P7 or approve
+broader P7 implementation, source approval, source ingestion, broad parser /
+reader / ingestion, feature extraction, label generation, dataset
+construction, training, evaluation, model-output integration, real data,
+self-play, league or P8-P12.
 
 ## Data-system files
 
