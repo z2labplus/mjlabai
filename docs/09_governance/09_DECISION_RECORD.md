@@ -14,6 +14,61 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-06 — DR-0118 — P8-P12 Transition Scope Definition
+
+Decision:
+
+```text
+P8-P12 transition scope, entry criteria and first planning task are defined after post-full-P7 transition review.
+```
+
+Context:
+
+- `12F` recorded `A. No post-full-P7 transition blocker found for defining
+  P8-P12 docs-only scope / entry criteria / first planning task.`
+- Full P7 is closed only for the documented P7 supervised-learning scope.
+- P8-P12 entry, implementation, training, evaluation, self-play, league,
+  source approval, source ingestion, real data, model-output integration and
+  model-strength evidence remained unapproved before this decision.
+
+Rationale:
+
+- A formal transition-scope definition is required before any later P8-P12
+  planning review, approval decision or implementation.
+- The transition scope must cover all later-stage workstreams without
+  approving any of them.
+- The safest next task is a docs-only review gate for the new transition
+  scope, not P8-specific scope or implementation approval.
+
+Consequences:
+
+- Added:
+  - `docs/12_technical_plan/12G_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK.md`
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review P8-P12 transition scope, entry criteria and first planning task after post-full-P7 transition review.`
+- This decision does not approve P8-P12 entry, P8 implementation,
+  implementation prompts, source approval, source ingestion, parser / reader /
+  ingestion, feature extraction, label generation, dataset construction,
+  training, evaluation, model-output integration, model-strength evidence,
+  Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison, candidate
+  promotion, real-data use, self-play or league.
+
+Linked docs:
+
+- `docs/12_technical_plan/12G_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK.md`
+- `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`
+- `docs/03_supervised_policy/03BL_FINAL_FULL_P7_CLOSURE_REVIEW.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+P8-P12 transition scope / entry criteria / first planning task are defined.
+The next task is a docs-only review gate; P8-P12 entry and implementation
+remain unapproved.
+
 ## 2026-07-06 — DR-0117 — Post-Full-P7 Transition Review
 
 Decision:

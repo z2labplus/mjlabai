@@ -2,18 +2,20 @@
 
 ## Current stage
 
-P8-P12 transition scope / entry criteria / first planning task definition after
+P8-P12 transition scope / entry criteria / first planning task review after
 post-full-P7 transition review.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
 blocker found for defining P8-P12 docs-only scope / entry criteria / first
-planning task.` Production code, tests, fixtures, data files, source approval,
-source ingestion, broad parser / reader / ingestion, feature extraction, label
-generation, dataset construction, training, evaluation, model-output
-integration, self-play, league and P8-P12 remain unapproved. The current first
-task is `Define P8-P12 transition scope, entry criteria and first planning
-task after post-full-P7 transition review`.
+planning task.` `12G` defines that transition scope, entry criteria and first
+planning task and selects a docs-only review gate as the next step. Production
+code, tests, fixtures, data files, source approval, source ingestion, broad
+parser / reader / ingestion, feature extraction, label generation, dataset
+construction, training, evaluation, model-output integration, self-play,
+league and P8-P12 remain unapproved. The current first task is `Review
+P8-P12 transition scope, entry criteria and first planning task after
+post-full-P7 transition review`.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -293,12 +295,13 @@ P7 full-scope handoff/evidence-index review = complete in `03BJ`; selected risk/
 P7 full-scope risk/source-rights/evidence consistency review = complete in `03BK`; no consistency blocker found; selected final full P7 closure review gate as next
 Final full P7 closure review gate = complete in `03BL`; full P7 can close only for documented P7 supervised-learning scope
 Post-full-P7 transition review = complete in `12F`; no blocker found for defining P8-P12 docs-only scope / entry criteria / first planning task
+P8-P12 transition scope, entry criteria and first planning task = defined in `12G`; selected docs-only review gate as next
 Full P7 = closed for documented supervised-learning scope only
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = define P8-P12 transition scope, entry criteria and first planning task after post-full-P7 transition review
+Next = review P8-P12 transition scope, entry criteria and first planning task after post-full-P7 transition review
 ```
 
 ## AI role
@@ -307,12 +310,11 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Bridge from full P7 closure into a docs-only P8-P12 transition-scope
-definition task while keeping P8-P12 entry, implementation, implementation
-prompts, source approval, source ingestion, real data, feature extraction,
-label generation, dataset construction, training, evaluation, self-play,
-league and model-strength claims unapproved until separate later approvals
-exist.
+Review the docs-only P8-P12 transition-scope definition after full P7 closure
+while keeping P8-P12 entry, implementation, implementation prompts, source
+approval, source ingestion, real data, feature extraction, label generation,
+dataset construction, training, evaluation, self-play, league and
+model-strength claims unapproved until separate later approvals exist.
 
 This supports the north-star target by ensuring that any future supervised
 learning, RL, search, league or LuckyJ validation work starts only after the
@@ -409,4 +411,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Define P8-P12 transition scope, entry criteria and first planning task after post-full-P7 transition review.
+Review P8-P12 transition scope, entry criteria and first planning task after post-full-P7 transition review.

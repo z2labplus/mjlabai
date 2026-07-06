@@ -28,20 +28,21 @@ Current stage interpretation:
 
 ```text
 Current active stage is P8-P12 transition scope / entry criteria / first
-planning task definition after post-full-P7 transition review:
+planning task review after post-full-P7 transition review:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
 `A. No post-full-P7 transition blocker found for defining P8-P12 docs-only
-scope / entry criteria / first planning task.` This permits only the next
-docs-only transition-planning task. It does not approve P8-P12 entry,
+scope / entry criteria / first planning task.` `12G` defines that docs-only
+transition scope, entry criteria and first planning task and selects a separate
+review gate as the next step. This does not approve P8-P12 entry,
 implementation, implementation prompts, broader P7 implementation, source
 approval, source ingestion, broad parser / reader / ingestion, actual feature
 extraction, actual label generation, supervised dataset construction, split
 creation, leakage-test implementation, training-data approval, training-run
 approval, training, model architecture / trainer implementation, evaluation
 implementation, model-output integration, model-strength evidence, real data,
-self-play or league. The next task is `Define P8-P12 transition scope, entry
+self-play or league. The next task is `Review P8-P12 transition scope, entry
 criteria and first planning task after post-full-P7 transition review`.
 
 P0 / P1 / P2 are basically established.
@@ -688,22 +689,22 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define P8-P12 transition scope, entry criteria and first planning task after
+Review P8-P12 transition scope, entry criteria and first planning task after
 post-full-P7 transition review.
 `03BL` closed full P7 only for the documented P7 supervised-learning scope.
 `12F` found no post-full-P7 transition blocker for defining P8-P12 docs-only
-scope / entry criteria / first planning task. The next task remains docs-only
-transition planning and must not approve P8-P12 entry, define a P8-P12
-implementation prompt, add fixtures or data files, modify production code or
-tests, or approve / perform source approval, source ingestion, broad parser /
-reader / ingestion, actual feature extraction, actual label generation,
-supervised dataset construction, split creation, leakage-test implementation,
-training data, training-run approval, training, model architecture or trainer
-implementation, evaluation implementation, metric implementation, evaluation
-runner, benchmark harness, real Tenhou, real haifu, external logs, platform
-data, model-output integration, CLI, broad file ingestion, self-play, league,
-Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison or
-candidate-promotion claims.
+scope / entry criteria / first planning task. `12G` defines that transition
+scope and selects this docs-only review gate. The next task must not approve
+P8-P12 entry, define a P8-P12 implementation prompt, add fixtures or data
+files, modify production code or tests, or approve / perform source approval,
+source ingestion, broad parser / reader / ingestion, actual feature
+extraction, actual label generation, supervised dataset construction, split
+creation, leakage-test implementation, training data, training-run approval,
+training, model architecture or trainer implementation, evaluation
+implementation, metric implementation, evaluation runner, benchmark harness,
+real Tenhou, real haifu, external logs, platform data, model-output
+integration, CLI, broad file ingestion, self-play, league, Tenhou evidence,
+stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion claims.
 ```
 
 Latest Akochan F1 audit summary:

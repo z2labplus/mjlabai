@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-06 — P8-P12 transition scope definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12G` is mistaken for P8-P12 entry approval. | Governance / Stage Control | High | Medium | `12G`, `10_NEXT`, stage contract and evidence log state that P8-P12 remain unapproved and the next task is review only. | Open |
+| P8-P12 entry criteria are mistaken for implementation approval. | Governance / Execution | High | Medium | Require a separate review gate and later explicit approval decision before any exact implementation task. | Open |
+| Full P7 closure is mistaken for training readiness. | Governance / Scope | High | Medium | `12G` repeats that full P7 closure is limited to documented supervised-learning scope and does not approve training. | Open |
+| Source approval and real-data prerequisites are skipped. | Governance / Data | High | Medium | `12G` keeps source approval, source ingestion, real Tenhou, real haifu, external logs, platform data and account material unapproved. | Open |
+| Later-stage workstreams drift into training, evaluation, self-play or league. | Governance / Execution | High | Medium | New `10_NEXT` first item is a docs-only review gate and forbids implementation, training, evaluation, self-play and league. | Open |
+| Transition-scope definition evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log classifies `12G` as transition-scope definition evidence only. | Open |
+
 ## 2026-07-06 — Post-full-P7 transition review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

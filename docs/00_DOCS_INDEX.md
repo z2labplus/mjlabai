@@ -37,6 +37,7 @@ docs/12_technical_plan/12C_POST_CURRENT_SCOPE_P6_TRANSITION_REVIEW.md
 docs/12_technical_plan/12D_POST_FULL_P6_TRANSITION_REVIEW.md
 docs/12_technical_plan/12E_POST_CURRENT_SCOPE_P7_TRANSITION_REVIEW.md
 docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md
+docs/12_technical_plan/12G_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -84,6 +85,16 @@ P8-P12 docs-only scope / entry criteria / first planning task.` It selects the
 next docs-only transition-planning task and remains transition-review evidence
 only, not P8-P12 entry approval, implementation approval, training approval,
 real-data approval, self-play approval, league approval or model-strength
+evidence.
+
+`docs/12_technical_plan/12G_P8_P12_TRANSITION_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK.md`
+defines the P8-P12 transition scope, entry criteria and first planning task
+after the post-full-P7 transition review. It records the P8-P12 non-approval
+baseline, candidate workstream inventory, E1-E12 entry criteria, non-entry
+conditions, risk controls, evidence requirements and the next docs-only review
+gate. It is transition-scope definition evidence only, not P8-P12 entry
+approval, P8 implementation approval, training approval, evaluation approval,
+self-play approval, league approval, real-data approval or model-strength
 evidence.
 
 ## Supervised-policy files
