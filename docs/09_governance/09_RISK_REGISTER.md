@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-06 — Full P7 closure criteria definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Full P7 closure criteria are mistaken for actual full P7 closure. | Governance / Scope | High | Medium | `03BG`, `10_NEXT` and stage contract state this is criteria definition only and the next step is a review gate. | Open |
+| The criteria matrix is mistaken for approval of source, ingestion, feature/label, dataset, training or evaluation workstreams. | Governance / Scope | High | Medium | `03BG` marks those workstreams not pass, deferred or blocked and records no implementation approval. | Open |
+| Current synthetic/local smoke artifacts are over-read as full supervised-learning readiness. | Governance / Evidence | High | Medium | `03BG` separates current-scope pass from full P7 pass and lists non-closure evidence. | Open |
+| P8-P12 entry is treated as available after criteria definition. | Governance / Stage Control | High | Medium | `03BG` requires full P7 closure plus a separate post-full-P7 transition review before P8-P12. | Open |
+| Review gate drifts into production code, tests, fixtures or data files. | Governance / Execution | High | Medium | New `10_NEXT` first item is docs-only review and forbids implementation, tests, fixtures and data. | Open |
+| Criteria evidence is overclaimed as model-strength, Tenhou ranked, stable-dan or LuckyJ evidence. | Evaluation / Governance | High | Medium | Evidence log classifies this as full P7 closure criteria definition evidence only. | Open |
+
 ## 2026-07-06 — P7 next full-scope planning step definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

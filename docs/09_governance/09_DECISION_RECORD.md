@@ -14,6 +14,68 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-06 — DR-0111 — Define Full P7 Closure Criteria
+
+Decision:
+
+```text
+Full P7 closure criteria are defined after parser-reader smoke extension current-scope acceptance.
+```
+
+Context:
+
+- `03BE` accepted the exact P7 minimal synthetic/local parser-reader smoke
+  extension implementation as current-scope complete.
+- `03BF` selected full P7 closure criteria definition as the next docs-only
+  planning step.
+- Current accepted P7 scope is exact synthetic/local smoke plus
+  docs/governance readiness evidence only.
+- Full P7 remains open.
+- Source approval, source ingestion, broad parser / reader / ingestion,
+  actual feature extraction, actual label generation, supervised dataset
+  construction, training, evaluation, model-output integration, real data,
+  self-play, league and P8-P12 remain unapproved.
+
+Rationale:
+
+- P7 needs auditable full-stage closure criteria before any future final
+  closure review can be considered.
+- Current synthetic/local smoke artifacts need to remain bounded as guardrail
+  evidence, not full supervised-learning readiness.
+- Workstream statuses must be classified as pass, not pass, deferred,
+  blocked, later-stage or out-of-scope before closure can be reviewed.
+- P8-P12 entry must remain blocked until full P7 closure and a separate
+  transition review.
+
+Consequences:
+
+- Added:
+  - `docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- The next task in `docs/10_next/10_NEXT.md` is:
+  `Review full P7 closure criteria after parser-reader smoke extension current-scope acceptance.`
+- This decision does not close full P7 and does not approve broader P7
+  implementation, source approval, source ingestion, broad parser / reader /
+  ingestion, feature extraction, label generation, dataset construction,
+  training, evaluation, model-output integration, model-strength evidence,
+  Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison, candidate
+  promotion, real-data use, self-play, league or P8-P12 entry.
+
+Linked docs:
+
+- `docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/03_supervised_policy/03BF_P7_NEXT_FULL_SCOPE_PLANNING_STEP_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/03_supervised_policy/03BE_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
+- `docs/03_supervised_policy/03AW_P7_FULL_SCOPE_EXPANSION_PLAN_AFTER_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/03_supervised_policy/03AX_P7_FULL_SCOPE_EXPANSION_PLAN_REVIEW_AFTER_CURRENT_SCOPE_ACCEPTANCE.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+
+Status:
+
+Full P7 closure criteria defined; review gate is next. Full P7 remains open.
+
 ## 2026-07-06 — DR-0110 — Define Next P7 Full-Scope Planning Step
 
 Decision:

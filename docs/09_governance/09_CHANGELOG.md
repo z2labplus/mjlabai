@@ -1,5 +1,38 @@
 # 09_CHANGELOG
 
+## 2026-07-06 - v3.24
+
+- Defined full P7 closure criteria after parser-reader smoke extension
+  current-scope acceptance.
+- Added:
+  - `docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- Defined:
+  - current accepted P7 current-scope inventory.
+  - current full P7 open scope.
+  - why current-scope smoke artifacts do not close full P7.
+  - closure criteria vocabulary.
+  - workstream closure criteria matrix.
+  - required full P7 closure criteria.
+  - exit readiness checklist.
+  - required remaining, deferred, blocked and later-stage items.
+  - evidence requirements and non-closure evidence.
+  - P8-P12 non-entry conditions.
+- New `10_NEXT` first item:
+  `Review full P7 closure criteria after parser-reader smoke extension current-scope acceptance.`
+- This is full P7 closure criteria definition evidence only.
+- No full P7 closure, production code, tests, fixtures, data files,
+  implementation logic, source approval, source ingestion, broad parser /
+  reader / ingestion, CLI, actual feature extraction, actual label
+  generation, supervised dataset construction, split creation,
+  leakage-test implementation, training-data approval, training-run approval,
+  training, model architecture / trainer implementation, checkpoint /
+  weights, evaluation implementation, metric implementation, evaluation
+  runner, benchmark harness, model-output integration, model-strength
+  evidence, Tenhou ranked evidence, stable-dan ranked-game evidence, LuckyJ
+  `10.68` comparison, candidate promotion, real Tenhou, real haifu, external
+  logs, platform data, self-play, league or P8-P12 work was added or
+  approved.
+
 ## 2026-07-06 - v3.23
 
 - Defined the next P7 full-scope planning step after parser-reader smoke

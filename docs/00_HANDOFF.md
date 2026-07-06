@@ -27,20 +27,22 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P7 full-scope closure criteria definition after
+Current active stage is P7 full-scope closure criteria review after
 parser-reader smoke extension current-scope acceptance:
-`03BF` defines the next P7 full-scope planning step after `03BE` accepted the
-exact parser-reader smoke extension current scope. It reviews current accepted
-P7 current-scope items, full P7 open scope, remaining workstreams and
-candidate next directions, then selects `Define full P7 closure criteria after
-parser-reader smoke extension current-scope acceptance` as the next docs-only
-task. This does not close full P7 and does not approve broader P7
+`03BG` defines full P7 closure criteria after `03BF` selected that docs-only
+planning step. It records accepted exact synthetic/local P7 current-scope
+artifacts, full P7 open scope, why current-scope smoke artifacts do not close
+full P7, workstream closure criteria, required/deferred/blocked/later-stage
+items, evidence requirements, non-closure evidence and P8-P12 non-entry
+conditions. This does not close full P7 and does not approve broader P7
 implementation, source approval, source ingestion, broad parser / reader /
 ingestion, actual feature extraction, actual label generation, supervised
 dataset construction, split creation, leakage-test implementation,
 training-data approval, training-run approval, training, model architecture /
 trainer implementation, evaluation implementation, model-output integration,
-model-strength evidence, real data, self-play, league or P8-P12.
+model-strength evidence, real data, self-play, league or P8-P12. The next task
+is `Review full P7 closure criteria after parser-reader smoke extension
+current-scope acceptance`.
 
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
@@ -686,21 +688,21 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define full P7 closure criteria after parser-reader smoke extension
+Review full P7 closure criteria after parser-reader smoke extension
 current-scope acceptance.
-`03BF` selected this as the next docs-only planning step after `03BE`. The
-criteria task must define what full P7 closure would require, what remains
-deferred / blocked / later-stage, and what cannot count as closure. It must
-not close full P7, add fixtures or data files, modify production code or
-tests, or approve / perform source approval, source ingestion, broad parser /
-reader / ingestion, actual feature extraction, actual label generation,
-supervised dataset construction, split creation, leakage-test implementation,
-training data, training-run approval, training, model architecture or trainer
-implementation, evaluation implementation, metric implementation, evaluation
-runner, benchmark harness, real Tenhou, real haifu, external logs, platform
-data, model-output integration, CLI, broad file ingestion, self-play, league,
-P8-P12 work, Tenhou evidence, stable-dan evidence, LuckyJ `10.68` comparison
-or candidate-promotion claims.
+`03BG` defined what full P7 closure would require, what remains deferred /
+blocked / later-stage, and what cannot count as closure. The review task must
+inspect those criteria only. It must not close full P7, add fixtures or data
+files, modify production code or tests, or approve / perform source approval,
+source ingestion, broad parser / reader / ingestion, actual feature
+extraction, actual label generation, supervised dataset construction, split
+creation, leakage-test implementation, training data, training-run approval,
+training, model architecture or trainer implementation, evaluation
+implementation, metric implementation, evaluation runner, benchmark harness,
+real Tenhou, real haifu, external logs, platform data, model-output
+integration, CLI, broad file ingestion, self-play, league, P8-P12 work, Tenhou
+evidence, stable-dan evidence, LuckyJ `10.68` comparison or
+candidate-promotion claims.
 ```
 
 Latest Akochan F1 audit summary:

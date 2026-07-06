@@ -137,6 +137,7 @@ docs/03_supervised_policy/03BC_P7_PARSER_READER_SMOKE_EXTENSION_REVIEW_BLOCKER_R
 docs/03_supervised_policy/03BD_P7_PARSER_READER_SMOKE_EXTENSION_IMPLEMENTATION_REVIEW_AFTER_BLOCKER_FIX.md
 docs/03_supervised_policy/03BE_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE_DECISION.md
 docs/03_supervised_policy/03BF_P7_NEXT_FULL_SCOPE_PLANNING_STEP_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md
+docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md
 src/mjlabai/supervised/synthetic_parser_reader_smoke.py
 tests/supervised/test_synthetic_parser_reader_smoke.py
 src/mjlabai/supervised/synthetic_parser_reader_smoke_extension.py
@@ -806,6 +807,20 @@ accepted P7 current-scope items, full P7 open scope, remaining workstreams and
 candidate next directions, then selects `Define full P7 closure criteria after
 parser-reader smoke extension current-scope acceptance` as the next docs-only
 task. It is next-task definition evidence only and does not close full P7,
+approve broader P7 implementation, approve source approval, approve source
+ingestion, approve broad parser / reader / ingestion, approve feature
+extraction, approve label generation, approve supervised dataset construction,
+approve training, approve evaluation, approve model-output integration,
+approve real data, approve self-play, approve league or approve P8-P12.
+
+`docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+defines full P7 closure criteria after `03BE` and `03BF`. It records current
+accepted exact synthetic/local P7 current-scope artifacts, current full P7 open
+scope, why current-scope smoke artifacts do not close full P7, closure
+vocabulary, a workstream closure criteria matrix, required closure criteria,
+exit readiness checklist, required/deferred/blocked/later-stage items,
+evidence requirements, non-closure evidence and P8-P12 non-entry conditions.
+It is closure-criteria definition evidence only. It does not close full P7,
 approve broader P7 implementation, approve source approval, approve source
 ingestion, approve broad parser / reader / ingestion, approve feature
 extraction, approve label generation, approve supervised dataset construction,

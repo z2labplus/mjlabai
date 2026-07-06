@@ -28,21 +28,22 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7 full-scope closure criteria definition after parser-reader smoke extension
+P7 full-scope closure criteria review after parser-reader smoke extension
 current-scope acceptance.
-`03BF` selected the next P7 full-scope planning step after `03BE`: define full
-P7 closure criteria after parser-reader smoke extension current-scope
-acceptance. `03BF` reviewed current accepted P7 current-scope items, full P7
-open scope, remaining workstreams and candidate next directions. It does not
-close full P7 and does not approve broader P7 implementation, source approval,
-source ingestion, broad parser / reader / ingestion, actual feature
-extraction, actual label generation, supervised dataset construction, split
-creation, leakage-test implementation, training data, training, model
-architecture / trainer implementation, evaluation implementation, metric
-implementation, evaluation runner, benchmark harness, model-output
-integration, real data, self-play, league or P8-P12. The next task is
-`Define full P7 closure criteria after parser-reader smoke extension
-current-scope acceptance`.
+`03BG` defines full P7 closure criteria after `03BE` / `03BF`. It records
+accepted exact synthetic/local P7 current-scope artifacts, full P7 open scope,
+why current-scope smoke artifacts do not close full P7, closure vocabulary,
+workstream closure criteria, required closure criteria, exit readiness,
+required/deferred/blocked/later-stage items, evidence requirements,
+non-closure evidence and P8-P12 non-entry conditions. It does not close full
+P7 and does not approve broader P7 implementation, source approval, source
+ingestion, broad parser / reader / ingestion, actual feature extraction,
+actual label generation, supervised dataset construction, split creation,
+leakage-test implementation, training data, training, model architecture /
+trainer implementation, evaluation implementation, metric implementation,
+evaluation runner, benchmark harness, model-output integration, real data,
+self-play, league or P8-P12. The next task is `Review full P7 closure
+criteria after parser-reader smoke extension current-scope acceptance`.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -660,18 +661,22 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Define full P7 closure criteria after parser-reader smoke extension
+Review full P7 closure criteria after parser-reader smoke extension
 current-scope acceptance.
 ```
 
-`docs/03_supervised_policy/03BF_P7_NEXT_FULL_SCOPE_PLANNING_STEP_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
-defines the next P7 full-scope planning step after `03BE`. It selects
-`Define full P7 closure criteria after parser-reader smoke extension
-current-scope acceptance` as the next docs-only task. It does not close full
-P7 and does not approve broader P7 implementation, source approval, source
-ingestion, broad parser / reader / ingestion, feature extraction, label
-generation, dataset construction, training, evaluation, model-output
+`docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+defines full P7 closure criteria after `03BE` / `03BF`. It selects
+`Review full P7 closure criteria after parser-reader smoke extension
+current-scope acceptance` as the next docs-only review gate. It does not close
+full P7 and does not approve broader P7 implementation, source approval,
+source ingestion, broad parser / reader / ingestion, feature extraction,
+label generation, dataset construction, training, evaluation, model-output
 integration, real data, self-play, league or P8-P12.
+
+`docs/03_supervised_policy/03BF_P7_NEXT_FULL_SCOPE_PLANNING_STEP_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+defines the previous P7 full-scope planning step after `03BE` and selected
+the `03BG` closure criteria definition task.
 
 `docs/03_supervised_policy/03BE_P7_MINIMAL_SYNTHETIC_LOCAL_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE_DECISION.md`
 records decision `A. ACCEPTED as current-scope complete` for the exact P7

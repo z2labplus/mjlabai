@@ -8,6 +8,60 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-06 — Full P7 closure criteria definition after parser-reader smoke extension acceptance
+
+- Type: internal documentation / full P7 closure criteria definition evidence.
+- Stage: P7 supervised learning / full-scope closure criteria review after
+  parser-reader smoke extension current-scope acceptance.
+- Added criteria document:
+  - `docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
+- Defined current accepted P7 current-scope items:
+  - docs-only supervised-learning readiness chain.
+  - minimal synthetic/local supervised feature-label smoke implementation.
+  - broader P7 minimal synthetic/local parser-reader smoke implementation.
+  - P7 minimal synthetic/local parser-reader smoke extension implementation.
+  - exact `03BC` test-only blocker fix.
+  - direct docs/governance synchronization.
+- Defined full P7 open scope:
+  - source approval and source ingestion.
+  - broad parser / reader / ingestion.
+  - actual feature extraction and label generation.
+  - supervised dataset construction, splits and leakage controls.
+  - training-data approval, training-run approval and training.
+  - model architecture / trainer, checkpoints and weights.
+  - evaluation, model-output integration and model-strength evidence.
+  - real Tenhou, real haifu, external logs, platform data, self-play, league
+    and P8-P12.
+- Defined closure vocabulary, workstream matrix, required closure criteria,
+  exit readiness checklist, required/deferred/blocked/later-stage items,
+  evidence requirements, non-closure evidence and P8-P12 non-entry
+  conditions.
+- New next task:
+  - `Review full P7 closure criteria after parser-reader smoke extension current-scope acceptance.`
+- Evidence grade:
+  - Full P7 closure criteria definition evidence only.
+- Not evidence of:
+  - full P7 closure.
+  - broader P7 implementation approval.
+  - source approval or source ingestion approval.
+  - broad parser / reader / ingestion approval.
+  - actual feature extraction or label generation.
+  - supervised dataset construction, split creation or leakage-test
+    implementation.
+  - training-data approval, training-run approval or training.
+  - model architecture or trainer implementation.
+  - checkpoint / weights approval.
+  - evaluation implementation, metric implementation, evaluation runner or
+    benchmark harness.
+  - model-output integration.
+  - model-strength evidence.
+  - Tenhou ranked performance.
+  - stable-dan ranked-game evidence.
+  - LuckyJ `10.68` comparison.
+  - candidate promotion.
+  - real-data approval.
+  - self-play, league or P8-P12 entry approval.
+
 ### 2026-07-06 — P7 next full-scope planning step definition after parser-reader smoke extension acceptance
 
 - Type: internal documentation / P7 next full-scope planning step definition

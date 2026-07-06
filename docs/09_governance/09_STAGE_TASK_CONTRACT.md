@@ -2,15 +2,17 @@
 
 ## Current stage
 
-P7 full-scope closure criteria definition after parser-reader smoke extension
+P7 full-scope closure criteria review after parser-reader smoke extension
 current-scope acceptance.
-`03BF` selected the next P7 full-scope planning step after `03BE`: define full
-P7 closure criteria after parser-reader smoke extension current-scope
-acceptance. Production code, tests, fixtures, data files, source approval,
-source ingestion, broad parser / reader / ingestion, feature extraction, label
+`03BG` defines full P7 closure criteria after `03BE` / `03BF`: accepted exact
+synthetic/local P7 current-scope artifacts, full P7 open scope, workstream
+closure criteria, required/deferred/blocked/later-stage items, evidence
+requirements, non-closure evidence and P8-P12 non-entry conditions.
+Production code, tests, fixtures, data files, source approval, source
+ingestion, broad parser / reader / ingestion, feature extraction, label
 generation, dataset construction, training, evaluation, model-output
 integration, self-play, league and P8-P12 remain unapproved. The current first
-task is `Define full P7 closure criteria after parser-reader smoke extension
+task is `Review full P7 closure criteria after parser-reader smoke extension
 current-scope acceptance`.
 
 Earlier context:
@@ -285,12 +287,13 @@ P7 parser-reader smoke extension exact test-only blocker fix = complete; only `t
 P7 parser-reader smoke extension implementation review after blocker fix = complete in `03BD`; review can close
 P7 parser-reader smoke extension current-scope acceptance decision = complete in `03BE`; accepted exact scope only
 P7 next full-scope planning step definition = complete in `03BF`; selected full P7 closure criteria definition as next
+Full P7 closure criteria definition = complete in `03BG`; selected closure criteria review as next
 Full P7 = not closed
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = define full P7 closure criteria after parser-reader smoke extension current-scope acceptance
+Next = review full P7 closure criteria after parser-reader smoke extension current-scope acceptance
 ```
 
 ## AI role
@@ -401,5 +404,5 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Define full P7 closure criteria after parser-reader smoke extension
+Review full P7 closure criteria after parser-reader smoke extension
 current-scope acceptance.
