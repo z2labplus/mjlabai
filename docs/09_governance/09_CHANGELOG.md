@@ -1,5 +1,30 @@
 # 09_CHANGELOG
 
+## 2026-07-13 - v3.40
+
+- Reviewed the P8 self-play protocol boundary before any implementation.
+- Added:
+  - `docs/12_technical_plan/12P_P8_SELF_PLAY_PROTOCOL_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- Review decision:
+  - `A. Review can close.`
+- Confirmed:
+  - scope, planning recap and non-approval baseline.
+  - protocol vocabulary/classes, identity and lifecycle.
+  - information/action, reproducibility and termination boundaries.
+  - candidate manifest and training/evaluation separation.
+  - reward, opponent, source, model-output and evidence boundaries.
+  - SP-E1 through SP-E15, stop conditions and candidate directions.
+- Recorded future notes for scoped P8 runner/environment wording,
+  cross-episode policy updates, seat/retry bias and candidate manifest
+  refinements; none is current execution permission or a review blocker.
+- New `10_NEXT` first item:
+  `Define P8 RL objective / reward specification boundary before any implementation.`
+- This is protocol-boundary review evidence only. No entry/implementation,
+  implementation prompt, code/tests/fixtures/data, reward implementation,
+  self-play, RL, training, evaluation, league, source/real-data work,
+  model-output integration, strength claim or P9-P12 work was added or
+  approved.
+
 ## 2026-07-13 - v3.39
 
 - Defined the P8 self-play protocol boundary before any implementation.

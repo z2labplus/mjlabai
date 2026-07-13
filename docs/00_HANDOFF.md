@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P8 self-play protocol boundary review before any
-implementation:
+Current active stage is P8 RL objective / reward specification boundary
+definition before any implementation:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -54,9 +54,12 @@ model-output / evaluation / source-real-data boundaries and stop conditions.
 P8 self-play protocol boundary, including protocol vocabulary, candidate
 protocol classes, participant/artifact identity, episode lifecycle,
 information/action boundaries, reproducibility, termination, manifest fields,
-training/evaluation separation, SP-E1 through SP-E15 and stop conditions. The
-next first task is `Review P8 self-play protocol boundary before any
-implementation.` This next task remains a docs-only review gate and does not
+training/evaluation separation, SP-E1 through SP-E15 and stop conditions.
+`12P` reviews `12O`, records `A. Review can close`, and captures future notes
+for scoped P8 runner/environment wording, cross-episode policy updates,
+seat/retry selection bias and candidate manifest refinements. The next first
+task is `Define P8 RL objective / reward specification boundary before any
+implementation.` This next task remains docs-only and does not
 approve P8-P12 entry, P8 implementation,
 implementation prompts, broader P7 implementation, source approval, source
 ingestion, broad parser / reader / ingestion, actual feature extraction,
@@ -711,10 +714,11 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review P8 self-play protocol boundary before any implementation. `12O`
-defines that boundary after the reviewed `12M`/`12N` dependency-map chain.
-The review task must remain docs-only and must not approve P8 entry, P8
-implementation, an implementation prompt, self-play, RL, training,
+Define P8 RL objective / reward specification boundary before any
+implementation. `12P` reviewed the `12O` protocol boundary and recorded
+`A. Review can close.` The objective/reward task must remain docs-only and
+must not approve P8 entry, P8 implementation, an implementation prompt,
+implement reward, select or run RL, execute self-play or training,
 evaluation, league, source/real-data work, model-output integration,
 model-strength claims or P9-P12 entry.
 ```
@@ -995,8 +999,9 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is docs-only P8 self-play protocol boundary review after
-  the `12O` definition. Full P7 is closed only for documented P7
+- Current next work is docs-only P8 RL objective / reward specification
+  boundary definition after the `12P` protocol review. Full P7 is closed only
+  for documented P7
   supervised-learning scope; P8 entry/implementation and P9-P12 remain
   unapproved. Do not run self-play, RL, training, evaluation or league,
   access real data, integrate model output or make strength claims.

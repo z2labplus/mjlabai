@@ -134,6 +134,24 @@ not approve P8 entry/implementation, self-play, RL, training, evaluation,
 league, source/real-data work, model-output integration, model-strength
 evidence or P9-P12 entry.
 
+## 2026-07-13 P8 Self-Play Protocol Boundary Review Milestone Update
+
+`12P` reviews the `12O` P8 self-play protocol boundary and records
+`A. Review can close.` It confirms scope, non-approval baseline, vocabulary,
+candidate classes, identity, lifecycle, information/action, reproducibility,
+termination, candidate manifest, training/evaluation separation, downstream
+boundaries, SP-E1 through SP-E15 and stop conditions.
+
+The review records future notes for scoped P8 runner/environment wording,
+cross-episode policy updates, seat/retry selection bias and candidate manifest
+refinements. The next docs-only task is `Define P8 RL objective / reward
+specification boundary before any implementation`.
+
+This milestone update is protocol-boundary review evidence only. It does not
+approve P8 entry/implementation, reward implementation, self-play, RL,
+training, evaluation, league, source/real-data work, model-output integration,
+strength evidence or P9-P12 entry.
+
 ## Current position
 
 ```text

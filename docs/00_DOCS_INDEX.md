@@ -46,6 +46,7 @@ docs/12_technical_plan/12L_P8_RISK_AND_EVIDENCE_TAXONOMY_REVIEW_BEFORE_ANY_IMPLE
 docs/12_technical_plan/12M_P8_SELF_PLAY_RL_DEPENDENCY_MAP_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12N_P8_SELF_PLAY_RL_DEPENDENCY_MAP_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12O_P8_SELF_PLAY_PROTOCOL_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12P_P8_SELF_PLAY_PROTOCOL_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -202,6 +203,18 @@ directions. It selects a docs-only review gate next. It is protocol-boundary
 definition evidence only, not P8 entry/implementation approval, self-play/RL/
 training/evaluation/league execution, source/real-data/model-output approval,
 strength evidence or P9-P12 entry.
+
+`docs/12_technical_plan/12P_P8_SELF_PLAY_PROTOCOL_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+reviews `12O`, confirms its scope, protocol vocabulary/classes, participant/
+artifact identity, lifecycle, information/action, reproducibility,
+termination, candidate manifest, training/evaluation separation, downstream
+boundaries, SP-E1 through SP-E15, stop conditions and governance consistency,
+and records `A. Review can close.` It scopes runner/environment assertions to
+P8 self-play and records future notes for cross-episode updates, retry/seat
+bias and candidate manifest refinements. It selects docs-only RL objective /
+reward specification boundary definition next. It is protocol-boundary review
+evidence only, not entry/implementation, execution, strength or P9-P12
+approval.
 
 ## Supervised-policy files
 

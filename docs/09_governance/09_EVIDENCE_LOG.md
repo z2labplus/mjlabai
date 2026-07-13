@@ -8,6 +8,52 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-13 — P8 self-play protocol boundary review
+
+- Type: internal documentation / P8 protocol-boundary review evidence.
+- Stage: P8 RL objective / reward specification boundary definition before
+  any implementation.
+- Added review document:
+  - `docs/12_technical_plan/12P_P8_SELF_PLAY_PROTOCOL_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- Primary reviewed artifact:
+  - `docs/12_technical_plan/12O_P8_SELF_PLAY_PROTOCOL_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Reviewed:
+  - scope, Full P7/P8 recap and non-approval baseline.
+  - protocol vocabulary/classes, participant/artifact identity and lifecycle.
+  - information/observation, action/legality and reproducibility.
+  - termination/abort/invalid handling and candidate manifest.
+  - training/evaluation separation and downstream reward/opponent/source/model
+    boundaries.
+  - evidence grade, SP-E1 through SP-E15, stop conditions and candidate
+    directions.
+- Review notes:
+  - runner/environment/simulator wording is scoped to P8 self-play.
+  - future cross-episode updates require explicit schedule/version/artifact
+    identity.
+  - future seat/retry/invalid handling must control selection bias and retain
+    lineage.
+  - candidate manifest refinements remain future fields, not schema approval.
+- Review decision:
+  - `A. Review can close.`
+- Selected next task:
+  - `Define P8 RL objective / reward specification boundary before any implementation.`
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke_extension.py`: passed, 15 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`: passed, 1 test.
+  - `python3 -m unittest tests/data/test_replay_schema.py`: passed, 7 tests.
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`: passed, 1 test.
+- Evidence grade:
+  - P8 self-play protocol boundary review evidence only.
+- Not evidence of:
+  - P8 entry/implementation, reward implementation or an implementation prompt.
+  - self-play, RL, training, tuning, evaluation or league execution.
+  - source approval/ingestion, real-data use or model-output integration.
+  - strength, Tenhou, stable-dan, LuckyJ or promotion evidence.
+  - P9-P12 approval.
+
 ### 2026-07-13 — P8 self-play protocol boundary definition
 
 - Type: internal documentation / P8 protocol-boundary definition evidence.

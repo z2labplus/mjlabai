@@ -14,6 +14,43 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-13 — DR-0127 — P8 Self-Play Protocol Boundary Review
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Context:
+
+- `12O` defined the P8 self-play protocol boundary.
+- P8 entry/implementation, every executable workstream and P9-P12 remained
+  unapproved.
+
+Rationale:
+
+- `12O` sufficiently separates protocol vocabulary, identities, lifecycle,
+  information/action, reproducibility, termination, manifest and evidence.
+- All candidate protocol classes remain unapproved and non-executable.
+- SP-E1 through SP-E15 retain separate review, approval and `10_NEXT` gates.
+- Scope wording, cross-episode policy updates, retry/seat bias and manifest
+  refinements are recorded as future notes rather than hidden assumptions.
+- No blocker or overclaim was found.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12P_P8_SELF_PLAY_PROTOCOL_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`.
+- The next task is `Define P8 RL objective / reward specification boundary before any implementation.`
+- No P8 entry/implementation, reward implementation, self-play/RL/training/
+  evaluation/league, source/real-data work, model-output integration, strength
+  evidence or P9-P12 work is approved.
+
+Status:
+
+Protocol-boundary review complete; docs-only objective/reward boundary
+definition pending.
+
 ## 2026-07-13 — DR-0126 — P8 Self-Play Protocol Boundary Definition
 
 Decision:

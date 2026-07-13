@@ -28,7 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 self-play protocol boundary review before any implementation.
+P8 RL objective / reward specification boundary definition before any
+implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
@@ -63,9 +64,11 @@ linkage, key dependency boundaries and stop conditions. `12N` reviews that
 map and records `A. Review can close.` `12O` defines the P8 self-play
 protocol boundary, including participants/artifacts, episode lifecycle,
 information/actions, reproducibility, termination, manifest, evidence and
-SP-E1 through SP-E15. The next first task is `Review P8 self-play protocol
-boundary before any implementation`. That task is a docs-only review gate,
-not P8 entry approval,
+SP-E1 through SP-E15. `12P` reviews `12O`, records `A. Review can close`, and
+records future notes for scoped P8 runner/environment wording, cross-episode
+policy updates, seat/retry bias and candidate manifest refinements. The next
+first task is `Define P8 RL objective / reward specification boundary before
+any implementation`. That task is docs-only, not P8 entry approval,
 not P8 implementation approval, not
 self-play execution, not reinforcement-learning execution and not an
 implementation prompt. P9-P12 remain unapproved.
@@ -551,7 +554,7 @@ P7 parser-reader smoke extension implementation review after blocker fix =
 complete in `03BD`; review can close.
 P7 parser-reader smoke extension current-scope acceptance decision =
 complete in `03BE`; accepted exact scope only.
-Next = review P8 self-play protocol boundary before any implementation.
+Next = define P8 RL objective / reward specification boundary before any implementation.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -685,7 +688,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Review P8 self-play protocol boundary before any implementation.
+Define P8 RL objective / reward specification boundary before any implementation.
 ```
 
 `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`
@@ -702,8 +705,9 @@ the next task. `12L` reviews `12K` and records `A. Review can close`. `12M`
 defines the P8 self-play / reinforcement-learning dependency map. `12N`
 reviews `12M`, records `A. Review can close`, and selects docs-only self-play
 protocol boundary definition as the next first task. `12O` now defines that
-boundary and selects its docs-only review gate as the next first task. The
-next task does not approve P8 entry, P8
+boundary and selects its docs-only review gate. `12P` reviews it, records
+`A. Review can close`, and selects docs-only objective/reward boundary
+definition as the next first task. The next task does not approve P8 entry, P8
 implementation, P8 implementation prompts, P8-P12 implementation, source
 approval, source ingestion, feature extraction, label generation, dataset
 construction, training, evaluation, model-output integration, real data,

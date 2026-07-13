@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-13 — P8 self-play protocol boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12P` review closure is mistaken for P8 entry, implementation or self-play approval. | Governance / Stage Control | High | Medium | `12P`, handoff, stage contract and `10_NEXT` classify it as review evidence only and select another docs-only boundary task. | Open |
+| The unscoped runner/environment sentence is treated as a repository-global assertion. | Governance / Accuracy | Medium | Medium | `12P` interprets it only as no approved P8 self-play-specific runner/environment/simulator and requires scoped wording in future summaries. | Open |
+| A participant silently changes policy between episodes under the same identity. | Engineering / Integrity | High | Medium | Future run/manifest boundaries must record update schedule, immutable artifact identity, parent version and effective episode range. | Open |
+| Retry, seat assignment or exclusion of invalid/aborted episodes creates selection bias. | Evaluation / Integrity | High | Medium | Future boundaries must retain retry lineage, original/retry seeds, seat-balance design, denominators and invalid/aborted records. | Open |
+| Candidate manifest fields are treated as approved schema or implementation permission. | Governance / Execution | High | Medium | `12P` confirms they are candidates only and create no fixture, data, parser or code approval. | Open |
+| The next objective/reward boundary is mistaken for reward implementation or RL approval. | Governance / Execution | High | Medium | `10_NEXT` limits it to docs-only semantics and forbids algorithm selection, reward code, RL/self-play/training/evaluation. | Open |
+| Review evidence is overclaimed as model-strength/Tenhou/stable-dan/LuckyJ/promotion evidence. | Evidence / Governance | High | Medium | Evidence grade remains protocol-boundary review evidence only. | Open |
+
 ## 2026-07-13 — P8 self-play protocol boundary definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
