@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-13 — P8 self-play / RL dependency-map review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12N` review closure is mistaken for P8 entry or implementation approval. | Governance / Stage Control | High | Medium | `12N`, handoff, stage contract and `10_NEXT` classify it as review evidence only. | Open |
+| The next self-play protocol boundary task is mistaken for self-play execution approval. | Governance / Execution | High | Medium | `10_NEXT` limits it to docs-only boundary definition and forbids all execution. | Open |
+| Required dependencies are treated as satisfied or approved after review. | Governance / Execution | High | Medium | `12N` confirms RD1-RD12 are future prerequisites and RD12 still requires a separate approval decision. | Open |
+| Review evidence is overclaimed as self-play/RL or model-strength evidence. | Evidence / Governance | High | Medium | Evidence grade is dependency-map review evidence only; E15-E24 remain unavailable. | Open |
+| Source/model-output/evaluation blockers are bypassed. | Governance / Data | High | Medium | `12N` confirms D6/D8/D9 remain blocked and separately reviewed/approved later. | Open |
+| P9-P12 are treated as implicitly approved. | Governance / Stage Control | High | Medium | `12N` and `10_NEXT` keep P9-P12 unapproved and retain stage-jump stop conditions. | Open |
+
 ## 2026-07-13 — P8 self-play / RL dependency-map definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

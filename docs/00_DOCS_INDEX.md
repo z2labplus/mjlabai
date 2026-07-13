@@ -44,6 +44,7 @@ docs/12_technical_plan/12J_P8_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_REVIE
 docs/12_technical_plan/12K_P8_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12L_P8_RISK_AND_EVIDENCE_TAXONOMY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12M_P8_SELF_PLAY_RL_DEPENDENCY_MAP_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12N_P8_SELF_PLAY_RL_DEPENDENCY_MAP_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -178,6 +179,16 @@ docs-only dependency-map review gate next. It is dependency-map definition
 evidence only, not P8 entry or implementation approval, a P8 implementation
 prompt, self-play/RL/training/evaluation/league execution, source or real-data
 approval, model-output integration, model-strength evidence or P9-P12 entry.
+
+`docs/12_technical_plan/12N_P8_SELF_PLAY_RL_DEPENDENCY_MAP_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+reviews `12M`, confirms its scope, non-approval baseline, dependency
+vocabulary, D1-D18, dependency matrix, RD1-RD12, status classifications,
+R1-R20/E1-E25 linkage, model-output/evaluation/source boundaries, stop
+conditions and candidate directions, and records `A. Review can close.` It
+selects docs-only P8 self-play protocol boundary definition next. It is
+dependency-map review evidence only, not P8 entry/implementation approval,
+self-play/RL/training/evaluation/league execution, real-data/model-output
+approval, strength evidence or P9-P12 entry.
 
 ## Supervised-policy files
 

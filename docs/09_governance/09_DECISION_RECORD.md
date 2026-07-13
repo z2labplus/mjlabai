@@ -14,6 +14,44 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-13 — DR-0125 — P8 Self-Play / RL Dependency Map Review
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Context:
+
+- `12M` defined the P8 self-play / reinforcement-learning dependency map.
+- P8 entry/implementation, every executable P8 workstream and P9-P12 remained
+  unapproved.
+
+Rationale:
+
+- `12M` safely separates required, blocked, deferred, later-stage and
+  out-of-scope dependencies.
+- D1-D18, the dependency matrix and RD1-RD12 are complete, conservative and
+  auditable; required never means approved.
+- Risk/evidence linkage and model-output/evaluation/source boundaries prevent
+  execution or evidence overclaim.
+- No blocker was found. The next safe task is docs-only self-play protocol
+  boundary definition.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12N_P8_SELF_PLAY_RL_DEPENDENCY_MAP_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`.
+- The next task is `Define P8 self-play protocol boundary before any implementation.`
+- No P8 entry/implementation, self-play/RL/training/evaluation/league,
+  source/real-data work, model-output integration, strength evidence or
+  P9-P12 work is approved.
+
+Status:
+
+Dependency-map review complete; docs-only self-play protocol boundary
+definition pending.
+
 ## 2026-07-13 — DR-0124 — P8 Self-Play / RL Dependency Map Definition
 
 Decision:

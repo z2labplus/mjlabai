@@ -1,5 +1,27 @@
 # 09_CHANGELOG
 
+## 2026-07-13 - v3.38
+
+- Reviewed the P8 self-play / reinforcement-learning dependency map before any
+  implementation.
+- Added:
+  - `docs/12_technical_plan/12N_P8_SELF_PLAY_RL_DEPENDENCY_MAP_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- Review decision:
+  - `A. Review can close.`
+- Confirmed:
+  - scope and P8 non-approval baseline.
+  - dependency vocabulary, D1-D18, matrix and RD1-RD12.
+  - blocked/deferred/later-stage classifications.
+  - R1-R20 risk and E1-E25 evidence linkage.
+  - model-output, evaluation and source/real-data boundaries.
+  - stop conditions and candidate next directions.
+- New `10_NEXT` first item:
+  `Define P8 self-play protocol boundary before any implementation.`
+- This is dependency-map review evidence only. No P8 entry/implementation,
+  implementation prompt, code, tests, fixtures, data, self-play, RL,
+  training, evaluation, league, source/real-data work, model-output
+  integration, strength claim or P9-P12 work was added or approved.
+
 ## 2026-07-13 - v3.37
 
 - Defined the P8 self-play / reinforcement-learning dependency map before any

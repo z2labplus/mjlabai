@@ -101,6 +101,22 @@ approve P8 entry, P8 implementation, an implementation prompt, self-play, RL
 execution, training, evaluation, league, source approval/ingestion, real data,
 model-output integration, model-strength evidence or P9-P12 entry.
 
+## 2026-07-13 P8 Self-Play / RL Dependency Map Review Milestone Update
+
+`12N` reviews the `12M` P8 self-play / reinforcement-learning dependency map
+and records `A. Review can close.` The review confirms the non-approval
+baseline, vocabulary, D1-D18, matrix, RD1-RD12, dependency classifications,
+R1-R20/E1-E25 linkage, key boundaries, stop conditions and candidate next
+directions.
+
+The next docs-only task is `Define P8 self-play protocol boundary before any
+implementation`.
+
+This milestone update is dependency-map review evidence only. It does not
+approve P8 entry/implementation, self-play, RL execution, training,
+evaluation, league, source/real-data work, model-output integration,
+model-strength evidence or P9-P12 entry.
+
 ## Current position
 
 ```text
