@@ -45,6 +45,7 @@ docs/12_technical_plan/12K_P8_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_ANY_IMPLEMENTATI
 docs/12_technical_plan/12L_P8_RISK_AND_EVIDENCE_TAXONOMY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12M_P8_SELF_PLAY_RL_DEPENDENCY_MAP_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12N_P8_SELF_PLAY_RL_DEPENDENCY_MAP_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12O_P8_SELF_PLAY_PROTOCOL_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -189,6 +190,18 @@ selects docs-only P8 self-play protocol boundary definition next. It is
 dependency-map review evidence only, not P8 entry/implementation approval,
 self-play/RL/training/evaluation/league execution, real-data/model-output
 approval, strength evidence or P9-P12 entry.
+
+`docs/12_technical_plan/12O_P8_SELF_PLAY_PROTOCOL_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+defines the P8 self-play protocol boundary before any implementation. It
+defines protocol vocabulary/classes, participant and artifact identity,
+episode lifecycle, information/observation and action/legality rules,
+reproducibility, termination/abort handling, candidate manifest fields,
+training/evaluation separation, downstream RL/opponent/source/model
+dependencies, SP-E1 through SP-E15, stop conditions and candidate next
+directions. It selects a docs-only review gate next. It is protocol-boundary
+definition evidence only, not P8 entry/implementation approval, self-play/RL/
+training/evaluation/league execution, source/real-data/model-output approval,
+strength evidence or P9-P12 entry.
 
 ## Supervised-policy files
 

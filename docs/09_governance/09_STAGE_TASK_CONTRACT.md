@@ -2,7 +2,7 @@
 
 ## Current stage
 
-P8 self-play protocol boundary definition before any implementation.
+P8 self-play protocol boundary review before any implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -23,8 +23,11 @@ candidate next directions. `12L` reviews that taxonomy and records
 `A. Review can close.` `12M` defines the P8 self-play / RL dependency map,
 including D1-D18, RD1-RD12, blocked / deferred / later-stage dependencies,
 risk/evidence linkage and stop conditions. `12N` reviews that map and records
-`A. Review can close.` The current first task is `Define P8 self-play protocol
-boundary before any implementation.` Production
+`A. Review can close.` `12O` defines the P8 self-play protocol boundary,
+including participant/artifact identity, episode lifecycle, information,
+legality, reproducibility, termination, manifest, separation, evidence,
+SP-E1 through SP-E15 and stop conditions. The current first task is `Review P8
+self-play protocol boundary before any implementation.` Production
 code, tests, fixtures, data files, source approval, source ingestion, broad
 parser / reader / ingestion, feature extraction, label generation, dataset
 construction, training, evaluation, model-output integration, self-play
@@ -315,12 +318,13 @@ P8 scope, entry criteria and first planning task = defined in `12I`; selected do
 P8 scope, entry criteria and first planning task review = complete in `12J`; review can close and selected risk / evidence taxonomy definition as next
 P8 risk and evidence taxonomy = defined in `12K` and reviewed in `12L`; review can close
 P8 self-play / RL dependency map = defined in `12M` and reviewed in `12N`; review can close
+P8 self-play protocol boundary = defined in `12O`; review pending
 Full P7 = closed for documented supervised-learning scope only
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = define P8 self-play protocol boundary before any implementation
+Next = review P8 self-play protocol boundary before any implementation
 ```
 
 ## AI role
@@ -329,7 +333,7 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Define the docs-only P8 self-play protocol boundary before any implementation
+Review the docs-only P8 self-play protocol boundary before any implementation
 while keeping P8 entry, P8 implementation,
 implementation prompts, source
 approval, source ingestion, real data, feature extraction, label generation,
@@ -354,6 +358,7 @@ and first-task boundaries.
 - `docs/12_technical_plan/12L_P8_RISK_AND_EVIDENCE_TAXONOMY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/12_technical_plan/12M_P8_SELF_PLAY_RL_DEPENDENCY_MAP_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/12_technical_plan/12N_P8_SELF_PLAY_RL_DEPENDENCY_MAP_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/12_technical_plan/12O_P8_SELF_PLAY_PROTOCOL_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md`
 - `docs/04_rl_selfplay/04G_ALGORITHM_RACING_FUNNEL.md`
 - `docs/05_evaluation/05G_RACING_FUNNEL_EVALUATION.md`
@@ -437,4 +442,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Define P8 self-play protocol boundary before any implementation.
+Review P8 self-play protocol boundary before any implementation.

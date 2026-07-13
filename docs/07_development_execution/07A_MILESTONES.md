@@ -117,6 +117,23 @@ approve P8 entry/implementation, self-play, RL execution, training,
 evaluation, league, source/real-data work, model-output integration,
 model-strength evidence or P9-P12 entry.
 
+## 2026-07-13 P8 Self-Play Protocol Boundary Milestone Update
+
+`12O` defines the P8 self-play protocol boundary before any implementation.
+It records protocol vocabulary and classes, participant/artifact identity,
+episode lifecycle, information/action boundaries, reproducibility,
+termination/abort handling, candidate manifest fields, training/evaluation
+separation, downstream dependency boundaries, SP-E1 through SP-E15, stop
+conditions and candidate next directions.
+
+The next docs-only task is `Review P8 self-play protocol boundary before any
+implementation`.
+
+This milestone update is protocol-boundary definition evidence only. It does
+not approve P8 entry/implementation, self-play, RL, training, evaluation,
+league, source/real-data work, model-output integration, model-strength
+evidence or P9-P12 entry.
+
 ## Current position
 
 ```text

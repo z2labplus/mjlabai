@@ -1,5 +1,28 @@
 # 09_CHANGELOG
 
+## 2026-07-13 - v3.39
+
+- Defined the P8 self-play protocol boundary before any implementation.
+- Added:
+  - `docs/12_technical_plan/12O_P8_SELF_PLAY_PROTOCOL_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Defined:
+  - protocol vocabulary and candidate protocol classes.
+  - participant/artifact identity and episode lifecycle boundaries.
+  - information/observation, action/legality and reproducibility boundaries.
+  - termination/abort/invalid-episode and candidate manifest boundaries.
+  - training/evaluation self-play separation and downstream RL, opponent,
+    source, model-output and evidence boundaries.
+  - SP-E1 through SP-E15, stop conditions and candidate next directions.
+- Planning decision:
+  - `P8 self-play protocol boundary is defined before any implementation.`
+- New `10_NEXT` first item:
+  `Review P8 self-play protocol boundary before any implementation.`
+- This is protocol-boundary definition evidence only. No P8 entry or
+  implementation approval, implementation prompt, code, tests, fixtures,
+  data, self-play, RL, training, evaluation, league, source/real-data work,
+  model-output integration, strength claim or P9-P12 work was added or
+  approved.
+
 ## 2026-07-13 - v3.38
 
 - Reviewed the P8 self-play / reinforcement-learning dependency map before any

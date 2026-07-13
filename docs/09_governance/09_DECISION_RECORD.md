@@ -14,6 +14,42 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-13 — DR-0126 — P8 Self-Play Protocol Boundary Definition
+
+Decision:
+
+```text
+P8 self-play protocol boundary is defined before any implementation.
+```
+
+Context:
+
+- `12N` reviewed the P8 self-play / RL dependency map and recorded
+  `A. Review can close.`
+- P8 entry/implementation, every executable P8 workstream and P9-P12 remain
+  unapproved.
+
+Rationale:
+
+- Protocol semantics must precede any future self-play or RL objective work.
+- Explicit participant/artifact identity, lifecycle, information/action,
+  reproducibility, termination and provenance boundaries prevent silent
+  leakage, retries, artifact drift and evidence overclaim.
+- Training and evaluation self-play must remain separate protocol classes.
+- SP-E1 through SP-E15 preserve separate review, approval and `10_NEXT` gates.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12O_P8_SELF_PLAY_PROTOCOL_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`.
+- The next task is `Review P8 self-play protocol boundary before any implementation.`
+- No P8 entry/implementation, self-play/RL/training/evaluation/league,
+  source/real-data work, model-output integration, strength evidence or
+  P9-P12 work is approved.
+
+Status:
+
+Protocol-boundary definition complete; docs-only review pending.
+
 ## 2026-07-13 — DR-0125 — P8 Self-Play / RL Dependency Map Review
 
 Decision:

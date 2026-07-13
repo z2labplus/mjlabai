@@ -8,6 +8,43 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-13 — P8 self-play protocol boundary definition
+
+- Type: internal documentation / P8 protocol-boundary definition evidence.
+- Stage: P8 self-play protocol boundary review before any implementation.
+- Added document:
+  - `docs/12_technical_plan/12O_P8_SELF_PLAY_PROTOCOL_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Defined:
+  - protocol vocabulary and candidate protocol classes.
+  - participant/artifact identity and episode lifecycle.
+  - information/observation, action/legality and seed/reproducibility rules.
+  - termination/abort/invalid-episode and candidate manifest fields.
+  - training/evaluation self-play separation.
+  - RL reward, opponent-pool/league, source/real-data, model-output and
+    evidence boundaries.
+  - SP-E1 through SP-E15, stop conditions and candidate next directions.
+- Planning decision:
+  - `P8 self-play protocol boundary is defined before any implementation.`
+- Selected next task:
+  - `Review P8 self-play protocol boundary before any implementation.`
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke_extension.py`: passed, 15 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`: passed, 1 test.
+  - `python3 -m unittest tests/data/test_replay_schema.py`: passed, 7 tests.
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`: passed, 1 test.
+- Evidence grade:
+  - P8 self-play protocol boundary definition evidence only.
+- Not evidence of:
+  - P8 entry/implementation or an implementation prompt.
+  - self-play, RL, training, tuning, evaluation or league execution.
+  - source approval/ingestion, real-data use or model-output integration.
+  - model strength, Tenhou rank, stable dan, LuckyJ `10.68` comparison or
+    candidate promotion.
+  - P9-P12 entry or implementation approval.
+
 ### 2026-07-13 — P8 self-play / RL dependency-map review
 
 - Type: internal documentation / P8 dependency-map review evidence.

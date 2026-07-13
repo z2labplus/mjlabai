@@ -27,7 +27,7 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P8 self-play protocol boundary definition before any
+Current active stage is P8 self-play protocol boundary review before any
 implementation:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
@@ -50,10 +50,14 @@ directions. `12L` reviews that taxonomy and records `A. Review can close.`
 `12M` defines dependency families D1-D18, required dependencies RD1-RD12,
 blocked / deferred / later-stage dependencies, R1-R20 and E1-E25 linkage,
 model-output / evaluation / source-real-data boundaries and stop conditions.
-`12N` reviews that map and records `A. Review can close.` The next first task
-is `Define P8 self-play protocol boundary before any implementation.` This
-next task remains docs-only boundary definition and does not approve P8-P12
-entry, P8 implementation,
+`12N` reviews that map and records `A. Review can close.` `12O` defines the
+P8 self-play protocol boundary, including protocol vocabulary, candidate
+protocol classes, participant/artifact identity, episode lifecycle,
+information/action boundaries, reproducibility, termination, manifest fields,
+training/evaluation separation, SP-E1 through SP-E15 and stop conditions. The
+next first task is `Review P8 self-play protocol boundary before any
+implementation.` This next task remains a docs-only review gate and does not
+approve P8-P12 entry, P8 implementation,
 implementation prompts, broader P7 implementation, source approval, source
 ingestion, broad parser / reader / ingestion, actual feature extraction,
 actual label generation, supervised dataset construction, split creation,
@@ -707,9 +711,9 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define P8 self-play protocol boundary before any implementation. `12N`
-reviewed the `12M` dependency map and recorded `A. Review can close.` The
-boundary task must remain docs-only and must not approve P8 entry, P8
+Review P8 self-play protocol boundary before any implementation. `12O`
+defines that boundary after the reviewed `12M`/`12N` dependency-map chain.
+The review task must remain docs-only and must not approve P8 entry, P8
 implementation, an implementation prompt, self-play, RL, training,
 evaluation, league, source/real-data work, model-output integration,
 model-strength claims or P9-P12 entry.
@@ -991,8 +995,8 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is docs-only P8 self-play protocol boundary definition
-  after the `12N` review. Full P7 is closed only for documented P7
+- Current next work is docs-only P8 self-play protocol boundary review after
+  the `12O` definition. Full P7 is closed only for documented P7
   supervised-learning scope; P8 entry/implementation and P9-P12 remain
   unapproved. Do not run self-play, RL, training, evaluation or league,
   access real data, integrate model output or make strength claims.

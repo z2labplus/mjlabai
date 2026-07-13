@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-13 — P8 self-play protocol boundary definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12O` is mistaken for P8 entry, implementation or self-play approval. | Governance / Stage Control | High | Medium | `12O`, handoff, stage contract and `10_NEXT` classify it as protocol-boundary definition evidence only and select a docs-only review. | Open |
+| Descriptive episode lifecycle is mistaken for an executable runner/environment design approval. | Governance / Execution | High | Medium | `12O` states that no environment, runner, model call, action or episode is implemented or executed. | Open |
+| Training self-play and evaluation self-play results are silently mixed. | Evaluation / Leakage | High | Medium | `12O` requires separate protocol classes, frozen/versioned evaluation participants and explicit result-reuse approval. | Open |
+| Hidden/future information or illegal-action correction is hidden by a future protocol. | Research / Integrity | High | Medium | Observation provenance, legal-action validation, no silent fallback and deterministic invalid-episode handling are mandatory boundaries. | Open |
+| Seeds or silent retries are overclaimed as reproducibility. | Engineering / Evidence | Medium | Medium | Record versions, artifacts, nondeterminism and retry policy; same seed alone is explicitly insufficient. | Open |
+| Raw self-play outcomes are overclaimed as strength, Tenhou, stable-dan, LuckyJ or promotion evidence. | Evidence / Governance | High | Medium | `12O` assigns protocol-boundary definition evidence only and keeps all result/strength evidence unavailable. | Open |
+| Source, model-output, artifact or P9-P12 blockers are bypassed. | Governance / Stage Control | High | Medium | SP-E1-SP-E15 and stop conditions require separate reviews, exact approval and `10_NEXT` authorization. | Open |
+
 ## 2026-07-13 — P8 self-play / RL dependency-map review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
