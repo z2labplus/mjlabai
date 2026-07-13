@@ -85,6 +85,22 @@ implementation prompt, self-play, reinforcement-learning execution, training,
 evaluation, league, source approval, source ingestion, real data,
 model-output integration, model-strength evidence or P9-P12 entry.
 
+## 2026-07-13 P8 Self-Play / RL Dependency Map Milestone Update
+
+`12M` defines the P8 self-play / reinforcement-learning dependency map before
+any implementation. It records D1-D18 dependency families, RD1-RD12 required
+dependencies, blocked / deferred / later-stage dependencies, R1-R20 and
+E1-E25 linkage, model-output / evaluation / source-real-data boundaries, stop
+conditions and candidate next directions.
+
+The next docs-only task is `Review P8 self-play / reinforcement-learning
+dependency map before any implementation`.
+
+This milestone update is dependency-map definition evidence only. It does not
+approve P8 entry, P8 implementation, an implementation prompt, self-play, RL
+execution, training, evaluation, league, source approval/ingestion, real data,
+model-output integration, model-strength evidence or P9-P12 entry.
+
 ## Current position
 
 ```text

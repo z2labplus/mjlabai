@@ -8,6 +8,43 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-13 — P8 self-play / RL dependency-map definition
+
+- Type: internal documentation / P8 dependency-map definition evidence.
+- Stage: P8 self-play / reinforcement-learning dependency-map review before
+  any implementation.
+- Added document:
+  - `docs/12_technical_plan/12M_P8_SELF_PLAY_RL_DEPENDENCY_MAP_BEFORE_ANY_IMPLEMENTATION.md`
+- Defined:
+  - dependency vocabulary and P8 non-approval baseline.
+  - dependency families D1-D18 and the dependency matrix.
+  - required dependencies RD1-RD12.
+  - blocked, deferred and later-stage/out-of-scope dependencies.
+  - R1-R20 risk linkage and E1-E25 evidence linkage.
+  - model-output, evaluation and source/real-data dependency boundaries.
+  - stop conditions and candidate next directions.
+- Planning decision:
+  - `P8 self-play / reinforcement-learning dependency map is defined before any implementation.`
+- Selected next task:
+  - `Review P8 self-play / reinforcement-learning dependency map before any implementation.`
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke_extension.py`: passed, 15 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`: passed, 1 test.
+  - `python3 -m unittest tests/data/test_replay_schema.py`: passed, 7 tests.
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`: passed, 1 test.
+- Evidence grade:
+  - P8 self-play / reinforcement-learning dependency-map definition evidence only.
+- Not evidence of:
+  - P8 entry or implementation approval, or an implementation prompt.
+  - self-play, RL, training, tuning, evaluation or league execution.
+  - source approval/ingestion, real-data use or model-output integration.
+  - model strength, Tenhou rank, stable dan, LuckyJ `10.68` comparison or
+    candidate promotion.
+  - P9-P12 entry or implementation approval.
+
 ### 2026-07-07 — P8 risk and evidence taxonomy review
 
 - Type: internal documentation / P8 risk-evidence taxonomy review evidence.

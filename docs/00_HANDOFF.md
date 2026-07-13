@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P8 self-play / reinforcement-learning dependency map
-definition before any implementation:
+Current active stage is P8 self-play / reinforcement-learning dependency-map
+review before any implementation:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -47,10 +47,12 @@ classification, workstream risk/evidence matrix, model-strength / Tenhou /
 stable-dan / LuckyJ / promotion boundaries, source / real-data / platform
 boundaries, self-play / RL boundaries, stop conditions and candidate next
 directions. `12L` reviews that taxonomy and records `A. Review can close.`
-The next first task is `Define P8 self-play / reinforcement-learning
-dependency map before any implementation.` This next task remains docs-only
-dependency-map definition and does not approve P8-P12 entry, P8
-implementation,
+`12M` defines dependency families D1-D18, required dependencies RD1-RD12,
+blocked / deferred / later-stage dependencies, R1-R20 and E1-E25 linkage,
+model-output / evaluation / source-real-data boundaries and stop conditions.
+The next first task is `Review P8 self-play / reinforcement-learning
+dependency map before any implementation.` This next task remains a docs-only
+review gate and does not approve P8-P12 entry, P8 implementation,
 implementation prompts, broader P7 implementation, source approval, source
 ingestion, broad parser / reader / ingestion, actual feature extraction,
 actual label generation, supervised dataset construction, split creation,
@@ -704,22 +706,13 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review P8-P12 transition scope, entry criteria and first planning task after
-post-full-P7 transition review.
-`03BL` closed full P7 only for the documented P7 supervised-learning scope.
-`12F` found no post-full-P7 transition blocker for defining P8-P12 docs-only
-scope / entry criteria / first planning task. `12G` defines that transition
-scope and selects this docs-only review gate. The next task must not approve
-P8-P12 entry, define a P8-P12 implementation prompt, add fixtures or data
-files, modify production code or tests, or approve / perform source approval,
-source ingestion, broad parser / reader / ingestion, actual feature
-extraction, actual label generation, supervised dataset construction, split
-creation, leakage-test implementation, training data, training-run approval,
-training, model architecture or trainer implementation, evaluation
-implementation, metric implementation, evaluation runner, benchmark harness,
-real Tenhou, real haifu, external logs, platform data, model-output
-integration, CLI, broad file ingestion, self-play, league, Tenhou evidence,
-stable-dan evidence, LuckyJ `10.68` comparison or candidate-promotion claims.
+Review P8 self-play / reinforcement-learning dependency map before any
+implementation. `12M` defines D1-D18, RD1-RD12, dependency status classes,
+risk/evidence linkage, model-output/evaluation/source boundaries and stop
+conditions. The review must remain docs-only and must not approve P8 entry,
+P8 implementation, an implementation prompt, self-play, RL, training,
+evaluation, league, source/real-data work, model-output integration,
+model-strength claims or P9-P12 entry.
 ```
 
 Latest Akochan F1 audit summary:
@@ -998,12 +991,8 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is broader P7 minimal synthetic/local parser-reader smoke
-  exact implementation after `03AU` approval decision. Full P7 remains open,
-  and the approval is limited to two exact files plus direct docs/governance
-  synchronization. Do not add fixtures, data files, broad parser / reader /
-  ingestion, source approval, source ingestion, feature extraction, label
-  generation, supervised dataset construction, CLI, model-output integration,
-  train, tune, self-play, league, connect to real Tenhou or treat this smoke
-  implementation as model-strength evidence.
+- Current next work is the docs-only review of `12M`. Full P7 is closed only
+  for documented P7 supervised-learning scope; P8 entry/implementation and
+  P9-P12 remain unapproved. Do not run self-play, RL, training, evaluation or
+  league, access real data, integrate model output or make strength claims.
 - Technical decisions from Web ChatGPT Pro must be written into Git + docs before becoming project facts.

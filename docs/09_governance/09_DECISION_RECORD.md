@@ -14,6 +14,41 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-13 — DR-0124 — P8 Self-Play / RL Dependency Map Definition
+
+Decision:
+
+```text
+P8 self-play / reinforcement-learning dependency map is defined before any implementation.
+```
+
+Context:
+
+- `12L` reviewed the P8 risk/evidence taxonomy and recorded
+  `A. Review can close.`
+- P8 entry, implementation, self-play/RL execution, training, evaluation,
+  league, source work, real data, model output and P9-P12 remain unapproved.
+
+Rationale:
+
+- `12M` separates required, blocked, deferred, later-stage and out-of-scope
+  dependencies without treating any dependency as approved.
+- D1-D18, RD1-RD12, R1-R20/E1-E25 linkage and explicit stop conditions make
+  the next review gate auditable before any protocol or implementation work.
+- A docs-only review is the next safe step.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12M_P8_SELF_PLAY_RL_DEPENDENCY_MAP_BEFORE_ANY_IMPLEMENTATION.md`.
+- The next task is `Review P8 self-play / reinforcement-learning dependency map before any implementation.`
+- No P8 entry, implementation, implementation prompt, self-play, RL,
+  training, evaluation, league, source/real-data work, model-output
+  integration, strength evidence or P9-P12 work is approved.
+
+Status:
+
+Dependency-map definition complete; docs-only review pending.
+
 ## 2026-07-07 — DR-0123 — P8 Risk and Evidence Taxonomy Review
 
 Decision:

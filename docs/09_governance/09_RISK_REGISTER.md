@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-13 — P8 self-play / RL dependency-map definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12M` is mistaken for P8 entry or implementation approval. | Governance / Stage Control | High | Medium | `12M`, handoff, stage contract and `10_NEXT` classify it as dependency-map definition evidence only and select a docs-only review. | Open |
+| A required dependency is mistaken for an approved dependency. | Governance / Execution | High | Medium | `12M` defines `required` as necessary but still unapproved until a separate review and decision. | Open |
+| Dependency mapping is used to start self-play, RL, training, evaluation or league. | Governance / Execution | High | Medium | D3-D8/D11-D12 remain blocked or later-stage; stop conditions forbid execution. | Open |
+| Model-output, source or real-data dependencies are silently bypassed. | Governance / Data | High | Medium | D6/D9/D18 require separate interface, rights, privacy, provenance and approval records. | Open |
+| Dependency-map evidence is overclaimed as model strength, Tenhou, stable-dan, LuckyJ or promotion evidence. | Evidence / Governance | High | Medium | `12M` maps E20-E24 as unavailable and records explicit non-evidence warnings. | Open |
+| P9-P12 are treated as implicitly approved. | Governance / Stage Control | High | Medium | D16 and `10_NEXT` keep P9-P12 unapproved and stop on stage jumps. | Open |
+
 ## 2026-07-07 — P8 risk/evidence taxonomy review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

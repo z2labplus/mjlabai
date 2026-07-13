@@ -28,7 +28,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 self-play / reinforcement-learning dependency map definition before any
+P8 self-play / reinforcement-learning dependency-map review before any
 implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
@@ -58,9 +58,12 @@ evidence-grade vocabulary, current evidence classification, workstream
 risk/evidence matrix, source / real-data / platform boundaries, self-play /
 RL boundaries and model-strength / Tenhou / stable-dan / LuckyJ / promotion
 boundaries. `12L` reviews that taxonomy and records `A. Review can close`.
-The next first task is `Define P8 self-play / reinforcement-learning
-dependency map before any implementation`. That task is docs-only dependency
-mapping, not P8 entry approval, not P8 implementation approval, not
+`12M` defines the P8 self-play / RL dependency map, including D1-D18,
+RD1-RD12, blocked / deferred / later-stage dependencies, risk/evidence
+linkage, key dependency boundaries and stop conditions. The next first task
+is `Review P8 self-play / reinforcement-learning dependency map before any
+implementation`. That task is a docs-only review gate, not P8 entry approval,
+not P8 implementation approval, not
 self-play execution, not reinforcement-learning execution and not an
 implementation prompt. P9-P12 remain unapproved.
 
@@ -680,7 +683,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Define P8 self-play / reinforcement-learning dependency map before any implementation.
+Review P8 self-play / reinforcement-learning dependency map before any implementation.
 ```
 
 `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`
@@ -693,9 +696,9 @@ P8 scope / entry criteria / first planning task only and selects a review gate
 next. `12J` reviews `12I`, records `A. Review can close`, and selects a
 docs-only P8 risk / evidence taxonomy definition as the next first task.
 `12K` defines that taxonomy and selects a docs-only taxonomy review gate as
-the next task. `12L` reviews `12K`, records `A. Review can close`, and selects
-docs-only P8 self-play / reinforcement-learning dependency-map definition as
-the next first task. The next task does not approve P8 entry, P8
+the next task. `12L` reviews `12K` and records `A. Review can close`. `12M`
+defines the P8 self-play / reinforcement-learning dependency map and selects
+its docs-only review as the next first task. The next task does not approve P8 entry, P8
 implementation, P8 implementation prompts, P8-P12 implementation, source
 approval, source ingestion, feature extraction, label generation, dataset
 construction, training, evaluation, model-output integration, real data,

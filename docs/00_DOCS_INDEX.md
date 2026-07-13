@@ -43,6 +43,7 @@ docs/12_technical_plan/12I_P8_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_AFTER
 docs/12_technical_plan/12J_P8_SCOPE_ENTRY_CRITERIA_AND_FIRST_PLANNING_TASK_REVIEW.md
 docs/12_technical_plan/12K_P8_RISK_AND_EVIDENCE_TAXONOMY_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12L_P8_RISK_AND_EVIDENCE_TAXONOMY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12M_P8_SELF_PLAY_RL_DEPENDENCY_MAP_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -166,6 +167,17 @@ taxonomy-review evidence only, not P8 entry approval, implementation approval,
 a P8 implementation prompt, self-play approval, reinforcement-learning
 execution, training approval, evaluation approval, league approval, real-data
 approval, P9-P12 entry approval or model-strength evidence.
+
+`docs/12_technical_plan/12M_P8_SELF_PLAY_RL_DEPENDENCY_MAP_BEFORE_ANY_IMPLEMENTATION.md`
+defines the P8 self-play / reinforcement-learning dependency map before any
+implementation. It records dependency families D1-D18, required dependencies
+RD1-RD12, blocked / deferred / later-stage dependencies, risk linkage to
+R1-R20, evidence linkage to E1-E25, model-output / evaluation / source-real-
+data boundaries, stop conditions and candidate next directions. It selects a
+docs-only dependency-map review gate next. It is dependency-map definition
+evidence only, not P8 entry or implementation approval, a P8 implementation
+prompt, self-play/RL/training/evaluation/league execution, source or real-data
+approval, model-output integration, model-strength evidence or P9-P12 entry.
 
 ## Supervised-policy files
 
