@@ -2,7 +2,7 @@
 
 ## Current stage
 
-P8 model-output interface dependency boundary definition before any
+P8 model-output interface dependency boundary review before any
 implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
@@ -50,13 +50,20 @@ fields, reward/evaluation/use separation, RO-E1 through RO-E15 and stop
 conditions. `12V` reviews `12U`, records `A. Review can close`, and preserves
 non-blocking notes for parent-attempt identity, atomic/idempotent unique
 finalization, acyclic supersession, payload content identity, authority
-identities and privacy/redaction classification. `12U` was not modified. The
-current first task is `Define P8 model-output interface dependency boundary
-before any implementation.` Production
+identities and privacy/redaction classification. `12U` was not modified.
+`12W` defines model/policy/artifact identity, request/response lineage,
+observation and environment-authoritative legal-action handoff, candidate
+action/score/value/status boundaries, timeout/stale/duplicate/retry/fallback,
+recurrent/session/batching/concurrency isolation, reproducibility, candidate
+fields, MO-E1 through MO-E15 and stop conditions. Every candidate interface
+class remains unapproved, unselected and non-executable. The current first task
+is `Review P8 model-output interface dependency boundary before any
+implementation.` Production
 code, tests, fixtures, data files, source approval, source ingestion, broad
 parser / reader / ingestion, feature extraction, label generation, dataset
 construction, training, evaluation, model loading/inference/action generation,
-model-output integration, self-play
+model-output integration, model/checkpoint/weight loading, inference/action/
+score/value generation, recurrent/cache/session/batcher/queue code, self-play
 execution, reinforcement-learning execution, league, raw-outcome schema or
 environment/simulator/runner implementation and P8-P12 remain unapproved.
 

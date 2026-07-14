@@ -28,7 +28,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 model-output interface dependency boundary definition before any
+P8 model-output interface dependency boundary review before any
 implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
@@ -89,9 +89,15 @@ RO-E1 through RO-E15 and stop conditions. `12V` reviews `12U`, records
 `A. Review can close`, and preserves non-blocking future notes for
 parent-attempt identity, atomic/idempotent unique finalization, acyclic
 supersession, payload content identity, finalization/correction authority and
-privacy/redaction classification. `12U` was not modified. The next first task
-is `Define P8 model-output interface dependency boundary before any
-implementation`. That task is docs-only, not P8 entry approval, not P8
+privacy/redaction classification. `12U` was not modified. `12W` now defines
+the model-output interface dependency boundary, including authority and
+identity separation, ten unapproved candidate interface classes, immutable
+request/response lineage, observation and legal-action handoff, candidate
+action/score/value/status boundaries, failure/retry/fallback, recurrent/
+session/batching/concurrency isolation, reproducibility, training/evaluation
+separation, candidate fields, MO-E1 through MO-E15 and stop conditions. The
+next first task is `Review P8 model-output interface dependency boundary before
+any implementation`. That task is docs-only, not P8 entry approval, not P8
 implementation approval, not model loading/inference/action generation or
 model-output integration, not environment/simulator/runner implementation,
 not self-play or reinforcement-learning execution and not an implementation

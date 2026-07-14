@@ -8,6 +8,54 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-14 — P8 model-output interface dependency boundary definition
+
+- Type: internal documentation / P8 model-output interface dependency boundary
+  definition evidence.
+- Stage: P8 model-output interface dependency boundary review before any
+  implementation.
+- Added document:
+  - `docs/12_technical_plan/12W_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Defined:
+  - non-approval baseline, vocabulary and authority separation.
+  - ten candidate interface classes, all unapproved, unselected and
+    non-executable.
+  - model/policy/artifact identity and immutable request/response lineage.
+  - decision-time observation and environment-authoritative legal-action
+    handoff.
+  - candidate action, score/logit/probability, value/auxiliary and response
+    status boundaries.
+  - timeout/stale/duplicate/retry/fallback and recurrent/session/batching/
+    concurrency isolation.
+  - determinism/precision/reproducibility and training/evaluation model-use
+    separation.
+  - environment/raw-outcome/reward/evaluation, source/privacy/remote and
+    third-party separation.
+  - candidate fields, MO-E1 through MO-E15, stop conditions and candidate next
+    directions.
+- Planning decision:
+  - `P8 model-output interface dependency boundary is defined before any implementation.`
+- Selected next task:
+  - `Review P8 model-output interface dependency boundary before any implementation.`
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke_extension.py`: passed, 15 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`: passed, 1 test.
+  - `python3 -m unittest tests/data/test_replay_schema.py`: passed, 7 tests.
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`: passed, 1 test.
+- Evidence grade:
+  - P8 model-output interface dependency boundary definition evidence only.
+- Not evidence of:
+  - P8 entry/implementation, an implementation prompt or executable task.
+  - a schema/API/adapter/parser/reader/ingestion path or CLI.
+  - model/checkpoint/weight loading, inference or action/score/value output.
+  - environment/self-play/RL/reward/training/evaluation/league.
+  - source approval/ingestion, real data, remote-model or third-party use.
+  - strength, Tenhou, stable-dan, LuckyJ or promotion evidence.
+  - P9-P12 approval.
+
 ### 2026-07-14 — P8 raw-outcome / environment-provenance boundary review
 
 - Type: internal documentation / P8 raw-outcome and environment-provenance

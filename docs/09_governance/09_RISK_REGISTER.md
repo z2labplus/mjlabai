@@ -8,6 +8,23 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-14 — P8 model-output interface dependency boundary definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12W` is mistaken for P8 entry, interface implementation or model-loading approval. | Governance / Stage Control | High | Medium | `12W`, handoff, stage contract and `10_NEXT` classify it as boundary-definition evidence only and select a docs-only review. | Open |
+| Candidate fields or statuses are copied into an executable schema/API without separate approval. | Governance / Execution | High | Medium | Every field/status is explicitly non-schema; MO-E14/MO-E15 require separate exact approval and `10_NEXT` authorization. | Open |
+| A model response is treated as authoritative legality, transition, terminal status or raw outcome. | Engineering / Authority | High | Medium | Environment remains sole authority; the model may propose only a candidate action subject to independent validation. | Open |
+| Observation or input contains opponent-private, hidden, future or post-outcome information. | Research / Leakage | High | Medium | Require participant-specific decision-time projection identity and explicit visibility classification; no input path is implemented. | Open |
+| Stale or duplicate responses are applied after state/policy/request changes. | Engineering / Integrity | High | Medium | Future contract must bind immutable request/state/policy identities and reject stale/duplicate outputs before transition. | Open |
+| Silent retry, correction or fallback hides failures and changes denominators. | Evaluation / Integrity | High | Medium | Require explicit attempt lineage, response status, fallback trigger and retained failure accounting; no fallback is selected. | Open |
+| Recurrent/cache/session state leaks across episodes, participants, seats or training/evaluation uses. | Research / Isolation | High | Medium | Future state is participant/episode/attempt/policy scoped with explicit reset and compatibility; no state mechanism is implemented. | Open |
+| Batching or concurrency mismatches responses, observations or legal sets. | Engineering / Concurrency | High | Medium | Require one-to-one identity binding, per-request isolation, ordering and partial-failure status before any batcher/queue approval. | Open |
+| Backend, device or precision drift is hidden under one policy identity. | Engineering / Reproducibility | High | Medium | Bind runtime/backend/device/precision/configuration identities and declared nondeterminism; no inference claim is made. | Open |
+| Source, remote endpoint or third-party artifact is introduced through an interface compatibility claim. | Compliance / Security | High | Medium | Compatibility grants no source/artifact permission; separate rights, privacy, security, provenance and integrity review remains mandatory. | Open |
+| The next review is mistaken for schema, adapter, model loading or inference approval. | Governance / Execution | High | Medium | `10_NEXT` is review-only, forbids modifying `12W` to resolve findings and forbids every executable workstream. | Open |
+| Boundary evidence is overclaimed as inference correctness, policy quality or model strength. | Evidence / Governance | High | High | Evidence grade remains P8 model-output interface dependency boundary definition evidence only. | Open |
+
 ## 2026-07-14 — P8 raw-outcome / environment-provenance boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

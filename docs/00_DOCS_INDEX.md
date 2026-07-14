@@ -53,6 +53,7 @@ docs/12_technical_plan/12S_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_BEFORE_ANY_IMPLEMEN
 docs/12_technical_plan/12T_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12U_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12V_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12W_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -291,6 +292,17 @@ atomic/idempotent unique finalization, acyclic supersession, payload content
 identity, authority identities and privacy/redaction classification. `12U`
 was not modified. This is boundary-review evidence only, not schema,
 implementation, execution, strength evidence or P8/P9-P12 approval.
+
+`docs/12_technical_plan/12W_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+defines the docs-only P8 model-output interface dependency boundary. It
+separates model/policy/artifact identity, requests, decision-time observation,
+environment-authoritative legal actions, candidate action/score/value output,
+response/failure/retry/fallback status, recurrent/session state, batching/
+concurrency, reproducibility and training/evaluation uses. It records ten
+unapproved candidate interface classes, candidate fields, MO-E1 through
+MO-E15, stop conditions and a docs-only review next. It is boundary-definition
+evidence only, not a schema/API/adapter, model loading, inference, action
+generation, P8 entry/implementation, strength evidence or P9-P12 approval.
 
 ## Supervised-policy files
 

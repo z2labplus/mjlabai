@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P8 model-output interface dependency boundary
-definition before any implementation:
+Current active stage is P8 model-output interface dependency boundary review
+before any implementation:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -84,7 +84,17 @@ non-blocking future notes for parent-attempt identity, atomic/idempotent
 unique finalization, acyclic supersession, payload content identity,
 finalization/correction authority and privacy/redaction classification.
 `12U` was not modified. No schema, parser, fixture, data, environment or
-outcome implementation was created. The next first task is `Define P8
+outcome implementation was created. `12W` now defines the P8 model-output
+interface dependency boundary: model/policy/artifact identity, immutable
+request/response lineage, decision-time observation and environment-owned
+legal-action handoff, candidate action/score/value output, explicit response
+status, timeout/stale/duplicate/retry/fallback, recurrent/session and batching/
+concurrency isolation, determinism/precision/reproducibility, training versus
+evaluation use, candidate fields, MO-E1 through MO-E15 and stop conditions.
+All ten candidate interface classes remain unapproved, unselected and
+non-executable. No schema/API/adapter, model/checkpoint/weight load, inference,
+action/logit/probability/value generation, cache/session/batcher/queue, code,
+test, fixture or data was created. The next first task is `Review P8
 model-output interface dependency boundary before any implementation.` This
 next task remains docs-only and does not approve P8-P12 entry, P8 implementation,
 implementation prompts, broader P7 implementation, source approval, source

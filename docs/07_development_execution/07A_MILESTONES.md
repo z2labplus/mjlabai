@@ -27,6 +27,26 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 | P11 | Large-scale training and stability validation | Expand compute only after the route is justified by previous gates | Internal evaluation approaches or exceeds the LuckyJ 10.68 target line | Future |
 | P12 | Tenhou target validation | Validate whether the system can exceed LuckyJ 10.68 under compliant conditions | Long-term stable dan, pt EV, rank metrics, latency and logs are verified | Final |
 
+## 2026-07-14 P8 Model-Output Interface Dependency Boundary Milestone Update
+
+`12W` now defines the P8 model-output interface dependency boundary before any
+implementation. It separates environment/protocol/interface/model/reward/
+evaluation authority; records ten unapproved candidate interface classes;
+defines model/policy/artifact identity, request/observation/legal-action
+handoff, candidate action/score/value/status, timeout/stale/duplicate/retry/
+fallback, recurrent/session/batching/concurrency and reproducibility
+boundaries; and records candidate fields, MO-E1 through MO-E15 and stop
+conditions.
+
+The next docs-only task is `Review P8 model-output interface dependency
+boundary before any implementation`.
+
+This milestone update does not approve P8 entry, P8 implementation, an
+implementation prompt, a schema/API/adapter, model/checkpoint/weight loading,
+inference/action generation, environment/self-play/RL/training/evaluation/
+league, source/real-data/remote-model work, model-strength evidence or P9-P12
+entry.
+
 ## 2026-07-07 P8 Planning Milestone Update
 
 `12I` now defines P8 scope, P8-E1 through P8-E15 entry criteria, non-entry

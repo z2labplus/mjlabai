@@ -14,6 +14,64 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-14 — DR-0134 — P8 Model-Output Interface Dependency Boundary Definition
+
+Decision:
+
+```text
+P8 model-output interface dependency boundary is defined before any implementation.
+```
+
+Context:
+
+- `12V` reviewed the P8 raw-outcome/environment-provenance boundary and
+  recorded `A. Review can close.`
+- P8 entry/implementation, model loading/inference/action generation and
+  P9-P12 remained unapproved.
+
+Rationale:
+
+- A future model proposal needs immutable request, decision, state,
+  observation, legal-set, policy and artifact identity before it can be
+  audited safely.
+- Environment authority must retain legality, applied action, transition,
+  terminal status and raw outcome; the model can only propose a candidate.
+- Timeout, stale, duplicate, retry and fallback status must remain visible
+  rather than producing silent success-only records.
+- Recurrent/session state, batching/concurrency, precision and backend changes
+  require explicit isolation and provenance to avoid leakage and response
+  mismatch.
+- MO-E1 through MO-E15 retain review, exact approval and `10_NEXT` gates.
+- A docs-only review is the next safe task.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12W_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`.
+- The next task is `Review P8 model-output interface dependency boundary before any implementation.`
+- Candidate classes, fields and statuses do not become a schema, API, adapter,
+  endpoint, tensor contract or runtime.
+- No model/checkpoint/weight loading, inference, action/logit/probability/value
+  generation, cache/session/batcher/queue implementation, P8 entry/
+  implementation, environment/self-play/RL/training/evaluation/league,
+  source/real-data/remote-model work, strength evidence or P9-P12 work is
+  approved.
+
+Linked docs:
+
+- `docs/12_technical_plan/12W_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md`
+
+Status:
+
+Model-output interface dependency boundary definition complete; docs-only
+review pending.
+
 ## 2026-07-14 — DR-0133 — P8 Raw-Outcome / Environment-Provenance Boundary Review
 
 Decision:

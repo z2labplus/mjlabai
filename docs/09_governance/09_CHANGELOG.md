@@ -1,5 +1,34 @@
 # 09_CHANGELOG
 
+## 2026-07-14 - v3.47
+
+- Defined the P8 model-output interface dependency boundary before any
+  implementation.
+- Added:
+  - `docs/12_technical_plan/12W_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Defined:
+  - authority separation among environment, protocol, model-output interface,
+    participant policy, reward, evaluation and evidence governance.
+  - ten candidate interface classes, all unapproved, unselected and
+    non-executable.
+  - model/policy/artifact identity, request, observation, legal-action handoff,
+    candidate action, numeric output and response-status boundaries.
+  - timeout/stale/duplicate/retry/fallback, recurrent/session, batching/
+    concurrency, precision/reproducibility and training/evaluation separation.
+  - source/privacy/remote/third-party, candidate fields, MO-E1 through MO-E15,
+    stop conditions and candidate next directions.
+- Planning decision:
+  - `P8 model-output interface dependency boundary is defined before any implementation.`
+- New `10_NEXT` first item:
+  `Review P8 model-output interface dependency boundary before any implementation.`
+- Validation passed: `git diff --check` and 46 existing supervised/data unit
+  tests.
+- No schema/API/adapter/parser/reader/ingestion, model/checkpoint/weight load,
+  inference/action/logit/probability/value generation, recurrent/cache/session/
+  batch/queue implementation, code/tests/fixtures/data, environment/self-play/
+  RL/training/evaluation/league, source/real-data/remote-model work, strength
+  claim or P9-P12 work was added or approved.
+
 ## 2026-07-14 - v3.46
 
 - Reviewed the P8 raw-outcome / environment-provenance boundary before any
