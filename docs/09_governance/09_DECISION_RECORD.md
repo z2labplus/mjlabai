@@ -14,6 +14,43 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-14 — DR-0128 — P8 RL Objective / Reward Boundary Definition
+
+Decision:
+
+```text
+P8 RL objective / reward specification boundary is defined before any implementation.
+```
+
+Context:
+
+- `12P` reviewed the P8 self-play protocol boundary and recorded
+  `A. Review can close.`
+- P8 entry/implementation, reward/RL execution and P9-P12 remain unapproved.
+
+Rationale:
+
+- Raw outcomes, training rewards, losses, diagnostics, evaluation metrics and
+  strength evidence must remain separate before any optimization work.
+- Candidate reward families need explicit failure, bias, scaling, provenance
+  and anti-hacking boundaries without premature numerical selection.
+- OR-E1 through OR-E15 preserve environment, outcome, model, source, review,
+  exact approval and `10_NEXT` gates.
+- A docs-only review is the next safe task.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12Q_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`.
+- The next task is `Review P8 RL objective / reward specification boundary before any implementation.`
+- No reward, objective, loss, algorithm, number or implementation is selected.
+- No P8 entry/implementation, self-play/RL/training/evaluation/league,
+  source/real-data work, model-output integration, strength evidence or
+  P9-P12 work is approved.
+
+Status:
+
+Objective/reward boundary definition complete; docs-only review pending.
+
 ## 2026-07-13 — DR-0127 — P8 Self-Play Protocol Boundary Review
 
 Decision:

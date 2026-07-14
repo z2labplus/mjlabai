@@ -47,6 +47,7 @@ docs/12_technical_plan/12M_P8_SELF_PLAY_RL_DEPENDENCY_MAP_BEFORE_ANY_IMPLEMENTAT
 docs/12_technical_plan/12N_P8_SELF_PLAY_RL_DEPENDENCY_MAP_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12O_P8_SELF_PLAY_PROTOCOL_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12P_P8_SELF_PLAY_PROTOCOL_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12Q_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -215,6 +216,16 @@ bias and candidate manifest refinements. It selects docs-only RL objective /
 reward specification boundary definition next. It is protocol-boundary review
 evidence only, not entry/implementation, execution, strength or P9-P12
 approval.
+
+`docs/12_technical_plan/12Q_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+defines the P8 RL objective / reward specification boundary before any
+implementation. It separates raw outcome, reward, objective/loss, training
+diagnostics, evaluation and strength evidence; evaluates unselected candidate
+families; defines source/timing, failure/retry, bias, anti-hacking, scaling,
+credit-assignment and provenance boundaries; and records OR-E1 through OR-E15,
+stop conditions and candidate directions. It selects a docs-only review next.
+It is objective/reward boundary-definition evidence only, not entry,
+implementation, algorithm selection/execution, strength or P9-P12 approval.
 
 ## Supervised-policy files
 

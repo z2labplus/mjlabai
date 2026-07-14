@@ -8,6 +8,45 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-14 — P8 RL objective / reward boundary definition
+
+- Type: internal documentation / P8 objective-reward boundary evidence.
+- Stage: P8 RL objective / reward specification boundary review before any
+  implementation.
+- Added document:
+  - `docs/12_technical_plan/12Q_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Defined:
+  - vocabulary and raw-outcome/reward/loss/evaluation/evidence separation.
+  - candidate families, all unapproved, unselected and non-executable.
+  - signal source/timing and invalid/abort/retry handling.
+  - seat/role/opponent bias and reward-hacking controls.
+  - scaling/weighting/normalization and credit-assignment boundaries.
+  - algorithm/loss and training/evaluation independence.
+  - source/real-data and model-output/environment dependencies.
+  - candidate reward-spec fields, evidence grade, OR-E1 through OR-E15, stop
+    conditions and candidate directions.
+- Planning decision:
+  - `P8 RL objective / reward specification boundary is defined before any implementation.`
+- Selected next task:
+  - `Review P8 RL objective / reward specification boundary before any implementation.`
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke_extension.py`: passed, 15 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`: passed, 1 test.
+  - `python3 -m unittest tests/data/test_replay_schema.py`: passed, 7 tests.
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`: passed, 1 test.
+- Evidence grade:
+  - P8 RL objective / reward specification boundary definition evidence only.
+- Not evidence of:
+  - P8 entry/implementation, reward/objective/loss implementation or an
+    implementation prompt.
+  - RL algorithm selection, self-play, RL, training, evaluation or league.
+  - source approval/ingestion, real-data use or model-output integration.
+  - strength, Tenhou, stable-dan, LuckyJ or promotion evidence.
+  - P9-P12 approval.
+
 ### 2026-07-13 — P8 self-play protocol boundary review
 
 - Type: internal documentation / P8 protocol-boundary review evidence.

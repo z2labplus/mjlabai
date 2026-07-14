@@ -1,5 +1,31 @@
 # 09_CHANGELOG
 
+## 2026-07-14 - v3.41
+
+- Defined the P8 RL objective / reward specification boundary before any
+  implementation.
+- Added:
+  - `docs/12_technical_plan/12Q_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Defined:
+  - objective/reward vocabulary and raw-outcome/reward/loss/evaluation/
+    evidence separation.
+  - unselected candidate objective/reward families.
+  - signal source/timing, failure/retry and seat/opponent bias boundaries.
+  - reward-hacking, scaling/weighting/normalization and credit boundaries.
+  - algorithm/loss and training/evaluation independence.
+  - source/real-data, model/environment, evidence and candidate-record
+    boundaries.
+  - OR-E1 through OR-E15, stop conditions and candidate directions.
+- Planning decision:
+  - `P8 RL objective / reward specification boundary is defined before any implementation.`
+- New `10_NEXT` first item:
+  `Review P8 RL objective / reward specification boundary before any implementation.`
+- No formula, numeric weight, discount, clipping rule, RL algorithm or
+  implementation was selected. No entry/implementation, code/tests/fixtures/
+  data, self-play/RL/training/evaluation/league, source/real-data work,
+  model-output integration, strength claim or P9-P12 work was added or
+  approved.
+
 ## 2026-07-13 - v3.40
 
 - Reviewed the P8 self-play protocol boundary before any implementation.

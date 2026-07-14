@@ -8,6 +8,19 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-14 — P8 RL objective / reward boundary definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12Q` is mistaken for reward selection, implementation or P8 entry approval. | Governance / Stage Control | High | Medium | `12Q`, handoff, stage contract and `10_NEXT` classify it as definition evidence only and select a docs-only review. | Open |
+| Raw outcome, reward, loss, evaluation metric and strength evidence are conflated. | Research / Evidence | High | High | `12Q` defines seven separate layers and forbids automatic substitution between them. | Open |
+| Candidate families are treated as selected or numerical specifications. | Governance / Execution | High | Medium | Every family is unapproved/unselected/non-executable; no formula, sign, scale, weight, discount or threshold is chosen. | Open |
+| Reward hacking or shaping domination drives behavior away from the north-star objective. | Research / Objective | High | High | Future components require failure modes, anti-exploit invariants, monitoring, stop triggers and rollback before approval. | Open |
+| Retry, seat, opponent or invalid-episode selection bias contaminates reward or evidence. | Evaluation / Integrity | High | Medium | Require lineage, seeds, explicit eligibility, seat/opponent context and retained invalid/aborted denominators. | Open |
+| Reward scale/weight changes occur silently. | Engineering / Reproducibility | High | Medium | Any change creates a new version; components and aggregate returns must remain decomposable/auditable. | Open |
+| High training return is overclaimed as Tenhou/stable-dan/LuckyJ/promotion evidence. | Evidence / Governance | High | High | `12Q` keeps approved evaluation, uncertainty, leakage, seat/opponent and governance gates separate. | Open |
+| The next review is mistaken for RL algorithm selection or execution approval. | Governance / Execution | High | Medium | `10_NEXT` is review-only and forbids reward implementation, algorithm selection and every executable workstream. | Open |
+
 ## 2026-07-13 — P8 self-play protocol boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
