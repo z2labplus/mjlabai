@@ -8,6 +8,19 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-14 — P8 environment / simulator boundary definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12S` is mistaken for P8 entry, environment implementation or execution approval. | Governance / Stage Control | High | Medium | `12S`, handoff, stage contract and `10_NEXT` classify it as definition evidence only and select a docs-only review. | Open |
+| Simulator output is treated as authoritative rules/legality without a reviewed authority chain. | Engineering / Integrity | High | Medium | `12S` separates abstract environment authority from a simulator carrier and requires independent versioned authority. | Open |
+| Model output controls legality, transition, hidden state, terminal status or raw outcome. | Research / Leakage | High | Medium | Models may only propose candidate actions; environment authority validates and applies them without hidden-state exposure. | Open |
+| Global RNG, retry, seat or concurrency behavior silently changes outcomes or evidence. | Engineering / Reproducibility | High | High | Require isolated versioned RNG/state, explicit seeds/seats/retry lineage/resource policy and auditable failure records. | Open |
+| Training and evaluation environments drift or silently share mutable configuration. | Evaluation / Leakage | High | Medium | Treat uses as separately approved, frozen/versioned configurations and require comparability review after changes. | Open |
+| Candidate manifest fields are treated as approved schema/API. | Governance / Execution | High | Medium | `12S` marks fields as candidates only and creates no schema, fixture, parser, API or implementation. | Open |
+| The next review is mistaken for environment implementation or episode execution approval. | Governance / Execution | High | Medium | `10_NEXT` is review-only and forbids modifying `12S`, implementation and all execution. | Open |
+| Boundary evidence is overclaimed as environment correctness or model strength. | Evidence / Governance | High | High | Evidence grade remains environment/simulator boundary definition evidence only. | Open |
+
 ## 2026-07-14 — P8 RL objective / reward boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

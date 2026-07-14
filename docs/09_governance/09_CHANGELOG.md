@@ -1,5 +1,33 @@
 # 09_CHANGELOG
 
+## 2026-07-14 - v3.43
+
+- Defined the P8 environment / simulator authority boundary before any
+  implementation.
+- Added:
+  - `docs/12_technical_plan/12S_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Defined:
+  - bounded environment/simulator vocabulary and authority separation.
+  - unselected/non-executable candidate environment classes.
+  - authoritative state, reset, step/transition, ruleset/legality and
+    observation-projection boundaries.
+  - RNG/seed/reproducibility, seat/role, terminal/raw-outcome and failure/
+    retry/resource boundaries.
+  - concurrency/isolation, invariants, identity/version/provenance and
+    candidate-manifest boundaries.
+  - reward/model dependencies, training/evaluation separation, source/
+    real-data, third-party and evidence boundaries.
+  - ENV-E1 through ENV-E15, stop conditions and candidate directions.
+- Planning decision:
+  - `P8 environment / simulator authority boundary is defined before any implementation.`
+- New `10_NEXT` first item:
+  `Review P8 environment / simulator boundary before any implementation.`
+- No API, schema, state object, RNG, rules engine, legal-action engine,
+  environment, simulator, runner, transition or episode was implemented or
+  executed. No P8 entry/implementation, reward/RL/training/evaluation/league,
+  source/real-data/model-output work, strength claim or P9-P12 work was added
+  or approved.
+
 ## 2026-07-14 - v3.42
 
 - Reviewed the P8 RL objective / reward specification boundary before any

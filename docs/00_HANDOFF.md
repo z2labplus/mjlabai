@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P8 environment / simulator boundary definition before
-any implementation:
+Current active stage is P8 environment / simulator boundary review before any
+implementation:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -65,7 +65,14 @@ candidate families unapproved, unselected and non-executable. `12R` reviews
 evaluation-only metric classification, explicit protocol/environment/
 raw-outcome version linkage, retry lineage and environment authority; none is
 a blocker, schema approval or execution permission. The next first task is
-`Define P8 environment / simulator boundary before any implementation.` This
+`Define P8 environment / simulator boundary before any implementation.` `12S`
+now defines that authority boundary, including environment/simulator
+vocabulary, authoritative state/transition/legality, initialization,
+observation, RNG/seed/seat, terminal/raw outcome, failure/retry/resource,
+concurrency/isolation, invariant, version/provenance, manifest, dependency,
+ENV-E1 through ENV-E15 and stop-condition boundaries. All candidate classes
+remain unapproved and non-executable. The next first task is `Review P8
+environment / simulator boundary before any implementation.` This
 next task remains docs-only and does not approve P8-P12 entry, P8 implementation,
 implementation prompts, broader P7 implementation, source approval, source
 ingestion, broad parser / reader / ingestion, actual feature extraction,

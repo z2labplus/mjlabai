@@ -14,6 +14,46 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-14 — DR-0130 — P8 Environment / Simulator Boundary Definition
+
+Decision:
+
+```text
+P8 environment / simulator authority boundary is defined before any implementation.
+```
+
+Context:
+
+- `12R` reviewed the P8 objective/reward boundary and recorded
+  `A. Review can close.`
+- P8 entry/implementation, environment execution and P9-P12 remained
+  unapproved.
+
+Rationale:
+
+- State, legality, transition, randomness, termination and raw-outcome
+  authority must be explicit before any future episode or reward execution.
+- Participant, protocol, reward and evaluation responsibilities must remain
+  separate from environment authority.
+- Version, seed, retry, resource, concurrency and provenance controls prevent
+  silent state drift and success-only evidence selection.
+- ENV-E1 through ENV-E15 retain review, exact approval and `10_NEXT` gates.
+- A docs-only review is the next safe task.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12S_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`.
+- The next task is `Review P8 environment / simulator boundary before any implementation.`
+- No candidate class, API, schema, environment, simulator, runner, transition,
+  RNG, rules engine or episode is selected, implemented or executed.
+- No P8 entry/implementation, self-play/RL/training/evaluation/league,
+  source/real-data work, model-output integration, strength evidence or
+  P9-P12 work is approved.
+
+Status:
+
+Environment/simulator boundary definition complete; docs-only review pending.
+
 ## 2026-07-14 — DR-0129 — P8 RL Objective / Reward Boundary Review
 
 Decision:

@@ -49,6 +49,7 @@ docs/12_technical_plan/12O_P8_SELF_PLAY_PROTOCOL_BOUNDARY_BEFORE_ANY_IMPLEMENTAT
 docs/12_technical_plan/12P_P8_SELF_PLAY_PROTOCOL_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12Q_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12R_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12S_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -239,6 +240,19 @@ retry lineage and environment authority. It selects docs-only environment /
 simulator boundary definition next. It is objective/reward boundary-review
 evidence only, not entry/implementation, reward/RL selection or execution,
 environment implementation, strength evidence or P9-P12 approval.
+
+`docs/12_technical_plan/12S_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+defines the P8 environment / simulator authority boundary before any
+implementation. It separates environment, simulator, participant, protocol,
+reward and evaluation authority; defines candidate environment classes,
+state/reset/transition/legality/observation/RNG/seat/terminal/error/concurrency/
+invariant/version/provenance/manifest boundaries; keeps model, reward,
+training/evaluation, source/real-data and third-party dependencies separate;
+and records ENV-E1 through ENV-E15, stop conditions and candidate directions.
+It selects a docs-only review next. It is environment/simulator
+boundary-definition evidence only, not entry/implementation, transition or
+episode execution, self-play/RL/training/evaluation/league, strength evidence
+or P9-P12 approval.
 
 ## Supervised-policy files
 

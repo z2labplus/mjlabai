@@ -187,6 +187,25 @@ P8 entry/implementation, reward/RL selection or implementation,
 environment/simulator/runner implementation, self-play/RL/training/evaluation/
 league, source/real-data/model-output work, strength evidence or P9-P12 entry.
 
+## 2026-07-14 P8 Environment / Simulator Boundary Milestone Update
+
+`12S` defines the P8 environment / simulator authority boundary before any
+implementation. It separates environment, simulator, participant, protocol,
+reward and evaluation authority and defines state, reset, transition,
+legality, observation, RNG/seed/seat, terminal/raw outcome, failure/retry/
+resource, concurrency/isolation, invariant, version/provenance, manifest and
+dependency boundaries.
+
+All candidate environment classes remain unapproved and non-executable.
+ENV-E1 through ENV-E15 retain separate review, approval and exact `10_NEXT`
+gates. The next docs-only task is `Review P8 environment / simulator boundary
+before any implementation`.
+
+This milestone update is boundary-definition evidence only. It does not
+approve P8 entry/implementation, environment/simulator/runner implementation,
+transition/episode/self-play/RL/training/evaluation/league, source/real-data/
+model-output work, strength evidence or P9-P12 entry.
+
 ## Current position
 
 ```text
