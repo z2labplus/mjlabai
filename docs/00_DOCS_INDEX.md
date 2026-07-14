@@ -54,6 +54,7 @@ docs/12_technical_plan/12T_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_REVIEW_BEFORE_ANY_I
 docs/12_technical_plan/12U_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12V_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12W_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12X_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -303,6 +304,16 @@ unapproved candidate interface classes, candidate fields, MO-E1 through
 MO-E15, stop conditions and a docs-only review next. It is boundary-definition
 evidence only, not a schema/API/adapter, model loading, inference, action
 generation, P8 entry/implementation, strength evidence or P9-P12 approval.
+
+`docs/12_technical_plan/12X_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+reviews `12W` and records `A. Review can close.` It confirms non-approval,
+authority/identity separation, request/observation/legal-action binding,
+candidate action/numeric/status semantics, failure/retry/fallback, state/
+batching isolation, reproducibility, use/evidence separation, MO-E1 through
+MO-E15 and stop conditions. It records non-blocking future contract notes and
+selects a docs-only training/evaluation model-use boundary next. `12W` was not
+modified. This is boundary-review evidence only, not model loading, inference,
+implementation, execution, strength evidence or P8/P9-P12 approval.
 
 ## Supervised-policy files
 

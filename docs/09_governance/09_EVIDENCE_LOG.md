@@ -8,6 +8,59 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-14 — P8 model-output interface dependency boundary review
+
+- Type: internal documentation / P8 model-output interface dependency boundary
+  review evidence.
+- Stage: P8 training/evaluation model-use boundary definition before any
+  implementation.
+- Added review document:
+  - `docs/12_technical_plan/12X_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- Primary reviewed artifact:
+  - `docs/12_technical_plan/12W_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Reviewed:
+  - scope, planning recap, non-approval baseline and vocabulary.
+  - authority separation and all ten unapproved candidate interface classes.
+  - model/artifact/policy, request, observation and legal-action identities.
+  - candidate action, score/logit/probability, value/auxiliary and response
+    status semantics.
+  - timeout/stale/duplicate/retry/fallback and recurrent/session/batching/
+    concurrency isolation.
+  - determinism/precision/reproducibility and training/evaluation separation.
+  - environment/raw-outcome/reward/evaluation, source/privacy/remote/
+    third-party and candidate-field boundaries.
+  - MO-E1 through MO-E15, stop conditions, candidate directions and governance.
+- Review notes:
+  - future request/response contracts should refine content/finalization,
+    correction/cancellation and unique active response identity.
+  - future action output should bind vocabulary, mapping, selection/sampling
+    and inference-RNG identity.
+  - future timing, fallback, numeric, recurrent-state, batching and remote
+    privacy/redaction details require separate review.
+- Review decision:
+  - `A. Review can close.`
+- `12W` modification:
+  - none.
+- Selected next task:
+  - `Define P8 training / evaluation model-use boundary before any implementation.`
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke_extension.py`: passed, 15 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`: passed, 1 test.
+  - `python3 -m unittest tests/data/test_replay_schema.py`: passed, 7 tests.
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`: passed, 1 test.
+- Evidence grade:
+  - P8 model-output interface dependency boundary review evidence only.
+- Not evidence of:
+  - P8 entry/implementation, an implementation prompt or executable task.
+  - schema/API/adapter/model loading/inference/action/numeric output.
+  - environment/self-play/RL/reward/training/evaluation/league.
+  - source approval/ingestion, real data, remote-model or third-party use.
+  - strength, Tenhou, stable-dan, LuckyJ or promotion evidence.
+  - P9-P12 approval.
+
 ### 2026-07-14 — P8 model-output interface dependency boundary definition
 
 - Type: internal documentation / P8 model-output interface dependency boundary

@@ -8,6 +8,22 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-14 — P8 model-output interface dependency boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12X` review closure is mistaken for P8 entry, interface implementation or model-loading approval. | Governance / Stage Control | High | Medium | `12X`, handoff, stage contract and `10_NEXT` classify it as review evidence only and select another docs-only boundary task. | Open |
+| Request or response has no immutable content/finalization identity or multiple active final responses. | Engineering / Integrity | High | Medium | Future contract review must define content identity, authority, correction/cancellation lineage and exactly one active final response per request attempt. | Open |
+| Action vocabulary, tie-breaking, sampling or inference RNG changes silently. | Engineering / Reproducibility | High | Medium | Future output contract must bind vocabulary/mapping, selection policy and RNG identity; no sampler is approved now. | Open |
+| Deadline/latency records use incompatible clocks or omit completion/cancellation provenance. | Engineering / Evidence | Medium | Medium | Future timing review must bind timebase, received/completed identities, cancellation acknowledgement and latency semantics. | Open |
+| Fallback hides the original failure or lacks policy/source/RNG provenance. | Evaluation / Integrity | High | Medium | Preserve original failure and bind fallback policy, source, selection RNG and evidence eligibility before any approval. | Open |
+| Numeric output calibration, mask status or NaN/Inf handling is ambiguous. | Engineering / Semantics | High | Medium | Future record/contract review must explicitly type numeric semantics; no output class or calculation is approved. | Open |
+| Recurrent-state content/reset/update or cross-artifact compatibility is ambiguous. | Research / Isolation | High | Medium | Future state review must bind content and lifecycle lineage plus compatibility/migration authority. | Open |
+| Batch composition, backend or device nondeterminism is omitted from provenance. | Engineering / Reproducibility | High | Medium | Future review must bind batch composition, kernel flags, backend/device/precision and known limitations. | Open |
+| Remote request/response records expose private/audit-only fields or lack redaction classification. | Privacy / Security | High | Medium | Separate remote/privacy review is mandatory before endpoints, data transfer or credentials; none is approved now. | Open |
+| The next training/evaluation model-use boundary is mistaken for model loading, training or evaluation approval. | Governance / Execution | High | Medium | `10_NEXT` remains docs-only and explicitly forbids artifacts, model calls, training/evaluation execution and every executable workstream. | Open |
+| Boundary-review evidence is overclaimed as runtime conformance, policy quality or model strength. | Evidence / Governance | High | High | Evidence grade remains P8 model-output interface dependency boundary review evidence only. | Open |
+
 ## 2026-07-14 — P8 model-output interface dependency boundary definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

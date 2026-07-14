@@ -2,7 +2,7 @@
 
 ## Current stage
 
-P8 model-output interface dependency boundary review before any
+P8 training / evaluation model-use boundary definition before any
 implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
@@ -56,9 +56,11 @@ observation and environment-authoritative legal-action handoff, candidate
 action/score/value/status boundaries, timeout/stale/duplicate/retry/fallback,
 recurrent/session/batching/concurrency isolation, reproducibility, candidate
 fields, MO-E1 through MO-E15 and stop conditions. Every candidate interface
-class remains unapproved, unselected and non-executable. The current first task
-is `Review P8 model-output interface dependency boundary before any
-implementation.` Production
+class remains unapproved, unselected and non-executable. `12X` reviews `12W`,
+records `A. Review can close`, preserves future notes for finalization,
+selection/RNG, timing, fallback, numeric, state, batching and remote/privacy
+details, and does not modify `12W`. The current first task is `Define P8
+training / evaluation model-use boundary before any implementation.` Production
 code, tests, fixtures, data files, source approval, source ingestion, broad
 parser / reader / ingestion, feature extraction, label generation, dataset
 construction, training, evaluation, model loading/inference/action generation,

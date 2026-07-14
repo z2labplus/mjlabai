@@ -14,6 +14,66 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-14 — DR-0135 — P8 Model-Output Interface Dependency Boundary Review
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Context:
+
+- `12W` defined the P8 model-output interface dependency boundary.
+- P8 entry/implementation, model loading/inference/action generation and
+  P9-P12 remained unapproved.
+
+Rationale:
+
+- Scope, non-approval baseline, vocabulary and authority separation are
+  complete and bounded.
+- All ten candidate classes remain unapproved, unselected and non-executable.
+- Request/observation/legal-set identities, environment authority and
+  candidate/applied action separation prevent hidden information and authority
+  leakage.
+- Status, timeout, stale/duplicate, retry/fallback, recurrent/session, batching/
+  concurrency and reproducibility boundaries make future failures auditable.
+- Candidate fields remain non-schema concepts, and MO-E1 through MO-E15 plus
+  stop conditions preserve separate review, approval and exact `10_NEXT`
+  gates.
+- Finalization/content identity, selection/RNG, timing/latency, fallback,
+  numeric, recurrent-state, batching and remote/privacy details are
+  non-blocking future contract refinements.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12X_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`.
+- `12W` was not modified.
+- The next task is `Define P8 training / evaluation model-use boundary before any implementation.`
+- No interface class, schema, API, adapter, endpoint, tensor contract, model,
+  artifact, checkpoint, loader, inference runtime or execution is selected or
+  approved.
+- No P8 entry/implementation, environment/self-play/RL/training/evaluation/
+  league, source/real-data/remote-model work, strength evidence or P9-P12 work
+  is approved.
+
+Linked docs:
+
+- `docs/12_technical_plan/12W_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/12_technical_plan/12X_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md`
+
+Status:
+
+Model-output interface dependency boundary review complete; docs-only
+training/evaluation model-use boundary definition pending.
+
 ## 2026-07-14 — DR-0134 — P8 Model-Output Interface Dependency Boundary Definition
 
 Decision:

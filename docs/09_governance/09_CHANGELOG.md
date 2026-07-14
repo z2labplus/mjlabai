@@ -1,5 +1,38 @@
 # 09_CHANGELOG
 
+## 2026-07-14 - v3.48
+
+- Reviewed the P8 model-output interface dependency boundary before any
+  implementation.
+- Added:
+  - `docs/12_technical_plan/12X_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- Review decision:
+  - `A. Review can close.`
+- Confirmed:
+  - scope/non-approval, vocabulary and authority separation are safe.
+  - all ten candidate interface classes remain unapproved, unselected and
+    non-executable.
+  - model/artifact/policy and request/observation/legal-set identities remain
+    auditable and leakage-bounded.
+  - candidate action/numeric/status, timeout/retry/fallback, recurrent/session,
+    batching/concurrency and reproducibility boundaries are sufficient.
+  - MO-E1 through MO-E15 and stop conditions preserve separate approval and
+    exact `10_NEXT` gates.
+- Recorded non-blocking future notes for request/response finalization,
+  action-vocabulary/selection/RNG, clock/latency provenance, fallback identity,
+  numeric calibration/mask status, recurrent-state identity, batching
+  reproducibility and remote privacy/redaction.
+- `12W` was not modified.
+- New `10_NEXT` first item:
+  `Define P8 training / evaluation model-use boundary before any implementation.`
+- Validation passed: `git diff --check` and 46 existing supervised/data unit
+  tests.
+- No schema/API/adapter/parser/reader/ingestion, model/checkpoint/weight load,
+  inference/action/score/value generation, recurrent/cache/session/batch/queue
+  implementation, code/tests/fixtures/data, environment/self-play/RL/training/
+  evaluation/league, source/real-data/remote-model work, strength claim or
+  P9-P12 work was added or approved.
+
 ## 2026-07-14 - v3.47
 
 - Defined the P8 model-output interface dependency boundary before any

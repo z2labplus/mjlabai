@@ -28,7 +28,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 model-output interface dependency boundary review before any
+P8 training / evaluation model-use boundary definition before any
 implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
@@ -95,10 +95,13 @@ identity separation, ten unapproved candidate interface classes, immutable
 request/response lineage, observation and legal-action handoff, candidate
 action/score/value/status boundaries, failure/retry/fallback, recurrent/
 session/batching/concurrency isolation, reproducibility, training/evaluation
-separation, candidate fields, MO-E1 through MO-E15 and stop conditions. The
-next first task is `Review P8 model-output interface dependency boundary before
-any implementation`. That task is docs-only, not P8 entry approval, not P8
-implementation approval, not model loading/inference/action generation or
+separation, candidate fields, MO-E1 through MO-E15 and stop conditions. `12X`
+reviews `12W`, records `A. Review can close`, preserves non-blocking future
+notes for request/response finalization, action selection/RNG, timing/latency,
+fallback, numeric semantics, recurrent state, batching and remote privacy, and
+does not modify `12W`. The next first task is `Define P8 training / evaluation
+model-use boundary before any implementation`. That task is docs-only, not P8
+entry approval, not P8 implementation approval, not model loading/inference/action generation or
 model-output integration, not environment/simulator/runner implementation,
 not self-play or reinforcement-learning execution and not an implementation
 prompt. P9-P12 remain unapproved.
