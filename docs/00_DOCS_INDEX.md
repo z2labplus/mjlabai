@@ -48,6 +48,7 @@ docs/12_technical_plan/12N_P8_SELF_PLAY_RL_DEPENDENCY_MAP_REVIEW_BEFORE_ANY_IMPL
 docs/12_technical_plan/12O_P8_SELF_PLAY_PROTOCOL_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12P_P8_SELF_PLAY_PROTOCOL_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12Q_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12R_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -226,6 +227,18 @@ credit-assignment and provenance boundaries; and records OR-E1 through OR-E15,
 stop conditions and candidate directions. It selects a docs-only review next.
 It is objective/reward boundary-definition evidence only, not entry,
 implementation, algorithm selection/execution, strength or P9-P12 approval.
+
+`docs/12_technical_plan/12R_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+reviews `12Q`, confirms its concept separation, candidate-family
+non-selection, source/timing/provenance, failure/retry/bias, anti-hacking,
+scaling, credit, algorithm/loss, training/evaluation, strength, source,
+model/environment, candidate-record, OR-E1 through OR-E15 and stop-condition
+boundaries, and records `A. Review can close.` It records future notes for
+evaluation-only metric classification, explicit upstream-version linkage,
+retry lineage and environment authority. It selects docs-only environment /
+simulator boundary definition next. It is objective/reward boundary-review
+evidence only, not entry/implementation, reward/RL selection or execution,
+environment implementation, strength evidence or P9-P12 approval.
 
 ## Supervised-policy files
 

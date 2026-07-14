@@ -8,6 +8,57 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-14 — P8 RL objective / reward boundary review
+
+- Type: internal documentation / P8 objective-reward boundary review evidence.
+- Stage: P8 environment / simulator boundary definition before any
+  implementation.
+- Added review document:
+  - `docs/12_technical_plan/12R_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- Primary reviewed artifact:
+  - `docs/12_technical_plan/12Q_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Reviewed:
+  - scope, planning recap and non-approval baseline.
+  - vocabulary and raw-outcome/reward/objective/loss/evaluation/evidence
+    separation.
+  - candidate-family non-selection and evaluation-only metric classification.
+  - signal source/timing/provenance and invalid/abort/retry accounting.
+  - seat/role/opponent bias, reward-hacking, scaling and credit boundaries.
+  - algorithm/loss independence and training/evaluation separation.
+  - strength/ranked/promotion, source/real-data and model/environment
+    dependencies.
+  - candidate record, OR-E1 through OR-E15, stop conditions and next
+    directions.
+- Review notes:
+  - evaluation-only metrics remain classification/evaluation concepts, not
+    rewards by default.
+  - future records should explicitly bind protocol, environment and
+    raw-outcome schema versions.
+  - future records should retain explicit episode/retry lineage.
+  - environment/simulator authority is the next docs-only upstream boundary.
+- Review decision:
+  - `A. Review can close.`
+- Selected next task:
+  - `Define P8 environment / simulator boundary before any implementation.`
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke_extension.py`: passed, 15 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`: passed, 1 test.
+  - `python3 -m unittest tests/data/test_replay_schema.py`: passed, 7 tests.
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`: passed, 1 test.
+- Evidence grade:
+  - P8 RL objective / reward specification boundary review evidence only.
+- Not evidence of:
+  - P8 entry/implementation, an implementation prompt or executable task.
+  - reward/objective/loss or RL algorithm selection/implementation.
+  - environment/simulator/runner implementation.
+  - self-play, RL, training, evaluation or league.
+  - source approval/ingestion, real-data use or model-output integration.
+  - strength, Tenhou, stable-dan, LuckyJ or promotion evidence.
+  - P9-P12 approval.
+
 ### 2026-07-14 — P8 RL objective / reward boundary definition
 
 - Type: internal documentation / P8 objective-reward boundary evidence.

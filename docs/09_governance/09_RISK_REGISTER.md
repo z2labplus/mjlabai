@@ -8,6 +8,17 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-14 — P8 RL objective / reward boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12R` review closure is mistaken for reward selection, P8 entry or implementation approval. | Governance / Stage Control | High | Medium | `12R`, handoff, stage contract and `10_NEXT` classify it as review evidence only and select another docs-only boundary task. | Open |
+| Evaluation-only metrics are silently reused as reward components. | Research / Evidence | High | Medium | `12R` records that the family is classification/evaluation only and requires separate review before any reuse. | Open |
+| Generic provenance fields fail to bind future reward records to protocol, environment or raw-outcome versions. | Engineering / Reproducibility | High | Medium | Future schema review must add explicit immutable upstream identities; this review grants no schema approval. | Open |
+| Retry lineage or failed episodes are omitted, creating success-only selection bias. | Evaluation / Integrity | High | Medium | Future records must preserve episode/retry lineage, seeds, eligibility and invalid/aborted denominators. | Open |
+| The next environment/simulator boundary task is mistaken for environment implementation or execution approval. | Governance / Execution | High | Medium | `10_NEXT` is docs-only and forbids environments, simulators, runners, transitions, episodes, self-play, RL and training execution. | Open |
+| Objective/reward review evidence is overclaimed as strength, Tenhou, stable-dan, LuckyJ or promotion evidence. | Evidence / Governance | High | High | Evidence grade remains objective/reward boundary review evidence only. | Open |
+
 ## 2026-07-14 — P8 RL objective / reward boundary definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

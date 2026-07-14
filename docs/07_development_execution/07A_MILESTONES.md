@@ -169,6 +169,24 @@ approve P8 entry/implementation, reward/loss implementation, RL algorithm
 selection, self-play/RL/training/evaluation/league, source/real-data work,
 model-output integration, strength evidence or P9-P12 entry.
 
+## 2026-07-14 P8 RL Objective / Reward Boundary Review Milestone Update
+
+`12R` reviews the `12Q` P8 RL objective / reward specification boundary and
+records `A. Review can close.` It confirms concept separation, candidate-family
+non-selection, source/timing/provenance, failure/retry/bias, anti-hacking,
+scaling, credit, algorithm/loss, training/evaluation, evidence, dependency,
+OR-E1 through OR-E15 and stop-condition boundaries.
+
+The review records non-blocking future notes for evaluation-only metric
+classification, explicit upstream-version linkage, retry lineage and
+environment authority. The next docs-only task is `Define P8 environment /
+simulator boundary before any implementation`.
+
+This milestone update is boundary-review evidence only. It does not approve
+P8 entry/implementation, reward/RL selection or implementation,
+environment/simulator/runner implementation, self-play/RL/training/evaluation/
+league, source/real-data/model-output work, strength evidence or P9-P12 entry.
+
 ## Current position
 
 ```text

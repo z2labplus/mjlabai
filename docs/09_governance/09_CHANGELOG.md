@@ -1,5 +1,34 @@
 # 09_CHANGELOG
 
+## 2026-07-14 - v3.42
+
+- Reviewed the P8 RL objective / reward specification boundary before any
+  implementation.
+- Added:
+  - `docs/12_technical_plan/12R_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- Review decision:
+  - `A. Review can close.`
+- Confirmed:
+  - raw outcome, reward, objective/loss, diagnostics, evaluation and strength
+    evidence remain separate.
+  - all candidate families remain unapproved, unselected and non-executable.
+  - source/timing/provenance, failure/retry, bias, anti-hacking, scaling,
+    credit, algorithm/loss and training/evaluation boundaries are sufficient.
+  - OR-E1 through OR-E15 and stop conditions preserve separate review,
+    approval and exact `10_NEXT` gates.
+- Recorded future notes for evaluation-only metric classification, explicit
+  protocol/environment/raw-outcome version linkage, retry lineage and
+  environment authority; none is a blocker, schema approval or execution
+  permission.
+- New `10_NEXT` first item:
+  `Define P8 environment / simulator boundary before any implementation.`
+- This is objective/reward boundary-review evidence only. No P8 entry or
+  implementation, implementation prompt, reward/objective/loss or RL
+  algorithm selection, environment/simulator/runner implementation,
+  code/tests/fixtures/data, self-play/RL/training/evaluation/league,
+  source/real-data work, model-output integration, strength claim or P9-P12
+  work was added or approved.
+
 ## 2026-07-14 - v3.41
 
 - Defined the P8 RL objective / reward specification boundary before any

@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P8 RL objective / reward specification boundary review
-before any implementation:
+Current active stage is P8 environment / simulator boundary definition before
+any implementation:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -57,21 +57,24 @@ information/action boundaries, reproducibility, termination, manifest fields,
 training/evaluation separation, SP-E1 through SP-E15 and stop conditions.
 `12P` reviews `12O`, records `A. Review can close`, and captures future notes
 for scoped P8 runner/environment wording, cross-episode policy updates,
-seat/retry selection bias and candidate manifest refinements. The next first
-task was `Define P8 RL objective / reward specification boundary before any
-implementation.` `12Q` now defines that boundary, separates raw outcome,
-reward, loss, evaluation and strength evidence, keeps all candidate families
-unapproved/unselected/non-executable, and selects a docs-only review. The next
-first task is `Review P8 RL objective / reward specification boundary before
-any implementation.` This next task remains docs-only and does not
-approve P8-P12 entry, P8 implementation,
+seat/retry selection bias and candidate manifest refinements. `12Q` defines
+the P8 RL objective / reward specification boundary, separates raw outcome,
+reward, objective/loss, evaluation and strength evidence, and keeps all
+candidate families unapproved, unselected and non-executable. `12R` reviews
+`12Q` and records `A. Review can close.` It preserves future notes for
+evaluation-only metric classification, explicit protocol/environment/
+raw-outcome version linkage, retry lineage and environment authority; none is
+a blocker, schema approval or execution permission. The next first task is
+`Define P8 environment / simulator boundary before any implementation.` This
+next task remains docs-only and does not approve P8-P12 entry, P8 implementation,
 implementation prompts, broader P7 implementation, source approval, source
 ingestion, broad parser / reader / ingestion, actual feature extraction,
 actual label generation, supervised dataset construction, split creation,
 leakage-test implementation, training-data approval, training-run approval,
 training, model architecture / trainer implementation, evaluation
 implementation, model-output integration, model-strength evidence, real data,
-self-play, league or reinforcement-learning execution. P9-P12 remain
+self-play, league, reinforcement-learning execution or environment/simulator/
+runner implementation. P9-P12 remain
 unapproved.
 
 P0 / P1 / P2 are basically established.

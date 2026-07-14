@@ -2,8 +2,7 @@
 
 ## Current stage
 
-P8 RL objective / reward specification boundary review before any
-implementation.
+P8 environment / simulator boundary definition before any implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -33,13 +32,16 @@ environment wording, cross-episode policy updates, seat/retry bias and
 candidate manifest refinements. `12Q` defines the P8 RL objective / reward
 specification boundary, including concept separation, candidate families,
 failure/bias/anti-hacking controls, scaling, credit assignment, dependencies,
-OR-E1 through OR-E15 and stop conditions. The current first task is `Review P8
-RL objective / reward specification boundary before any implementation.` Production
+OR-E1 through OR-E15 and stop conditions. `12R` reviews `12Q`, records
+`A. Review can close`, and preserves non-blocking future notes for
+evaluation-only metric classification, explicit upstream-version linkage,
+retry lineage and environment authority. The current first task is `Define P8
+environment / simulator boundary before any implementation.` Production
 code, tests, fixtures, data files, source approval, source ingestion, broad
 parser / reader / ingestion, feature extraction, label generation, dataset
 construction, training, evaluation, model-output integration, self-play
-execution, reinforcement-learning execution, league and P8-P12 remain
-unapproved.
+execution, reinforcement-learning execution, league, environment/simulator/
+runner implementation and P8-P12 remain unapproved.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -326,13 +328,13 @@ P8 scope, entry criteria and first planning task review = complete in `12J`; rev
 P8 risk and evidence taxonomy = defined in `12K` and reviewed in `12L`; review can close
 P8 self-play / RL dependency map = defined in `12M` and reviewed in `12N`; review can close
 P8 self-play protocol boundary = defined in `12O` and reviewed in `12P`; review can close
-P8 RL objective / reward specification boundary = defined in `12Q`; review pending
+P8 RL objective / reward specification boundary = defined in `12Q` and reviewed in `12R`; review can close
 Full P7 = closed for documented supervised-learning scope only
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = review P8 RL objective / reward specification boundary before any implementation
+Next = define P8 environment / simulator boundary before any implementation
 ```
 
 ## AI role
@@ -341,12 +343,13 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Review the docs-only P8 RL objective / reward specification boundary before
-any implementation while keeping P8 entry, P8 implementation,
+Define the docs-only P8 environment / simulator authority boundary before any
+implementation while keeping P8 entry, P8 implementation,
 implementation prompts, source
 approval, source ingestion, real data, feature extraction, label generation,
-dataset construction, training, evaluation, self-play, league, P9-P12 and
-model-strength claims unapproved until separate later approvals exist.
+dataset construction, training, evaluation, self-play, league, environment/
+simulator/runner implementation, P9-P12 and model-strength claims unapproved
+until separate later approvals exist.
 
 This supports the north-star target by ensuring that any future supervised
 learning, RL, search, league or LuckyJ validation work starts only after the
@@ -369,6 +372,7 @@ and first-task boundaries.
 - `docs/12_technical_plan/12O_P8_SELF_PLAY_PROTOCOL_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/12_technical_plan/12P_P8_SELF_PLAY_PROTOCOL_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/12_technical_plan/12Q_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/12_technical_plan/12R_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md`
 - `docs/04_rl_selfplay/04G_ALGORITHM_RACING_FUNNEL.md`
 - `docs/05_evaluation/05G_RACING_FUNNEL_EVALUATION.md`
@@ -452,4 +456,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review P8 RL objective / reward specification boundary before any implementation.
+Define P8 environment / simulator boundary before any implementation.

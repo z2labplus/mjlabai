@@ -14,6 +14,49 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-14 — DR-0129 — P8 RL Objective / Reward Boundary Review
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Context:
+
+- `12Q` defined the P8 RL objective / reward specification boundary.
+- P8 entry/implementation, reward/RL execution and P9-P12 remained
+  unapproved.
+
+Rationale:
+
+- The seven raw-outcome/reward/objective-loss/diagnostic/evaluation/evidence
+  layers are clear and non-executable.
+- Every candidate family remains unapproved, unselected and non-executable.
+- Failure/retry/bias, reward-hacking, scaling, credit, algorithm/loss,
+  training/evaluation, source/model/environment and evidence controls are
+  sufficient for this docs-only boundary.
+- OR-E1 through OR-E15 and stop conditions preserve independent review,
+  approval and exact `10_NEXT` authorization.
+- Evaluation-only metric classification, upstream-version identities, retry
+  lineage and environment authority are future refinements rather than
+  blockers.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12R_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`.
+- The next task is `Define P8 environment / simulator boundary before any implementation.`
+- No objective, reward, loss, algorithm, environment, simulator, runner,
+  number or implementation is selected or approved.
+- No P8 entry/implementation, self-play/RL/training/evaluation/league,
+  source/real-data work, model-output integration, strength evidence or
+  P9-P12 work is approved.
+
+Status:
+
+Objective/reward boundary review complete; docs-only environment/simulator
+boundary definition pending.
+
 ## 2026-07-14 — DR-0128 — P8 RL Objective / Reward Boundary Definition
 
 Decision:
