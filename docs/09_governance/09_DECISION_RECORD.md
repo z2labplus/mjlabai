@@ -14,6 +14,51 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-14 — DR-0133 — P8 Raw-Outcome / Environment-Provenance Boundary Review
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Context:
+
+- `12U` defined the P8 raw-outcome / environment-provenance boundary.
+- P8 entry/implementation, raw-outcome/environment execution and P9-P12
+  remained unapproved.
+
+Rationale:
+
+- Scope, recap, non-approval wording and vocabulary are accurate and bounded.
+- Protocol, environment, attempt, transition, terminal, raw outcome, reward,
+  evaluation and evidence-governance authority remain separated.
+- Finalization/immutability, correction/supersession, retry/duplicate/failure,
+  completeness/integrity and provenance boundaries prevent silent loss,
+  rewrite or success-only filtering.
+- Candidate fields remain non-schema concepts, and RO-E1 through RO-E15 plus
+  stop conditions preserve separate review, approval and exact `10_NEXT`
+  gates.
+- Parent-attempt identity, atomic/idempotent unique finalization, acyclic
+  supersession, payload content identity, authority identities and privacy
+  classification are non-blocking future notes.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12V_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`.
+- `12U` was not modified.
+- The next task is `Define P8 model-output interface dependency boundary before any implementation.`
+- No schema, API, parser, database, environment, outcome, model-output path,
+  model/checkpoint load, inference, action generation or implementation is
+  selected, approved or executed.
+- No P8 entry/implementation, self-play/RL/training/evaluation/league,
+  source/real-data work, strength evidence or P9-P12 work is approved.
+
+Status:
+
+Raw-outcome/environment-provenance boundary review complete; docs-only
+model-output interface dependency boundary definition pending.
+
 ## 2026-07-14 — DR-0132 — P8 Raw-Outcome / Environment-Provenance Boundary Definition
 
 Decision:

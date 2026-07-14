@@ -8,6 +8,63 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-14 — P8 raw-outcome / environment-provenance boundary review
+
+- Type: internal documentation / P8 raw-outcome and environment-provenance
+  boundary review evidence.
+- Stage: P8 model-output interface dependency boundary definition before any
+  implementation.
+- Added review document:
+  - `docs/12_technical_plan/12V_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- Primary reviewed artifact:
+  - `docs/12_technical_plan/12U_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Reviewed:
+  - scope, planning recap, non-approval baseline and vocabulary.
+  - protocol/environment/attempt/transition/terminal/outcome authority and
+    immutable lineage.
+  - canonical attempt outcome, finalization/immutability and correction/
+    supersession boundaries.
+  - simulator conformance, transition/retry/duplicate/failure and
+    completeness/integrity provenance.
+  - participant/artifact/RNG/seed/seat/resource provenance and candidate
+    fields.
+  - reward/evaluation/outcome-use separation, source/privacy/third-party and
+    evidence boundaries.
+  - RO-E1 through RO-E15, stop conditions and next directions.
+- Review notes:
+  - future representation should distinguish parent attempt from episode
+    grouping.
+  - future finalization should be atomic/idempotent with one active final head.
+  - supersession lineage should remain acyclic and auditable.
+  - payload references should bind immutable content identity.
+  - finalization/correction authority and privacy/redaction classification
+    should remain explicit.
+- Review decision:
+  - `A. Review can close.`
+- `12U` modification:
+  - none.
+- Selected next task:
+  - `Define P8 model-output interface dependency boundary before any implementation.`
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke_extension.py`: passed, 15 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`: passed, 1 test.
+  - `python3 -m unittest tests/data/test_replay_schema.py`: passed, 7 tests.
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`: passed, 1 test.
+- Evidence grade:
+  - P8 raw-outcome and environment-provenance boundary review evidence only.
+- Not evidence of:
+  - P8 entry/implementation, an implementation prompt or executable task.
+  - schema/parser/database or environment/outcome implementation.
+  - model loading, checkpoint use, inference, action generation or
+    model-output integration.
+  - self-play/RL/reward/training/evaluation/league.
+  - source approval/ingestion or real-data use.
+  - strength, Tenhou, stable-dan, LuckyJ or promotion evidence.
+  - P9-P12 approval.
+
 ### 2026-07-14 — P8 raw-outcome / environment-provenance boundary definition
 
 - Type: internal documentation / P8 raw-outcome and environment-provenance

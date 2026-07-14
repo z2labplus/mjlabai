@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P8 raw-outcome / environment-provenance boundary
-review before any implementation:
+Current active stage is P8 model-output interface dependency boundary
+definition before any implementation:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -79,16 +79,21 @@ provenance boundary, including immutable authority lineage, outcome status and
 finalization, correction/supersession, retry/duplicate/failure, completeness/
 integrity, participant/artifact/RNG/seat/resource provenance, candidate fields,
 reward/evaluation/use separation, RO-E1 through RO-E15 and stop conditions.
-No schema, parser, fixture, data, environment or outcome implementation was
-created. The next first task is `Review P8 raw-outcome and
-environment-provenance boundary before any implementation.` This next task
-remains docs-only and does not approve P8-P12 entry, P8 implementation,
+`12V` reviews `12U`, records `A. Review can close`, and preserves
+non-blocking future notes for parent-attempt identity, atomic/idempotent
+unique finalization, acyclic supersession, payload content identity,
+finalization/correction authority and privacy/redaction classification.
+`12U` was not modified. No schema, parser, fixture, data, environment or
+outcome implementation was created. The next first task is `Define P8
+model-output interface dependency boundary before any implementation.` This
+next task remains docs-only and does not approve P8-P12 entry, P8 implementation,
 implementation prompts, broader P7 implementation, source approval, source
 ingestion, broad parser / reader / ingestion, actual feature extraction,
 actual label generation, supervised dataset construction, split creation,
 leakage-test implementation, training-data approval, training-run approval,
 training, model architecture / trainer implementation, evaluation
-implementation, model-output integration, model-strength evidence, real data,
+implementation, model loading/inference/action generation, model-output
+integration, model-strength evidence, real data,
 self-play, league, reinforcement-learning execution, raw-outcome schema or
 environment/simulator/runner implementation. P9-P12 remain
 unapproved.
@@ -737,13 +742,14 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review P8 RL objective / reward specification boundary before any
-implementation. `12Q` defines that boundary after `12P` recorded
-`A. Review can close.` The objective/reward review must remain docs-only and
-must not approve P8 entry, P8 implementation, an implementation prompt,
-implement reward, select or run RL, execute self-play or training,
-evaluation, league, source/real-data work, model-output integration,
-model-strength claims or P9-P12 entry.
+Define P8 model-output interface dependency boundary before any
+implementation. `12V` reviews the `12U` raw-outcome/environment-provenance
+boundary and records `A. Review can close.` The model-output dependency task
+must remain docs-only and must not approve P8 entry, P8 implementation, an
+implementation prompt, implement a schema/adapter/integration, load a model/
+checkpoint/weight, execute inference/action generation, run environment,
+self-play, RL, training, evaluation or league, approve source/real-data work,
+claim model strength or enter P9-P12.
 ```
 
 Latest Akochan F1 audit summary:

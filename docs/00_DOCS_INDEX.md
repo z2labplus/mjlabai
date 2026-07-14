@@ -52,6 +52,7 @@ docs/12_technical_plan/12R_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_REVIEW_
 docs/12_technical_plan/12S_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12T_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12U_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12V_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -278,6 +279,18 @@ and records RO-E1 through RO-E15, stop conditions and candidate directions.
 It selects a docs-only review next. It is boundary-definition evidence only,
 not a schema, parser, database, environment, execution, strength evidence or
 P8/P9-P12 approval.
+
+`docs/12_technical_plan/12V_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+reviews `12U` and records `A. Review can close.` It confirms scope,
+authority/attempt/terminal/outcome lineage, finalization/immutability,
+correction/supersession, retry/duplicate/failure, completeness/integrity,
+participant/artifact/RNG/seat/resource provenance, candidate fields,
+reward/evaluation/use separation, RO-E1 through RO-E15 and stop conditions.
+It preserves non-blocking future notes for parent-attempt identity,
+atomic/idempotent unique finalization, acyclic supersession, payload content
+identity, authority identities and privacy/redaction classification. `12U`
+was not modified. This is boundary-review evidence only, not schema,
+implementation, execution, strength evidence or P8/P9-P12 approval.
 
 ## Supervised-policy files
 

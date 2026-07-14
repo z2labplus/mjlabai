@@ -1,5 +1,37 @@
 # 09_CHANGELOG
 
+## 2026-07-14 - v3.46
+
+- Reviewed the P8 raw-outcome / environment-provenance boundary before any
+  implementation.
+- Added:
+  - `docs/12_technical_plan/12V_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- Review decision:
+  - `A. Review can close.`
+- Confirmed:
+  - protocol/environment/attempt/transition/terminal/outcome authority and
+    immutable downstream lineage are separated.
+  - canonical attempt outcomes, finalization, correction/supersession,
+    retry/duplicate/failure and completeness/integrity boundaries are
+    sufficient.
+  - participant/artifact/RNG/seed/seat/resource provenance, candidate fields,
+    reward/evaluation/use separation and source/privacy boundaries are safe.
+  - RO-E1 through RO-E15 and stop conditions preserve separate review,
+    approval and exact `10_NEXT` gates.
+- Recorded non-blocking future notes for parent-attempt identity,
+  atomic/idempotent unique finalization, acyclic supersession, payload content
+  identity, separate finalization/correction authority and privacy/redaction
+  classification.
+- `12U` was not modified.
+- New `10_NEXT` first item:
+  `Define P8 model-output interface dependency boundary before any implementation.`
+- This is raw-outcome/environment-provenance boundary-review evidence only.
+  No P8 entry/implementation, implementation prompt, schema/parser/database,
+  environment/outcome execution, model loading/inference/action generation,
+  code/tests/fixtures/data, self-play/RL/training/evaluation/league,
+  source/real-data work, model-output integration, strength claim or P9-P12
+  work was added or approved.
+
 ## 2026-07-14 - v3.45
 
 - Defined the P8 raw-outcome / environment-provenance boundary before any

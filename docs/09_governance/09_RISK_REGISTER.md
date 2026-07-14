@@ -8,6 +8,19 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-14 — P8 raw-outcome / environment-provenance boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12V` review closure is mistaken for P8 entry, schema approval or outcome implementation permission. | Governance / Stage Control | High | Medium | `12V`, handoff, stage contract and `10_NEXT` classify it as review evidence only and select another docs-only boundary task. | Open |
+| Episode grouping and retry-attempt parentage are conflated. | Engineering / Integrity | High | Medium | Future representation review should distinguish episode grouping from an explicit parent-attempt edge; no schema is approved now. | Open |
+| Repeated finalization creates multiple active outcomes for one attempt. | Engineering / Integrity | High | Medium | Future contract review must define atomic/idempotent finalization and one active final head per attempt. | Open |
+| Multi-hop supersession forms a cycle or loses the resolvable current head. | Engineering / Integrity | High | Low | Future correction review must require acyclic lineage, preserved originals and auditable head resolution. | Open |
+| A payload reference binds only a mutable storage path rather than immutable content identity. | Engineering / Evidence | High | Medium | Future representation review must bind verifiable content identity separately from location; no storage/hash implementation is approved. | Open |
+| Finalization/correction authority or provenance fields leak secrets or platform identifiers. | Privacy / Security | High | Medium | Future records require separate authority identities plus privacy/redaction classification without embedding secrets. | Open |
+| The next model-output boundary task is mistaken for model loading, inference or integration approval. | Governance / Execution | High | Medium | `10_NEXT` is docs-only and explicitly forbids schemas/adapters, model/checkpoint loading, inference and action generation. | Open |
+| Boundary-review evidence is overclaimed as outcome correctness or model strength. | Evidence / Governance | High | High | Evidence grade remains P8 raw-outcome/environment-provenance boundary review evidence only. | Open |
+
 ## 2026-07-14 — P8 raw-outcome / environment-provenance boundary definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

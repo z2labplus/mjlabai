@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Review P8 raw-outcome and environment-provenance boundary before any implementation.
+- [ ] Define P8 model-output interface dependency boundary before any implementation.
 
 Current execution charter:
 
@@ -16,14 +16,17 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only P8 raw-outcome / environment-provenance boundary review
-  gate before any implementation.
-- Do not modify `12U` to resolve review findings; record blockers separately.
+- This is a docs-only P8 model-output interface dependency boundary definition
+  before any implementation.
 - Do not approve P8 entry.
 - Do not approve P8 implementation.
 - Do not define or generate a P8 implementation prompt.
 - Do not prepare an implementation approval decision.
-- Do not implement a raw-outcome schema, parser, reader or ingestion path.
+- Do not implement model-output integration.
+- Do not load a model, checkpoint or weight.
+- Do not execute inference or action generation.
+- Do not implement a model-output schema, adapter, parser, reader, ingestion
+  path or CLI.
 - Do not execute self-play.
 - Do not execute reinforcement learning.
 - Do not implement a reward or objective.
@@ -54,6 +57,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-07-14 Reviewed P8 raw-outcome and environment-provenance boundary before any implementation: added `docs/12_technical_plan/12V_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`, reviewed `12U` scope, planning recap, non-approval baseline, vocabulary, authority lineage, canonical attempt outcome, finalization/immutability, correction/supersession, simulator conformance, episode/transition/retry/duplicate/failure lineage, completeness/integrity, participant/artifact/RNG/seed/seat/resource provenance, candidate fields, reward/evaluation/use separation, source/privacy/third-party boundaries, RO-E1 through RO-E15, stop conditions, next directions and governance synchronization. Decision: `A. Review can close.` Parent-attempt identity, finalization atomicity/idempotency/unique active head, acyclic supersession, payload content identity, separate finalization/correction authority and privacy/redaction classification remain non-blocking future refinements. `12U` was not modified. This is boundary-review evidence only, not P8 entry/implementation, an implementation prompt, schema/parser/database, environment/outcome execution, self-play/RL/training/evaluation/league, source/real-data/model-output work, strength evidence or P9-P12 approval. The next task is `Define P8 model-output interface dependency boundary before any implementation.`
 - [x] 2026-07-14 Defined P8 raw-outcome and environment-provenance boundary before any implementation: added `docs/12_technical_plan/12U_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`, defining scope, planning recap, non-approval baseline, vocabulary, authority/lineage chain, canonical episode outcome, finalization/immutability, simulator conformance provenance, episode/transition lineage, retry/duplicate/replacement, completeness/integrity, participant/artifact, seed/seat/RNG, terminal/failure/resource provenance, candidate fields, reward/evaluation/use separation, source/privacy/third-party boundaries, evidence grade, RO-E1 through RO-E15, stop conditions and candidate directions. Planning decision: `P8 raw-outcome and environment-provenance boundary is defined before any implementation.` Candidate fields and statuses remain non-executable semantics; no schema, record class, parser, reader, ingestion, database, fixture, data, validator, environment, transition, episode or outcome was implemented or created. This is boundary-definition evidence only, not P8 entry/implementation, an implementation prompt, reward/RL/self-play/training/evaluation/league, source/real-data/model-output work, strength evidence or P9-P12 approval. The next task is `Review P8 raw-outcome and environment-provenance boundary before any implementation.`
 - [x] 2026-07-14 Reviewed P8 environment / simulator boundary before any implementation: added `docs/12_technical_plan/12T_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`, reviewed `12S` scope, planning recap, non-approval baseline, vocabulary, authority separation, simulator conformance, candidate classes, authoritative state, reset/transition/legality/observation, RNG/seat/reproducibility, terminal/raw outcome, failure/retry/resource, concurrency/isolation, invariants, identity/version/provenance, candidate manifest, reward/model dependencies, training/evaluation separation, source/third-party/evidence boundaries, ENV-E1 through ENV-E15, stop conditions, next directions and governance synchronization. Decision: `A. Review can close.` Simulator conformance, reset/retry identity, step atomicity/idempotency, RNG substreams, concurrent event ordering/partial failure and manifest-provenance details remain non-blocking future refinements. `12S` was not modified. This is boundary-review evidence only, not P8 entry/implementation, an implementation prompt, environment/simulator/runner or raw-outcome schema implementation, transition/episode/self-play/RL/training/evaluation/league, source/real-data/model-output work, strength evidence or P9-P12 approval. The next task is `Define P8 raw-outcome and environment-provenance boundary before any implementation.`
 - [x] 2026-07-14 Defined P8 environment / simulator boundary before any implementation: added `docs/12_technical_plan/12S_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`, defining scope, Full P7/P8 recap, non-approval baseline, environment/simulator vocabulary and authority separation, candidate classes, authoritative state, reset/initialization, step/transition, ruleset/legality, observation projection, RNG/seed/reproducibility, seat/role, terminal/raw-outcome, error/abort/retry/resource, concurrency/isolation, invariants, identity/version/provenance, candidate manifest, reward/model dependencies, training/evaluation separation, source/real-data and third-party boundaries, evidence grade, ENV-E1 through ENV-E15, stop conditions and candidate directions. Planning decision: `P8 environment / simulator authority boundary is defined before any implementation.` Every candidate class remains unapproved and non-executable; no API, schema, state, RNG, rule, transition, environment, simulator, runner or episode was implemented or executed. This is boundary-definition evidence only, not P8 entry/implementation, reward/RL/self-play/training/evaluation/league, source/real-data/model-output work, strength evidence or P9-P12 approval. The next task is `Review P8 environment / simulator boundary before any implementation.`

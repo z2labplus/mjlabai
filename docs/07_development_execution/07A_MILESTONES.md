@@ -246,6 +246,27 @@ environment/simulator/runner/outcome implementation, transition/episode/
 self-play/RL/training/evaluation/league, source/real-data/model-output work,
 strength evidence or P9-P12 entry.
 
+## 2026-07-14 P8 Raw-Outcome / Environment-Provenance Boundary Review Milestone Update
+
+`12V` reviews the `12U` P8 raw-outcome / environment-provenance boundary and
+records `A. Review can close.` It confirms authority and attempt lineage,
+canonical outcome status, finalization/immutability, correction/supersession,
+simulator conformance, retry/duplicate/failure, completeness/integrity,
+participant/artifact/RNG/seat/resource provenance, candidate fields,
+reward/evaluation/use separation, RO-E1 through RO-E15 and stop conditions.
+
+The review preserves non-blocking future notes for parent-attempt identity,
+atomic/idempotent unique finalization, acyclic supersession, payload content
+identity, separate finalization/correction authority and privacy/redaction
+classification. `12U` was not modified. The next docs-only task is `Define P8
+model-output interface dependency boundary before any implementation`.
+
+This milestone update is boundary-review evidence only. It does not approve
+P8 entry/implementation, a schema/parser/database, environment/outcome or
+model-output implementation, model/checkpoint loading, inference/action
+generation, transition/episode/self-play/RL/training/evaluation/league,
+source/real-data work, strength evidence or P9-P12 entry.
+
 ## Current position
 
 ```text
