@@ -8,6 +8,51 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-14 — P8 training / evaluation model-use boundary definition
+
+- Type: internal documentation / P8 training and evaluation model-use
+  boundary definition evidence.
+- Stage: P8 training/evaluation model-use boundary review before any
+  implementation.
+- Added document:
+  - `docs/12_technical_plan/12Y_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Defined:
+  - non-approval baseline, vocabulary and authority separation.
+  - ten candidate model-use classes, all unapproved, unselected and
+    non-executable.
+  - immutable artifact/checkpoint/policy identity and parent/child lineage.
+  - mutable training and frozen evaluation policy boundaries.
+  - within/between-episode updates and training/validation/selection/holdout
+    separation.
+  - checkpoint selection, early stopping and tuning/evaluation leakage.
+  - training/evaluation self-play, reference/opponent, recurrent/session/cache
+    and model-output dependencies.
+  - upstream version binding, eligibility, failure, reproducibility and
+    source/privacy/third-party boundaries.
+  - candidate fields, TU-E1 through TU-E15, stop conditions and candidate next
+    directions.
+- Planning decision:
+  - `P8 training / evaluation model-use boundary is defined before any implementation.`
+- Selected next task:
+  - `Review P8 training / evaluation model-use boundary before any implementation.`
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke_extension.py`: passed, 15 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`: passed, 1 test.
+  - `python3 -m unittest tests/data/test_replay_schema.py`: passed, 7 tests.
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`: passed, 1 test.
+- Evidence grade:
+  - P8 training / evaluation model-use boundary definition evidence only.
+- Not evidence of:
+  - P8 entry/implementation or an implementation prompt.
+  - training-data/training-run/evaluation approval or execution.
+  - model/checkpoint/weight loading or checkpoint/snapshot creation.
+  - inference, model-output integration, self-play/RL/league or real-data use.
+  - strength, Tenhou, stable-dan, LuckyJ or promotion evidence.
+  - P9-P12 approval.
+
 ### 2026-07-14 — P8 model-output interface dependency boundary review
 
 - Type: internal documentation / P8 model-output interface dependency boundary

@@ -14,6 +14,62 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-14 — DR-0136 — P8 Training / Evaluation Model-Use Boundary Definition
+
+Decision:
+
+```text
+P8 training / evaluation model-use boundary is defined before any implementation.
+```
+
+Context:
+
+- `12X` reviewed the P8 model-output interface dependency boundary and
+  recorded `A. Review can close.`
+- P8 entry/implementation, model loading, training/evaluation execution and
+  P9-P12 remained unapproved.
+
+Rationale:
+
+- Mutable training and frozen evaluation policy use must be separated before
+  any artifact, update, checkpoint or evaluation can be governed safely.
+- Artifact content, parent/child lineage, update/freeze events and behavior-
+  affecting runtime identities must remain immutable and auditable.
+- Training, validation, checkpoint selection, holdout, ranked evidence and
+  promotion must not share eligibility by implication.
+- Tuning, repeated evaluation, failure filtering and silent artifact
+  substitution can contaminate evidence unless explicitly recorded.
+- TU-E1 through TU-E15 retain review, exact approval and `10_NEXT` hard gates.
+- A docs-only review is the next safe task.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12Y_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`.
+- The next task is `Review P8 training / evaluation model-use boundary before any implementation.`
+- Candidate use classes, statuses and fields do not become a schema, manifest,
+  loader, trainer, evaluator, checkpoint or runtime.
+- No model/checkpoint/weight was loaded or created; no training/tuning/
+  evaluation/checkpoint selection, inference, model-output integration,
+  self-play/RL/league, source/real-data work, strength evidence or P9-P12 work
+  is approved.
+
+Linked docs:
+
+- `docs/12_technical_plan/12Y_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/12_technical_plan/12X_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md`
+
+Status:
+
+Training/evaluation model-use boundary definition complete; docs-only review
+pending.
+
 ## 2026-07-14 — DR-0135 — P8 Model-Output Interface Dependency Boundary Review
 
 Decision:

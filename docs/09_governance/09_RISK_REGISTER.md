@@ -8,6 +8,19 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-14 — P8 training / evaluation model-use boundary definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12Y` is mistaken for P8 entry, model loading, training or evaluation approval. | Governance / Stage Control | High | Medium | `12Y`, handoff, stage contract and `10_NEXT` classify it as definition evidence only and select a docs-only review. | Open |
+| A mutable training policy is reused as a frozen evaluation participant under the same identity. | Evaluation / Integrity | High | Medium | Require immutable content identity, explicit freeze events, new use status and no silent updates during evaluation. | Open |
+| Validation or checkpoint-selection results are reused as untouched holdout evidence. | Evaluation / Leakage | High | High | Separate training, validation, selection and holdout uses; repeated inspection changes eligibility and evidence status. | Open |
+| Checkpoints or artifacts change silently under one filename, tag or policy identity. | Engineering / Reproducibility | High | Medium | Bind immutable content, parent/child lineage, update/freeze events and behavior-affecting runtime identities. | Open |
+| Failed or incomplete evaluation units are filtered out or silently retried with another artifact. | Evaluation / Integrity | High | Medium | Preserve failure/retry/replacement lineage, forbid silent substitution and keep eligibility impact explicit. | Open |
+| Training loss, return, validation score or selected checkpoint is overclaimed as model strength. | Evidence / Governance | High | High | Keep training diagnostics, selection, final evaluation, ranked evidence and promotion as separately approved evidence classes. | Open |
+| Future model-use records expose secrets or rely on unknown/third-party artifacts. | Security / Provenance | High | Medium | Require rights/privacy/security/license review; forbid secrets, unknown checkpoints and third-party binaries now. | Open |
+| The next review gate is mistaken for implementation, checkpoint creation or execution approval. | Governance / Execution | High | Medium | `10_NEXT` is review-only and forbids modifying `12Y`, model use, code, fixtures, training, evaluation and P9-P12 work. | Open |
+
 ## 2026-07-14 — P8 model-output interface dependency boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

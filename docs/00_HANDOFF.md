@@ -27,7 +27,7 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P8 training / evaluation model-use boundary definition
+Current active stage is P8 training / evaluation model-use boundary review
 before any implementation:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
@@ -101,19 +101,22 @@ session/batching isolation, reproducibility, source/use/evidence separation,
 MO-E1 through MO-E15 and stop conditions. Non-blocking future notes cover
 request/response finalization, action vocabulary/selection/RNG, timing/latency,
 fallback identity, numeric semantics, recurrent-state identity, batching and
-remote privacy/redaction. `12W` was not modified. The next first task is
-`Define P8 training / evaluation model-use boundary before any implementation.`
-This next task remains docs-only and does not approve P8-P12 entry, P8
-implementation, implementation prompts, broader P7 implementation, source approval, source
-ingestion, broad parser / reader / ingestion, actual feature extraction,
-actual label generation, supervised dataset construction, split creation,
-leakage-test implementation, training-data approval, training-run approval,
-training, model architecture / trainer implementation, evaluation
-implementation, model loading/inference/action generation, model-output
-integration, model-strength evidence, real data,
-self-play, league, reinforcement-learning execution, raw-outcome schema or
-environment/simulator/runner implementation. P9-P12 remain
-unapproved.
+remote privacy/redaction. `12W` was not modified. `12Y` now defines the P8
+training/evaluation model-use boundary: ten unapproved model-use classes,
+immutable artifact/checkpoint/policy lineage, mutable training versus frozen
+evaluation use, update/freeze semantics, training/validation/selection/holdout
+separation, checkpoint selection and leakage controls, eligibility/failure/
+reproducibility, candidate fields, TU-E1 through TU-E15 and stop conditions.
+No model/checkpoint/weight was loaded or created; no training, evaluation,
+inference, self-play/RL or league execution occurred. The next first task is
+`Review P8 training / evaluation model-use boundary before any implementation.`
+This review remains docs-only and does not approve P8-P12 entry, P8
+implementation, implementation prompts, broader P7 implementation, source
+approval/ingestion, feature/label/dataset work, training data/run, training,
+evaluation, model loading/inference/action generation, model-output
+integration, model-strength evidence, real data, self-play, league, RL,
+raw-outcome schema or environment/simulator/runner implementation. P9-P12
+remain unapproved.
 
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.

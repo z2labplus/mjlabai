@@ -2,8 +2,7 @@
 
 ## Current stage
 
-P8 training / evaluation model-use boundary definition before any
-implementation.
+P8 training / evaluation model-use boundary review before any implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -59,9 +58,14 @@ fields, MO-E1 through MO-E15 and stop conditions. Every candidate interface
 class remains unapproved, unselected and non-executable. `12X` reviews `12W`,
 records `A. Review can close`, preserves future notes for finalization,
 selection/RNG, timing, fallback, numeric, state, batching and remote/privacy
-details, and does not modify `12W`. The current first task is `Define P8
-training / evaluation model-use boundary before any implementation.` Production
-code, tests, fixtures, data files, source approval, source ingestion, broad
+details, and does not modify `12W`. `12Y` defines ten unapproved model-use
+classes, artifact/checkpoint/policy identity, mutable training versus frozen
+evaluation use, update/freeze semantics, training/validation/selection/holdout
+separation, selection/tuning leakage, eligibility/failure/reproducibility,
+candidate fields, TU-E1 through TU-E15 and stop conditions. The current first
+task is `Review P8 training / evaluation model-use boundary before any
+implementation.` Production code, tests, fixtures, data files, source approval,
+source ingestion, broad
 parser / reader / ingestion, feature extraction, label generation, dataset
 construction, training, evaluation, model loading/inference/action generation,
 model-output integration, model/checkpoint/weight loading, inference/action/
@@ -362,7 +366,9 @@ Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = define P8 model-output interface dependency boundary before any implementation
+P8 model-output interface dependency boundary = defined in `12W` and reviewed in `12X`; review can close
+P8 training / evaluation model-use boundary = defined in `12Y`; docs-only review pending
+Next = review P8 training / evaluation model-use boundary before any implementation
 ```
 
 ## AI role
@@ -371,14 +377,14 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Define the docs-only P8 model-output interface dependency boundary before
-any implementation while keeping P8 entry, P8 implementation,
-implementation prompts, source
-approval, source ingestion, real data, feature extraction, label generation,
-dataset construction, training, evaluation, self-play, league, model-output
-schema/adapter/integration, model loading/inference/action generation,
-raw-outcome schema or environment/simulator/runner implementation, P9-P12 and
-model-strength claims unapproved until separate later approvals exist.
+Review the docs-only P8 training / evaluation model-use boundary before any
+implementation while keeping P8 entry, P8 implementation, implementation
+prompts, source approval/ingestion, real data, feature/label/dataset work,
+training data/run, training, tuning, evaluation, checkpoint selection,
+model/checkpoint loading or creation, self-play, league, model-output schema/
+adapter/integration, inference/action generation, raw-outcome schema,
+environment/simulator/runner implementation, P9-P12 and model-strength claims
+unapproved until separate later approvals exist.
 
 This supports the north-star target by ensuring that any future supervised
 learning, RL, search, league or LuckyJ validation work starts only after the
@@ -406,6 +412,9 @@ and first-task boundaries.
 - `docs/12_technical_plan/12T_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/12_technical_plan/12U_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/12_technical_plan/12V_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/12_technical_plan/12W_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/12_technical_plan/12X_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/12_technical_plan/12Y_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md`
 - `docs/04_rl_selfplay/04G_ALGORITHM_RACING_FUNNEL.md`
 - `docs/05_evaluation/05G_RACING_FUNNEL_EVALUATION.md`
@@ -489,4 +498,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Define P8 model-output interface dependency boundary before any implementation.
+Review P8 training / evaluation model-use boundary before any implementation.

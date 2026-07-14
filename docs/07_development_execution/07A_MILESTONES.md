@@ -27,6 +27,24 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 | P11 | Large-scale training and stability validation | Expand compute only after the route is justified by previous gates | Internal evaluation approaches or exceeds the LuckyJ 10.68 target line | Future |
 | P12 | Tenhou target validation | Validate whether the system can exceed LuckyJ 10.68 under compliant conditions | Long-term stable dan, pt EV, rank metrics, latency and logs are verified | Final |
 
+## 2026-07-14 P8 Training / Evaluation Model-Use Boundary Milestone Update
+
+`12Y` defines the P8 training/evaluation model-use boundary before any
+implementation. It separates mutable training and frozen evaluation policy
+uses; binds artifact/update/freeze/lineage identity; separates training,
+validation, checkpoint selection and holdout; and records tuning leakage,
+eligibility, failure, reproducibility, ten unapproved candidate use classes,
+candidate fields, TU-E1 through TU-E15 and stop conditions.
+
+The next docs-only task is `Review P8 training / evaluation model-use boundary
+before any implementation`.
+
+This milestone update does not approve P8 entry/implementation, an
+implementation prompt, training data/run, model/checkpoint/weight loading or
+creation, training/tuning/evaluation/checkpoint selection, inference,
+model-output integration, environment/self-play/RL/league, source/real-data
+work, model-strength evidence or P9-P12 entry.
+
 ## 2026-07-14 P8 Model-Output Interface Dependency Boundary Review Milestone Update
 
 `12X` reviews the P8 model-output interface dependency boundary in `12W` and

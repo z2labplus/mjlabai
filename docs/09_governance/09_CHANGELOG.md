@@ -1,5 +1,36 @@
 # 09_CHANGELOG
 
+## 2026-07-14 - v3.49
+
+- Defined the P8 training / evaluation model-use boundary before any
+  implementation.
+- Added:
+  - `docs/12_technical_plan/12Y_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Defined:
+  - model-use vocabulary and authority separation.
+  - ten candidate use classes, all unapproved, unselected and non-executable.
+  - immutable artifact/checkpoint/policy lineage and mutable training versus
+    frozen evaluation policy boundaries.
+  - within/between-episode updates and training/validation/selection/holdout
+    separation.
+  - checkpoint selection, early stopping, tuning/evaluation leakage,
+    eligibility, failure and reproducibility boundaries.
+  - model-output/upstream-version, source/privacy/third-party and strength-
+    evidence separation.
+  - candidate fields, TU-E1 through TU-E15, stop conditions and candidate next
+    directions.
+- Planning decision:
+  - `P8 training / evaluation model-use boundary is defined before any implementation.`
+- New `10_NEXT` first item:
+  `Review P8 training / evaluation model-use boundary before any implementation.`
+- Validation passed: `git diff --check` and 46 existing supervised/data unit
+  tests.
+- No model/checkpoint/weight was loaded or created; no schema/manifest/loader,
+  trainer/optimizer/loss/dataloader, inference/action generation, training/
+  tuning/evaluation/checkpoint selection, model-output integration,
+  environment/self-play/RL/league, source/real-data work, code/tests/fixtures/
+  data, strength claim or P9-P12 work was added or approved.
+
 ## 2026-07-14 - v3.48
 
 - Reviewed the P8 model-output interface dependency boundary before any

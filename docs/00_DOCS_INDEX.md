@@ -55,6 +55,7 @@ docs/12_technical_plan/12U_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_BEFORE
 docs/12_technical_plan/12V_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12W_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12X_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12Y_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -314,6 +315,17 @@ MO-E15 and stop conditions. It records non-blocking future contract notes and
 selects a docs-only training/evaluation model-use boundary next. `12W` was not
 modified. This is boundary-review evidence only, not model loading, inference,
 implementation, execution, strength evidence or P8/P9-P12 approval.
+
+`docs/12_technical_plan/12Y_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+defines the docs-only P8 training/evaluation model-use boundary. It separates
+mutable training and frozen evaluation policies, artifact/update/freeze
+identity, training/validation/selection/holdout uses, checkpoint selection,
+tuning/evaluation leakage, eligibility, failure and reproducibility. It
+records ten unapproved candidate use classes, candidate fields, TU-E1 through
+TU-E15, stop conditions and a docs-only review next. It is boundary-definition
+evidence only, not model/checkpoint loading, training/evaluation execution,
+checkpoint selection, model-output integration, strength evidence or
+P8/P9-P12 approval.
 
 ## Supervised-policy files
 
