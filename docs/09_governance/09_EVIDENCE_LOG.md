@@ -8,6 +8,50 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-14 — P8 raw-outcome / environment-provenance boundary definition
+
+- Type: internal documentation / P8 raw-outcome and environment-provenance
+  boundary definition evidence.
+- Stage: P8 raw-outcome / environment-provenance boundary review before any
+  implementation.
+- Added document:
+  - `docs/12_technical_plan/12U_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Defined:
+  - raw-outcome vocabulary and immutable protocol/environment/transition/
+    terminal/outcome authority lineage.
+  - candidate status, finalization, correction/supersession, retry/duplicate/
+    failure and completeness/integrity boundaries.
+  - environment/simulator/conformance, participant/artifact/policy, RNG/seed/
+    seat, resource and failure provenance.
+  - candidate record fields as non-schema concepts only.
+  - raw-outcome/reward/evaluation/evidence and training/evaluation outcome-use
+    separation.
+  - source/privacy/third-party boundaries, RO-E1 through RO-E15, stop
+    conditions and candidate next directions.
+- Planning decision:
+  - `P8 raw-outcome and environment-provenance boundary is defined before any implementation.`
+- Selected next task:
+  - `Review P8 raw-outcome and environment-provenance boundary before any implementation.`
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke_extension.py`: passed, 15 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`: passed, 1 test.
+  - `python3 -m unittest tests/data/test_replay_schema.py`: passed, 7 tests.
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`: passed, 1 test.
+- Evidence grade:
+  - P8 raw-outcome and environment-provenance boundary definition evidence
+    only.
+- Not evidence of:
+  - P8 entry/implementation, an implementation prompt or executable task.
+  - a raw-outcome schema/API/parser/reader/ingestion/database or validator.
+  - environment/simulator/runner/outcome/transition/episode implementation.
+  - self-play/RL/reward/training/evaluation/league or model-output work.
+  - source approval/ingestion or real-data use.
+  - strength, Tenhou, stable-dan, LuckyJ or promotion evidence.
+  - P9-P12 approval.
+
 ### 2026-07-14 — P8 environment / simulator boundary review
 
 - Type: internal documentation / P8 environment-simulator boundary review

@@ -225,6 +225,27 @@ P8 entry/implementation, a raw-outcome schema, environment/simulator/runner
 implementation, transition/episode/self-play/RL/training/evaluation/league,
 source/real-data/model-output work, strength evidence or P9-P12 entry.
 
+## 2026-07-14 P8 Raw-Outcome / Environment-Provenance Boundary Milestone Update
+
+`12U` defines the P8 raw-outcome / environment-provenance boundary before any
+implementation. It defines immutable authority lineage from protocol and
+environment through transition, terminal state and raw outcome; outcome
+status/finalization; correction/supersession; retry/duplicate/failure;
+completeness/integrity; participant/artifact/RNG/seed/seat/resource
+provenance; candidate fields; and raw-outcome separation from reward,
+evaluation and evidence use.
+
+All candidate fields remain non-schema, unapproved and non-executable.
+RO-E1 through RO-E15 retain separate review, approval and exact `10_NEXT`
+gates. The next docs-only task is `Review P8 raw-outcome and
+environment-provenance boundary before any implementation`.
+
+This milestone update is boundary-definition evidence only. It does not
+approve P8 entry/implementation, a schema/parser/reader/ingestion path,
+environment/simulator/runner/outcome implementation, transition/episode/
+self-play/RL/training/evaluation/league, source/real-data/model-output work,
+strength evidence or P9-P12 entry.
+
 ## Current position
 
 ```text

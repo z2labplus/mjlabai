@@ -1,5 +1,35 @@
 # 09_CHANGELOG
 
+## 2026-07-14 - v3.45
+
+- Defined the P8 raw-outcome / environment-provenance boundary before any
+  implementation.
+- Added:
+  - `docs/12_technical_plan/12U_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Defined:
+  - immutable protocol/environment/transition/terminal/raw-outcome authority
+    lineage.
+  - outcome status, finalization, correction/supersession, retry/duplicate/
+    failure and completeness/integrity boundaries.
+  - participant/artifact/policy, environment/simulator/conformance, RNG/seed/
+    seat, resource and failure provenance.
+  - candidate record fields as non-schema concepts only.
+  - raw-outcome separation from reward/objective, training use, evaluation
+    use and strength evidence.
+  - source/privacy/third-party boundaries, RO-E1 through RO-E15, stop
+    conditions and candidate next directions.
+- Planning decision:
+  - `P8 raw-outcome and environment-provenance boundary is defined before any implementation.`
+- New `10_NEXT` first item:
+  `Review P8 raw-outcome and environment-provenance boundary before any implementation.`
+- Validation passed: `git diff --check` and 46 existing supervised/data unit
+  tests.
+- No schema/API/parser/reader/ingestion/database, environment/simulator/
+  runner/outcome implementation, code/tests/fixtures/data, transition/
+  episode/self-play/RL/training/evaluation/league, source/real-data work,
+  model-output integration, strength claim or P9-P12 work was added or
+  approved.
+
 ## 2026-07-14 - v3.44
 
 - Reviewed the P8 environment / simulator authority boundary before any

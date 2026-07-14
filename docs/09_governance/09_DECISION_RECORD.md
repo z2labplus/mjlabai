@@ -14,6 +14,50 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-14 — DR-0132 — P8 Raw-Outcome / Environment-Provenance Boundary Definition
+
+Decision:
+
+```text
+P8 raw-outcome and environment-provenance boundary is defined before any implementation.
+```
+
+Context:
+
+- `12T` reviewed the P8 environment / simulator authority boundary and
+  recorded `A. Review can close.`
+- P8 entry/implementation, raw-outcome/environment execution and P9-P12
+  remained unapproved.
+
+Rationale:
+
+- A raw outcome needs immutable protocol, environment, transition, terminal,
+  participant, artifact, RNG/seed/seat and resource lineage before reward or
+  evaluation can consume it safely.
+- Invalid, aborted, incomplete, failed, duplicate, retried and superseded
+  records must remain auditable instead of being silently rewritten or
+  dropped into success-only evidence.
+- Raw outcome, reward, training use, evaluation use and strength evidence
+  require separate approval and provenance boundaries.
+- RO-E1 through RO-E15 retain review, exact approval and `10_NEXT` gates.
+- A docs-only review is the next safe task.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12U_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`.
+- The next task is `Review P8 raw-outcome and environment-provenance boundary before any implementation.`
+- No candidate fields become a schema, API, parser, reader, ingestion path or
+  database contract.
+- No raw-outcome/environment/simulator/runner implementation or execution,
+  P8 entry/implementation, self-play/RL/training/evaluation/league,
+  source/real-data work, model-output integration, strength evidence or
+  P9-P12 work is approved.
+
+Status:
+
+Raw-outcome/environment-provenance boundary definition complete; docs-only
+review pending.
+
 ## 2026-07-14 — DR-0131 — P8 Environment / Simulator Boundary Review
 
 Decision:

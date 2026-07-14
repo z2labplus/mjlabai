@@ -51,6 +51,7 @@ docs/12_technical_plan/12Q_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_BEFORE_
 docs/12_technical_plan/12R_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12S_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12T_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12U_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -266,6 +267,17 @@ idempotency, RNG substreams, concurrency failure isolation and manifest
 provenance. It is environment/simulator boundary-review evidence only, not
 P8 entry/implementation, environment or raw-outcome schema implementation,
 execution, strength evidence or P9-P12 approval.
+
+`docs/12_technical_plan/12U_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+defines the docs-only P8 raw-outcome / environment-provenance boundary. It
+separates raw outcome from reward, evaluation and evidence; defines immutable
+environment-to-episode-to-terminal lineage, outcome status/finalization,
+correction/supersession, retry/duplicate/failure, completeness/integrity,
+participant/artifact/RNG/seat/resource provenance and candidate record fields;
+and records RO-E1 through RO-E15, stop conditions and candidate directions.
+It selects a docs-only review next. It is boundary-definition evidence only,
+not a schema, parser, database, environment, execution, strength evidence or
+P8/P9-P12 approval.
 
 ## Supervised-policy files
 

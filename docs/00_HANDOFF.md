@@ -28,7 +28,7 @@ Current stage interpretation:
 
 ```text
 Current active stage is P8 raw-outcome / environment-provenance boundary
-definition before any implementation:
+review before any implementation:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -74,7 +74,13 @@ remain unapproved and non-executable. `12T` reviews `12S` and records
 `A. Review can close.` It preserves non-blocking future notes for simulator
 conformance, reset/retry identity, transition atomicity/idempotency, RNG
 substreams, concurrent event ordering/partial failure and manifest provenance.
-`12S` was not modified. The next first task is `Define P8 raw-outcome and
+`12S` was not modified. `12U` now defines the raw-outcome/environment-
+provenance boundary, including immutable authority lineage, outcome status and
+finalization, correction/supersession, retry/duplicate/failure, completeness/
+integrity, participant/artifact/RNG/seat/resource provenance, candidate fields,
+reward/evaluation/use separation, RO-E1 through RO-E15 and stop conditions.
+No schema, parser, fixture, data, environment or outcome implementation was
+created. The next first task is `Review P8 raw-outcome and
 environment-provenance boundary before any implementation.` This next task
 remains docs-only and does not approve P8-P12 entry, P8 implementation,
 implementation prompts, broader P7 implementation, source approval, source

@@ -8,6 +8,20 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-14 — P8 raw-outcome / environment-provenance boundary definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12U` is mistaken for P8 entry, schema/API approval or outcome implementation permission. | Governance / Stage Control | High | Medium | `12U`, handoff, stage contract and `10_NEXT` classify it as boundary-definition evidence only and select a docs-only review. | Open |
+| Candidate fields are copied into an executable schema, parser or database contract without separate approval. | Governance / Execution | High | Medium | Every field is explicitly a candidate concept; schema shape, storage, serialization and implementation remain unapproved. | Open |
+| Finalized outcomes are silently rewritten and the original authority lineage is lost. | Engineering / Integrity | High | Medium | Corrections must create a new superseding record while retaining the original immutable record and reason. | Open |
+| Failed, invalid, incomplete, duplicate or retried records are deleted, producing success-only selection bias. | Evaluation / Integrity | High | High | Preserve explicit statuses, retry/duplicate/supersession lineage, eligibility and denominator accounting. | Open |
+| Simulator outputs are accepted without frozen conformance and environment provenance. | Engineering / Reproducibility | High | Medium | Future records must bind reviewed simulator conformance, environment/ruleset/build identity and transition/terminal authority. | Open |
+| Missing participant, artifact, seed, seat, resource or failure lineage is guessed after the fact. | Engineering / Evidence | High | Medium | Missing required provenance remains invalid/incomplete; no inference or silent default is allowed. | Open |
+| Training and evaluation reuse the same outcome without explicit use-class separation. | Evaluation / Leakage | High | Medium | Training-use and evaluation-use approvals, manifests and evidence classifications remain separate. | Open |
+| The next review is mistaken for schema or implementation approval. | Governance / Execution | High | Medium | `10_NEXT` is review-only, forbids modifying `12U` to resolve findings and forbids every executable workstream. | Open |
+| Boundary evidence is overclaimed as environment correctness, model strength, Tenhou, stable-dan or LuckyJ evidence. | Evidence / Governance | High | High | Evidence grade remains P8 raw-outcome/environment-provenance boundary definition evidence only. | Open |
+
 ## 2026-07-14 — P8 environment / simulator boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

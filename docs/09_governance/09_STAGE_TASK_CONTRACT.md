@@ -2,7 +2,7 @@
 
 ## Current stage
 
-P8 raw-outcome / environment-provenance boundary definition before any
+P8 raw-outcome / environment-provenance boundary review before any
 implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
@@ -43,8 +43,12 @@ invariant, version/provenance, manifest, dependency, ENV-E1 through ENV-E15
 and stop conditions. `12T` reviews `12S`, records `A. Review can close`, and
 preserves non-blocking notes for conformance, reset/retry identity, transition
 atomicity/idempotency, RNG substreams, concurrency and manifest provenance.
-The current first task is `Define P8 raw-outcome and environment-provenance
-boundary before any implementation.` Production
+`12U` defines immutable raw-outcome/environment-provenance lineage, status/
+finalization, correction/supersession, retry/duplicate/failure, completeness/
+integrity, participant/artifact/RNG/seat/resource provenance, candidate
+fields, reward/evaluation/use separation, RO-E1 through RO-E15 and stop
+conditions. The current first task is `Review P8 raw-outcome and
+environment-provenance boundary before any implementation.` Production
 code, tests, fixtures, data files, source approval, source ingestion, broad
 parser / reader / ingestion, feature extraction, label generation, dataset
 construction, training, evaluation, model-output integration, self-play
@@ -338,12 +342,13 @@ P8 self-play / RL dependency map = defined in `12M` and reviewed in `12N`; revie
 P8 self-play protocol boundary = defined in `12O` and reviewed in `12P`; review can close
 P8 RL objective / reward specification boundary = defined in `12Q` and reviewed in `12R`; review can close
 P8 environment / simulator boundary = defined in `12S` and reviewed in `12T`; review can close
+P8 raw-outcome / environment-provenance boundary = defined in `12U`; review pending
 Full P7 = closed for documented supervised-learning scope only
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
-Next = define P8 raw-outcome and environment-provenance boundary before any implementation
+Next = review P8 raw-outcome and environment-provenance boundary before any implementation
 ```
 
 ## AI role
@@ -352,7 +357,7 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Define the docs-only P8 raw-outcome / environment-provenance boundary before
+Review the docs-only P8 raw-outcome / environment-provenance boundary before
 any implementation while keeping P8 entry, P8 implementation,
 implementation prompts, source
 approval, source ingestion, real data, feature extraction, label generation,
@@ -384,6 +389,7 @@ and first-task boundaries.
 - `docs/12_technical_plan/12R_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/12_technical_plan/12S_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/12_technical_plan/12T_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/12_technical_plan/12U_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md`
 - `docs/04_rl_selfplay/04G_ALGORITHM_RACING_FUNNEL.md`
 - `docs/05_evaluation/05G_RACING_FUNNEL_EVALUATION.md`
@@ -467,4 +473,4 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Define P8 raw-outcome and environment-provenance boundary before any implementation.
+Review P8 raw-outcome and environment-provenance boundary before any implementation.
