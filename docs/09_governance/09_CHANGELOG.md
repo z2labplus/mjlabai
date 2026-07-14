@@ -1,5 +1,34 @@
 # 09_CHANGELOG
 
+## 2026-07-14 - v3.44
+
+- Reviewed the P8 environment / simulator authority boundary before any
+  implementation.
+- Added:
+  - `docs/12_technical_plan/12T_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- Review decision:
+  - `A. Review can close.`
+- Confirmed:
+  - environment, simulator, participant/model, protocol, reward and evaluation
+    authority remain separated.
+  - all six candidate environment classes remain unapproved, unselected and
+    non-executable.
+  - state/reset/transition/legality/observation/RNG/seat/outcome/failure/
+    concurrency/invariant/version/manifest boundaries are sufficient.
+  - ENV-E1 through ENV-E15 and stop conditions preserve separate review,
+    approval and exact `10_NEXT` gates.
+- Recorded non-blocking future notes for simulator conformance, reset/retry
+  identity, transition atomicity/idempotency, RNG substreams, concurrent event
+  ordering/partial failure and manifest provenance.
+- `12S` was not modified.
+- New `10_NEXT` first item:
+  `Define P8 raw-outcome and environment-provenance boundary before any implementation.`
+- This is environment/simulator boundary-review evidence only. No P8 entry or
+  implementation, implementation prompt, raw-outcome schema, environment/
+  simulator/runner, code/tests/fixtures/data, transition/episode/self-play/RL/
+  training/evaluation/league, source/real-data work, model-output integration,
+  strength claim or P9-P12 work was added or approved.
+
 ## 2026-07-14 - v3.43
 
 - Defined the P8 environment / simulator authority boundary before any

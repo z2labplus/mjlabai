@@ -8,6 +8,60 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-14 — P8 environment / simulator boundary review
+
+- Type: internal documentation / P8 environment-simulator boundary review
+  evidence.
+- Stage: P8 raw-outcome / environment-provenance boundary definition before
+  any implementation.
+- Added review document:
+  - `docs/12_technical_plan/12T_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- Primary reviewed artifact:
+  - `docs/12_technical_plan/12S_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Reviewed:
+  - scope, planning recap, non-approval baseline and vocabulary.
+  - authority separation and simulator-conformance boundary.
+  - candidate-class non-selection and state/reset/transition/legality/
+    observation boundaries.
+  - RNG/seed/seat/reproducibility, terminal/raw outcome, failure/retry/resource
+    and concurrency/isolation boundaries.
+  - invariants, identity/version/provenance, candidate manifest, reward/model
+    dependencies, training/evaluation separation and source/third-party status.
+  - evidence grade, ENV-E1 through ENV-E15, stop conditions and next
+    directions.
+- Review notes:
+  - future simulator work should require versioned conformance evidence.
+  - future reset/transition work should make retry parent, stale-state,
+    duplicate, atomicity and idempotency semantics explicit.
+  - future RNG/concurrency work should bind substreams, event ordering and
+    partial-failure lineage.
+  - future manifests should bind conformance/build, transition, retry/failure,
+    raw-outcome and concurrency identities.
+- Review decision:
+  - `A. Review can close.`
+- `12S` modification:
+  - none.
+- Selected next task:
+  - `Define P8 raw-outcome and environment-provenance boundary before any implementation.`
+- Validation:
+  - `git diff --check`: passed.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke_extension.py`: passed, 15 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_parser_reader_smoke.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_feature_label_schema.py`: passed, 11 tests.
+  - `python3 -m unittest tests/supervised/test_synthetic_supervised_fixture_schema.py`: passed, 1 test.
+  - `python3 -m unittest tests/data/test_replay_schema.py`: passed, 7 tests.
+  - `python3 -m unittest tests/data/test_synthetic_replay_fixture_schema.py`: passed, 1 test.
+- Evidence grade:
+  - P8 environment / simulator boundary review evidence only.
+- Not evidence of:
+  - P8 entry/implementation, an implementation prompt or executable task.
+  - raw-outcome schema or environment/simulator/runner implementation.
+  - transition/episode/match/self-play/RL/training/evaluation/league.
+  - reward/objective/loss or RL algorithm selection/implementation.
+  - source approval/ingestion, real-data use or model-output integration.
+  - strength, Tenhou, stable-dan, LuckyJ or promotion evidence.
+  - P9-P12 approval.
+
 ### 2026-07-14 — P8 environment / simulator boundary definition
 
 - Type: internal documentation / P8 environment-simulator boundary evidence.

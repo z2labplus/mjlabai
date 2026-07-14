@@ -8,6 +8,18 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-14 — P8 environment / simulator boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12T` review closure is mistaken for P8 entry, environment implementation or execution approval. | Governance / Stage Control | High | Medium | `12T`, handoff, stage contract and `10_NEXT` classify it as review evidence only and select another docs-only boundary task. | Open |
+| A simulator is treated as authoritative without versioned conformance evidence. | Engineering / Integrity | High | Medium | `12T` records a future conformance statement/review requirement; no simulator or schema is approved now. | Open |
+| Duplicate/stale transition requests are applied or reset/retry lineage is lost. | Engineering / Integrity | High | Medium | Future contract review must define atomicity, stale-state rejection, transition identity, idempotency and retry-parent identity. | Open |
+| Parallel RNG consumption, event ordering or partial failures make episodes incomparable. | Engineering / Reproducibility | High | High | Future work must bind isolated RNG substreams, event-order policy, failure lineage and concurrency configuration. | Open |
+| Candidate manifest refinements are mistaken for an approved schema/API. | Governance / Execution | High | Medium | `12T` records them only as future notes and preserves separate review, approval and exact `10_NEXT` gates. | Open |
+| The next raw-outcome/provenance task is mistaken for schema, parser or environment implementation approval. | Governance / Execution | High | Medium | `10_NEXT` is docs-only and explicitly forbids schemas, parser/reader/ingestion, environments and execution. | Open |
+| Boundary-review evidence is overclaimed as environment correctness or model strength. | Evidence / Governance | High | High | Evidence grade remains P8 environment/simulator boundary review evidence only. | Open |
+
 ## 2026-07-14 — P8 environment / simulator boundary definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

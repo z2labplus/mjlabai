@@ -14,6 +14,49 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-14 — DR-0131 — P8 Environment / Simulator Boundary Review
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Context:
+
+- `12S` defined the P8 environment / simulator authority boundary.
+- P8 entry/implementation, environment execution and P9-P12 remained
+  unapproved.
+
+Rationale:
+
+- Scope, vocabulary and non-approval wording are accurate and bounded.
+- Environment, participant/model, protocol, reward and evaluation ownership
+  are separated.
+- Candidate classes remain unselected, unapproved and non-executable.
+- State, transition, legality, observation, RNG, outcome, failure,
+  concurrency, invariant and provenance boundaries are sufficient.
+- ENV-E1 through ENV-E15 and stop conditions preserve separate review,
+  approval and exact `10_NEXT` gates.
+- Simulator conformance, retry/transition identity, RNG/concurrency and
+  manifest refinements are non-blocking future notes.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12T_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`.
+- `12S` was not modified.
+- The next task is `Define P8 raw-outcome and environment-provenance boundary before any implementation.`
+- No schema, API, environment, simulator, runner, transition, RNG, episode or
+  implementation is selected, approved or executed.
+- No P8 entry/implementation, self-play/RL/training/evaluation/league,
+  source/real-data work, model-output integration, strength evidence or
+  P9-P12 work is approved.
+
+Status:
+
+Environment/simulator boundary review complete; docs-only raw-outcome /
+environment-provenance boundary definition pending.
+
 ## 2026-07-14 — DR-0130 — P8 Environment / Simulator Boundary Definition
 
 Decision:

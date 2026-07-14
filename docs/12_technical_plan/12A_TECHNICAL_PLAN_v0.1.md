@@ -28,7 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 environment / simulator boundary review before any implementation.
+P8 raw-outcome / environment-provenance boundary definition before any
+implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
@@ -76,11 +77,15 @@ environment authority. `12S` now defines the environment/simulator authority
 boundary, including state, reset, transition, legality, observation, RNG,
 seat, terminal/raw-outcome, failure/retry/resource, concurrency, invariant,
 version/provenance, manifest, dependency, ENV-E1 through ENV-E15 and stop
-conditions. The next first task is `Review P8 environment / simulator
-boundary before any implementation`. That task is docs-only, not P8
-entry approval, not P8 implementation approval, not environment/simulator/
-runner implementation, not self-play or reinforcement-learning execution and
-not an implementation prompt. P9-P12 remain unapproved.
+conditions. `12T` reviews `12S`, records `A. Review can close`, and preserves
+non-blocking future notes for simulator conformance, reset/retry identity,
+transition atomicity/idempotency, RNG substreams, concurrent event ordering/
+partial failure and manifest provenance. `12S` was not modified. The next
+first task is `Define P8 raw-outcome and environment-provenance boundary
+before any implementation`. That task is docs-only, not P8 entry approval,
+not P8 implementation approval, not raw-outcome schema or environment/
+simulator/runner implementation, not self-play or reinforcement-learning
+execution and not an implementation prompt. P9-P12 remain unapproved.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -563,7 +568,8 @@ P7 parser-reader smoke extension implementation review after blocker fix =
 complete in `03BD`; review can close.
 P7 parser-reader smoke extension current-scope acceptance decision =
 complete in `03BE`; accepted exact scope only.
-Next = review P8 environment / simulator boundary before any implementation.
+Next = define P8 raw-outcome and environment-provenance boundary before any
+implementation.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -697,7 +703,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Review P8 environment / simulator boundary before any implementation.
+Define P8 raw-outcome and environment-provenance boundary before any implementation.
 ```
 
 `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`
@@ -718,14 +724,16 @@ boundary and selects its docs-only review gate. `12P` reviews it, records
 `A. Review can close`, and selects docs-only objective/reward boundary
 definition. `12Q` defines that boundary. `12R` reviews it, records
 `A. Review can close`, and selects docs-only environment/simulator authority
-boundary definition. `12S` defines that boundary and selects its docs-only
-review gate as the next first task. The next task does not approve P8 entry, P8
-implementation, P8 implementation prompts, P8-P12 implementation, source
+boundary definition. `12S` defines that boundary. `12T` reviews it, records
+`A. Review can close`, and selects docs-only raw-outcome/environment-
+provenance boundary definition as the next first task. The next task does not
+approve P8 entry, P8 implementation, P8 implementation prompts, P8-P12
+implementation, source
 approval, source ingestion, feature extraction, label generation, dataset
 construction, training, evaluation, model-output integration, real data,
 self-play execution, reinforcement-learning execution, league, P9-P12 or
-model-strength claims, and does not implement an environment, simulator or
-runner.
+model-strength claims, and does not implement a raw-outcome schema,
+environment, simulator or runner.
 
 `docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`
 defines full P7 closure criteria after `03BE` / `03BF`. It selects

@@ -50,6 +50,7 @@ docs/12_technical_plan/12P_P8_SELF_PLAY_PROTOCOL_BOUNDARY_REVIEW_BEFORE_ANY_IMPL
 docs/12_technical_plan/12Q_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12R_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12S_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12T_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -253,6 +254,18 @@ It selects a docs-only review next. It is environment/simulator
 boundary-definition evidence only, not entry/implementation, transition or
 episode execution, self-play/RL/training/evaluation/league, strength evidence
 or P9-P12 approval.
+
+`docs/12_technical_plan/12T_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+reviews `12S` and records `A. Review can close.` It confirms scope,
+non-approval, vocabulary, authority separation, candidate-class non-selection,
+state/reset/transition/legality/observation/RNG/seat/outcome/failure/
+concurrency/invariant/version/manifest/dependency/evidence boundaries,
+ENV-E1 through ENV-E15 and stop conditions. It preserves non-blocking future
+notes for simulator conformance, reset/retry identity, transition atomicity/
+idempotency, RNG substreams, concurrency failure isolation and manifest
+provenance. It is environment/simulator boundary-review evidence only, not
+P8 entry/implementation, environment or raw-outcome schema implementation,
+execution, strength evidence or P9-P12 approval.
 
 ## Supervised-policy files
 

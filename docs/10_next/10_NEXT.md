@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Review P8 environment / simulator boundary before any implementation.
+- [ ] Define P8 raw-outcome and environment-provenance boundary before any implementation.
 
 Current execution charter:
 
@@ -16,13 +16,13 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only P8 environment / simulator authority boundary review
-  gate before any implementation.
-- Do not modify `12S` to resolve review findings; record blockers separately.
+- This is a docs-only P8 raw-outcome / environment-provenance boundary
+  definition before any implementation.
 - Do not approve P8 entry.
 - Do not approve P8 implementation.
 - Do not define or generate a P8 implementation prompt.
 - Do not prepare an implementation approval decision.
+- Do not implement a raw-outcome schema, parser, reader or ingestion path.
 - Do not execute self-play.
 - Do not execute reinforcement learning.
 - Do not implement a reward or objective.
@@ -53,6 +53,7 @@ Limits:
 
 ## Completed
 
+- [x] 2026-07-14 Reviewed P8 environment / simulator boundary before any implementation: added `docs/12_technical_plan/12T_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`, reviewed `12S` scope, planning recap, non-approval baseline, vocabulary, authority separation, simulator conformance, candidate classes, authoritative state, reset/transition/legality/observation, RNG/seat/reproducibility, terminal/raw outcome, failure/retry/resource, concurrency/isolation, invariants, identity/version/provenance, candidate manifest, reward/model dependencies, training/evaluation separation, source/third-party/evidence boundaries, ENV-E1 through ENV-E15, stop conditions, next directions and governance synchronization. Decision: `A. Review can close.` Simulator conformance, reset/retry identity, step atomicity/idempotency, RNG substreams, concurrent event ordering/partial failure and manifest-provenance details remain non-blocking future refinements. `12S` was not modified. This is boundary-review evidence only, not P8 entry/implementation, an implementation prompt, environment/simulator/runner or raw-outcome schema implementation, transition/episode/self-play/RL/training/evaluation/league, source/real-data/model-output work, strength evidence or P9-P12 approval. The next task is `Define P8 raw-outcome and environment-provenance boundary before any implementation.`
 - [x] 2026-07-14 Defined P8 environment / simulator boundary before any implementation: added `docs/12_technical_plan/12S_P8_ENVIRONMENT_SIMULATOR_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`, defining scope, Full P7/P8 recap, non-approval baseline, environment/simulator vocabulary and authority separation, candidate classes, authoritative state, reset/initialization, step/transition, ruleset/legality, observation projection, RNG/seed/reproducibility, seat/role, terminal/raw-outcome, error/abort/retry/resource, concurrency/isolation, invariants, identity/version/provenance, candidate manifest, reward/model dependencies, training/evaluation separation, source/real-data and third-party boundaries, evidence grade, ENV-E1 through ENV-E15, stop conditions and candidate directions. Planning decision: `P8 environment / simulator authority boundary is defined before any implementation.` Every candidate class remains unapproved and non-executable; no API, schema, state, RNG, rule, transition, environment, simulator, runner or episode was implemented or executed. This is boundary-definition evidence only, not P8 entry/implementation, reward/RL/self-play/training/evaluation/league, source/real-data/model-output work, strength evidence or P9-P12 approval. The next task is `Review P8 environment / simulator boundary before any implementation.`
 - [x] 2026-07-14 Reviewed P8 RL objective / reward specification boundary before any implementation: added `docs/12_technical_plan/12R_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`, reviewed `12Q` scope, planning recap, non-approval baseline, vocabulary, raw-outcome/reward/objective/loss/evaluation/evidence separation, candidate-family non-selection, source/timing/provenance, invalid/abort/retry accounting, seat/role/opponent bias, reward-hacking, scaling/weighting/normalization, credit assignment, algorithm/loss independence, training/evaluation separation, strength/ranked/promotion boundaries, source/real-data and model-output/environment dependencies, candidate record, OR-E1 through OR-E15, stop conditions, next directions and governance synchronization. Decision: `A. Review can close.` Notes for evaluation-only metric classification, explicit upstream-version identities, retry lineage and environment authority are future refinements, not blockers, schema approval or execution permission. This is objective/reward boundary review evidence only. It does not approve P8 entry/implementation, an implementation prompt, reward/objective/loss or RL algorithm selection, environment/simulator/runner implementation, self-play/RL/training/evaluation/league, source/real-data/model-output work, strength evidence or P9-P12. The next task is `Define P8 environment / simulator boundary before any implementation.`
 - [x] 2026-07-14 Defined P8 RL objective / reward specification boundary before any implementation: added `docs/12_technical_plan/12Q_P8_RL_OBJECTIVE_REWARD_SPECIFICATION_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`, defining scope, Full P7/P8 recap, non-approval baseline, objective/reward vocabulary, raw-outcome/reward/loss/evaluation/evidence separation, candidate families, signal source/timing, invalid/abort/retry handling, seat/role/opponent bias, reward-hacking controls, scaling/weighting/normalization, credit assignment, algorithm/loss independence, training/evaluation separation, strength/Tenhou/stable-dan/LuckyJ/promotion boundaries, source/real-data and model/environment dependencies, candidate reward-spec fields, OR-E1 through OR-E15, stop conditions and candidate directions. Planning decision: `P8 RL objective / reward specification boundary is defined before any implementation.` All candidate families remain unapproved, unselected and non-executable; no formula, number, weight, discount, clipping rule, algorithm or implementation was chosen. This is boundary-definition evidence only, not P8 entry/implementation, reward/RL/self-play/training/evaluation/league, source/real-data/model-output work, strength evidence or P9-P12 approval. The next task is `Review P8 RL objective / reward specification boundary before any implementation.`

@@ -206,6 +206,25 @@ approve P8 entry/implementation, environment/simulator/runner implementation,
 transition/episode/self-play/RL/training/evaluation/league, source/real-data/
 model-output work, strength evidence or P9-P12 entry.
 
+## 2026-07-14 P8 Environment / Simulator Boundary Review Milestone Update
+
+`12T` reviews the `12S` P8 environment / simulator authority boundary and
+records `A. Review can close.` It confirms authority separation,
+candidate-class non-selection, state/reset/transition/legality/observation/
+RNG/seat/outcome/failure/concurrency/invariant/version/manifest/dependency/
+evidence boundaries, ENV-E1 through ENV-E15 and stop conditions.
+
+The review preserves non-blocking future notes for simulator conformance,
+reset/retry identity, transition atomicity/idempotency, RNG substreams,
+concurrent event ordering/partial failure and manifest provenance. `12S` was
+not modified. The next docs-only task is `Define P8 raw-outcome and
+environment-provenance boundary before any implementation`.
+
+This milestone update is boundary-review evidence only. It does not approve
+P8 entry/implementation, a raw-outcome schema, environment/simulator/runner
+implementation, transition/episode/self-play/RL/training/evaluation/league,
+source/real-data/model-output work, strength evidence or P9-P12 entry.
+
 ## Current position
 
 ```text
