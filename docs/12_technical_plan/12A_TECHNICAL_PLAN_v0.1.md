@@ -28,7 +28,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 training / evaluation model-use boundary review before any implementation.
+P8 model / artifact provenance manifest boundary definition before any implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
@@ -103,12 +103,17 @@ boundary, including immutable artifact/checkpoint/policy lineage, mutable
 training versus frozen evaluation use, update/freeze semantics, training/
 validation/selection/holdout separation, selection/tuning leakage,
 eligibility/failure/reproducibility, ten unapproved candidate use classes,
-candidate fields, TU-E1 through TU-E15 and stop conditions. The next first
-task is `Review P8 training / evaluation model-use boundary before any
-implementation`. That task is docs-only, not P8 entry/implementation approval,
-not model/checkpoint loading or creation, not training/evaluation/inference,
-not model-output/environment/self-play/RL/league implementation or execution,
-and not an implementation prompt. P9-P12 remain unapproved.
+candidate fields, TU-E1 through TU-E15 and stop conditions. `12Z` reviews
+`12Y`, records `A. Review can close`, leaves `12Y` unchanged and preserves
+non-blocking future refinements for content identity/attestation, update
+atomicity, freeze finalization/revocation, data-use lineage, recurrent reset,
+eligibility-transition authority and reproducibility verification. The next
+first task is `Define P8 model / artifact provenance manifest boundary before
+any implementation`. That task is docs-only, not P8 entry/implementation
+approval, not a manifest/schema/loader/artifact, not model/checkpoint loading
+or creation, not training/evaluation/inference, not model-output/environment/
+self-play/RL/league implementation or execution, and not an implementation
+prompt. P9-P12 remain unapproved.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -593,9 +598,9 @@ P7 parser-reader smoke extension current-scope acceptance decision =
 complete in `03BE`; accepted exact scope only.
 P8 model-output interface dependency boundary = defined in `12W` and reviewed
 in `12X`; review can close.
-P8 training / evaluation model-use boundary = defined in `12Y`; docs-only
-review pending.
-Next = review P8 training / evaluation model-use boundary before any
+P8 training / evaluation model-use boundary = defined in `12Y` and reviewed
+in `12Z`; review can close.
+Next = define P8 model / artifact provenance manifest boundary before any
 implementation.
 ```
 
@@ -758,7 +763,9 @@ boundary and selects its docs-only review gate. `12V` reviews it, records
 `A. Review can close`, and selects docs-only model-output interface dependency
 boundary definition next. `12W` defines that boundary; `12X` reviews it and
 records `A. Review can close`. `12Y` defines the training/evaluation model-use
-boundary, and the next task is its docs-only review. The next task does not
+boundary; `12Z` reviews it and records `A. Review can close` without modifying
+`12Y`. The next task is a docs-only model/artifact provenance-manifest boundary
+definition. The next task does not
 approve P8 entry, P8 implementation, P8 implementation prompts, P8-P12
 implementation, model loading, inference, action generation, source
 approval, source ingestion, feature extraction, label generation, dataset

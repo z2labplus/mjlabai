@@ -27,6 +27,22 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 | P11 | Large-scale training and stability validation | Expand compute only after the route is justified by previous gates | Internal evaluation approaches or exceeds the LuckyJ 10.68 target line | Future |
 | P12 | Tenhou target validation | Validate whether the system can exceed LuckyJ 10.68 under compliant conditions | Long-term stable dan, pt EV, rank metrics, latency and logs are verified | Final |
 
+## 2026-07-15 P8 Training / Evaluation Model-Use Boundary Review Milestone Update
+
+- Added `12Z_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`.
+- Review decision: `A. Review can close.`
+- Confirmed mutable/frozen separation, identity/lineage, update/freeze,
+  use/leakage, eligibility/failure/reproducibility, TU-E1 through TU-E15 and
+  stop-condition boundaries are sufficient for this gate.
+- Preserved non-blocking future notes for content identity/attestation, update
+  atomicity, freeze finalization/revocation, data-use lineage, recurrent reset,
+  eligibility-transition authority and reproducibility verification.
+- `12Y` was not modified.
+- Next: define the P8 model/artifact provenance-manifest boundary, docs-only.
+- No P8 entry/implementation, manifest/schema/loader/artifact, model loading,
+  training/evaluation/inference, self-play/RL/league, source/real-data work,
+  strength evidence or P9-P12 work was added or approved.
+
 ## 2026-07-14 P8 Training / Evaluation Model-Use Boundary Milestone Update
 
 `12Y` defines the P8 training/evaluation model-use boundary before any

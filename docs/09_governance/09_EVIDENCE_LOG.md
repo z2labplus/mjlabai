@@ -8,6 +8,42 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-15 — P8 training / evaluation model-use boundary review
+
+- Type: internal documentation / P8 training and evaluation model-use
+  boundary review evidence.
+- Stage: P8 model/artifact provenance-manifest boundary definition before any
+  implementation.
+- Added document:
+  - `docs/12_technical_plan/12Z_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- Reviewed:
+  - `12Y` scope, non-approval baseline, vocabulary and candidate use classes.
+  - artifact/checkpoint/policy identity, lineage, mutable/frozen separation,
+    update/freeze, use/leakage and self-play-use separation.
+  - recurrent/session/cache, upstream authority, eligibility, failure,
+    reproducibility, candidate fields, TU-E1 through TU-E15 and stop conditions.
+- Review decision:
+  - `A. Review can close.`
+- Non-blocking notes:
+  - future content identity/attestation, update atomicity, freeze finalization/
+    revocation, immutable data-use lineage, recurrent reset conformance,
+    eligibility-transition authority and reproducibility verification need
+    separate later boundaries.
+- `12Y` was not modified.
+- Selected next task:
+  - `Define P8 model / artifact provenance manifest boundary before any implementation.`
+- Validation:
+  - `git diff --check`: passed.
+  - 46 existing supervised/data unit tests: passed.
+- Evidence grade:
+  - P8 training / evaluation model-use boundary review evidence only.
+- Not evidence of:
+  - P8 entry/implementation or an implementation prompt.
+  - a manifest/schema/loader/artifact or model/checkpoint/weight use.
+  - training, tuning, evaluation, inference, self-play, RL or league execution.
+  - source/real-data approval or model strength, Tenhou, stable-dan, LuckyJ,
+    promotion or P9-P12 evidence.
+
 ### 2026-07-14 — P8 training / evaluation model-use boundary definition
 
 - Type: internal documentation / P8 training and evaluation model-use

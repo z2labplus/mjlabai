@@ -6,7 +6,7 @@ Only do the first unchecked task. Do not execute backlog items unless they becom
 
 ## Current next task
 
-- [ ] Review P8 training / evaluation model-use boundary before any implementation.
+- [ ] Define P8 model / artifact provenance manifest boundary before any implementation.
 
 Current execution charter:
 
@@ -16,12 +16,13 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only review gate for
-  `docs/12_technical_plan/12Y_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`.
-- Review only mutable training-policy versus frozen evaluation-policy artifact,
-  update, freeze, use, leakage and eligibility semantics.
-- Do not modify `12Y` unless a separately authorized blocker-resolution task
-  later requires it.
+- This is a docs-only boundary-definition task following the reviewed `12Y`
+  training/evaluation model-use boundary and `12Z` review.
+- Define only future candidate model/artifact provenance-manifest vocabulary,
+  identity, content, parent/child lineage, creation/freeze/thaw/revocation,
+  verification, authority, eligibility and reproducibility boundaries.
+- Do not create a manifest schema, record class, fixture, loader, validator,
+  model, checkpoint, weight, snapshot or artifact.
 - Do not approve P8 entry.
 - Do not approve P8 implementation.
 - Do not define or generate a P8 implementation prompt.
@@ -60,6 +61,8 @@ Limits:
   this repository.
 
 ## Completed
+
+- [x] 2026-07-15 Reviewed the P8 training / evaluation model-use boundary before any implementation: added `docs/12_technical_plan/12Z_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`, reviewed `12Y` scope, non-approval baseline, vocabulary, model-use classes, artifact/checkpoint/policy identity and lineage, mutable training versus frozen evaluation use, update/freeze semantics, training/validation/selection/holdout separation, checkpoint selection, tuning/evaluation leakage, self-play use separation, reference/opponent and recurrent/session/cache boundaries, upstream authority, eligibility, failure, reproducibility, candidate fields, TU-E1 through TU-E15, stop conditions and governance synchronization. Decision: `A. Review can close.` Future content-identity/attestation, update atomicity, freeze finalization/revocation, immutable data-use lineage, recurrent reset conformance, eligibility-transition authority and reproducibility-verification details are non-blocking refinements for later boundaries. `12Y` was not modified. This is boundary-review evidence only, not P8 entry/implementation, an implementation prompt, a manifest/schema/loader/artifact, model loading/creation, training/tuning/evaluation/inference, self-play/RL/league, source/real-data work, strength evidence or P9-P12 approval. The next task is `Define P8 model / artifact provenance manifest boundary before any implementation.`
 
 - [x] 2026-07-14 Defined the P8 training / evaluation model-use boundary before any implementation: added `docs/12_technical_plan/12Y_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`, defining scope, planning recap, the training/evaluation non-approval baseline, model-use vocabulary, authority separation, ten unapproved candidate model-use classes, artifact/checkpoint/policy identity, mutable training and frozen evaluation policy boundaries, within/between-episode update rules, training/validation/selection/holdout separation, checkpoint selection/early stopping, tuning and evaluation leakage, training-self-play versus evaluation-self-play, reference/opponent and recurrent/session/cache boundaries, model-output and upstream version dependencies, evaluation eligibility, failure/artifact mismatch, reproducibility, evidence/source/privacy boundaries, candidate fields, TU-E1 through TU-E15, stop conditions and candidate directions. Planning decision: `P8 training / evaluation model-use boundary is defined before any implementation.` No model/checkpoint/weight was loaded or created; no schema/manifest/loader, trainer/optimizer/loss/dataloader, inference/action generation, training/tuning/evaluation/checkpoint selection, model-output integration, environment/self-play/RL/league, source/real-data work, code/tests/fixtures/data, strength claim or P9-P12 work was added or approved. The next task is `Review P8 training / evaluation model-use boundary before any implementation.`
 

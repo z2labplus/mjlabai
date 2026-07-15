@@ -56,6 +56,7 @@ docs/12_technical_plan/12V_P8_RAW_OUTCOME_ENVIRONMENT_PROVENANCE_BOUNDARY_REVIEW
 docs/12_technical_plan/12W_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12X_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12Y_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12Z_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -326,6 +327,16 @@ TU-E15, stop conditions and a docs-only review next. It is boundary-definition
 evidence only, not model/checkpoint loading, training/evaluation execution,
 checkpoint selection, model-output integration, strength evidence or
 P8/P9-P12 approval.
+
+`docs/12_technical_plan/12Z_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+reviews the `12Y` P8 training/evaluation model-use boundary and records
+`A. Review can close.` It confirms mutable/frozen, identity/lineage,
+update/freeze, use/leakage, eligibility/failure/reproducibility, TU-E1 through
+TU-E15 and stop-condition boundaries, preserves non-blocking future provenance
+and conformance refinements, and does not modify `12Y`. It is boundary-review
+evidence only, not P8 entry/implementation, a manifest/schema/loader/artifact,
+model loading, training/evaluation, self-play/RL, strength evidence or
+P9-P12 approval.
 
 ## Supervised-policy files
 

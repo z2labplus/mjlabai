@@ -2,7 +2,7 @@
 
 ## Current stage
 
-P8 training / evaluation model-use boundary review before any implementation.
+P8 model / artifact provenance manifest boundary definition before any implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -62,9 +62,12 @@ details, and does not modify `12W`. `12Y` defines ten unapproved model-use
 classes, artifact/checkpoint/policy identity, mutable training versus frozen
 evaluation use, update/freeze semantics, training/validation/selection/holdout
 separation, selection/tuning leakage, eligibility/failure/reproducibility,
-candidate fields, TU-E1 through TU-E15 and stop conditions. The current first
-task is `Review P8 training / evaluation model-use boundary before any
-implementation.` Production code, tests, fixtures, data files, source approval,
+candidate fields, TU-E1 through TU-E15 and stop conditions. `12Z` reviews
+`12Y`, records `A. Review can close`, preserves non-blocking future provenance
+and conformance refinements, and does not modify `12Y`. The current first task
+is `Define P8 model / artifact provenance manifest boundary before any
+implementation.` Production code, tests, fixtures, data files, manifest
+schemas/loaders/artifacts, source approval,
 source ingestion, broad
 parser / reader / ingestion, feature extraction, label generation, dataset
 construction, training, evaluation, model loading/inference/action generation,
@@ -367,8 +370,8 @@ P7 broad implementation = not approved
 P8-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
 P8 model-output interface dependency boundary = defined in `12W` and reviewed in `12X`; review can close
-P8 training / evaluation model-use boundary = defined in `12Y`; docs-only review pending
-Next = review P8 training / evaluation model-use boundary before any implementation
+P8 training / evaluation model-use boundary = defined in `12Y` and reviewed in `12Z`; review can close
+Next = define P8 model / artifact provenance manifest boundary before any implementation
 ```
 
 ## AI role
@@ -415,6 +418,7 @@ and first-task boundaries.
 - `docs/12_technical_plan/12W_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/12_technical_plan/12X_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/12_technical_plan/12Y_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/12_technical_plan/12Z_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md`
 - `docs/04_rl_selfplay/04G_ALGORITHM_RACING_FUNNEL.md`
 - `docs/05_evaluation/05G_RACING_FUNNEL_EVALUATION.md`

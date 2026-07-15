@@ -1,5 +1,34 @@
 # 09_CHANGELOG
 
+## 2026-07-15 - v3.50
+
+- Reviewed the P8 training / evaluation model-use boundary before any
+  implementation.
+- Added:
+  - `docs/12_technical_plan/12Z_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- Review decision:
+  - `A. Review can close.`
+- Confirmed:
+  - mutable training and frozen evaluation policy uses remain separate.
+  - artifact/checkpoint/policy identity, lineage, update, freeze, use,
+    leakage, eligibility, failure and reproducibility boundaries are bounded.
+  - training/validation/selection/holdout and training/evaluation self-play
+    uses remain separated.
+  - candidate fields and TU-E1 through TU-E15 are non-executable concepts.
+- Preserved non-blocking future refinements for content identity/attestation,
+  update atomicity, freeze finalization/revocation, immutable data-use lineage,
+  recurrent reset conformance, eligibility-transition authority and
+  reproducibility verification.
+- `12Y` was not modified.
+- New `10_NEXT` first item:
+  `Define P8 model / artifact provenance manifest boundary before any implementation.`
+- Validation passed: `git diff --check` and 46 existing supervised/data unit
+  tests.
+- No P8 entry/implementation, implementation prompt, manifest/schema/loader/
+  artifact, model/checkpoint/weight loading or creation, training/tuning/
+  evaluation/inference, model-output integration, self-play/RL/league,
+  source/real-data work, strength claim or P9-P12 work was added or approved.
+
 ## 2026-07-14 - v3.49
 
 - Defined the P8 training / evaluation model-use boundary before any

@@ -14,6 +14,59 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-15 — DR-0137 — P8 Training / Evaluation Model-Use Boundary Review
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Context:
+
+- `12Y` defined the P8 training/evaluation model-use boundary.
+- The current task was a docs-only review gate; P8 entry, implementation,
+  model use and P9-P12 remained unapproved.
+
+Rationale:
+
+- Mutable training and frozen evaluation use, identity/lineage, update/freeze,
+  use/leakage, eligibility/failure/reproducibility and authority separation are
+  complete enough for this boundary gate.
+- TU-E1 through TU-E15 preserve separate review, exact approval and
+  `10_NEXT` authorization requirements.
+- Content identity/attestation, update atomicity, freeze finalization/
+  revocation, immutable data-use lineage, recurrent reset conformance,
+  eligibility-transition authority and reproducibility verification are
+  non-blocking later refinements.
+- The next safe task is another docs-only provenance boundary, not execution.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12Z_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`.
+- `12Y` was not modified.
+- The next task is `Define P8 model / artifact provenance manifest boundary before any implementation.`
+- No manifest/schema/loader/artifact, model/checkpoint/weight use, training,
+  evaluation, inference, self-play/RL/league, source/real-data work, strength
+  evidence or P9-P12 work is approved.
+
+Linked docs:
+
+- `docs/12_technical_plan/12Y_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/12_technical_plan/12Z_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md`
+
+Status:
+
+Training/evaluation model-use boundary review complete; next docs-only
+provenance-manifest boundary definition pending.
+
 ## 2026-07-14 — DR-0136 — P8 Training / Evaluation Model-Use Boundary Definition
 
 Decision:

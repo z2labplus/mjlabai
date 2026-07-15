@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P8 training / evaluation model-use boundary review
-before any implementation:
+Current active stage is P8 model / artifact provenance manifest boundary
+definition before any implementation:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -108,15 +108,22 @@ evaluation use, update/freeze semantics, training/validation/selection/holdout
 separation, checkpoint selection and leakage controls, eligibility/failure/
 reproducibility, candidate fields, TU-E1 through TU-E15 and stop conditions.
 No model/checkpoint/weight was loaded or created; no training, evaluation,
-inference, self-play/RL or league execution occurred. The next first task is
-`Review P8 training / evaluation model-use boundary before any implementation.`
-This review remains docs-only and does not approve P8-P12 entry, P8
+inference, self-play/RL or league execution occurred. `12Z` reviews `12Y`,
+records `A. Review can close`, and confirms the mutable/frozen, identity/
+lineage, update/freeze, use/leakage, eligibility/failure/reproducibility,
+TU-E1 through TU-E15 and stop-condition boundaries. It preserves non-blocking
+future notes for content identity/attestation, update atomicity, freeze
+finalization/revocation, immutable data-use lineage, recurrent reset
+conformance, eligibility-transition authority and reproducibility
+verification. `12Y` was not modified. The next first task is `Define P8 model
+/ artifact provenance manifest boundary before any implementation.` This task
+remains docs-only and does not approve P8-P12 entry, P8
 implementation, implementation prompts, broader P7 implementation, source
 approval/ingestion, feature/label/dataset work, training data/run, training,
 evaluation, model loading/inference/action generation, model-output
 integration, model-strength evidence, real data, self-play, league, RL,
-raw-outcome schema or environment/simulator/runner implementation. P9-P12
-remain unapproved.
+raw-outcome schema, environment/simulator/runner implementation, or a
+manifest/schema/loader/artifact. P9-P12 remain unapproved.
 
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.

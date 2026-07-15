@@ -8,6 +8,20 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-15 — P8 training / evaluation model-use boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12Z` review closure is mistaken for P8 entry, model-use implementation, training or evaluation approval. | Governance / Stage Control | High | Medium | `12Z`, handoff, stage contract and `10_NEXT` classify it as review evidence only and select another docs-only boundary. | Open |
+| Mutable/frozen artifacts drift while retaining one identity. | Evaluation / Integrity | High | Medium | A later provenance boundary must bind content identity, lineage, update/freeze events and immutable use identity before approval. | Open |
+| Content identity, attestation, freeze finalization or revocation semantics remain ambiguous. | Engineering / Provenance | High | Medium | Treat these as explicit non-blocking follow-up fields; do not create a manifest/schema/loader in this task. | Open |
+| Training/validation/selection/holdout data-use lineage is not immutable and evidence becomes contaminated. | Evaluation / Leakage | High | High | Future provenance must bind data/split/use identities and preserve inspection/tuning lineage; no eligibility is granted now. | Open |
+| Recurrent/cache state survives reset or crosses policy/use boundaries. | Research / Isolation | High | Medium | Require later reset conformance and state-lineage evidence before executable approval. | Open |
+| Eligibility changes or failure filtering lack authority, reason and audit lineage. | Evaluation / Integrity | High | Medium | Future records must bind transition authority/reason and preserve all failed/retried/replaced units. | Open |
+| Artifact replacement or environment drift makes a run irreproducible. | Engineering / Reproducibility | High | Medium | Bind immutable artifact and environment identities plus verification evidence before any run approval. | Open |
+| The next provenance-manifest boundary is mistaken for permission to create schema, loader, checkpoint or artifact. | Governance / Execution | High | Medium | `10_NEXT` permits docs-only vocabulary/boundary work and explicitly forbids executable manifest or artifact work. | Open |
+| Boundary-review evidence is overclaimed as model quality, ranked evidence or LuckyJ comparison. | Evidence / Governance | High | High | Evidence grade remains P8 training/evaluation model-use boundary review evidence only. | Open |
+
 ## 2026-07-14 — P8 training / evaluation model-use boundary definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
