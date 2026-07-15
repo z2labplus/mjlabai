@@ -1,5 +1,35 @@
 # 09_CHANGELOG
 
+## 2026-07-15 - v3.51
+
+- Defined the P8 model / artifact provenance manifest boundary before any
+  implementation.
+- Added:
+  - `docs/12_technical_plan/12AA_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Defined:
+  - provenance vocabulary, authority separation and ten unapproved candidate
+    artifact classes.
+  - logical/content/manifest identities, components/bundles, creation/
+    derivation and acyclic lineage.
+  - lifecycle, freeze/thaw, verification/attestation, compatibility, locator/
+    storage, revocation/quarantine/supersession and use eligibility.
+  - reproducibility, source/privacy/license/security, candidate fields,
+    PM-E1 through PM-E15 and stop conditions.
+- Deferred hash/canonicalization, serialization/storage, signature/attestation
+  authority, package composition, retention/revocation implementation and
+  external artifact choices; no human decision was required.
+- Planning decision:
+  - `P8 model / artifact provenance manifest boundary is defined before any implementation.`
+- New `10_NEXT` first item:
+  `Review P8 model / artifact provenance manifest boundary before any implementation.`
+- Validation passed: `git diff --check` and 46 existing supervised/data unit
+  tests.
+- No manifest/schema/record/database/fixture/loader/validator/hasher/signer/
+  verifier, model/checkpoint/snapshot/weight/artifact creation or loading,
+  training/tuning/evaluation/inference, model-output integration, self-play/RL/
+  league, source/real-data work, strength claim or P9-P12 work was added or
+  approved.
+
 ## 2026-07-15 - v3.50
 
 - Reviewed the P8 training / evaluation model-use boundary before any

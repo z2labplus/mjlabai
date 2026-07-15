@@ -27,6 +27,23 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 | P11 | Large-scale training and stability validation | Expand compute only after the route is justified by previous gates | Internal evaluation approaches or exceeds the LuckyJ 10.68 target line | Future |
 | P12 | Tenhou target validation | Validate whether the system can exceed LuckyJ 10.68 under compliant conditions | Long-term stable dan, pt EV, rank metrics, latency and logs are verified | Final |
 
+## 2026-07-15 P8 Model / Artifact Provenance Manifest Boundary Milestone Update
+
+- Added `12AA_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`.
+- Defined three-layer logical/content/manifest identity, authority separation,
+  ten unapproved artifact classes, components, derivation and acyclic lineage,
+  lifecycle, freeze/thaw/revocation, verification/attestation, compatibility,
+  eligibility, reproducibility, candidate fields and PM-E1 through PM-E15.
+- Deferred content identity/hash/canonicalization, serialization/storage,
+  signature/attestation authority, package composition, retention/revocation
+  implementation and third-party/remote artifact use.
+- Planning decision: `P8 model / artifact provenance manifest boundary is
+  defined before any implementation.`
+- Next: review the provenance-manifest boundary, docs-only.
+- No P8 entry/implementation, manifest/schema/loader/validator/artifact, model
+  loading, training/evaluation/inference, self-play/RL/league, source/real-data
+  work, strength evidence or P9-P12 work was added or approved.
+
 ## 2026-07-15 P8 Training / Evaluation Model-Use Boundary Review Milestone Update
 
 - Added `12Z_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`.

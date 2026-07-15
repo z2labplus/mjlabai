@@ -8,6 +8,42 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-15 — P8 model / artifact provenance manifest boundary definition
+
+- Type: internal documentation / P8 model-artifact provenance-manifest
+  boundary definition evidence.
+- Stage: P8 provenance-manifest boundary review before any implementation.
+- Added document:
+  - `docs/12_technical_plan/12AA_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- Defined:
+  - non-approval baseline, provenance vocabulary and authority separation.
+  - ten unapproved candidate artifact classes and three-layer logical/content/
+    manifest identity.
+  - component/bundle, creation/derivation, acyclic lineage and lifecycle.
+  - freeze/thaw/revocation, verification/attestation, compatibility,
+    locator/storage, eligibility and reproducibility boundaries.
+  - source/privacy/license/security, candidate fields, PM-E1 through PM-E15,
+    stop conditions and candidate next directions.
+- Deferred decisions:
+  - content identity/hash/canonicalization, serialization/storage, signature/
+    attestation authority, package composition, retention/revocation
+    implementation and external artifact use.
+- Planning decision:
+  - `P8 model / artifact provenance manifest boundary is defined before any implementation.`
+- Selected next task:
+  - `Review P8 model / artifact provenance manifest boundary before any implementation.`
+- Validation:
+  - `git diff --check`: passed.
+  - 46 existing supervised/data unit tests: passed.
+- Evidence grade:
+  - P8 model / artifact provenance manifest boundary definition evidence only.
+- Not evidence of:
+  - P8 entry/implementation or an implementation prompt.
+  - a manifest/schema/loader/validator/artifact or model/checkpoint/weight use.
+  - training, evaluation, inference, self-play, RL or league execution.
+  - source/real-data approval or model strength, Tenhou, stable-dan, LuckyJ,
+    promotion or P9-P12 evidence.
+
 ### 2026-07-15 — P8 training / evaluation model-use boundary review
 
 - Type: internal documentation / P8 training and evaluation model-use

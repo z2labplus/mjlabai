@@ -28,7 +28,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 model / artifact provenance manifest boundary definition before any implementation.
+P8 model / artifact provenance manifest boundary review before any implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
@@ -107,10 +107,17 @@ candidate fields, TU-E1 through TU-E15 and stop conditions. `12Z` reviews
 `12Y`, records `A. Review can close`, leaves `12Y` unchanged and preserves
 non-blocking future refinements for content identity/attestation, update
 atomicity, freeze finalization/revocation, data-use lineage, recurrent reset,
-eligibility-transition authority and reproducibility verification. The next
-first task is `Define P8 model / artifact provenance manifest boundary before
-any implementation`. That task is docs-only, not P8 entry/implementation
-approval, not a manifest/schema/loader/artifact, not model/checkpoint loading
+eligibility-transition authority and reproducibility verification. `12AA` now
+defines the model/artifact provenance-manifest boundary, including authority,
+three-layer logical/content/manifest identity, artifact components/classes,
+creation/derivation and acyclic lineage, lifecycle, freeze/thaw/revocation,
+verification/attestation, compatibility, eligibility, reproducibility,
+candidate fields, PM-E1 through PM-E15 and stop conditions. Concrete content-
+identity, serialization/storage, signing/attestation, package, retention and
+external-artifact choices remain deferred. The next first task is `Review P8
+model / artifact provenance manifest boundary before any implementation`.
+That task is docs-only, not P8 entry/implementation approval, not a manifest/
+schema/record/fixture/loader/validator/artifact, not model/checkpoint loading
 or creation, not training/evaluation/inference, not model-output/environment/
 self-play/RL/league implementation or execution, and not an implementation
 prompt. P9-P12 remain unapproved.
@@ -600,7 +607,9 @@ P8 model-output interface dependency boundary = defined in `12W` and reviewed
 in `12X`; review can close.
 P8 training / evaluation model-use boundary = defined in `12Y` and reviewed
 in `12Z`; review can close.
-Next = define P8 model / artifact provenance manifest boundary before any
+P8 model / artifact provenance manifest boundary = defined in `12AA`; docs-only
+review pending.
+Next = review P8 model / artifact provenance manifest boundary before any
 implementation.
 ```
 
@@ -764,8 +773,8 @@ boundary and selects its docs-only review gate. `12V` reviews it, records
 boundary definition next. `12W` defines that boundary; `12X` reviews it and
 records `A. Review can close`. `12Y` defines the training/evaluation model-use
 boundary; `12Z` reviews it and records `A. Review can close` without modifying
-`12Y`. The next task is a docs-only model/artifact provenance-manifest boundary
-definition. The next task does not
+`12Y`. `12AA` defines the docs-only model/artifact provenance-manifest boundary
+and selects its review gate next. The next task does not
 approve P8 entry, P8 implementation, P8 implementation prompts, P8-P12
 implementation, model loading, inference, action generation, source
 approval, source ingestion, feature extraction, label generation, dataset

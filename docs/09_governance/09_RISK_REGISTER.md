@@ -8,6 +8,21 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 
+## 2026-07-15 — P8 model / artifact provenance manifest boundary definition risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12AA` is mistaken for P8 entry, manifest implementation or artifact-use approval. | Governance / Stage Control | High | Medium | `12AA`, handoff, stage contract and `10_NEXT` classify it as boundary-definition evidence only and select a docs-only review. | Open |
+| Logical ID, content ID and manifest-record ID are conflated. | Engineering / Integrity | High | Medium | Keep three-layer identity explicit; path/tag is locator only and content changes require new identity. | Open |
+| Component or parent lineage changes silently or forms cycles. | Engineering / Provenance | High | Medium | Require explicit component identities, typed acyclic edges, retained missing/unverifiable status and preserved history. | Open |
+| Produced, verified, frozen or selected status is mistaken for evaluation eligibility or strength. | Evaluation / Governance | High | High | Separate producer, verification, evaluation and evidence authorities; every eligibility transition requires separate authority/reason/audit. | Open |
+| A loader silently repairs, substitutes, migrates or upgrades content. | Engineering / Reproducibility | High | Medium | Future loader scope must fail explicitly and bind exact content/compatibility; no loader is approved now. | Open |
+| Revocation, quarantine or supersession silently deletes history or leaves dependent uses eligible. | Evaluation / Integrity | High | Medium | Preserve event identity/reason/authority, dependency impact and historical lineage; no lifecycle service is implemented. | Open |
+| Candidate manifest fields expose secrets or legitimize unknown/third-party artifacts. | Security / Compliance | High | Medium | Forbid secrets and external artifacts; require separate license/privacy/security/integrity review. | Open |
+| Concrete hash, format, storage, signature, package or retention choice is inferred from boundary vocabulary. | Governance / Architecture | High | Medium | Record every choice as deferred and require separate review/approval before proposal or implementation. | Open |
+| The next review is mistaken for schema, loader, validator or artifact approval. | Governance / Execution | High | Medium | `10_NEXT` remains review-only, forbids modifying `12AA` and every executable/artifact path. | Open |
+| Boundary evidence is overclaimed as artifact integrity, reproducibility or model strength. | Evidence / Governance | High | High | Evidence grade remains P8 provenance-manifest boundary definition evidence only. | Open |
+
 ## 2026-07-15 — P8 training / evaluation model-use boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

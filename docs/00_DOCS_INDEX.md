@@ -57,6 +57,7 @@ docs/12_technical_plan/12W_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_BEFORE_
 docs/12_technical_plan/12X_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12Y_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12Z_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12AA_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -337,6 +338,17 @@ and conformance refinements, and does not modify `12Y`. It is boundary-review
 evidence only, not P8 entry/implementation, a manifest/schema/loader/artifact,
 model loading, training/evaluation, self-play/RL, strength evidence or
 P9-P12 approval.
+
+`docs/12_technical_plan/12AA_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+defines the docs-only P8 model/artifact provenance-manifest boundary. It
+separates logical, immutable-content and manifest-record identities; defines
+candidate artifact classes, components, creation/derivation lineage,
+lifecycle, freeze/thaw, verification/attestation, compatibility, locator,
+revocation, eligibility, reproducibility, candidate fields, PM-E1 through
+PM-E15 and stop conditions; and defers every hash, serialization, storage,
+signature, package and external-artifact choice. It is boundary-definition
+evidence only, not a manifest/schema/loader/artifact, P8 entry/implementation,
+model use, training/evaluation, strength evidence or P9-P12 approval.
 
 ## Supervised-policy files
 

@@ -14,6 +14,57 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-15 — DR-0138 — P8 Model / Artifact Provenance Manifest Boundary Definition
+
+Decision:
+
+```text
+P8 model / artifact provenance manifest boundary is defined before any implementation.
+```
+
+Context:
+
+- `12Z` reviewed the P8 training/evaluation model-use boundary and recorded
+  `A. Review can close.`
+- P8 entry/implementation, artifact use and P9-P12 remained unapproved.
+
+Rationale:
+
+- Future model use needs three distinct logical/content/manifest identities.
+- Components, creation/derivation lineage, lifecycle, freeze/thaw/revocation,
+  verification, compatibility and eligibility must remain auditable.
+- Producer, provenance, verification, evaluation, evidence, storage and loader
+  authorities must not self-grant one another's statuses.
+- PM-E1 through PM-E15 preserve separate review, exact approval and
+  `10_NEXT` hard gates before any executable or artifact task.
+- Concrete hash, format, storage, signing, packaging, retention and external-
+  artifact decisions can remain deferred without blocking boundary definition.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12AA_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`.
+- The next task is `Review P8 model / artifact provenance manifest boundary before any implementation.`
+- No human decision was required.
+- No schema/record/database/fixture/loader/validator/artifact, model/checkpoint/
+  weight use, training/evaluation/inference, self-play/RL/league, source/real-
+  data work, strength evidence or P9-P12 work is approved.
+
+Linked docs:
+
+- `docs/12_technical_plan/12AA_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/12_technical_plan/12Z_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_CHANGELOG.md`
+- `docs/09_governance/09_EVIDENCE_LOG.md`
+- `docs/09_governance/09_RISK_REGISTER.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+- `docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md`
+
+Status:
+
+Provenance-manifest boundary definition complete; docs-only review pending.
+
 ## 2026-07-15 — DR-0137 — P8 Training / Evaluation Model-Use Boundary Review
 
 Decision:
