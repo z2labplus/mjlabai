@@ -1,5 +1,22 @@
 # 09_CHANGELOG
 
+## 2026-07-17 - v3.52
+
+- Added a mandatory anti-overdocumentation rule to `AGENTS.md`.
+- Limited one boundary to one definition plus one review by default.
+- Required explicit user approval after more than four consecutive docs-only
+  tasks in one stage following the last executable artifact.
+- Required every docs-only task to identify its executable outcome, current
+  blocker, remaining mandatory gate count and exit criterion.
+- Required successful reviews with no genuine blocker to move toward an exact
+  minimal implementation/approval task, stage closure/deferment or a human
+  decision instead of automatically creating another planning document.
+- Updated the current `12AA` review limits to enforce this exit rule. The
+  current first task remains unchanged.
+- This governance change does not bypass safety, compliance, evidence or stage
+  gates and does not approve P8 implementation, training, evaluation,
+  self-play/RL, real data or P9-P12.
+
 ## 2026-07-15 - v3.51
 
 - Defined the P8 model / artifact provenance manifest boundary before any

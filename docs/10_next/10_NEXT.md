@@ -4,6 +4,12 @@
 
 Only do the first unchecked task. Do not execute backlog items unless they become the first unchecked task.
 
+Anti-overdocumentation rule: one boundary may use at most one definition and
+one review by default. A stage may not exceed four consecutive docs-only tasks
+after its last executable artifact without explicit user approval. Review
+completion must lead to a minimal executable/approval task, stage closure or a
+human decision gate unless a documented genuine blocker justifies otherwise.
+
 ## Current next task
 
 - [ ] Review P8 model / artifact provenance manifest boundary before any implementation.
@@ -62,6 +68,13 @@ Limits:
   or `snapshot` files.
 - Do not vendor or copy third-party source, binaries, params or artifacts into
   this repository.
+- This review must report the concrete executable outcome it can unlock, any
+  genuine blocker, and the remaining mandatory gate count.
+- If no genuine blocker exists, do not select another sibling boundary task.
+  Select an exact minimal executable task, its exact approval decision, stage
+  closure/deferment or a human decision gate.
+- Because P8 has already exceeded four consecutive docs-only tasks, selecting
+  another docs-only planning boundary requires explicit user approval.
 
 ## Completed
 

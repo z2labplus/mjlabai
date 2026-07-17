@@ -134,6 +134,16 @@ raw-outcome schema, environment/simulator/runner implementation, or a
 manifest/schema/record/database/loader/validator/artifact. P9-P12 remain
 unapproved.
 
+Anti-overdocumentation governance is now mandatory. A boundary may use one
+definition plus one review by default; more than four consecutive docs-only
+tasks in a stage after the last executable artifact requires explicit user
+approval. Every docs-only task must name the executable outcome, real blocker,
+remaining mandatory gate count and exit criterion. A successful review with no
+genuine blocker must move toward an exact minimal executable/approval task,
+stage closure/deferment or a human decision gate rather than another sibling
+planning document. P8 has already exceeded this threshold, so the current
+`12AA` review must apply the exit rule.
+
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.
 Earlier P7 minimal synthetic/local parser-reader smoke implementation context:

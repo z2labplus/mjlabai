@@ -15,6 +15,38 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 
 Do not jump stages. Always identify the current stage before doing work. Every task must explain how it helps the north-star target.
 
+## Anti-overdocumentation rule
+
+Documentation is a gate to safe execution, not the project deliverable. Do not
+allow definition/review chains to replace implementation indefinitely.
+
+- One boundary may have at most two consecutive docs-only tasks by default:
+  one definition and one review.
+- After that pair, the next task must be one of: an exact minimal executable
+  implementation, an exact approval decision for that implementation, stage
+  closure/deferment, or a human decision gate.
+- A new adjacent boundary does not reset this count unless it is a genuine
+  blocker for the named minimal executable task and the user explicitly
+  approves the additional documentation.
+- More than four consecutive docs-only tasks in one stage after the last
+  executable code/test/experiment requires stopping and obtaining explicit
+  user approval before adding another docs-only task.
+- Every docs-only task must state: the concrete executable outcome it unlocks,
+  the blocker that prevents execution now, the remaining mandatory gate count,
+  and the exit criterion for moving to code or closing/deferring the stage.
+- A review gate must not automatically create another planning document. If
+  the reviewed boundary is sufficient and no real blocker exists, prefer the
+  smallest safe code/test/experiment authorized by the stage contract.
+- Speculative completeness is not a blocker. Record non-essential details as
+  deferred instead of creating more prerequisite documents.
+- If safety, compliance or evidence rules still prohibit implementation after
+  the allowed docs-only chain, stop and ask the user to choose between an
+  explicit exception, stage deferment/closure, or a narrowly approved task.
+
+This rule does not permit bypassing safety, compliance, evidence or stage
+gates. It requires those gates to converge toward execution or an explicit
+stop decision.
+
 ## Algorithm racing-funnel rule
 
 Algorithm selection must use the racing funnel:
@@ -55,6 +87,8 @@ Kanachan = data/model architecture reference
 - Do not optimize only supervised loss while ignoring Tenhou pt EV, average rank, fourth-place rate and stable dan estimate.
 - Do not add features that are not linked to the project goal or a documented experiment.
 - Do not fully train every candidate algorithm before funnel gates justify it.
+- Enforce the anti-overdocumentation rule when choosing or updating
+  `docs/10_next/10_NEXT.md`.
 - After finishing any real task, update:
   - `docs/10_next/10_NEXT.md`
   - `docs/09_governance/09_CHANGELOG.md`
