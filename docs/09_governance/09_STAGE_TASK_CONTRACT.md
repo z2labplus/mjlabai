@@ -2,12 +2,14 @@
 
 ## Current stage
 
-P8 direct implementation of the exact `04Z`-approved raw-return learning-rate
-comparison. `04Z` review-closes commit `fa3471e`; all 441 explicit tests pass
-with two skips. Exact rates `(0.01,0.005,0.001,0.0001)` start from identical
-arrays, train on `(1,3,5,7,11)` and receive zero-update evaluation on `20..35`.
-Probes record aggregates `-454/-454/-320/-320`. Zero planning gates remain;
-another proposal or boundary is forbidden.
+P8 exact code review of the implemented `04Z` raw-return learning-rate
+comparison. Exact rates `(0.01,0.005,0.001,0.0001)` start from identical arrays,
+run five legal updates and receive fixed zero-update evaluation. Nine focused
+and all 450 explicit repository tests pass with two existing skips and pin
+aggregates `-454/-454/-320/-320`; every branch changes parameters, while
+smaller rates preserve initial behavior. Review closure must directly approve
+or defer material evaluation/algorithm work; another proposal or boundary is
+forbidden.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -587,5 +589,6 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04Z` categorical-MLP raw-return learning-rate comparison.
-No proposal, boundary or review before code.
+Review the exact `04Z` categorical-MLP raw-return learning-rate comparison.
+Change code/tests only for a blocker; closure must directly approve or defer
+material evaluation-breadth or algorithm-design work.

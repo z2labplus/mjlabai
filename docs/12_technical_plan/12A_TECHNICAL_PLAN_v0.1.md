@@ -28,14 +28,14 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 direct implementation of the exact `04Z`-approved categorical-MLP raw-
-return learning-rate comparison. `04Z` review-closes commit `fa3471e` with all
-441 explicit tests passing. Four independent branches start from identical
-imitation arrays, use rates `(0.01,0.005,0.001,0.0001)`, run five exact raw-
-return updates and receive zero-update evaluation on disjoint seeds `20..35`.
-Probes record aggregates `-454/-454/-320/-320`: smaller rates change parameters
-but leave this greedy diagnostic unchanged. Zero planning gates remain. This
-is step-size sensitivity evidence, not optimal-rate selection, production
+P8 exact code review of the implemented `04Z` categorical-MLP raw-return
+learning-rate comparison. Four independent branches start from identical
+imitation arrays, use rates `(0.01,0.005,0.001,0.0001)`, run five legal updates
+and receive fixed zero-update evaluation on disjoint seeds `20..35`. Nine
+focused tests pass and pin aggregates `-454/-454/-320/-320`; all parameters
+change, while smaller rates preserve initial greedy behavior. Review closure
+must directly approve or defer material evaluation-breadth or algorithm-design
+work. This is step-size sensitivity, not optimal-rate selection, production
 evaluation, improvement or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted

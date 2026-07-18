@@ -8,6 +8,18 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Executable fixed raw-return step-size sensitivity
+
+- Type: executable P8 local four-branch learning-rate sensitivity evidence.
+- Exact rates `0.01/0.005/0.001/0.0001` start from identical reviewed arrays,
+  run five legal raw-return updates and remain pairwise distinct.
+- Zero-update fixed evaluation records `-454/-454/-320/-320`; larger rates
+  change seed 32 and smaller rates preserve complete initial greedy behavior.
+- Validation: nine focused and all 450 explicit repository tests pass with two
+  existing skips; compile, dependency and diff checks pass.
+- Evidence grade: bounded step-size sensitivity only; not rate selection,
+  improvement, robust evaluation, strength or promotion evidence.
+
 ### 2026-07-19 — Return-estimator review and raw-return step-size probe
 
 - Type: exact code-review closure plus bounded learning-rate sensitivity task

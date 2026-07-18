@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.25
+
+- Implemented the exact `04Z` fixed raw-return learning-rate sensitivity
+  comparison and nine focused tests in the two approved files.
+- Four branches start from identical arrays, run five legal updates at exact
+  rates `0.01/0.005/0.001/0.0001`, and remain pairwise distinct.
+- Fixed zero-update evaluation records project aggregates
+  `-454/-454/-320/-320`; smaller rates preserve initial greedy behavior despite
+  nonzero parameter changes.
+- Nine focused and all 450 explicit repository tests pass with two existing
+  skips; compile, dependency and diff checks pass. No rate selection/adaptive
+  tuning, persistence, real data, production evaluation, strength claim or
+  P9-P12 work was added.
+
 ## 2026-07-19 - v4.24
 
 - Added `04Z`; reviewed commit `fa3471e` against exact `04Y` approval.

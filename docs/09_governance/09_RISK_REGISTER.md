@@ -50,6 +50,11 @@ next review may approve one separate bounded step-size diagnostic, not scale-up.
 | Evaluation is used to update/select a branch. | Evaluation / Leakage | Critical | Low | Evaluation update count zero; no selected-rate field or returned arrays. | Open |
 | Four-rate diagnostic triggers scale-up despite tiny sample. | Research / Statistics | High | High | One implementation/review only; next action must address evaluation breadth or algorithm design, not scale training. | Open |
 
+Implementation status: exact branch initialization, raw objective, five updates,
+complete fixed evaluation and non-selection wording are pinned. No rate is
+approved for use; the next review must choose evaluation breadth or a new
+bounded algorithm diagnostic rather than extend the rate list.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

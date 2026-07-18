@@ -27,16 +27,17 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the exact `04Z`-approved raw-
-return learning-rate comparison. `04Z` review-closes commit `fa3471e`; all 441
-explicit tests pass with two skips. Four independent branches start from
-identical imitation arrays, use rates `(0.01,0.005,0.001,0.0001)`, train exact
-seeds `(1,3,5,7,11)` and receive zero-update fixed evaluation on disjoint seeds
-`20..35`. Probes record aggregates `-454/-454/-320/-320` against initial
-`-320`: all parameters change, but the two smaller rates leave greedy behavior
-unchanged. Zero planning gates remain before code. This is local P8 step-size
-sensitivity evidence, not optimal-rate selection, production evaluation or
-strength evidence:
+Current active stage is one exact code review of the implemented `04Z` raw-
+return learning-rate comparison. Four independent branches start from identical
+imitation arrays, use exact rates `(0.01,0.005,0.001,0.0001)`, train seeds
+`(1,3,5,7,11)` and receive zero-update fixed evaluation on disjoint seeds
+`20..35`. Nine focused and all 450 explicit repository tests pass with two
+existing skips. Aggregates are `-454/-454/-320/-320` against
+initial `-320`: every branch changes parameters, larger rates share changed
+seed `(32,)`, and smaller rates preserve complete initial greedy behavior.
+Review closure must directly approve or defer a material evaluation-breadth or
+algorithm-design task, not add planning. This is local P8 step-size sensitivity
+evidence, not optimal-rate selection, production evaluation or strength:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

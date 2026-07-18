@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact MahJax categorical-MLP raw-return learning-rate comparison smoke.
+- [ ] Review the exact MahJax categorical-MLP raw-return learning-rate comparison smoke implementation.
 
 Current execution charter:
 
@@ -22,20 +22,33 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Execute exact `04Z` in its two approved source/test files plus governance.
-- Branch identical reviewed imitation parameters into exact fixed learning
-  rates `(0.01,0.005,0.001,0.0001)` using raw actor-indexed returns only.
-- Apply five updates per branch on exact seeds `(1,3,5,7,11)`; `0.01` reuses
-  the reviewed helper and all branches remain independent.
-- Evaluate initial and four branches without updates on disjoint seeds `20..35`
-  under identical environment/rule RNG and fixed participant roles.
-- Pin aggregates `-320/-454/-454/-320/-320`, changed seeds, complete traces,
-  objectives/deltas and 0.01/0.005 versus initial/0.001/0.0001 identities.
-- Report step-size sensitivity only. No rate selection, extra/adaptive rate,
-  optimizer change, persistence, real data, production self-play/evaluation,
-  strength claim or P9-P12.
+- Review the exact two `04Z`-approved files and implementation commit; change
+  code/tests only for a concrete blocker.
+- Verify exact seven-symbol API, exact four rates/order, identical initial
+  parameters, independent branches and five legal terminal updates per rate.
+- Verify `0.01` helper reuse, variable-rate objective identity, exact
+  objectives/per-step/final deltas and pairwise-distinct final parameters.
+- Verify disjoint zero-update fixed evaluation under identical RNG/participants,
+  full traces/scores/rewards and `-320/-454/-454/-320/-320` aggregates.
+- Verify larger-rate behavior identity, smaller-rate initial-behavior identity,
+  nonzero small-rate parameter changes and explicit non-selection wording.
+- Closure must directly approve or defer one material evaluation-breadth or
+  algorithm-design task; no sibling proposal/boundary, adaptive tuning, scale-
+  up, real data, production self-play/evaluation, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Implemented the exact `04Z`-approved fixed raw-return learning-
+  rate comparison in two files. Four independent branches start from identical
+  reviewed imitation parameters, run five legal updates at exact rates
+  `(0.01,0.005,0.001,0.0001)` and receive zero-update fixed evaluation on
+  disjoint seeds `20..35`. Nine focused and all 450 explicit repository tests
+  pass with two existing skips. All branch parameters change and remain
+  pairwise distinct; aggregates are exactly
+  `-454/-454/-320/-320`. Larger rates share changed seed `(32,)`; smaller
+  rates preserve complete initial greedy behavior despite nonzero updates. No
+  rate was selected and no adaptive tuning, persistence, real data, production
+  evaluation, strength claim or P9-P12 work was added. One exact review is next.
 
 - [x] 2026-07-19 Reviewed commit `fa3471e` against exact `04Y` approval in
   `04Z`. Decision: `A. Review can close.` Confirmed exact API, independent

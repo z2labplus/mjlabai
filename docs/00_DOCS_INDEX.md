@@ -293,6 +293,14 @@ sensitivity implementation. Probes record aggregates `-454/-454/-320/-320`
 for rates `0.01/0.005/0.001/0.0001`. This is review/task-approval evidence,
 not optimal-rate selection or strength evidence.
 
+The exact `04Z` rate comparison is implemented in
+`src/mjlabai/rl/mahjax_categorical_mlp_learning_rate_comparison_smoke.py` with
+focused tests in
+`tests/rl/test_mahjax_categorical_mlp_learning_rate_comparison_smoke.py`.
+It runs four independent five-update raw-return branches and fixed no-update
+evaluation, pinning `-454/-454/-320/-320`. One exact review is next; this is
+step-size sensitivity, not rate selection or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
