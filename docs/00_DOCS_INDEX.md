@@ -114,6 +114,13 @@ encodes the exact public dict into 630 features, calculates 87 scores from
 mask and completes seed 0 in 91 transitions. One exact review is next. It is
 untrained model-output integration evidence only, not training or strength.
 
+`docs/04_rl_selfplay/04O_P4_P8_LINEAR_POLICY_BRIDGE_IMPLEMENTATION_REVIEW.md`
+reviews commit `d56271a`, records `A. Review can close`, accepts the exact
+public-observation/model-output bridge and directly approves the first in-memory
+environment-backed rule-policy imitation parameter training with zero gates
+before code. It is bridge review and bounded training-task approval evidence,
+not production training or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

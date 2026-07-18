@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.02
+
+- Added `04O`; reviewed commit `d56271a` against exact `04N` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed public-only 630-feature encoder, 54,897 parameters, two JITs, one
+  capped legal-masked round, exact seed-0 result and scope.
+- Validation passed: 11 focused and all 336 tests with two skips; compile,
+  dependency, diff and independent encoder/model probes pass.
+- Directly approved the first actual parameter training: 54 seed-0 train and
+  64 seed-1 eval examples, 16 full-batch masked-cross-entropy gradient updates.
+- Probe shows train/eval loss fall and eval imitation accuracy rises to 0.5.
+  No persistence, real data, self-play/RL, strength or P9-P12 work was added.
+
 ## 2026-07-18 - v4.01
 
 - Implemented the exact `04N` P4/P8 MahJax public-observation and untrained

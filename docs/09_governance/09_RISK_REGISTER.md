@@ -61,6 +61,17 @@
 | Random parameters are mistaken for trained policy quality. | Evidence / Scope | High | High | Model ID and warnings state random/untrained; governance denies evaluation/strength/promotion claims. | Open |
 | Review becomes another planning chain instead of training. | Governance / Delivery | High | Medium | Exactly one review is next; closure must directly approve/defer a minimal in-memory parameter-update task or record a genuine blocker. | Mitigated |
 
+## 2026-07-18 — P7/P8 first environment-backed training approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Training/evaluation samples mix or leak across seeds. | Research / Leakage | High | Medium | Collect exact seed 0 and seed 1 rounds independently; return IDs/counts and test no cross-seed reuse. | Open |
+| Illegal labels corrupt masked cross-entropy. | Engineering / Correctness | Critical | Low | Validate every bundled-policy label against its exact 87-entry environment legal mask before collection succeeds. | Open |
+| Loss fails to decrease or parameters do not change. | ML / Correctness | High | Medium | Pin 16-step loss history, strict decrease, delta norms and pre/post metrics from the independent probe. | Open |
+| In-memory smoke becomes a persisted dataset/checkpoint pipeline. | Governance / Scope | High | Medium | Exact API returns summary only; source tests forbid path/file/save/checkpoint behavior. | Open |
+| Imitating one heuristic/two seeds is overclaimed as policy quality. | Evidence / Scope | Critical | High | Warnings classify tiny local synthetic imitation only; holdout metric is diagnostic, not strength/promotion. | Open |
+| Another docs gate delays approved training. | Governance / Delivery | High | Medium | `04O` leaves zero gates; `10_NEXT` requires direct parameter-update code. | Mitigated |
+
 ## 2026-07-18 — P8 bounded policy-improvement sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

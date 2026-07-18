@@ -8,6 +8,19 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P4/P8 bridge review and first training approval probe
+
+- Type: exact code-review closure, current-scope acceptance and direct actual
+  parameter-training task approval evidence.
+- `04O` records `A. Review can close`; 11 focused and all 336 tests pass with
+  two existing skips.
+- Independent in-memory probe collected 54 seed-0 train and 64 seed-1 eval
+  bundled-rule-policy public decisions. Sixteen full-batch steps changed
+  weights/biases and reduced train loss `1.70919883 -> 1.38197553`, eval loss
+  `1.76650584 -> 1.54172158`; eval accuracy rose `0.234375 -> 0.5`.
+- Evidence grade: bridge review and exact P7/P8 local synthetic imitation-
+  training task approval only; not production training or strength evidence.
+
 ### 2026-07-18 — P4/P8 public-observation masked linear-policy bridge
 
 - Type: executable project-owned untrained model-output-to-environment smoke.

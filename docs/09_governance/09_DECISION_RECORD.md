@@ -14,6 +14,34 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
+
+Decision:
+
+```text
+A. Review can close.
+Accept the exact `04N` bridge and directly approve the exact `04O` in-memory
+rule-policy imitation parameter training with zero gates before code.
+```
+
+Rationale and evidence:
+
+- `d56271a` conforms and all 336 tests pass.
+- The project now has public features, a real 87-action model surface and legal
+  environment execution, so another interface document is not justified.
+- Independent two-seed training probe shows deterministic loss reduction and
+  validation imitation-accuracy improvement after 16 gradient updates.
+
+Consequences:
+
+- Actual environment-backed parameter updates are now directly executable.
+- No data/model artifact may be saved; the result is a diagnostic summary only.
+- No production training, RL/self-play or strength claim is approved.
+
+Status:
+
+Approved; direct exact imitation training implementation is current next.
+
 ## 2026-07-18 — DR-0186 — Complete Project Linear Policy Environment Bridge
 
 Decision:

@@ -27,11 +27,11 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is one exact code-review gate for the implemented
-`04N`-approved P4/P8 MahJax 630-feature public-observation encoder and
-project-owned untrained masked 87-action linear-policy single-round smoke.
-It is a model-output bridge, not training, production self-play or strength
-evidence:
+Current active stage is direct implementation of the exact `04O`-approved
+P7/P8 in-memory MahJax bundled-rule-policy imitation training smoke. `04O`
+review-closed the 630-feature/87-action project model bridge and leaves zero
+gates before the first environment-backed parameter gradient updates. This is
+bounded local training smoke, not production training or strength evidence:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

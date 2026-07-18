@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact P4/P8 MahJax public-observation encoder and masked untrained linear-policy round smoke implementation.
+- [ ] Implement the exact P7/P8 in-memory MahJax bundled-rule-policy imitation training smoke.
 
 Current execution charter:
 
@@ -22,20 +22,24 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review commit `HEAD` against `04N`: nine-symbol API/exports, exact public key/
-  shape/order/scaling validation, 630 finite features, 54,897 parameters,
-  independent RNG, two JITs, one 256-cap loop, 87-score legal masking,
-  deterministic terminal/raw/global result, failures and warnings.
-- Rerun focused/full tests, compile, dependency/diff checks and independent
-  encoder/result/source probes. Change production code/tests only after a
-  concrete blocker is recorded.
-- No hidden state, labels/dataset/loss/update/optimizer/checkpoint/training,
-  multiple games, persistence/path/CLI, real data, Tenhou, production self-play/
-  evaluation, strength, broad P8 or P9-P12.
-- Exactly one review. If it closes, directly approve or defer one minimal
-  in-memory parameter-training task; no new boundary/proposal chain.
+- Execute exactly `04O` in one supervised source/test module plus direct
+  governance. Collect exact seed-0 train and seed-1 eval rounds in memory via
+  bundled red rule policy and public 630-feature encoder; validate legal labels.
+- Initialize exact `(630,87)+87` float32 parameters from seed 123 and perform
+  exactly 16 deterministic full-batch masked-cross-entropy gradient steps at
+  learning rate `0.1`, no shuffle/minibatch/early stop.
+- Pin counts 54/64 and approximate pre/post loss/accuracy/delta values from
+  `04O`; require strictly decreasing finite train loss history, lower train/eval
+  final loss, nondecreasing accuracy and changed parameters.
+- Return frozen summary only. No persisted data/weights/checkpoint/path/CLI,
+  hidden state, reward/RL/self-play update, real data, Tenhou, production
+  training/evaluation, strength, broad P8 or P9-P12.
+- Zero gates remain before actual gradient-update code. Stop on exact sample,
+  legality, numeric or deterministic blocker rather than widening scope.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `d56271a` against exact `04N` approval in `04O`. Decision: `A. Review can close.` Confirmed nine-symbol API/exports, public-only exact dict validation and 630-feature scaling, 54,897 random parameters, independent RNG, two JITs, one cap loop, 87-score legal masking, every selected action legal, deterministic seed-0 91-step terminal result, failures, warnings and forbidden scope. Eleven focused and all 336 tests pass with two skips; compile, dependency, diff and independent probes pass. Accepted the bridge and directly approved the first actual environment-backed parameter training: seed-0 54-example train versus seed-1 64-example eval, 16 full-batch masked-cross-entropy updates. Independent probe reduces train loss `1.7092->1.3820`, eval loss `1.7665->1.5417`, and raises eval imitation accuracy `0.234375->0.5`. Zero gates remain before code. No persistence, real data, self-play/RL, strength or P9-P12 work was added.
 
 - [x] 2026-07-18 Implemented the exact `04N`-approved P4/P8 MahJax public-observation and project-owned masked untrained linear-policy single-round smoke. Added `src/mjlabai/environment/mahjax_linear_policy_round_smoke.py`, nine package exports and 11 focused tests. Exact public dict keys/shapes encode to 630 finite float32 features; random-initialized `(630,87)` weights plus 87 biases yield 54,897 parameters. Two JIT functions and one explicit 256-cap loop mask all 87 scores by environment legality before argmax. Seed 0 terminates legally in 91 transitions with zero raw/cumulative rewards, global scores `(250,250,250,250)`, first action 10 and final action 7. All 336 tests pass with two existing skips; compile, dependency, diff and independent API probes pass. No hidden-state feature, labels/dataset/loss/update/training, production self-play/evaluation, real data, Tenhou, strength, broad P8 or P9-P12 work was added. One exact review is next, then direct minimal training approval/deferment.
 
