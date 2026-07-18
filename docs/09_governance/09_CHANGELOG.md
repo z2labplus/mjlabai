@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.62
+
+- Accepted the exact `12AE`/`12AF` two-step sequence as current-scope complete
+  in `12AG`.
+- Directly approved one fixed four-record A/B/A/B interleaved two-key
+  synthetic/local policy-update trace smoke as the next executable task.
+- Fixed exact files, four-symbol API, input/key/terminal/continuity semantics,
+  frozen output, 11 test categories, rollback, stop conditions and evidence.
+- Set the remaining mandatory gate count before code to zero; new `10_NEXT`
+  first item is direct trace implementation.
+- No code, test, fixture/data, replay buffer, environment, self-play, model,
+  production training/evaluation, real/external/platform data, broad P8 or
+  P9-P12 work was added in this decision.
+
 ## 2026-07-18 - v3.61
 
 - Reviewed commit `f238f3d` against the exact `12AE` approval in `12AF`.

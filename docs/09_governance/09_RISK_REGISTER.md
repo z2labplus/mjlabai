@@ -9,6 +9,16 @@
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
 
+## 2026-07-18 — P8 interleaved trace approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Fixed trace silently becomes a generic batch, epoch or replay buffer. | Governance / Scope | High | Medium | `12AG` permits exactly four A/B/A/B records and no variable input length, dataset, persistence or replay API. | Open |
+| Interleaving corrupts continuity between independent state-action keys. | Engineering / Correctness | High | Medium | Require exact A/B/A/B identity and separately compare steps 3/1 and 4/2 updated/current values. | Open |
+| A duplicate formula diverges from the reviewed single-step helper. | Engineering / Correctness | High | Medium | Both keys and all four steps must delegate to `apply_synthetic_policy_update_smoke`; formula duplication is forbidden and tested. | Open |
+| Trace smoke is overclaimed as training, replay or model evidence. | Evidence / Scope | High | High | Exact warnings and governance grade it as four-record synthetic/local numerical smoke only. | Open |
+| Another docs chain delays the approved trace. | Governance / Delivery | High | Medium | `12AG` records zero remaining gates and puts direct implementation first in `10_NEXT`. | Mitigated |
+
 ## 2026-07-18 — P8 two-step sequence implementation review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

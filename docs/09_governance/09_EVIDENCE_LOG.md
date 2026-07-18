@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 two-step acceptance and interleaved-trace approval
+
+- Type: internal current-scope acceptance / exact executable-task approval
+  evidence.
+- Decision: the `12AE` implementation closed by `12AF` is `ACCEPTED as
+  current-scope complete` for its exact synthetic/local numerical scope.
+- `12AG` directly approves one fixed four-record A/B/A/B interleaved two-key
+  trace smoke; no docs gate remains before code.
+- Basis: 68 approved tests, compile/diff checks and adversarial probes pass;
+  `12AF` found no blocker.
+- Evidence grade: P8 exact two-step acceptance and interleaved-trace approval
+  evidence only; not self-play, production training, model-strength, Tenhou,
+  stable-dan, LuckyJ, candidate-promotion or P9-P12 evidence.
+
 ### 2026-07-18 — P8 two-step sequence implementation review closure
 
 - Type: internal exact code-review closure evidence.

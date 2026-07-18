@@ -14,6 +14,38 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0147 — Two-Step Acceptance And Interleaved Trace Approval
+
+Decision:
+
+```text
+ACCEPTED as current-scope complete.
+Approve direct implementation of one exact four-record A/B/A/B interleaved
+two-key synthetic/local policy-update trace smoke.
+```
+
+Rationale and evidence:
+
+- `12AF` closed the exact two-step review with no blocker and 68 passing tests.
+- A four-record interleaved trace validates independent state-action value
+  continuity and is materially stronger than merely adding a third step.
+- Fixed input shape and single-step-helper reuse avoid a generic trainer,
+  environment, replay buffer, model or self-play path.
+- Anti-overdocumentation governance requires direct execution now.
+
+Consequences:
+
+- Added `12AG` with exact files, API, A/B/A/B input semantics, output, tests,
+  rollback, stop conditions and evidence grade.
+- Zero mandatory gates remain before the exact trace implementation.
+- No broad P8, environment, self-play, model, production training/evaluation,
+  real data, strength or P9-P12 approval follows.
+
+Status:
+
+Two-step scope accepted; exact interleaved-trace implementation is current
+next.
+
 ## 2026-07-18 — DR-0146 — Exact P8 Two-Step Implementation Review Closure
 
 Decision:

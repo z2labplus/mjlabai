@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Decide current-scope acceptance and directly approve next exact executable P8 task after two-step sequence review closure.
+- [ ] Implement exact minimal P8 synthetic/local four-record interleaved policy-update trace smoke only.
 
 Current execution charter:
 
@@ -22,21 +22,24 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Accept or reject only the exact `12AE` implementation reviewed and closed by
-  `12AF`.
-- If accepted, select one materially progressive P8 executable outcome and
-  directly bind its exact files, API/behavior, tests, rollback, stop
-  conditions and evidence grade. Do not create another sibling boundary,
-  proposal or review chain before that code.
-- The next outcome must progress beyond a fixed two-record sequence while
-  staying deterministic, standard-library, in-memory and synthetic/local.
-- Do not implement code in this decision task.
-- Do not approve broad variable training, fixture/data ingestion, path/CLI,
+- This implementation is directly approved by `12AG`; do not insert another
+  proposal, boundary, review or approval task.
+- Create/modify only `src/mjlabai/rl/__init__.py`,
+  `src/mjlabai/rl/synthetic_policy_update_trace_smoke.py`,
+  `tests/rl/test_synthetic_policy_update_trace_smoke.py` and direct
+  docs/governance synchronization.
+- Reuse the existing single-record helper for exactly four records in A/B/A/B
+  key order: two non-terminal first occurrences followed by two terminal
+  second occurrences with independent exact continuity per key.
+- Enforce the exact API, input, output, tests and stop conditions in `12AG`.
+- Do not add variable batches/epochs, fixture/data, replay buffer, path/CLI,
   dependency, environment/gameplay, self-play, model/optimizer, production
   training/evaluation, artifact, real/external/platform data, broad P8 or
   P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Accepted the exact `12AE` implementation closed by `12AF` as current-scope complete and directly approved the next executable task in `12AG`. The selected outcome is one deterministic standard-library four-record A/B/A/B interleaved two-key policy-update trace smoke that reuses the reviewed single-step helper, validates pairwise-distinct IDs, one shared synthetic/local source, two distinct state-action keys, non-terminal first occurrences, terminal second occurrences and exact independent continuity per key. `12AG` fixes the only approved source/test files, four-symbol API, input/order semantics, frozen output, 11 test categories, rollback, stop conditions and evidence grade; zero mandatory gates remain before code. No code, test, fixture/data, replay buffer, environment, self-play, model/optimizer, production training/evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added in this decision. The next task is direct implementation, not another docs gate.
 
 - [x] 2026-07-18 Reviewed the exact `12AE` two-step chained P8 synthetic/local policy-update sequence smoke in `12AF`. Decision: `A. Review can close.` Confirmed exact approved files and public API, two-record tuple enforcement, non-terminal/terminal ordering, shared source/state/action, distinct record IDs, exact value continuity, reuse of the reviewed single-step helper, step-indexed chained errors, deterministic immutable output, package exports, evidence warnings and forbidden-scope compliance. Ten sequence tests, 12 base tests and 46 approved regressions all pass; compile and diff checks pass; extra in-memory probes cover tuple subclasses, exact chained values, non-mutation and step 1/2 error causes. No production code, test, fixture/data, dependency, environment, self-play, model, production training/evaluation, real/external/platform data, broad P8 or P9-P12 work was added. The next task is current-scope acceptance plus direct approval of one materially progressive executable P8 task, not another sibling boundary.
 
