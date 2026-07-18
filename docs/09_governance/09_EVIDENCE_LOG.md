@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — Multi-project review and categorical-MLP signal probe
+
+- Type: exact review closure after blocker fix plus direct executable
+  representation/training task approval evidence.
+- Runtime failure now maps to the new public error. Eleven focused and all 395
+  explicit tests pass with two existing skips.
+- Current linear-policy categorical/greedy and expanded-linear-training probes
+  all produce zero outcomes across tested all-project seeds.
+- Exact categorical probe: 882 features, 64 hidden units, 482/221 separated
+  examples and 48 Adam epochs yield train/eval loss
+  `0.36734492 / 1.77358353`, accuracy `0.93153530 / 0.58371043`.
+- Greedy all-project seeds `0..15` produce nonzero outcomes at
+  `(0,1,3,5,6,7,10)`, proving a usable raw-outcome signal exists.
+- Evidence grade: local architecture/training/outcome task approval only; not
+  production self-play, improvement, evaluation or strength evidence.
+
 ### 2026-07-18 — First two-project-seat shared-policy raw-outcome update
 
 - Type: executable P8 local multi-project participant bridge-update evidence.

@@ -2,13 +2,13 @@
 
 ## Current stage
 
-P8 exact implementation review of the completed `04T`-approved MahJax two-
-project-seat shared-policy raw-outcome update smoke: seed `0`, shared project
-parameters in seats `(0,2)`, fixed rule policies in seats `(1,3)`, one legal
-92-transition terminal round and one actor-indexed aggregate update. Ten
-focused and all 394 explicit repository tests pass. The review must close or
-identify a concrete blocker, then directly approve or defer material P8
-execution rather than create another documentation chain.
+P8 direct implementation of the exact `04U`-approved MahJax categorical-
+feature MLP imitation training and all-project outcome smoke. `04U` review-
+closes the two-project-seat update after one runtime-error blocker fix and all
+395 explicit tests pass. Exact local train/eval seeds, 882 features, 64 hidden
+units, 48 Adam epochs and greedy all-project seeds `0..15` are approved with
+zero planning gates before code. This addresses the measured zero-outcome
+linear-policy representation blocker; another documentation chain is forbidden.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -588,7 +588,5 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04T` two-project-seat shared-policy update implementation.
-Do not broaden code unless a concrete blocker is found. Review closure must
-directly approve or defer a material executable P8 task; no new boundary or
-proposal chain may intervene.
+Implement the exact `04U` categorical-feature MLP imitation training and all-
+project outcome smoke. No proposal, boundary or review may intervene before code.

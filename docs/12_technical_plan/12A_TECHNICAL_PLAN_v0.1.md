@@ -28,14 +28,14 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 exact code review of the completed `04T`-approved two-project-seat shared-
-policy raw-outcome update smoke. Seed `0` now runs project seats `(0,2)`, fixed
-rule seats `(1,3)` and one actor-indexed aggregate update after a legal 92-step
-terminal round; 10 focused and all 394 explicit repository tests pass with two
-existing skips. The review must directly approve or defer material executable
-P8 work rather than restart documentation. This is a bounded bridge toward
-self-play, not production self-play, evaluation, improvement or strength
-evidence.
+P8 direct implementation of the exact `04U`-approved categorical-feature MLP
+imitation training and all-project outcome smoke. `04U` review-closes the two-
+project-seat update after one runtime-error blocker fix and all 395 explicit
+tests pass. The next code uses 882 categorical features, a 64-hidden MLP, exact
+local train/eval seeds and 48 Adam epochs, then runs all-project seeds `0..15`.
+The probe yields seven nonzero terminal outcomes, directly addressing the
+current linear-policy zero-signal blocker. This is local initialization/outcome
+evidence, not production self-play, evaluation, improvement or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

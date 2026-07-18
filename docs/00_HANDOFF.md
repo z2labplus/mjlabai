@@ -27,14 +27,13 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is exact code review of the completed `04T`-approved
-MahJax two-project-seat shared-policy raw-outcome update smoke. Seed 0 now runs
-shared project parameters in seats `(0,2)`, fixed rule policies in seats
-`(1,3)` and one actor-indexed aggregate update after a legal 92-transition
-terminal round. Twenty-nine three-generation RL tests and all 394 explicit
-repository tests pass with two existing skips. The review must directly approve
-or defer the next material P8 execution instead of starting another docs chain.
-This is a bounded P8 bridge toward self-play, not production self-play,
+Current active stage is direct implementation of the exact `04U`-approved
+MahJax categorical-feature MLP imitation training and all-project outcome
+smoke. `04U` review-closes the two-project-seat update after one runtime-error
+blocker fix and all 395 tests pass. The next code trains exact local seeds with
+an 882-feature, 64-hidden MLP for 48 epochs, then runs 16 greedy all-project
+rounds. This directly addresses the measured zero-outcome linear-policy
+blocker. It is local initialization/outcome evidence, not production self-play,
 evaluation or strength evidence:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
@@ -864,10 +863,10 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review the exact `04T` two-project-seat shared-policy raw-outcome update.
-Confirm project-only gradient membership, actor-indexed returns, one terminal
-update, exact legal diagnostics and all 394 tests. Review closure must directly
-approve or defer material P8 execution; do not restart a docs chain.
+Implement exact `04U` categorical 882-feature MLP imitation training on local
+rule-policy seeds `0..11`, then run greedy all-project seeds `0..15`. Pin 48-
+epoch metrics and seven nonzero outcome seeds. Zero gates remain before code;
+do not restart a docs chain.
 ```
 
 Latest Akochan F1 audit summary:
@@ -1146,9 +1145,9 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is one exact code review of the implemented `04T` two-
-  project-seat shared-policy update. P8 bounded local training is active;
-  production self-play, evaluation, league, real data, Tenhou and P9-P12
-  remain unapproved. Do not make strength claims.
+- Current next work is direct code for exact `04U` categorical MLP local
+  training and all-project outcome smoke. P8 bounded local training is active;
+  production self-play, evaluation, league, real data, Tenhou and P9-P12 remain
+  unapproved. Do not make strength claims.
 - Technical decisions become project facts only after they are recorded in Git
   and the governing repository documents; no external chat handoff is required.

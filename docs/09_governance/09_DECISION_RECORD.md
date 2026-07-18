@@ -330,6 +330,38 @@ Status:
 
 Implemented; exact two-project-seat update review is current next.
 
+## 2026-07-18 — DR-0199 — Fix Runtime Boundary And Approve Better Representation
+
+Decision:
+
+```text
+A. Review can close after the exact runtime-error blocker fix.
+Accept the exact `04T` multi-project update and directly approve the exact
+`04U` categorical-feature MLP local training/all-project outcome smoke.
+```
+
+Rationale and evidence:
+
+- The successful update path conforms; runtime-loader failure now maps to the
+  correct public module error and all 395 tests pass.
+- Current scaled-ID linear representation produces zero all-project raw outcomes
+  even after more local imitation data and epochs.
+- A category-aware 882-feature, 64-hidden MLP with 48 exact epochs improves
+  separated evaluation loss/accuracy and yields nonzero outcomes in 7/16 exact
+  all-project rounds.
+
+Consequences:
+
+- The next code addresses the demonstrated representation/signal blocker rather
+  than stacking more zero-gradient RL wrappers.
+- It remains local synthetic rule-policy imitation plus outcome diagnostics;
+  no persisted artifact, RL update, evaluation or strength claim is approved.
+- Zero planning/review gates remain before implementation.
+
+Status:
+
+Approved; direct categorical-MLP training/outcome implementation is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

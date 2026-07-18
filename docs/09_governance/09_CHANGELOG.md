@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.14
+
+- Added `04U`; reviewed commit `c47bb73` against exact `04T` approval.
+- Found and fixed one failure-contract blocker: runtime loading now raises the
+  new module's public error; one exact regression test was added.
+- Decision after fix: `A. Review can close.` Eleven focused and all 395 explicit
+  repository tests pass with two skips; compile/dependency/diff/probes pass.
+- Representation probes found scaled-ID linear policies produce zero all-
+  project outcomes. An 882-feature categorical, 64-hidden MLP at 48 epochs
+  reaches eval accuracy `0.58371043` and 7/16 nonzero all-project outcomes.
+- Directly approved that exact local training/outcome smoke. No production
+  self-play/evaluation, real data, strength or P9-P12 work was added.
+
 ## 2026-07-18 - v4.13
 
 - Implemented the exact `04T` P8 MahJax two-project-seat shared-policy raw-

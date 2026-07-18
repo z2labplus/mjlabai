@@ -164,7 +164,12 @@ def run_mahjax_two_project_seat_policy_gradient_smoke(
         raise MahJaxTwoProjectSeatPolicyGradientSmokeError(
             "reviewed in-memory imitation training failed"
         ) from exc
-    jax, jnp, mahjax, rule_policy = _load_pinned_runtime()
+    try:
+        jax, jnp, mahjax, rule_policy = _load_pinned_runtime()
+    except Exception as exc:
+        raise MahJaxTwoProjectSeatPolicyGradientSmokeError(
+            "pinned MahJax/JAX two-project-seat runtime is unavailable"
+        ) from exc
     if mahjax.__version__ != _MAHJAX_PACKAGE_VERSION:
         raise MahJaxTwoProjectSeatPolicyGradientSmokeError(
             f"mahjax version must be {_MAHJAX_PACKAGE_VERSION!r}"

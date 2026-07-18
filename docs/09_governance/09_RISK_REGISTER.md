@@ -41,6 +41,18 @@
 | Bounded bridge is overclaimed as production self-play strength. | Evidence / Scope | Critical | High | Frozen warnings and evidence grade deny four-seat/production self-play, improvement, evaluation, stable-dan and LuckyJ claims. | Open |
 | Review restarts docs instead of progressing executable learning. | Governance / Delivery | High | Medium | Exactly one code review is next; closure directly approves/defer material P8 execution or records a genuine blocker. | Mitigated |
 
+## 2026-07-18 — P7/P8 categorical MLP training approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Categorical encoder leaks opponent hidden hands or direct private state. | Research / Leakage | Critical | Low | Accept only the exact current-player observation dict; pin keys/shapes and source-test no direct state/player-hand reads. | Open |
+| Train/evaluation decisions leak across seeds. | Research / Leakage | High | Low | Exact disjoint seeds `0..7` versus `8..11`, source IDs/counts and tests. | Open |
+| Small MLP overfits tiny teacher data. | ML / Generalization | High | Realized | Choose 48 epochs where eval loss remains below initial and eval accuracy peaks above shorter settings; report both loss and accuracy, no strength claim. | Mitigated |
+| Teacher label is illegal or history encoding drifts. | Engineering / Correctness | Critical | Low | Validate every label against its exact mask; pin 882 layout and sentinel encodings. | Open |
+| Nonzero all-project rounds are mislabeled policy improvement. | Evidence / Scope | Critical | High | Treat only as outcome-signal availability; no baseline comparison, RL update, league or promotion. | Open |
+| Training silently persists data or weights. | Governance / Artifact | High | Low | Public frozen summary/private in-process arrays only; source tests forbid path/save/load/checkpoint. | Open |
+| Approval restarts planning rather than code. | Governance / Delivery | High | Medium | `04U` leaves zero gates and `10_NEXT` requires direct implementation. | Mitigated |
+
 ## 2026-07-18 — P4 bounded MahJax rollout implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

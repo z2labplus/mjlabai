@@ -7,6 +7,7 @@ import math
 from pathlib import Path
 import sys
 import unittest
+from unittest.mock import patch
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -20,6 +21,7 @@ from mjlabai.rl.mahjax_two_project_seat_policy_gradient_smoke import (  # noqa: 
     MAHJAX_TWO_PROJECT_SEAT_POLICY_GRADIENT_PROJECT_SEATS,
     MAHJAX_TWO_PROJECT_SEAT_POLICY_GRADIENT_SEED,
     MAHJAX_TWO_PROJECT_SEAT_POLICY_GRADIENT_SMOKE_VERSION,
+    MahJaxTwoProjectSeatPolicyGradientSmokeError,
     MahJaxTwoProjectSeatPolicyGradientResult,
     run_mahjax_two_project_seat_policy_gradient_smoke,
 )
@@ -166,6 +168,22 @@ class MahJaxTwoProjectSeatPolicyGradientSmokeTests(unittest.TestCase):
             self.result,
             run_mahjax_two_project_seat_policy_gradient_smoke(),
         )
+
+    def test_wraps_runtime_loading_failure_in_public_error(self) -> None:
+        with patch.object(
+            smoke_module,
+            "_train_mahjax_rule_policy_imitation_parameters",
+            return_value=(None, None, None, None, None),
+        ), patch.object(
+            smoke_module,
+            "_load_pinned_runtime",
+            side_effect=RuntimeError("runtime unavailable"),
+        ):
+            with self.assertRaisesRegex(
+                MahJaxTwoProjectSeatPolicyGradientSmokeError,
+                "pinned MahJax/JAX two-project-seat runtime is unavailable",
+            ):
+                run_mahjax_two_project_seat_policy_gradient_smoke()
 
     def test_evidence_grade_and_warnings_prevent_overclaim(self) -> None:
         self.assertTrue(self.result.safety_guardrails_all_satisfied)

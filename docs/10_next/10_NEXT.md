@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact MahJax two-project-seat shared-policy raw-outcome update smoke implementation.
+- [ ] Implement the exact MahJax categorical-feature MLP imitation training and all-project outcome smoke.
 
 Current execution charter:
 
@@ -22,18 +22,20 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review the exact `04T` implementation in its two approved source/test files
-  plus governance; do not broaden code unless a concrete blocker is found.
-- Confirm exact participants/RNG, one 256-cap legal round, complete traces,
-  project-only gradient batch, actor-indexed returns and one terminal update.
-- Confirm exact counts/outcomes/objective/deltas, frozen summary, determinism,
-  validation and no I/O/replay/persistence.
-- If review closes, directly approve or defer the next material executable P8
-  task; another boundary/proposal chain is forbidden.
-- No four-project-seat update, second round, production self-play/evaluation,
-  real data, Tenhou, strength claim or P9-P12.
+- Execute exact `04U` in its two approved source/test files plus governance.
+- Encode exact 882 categorical observation features; no hidden opponent state.
+- Collect legal bundled-rule labels from train seeds `0..7` and independent
+  evaluation seeds `8..11`; no saved dataset.
+- Train exact `882->64 ReLU->87` MLP for 48 full-batch Adam epochs and pin
+  `04U` counts/losses/accuracies.
+- Run exact greedy all-project rounds for seeds `0..15`; pin legal terminal
+  diagnostics and nonzero seeds `(0,1,3,5,6,7,10)`; no RL update.
+- Frozen summary/private in-process arrays only. No persistence, external/real
+  data, production self-play/evaluation, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `c47bb73` against exact `04T` approval in `04U`. One blocker was found and fixed: runtime-loading failure leaked the old module's exception type; the exact source/test fix now wraps it in the new public error. Decision after fix: `A. Review can close.` Eleven focused and all 395 explicit repository tests pass with two skips; compile, dependency, diff and direct probes pass. Confirmed exact participants, independent RNG, 44 project-only gradient decisions, actor-indexed returns, one legal 92-step terminal round, one finite aggregate update, frozen output and no I/O/replay/persistence. Representation probes found the current scaled-ID linear policy yields zero all-project outcomes even after expanded linear training. A categorical 882-feature, 64-hidden MLP trained for 48 epochs reaches train/eval accuracy `0.93153530/0.58371043` and produces nonzero outcomes in 7 of 16 all-project seeds. Directly approved that exact executable initialization/outcome smoke with zero gates before code. No production self-play/evaluation, real data, strength or P9-P12 work was added.
 
 - [x] 2026-07-18 Implemented the exact `04T`-approved MahJax two-project-seat shared-policy raw-outcome update smoke in one new seven-symbol module with 10 focused tests. Seed 0 splits independent init/rule/project RNG; project seats `(0,2)` share reviewed imitation parameters and sample legal-masked categorical actions while fixed rule seats `(1,3)` never enter the gradient batch. One 92-transition terminal round has seat counts `(21,22,23,26)`, 44 project decisions, final raw `(-10,-10,-10,30)`, cumulative `(-10,-10,-10,20)` and global scores `(240,240,240,270)`. Actor-indexed project returns are `-0.1/-0.1`; exactly one aggregate `0.1` update changes objective `-0.19244556->-0.19273609` and weight/bias L2 by `0.00523261/0.00124493`. Twenty-nine three-generation RL tests and all 394 explicit repository tests pass with two skips; compile, dependency and diff checks pass. No four-project-seat update, second round, replay, persistence, production self-play/evaluation, real data, Tenhou, strength or P9-P12 work was added. One exact code review is next.
 

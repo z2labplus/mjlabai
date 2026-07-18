@@ -203,6 +203,14 @@ to one aggregate terminal update; fixed rule seats `(1,3)` never enter the
 gradient batch. One exact code review is next. This is a bounded multi-project
 bridge, not production self-play, evaluation, improvement or strength evidence.
 
+`docs/04_rl_selfplay/04U_P8_TWO_PROJECT_SEAT_POLICY_GRADIENT_IMPLEMENTATION_REVIEW.md`
+reviews commit `c47bb73`, records `A. Review can close after the exact runtime-
+error blocker fix`, accepts the exact multi-project bridge and directly
+approves one categorical-feature MLP imitation initialization plus all-project
+outcome smoke. Independent probes show this representation yields nonzero raw
+outcomes in 7 of 16 exact project-only rounds. This is review/task-approval
+evidence, not production training, self-play evaluation or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
