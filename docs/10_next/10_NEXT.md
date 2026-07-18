@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review exact minimal P8 synthetic/local two-step policy-update sequence smoke implementation.
+- [ ] Decide current-scope acceptance and directly approve next exact executable P8 task after two-step sequence review closure.
 
 Current execution charter:
 
@@ -22,23 +22,23 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the exact `12AE` implementation in
-  `src/mjlabai/rl/__init__.py`,
-  `src/mjlabai/rl/synthetic_policy_update_sequence_smoke.py` and
-  `tests/rl/test_synthetic_policy_update_sequence_smoke.py`.
-- Confirm exact two-record tuple enforcement, first non-terminal/second
-  terminal ordering, shared identity, distinct IDs, exact value continuity,
-  reuse of the single-step helper, error chaining, deterministic immutable
-  output, public exports and evidence warnings.
-- Re-run the 10 sequence tests, 12 base tests and 46 approved regressions.
-- Do not modify production code or tests unless a genuine blocker is found and
-  recorded. Do not create another sibling boundary or proposal.
-- Do not add a third step, variable batch, fixture/data, path/CLI, dependency,
-  environment/episode/gameplay, self-play, model/optimizer, production
+- Accept or reject only the exact `12AE` implementation reviewed and closed by
+  `12AF`.
+- If accepted, select one materially progressive P8 executable outcome and
+  directly bind its exact files, API/behavior, tests, rollback, stop
+  conditions and evidence grade. Do not create another sibling boundary,
+  proposal or review chain before that code.
+- The next outcome must progress beyond a fixed two-record sequence while
+  staying deterministic, standard-library, in-memory and synthetic/local.
+- Do not implement code in this decision task.
+- Do not approve broad variable training, fixture/data ingestion, path/CLI,
+  dependency, environment/gameplay, self-play, model/optimizer, production
   training/evaluation, artifact, real/external/platform data, broad P8 or
   P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed the exact `12AE` two-step chained P8 synthetic/local policy-update sequence smoke in `12AF`. Decision: `A. Review can close.` Confirmed exact approved files and public API, two-record tuple enforcement, non-terminal/terminal ordering, shared source/state/action, distinct record IDs, exact value continuity, reuse of the reviewed single-step helper, step-indexed chained errors, deterministic immutable output, package exports, evidence warnings and forbidden-scope compliance. Ten sequence tests, 12 base tests and 46 approved regressions all pass; compile and diff checks pass; extra in-memory probes cover tuple subclasses, exact chained values, non-mutation and step 1/2 error causes. No production code, test, fixture/data, dependency, environment, self-play, model, production training/evaluation, real/external/platform data, broad P8 or P9-P12 work was added. The next task is current-scope acceptance plus direct approval of one materially progressive executable P8 task, not another sibling boundary.
 
 - [x] 2026-07-18 Implemented the exact `12AE`-approved two-step chained P8 synthetic/local policy-update sequence smoke. Added `src/mjlabai/rl/synthetic_policy_update_sequence_smoke.py`, exported its four approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_policy_update_sequence_smoke.py`. The frozen deterministic helper accepts only an exact two-record tuple, requires first non-terminal/second terminal ordering, identical source/state/action, distinct record IDs and exact intermediate-value continuity, delegates both numerical updates to the reviewed single-step helper, wraps base failures with step index and chained cause, and emits only approved synthetic/local diagnostics and warnings. Ten new focused tests, 12 base tests and 46 P6/P7 regressions all pass; `git diff --check` passes. No third step, variable batch, fixture/data, environment/episode, self-play, model/optimizer, production training/evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is numerical smoke evidence only, not model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 

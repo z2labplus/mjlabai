@@ -14,6 +14,35 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0146 — Exact P8 Two-Step Implementation Review Closure
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Rationale and evidence:
+
+- Commit `f238f3d` conforms to every exact `12AE` file, API, input, sequence,
+  output, test and forbidden-scope requirement.
+- Both numerical updates reuse the reviewed single-step helper.
+- All 68 approved tests, compile/diff checks and extra adversarial probes pass.
+- No genuine blocker or code/test fix was found.
+
+Consequences:
+
+- Added `12AF` as the one exact implementation review.
+- The next task is current-scope acceptance and direct approval of one next
+  executable P8 task; no sibling proposal or boundary may intervene.
+- No self-play, model, production training/evaluation, real data, strength or
+  P9-P12 approval follows.
+
+Status:
+
+Exact review closed; current-scope acceptance and direct next-task approval is
+next.
+
 ## 2026-07-18 — DR-0145 — Exact P8 Two-Step Policy-Update Smoke Implemented
 
 Decision:

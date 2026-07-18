@@ -62,6 +62,7 @@ docs/12_technical_plan/12AB_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_REVIE
 docs/12_technical_plan/12AC_P8_MINIMAL_SYNTHETIC_LOCAL_POLICY_UPDATE_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md
 docs/12_technical_plan/12AD_P8_MINIMAL_SYNTHETIC_LOCAL_POLICY_UPDATE_SMOKE_IMPLEMENTATION_REVIEW.md
 docs/12_technical_plan/12AE_P8_POLICY_UPDATE_SMOKE_CURRENT_SCOPE_ACCEPTANCE_AND_NEXT_EXECUTABLE_TASK_DECISION.md
+docs/12_technical_plan/12AF_P8_TWO_STEP_POLICY_UPDATE_SEQUENCE_SMOKE_IMPLEMENTATION_REVIEW.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -386,6 +387,13 @@ sequence smoke. It fixes exact files, API, tuple inputs, continuity, outputs,
 tests, rollback and stop conditions. It is acceptance/approval evidence only,
 not environment, self-play, production training, model strength or P9-P12
 evidence.
+
+`docs/12_technical_plan/12AF_P8_TWO_STEP_POLICY_UPDATE_SEQUENCE_SMOKE_IMPLEMENTATION_REVIEW.md`
+reviews commit `f238f3d` against `12AE`, records `A. Review can close`, confirms
+the exact tuple/order/identity/continuity/helper-reuse/error-chain/output/test
+and forbidden-scope requirements, and reports 68 passing tests plus in-memory
+adversarial probes. It is review-closure evidence only, not self-play,
+training, model-strength or P9-P12 evidence.
 
 ## Supervised-policy files
 

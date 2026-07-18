@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.61
+
+- Reviewed commit `f238f3d` against the exact `12AE` approval in `12AF`.
+- Decision: `A. Review can close.` No blocker or code/test fix is required.
+- Confirmed exact file/API/tuple/order/identity/continuity/helper-reuse/error-
+  chain/output/export/warning and forbidden-scope compliance.
+- Validation passed: 10 sequence tests, 12 base tests, 46 approved regressions,
+  compile/diff checks and additional in-memory adversarial probes.
+- New `10_NEXT` first item is current-scope acceptance plus direct approval of
+  one next executable P8 task, not another sibling boundary.
+- No production code, test, fixture/data, dependency, environment, self-play,
+  model, training/evaluation, real/external/platform data, broad P8 or P9-P12
+  work was added in this review.
+
 ## 2026-07-18 - v3.60
 
 - Implemented the exact `12AE` two-step chained synthetic/local policy-update

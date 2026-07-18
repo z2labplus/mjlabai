@@ -2,8 +2,8 @@
 
 ## Current stage
 
-P8 exact minimal synthetic/local two-step policy-update sequence smoke
-implementation review.
+P8 current-scope acceptance and direct next executable-task approval after
+two-step sequence review closure.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -83,8 +83,10 @@ records `A. Review can close after blocker fix.` `12AE` accepts the exact
 single-record smoke as current-scope complete and directly approves one
 two-step chained synthetic/local sequence smoke. That exact implementation now
 exists in the approved module/export/test files, delegates both updates to the
-reviewed helper and passes 10 sequence, 12 base and 46 regression tests. The
-current first task is one exact implementation review; no sibling boundary or
+reviewed helper and passes 10 sequence, 12 base and 46 regression tests. `12AF`
+reviews the implementation, records `A. Review can close`, finds no blocker and
+leaves code/tests unchanged. The current first task is current-scope acceptance
+plus direct approval of one next executable outcome; no sibling boundary or
 proposal may precede it.
 Production code
 outside that exact approval, fixtures, data files, manifest schemas/loaders/
@@ -398,8 +400,8 @@ P8 training / evaluation model-use boundary = defined in `12Y` and reviewed in `
 P8 model / artifact provenance manifest boundary = defined in `12AA` and reviewed in `12AB`; review can close
 P8 exact minimal synthetic/local policy-update smoke = implemented and review-closed in `12AD`; 58 tests pass
 P8 exact single-record policy-update smoke = accepted as current-scope complete in `12AE`
-P8 exact two-step chained policy-update sequence smoke = implemented in the three `12AE`-approved source/test files; 68 tests pass
-Next = review the exact `12AE` implementation; no sibling boundary chain
+P8 exact two-step chained policy-update sequence smoke = implemented and review-closed in `12AF`; 68 tests pass
+Next = decide current-scope acceptance and directly approve one next executable P8 task; no sibling boundary chain
 ```
 
 ## AI role
@@ -408,10 +410,10 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Review the exact `12AE`-approved two-step chained synthetic/local policy-update
-sequence smoke for formula reuse, two-record shape, ordering, identity,
-continuity, error chaining, immutability, exports, warnings and forbidden-scope
-compliance. Do not create another sibling boundary. Broad P8, source/real-data work,
+Decide current-scope acceptance for the review-closed two-step sequence and,
+if accepted, directly bind one materially progressive executable P8 task with
+exact files, behavior, tests, rollback, stop conditions and evidence grade.
+Do not create another sibling boundary. Broad P8, source/real-data work,
 datasets, production training/evaluation, self-play/league, model/artifact use,
 model-output integration, CLI, P9-P12 and strength claims remain unapproved.
 

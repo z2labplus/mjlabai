@@ -9,6 +9,14 @@
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
 
+## 2026-07-18 — P8 two-step sequence implementation review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Review closure is mistaken for self-play, training or strength evidence. | Evidence / Scope | High | High | `12AF` grades only exact synthetic/local numerical review closure and explicitly denies those claims. | Open |
+| Successful review creates another planning chain instead of progress. | Governance / Delivery | High | Medium | `10_NEXT` requires current-scope acceptance plus direct next executable-task approval and forbids a sibling boundary. | Mitigated |
+| Narrow tests miss input or error-surface regressions. | Engineering / Quality | Medium | Low | Review reruns all 68 approved tests plus tuple-subclass, huge-number and step-2 terminal-error probes. | Mitigated |
+
 ## 2026-07-18 — P8 two-step policy-update sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
