@@ -55,6 +55,19 @@ complete fixed evaluation and non-selection wording are pinned. No rate is
 approved for use; the next review must choose evaluation breadth or a new
 bounded algorithm diagnostic rather than extend the rate list.
 
+## 2026-07-19 — P8 learning-rate evaluation-breadth approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Extra seeds become evaluation-driven rate selection. | Evaluation / Leakage | Critical | High | Expand only predeclared fixed evaluation, return no arrays/selected rate and forbid ranking/promotion. | Open |
+| `0.001/0.0001` unchanged behavior is called success. | Evidence / Interpretation | Critical | High | Record only update-scale insensitivity; warnings deny quality or improvement. | Open |
+| New seeds silently alter training. | ML / Comparison | Critical | Low | Keep exact train seeds, trajectories, five updates, formulas and deltas unchanged; tests pin them. | Open |
+| Thirty-two rounds are called robust or strength evidence. | Research / Statistics | Critical | High | Classify as bounded deterministic diagnostic only; no uncertainty, model ranking or strength claim. | Open |
+| Evaluation expansion triggers more rate sweeps. | Governance / Delivery | High | Medium | Exact existing four rates only; next review must make an algorithm/evidence decision, not add rates. | Open |
+
+Approval status: `04AA` leaves zero gates before modifying the existing two
+files. Combined probe values are fixed evidence targets, not selection criteria.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

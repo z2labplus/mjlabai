@@ -298,8 +298,16 @@ The exact `04Z` rate comparison is implemented in
 focused tests in
 `tests/rl/test_mahjax_categorical_mlp_learning_rate_comparison_smoke.py`.
 It runs four independent five-update raw-return branches and fixed no-update
-evaluation, pinning `-454/-454/-320/-320`. One exact review is next; this is
-step-size sensitivity, not rate selection or strength evidence.
+evaluation, pinning `-454/-454/-320/-320`. This is step-size sensitivity, not
+rate selection or strength evidence.
+
+`docs/04_rl_selfplay/04AA_P8_LEARNING_RATE_COMPARISON_IMPLEMENTATION_REVIEW.md`
+reviews commit `41b98d3`, records `A. Review can close`, accepts the exact
+four-rate scope and directly approves expanding only its fixed zero-update
+evaluation to seeds `20..51`. New-seed probes break `0.01/0.005` behavior
+identity and produce combined sums `-501/-650/-635/-501/-501`. This is review
+and bounded evaluation-breadth approval evidence, not rate selection,
+improvement, robust evaluation or strength evidence.
 
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md

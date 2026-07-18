@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.26
+
+- Added `04AA`; reviewed commit `41b98d3` against exact `04Z` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed exact API, four independent fixed-rate branches, raw objective,
+  five legal updates each, zero-update fixed evaluation and non-selection scope.
+- Validation passed: nine focused and all 450 explicit tests with two skips;
+  compile, dependency and diff checks pass.
+- New-seed probe `36..51` breaks `0.01/0.005` behavior identity. Combined
+  `20..51` sums are `-501/-650/-635/-501/-501`; directly approved expansion
+  of only the existing fixed evaluation. No rate selection, training scale-up,
+  real data, production evaluation, strength claim or P9-P12 work was added.
+
 ## 2026-07-19 - v4.25
 
 - Implemented the exact `04Z` fixed raw-return learning-rate sensitivity

@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Learning-rate comparison review and evaluation-breadth probe
+
+- Type: exact code-review closure plus bounded fixed-evaluation expansion
+  approval evidence.
+- `04AA` records `A. Review can close`; nine focused and all 450 explicit tests
+  pass with two skips plus compile/dependency/diff checks.
+- Independent seeds `36..51` produce initial/rate sums
+  `-181/-196/-181/-181/-181`; `0.01` changes `(39,43,44,50)`, `0.005`
+  changes `(39,44,50)` and smaller rates preserve initial behavior.
+- Combined exact seeds `20..51` produce sums
+  `-501/-650/-635/-501/-501`. This disproves large-rate behavior identity but
+  does not select a rate or establish policy quality.
+- Evidence grade: bounded evaluation-breadth probe and exact task approval
+  only; not improvement, robust evaluation, strength or promotion evidence.
+
 ### 2026-07-19 — Executable fixed raw-return step-size sensitivity
 
 - Type: executable P8 local four-branch learning-rate sensitivity evidence.

@@ -2,14 +2,14 @@
 
 ## Current stage
 
-P8 exact code review of the implemented `04Z` raw-return learning-rate
-comparison. Exact rates `(0.01,0.005,0.001,0.0001)` start from identical arrays,
-run five legal updates and receive fixed zero-update evaluation. Nine focused
-and all 450 explicit repository tests pass with two existing skips and pin
-aggregates `-454/-454/-320/-320`; every branch changes parameters, while
-smaller rates preserve initial behavior. Review closure must directly approve
-or defer material evaluation/algorithm work; another proposal or boundary is
-forbidden.
+P8 direct implementation of the `04AA`-approved fixed evaluation-breadth
+extension. Existing exact rates `(0.01,0.005,0.001,0.0001)`, training seeds,
+five updates, formulas and parameter diagnostics remain unchanged; only
+zero-update evaluation expands to exact seeds `20..51` in the existing source
+and test. Probes pin combined initial/rate sums
+`-501/-650/-635/-501/-501` and changed seeds
+`(32,39,43,44,50)/(32,39,44,50)/()/()`. No proposal gate remains before code;
+no rate selection, extra sweep, training scale-up or strength claim is allowed.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -589,6 +589,6 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04Z` categorical-MLP raw-return learning-rate comparison.
-Change code/tests only for a blocker; closure must directly approve or defer
-material evaluation-breadth or algorithm-design work.
+Expand the exact fixed zero-update learning-rate evaluation from seeds
+`20..35` to `20..51` in the existing comparison source/test only. Preserve all
+training behavior and pin combined probe values; add no rate or selection.

@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact MahJax categorical-MLP raw-return learning-rate comparison smoke implementation.
+- [ ] Expand the exact MahJax categorical-MLP fixed learning-rate evaluation to seeds `20..51`.
 
 Current execution charter:
 
@@ -22,21 +22,32 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review the exact two `04Z`-approved files and implementation commit; change
-  code/tests only for a concrete blocker.
-- Verify exact seven-symbol API, exact four rates/order, identical initial
-  parameters, independent branches and five legal terminal updates per rate.
-- Verify `0.01` helper reuse, variable-rate objective identity, exact
-  objectives/per-step/final deltas and pairwise-distinct final parameters.
-- Verify disjoint zero-update fixed evaluation under identical RNG/participants,
-  full traces/scores/rewards and `-320/-454/-454/-320/-320` aggregates.
-- Verify larger-rate behavior identity, smaller-rate initial-behavior identity,
-  nonzero small-rate parameter changes and explicit non-selection wording.
-- Closure must directly approve or defer one material evaluation-breadth or
-  algorithm-design task; no sibling proposal/boundary, adaptive tuning, scale-
-  up, real data, production self-play/evaluation, strength claim or P9-P12.
+- Modify only the existing learning-rate comparison source and test plus direct
+  governance synchronization; add no new source/test file or public symbol.
+- Preserve exact rates/order, identical initial parameters, training seeds
+  `(1,3,5,7,11)`, five legal updates, objectives and parameter diagnostics.
+- Set evaluation seeds to exact `tuple(range(20, 52))`; evaluate initial and all
+  four branches with zero updates and identical environment/rule RNG.
+- Pin full traces/scores/rewards and combined initial/rate sums
+  `-501/-650/-635/-501/-501`; pin changed seeds
+  `(32,39,43,44,50)/(32,39,44,50)/()/()`.
+- Preserve frozen array-free output, no selected-rate field and warnings that
+  unchanged behavior is not improvement or policy quality.
+- No extra rate, estimator, update, adaptive tuning, scale-up, persistence,
+  real data, production self-play/evaluation, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Reviewed commit `41b98d3` against exact `04Z` approval in
+  `04AA`. Decision: `A. Review can close.` Confirmed exact seven-symbol API,
+  independent branch initialization, raw objective identity, five legal
+  updates per branch, pairwise-distinct parameters, fixed zero-update
+  evaluation, complete diagnostics and non-selection scope. Nine focused and
+  all 450 explicit tests pass with two skips; compile/dependency/diff checks
+  pass. Independent seeds `36..51` disprove `0.01/0.005` behavior identity;
+  combined `20..51` sums are `-501/-650/-635/-501/-501`. Directly approved
+  expanding only the existing fixed evaluation; zero gates remain. No rate was
+  selected and no scale-up, real data, strength claim or P9-P12 work was added.
 
 - [x] 2026-07-19 Implemented the exact `04Z`-approved fixed raw-return learning-
   rate comparison in two files. Four independent branches start from identical
