@@ -73,6 +73,16 @@ from mjlabai.rl.synthetic_policy_improvement_sequence_smoke import (
     SyntheticPolicyImprovementStepInput,
     run_synthetic_policy_improvement_sequence_smoke,
 )
+from mjlabai.rl.synthetic_two_policy_interaction_smoke import (
+    MAX_SYNTHETIC_TWO_POLICY_INTERACTION_TURNS,
+    SYNTHETIC_TWO_POLICY_INTERACTION_SMOKE_VERSION,
+    SyntheticTwoPolicyInteractionResult,
+    SyntheticTwoPolicyInteractionSmokeError,
+    SyntheticTwoPolicyInteractionTurnInput,
+    SyntheticTwoPolicyInteractionTurnResult,
+    SyntheticTwoPolicyParticipantInput,
+    run_synthetic_two_policy_interaction_smoke,
+)
 
 __all__ = [
     "SYNTHETIC_LOCAL_SOURCE_KIND",
@@ -91,6 +101,8 @@ __all__ = [
     "SYNTHETIC_ONE_STEP_POLICY_IMPROVEMENT_SMOKE_VERSION",
     "SYNTHETIC_POLICY_IMPROVEMENT_SEQUENCE_SMOKE_VERSION",
     "MAX_SYNTHETIC_POLICY_IMPROVEMENT_STEPS",
+    "SYNTHETIC_TWO_POLICY_INTERACTION_SMOKE_VERSION",
+    "MAX_SYNTHETIC_TWO_POLICY_INTERACTION_TURNS",
     "SyntheticPolicyTableEntry",
     "SyntheticPolicyTableUpdateResult",
     "SyntheticPolicyTableUpdateSmokeError",
@@ -111,6 +123,11 @@ __all__ = [
     "SyntheticPolicyImprovementStepInput",
     "SyntheticPolicyImprovementSequenceResult",
     "SyntheticPolicyImprovementSequenceSmokeError",
+    "SyntheticTwoPolicyParticipantInput",
+    "SyntheticTwoPolicyInteractionTurnInput",
+    "SyntheticTwoPolicyInteractionTurnResult",
+    "SyntheticTwoPolicyInteractionSmokeError",
+    "SyntheticTwoPolicyInteractionResult",
     "SyntheticPolicyUpdateInput",
     "SyntheticPolicyUpdateResult",
     "SyntheticPolicyUpdateSequenceResult",
@@ -128,4 +145,5 @@ __all__ = [
     "run_synthetic_linear_greedy_decision_diagnostic",
     "run_synthetic_one_step_policy_improvement_smoke",
     "run_synthetic_policy_improvement_sequence_smoke",
+    "run_synthetic_two_policy_interaction_smoke",
 ]

@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 bounded two-policy interaction implementation
+
+- Type: internal executable bounded multi-policy interaction smoke evidence.
+- Added only the `12AW`-approved interaction module, package exports, focused
+  tests and direct governance synchronization.
+- The helper alternates two policy models over two/four authored turns, calls
+  the reviewed closed loop once per turn, updates only the actor and preserves
+  independent model lineage plus global candidate identity.
+- Validation: 12 focused tests; full explicit repository run 279 OK with two
+  environment-gated skips; compile/diff checks and independent probes passed.
+- Evidence grade: P8 exact bounded synthetic/local two-policy alternating
+  interaction smoke evidence only; implementation review remains next. This
+  is not an environment/game episode, production self-play/evaluation,
+  policy-quality, model-strength, Tenhou, stable-dan, LuckyJ or P9-P12 evidence.
+
 ### 2026-07-18 — P8 bounded-sequence acceptance and two-policy approval
 
 - Type: internal current-scope acceptance / exact executable-task approval.

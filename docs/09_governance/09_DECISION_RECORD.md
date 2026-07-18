@@ -14,6 +14,35 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0172 — Exact P8 Two-Policy Interaction Implemented
+
+Decision:
+
+```text
+Implement the exact `12AW` bounded synthetic/local two-policy alternating
+interaction and advance directly to one code-review gate.
+```
+
+Rationale and evidence:
+
+- The task had zero remaining approval gates and fixed three exact source/test
+  files plus direct governance synchronization.
+- It is the first exact multi-policy artifact: two independent model states
+  alternate reviewed policy-improvement work without an environment.
+- Twelve focused tests and the full 279-test explicit repository run pass with
+  two environment-gated skips; compile/diff and independent probes pass.
+
+Consequences:
+
+- A hard-bounded two-policy synthetic/local interaction artifact now exists.
+- The next task is its one exact implementation review, not a new boundary.
+- No environment, game episode/outcome, production self-play/evaluation,
+  persistence, real data, strength, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Implemented; exact code review is current next.
+
 ## 2026-07-18 — DR-0171 — Bounded Sequence Acceptance And Two-Policy Approval
 
 Decision:

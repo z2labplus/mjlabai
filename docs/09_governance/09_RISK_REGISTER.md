@@ -47,6 +47,15 @@
 | Candidate records are reused across policies or turns. | Engineering / Correctness | Medium | Medium | All `8 * turn_count` candidate IDs must be globally unique. | Mitigated |
 | Another docs chain delays approved interaction code. | Governance / Delivery | High | Medium | `12AW` records zero remaining gates and `10_NEXT` requires direct implementation. | Mitigated |
 
+## 2026-07-18 — P8 two-policy interaction implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Actor and non-actor model lineage are mixed. | Engineering / Correctness | High | Low | Four-turn tests and independent probes verify per-policy carry and non-actor before/after equality. | Mitigated |
+| Implementation introduces hidden environment or episode behavior. | Governance / Scope | High | Low | Source exposes only authored turns, has one bounded loop and no transition/outcome authority or opponent-derived state. | Mitigated |
+| Passing interaction tests are mistaken for production self-play or strength evidence. | Evidence / Scope | High | High | Fixed result warnings and governance grade only bounded synthetic/local two-policy interaction smoke evidence. | Open |
+| A new documentation chain follows successful implementation. | Governance / Delivery | High | Medium | The next task is one exact code review, after which a material environment-facing outcome or scope decision is required. | Mitigated |
+
 ## 2026-07-18 — P8 interleaved trace approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

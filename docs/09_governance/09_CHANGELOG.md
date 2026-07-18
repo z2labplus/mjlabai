@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.87
+
+- Implemented the exact `12AW` bounded synthetic/local two-policy alternating
+  interaction smoke.
+- Added the approved interaction module and 12 focused tests, and exported its
+  eight public symbols through `mjlabai.rl`.
+- Enforced two participants, two/four A/B turns, actor-only updates,
+  independent policy continuity, non-actor equality and global candidate IDs.
+- Validation passed: 12 focused tests; full explicit repository run 279 OK
+  with two environment-gated skips; compile/diff and independent probes passed.
+- New `10_NEXT` first item is one exact implementation review; no sibling
+  boundary or proposal may intervene.
+- No general environment/episode/outcome, replay, production self-play/
+  evaluation, real data, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.86
 
 - Accepted the exact `12AU`/`12AV` bounded sequence as current-scope complete
