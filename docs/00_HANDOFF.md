@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is exact implementation review of the P8 one-step
-synthetic/local policy-improvement closed-loop smoke approved by `12AS`:
+Current active stage is current-scope acceptance and next exact executable P8
+task decision after one-step policy-improvement review closure:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -191,9 +191,11 @@ batch, one reviewed training epoch and one after-decision. Zero gates remain
 before code. That exact implementation now exists in the three approved
 source/test files: it validates both candidate batches, executes reviewed
 decision/training/decision helpers and trains only the action-selected batch.
-Ten focused closed-loop tests plus 136 approved regressions pass. The first
-`10_NEXT` item is its one exact code review; another boundary chain is
-forbidden. Broad P8 entry, production
+Ten focused closed-loop tests plus 136 approved regressions pass. `12AT`
+reviews that implementation, records `A. Review can close`, confirms 146 tests
+plus independent probes and finds no blocker. The first `10_NEXT` item must
+accept/reject that scope and directly approve or defer one exact bounded
+policy-improvement sequence; another boundary chain is forbidden. Broad P8 entry, production
 training/evaluation, self-play, model/artifact use, real data, strength claims
 and P9-P12 remain unapproved.
 

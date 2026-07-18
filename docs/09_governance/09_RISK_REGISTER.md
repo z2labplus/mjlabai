@@ -103,6 +103,14 @@
 | Action change is overclaimed as policy improvement or strength evidence. | Evidence / Scope | High | High | Fixed warnings classify it as one-step synthetic/local smoke only and explicitly deny policy-quality/strength claims. | Open |
 | Another docs chain delays approved closed-loop code. | Governance / Delivery | High | Medium | Direct implementation is complete; the next task is one exact code review, not another boundary/proposal chain. | Closed |
 
+## 2026-07-18 — P8 one-step closed-loop implementation review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Review closure is mistaken for environment/self-play or strength evidence. | Evidence / Scope | High | High | `12AT` grades only exact one-step synthetic/local review closure and explicitly denies those claims. | Open |
+| Successful review creates another fixed wrapper or planning chain. | Governance / Delivery | High | Medium | `10_NEXT` requires current-scope acceptance plus direct bounded sequence approval/deferment; sibling boundaries are forbidden. | Mitigated |
+| Narrow tests miss action-path or helper-lineage drift. | Engineering / Quality | Medium | Low | Review reruns all 146 approved tests plus both action paths, helper order, selected batch, non-mutation and source probes. | Mitigated |
+
 ## 2026-07-18 — P8 two-step sequence implementation review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

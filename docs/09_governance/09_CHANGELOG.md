@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.82
+
+- Reviewed commit `22828c3` against the exact `12AS` approval in `12AT`.
+- Decision: `A. Review can close.` No blocker or code/test fix is required.
+- Confirmed candidate validation, action binding, helper order, selected IDs,
+  before/after lineage, frozen diagnostics, errors and forbidden scope.
+- Validation passed: 10 closed-loop tests, 136 approved regressions,
+  compile/diff checks and independent action-0/action-1 probes.
+- New `10_NEXT` first item must directly accept/reject this scope and approve
+  or defer one exact bounded policy-improvement sequence outcome.
+- No production code, test, general environment/episode, self-play, production
+  evaluation, real/external/platform data, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.81
 
 - Implemented the exact `12AS` one-step synthetic/local policy-improvement

@@ -14,6 +14,35 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0167 — Exact P8 One-Step Closed-Loop Review Closure
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Rationale and evidence:
+
+- Commit `22828c3` conforms to every exact `12AS` file, API, input, candidate,
+  action, helper, lineage, output, error, test and forbidden-scope rule.
+- All 146 approved tests, compile/diff checks and independent probes pass.
+- No correctness, scope, provenance, evidence or test blocker was found.
+
+Consequences:
+
+- Added `12AT` as the one exact implementation review.
+- The next decision must accept/reject this scope and directly approve or
+  defer one bounded sequence outcome; another fixed one-step wrapper or
+  boundary chain is forbidden.
+- No general environment, self-play, production evaluation, real data,
+  strength claim, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Review closed; current-scope acceptance and next exact execution decision is
+current next.
+
 ## 2026-07-18 — DR-0166 — Exact P8 One-Step Policy Improvement Implemented
 
 Decision:

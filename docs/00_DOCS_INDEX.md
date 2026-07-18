@@ -76,6 +76,7 @@ docs/12_technical_plan/12AP_P8_LINEAR_ACTION_VALUE_MODEL_TRAINING_IMPLEMENTATION
 docs/12_technical_plan/12AQ_P8_LINEAR_MODEL_TRAINING_ACCEPTANCE_AND_GREEDY_DECISION_APPROVAL.md
 docs/12_technical_plan/12AR_P8_LINEAR_GREEDY_DECISION_IMPLEMENTATION_REVIEW.md
 docs/12_technical_plan/12AS_P8_GREEDY_DECISION_ACCEPTANCE_AND_ONE_STEP_POLICY_IMPROVEMENT_APPROVAL.md
+docs/12_technical_plan/12AT_P8_ONE_STEP_POLICY_IMPROVEMENT_IMPLEMENTATION_REVIEW.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -511,6 +512,15 @@ loop. It fixes model/probes, two action-indexed candidate transition batches,
 reviewed helper sequence, output, tests and forbidden scope with zero gates
 before code. It is task-approval evidence only, not a general environment,
 self-play, production evaluation, policy-quality, strength or P9-P12 evidence.
+
+`docs/12_technical_plan/12AT_P8_ONE_STEP_POLICY_IMPROVEMENT_IMPLEMENTATION_REVIEW.md`
+reviews commit `22828c3` against `12AS`, records `A. Review can close`,
+confirms full candidate validation, action binding, decision/train/decision
+helper order, selected IDs, before/after lineage, frozen output, stage errors,
+warnings and forbidden-scope compliance, and reports 146 passing tests plus
+independent action-0/action-1 probes. It is review-closure evidence only, not a
+general environment, self-play, production evaluation, policy-quality,
+model-strength or P9-P12 evidence.
 
 ## Supervised-policy files
 

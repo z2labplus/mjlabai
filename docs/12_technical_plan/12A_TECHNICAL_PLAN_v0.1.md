@@ -28,8 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 exact one-step synthetic/local policy-improvement closed-loop smoke
-implementation review.
+P8 one-step policy-improvement current-scope acceptance and next exact
+executable-task decision after `12AT` review closure.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
@@ -168,7 +168,9 @@ passes 136 tests. `12AR` reviews it, records `A. Review can close` and finds no
 blocker. `12AS` accepts that exact scope as current-scope complete and directly
 approves one before-decision, one selected transition batch, one reviewed
 training epoch and one after-decision. That exact implementation is complete
-and passes 146 tests. Its one exact code review is now first in `10_NEXT`. Broad
+and passes 146 tests. `12AT` reviews it, records `A. Review can close` and finds
+no blocker. The current first task must accept/reject that scope and directly
+approve or defer one bounded sequence outcome. Broad
 P8, production training/evaluation, self-play, model/artifact use, real data,
 strength claims and P9-P12 remain unapproved.
 
@@ -690,7 +692,8 @@ P8 exact greedy-decision implementation review = closed in `12AR`; no blocker.
 P8 exact greedy-decision scope = accepted as current-scope complete in `12AS`.
 P8 exact one-step synthetic/local policy-improvement closed loop = directly approved in `12AS`; zero gates remain before code.
 P8 exact one-step synthetic/local policy-improvement closed loop = implemented in the three `12AS`-approved files; 146 tests pass.
-Next = review the exact `12AS` closed-loop implementation; no sibling boundary chain.
+P8 exact one-step policy-improvement implementation review = closed in `12AT`; no blocker.
+Next = current-scope acceptance plus one exact bounded sequence approval/defer decision.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -824,8 +827,8 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Review exact P8 one-step synthetic/local policy-improvement closed-loop smoke
-implementation.
+Decide current-scope acceptance and directly approve or defer exact bounded P8
+synthetic/local policy-improvement sequence smoke.
 ```
 
 `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`

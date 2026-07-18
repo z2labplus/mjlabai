@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review exact P8 one-step synthetic/local policy-improvement closed-loop smoke implementation.
+- [ ] Decide current-scope acceptance and directly approve or defer exact bounded P8 synthetic/local policy-improvement sequence smoke.
 
 Current execution charter:
 
@@ -22,21 +22,23 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review commit `HEAD` against the exact `12AS` approval and only the three
-  approved source/test files plus direct governance synchronization.
-- Verify the four-symbol API, exact model/probes/two batches, full candidate
-  validation, action binding, decision/trainer/decision helper order, selected
-  IDs, frozen output, error wrapping, tests, warnings and evidence grade.
-- Run the 10 focused closed-loop tests, the 136 approved regressions,
-  compile/diff checks and small independent action-0/action-1/adversarial probes.
-- Do not modify production code or tests unless a concrete blocker is found.
-  Do not create another boundary/proposal chain or approve a sibling feature.
-- Do not add a general environment/transition function, episode/multiple
-  steps, self-play, stochastic exploration, replay, dynamic batches, model
-  loading, persistence/checkpoint, production evaluation, path/CLI,
-  dependency, real/external/platform data, broad P8 or P9-P12.
+- Accept or reject only the exact `12AS` implementation review-closed in
+  `12AT`; do not re-review or modify production code/tests.
+- If accepted, make one decision that directly approves or defers one bounded
+  deterministic synthetic/local sequence over an exact tuple of 1 through 4
+  reviewed one-step closed-loop inputs, carrying final model state and global
+  record identity through the reviewed one-step helper.
+- Fix exact hard cap, files, API, input/continuity/output, tests, rollback,
+  stop conditions and evidence grade with zero gates before code. No proposal
+  or sibling boundary may intervene.
+- Do not implement the sequence in this decision. Do not approve a general
+  environment/episode generator, self-play, real/external/platform data,
+  model loading, persistence/checkpoint, CLI/path ingestion, dependency,
+  production evaluation, strength claim, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `22828c362ba82c12ad113e637b236c3e48de3cd7` against the exact `12AS` approval in `12AT`. Decision: `A. Review can close.` Confirmed exact approved files/API, exact model/probes/two candidate batches, full selected/unselected candidate validation, action binding, eight global IDs, exact decision/training/decision helper order, one selected training epoch, before/after model lineage, selected IDs, deterministic frozen output, stage errors, warnings and forbidden-scope compliance. Ten closed-loop tests and 136 approved regressions pass; compile/diff checks and independent action-0/action-1, helper-order, non-mutation and forbidden-surface probes pass. No production code or test was modified and no blocker was found. The next decision must accept or reject this scope and directly approve or defer one bounded multi-step executable P8 outcome; another fixed one-step wrapper or boundary chain is forbidden.
 
 - [x] 2026-07-18 Implemented the exact `12AS`-approved P8 one-step synthetic/local policy-improvement closed-loop smoke. Added `src/mjlabai/rl/synthetic_one_step_policy_improvement_smoke.py`, exported its four approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_one_step_policy_improvement_smoke.py`. The frozen deterministic helper validates both exact action-indexed four-transition candidate batches, runs the reviewed before-decision helper, trains only the batch selected by controlled probe 0 for exactly one reviewed epoch, and runs the reviewed after-decision helper on the same probes. It wraps before/training/after errors by stage, preserves selected IDs and reports controlled action change without copying decision or TD formulas. Ten focused closed-loop tests and 136 approved regressions pass; compile and diff checks pass. No general environment/transition function, episode/multiple steps, replay, self-play, stochastic exploration, dynamic batches, model loading, persistence/checkpoint, production evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is one-step synthetic/local closed-loop smoke evidence only, not policy-quality or model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 

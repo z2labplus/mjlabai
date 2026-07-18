@@ -8,6 +8,18 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 one-step policy-improvement implementation review closure
+
+- Type: internal exact code-review closure evidence.
+- Added `12AT`; decision: `A. Review can close.`
+- Evidence: exact `12AS` file/API/input/candidate/action/helper/lineage/output/
+  error/test and forbidden-scope compliance, 146 passing tests, compile/diff
+  checks and independent action-path probes.
+- No production code or test was modified and no blocker was found.
+- Evidence grade: P8 exact one-step synthetic/local policy-improvement closed-
+  loop implementation review closure evidence only; not a general environment,
+  self-play, production evaluation, policy-quality, strength or P9-P12 evidence.
+
 ### 2026-07-18 — P8 one-step synthetic/local policy-improvement implementation
 
 - Type: internal executable fixed closed-loop smoke evidence.
