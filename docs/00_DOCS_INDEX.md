@@ -83,6 +83,13 @@ the result now reads authoritative global seat order from the environment
 state. This is P4 single-round environment smoke evidence only, not self-play,
 training, Tenhou or strength evidence.
 
+`docs/04_rl_selfplay/04M_P4_MAHJAX_SINGLE_ROUND_ROLLOUT_IMPLEMENTATION_REVIEW.md`
+reviews commits `a8fd6b1` and `86199af`, closes one observer-relative score
+ordering blocker after the exact fix, records `A. Review can close`, accepts
+the bounded rollout scope and directly approves one exact MahJax bundled
+rule-policy single-round implementation with zero gates before code. It is P4
+environment/policy integration review evidence only, not self-play or strength.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

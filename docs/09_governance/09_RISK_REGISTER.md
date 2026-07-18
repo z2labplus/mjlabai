@@ -20,6 +20,16 @@
 | One deterministic environment round is mistaken for self-play or strength. | Evidence / Scope | High | High | API warnings and governance grade only P4 single-round environment smoke evidence; no model participants or comparison claims. | Open |
 | Review restarts another documentation chain. | Governance / Delivery | High | Medium | Only one exact implementation review is allowed; closure must directly decide a material executable next outcome or stage status. | Mitigated |
 
+## 2026-07-18 — P4 bundled MahJax rule-policy approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Bundled rule policy emits an illegal environment action. | Engineering / Correctness | High | Low | Every action must be checked against and recorded with the complete pre-state legal tuple before step. | Open |
+| Policy RNG is coupled to environment initialization or becomes nondeterministic. | Engineering / Reproducibility | High | Medium | Split one root key into separate init/policy streams and split the policy stream exactly once per transition; repeat seed-0 test. | Open |
+| Observer-relative scores reappear in the new result. | Engineering / Correctness | High | Medium | Read only global `state.round_state.score`; focused source/result checks pin seat order. | Open |
+| One all-seat heuristic round is mislabeled production self-play or strength. | Evidence / Scope | High | High | Fixed warnings and evidence grade only P4 policy-to-environment smoke; no learned model, comparison or promotion. | Open |
+| Another docs chain delays the approved code. | Governance / Delivery | High | Medium | `04M` leaves zero gates and `10_NEXT` requires direct implementation. | Mitigated |
+
 ## 2026-07-18 — P8 bounded policy-improvement sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

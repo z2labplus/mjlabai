@@ -2,9 +2,9 @@
 
 ## Current stage
 
-P4 exact code-review gate for the implemented `04L`-approved MahJax
-deterministic single-round rollout with one JIT step function, hard
-256-transition cap and exact seed-0 94-transition terminal result.
+P4 direct implementation of the exact `04M`-approved MahJax bundled
+rule-policy four-seat single-round smoke after the 94-transition bounded
+rollout review closed with its global-seat-score fix.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -584,6 +584,5 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04L` MahJax single-round rollout implementation. Do not add
-production code or another boundary chain; closure must directly select a
-material executable next outcome or stage status.
+Implement the exact `04M` MahJax bundled rule-policy single-round smoke. No
+proposal, boundary or review gate may intervene before code.

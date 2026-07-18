@@ -14,6 +14,35 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0183 — Close Rollout Review And Approve Rule Policy Bridge
+
+Decision:
+
+```text
+A. Review can close after the exact global-seat-score blocker fix.
+Accept the `04L` rollout scope and directly approve the exact `04M` bundled
+rule-policy single-round implementation with zero gates before code.
+```
+
+Rationale and evidence:
+
+- Exact conformance and 314-test regression evidence pass after `86199af`.
+- The next material P4 prerequisite is policy output driving authoritative
+  legal environment transitions, not another fixed action wrapper.
+- An independent pinned-runtime probe proves the bundled red rule policy
+  terminates seed 0 in 54 legal transitions with a nontrivial raw outcome.
+
+Consequences:
+
+- The exact files/API/RNG/cap/outcome/tests in `04M` are directly executable.
+- No additional proposal/boundary/review gate may precede the code.
+- This does not approve a learned model, production self-play, strength,
+  real-data/Tenhou use, broad P8 or P9-P12.
+
+Status:
+
+Approved; direct exact rule-policy round implementation is current next.
+
 ## 2026-07-18 — DR-0182 — Preserve MahJax Global Seat Score Order
 
 Decision:

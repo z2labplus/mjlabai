@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.98
+
+- Added `04M`; reviewed `a8fd6b1` plus exact fix `86199af` against `04L`.
+- Decision: `A. Review can close after the exact global-seat-score blocker fix.`
+- Confirmed API, pins, one JIT step, one 256-cap loop, complete legal trace,
+  deterministic seed-0 terminal/raw outcome, errors, warnings and scope.
+- Validation passed: 12 focused and all 314 repository tests with two skips;
+  compile, dependency, diff and independent score-order/trace probes pass.
+- Accepted this P4 scope and directly approved one exact MahJax bundled
+  rule-policy four-seat round with zero gates before code. No learned model,
+  training, production self-play, real data, Tenhou, strength or P8-P12 work.
+
 ## 2026-07-18 - v3.97
 
 - Fixed the exact MahJax rollout review blocker in the approved source/test

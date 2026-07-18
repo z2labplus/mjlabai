@@ -8,6 +8,19 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P4 rollout review closure and rule-policy approval probe
+
+- Type: exact code-review closure, current-scope acceptance and direct next
+  executable approval evidence.
+- `04M` records `A. Review can close after the exact global-seat-score blocker
+  fix`; 12 focused and all 314 tests pass with two existing skips.
+- Independent bundled-rule-policy seed-0 probe: 54 legal transitions,
+  terminated true, truncated false, final raw rewards `(0,0,150,-120)`,
+  cumulative raw rewards `(-20,0,130,-130)` and global seat scores
+  `(240,250,390,120)`.
+- Evidence grade: P4 rollout review closure and rule-policy task-approval
+  evidence only; not training, production self-play, model strength or Tenhou.
+
 ### 2026-07-18 — P4 MahJax final-score ordering blocker fix
 
 - Type: exact implementation-review correctness fix evidence.
