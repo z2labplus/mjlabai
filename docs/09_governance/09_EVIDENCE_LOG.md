@@ -8,6 +8,18 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — Held-out trained-policy review and mixed-policy probe
+
+- Type: exact code-review closure, current-scope acceptance and direct mixed-
+  policy environment-interaction task approval evidence.
+- `04Q` records `A. Review can close`; nine focused and all 355 tests pass with
+  two existing skips, plus compile/dependency/diff and direct probes.
+- Independent mixed seed-0 probe with project seat 0 and rule seats 1-3:
+  54 legal transitions, terminal/no truncation, raw `(0,0,140,-120)`,
+  cumulative `(0,0,120,-140)` and global scores `(250,250,380,120)`.
+- Evidence grade: local held-out review and exact mixed-policy task approval;
+  not learning, production self-play/evaluation, league or strength.
+
 ### 2026-07-18 — Held-out trained-imitation-policy environment round
 
 - Type: executable P7/P8 local in-memory trained-parameter environment-use

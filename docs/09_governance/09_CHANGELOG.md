@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.06
+
+- Added `04Q`; reviewed commit `c266945` against exact `04P` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed private parameter handoff, unchanged public training summary API,
+  identical held-out seed, public features, complete masks/legal traces,
+  88/94 terminal outcomes, deterministic behavior change and no persistence.
+- Validation passed: nine focused and all 355 tests with two skips; compile,
+  dependency, diff and independent probes pass.
+- Directly approved a seed-0 mixed-policy round: trained project seat 0 versus
+  bundled rule-policy seats 1-3. Probe terminates in 54 legal steps with raw
+  outcome. No learning, league, real data, strength or P9-P12 work was added.
+
 ## 2026-07-18 - v4.05
 
 - Implemented the exact `04P` P7/P8 held-out trained-imitation-policy MahJax

@@ -146,6 +146,12 @@ public summary API remains unchanged. Seed-2 initial/trained traces terminate
 legally in 88/94 steps and differ. One exact code review is next; this is not
 policy-quality, self-play/RL or strength evidence.
 
+`docs/04_rl_selfplay/04Q_P7_P8_MAHJAX_TRAINED_POLICY_ROUND_IMPLEMENTATION_REVIEW.md`
+reviews commit `c266945`, records `A. Review can close`, accepts the held-out
+trained-policy round and directly approves one exact mixed-policy round with
+the trained project policy in seat 0 and bundled rule policies in seats 1-3.
+It is review/task-approval evidence only, not self-play, evaluation or strength.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

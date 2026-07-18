@@ -27,13 +27,13 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is the one exact implementation review of the completed
-`04P`-approved held-out-seed MahJax trained-imitation-policy round smoke. The
-reviewed training now hands parameters privately in memory to two identical
-seed-2 environments: initial and trained policies terminate legally in 88 and
-94 transitions with different action traces. Nothing is persisted. This is
-bounded local training/environment-use smoke evidence, not production training,
-self-play/RL or strength evidence:
+Current active stage is direct implementation of the exact `04Q`-approved
+MahJax mixed-policy single round. `04Q` review-closes the held-out trained-policy
+round and accepts it as current-scope complete. The next executable task fixes
+the trained project policy in seat 0 and the pinned bundled rule policy in seats
+1-3, checks every action against environment legality and records raw outcome.
+This is local mixed-policy interaction smoke, not self-play learning, production
+evaluation or strength evidence:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

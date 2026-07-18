@@ -102,6 +102,16 @@
 | Changed trajectory is overclaimed as improved play. | Evidence / Scope | Critical | High | Warnings explicitly classify behavior change only and deny quality/strength/ranking claims. | Open |
 | Review starts another documentation chain. | Governance / Delivery | High | Medium | Exactly one review is next; closure must directly approve/defer material execution or record a genuine blocker. | Mitigated |
 
+## 2026-07-18 — P8 mixed-policy single-round approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Seat-policy identity is lost or the project policy controls the wrong seat. | Engineering / Correctness | High | Medium | Freeze exact seat-0 project / seats-1-3 rule mapping in every trace entry and tests. | Open |
+| Rule-policy RNG is coupled to environment initialization. | Engineering / Reproducibility | High | Medium | Split one root seed into exact init/policy streams and split the policy stream only on rule seats. | Open |
+| Either policy emits an illegal action. | Engineering / Correctness | Critical | Low | Record complete legal tuple and check every selected action before every step. | Open |
+| One mixed round is mislabeled self-play evaluation or strength. | Evidence / Scope | Critical | High | Fixed evidence grade/warnings deny self-play learning, ranking, promotion and strength claims. | Open |
+| Another planning chain delays approved mixed interaction. | Governance / Delivery | High | Medium | `04Q` leaves zero gates and `10_NEXT` requires direct implementation. | Mitigated |
+
 ## 2026-07-18 — P8 bounded policy-improvement sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

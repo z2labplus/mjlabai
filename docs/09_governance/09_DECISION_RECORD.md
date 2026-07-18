@@ -99,6 +99,33 @@ Status:
 
 Implemented; exact held-out-round review is current next.
 
+## 2026-07-18 — DR-0191 — Close Held-Out Review And Approve Mixed Policy Round
+
+Decision:
+
+```text
+A. Review can close.
+Accept the exact `04P` held-out scope and directly approve the exact `04Q`
+trained-project-seat versus bundled-rule-seats mixed round.
+```
+
+Rationale and evidence:
+
+- `c266945` conforms and all 355 tests pass with two existing skips.
+- The next missing executable link is explicit policy identity by seat in one
+  real environment round, not another parameter or interface wrapper.
+- Independent seed-0 probe terminates after 54 legal transitions with nonzero
+  raw outcome and exact seat-policy trace.
+
+Consequences:
+
+- Exact `04Q` source/test/API/seat mapping/outcomes are directly executable.
+- No multiple games, learning, league, evaluation or strength claim is approved.
+
+Status:
+
+Approved; direct mixed-policy round implementation is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

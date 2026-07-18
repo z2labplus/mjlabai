@@ -2,10 +2,9 @@
 
 ## Current stage
 
-P7/P8 exact implementation review of the completed `04P`-approved held-out-seed
-MahJax trained-imitation-policy round over the reviewed 630-feature, 87-action
-project linear model. Private parameter handoff and 88/94-step seed-2 traces
-are implemented; review must not expand training or claim improvement.
+P8 direct implementation of the exact `04Q`-approved MahJax mixed-policy
+single round: reviewed trained project policy in seat 0 and pinned bundled rule
+policy in seats 1-3. No learning, multi-game evaluation or strength claim.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -585,7 +584,5 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04P` private parameter handoff and identical seed-2
-initial/trained legal-masked rounds. No production change absent a concrete
-blocker. Closure must directly approve/defer a material executable next task;
-another planning chain is forbidden.
+Implement the exact `04Q` one-project-seat/three-rule-seat seed-0 legal-masked
+round. No proposal, boundary or review may intervene before code.
