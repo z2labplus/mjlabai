@@ -14,6 +14,36 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0168 — One-Step Acceptance And Bounded Sequence Approval
+
+Decision:
+
+```text
+ACCEPTED as current-scope complete.
+Approved for next exact bounded implementation task.
+```
+
+Rationale and evidence:
+
+- `12AT` found no blocker in the exact `12AS` closed-loop implementation.
+- All 146 approved tests, compile/diff checks and independent probes pass.
+- A bounded sequence is the smallest material progression that preserves the
+  reviewed decision-training-decision semantics without adding an environment
+  or self-play system.
+
+Consequences:
+
+- Added `12AU` with exact files, seven-symbol API, 1-through-4 hard cap,
+  one-step helper reuse, model continuity, global IDs, output and tests.
+- Zero gates remain before direct code implementation; another docs gate may
+  not intervene.
+- No general environment, episode, replay, self-play, production evaluation,
+  real data, strength claim, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Accepted and approved; direct bounded-sequence implementation is current next.
+
 ## 2026-07-18 — DR-0167 — Exact P8 One-Step Closed-Loop Review Closure
 
 Decision:

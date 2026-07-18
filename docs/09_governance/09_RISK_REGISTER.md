@@ -9,6 +9,16 @@
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
 
+## 2026-07-18 — P8 bounded policy-improvement sequence approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Bounded sequence silently becomes an unbounded trainer, episode or self-play loop. | Governance / Scope | High | Medium | Exact outer tuple and hard 1-through-4 cap are approved; no retry, early stop, environment or episode API is permitted. | Mitigated |
+| Step-to-step model continuity is broken. | Engineering / Correctness | High | Medium | Each reviewed one-step final model must be passed directly to the next call and verified through helper-call tests. | Mitigated |
+| Duplicate candidate records hide cross-step reuse. | Engineering / Correctness | Medium | Medium | All `8 * step_count` candidate-transition IDs must be globally pairwise distinct before success. | Mitigated |
+| Sequence action changes are overclaimed as policy quality or strength evidence. | Evidence / Scope | High | High | Frozen warnings and governance classify this as bounded synthetic/local sequence smoke only. | Open |
+| Another docs chain delays approved code. | Governance / Delivery | High | Medium | `12AU` records zero remaining gates and `10_NEXT` requires direct implementation. | Mitigated |
+
 ## 2026-07-18 — P8 interleaved trace approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

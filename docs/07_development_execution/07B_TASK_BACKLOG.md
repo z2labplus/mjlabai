@@ -2,6 +2,7 @@
 
 | Task | Stage | Priority | Depends on | Acceptance criteria | Status |
 |---|---|---|---|---|---|
+| Implement exact bounded P8 synthetic/local policy-improvement sequence smoke only | 08/09/12 | P0 | `12AU` current-scope acceptance and exact approval | reuse the reviewed one-step closed-loop helper for an exact tuple of 1 through 4 frozen steps; carry final model state, enforce global candidate-transition identity and return frozen ordered history; no general environment/episode, replay, self-play, persistence, production evaluation, real data, broad P8 or P9-P12 | Current next: zero gates remain before code |
 | Run rule-load test | setup | P0 | docs initialized | Codex summarizes rules without modifying files | Done |
 | Apply algorithm racing funnel | 04/05/07 | P0 | rule-load passed | candidate stages and next lowest-cost experiments confirmed | Done |
 | Mortal F1 reproducibility audit | 04/07 | P0 | racing funnel confirmed | install/build, license, minimal run, I/O notes, logging ability checked; no training | Blocked: source/toolchain/model artifact |

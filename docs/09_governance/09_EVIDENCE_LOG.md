@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 one-step acceptance and bounded-sequence approval
+
+- Type: internal current-scope acceptance / exact executable-task approval.
+- Decision: the `12AS` implementation closed by `12AT` is `ACCEPTED as
+  current-scope complete` for its exact synthetic/local scope.
+- `12AU` directly approves an exact 1-through-4-step sequence with reviewed
+  one-step helper reuse, final-model continuity and globally unique candidate
+  transition IDs; no gate remains before code.
+- Basis: 146 approved tests, compile/diff checks and independent probes pass;
+  `12AT` found no blocker.
+- Evidence grade: P8 bounded synthetic/local policy-improvement sequence task-
+  approval evidence only; not environment/self-play, production evaluation,
+  policy-quality, model-strength, Tenhou, stable-dan, LuckyJ or P9-P12 evidence.
+
 ### 2026-07-18 — P8 one-step policy-improvement implementation review closure
 
 - Type: internal exact code-review closure evidence.

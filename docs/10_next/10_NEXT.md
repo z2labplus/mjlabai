@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Decide current-scope acceptance and directly approve or defer exact bounded P8 synthetic/local policy-improvement sequence smoke.
+- [ ] Implement exact bounded P8 synthetic/local policy-improvement sequence smoke only.
 
 Current execution charter:
 
@@ -22,21 +22,22 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Accept or reject only the exact `12AS` implementation review-closed in
-  `12AT`; do not re-review or modify production code/tests.
-- If accepted, make one decision that directly approves or defers one bounded
-  deterministic synthetic/local sequence over an exact tuple of 1 through 4
-  reviewed one-step closed-loop inputs, carrying final model state and global
-  record identity through the reviewed one-step helper.
-- Fix exact hard cap, files, API, input/continuity/output, tests, rollback,
-  stop conditions and evidence grade with zero gates before code. No proposal
-  or sibling boundary may intervene.
-- Do not implement the sequence in this decision. Do not approve a general
-  environment/episode generator, self-play, real/external/platform data,
-  model loading, persistence/checkpoint, CLI/path ingestion, dependency,
-  production evaluation, strength claim, broad P8 or P9-P12.
+- Implement only the exact `12AU` files and seven-symbol public API.
+- Accept one exact initial reviewed linear model and an exact tuple of 1
+  through 4 frozen step inputs. Reuse the reviewed one-step helper exactly once
+  per step, carry its final model into the next step and enforce globally
+  unique candidate-transition IDs.
+- Return only the exact frozen ordered sequence result approved in `12AU` and
+  add the ten focused test categories. Run all 146 approved regressions,
+  focused tests, compile checks and `git diff --check`.
+- Do not add a general environment, episode generator, replay, self-play,
+  stochastic exploration, persistence/checkpoint, path/CLI, dependency,
+  production evaluation, real/external/platform data, strength claim, broad
+  P8 or P9-P12 work.
 
 ## Completed
+
+- [x] 2026-07-18 Accepted the exact `12AS` implementation review-closed in `12AT` as current-scope complete and directly approved the bounded sequence implementation in `12AU`. The next executable task accepts an exact tuple of 1 through 4 frozen step inputs, calls the reviewed one-step helper once per step, carries final model state and enforces global candidate-transition identity. `12AU` fixes exact files, seven-symbol API, inputs, semantics, output, ten test categories and evidence grade; zero gates remain before code. No code, test, fixture/data, general environment/episode, replay, self-play, stochastic exploration, persistence/checkpoint, production evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added by this decision. The next task is direct implementation, not another docs gate.
 
 - [x] 2026-07-18 Reviewed commit `22828c362ba82c12ad113e637b236c3e48de3cd7` against the exact `12AS` approval in `12AT`. Decision: `A. Review can close.` Confirmed exact approved files/API, exact model/probes/two candidate batches, full selected/unselected candidate validation, action binding, eight global IDs, exact decision/training/decision helper order, one selected training epoch, before/after model lineage, selected IDs, deterministic frozen output, stage errors, warnings and forbidden-scope compliance. Ten closed-loop tests and 136 approved regressions pass; compile/diff checks and independent action-0/action-1, helper-order, non-mutation and forbidden-surface probes pass. No production code or test was modified and no blocker was found. The next decision must accept or reject this scope and directly approve or defer one bounded multi-step executable P8 outcome; another fixed one-step wrapper or boundary chain is forbidden.
 

@@ -77,6 +77,7 @@ docs/12_technical_plan/12AQ_P8_LINEAR_MODEL_TRAINING_ACCEPTANCE_AND_GREEDY_DECIS
 docs/12_technical_plan/12AR_P8_LINEAR_GREEDY_DECISION_IMPLEMENTATION_REVIEW.md
 docs/12_technical_plan/12AS_P8_GREEDY_DECISION_ACCEPTANCE_AND_ONE_STEP_POLICY_IMPROVEMENT_APPROVAL.md
 docs/12_technical_plan/12AT_P8_ONE_STEP_POLICY_IMPROVEMENT_IMPLEMENTATION_REVIEW.md
+docs/12_technical_plan/12AU_P8_ONE_STEP_ACCEPTANCE_AND_BOUNDED_POLICY_IMPROVEMENT_SEQUENCE_APPROVAL.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -521,6 +522,14 @@ warnings and forbidden-scope compliance, and reports 146 passing tests plus
 independent action-0/action-1 probes. It is review-closure evidence only, not a
 general environment, self-play, production evaluation, policy-quality,
 model-strength or P9-P12 evidence.
+
+`docs/12_technical_plan/12AU_P8_ONE_STEP_ACCEPTANCE_AND_BOUNDED_POLICY_IMPROVEMENT_SEQUENCE_APPROVAL.md`
+accepts the reviewed one-step closed loop as current-scope complete and
+directly approves one exact 1-through-4-step synthetic/local policy-
+improvement sequence. It fixes step input, helper reuse, model continuity,
+global identity, output, tests and forbidden scope with zero gates before code.
+It is task-approval evidence only, not a general environment, self-play,
+production evaluation, policy-quality, strength or P9-P12 evidence.
 
 ## Supervised-policy files
 

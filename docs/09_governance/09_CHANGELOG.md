@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.83
+
+- Accepted the exact `12AS`/`12AT` one-step closed loop as current-scope
+  complete in `12AU`.
+- Directly approved an exact 1-through-4-step synthetic/local policy-
+  improvement sequence that reuses the reviewed one-step helper, carries model
+  state and enforces global candidate-transition identity.
+- Fixed exact files, seven-symbol API, input/continuity/output boundaries, ten
+  test categories and evidence grade with zero remaining gates before code.
+- New `10_NEXT` first item is direct bounded-sequence implementation; another
+  proposal, boundary or approval gate may not intervene.
+- No code, general environment/episode, self-play, persistence, production
+  evaluation, real/external/platform data, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.82
 
 - Reviewed commit `22828c3` against the exact `12AS` approval in `12AT`.
