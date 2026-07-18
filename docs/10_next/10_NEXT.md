@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Decide current-scope acceptance and directly approve or defer exact P8 synthetic/local linear-model inference and greedy-decision diagnostic.
+- [ ] Implement exact P8 synthetic/local linear-model inference and greedy-decision diagnostic only.
 
 Current execution charter:
 
@@ -22,20 +22,23 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Accept or reject only the exact `12AO` implementation review-closed in
-  `12AP`; do not re-review or modify production code/tests.
-- If accepted, make one decision that directly approves or defers one exact
-  deterministic synthetic/local inference and greedy-decision diagnostic over
-  the fixed linear model. Fix input probes, formulas, tie behavior, files, API,
-  immutable outputs, tests, rollback, stop conditions and evidence grade.
-- This decision must leave zero gates before code if it approves the task; no
-  proposal, sibling boundary or extra review may intervene.
-- Do not implement the inference task in this decision. Do not approve an
-  environment/gameplay, self-play, real/external/platform data, model loading,
-  persistence/checkpoint, CLI/path ingestion, dependency, production
-  evaluation, strength claim, broad P8 or P9-P12.
+- This first training-to-model-output smoke is directly approved by `12AQ`;
+  do not insert another proposal, boundary, review or approval task.
+- Create/modify only `src/mjlabai/rl/__init__.py`,
+  `src/mjlabai/rl/synthetic_linear_greedy_decision_smoke.py`,
+  `tests/rl/test_synthetic_linear_greedy_decision_smoke.py` and direct
+  governance synchronization.
+- Implement the exact six-symbol API, exact three probes, reviewed helper
+  reuse, exact action values, lower-index tie rule, frozen outputs, 11 test
+  categories and evidence grade in `12AQ`.
+- Do not add dynamic model/probes, stochastic action selection, training
+  changes, model loading, persistence/checkpoint, replay/environment/gameplay/
+  self-play, production evaluation, path/CLI, dependency, real/external/
+  platform data, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Accepted the exact `12AO` implementation review-closed in `12AP` as current-scope complete and directly approved the first training-to-model-output smoke in `12AQ`. The selected outcome is a deterministic synthetic/local inference and greedy-decision diagnostic over one frozen fixed linear action-value model and exactly three project-authored probes. `12AQ` fixes the exact files, six-symbol API, probe/provenance boundary, reviewed model/feature/action-value helper reuse, exact lower-index tie rule, output, 11 test categories and evidence grade; zero gates remain before code. No code, test, fixture/data, environment/gameplay, replay, self-play, stochastic selection, model loading, persistence/checkpoint, production inference/evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added in this decision. The next task is direct inference/decision implementation, not another docs gate.
 
 - [x] 2026-07-18 Reviewed commit `870befb7a4e52f3a61af609fdcf9c7ec02302849` against the exact `12AO` approval in `12AP`. Decision: `A. Review can close.` Confirmed exact approved files/API, fixed two-feature/two-action model, exact four safe transitions, source/provenance, 1-through-8 epoch bound, terminal/non-terminal target formulas, selected-action-only parameter updates, deterministic frozen diagnostics, finite-number error normalization, exports, warnings and forbidden-scope compliance. Thirteen model-training tests and 112 approved regressions pass; compile/diff checks and independent one/two/eight-epoch numerical, tuple-subclass, nine-epoch, external-log and non-mutation probes pass. No production code or test was modified and no blocker was found. The next decision must accept or reject this scope and directly approve or defer one materially progressive executable P8 task; another training wrapper or boundary chain is forbidden.
 

@@ -14,6 +14,38 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0162 — Linear Model Acceptance And Greedy Decision Approval
+
+Decision:
+
+```text
+ACCEPTED as current-scope complete.
+Approve direct implementation of one exact synthetic/local fixed linear-model
+inference and deterministic greedy-decision diagnostic.
+```
+
+Rationale and evidence:
+
+- `12AP` closed the linear model-training review with no blocker and 125
+  passing tests.
+- A fixed inference/decision path is the smallest non-repetitive connection
+  from trained parameters to action output.
+- Three exact probes and a lower-index tie rule preserve deterministic,
+  dependency-free synthetic/local scope.
+
+Consequences:
+
+- Added `12AQ` with exact files, API, probes, helper reuse, decision semantics,
+  outputs, tests, stop conditions and evidence grade.
+- Zero mandatory gates remain before inference/decision code.
+- No environment, gameplay, self-play, production inference/evaluation,
+  persistence, real data, strength, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Linear model training accepted; exact greedy-decision implementation is
+current next.
+
 ## 2026-07-18 — DR-0161 — Exact P8 Linear Model Training Review Closure
 
 Decision:

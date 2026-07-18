@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 linear model-training acceptance and greedy-decision approval
+
+- Type: internal current-scope acceptance / exact model-output diagnostic task
+  approval evidence.
+- Decision: the `12AO` implementation closed by `12AP` is `ACCEPTED as
+  current-scope complete` for its exact synthetic/local scope.
+- `12AQ` directly approves fixed-model inference and deterministic greedy
+  decisions over three project-authored synthetic/local probes; no docs gate
+  remains before code.
+- Basis: 125 approved tests, compile/diff checks and independent probes pass;
+  `12AP` found no blocker.
+- Evidence grade: P8 exact synthetic/local greedy-decision task approval
+  evidence only; not environment, self-play, production inference/evaluation,
+  model-strength, Tenhou, stable-dan, LuckyJ or P9-P12 evidence.
+
 ### 2026-07-18 — P8 linear action-value model training review closure
 
 - Type: internal exact code-review closure evidence.

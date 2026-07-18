@@ -73,6 +73,7 @@ docs/12_technical_plan/12AM_P8_TWO_PASS_ACCEPTANCE_AND_BOUNDED_TABULAR_TRAINER_A
 docs/12_technical_plan/12AN_P8_BOUNDED_TABULAR_TRAINER_IMPLEMENTATION_REVIEW.md
 docs/12_technical_plan/12AO_P8_BOUNDED_TRAINER_ACCEPTANCE_AND_LINEAR_ACTION_VALUE_MODEL_TRAINING_APPROVAL_DECISION.md
 docs/12_technical_plan/12AP_P8_LINEAR_ACTION_VALUE_MODEL_TRAINING_IMPLEMENTATION_REVIEW.md
+docs/12_technical_plan/12AQ_P8_LINEAR_MODEL_TRAINING_ACCEPTANCE_AND_GREEDY_DECISION_APPROVAL.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -484,6 +485,14 @@ selected-action updates, frozen diagnostics, errors, exports, warnings and
 forbidden-scope compliance, and reports 125 passing tests plus independent
 numerical probes. It is review-closure evidence only, not environment,
 self-play, production model training, model-strength or P9-P12 evidence.
+
+`docs/12_technical_plan/12AQ_P8_LINEAR_MODEL_TRAINING_ACCEPTANCE_AND_GREEDY_DECISION_APPROVAL.md`
+accepts the reviewed fixed linear model training as current-scope complete and
+directly approves one exact synthetic/local inference and deterministic greedy-
+decision diagnostic. It fixes three probes, helper reuse, action-value and tie
+semantics, files, API, output, tests and forbidden scope with zero gates before
+code. It is task-approval evidence only, not environment, self-play,
+production inference/evaluation, strength or P9-P12 evidence.
 
 ## Supervised-policy files
 

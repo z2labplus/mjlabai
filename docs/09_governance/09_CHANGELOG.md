@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.77
+
+- Accepted the exact `12AO`/`12AP` linear model training as current-scope
+  complete in `12AQ`.
+- Directly approved the first training-to-model-output smoke: fixed linear-
+  model inference and deterministic greedy decisions over three synthetic/
+  local probes.
+- Fixed exact files, six-symbol API, provenance, reviewed helper reuse, action-
+  value/tie semantics, output, tests, stop conditions and evidence grade.
+- Set remaining mandatory gates before code to zero; `10_NEXT` now requires
+  direct inference/decision implementation.
+- No code, environment/gameplay, replay, self-play, model loading, persistence,
+  real/external/platform data, production evaluation, broad P8 or P9-P12 work
+  was added in this decision.
+
 ## 2026-07-18 - v3.76
 
 - Reviewed commit `870befb` against the exact `12AO` approval in `12AP`.

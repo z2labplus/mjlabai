@@ -75,6 +75,16 @@
 | Successful review creates another training wrapper or planning chain. | Governance / Delivery | High | Medium | `10_NEXT` requires current-scope acceptance plus direct inference/decision approval or deferment; sibling boundaries are forbidden. | Mitigated |
 | Narrow tests miss formula or numerical drift. | Engineering / Quality | Medium | Low | Review reruns all 125 approved tests plus exact one/two/eight-epoch parameter/loss and adversarial provenance/type probes. | Mitigated |
 
+## 2026-07-18 — P8 linear-model greedy-decision approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Diagnostic silently becomes generic production inference or gameplay. | Governance / Scope | High | Medium | `12AQ` fixes one model, exactly three probes, two actions and three exact source/test files; environment/gameplay/model loading are forbidden. | Open |
+| Action-value formula diverges from reviewed training semantics. | Engineering / Correctness | High | Medium | New module must call reviewed model/feature/action-value helpers; focused tests reject formula copies and verify helper calls. | Open |
+| Tie or action ordering is ambiguous. | Engineering / Correctness | Medium | Medium | `12AQ` fixes action tuple `(0,1)` and lower-index action 0 on exact equality; focused tests cover ties. | Open |
+| Greedy decisions are overclaimed as policy quality or strength evidence. | Evidence / Scope | High | High | Fixed warnings and evidence grade explicitly exclude production evaluation, policy quality and strength claims. | Open |
+| Another docs chain delays approved inference code. | Governance / Delivery | High | Medium | `12AQ` records zero remaining gates and puts direct implementation first in `10_NEXT`. | Mitigated |
+
 ## 2026-07-18 — P8 two-step sequence implementation review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
