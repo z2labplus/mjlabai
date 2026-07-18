@@ -8,6 +8,17 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 numeric-conversion blocker fix
+
+- Type: internal executable / exact blocker-resolution evidence.
+- Changed only the approved source/test files plus direct governance sync.
+- Former `10**10000` probe now raises `SyntheticPolicyUpdateSmokeError` rather
+  than raw `OverflowError`.
+- Validation: 12 focused tests plus 46 approved regression tests passed;
+  `git diff --check` passed.
+- Evidence grade: P8 synthetic/local numerical policy-update blocker-fix
+  evidence only; re-review is still required and no strength claim is allowed.
+
 ### 2026-07-18 — P8 minimal policy-update implementation review
 
 - Type: internal code-review / blocker evidence.

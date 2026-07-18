@@ -155,6 +155,17 @@ class SyntheticPolicyUpdateSmokeTests(unittest.TestCase):
                 discount_factor=1.0,
             )
 
+    def test_non_float_representable_real_uses_validation_error(self) -> None:
+        with self.assertRaisesRegex(
+            SyntheticPolicyUpdateSmokeError,
+            "current_action_value must be representable as a finite float",
+        ):
+            apply_synthetic_policy_update_smoke(
+                _record(current_action_value=10**10000),
+                learning_rate=0.5,
+                discount_factor=0.9,
+            )
+
     def test_terminal_next_value_consistency_is_enforced(self) -> None:
         cases = (
             _record(next_max_action_value=1.0),

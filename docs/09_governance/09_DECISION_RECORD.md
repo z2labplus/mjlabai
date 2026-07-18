@@ -39,7 +39,7 @@ Consequences:
 
 Status:
 
-Open blocker; exact two-file fix is first in `10_NEXT`.
+Exact two-file fix implemented; re-review in `12AD` is first in `10_NEXT`.
 
 ## 2026-07-18 — DR-0141 — Exact Minimal P8 Policy-Update Smoke Implemented
 

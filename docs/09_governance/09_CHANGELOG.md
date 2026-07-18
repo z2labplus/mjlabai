@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.57
+
+- Fixed the exact numeric-conversion blocker identified by `12AD`.
+- `_finite_real` now normalizes float-conversion `OverflowError` to
+  `SyntheticPolicyUpdateSmokeError`.
+- Added exact `10**10000` regression coverage; the focused suite now has 12
+  tests and the approved regression set still has 46, all 58 passing.
+- Preserved formulas, dataclass fields, public API, warnings, evidence grade
+  and synthetic/local scope.
+- New `10_NEXT` first item is re-review in the existing `12AD` record.
+- No fixture/data, dependency, environment, self-play, model, training/
+  evaluation, real/external/platform data, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.56
 
 - Reviewed the exact minimal P8 synthetic/local policy-update smoke in `12AD`.

@@ -199,7 +199,12 @@ def _finite_real(name: str, value: object) -> float:
         raise SyntheticPolicyUpdateSmokeError(
             f"{name} must be a finite real number excluding bool"
         )
-    numeric_value = float(value)
+    try:
+        numeric_value = float(value)
+    except OverflowError as exc:
+        raise SyntheticPolicyUpdateSmokeError(
+            f"{name} must be representable as a finite float"
+        ) from exc
     if not math.isfinite(numeric_value):
         raise SyntheticPolicyUpdateSmokeError(f"{name} must be finite")
     return numeric_value

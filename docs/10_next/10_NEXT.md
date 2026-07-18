@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Fix P8 policy-update smoke numeric-conversion error normalization and add exact regression coverage.
+- [ ] Re-run exact minimal P8 synthetic/local policy-update smoke implementation review after numeric-conversion blocker fix.
 
 Current execution charter:
 
@@ -22,20 +22,23 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Modify only `src/mjlabai/rl/synthetic_policy_update_smoke.py`,
-  `tests/rl/test_synthetic_policy_update_smoke.py` and direct docs/governance
-  synchronization.
-- Normalize float-conversion overflow from finite but non-float-representable
-  `Real` values to `SyntheticPolicyUpdateSmokeError`.
-- Add exact regression coverage for the current `10**10000` failure and keep
-  all existing focused and approved regression tests passing.
-- Do not change formulas, dataclass fields, public API, warnings, evidence
-  grade or synthetic/local scope.
+- Re-review only `src/mjlabai/rl/synthetic_policy_update_smoke.py`,
+  `tests/rl/test_synthetic_policy_update_smoke.py`, the exact `12AC` approval
+  and the existing `12AD` review record.
+- Confirm the former `10**10000` probe now raises
+  `SyntheticPolicyUpdateSmokeError`, focused tests total 12 and all 46
+  approved regression tests still pass.
+- Confirm formulas, dataclass fields, public API, warnings, evidence grade and
+  synthetic/local scope remain unchanged.
+- Do not create another review/boundary document. Update `12AD` with the
+  re-review decision.
 - Do not add fixtures/data, dependencies, batch/episode/environment/self-play,
   models, optimizers, training/evaluation, paths/CLI, real/external/platform
   data, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Fixed the exact `12AD` numeric-conversion blocker in `src/mjlabai/rl/synthetic_policy_update_smoke.py` and added regression coverage in `tests/rl/test_synthetic_policy_update_smoke.py`. `_finite_real` now normalizes float-conversion overflow to `SyntheticPolicyUpdateSmokeError`; the `10**10000` probe returns that approved exception instead of raw `OverflowError`. The focused suite now runs 12 tests, the six approved regression modules run 46 tests, all 58 tests pass, and `git diff --check` passes. No formula, dataclass field, public API, warning, evidence grade or scope changed. No fixture/data, dependency, environment, self-play, model, training/evaluation, path/CLI, real/external/platform data, broad P8 or P9-P12 work was added. The next task is an exact re-review in the existing `12AD` record.
 
 - [x] 2026-07-18 Reviewed the exact minimal P8 synthetic/local policy-update smoke implementation in `12AD`. Formula, API, approved-file, provenance, deterministic-output and forbidden-scope checks passed; 11 focused tests plus 46 approved regression tests passed. Decision: `B. Review cannot close because blockers exist.` An adversarial in-memory `10**10000` input exposed raw `OverflowError` during `float(value)` instead of the approved `SyntheticPolicyUpdateSmokeError`. No production code or test was modified in this review. The next task is the exact two-file numeric-conversion error-normalization fix; no sibling boundary, broad P8, training, self-play, model, real data or P9-P12 work is allowed.
 

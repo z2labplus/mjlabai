@@ -46,6 +46,24 @@ B. Review cannot close because blockers exist.
 |---|---|---|---|---|---:|
 | Numeric validation error normalization | Finite but non-float-representable `Real` input leaks `OverflowError` instead of `SyntheticPolicyUpdateSmokeError`. | `_finite_real` and focused numeric validation tests | Normalize float-conversion overflow to `SyntheticPolicyUpdateSmokeError` and add exact regression coverage without changing formulas or public API. | Medium | yes |
 
+## Blocker-Fix Implementation Status
+
+The exact fix is now implemented, pending the separate re-review required by
+`10_NEXT`:
+
+- `_finite_real` catches float-conversion `OverflowError` and raises
+  `SyntheticPolicyUpdateSmokeError` with the original exception chained.
+- `test_non_float_representable_real_uses_validation_error` covers
+  `current_action_value=10**10000`.
+- the former probe now returns the approved validation exception.
+- 12 focused tests and 46 approved regression tests pass; `git diff --check`
+  passes.
+- no formula, dataclass field, public API, warning, evidence grade or scope
+  changed.
+
+This status records implementation evidence only. It does not replace the
+required re-review decision and does not yet close the review blocker.
+
 ## Validation Evidence
 
 The approved commands passed before the adversarial probe:
@@ -65,7 +83,7 @@ int too large to convert to float
 No real/external/platform data, model, environment, self-play, training,
 evaluation or artifact was used by the probe.
 
-## Exact Next Task
+## Exact Fix Task Completed
 
 ```text
 Fix P8 policy-update smoke numeric-conversion error normalization and add exact regression coverage.
@@ -81,6 +99,16 @@ It must not change the formula, dataclass fields, public API, evidence grade or
 scope. It must not add a fixture, dependency, batch/episode/environment,
 self-play, model, training/evaluation, path/CLI, real/external/platform data or
 P9-P12 work.
+
+## Current Re-review Task
+
+```text
+Re-run exact minimal P8 synthetic/local policy-update smoke implementation review after numeric-conversion blocker fix.
+```
+
+The re-review must update this document rather than create another review
+document. It must confirm the exception type, 58 passing tests and unchanged
+formula/API/provenance/output/evidence scope before closing the blocker.
 
 ## Evidence Grade
 

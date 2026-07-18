@@ -373,10 +373,10 @@ model/artifact use, real data, strength evidence, broad P8 or P9-P12 approval.
 `docs/12_technical_plan/12AD_P8_MINIMAL_SYNTHETIC_LOCAL_POLICY_UPDATE_SMOKE_IMPLEMENTATION_REVIEW.md`
 reviews the exact `12AC` implementation and records `B. Review cannot close
 because blockers exist.` Formula, API, file and scope boundaries conform, but
-a finite non-float-representable `Real` leaks raw `OverflowError` during
-numeric conversion. The next task is one exact source/test fix. This is
-implementation-review evidence only, not training, self-play, model-strength
-or P9-P12 evidence.
+a finite non-float-representable `Real` leaked raw `OverflowError` during
+numeric conversion. The exact source/test fix is implemented and awaiting
+re-review in the same `12AD` record. This is implementation-review and blocker-
+fix evidence only, not training, self-play, model-strength or P9-P12 evidence.
 
 ## Supervised-policy files
 
