@@ -28,7 +28,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 exact minimal synthetic/local policy-update smoke re-review after blocker fix.
+P8 current-scope acceptance and next exact executable-task decision.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
@@ -124,7 +124,9 @@ validation boundaries, and records the user-authorized P8-E15 transition.
 The exact implementation exists in the three `12AC`-approved files and passes
 11 focused tests plus 46 approved P6/P7 regression tests. `12AD` reviews it
 and finds one raw `OverflowError` normalization blocker. The exact source/test
-fix now passes 58 tests; the next first task is re-review in `12AD`. Broad
+fix now passes 58 tests; `12AD` records `A. Review can close after blocker
+fix.` The next first task is current-scope acceptance and one exact executable-
+task decision. Broad
 P8, production training/evaluation, self-play, model/artifact use, real data,
 strength claims and P9-P12 remain unapproved.
 
@@ -618,8 +620,8 @@ P8 model / artifact provenance manifest boundary = defined in `12AA` and
 reviewed in `12AB`; review can close with no genuine blocker.
 P8 exact minimal synthetic/local policy-update smoke = implemented in the
 three `12AC`-approved source/test files; the `12AD` numeric-conversion blocker
-fix is implemented and 58 approved tests pass.
-Next = re-run the exact review in `12AD`; no new review document or planning chain.
+fix is implemented, 58 tests pass and `12AD` review is closed.
+Next = decide current-scope acceptance and exactly bound one next executable P8 task; no sibling boundary chain.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -753,7 +755,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Re-run exact minimal P8 synthetic/local policy-update smoke implementation review after numeric-conversion blocker fix.
+Decide current-scope acceptance and next exact executable P8 task after policy-update smoke review closure.
 ```
 
 `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`
@@ -787,7 +789,8 @@ boundary. `12AB` reviews it, records `A. Review can close`, finds no genuine
 blocker and leaves `12AA` unchanged. `12AC` approves exactly one deterministic
 CPU-only synthetic/local policy-update smoke. `12AD` reviews the implementation
 and finds one exact numeric-conversion error-normalization blocker. The fix is
-implemented; the next task is direct re-review in `12AD`. The approval does not cover broad P8, model loading, source/
+implemented and re-review closes in `12AD`; the next task is current-scope
+acceptance and one exact executable-task decision. The approval does not cover broad P8, model loading, source/
 real-data work, datasets, production training/evaluation, model-output
 integration, self-play/RL/league, P9-P12 or model-strength claims.
 

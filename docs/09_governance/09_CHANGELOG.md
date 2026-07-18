@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.58
+
+- Re-ran the P8 minimal policy-update implementation review in existing `12AD`.
+- Decision: `A. Review can close after blocker fix.`
+- Confirmed the former probe returns `SyntheticPolicyUpdateSmokeError` with
+  `OverflowError` chained, all 58 tests pass and API/formula/scope is unchanged.
+- New `10_NEXT` first item is current-scope acceptance and selection of one
+  exact next executable P8 task, not another sibling boundary.
+- No code, test, fixture/data, dependency, environment, self-play, model,
+  training/evaluation, real/external/platform data, broad P8 or P9-P12 work was
+  added in this re-review.
+
 ## 2026-07-18 - v3.57
 
 - Fixed the exact numeric-conversion blocker identified by `12AD`.

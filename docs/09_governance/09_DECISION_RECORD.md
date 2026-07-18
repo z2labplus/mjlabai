@@ -14,6 +14,34 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0143 — Minimal P8 Policy-Update Re-review Closure
+
+Decision:
+
+```text
+A. Review can close after blocker fix.
+```
+
+Rationale and evidence:
+
+- The former conversion probe now returns `SyntheticPolicyUpdateSmokeError`
+  with the original `OverflowError` chained.
+- All 58 tests pass; public API, dataclass fields, formulas and scope remain
+  exactly within `12AC`.
+
+Consequences:
+
+- Updated existing `12AD`; no second review document was created.
+- The numeric-conversion blocker is closed.
+- Next is current-scope acceptance and one exact executable-task decision,
+  not another planning boundary.
+- No broad P8, self-play, training, model, real-data, strength or P9-P12
+  approval follows from this review.
+
+Status:
+
+Exact implementation review closed; current-scope acceptance decision is next.
+
 ## 2026-07-18 — DR-0142 — Minimal P8 Policy-Update Implementation Review Blocked
 
 Decision:
@@ -39,7 +67,7 @@ Consequences:
 
 Status:
 
-Exact two-file fix implemented; re-review in `12AD` is first in `10_NEXT`.
+Closed by DR-0143 after exact fix and passing re-review.
 
 ## 2026-07-18 — DR-0141 — Exact Minimal P8 Policy-Update Smoke Implemented
 

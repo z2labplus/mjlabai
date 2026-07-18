@@ -8,6 +8,17 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 policy-update implementation re-review after blocker fix
+
+- Type: internal code-review closure evidence.
+- Updated existing `12AD`; no new review document was created.
+- Decision: `A. Review can close after blocker fix.`
+- Evidence: former probe returns the approved validation error with cause
+  chained; 12 focused plus 46 regression tests pass; API/formula/scope remains
+  exact.
+- Evidence grade: P8 exact synthetic/local numerical policy-update
+  implementation review closure evidence only; not strength evidence.
+
 ### 2026-07-18 — P8 numeric-conversion blocker fix
 
 - Type: internal executable / exact blocker-resolution evidence.

@@ -2,7 +2,7 @@
 
 ## Current stage
 
-P8 exact minimal synthetic/local policy-update smoke re-review after blocker fix.
+P8 current-scope acceptance and next exact executable-task decision.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -77,8 +77,10 @@ update and three exact source/test files. That implementation is complete with
 11 focused tests and 46 approved regression tests passing. `12AD` reviews it
 and records one blocker: raw `OverflowError` leaked for finite but non-float-
 representable `Real` input. The exact source/test fix now normalizes the error,
-adds regression coverage and passes 58 tests. The current first task is
-re-review in the existing `12AD` record. Production code
+adds regression coverage and passes 58 tests. The same `12AD` record now
+records `A. Review can close after blocker fix.` The current first task is
+current-scope acceptance and one exact next executable-task decision.
+Production code
 outside that exact approval, fixtures, data files, manifest schemas/loaders/
 artifacts, source approval,
 source ingestion, broad
@@ -388,8 +390,8 @@ P6 implementation = closed except for separately approved future tasks
 P8 model-output interface dependency boundary = defined in `12W` and reviewed in `12X`; review can close
 P8 training / evaluation model-use boundary = defined in `12Y` and reviewed in `12Z`; review can close
 P8 model / artifact provenance manifest boundary = defined in `12AA` and reviewed in `12AB`; review can close
-P8 exact minimal synthetic/local policy-update smoke = implemented; the `12AD` numeric-conversion blocker fix is implemented and passes 58 tests
-Next = re-run the exact review in `12AD`; no new review document or planning chain
+P8 exact minimal synthetic/local policy-update smoke = implemented and review-closed in `12AD`; 58 tests pass
+Next = decide current-scope acceptance and exactly bound one next executable P8 task; no sibling boundary chain
 ```
 
 ## AI role
@@ -398,9 +400,9 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Re-review only the numeric-conversion fix identified by `12AD` in the approved
-P8 synthetic/local policy-update source/test files. Confirm the exact formula,
-provenance, output, API and evidence boundaries remain intact. Broad P8,
+Decide current-scope acceptance for the review-closed `12AC` implementation and
+exactly bound one materially progressive executable P8 task or its direct
+approval decision. Do not create another sibling boundary chain. Broad P8,
 source/real-data work,
 datasets, production training/evaluation, self-play/league, model/artifact use,
 model-output integration, CLI, P9-P12 and strength claims remain unapproved.

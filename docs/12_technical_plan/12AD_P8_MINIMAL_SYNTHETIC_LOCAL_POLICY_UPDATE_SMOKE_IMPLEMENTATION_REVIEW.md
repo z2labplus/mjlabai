@@ -110,6 +110,34 @@ The re-review must update this document rather than create another review
 document. It must confirm the exception type, 58 passing tests and unchanged
 formula/API/provenance/output/evidence scope before closing the blocker.
 
+## Re-review After Blocker Fix
+
+Re-reviewed fix commit `70893079addb91b97f241fc9ed583d97ddadadd7`.
+
+Confirmed:
+
+- the former `10**10000` probe raises `SyntheticPolicyUpdateSmokeError` and
+  chains the original `OverflowError` as its cause.
+- the focused P8 module runs 12 tests and all pass.
+- the six approved P6/P7 regression modules run 46 tests and all pass.
+- all 58 tests and `git diff --check` pass.
+- public exports, input/result dataclass fields and function signature remain
+  exactly within `12AC`.
+- target, TD-error and updated-value formulas are unchanged.
+- no fixture/data, dependency, path/CLI, environment, episode, self-play,
+  model, optimizer, training/evaluation, real/external/platform data, broad P8
+  or P9-P12 work was added.
+
+Re-review decision:
+
+```text
+A. Review can close after blocker fix.
+```
+
+The numeric-conversion blocker is closed. This closes only the exact
+implementation review; it does not accept broader P8, approve self-play or
+training, or provide model-strength evidence.
+
 ## Evidence Grade
 
 ```text

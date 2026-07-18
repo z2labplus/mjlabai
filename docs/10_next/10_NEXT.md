@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Re-run exact minimal P8 synthetic/local policy-update smoke implementation review after numeric-conversion blocker fix.
+- [ ] Decide current-scope acceptance and next exact executable P8 task after policy-update smoke review closure.
 
 Current execution charter:
 
@@ -22,21 +22,21 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Re-review only `src/mjlabai/rl/synthetic_policy_update_smoke.py`,
-  `tests/rl/test_synthetic_policy_update_smoke.py`, the exact `12AC` approval
-  and the existing `12AD` review record.
-- Confirm the former `10**10000` probe now raises
-  `SyntheticPolicyUpdateSmokeError`, focused tests total 12 and all 46
-  approved regression tests still pass.
-- Confirm formulas, dataclass fields, public API, warnings, evidence grade and
-  synthetic/local scope remain unchanged.
-- Do not create another review/boundary document. Update `12AD` with the
-  re-review decision.
-- Do not add fixtures/data, dependencies, batch/episode/environment/self-play,
-  models, optimizers, training/evaluation, paths/CLI, real/external/platform
-  data, broad P8 or P9-P12.
+- Decide whether the exact `12AC` implementation, closed by `12AD` re-review,
+  is accepted as current-scope complete.
+- If accepted, select and exactly bound one next executable P8 task or its
+  direct approval decision. Do not start another sibling boundary chain.
+- The next executable outcome must build materially beyond one isolated update
+  while remaining deterministic, standard-library and synthetic/local only.
+- Record exact files, behavior, tests, rollback, stop conditions and evidence
+  grade before any next code task becomes executable.
+- Do not implement code in this decision task. Do not approve real data,
+  environment/gameplay, self-play, model/optimizer, production training,
+  evaluation, artifacts, paths/CLI, dependencies, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Re-ran the exact minimal P8 synthetic/local policy-update implementation review in the existing `12AD` record after the numeric-conversion fix. Decision: `A. Review can close after blocker fix.` The former `10**10000` probe raises `SyntheticPolicyUpdateSmokeError` with `OverflowError` chained; 12 focused tests and 46 approved regression tests all pass; public API, dataclass fields, formulas, warnings, evidence grade and scope remain unchanged. No new review document, production code, fixture/data, dependency, environment, self-play, model, training/evaluation, real/external/platform data, broad P8 or P9-P12 work was added. The next task is a current-scope acceptance and exact next executable-task decision, not another boundary chain.
 
 - [x] 2026-07-18 Fixed the exact `12AD` numeric-conversion blocker in `src/mjlabai/rl/synthetic_policy_update_smoke.py` and added regression coverage in `tests/rl/test_synthetic_policy_update_smoke.py`. `_finite_real` now normalizes float-conversion overflow to `SyntheticPolicyUpdateSmokeError`; the `10**10000` probe returns that approved exception instead of raw `OverflowError`. The focused suite now runs 12 tests, the six approved regression modules run 46 tests, all 58 tests pass, and `git diff --check` passes. No formula, dataclass field, public API, warning, evidence grade or scope changed. No fixture/data, dependency, environment, self-play, model, training/evaluation, path/CLI, real/external/platform data, broad P8 or P9-P12 work was added. The next task is an exact re-review in the existing `12AD` record.
 
