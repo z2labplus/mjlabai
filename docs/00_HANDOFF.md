@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is review of the exact minimal P8 synthetic/local fixed
-two-key policy-value table update smoke implemented under `12AI`:
+Current active stage is current-scope acceptance and direct next-executable-
+task decision after the exact P8 fixed policy-table review closure:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -155,9 +155,11 @@ and tests unchanged. `12AI` accepts that exact scope as current-scope complete
 and directly approves one fixed two-entry in-memory policy-value table update
 that reuses the reviewed trace helper. That implementation now exists in the
 three approved source/test files, calls the trace helper exactly once and
-passes 11 focused table tests plus 79 approved regressions. The first
-`10_NEXT` item is one exact code review; another sibling proposal or boundary
-is forbidden. Broad P8 entry, production
+passes 11 focused table tests plus 79 approved regressions. `12AJ` reviews the
+implementation, records `A. Review can close`, finds no blocker and leaves code
+and tests unchanged. The first `10_NEXT` item must accept or reject that exact
+scope and, if accepted, directly bind one materially progressive executable
+P8 task; another sibling proposal or boundary is forbidden. Broad P8 entry, production
 training/evaluation, self-play, model/artifact use, real data, strength claims
 and P9-P12 remain unapproved.
 

@@ -2,8 +2,8 @@
 
 ## Current stage
 
-P8 exact minimal synthetic/local fixed two-key policy-value table update smoke
-implementation review.
+P8 exact fixed policy-value table update current-scope acceptance and direct
+next-executable-task decision.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -93,8 +93,9 @@ finds no blocker. `12AI` accepts that exact scope as current-scope complete and
 directly approves one fixed two-entry in-memory policy-value table update smoke
 that reuses the trace helper. That exact implementation is complete in the
 approved module/export/test files and 90 approved tests pass. The current first
-task is one exact code review; no sibling boundary, proposal or approval may
-precede it.
+task is now current-scope acceptance after `12AJ` records `A. Review can close`
+with no blocker. If accepted, it must directly bind one next executable P8
+task; no sibling boundary or proposal may precede it.
 Production code
 outside that exact approval, fixtures, data files, manifest schemas/loaders/
 artifacts, source approval,
@@ -413,7 +414,8 @@ P8 exact four-record interleaved trace smoke = implemented in the three `12AG`-a
 P8 exact four-record interleaved trace implementation review = closed in `12AH`; no blocker
 P8 exact interleaved trace scope = accepted as current-scope complete in `12AI`
 P8 exact fixed two-key policy-value table update smoke = implemented in the three `12AI`-approved files; 90 tests pass
-Next = review the exact `12AI` table-update implementation; no sibling boundary chain
+P8 exact fixed policy-table implementation review = closed in `12AJ`; no blocker
+Next = decide current-scope acceptance and directly approve one exact executable P8 task if accepted
 ```
 
 ## AI role
@@ -422,11 +424,11 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Review the exact `12AI`-approved fixed two-key in-memory policy-value table
-update smoke implementation. Confirm trace-helper reuse, exact table/trace key
-and initial-value binding, normalized frozen outputs, error chains, public
-exports, warnings and 90 passing tests; modify code/tests only if a genuine
-blocker is found. Broad P8, source/real-data work,
+Accept or reject only the exact `12AI` implementation review-closed in `12AJ`.
+If accepted, directly define one materially progressive executable P8 task
+with exact behavior, files, tests, rollback, stop conditions and evidence
+grade; do not add a sibling boundary or modify code/tests in this decision.
+Broad P8, source/real-data work,
 datasets, production training/evaluation, self-play/league, model/artifact use,
 model-output integration, CLI, P9-P12 and strength claims remain unapproved.
 

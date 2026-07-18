@@ -14,6 +14,35 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0152 — Exact P8 Fixed Policy-Table Review Closure
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Rationale and evidence:
+
+- Commit `27a1ad9` conforms to every exact `12AI` file, API, input, key/value,
+  output, test and forbidden-scope requirement.
+- The implementation calls the reviewed trace helper exactly once and does
+  not duplicate update formulas or trace logic.
+- All 90 approved tests, compile/diff checks and independent probes pass.
+- No correctness, scope, provenance, evidence or test blocker was found.
+
+Consequences:
+
+- Added `12AJ` as the one exact implementation review.
+- The next task is current-scope acceptance and direct approval of one next
+  executable P8 task; no sibling proposal or boundary may intervene.
+- No environment, self-play, model, production training/evaluation, real data,
+  strength claim, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Review closed; current-scope acceptance and exact next-task decision is next.
+
 ## 2026-07-18 — DR-0151 — Exact P8 Fixed Policy-Table Smoke Implemented
 
 Decision:

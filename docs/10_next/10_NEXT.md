@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review exact minimal P8 synthetic/local fixed two-key policy-value table update smoke implementation.
+- [ ] Decide current-scope acceptance and directly approve next exact executable P8 task after fixed policy-table review closure.
 
 Current execution charter:
 
@@ -22,22 +22,20 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the exact implementation in `src/mjlabai/rl/__init__.py`,
-  `src/mjlabai/rl/synthetic_policy_table_update_smoke.py` and
-  `tests/rl/test_synthetic_policy_table_update_smoke.py` against `12AI`.
-- Confirm exact tuple/entry/field checks, A/B key and initial-value binding,
-  exactly one reviewed trace-helper call, frozen normalized entries, error
-  chaining, public exports, warnings and forbidden-scope compliance.
-- Re-run the 11 table tests and 79 approved regressions. Do not modify
-  production code or tests unless a genuine blocker is found and recorded as
-  one exact fix task.
-- Do not insert a sibling boundary/proposal or add variable/mutable tables,
-  mappings, batch/epoch/trainer, persistence, fixture/data, replay buffer,
-  path/CLI, dependency, environment/gameplay, self-play, model/optimizer,
-  production training/evaluation, artifact, real/external/platform data,
-  broad P8 or P9-P12.
+- Accept or reject only the exact `12AI` implementation reviewed and closed in
+  `12AJ`.
+- If accepted, directly bind one materially progressive executable P8 task
+  with exact behavior, files, tests, rollback, stop conditions and evidence
+  grade. One decision gate remains before that code.
+- Do not add a sibling boundary/proposal or repeat the reviewed table. Do not
+  modify production code/tests or add persistence, fixture/data, replay
+  buffer, path/CLI, dependency, environment/gameplay, self-play,
+  model/optimizer, production training/evaluation, artifact,
+  real/external/platform data, broad P8 or P9-P12 in this decision.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `27a1ad9b52627934781f8c0a1a8850692a5c679d` against the exact `12AI` approval in `12AJ`. Decision: `A. Review can close.` Confirmed exact approved files and five-symbol API, exact two-entry tuple and field types, reviewed trace input, A/B key and initial-value binding, exactly one trace-helper call, no duplicated formula/trace logic, trace-error chaining, deterministic normalized frozen outputs, package exports, warnings and forbidden-scope compliance. Eleven table tests and 79 approved regressions all pass; compile/diff checks and independent in-memory probes pass. No production code or test was modified and no blocker was found. The next task is current-scope acceptance plus direct approval of one materially progressive executable P8 task, not another sibling boundary.
 
 - [x] 2026-07-18 Implemented the exact `12AI`-approved fixed two-key P8 synthetic/local policy-value table update smoke. Added `src/mjlabai/rl/synthetic_policy_table_update_smoke.py`, exported its five approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_policy_table_update_smoke.py`. The frozen helper accepts only an exact two-entry tuple plus the exact reviewed four-record trace input, validates exact entry types/fields, A/B key order and initial values, delegates numerical work exactly once to the trace helper, and returns two newly normalized frozen final entries. Eleven focused table tests and 79 approved regressions all pass; compile and diff checks pass. No variable/mutable table, mapping, persistence, batch/epoch/trainer, fixture/data, replay buffer, environment, self-play, model/optimizer, production training/evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is synthetic/local table-state smoke evidence only, not model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 

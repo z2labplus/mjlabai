@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.67
+
+- Reviewed commit `27a1ad9` against the exact `12AI` approval in `12AJ`.
+- Decision: `A. Review can close.` No blocker or code/test fix is required.
+- Confirmed exact file/API/entry/trace/key/value/helper-reuse/error-chain/
+  output/export/warning and forbidden-scope compliance.
+- Validation passed: 11 table tests, 79 approved regressions, compile/diff
+  checks and independent in-memory probes.
+- New `10_NEXT` first item is current-scope acceptance plus direct approval of
+  one next executable P8 task, not another sibling boundary.
+- No production code, test, persistence, fixture/data, environment, self-play,
+  model, training/evaluation, real/external/platform data, broad P8 or P9-P12
+  work was added in this review.
+
 ## 2026-07-18 - v3.66
 
 - Implemented the exact `12AI` fixed two-key synthetic/local policy-value
