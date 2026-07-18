@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review exact minimal P8 synthetic/local policy-update smoke implementation.
+- [ ] Fix P8 policy-update smoke numeric-conversion error normalization and add exact regression coverage.
 
 Current execution charter:
 
@@ -22,22 +22,22 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the three exact implementation/test files approved by `12AC`
-  against its formula, API, validation, provenance, output and evidence
-  boundaries.
-- Re-run the focused RL test and approved P6/P7 regression commands.
-- Do not add another sibling boundary, proposal or approval document.
-- Do not expand into fixtures/data, batch/episode/environment/self-play,
-  action selection, models, optimizers, training loops, evaluation, artifacts,
-  paths/CLI, new dependencies, real/external/platform data or P9-P12.
-- If a blocker exists, record the exact finding and set an exact fix task. If
-  none exists, close this implementation review and select one concrete P8
-  execution/acceptance decision rather than another planning chain.
-- Keep the evidence grade at P8 synthetic/local numerical policy-update smoke
-  evidence only. Make no model-strength, Tenhou ranked, stable-dan, LuckyJ or
-  candidate-promotion claim.
+- Modify only `src/mjlabai/rl/synthetic_policy_update_smoke.py`,
+  `tests/rl/test_synthetic_policy_update_smoke.py` and direct docs/governance
+  synchronization.
+- Normalize float-conversion overflow from finite but non-float-representable
+  `Real` values to `SyntheticPolicyUpdateSmokeError`.
+- Add exact regression coverage for the current `10**10000` failure and keep
+  all existing focused and approved regression tests passing.
+- Do not change formulas, dataclass fields, public API, warnings, evidence
+  grade or synthetic/local scope.
+- Do not add fixtures/data, dependencies, batch/episode/environment/self-play,
+  models, optimizers, training/evaluation, paths/CLI, real/external/platform
+  data, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed the exact minimal P8 synthetic/local policy-update smoke implementation in `12AD`. Formula, API, approved-file, provenance, deterministic-output and forbidden-scope checks passed; 11 focused tests plus 46 approved regression tests passed. Decision: `B. Review cannot close because blockers exist.` An adversarial in-memory `10**10000` input exposed raw `OverflowError` during `float(value)` instead of the approved `SyntheticPolicyUpdateSmokeError`. No production code or test was modified in this review. The next task is the exact two-file numeric-conversion error-normalization fix; no sibling boundary, broad P8, training, self-play, model, real data or P9-P12 work is allowed.
 
 - [x] 2026-07-18 Implemented the exact minimal P8 synthetic/local policy-update smoke approved by `12AC`: added `src/mjlabai/rl/__init__.py`, `src/mjlabai/rl/synthetic_policy_update_smoke.py` and `tests/rl/test_synthetic_policy_update_smoke.py`. The standard-library helper performs one deterministic terminal or non-terminal tabular action-value update over one immutable, already-loaded project-authored synthetic/local record; validates finite numbers, parameter ranges, identifier tokens, terminal consistency and exact provenance guardrails; and returns only approved diagnostics, an all-safe summary, evidence grade and warnings. The focused suite ran 11 tests and the six approved P6/P7 regression modules ran 46 tests, all passing; `git diff --check` passed. No fixture/data, environment, episode, self-play, action selection, model, optimizer, training loop, evaluation, artifact, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is executable numerical smoke evidence only, not model-strength evidence. The next task is `Review exact minimal P8 synthetic/local policy-update smoke implementation.`
 

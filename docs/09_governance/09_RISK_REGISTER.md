@@ -17,6 +17,7 @@
 | A one-record update is mistaken for a production training system. | Evidence / Scope | High | High | Module/result warnings and governance records explicitly deny environment, episode, self-play, model, optimizer, training-loop and strength semantics. | Open |
 | The implementation mutates input or becomes nondeterministic. | Engineering / Reproducibility | Medium | Low | Frozen dataclasses plus repeated-call equality and immutability tests. | Mitigated |
 | Code review expands into another long docs-only planning chain. | Governance / Delivery | High | Medium | `10_NEXT` permits one exact implementation review and requires an execution/acceptance decision when no blocker exists. | Open |
+| Finite but non-float-representable numeric input leaks a raw built-in exception. | Engineering / API | Medium | Low | `12AD` records the reproduced blocker; next task is limited to normalizing conversion overflow and adding one regression test. | Open |
 
 ## 2026-07-18 — P8 minimal policy-update smoke approval risks
 

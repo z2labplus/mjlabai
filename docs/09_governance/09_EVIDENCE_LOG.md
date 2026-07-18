@@ -8,6 +8,18 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 minimal policy-update implementation review
+
+- Type: internal code-review / blocker evidence.
+- Added `12AD` and reviewed commit `a7c83d578edba433f54b12c091d148e908f08573`.
+- Decision: `B. Review cannot close because blockers exist.`
+- Conforming evidence: 11 focused plus 46 regression tests pass; formula, API,
+  approved-file, provenance, output and forbidden-scope checks conform.
+- Blocker evidence: in-memory `10**10000` input leaks raw `OverflowError` from
+  float conversion instead of `SyntheticPolicyUpdateSmokeError`.
+- Evidence grade: P8 exact synthetic/local numerical policy-update
+  implementation review evidence only; not strength or ranked evidence.
+
 ### 2026-07-18 — P8 minimal synthetic/local policy-update smoke implementation
 
 - Type: internal executable / synthetic numerical smoke evidence.

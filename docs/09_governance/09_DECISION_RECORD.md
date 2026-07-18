@@ -14,6 +14,33 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0142 — Minimal P8 Policy-Update Implementation Review Blocked
+
+Decision:
+
+```text
+B. Review cannot close because blockers exist.
+```
+
+Context and rationale:
+
+- The exact `12AC` implementation conforms on formula, API, files, provenance,
+  output and forbidden scope, and 57 approved tests pass.
+- A finite but non-float-representable `Real` leaks raw `OverflowError` instead
+  of the approved `SyntheticPolicyUpdateSmokeError` validation surface.
+
+Consequences:
+
+- Added `12AD` as the single implementation review.
+- The next task is limited to error normalization and exact regression coverage
+  in the already approved source/test files.
+- No sibling boundary, broad P8, training, self-play, model, real data,
+  strength claim or P9-P12 expansion is approved.
+
+Status:
+
+Open blocker; exact two-file fix is first in `10_NEXT`.
+
 ## 2026-07-18 — DR-0141 — Exact Minimal P8 Policy-Update Smoke Implemented
 
 Decision:

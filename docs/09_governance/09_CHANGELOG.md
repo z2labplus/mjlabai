@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.56
+
+- Reviewed the exact minimal P8 synthetic/local policy-update smoke in `12AD`.
+- Decision: `B. Review cannot close because blockers exist.`
+- Confirmed formula, API, file, provenance, determinism, output and forbidden-
+  scope compliance; 57 approved tests pass.
+- Found one exact blocker: `10**10000` leaks raw `OverflowError` during numeric
+  conversion instead of `SyntheticPolicyUpdateSmokeError`.
+- New `10_NEXT` first item is the exact source/test error-normalization fix.
+- No production code, test, fixture/data, model, self-play, training/evaluation,
+  real/external/platform data, broad P8 or P9-P12 work was added in this review.
+
 ## 2026-07-18 - v3.55
 
 - Implemented the exact minimal P8 synthetic/local policy-update smoke

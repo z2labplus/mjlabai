@@ -60,6 +60,7 @@ docs/12_technical_plan/12Z_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_REVIEW_BEFO
 docs/12_technical_plan/12AA_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12AB_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12AC_P8_MINIMAL_SYNTHETIC_LOCAL_POLICY_UPDATE_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md
+docs/12_technical_plan/12AD_P8_MINIMAL_SYNTHETIC_LOCAL_POLICY_UPDATE_SMOKE_IMPLEMENTATION_REVIEW.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -368,6 +369,14 @@ value update. It names the exact future source/test files, formula, input,
 output, validation, rollback, stop and evidence boundaries. It is approval-
 decision evidence only, not implementation, production training, self-play,
 model/artifact use, real data, strength evidence, broad P8 or P9-P12 approval.
+
+`docs/12_technical_plan/12AD_P8_MINIMAL_SYNTHETIC_LOCAL_POLICY_UPDATE_SMOKE_IMPLEMENTATION_REVIEW.md`
+reviews the exact `12AC` implementation and records `B. Review cannot close
+because blockers exist.` Formula, API, file and scope boundaries conform, but
+a finite non-float-representable `Real` leaks raw `OverflowError` during
+numeric conversion. The next task is one exact source/test fix. This is
+implementation-review evidence only, not training, self-play, model-strength
+or P9-P12 evidence.
 
 ## Supervised-policy files
 
