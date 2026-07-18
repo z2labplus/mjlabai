@@ -68,6 +68,11 @@ bounded algorithm diagnostic rather than extend the rate list.
 Approval status: `04AA` leaves zero gates before modifying the existing two
 files. Combined probe values are fixed evidence targets, not selection criteria.
 
+Implementation status: exact training invariants and complete 32-seed
+zero-update diagnostics are now pinned in the existing source/tests. The
+observed larger-rate degradation and smaller-rate behavioral insensitivity are
+evidence, not an approved rate choice. One exact review is next.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

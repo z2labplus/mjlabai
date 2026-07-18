@@ -70,7 +70,7 @@ class MahJaxCategoricalMlpLearningRateComparisonSmokeTests(unittest.TestCase):
         )
         self.assertEqual(
             MAHJAX_CATEGORICAL_MLP_LEARNING_RATE_EVALUATION_SEEDS,
-            tuple(range(20, 36)),
+            tuple(range(20, 52)),
         )
         self.assertEqual(
             tuple(branch.learning_rate for branch in self.result.branches),
@@ -138,17 +138,17 @@ class MahJaxCategoricalMlpLearningRateComparisonSmokeTests(unittest.TestCase):
                 self.assertAlmostEqual(actual, expected, places=5)
 
     def test_fixed_evaluation_records_exact_step_size_sensitivity(self) -> None:
-        self.assertEqual(self.result.initial_project_raw_sum, -320.0)
+        self.assertEqual(self.result.initial_project_raw_sum, -501.0)
         self.assertEqual(
             tuple(branch.project_raw_sum for branch in self.result.branches),
-            (-454.0, -454.0, -320.0, -320.0),
+            (-650.0, -635.0, -501.0, -501.0),
         )
         self.assertEqual(
             tuple(
                 branch.changed_from_initial_evaluation_seeds
                 for branch in self.result.branches
             ),
-            ((32,), (32,), (), ()),
+            ((32, 39, 43, 44, 50), (32, 39, 44, 50), (), ()),
         )
         self.assertEqual(
             tuple(branch.positive_round_count for branch in self.result.branches),
@@ -156,9 +156,9 @@ class MahJaxCategoricalMlpLearningRateComparisonSmokeTests(unittest.TestCase):
         )
         self.assertEqual(
             tuple(branch.negative_round_count for branch in self.result.branches),
-            (9, 9, 8, 8),
+            (18, 17, 16, 16),
         )
-        self.assertTrue(self.result.larger_rate_evaluation_identity)
+        self.assertFalse(self.result.larger_rate_evaluation_identity)
         self.assertTrue(self.result.smaller_rate_initial_behavior_identity)
 
     def test_small_rates_preserve_behavior_but_not_parameters(self) -> None:
@@ -183,7 +183,7 @@ class MahJaxCategoricalMlpLearningRateComparisonSmokeTests(unittest.TestCase):
         self.assertTrue(self.result.branch_final_parameters_distinct)
         for branch in self.result.branches:
             self.assertEqual(len(branch.initial_objectives), 5)
-            self.assertEqual(len(branch.evaluation_project_action_traces), 16)
+            self.assertEqual(len(branch.evaluation_project_action_traces), 32)
 
     def test_wraps_imitation_training_failure(self) -> None:
         with patch.object(
@@ -205,7 +205,8 @@ class MahJaxCategoricalMlpLearningRateComparisonSmokeTests(unittest.TestCase):
         )
         warning_text = " ".join(self.result.warnings).lower()
         for phrase in (
-            "project sums are -454, -454, -320 and -320 against initial -320",
+            "32-seed project sums are -650, -635, -501 and -501 against initial -501",
+            "rates 0.01 and 0.005 no longer have identical fixed evaluation behavior",
             "smaller rates change parameters but leave fixed greedy behavior unchanged",
             "no rate is ranked, selected, promoted or approved for scale-up",
             "unchanged behavior is not improvement or policy-quality evidence",

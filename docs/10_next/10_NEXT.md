@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Expand the exact MahJax categorical-MLP fixed learning-rate evaluation to seeds `20..51`.
+- [ ] Review the exact MahJax categorical-MLP 32-seed fixed learning-rate evaluation implementation.
 
 Current execution charter:
 
@@ -22,21 +22,33 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Modify only the existing learning-rate comparison source and test plus direct
-  governance synchronization; add no new source/test file or public symbol.
-- Preserve exact rates/order, identical initial parameters, training seeds
-  `(1,3,5,7,11)`, five legal updates, objectives and parameter diagnostics.
-- Set evaluation seeds to exact `tuple(range(20, 52))`; evaluate initial and all
-  four branches with zero updates and identical environment/rule RNG.
-- Pin full traces/scores/rewards and combined initial/rate sums
-  `-501/-650/-635/-501/-501`; pin changed seeds
+- Review exact commit/files against `04AA`; change source/tests only for a
+  concrete blocker and add no sibling proposal or boundary.
+- Verify unchanged seven-symbol API, rates/order, initial arrays, training
+  seeds/trajectories, five updates, objectives and parameter deltas.
+- Verify exact evaluation seeds `20..51`, zero evaluation updates, identical
+  RNG/participants and full transition/action/reward/score pinning.
+- Verify sums `-501/-650/-635/-501/-501`, positives `1/0/0/1/1`, negatives
+  `16/18/17/16/16` and changed seeds
   `(32,39,43,44,50)/(32,39,44,50)/()/()`.
-- Preserve frozen array-free output, no selected-rate field and warnings that
-  unchanged behavior is not improvement or policy quality.
-- No extra rate, estimator, update, adaptive tuning, scale-up, persistence,
-  real data, production self-play/evaluation, strength claim or P9-P12.
+- Verify larger-rate behavior distinction, smaller-rate initial identity,
+  frozen array-free output and explicit non-selection/non-strength wording.
+- Closure must directly choose or defer a material algorithm/evidence task;
+  no new rate/sweep, scale-up, real data, production evaluation or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Implemented the exact `04AA`-approved evaluation-breadth
+  extension in the existing source/test only. Exact rates, identical initial
+  arrays, training seeds `(1,3,5,7,11)`, five updates, trajectories,
+  objectives and parameter deltas are unchanged. Zero-update evaluation now
+  covers exact seeds `20..51`; complete diagnostics pin initial/rate sums
+  `-501/-650/-635/-501/-501`, positive counts `1/0/0/1/1`, negative counts
+  `16/18/17/16/16` and changed seeds
+  `(32,39,43,44,50)/(32,39,44,50)/()/()`. Nine focused and all 450 explicit
+  repository tests pass with two existing skips. No rate was selected; no
+  extra sweep, scale-up, persistence, real data, production evaluation,
+  strength claim or P9-P12 work was added. One exact review is next.
 
 - [x] 2026-07-19 Reviewed commit `41b98d3` against exact `04Z` approval in
   `04AA`. Decision: `A. Review can close.` Confirmed exact seven-symbol API,

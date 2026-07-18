@@ -309,6 +309,13 @@ identity and produce combined sums `-501/-650/-635/-501/-501`. This is review
 and bounded evaluation-breadth approval evidence, not rate selection,
 improvement, robust evaluation or strength evidence.
 
+That exact `04AA` task is now implemented in the existing learning-rate source
+and test. The public surface and five-update training contract are unchanged;
+fixed evaluation now covers seeds `20..51` and pins complete diagnostics plus
+combined sums `-501/-650/-635/-501/-501`. One exact review is next. This is
+bounded deterministic evaluation-breadth evidence, not rate selection, robust
+evaluation, improvement or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

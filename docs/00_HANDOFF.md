@@ -27,16 +27,18 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the `04AA`-approved fixed
-evaluation-breadth extension in the existing learning-rate comparison source
-and test. Training remains exact rates `(0.01,0.005,0.001,0.0001)`, seeds
-`(1,3,5,7,11)` and five updates per branch; only zero-update evaluation expands
-from seeds `20..35` to `20..51`. Independent probes pin combined initial/rate
-sums `-501/-650/-635/-501/-501` and changed seeds
-`(32,39,43,44,50)/(32,39,44,50)/()/()`. `04AA` reviewed commit `41b98d3`,
-recorded `A. Review can close` and left zero gates before code. This is bounded
-local P8 sensitivity/evaluation-breadth evidence, not rate selection, robust
-evaluation, production evaluation, improvement or strength:
+Current active stage is one exact code review of the implemented `04AA` fixed
+evaluation-breadth extension. The existing learning-rate source/test preserve
+rates `(0.01,0.005,0.001,0.0001)`, train seeds `(1,3,5,7,11)`, five updates,
+objectives and parameter deltas; zero-update evaluation now covers exact seeds
+`20..51`. Nine focused and all 450 explicit repository tests pass with two
+existing skips and pin initial/rate sums
+`-501/-650/-635/-501/-501`, positive counts `1/0/0/1/1`, negative counts
+`16/18/17/16/16` and changed seeds
+`(32,39,43,44,50)/(32,39,44,50)/()/()`. One exact review must directly make a
+material algorithm/evidence decision, not add rates or planning. This is
+bounded local P8 sensitivity/evaluation-breadth evidence, not rate selection,
+robust evaluation, production evaluation, improvement or strength:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

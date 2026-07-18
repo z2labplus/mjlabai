@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Executable 32-seed fixed learning-rate evaluation breadth
+
+- Type: executable P8 local fixed evaluation-breadth diagnostic evidence.
+- Exact existing branches retain rates/training/updates and receive zero-update
+  mixed-policy evaluation on disjoint seeds `20..51`.
+- Complete deterministic diagnostics pin initial/rate sums
+  `-501/-650/-635/-501/-501`, positives `1/0/0/1/1`, negatives
+  `16/18/17/16/16` and changed seeds
+  `(32,39,43,44,50)/(32,39,44,50)/()/()`.
+- Validation: nine focused and all 450 explicit repository tests pass with two
+  existing skips; compile, dependency and diff checks pass.
+- Evidence grade: bounded deterministic evaluation breadth only; not rate
+  selection, improvement, robust evaluation, strength or promotion evidence.
+
 ### 2026-07-19 — Learning-rate comparison review and evaluation-breadth probe
 
 - Type: exact code-review closure plus bounded fixed-evaluation expansion

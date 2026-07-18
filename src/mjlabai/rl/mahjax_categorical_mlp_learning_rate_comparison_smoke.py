@@ -23,7 +23,6 @@ from mjlabai.rl.mahjax_categorical_mlp_all_project_policy_gradient_smoke import 
     _seat_decision_counts,
 )
 from mjlabai.rl.mahjax_categorical_mlp_five_round_training_evaluation_smoke import (
-    MAHJAX_CATEGORICAL_MLP_FIXED_EVALUATION_SEEDS,
     MAHJAX_CATEGORICAL_MLP_FIVE_ROUND_TRAINING_SEEDS,
     _EXPECTED_EVALUATION_SCORES_AFTER,
     _EXPECTED_EVALUATION_SCORES_BEFORE,
@@ -43,9 +42,7 @@ from mjlabai.rl.mahjax_categorical_mlp_five_round_training_evaluation_smoke impo
     _EXPECTED_TRAINING_FINAL_SCORES,
     _EXPECTED_TRAINING_SEAT_COUNTS,
     _EXPECTED_TRAINING_TRANSITION_COUNTS,
-)
-from mjlabai.rl.mahjax_categorical_mlp_return_estimator_comparison_smoke import (
-    _evaluate_parameters,
+    _collect_mixed_policy_evaluation_round,
 )
 from mjlabai.supervised.mahjax_categorical_mlp_imitation_training_smoke import (
     MahJaxCategoricalMlpImitationResult,
@@ -61,8 +58,152 @@ MAHJAX_CATEGORICAL_MLP_COMPARISON_LEARNING_RATES = (0.01, 0.005, 0.001, 0.0001)
 MAHJAX_CATEGORICAL_MLP_LEARNING_RATE_TRAINING_SEEDS = (
     MAHJAX_CATEGORICAL_MLP_FIVE_ROUND_TRAINING_SEEDS
 )
-MAHJAX_CATEGORICAL_MLP_LEARNING_RATE_EVALUATION_SEEDS = (
-    MAHJAX_CATEGORICAL_MLP_FIXED_EVALUATION_SEEDS
+MAHJAX_CATEGORICAL_MLP_LEARNING_RATE_EVALUATION_SEEDS = tuple(range(20, 52))
+
+
+def _replace_expected_items(values, replacements):
+    result = list(values)
+    for index, replacement in replacements.items():
+        result[index] = replacement
+    return tuple(result)
+
+
+_EXPECTED_EXTRA_EVALUATION_TRANSITIONS_BEFORE = (
+    85,
+    63,
+    59,
+    73,
+    92,
+    51,
+    85,
+    91,
+    83,
+    88,
+    21,
+    83,
+    87,
+    62,
+    68,
+    61,
+)
+_EXPECTED_EXTRA_EVALUATION_TRANSITIONS_LARGER = _replace_expected_items(
+    _EXPECTED_EXTRA_EVALUATION_TRANSITIONS_BEFORE,
+    {3: 72, 8: 84},
+)
+_EXPECTED_EXTRA_PROJECT_TRACES_BEFORE = (
+    (28, 29, 27, 30, 31, 33, 32, 32, 31, 8, 84, 84, 17, 84, 71, 71, 71, 71, 84, 71, 84, 26, 84, 0),
+    (28, 31, 33, 84, 71, 8, 8, 71, 71, 84, 71, 84, 71, 71, 84, 71),
+    (28, 30, 84, 32, 33, 71, 84, 71, 71, 84, 71, 17, 26, 71),
+    (29, 27, 31, 71, 84, 0, 84, 9, 84, 71, 17, 71, 71, 71, 71, 71, 71, 71),
+    (33, 33, 8, 71, 71, 71, 71, 71, 71, 71, 84, 71, 71, 84, 71, 71, 71, 10, 84, 16),
+    (32, 71, 71, 0, 8, 9, 18, 84, 29, 28, 84, 71, 17),
+    (28, 29, 27, 30, 32, 33, 71, 18, 71, 8, 84, 9, 28, 30, 84, 26, 2, 71, 1, 84, 71),
+    (8, 0, 71, 84, 18, 71, 84, 71, 71, 71, 71, 84, 71, 71, 71, 84, 71, 71, 84, 71, 71, 71, 71),
+    (28, 30, 84, 31, 28, 8, 71, 71, 9, 71, 0, 33, 84, 32, 10, 71, 71, 84, 71, 84, 10),
+    (28, 27, 30, 32, 8, 71, 71, 71, 84, 71, 84, 26, 71, 71, 84, 71, 71, 84, 71, 84, 10, 84, 84, 71, 71),
+    (29, 27, 27, 30),
+    (28, 30, 30, 18, 71, 71, 71, 9, 17, 71, 71, 17, 71, 84, 71, 71, 71, 71),
+    (27, 8, 71, 0, 18, 71, 10, 71, 84, 71, 84, 71, 71, 71, 84, 71, 71, 84, 71, 84, 71, 71),
+    (29, 30, 31, 71, 71, 0, 71, 9, 84, 71, 71, 71, 84, 71, 71),
+    (28, 28, 27, 31, 31, 27, 84, 32, 71, 71, 71, 71, 84, 18, 71, 71),
+    (29, 30, 33, 84, 18, 31, 71, 71, 84, 26, 84, 71, 71, 71),
+)
+_EXPECTED_EXTRA_PROJECT_TRACES_RATE_01 = _replace_expected_items(
+    _EXPECTED_EXTRA_PROJECT_TRACES_BEFORE,
+    {
+        3: (29, 27, 31, 71, 84, 0, 84, 9, 84, 71, 17, 71, 71, 71, 71, 19, 71, 71),
+        7: (8, 0, 71, 84, 18, 71, 84, 71, 71, 71, 71, 84, 71, 71, 71, 84, 71, 1, 71, 71, 71, 71),
+        8: (28, 30, 84, 31, 28, 8, 0, 71, 71, 71, 9, 33, 84, 32, 10, 71, 71, 84, 71, 84, 10),
+        14: (28, 28, 27, 31, 31, 27, 84, 32, 18, 71, 71, 71, 84, 10, 71, 71),
+    },
+)
+_EXPECTED_EXTRA_PROJECT_TRACES_RATE_005 = _replace_expected_items(
+    _EXPECTED_EXTRA_PROJECT_TRACES_BEFORE,
+    {
+        3: (29, 27, 31, 71, 84, 0, 84, 9, 84, 71, 17, 71, 71, 71, 71, 19, 71, 71),
+        8: (28, 30, 84, 31, 28, 8, 0, 71, 71, 71, 9, 71, 84, 33, 71, 71, 71, 84, 71, 84, 10),
+        14: (28, 28, 27, 31, 31, 27, 84, 32, 18, 71, 71, 71, 84, 10, 71, 71),
+    },
+)
+_EXPECTED_EXTRA_PROJECT_REWARDS_BEFORE = (
+    -15.0,
+    0.0,
+    -20.0,
+    0.0,
+    0.0,
+    -39.0,
+    -15.0,
+    0.0,
+    -15.0,
+    0.0,
+    0.0,
+    -10.0,
+    -15.0,
+    -52.0,
+    0.0,
+    0.0,
+)
+_EXPECTED_EXTRA_PROJECT_REWARDS_RATE_01 = _replace_expected_items(
+    _EXPECTED_EXTRA_PROJECT_REWARDS_BEFORE,
+    {7: -15.0},
+)
+_EXPECTED_EXTRA_EVALUATION_SCORES_BEFORE = (
+    (235, 255, 235, 255),
+    (250, 308, 192, 250),
+    (230, 320, 220, 230),
+    (250, 250, 130, 370),
+    (250, 250, 250, 250),
+    (211, 250, 250, 289),
+    (235, 235, 255, 255),
+    (250, 250, 250, 250),
+    (235, 235, 265, 255),
+    (250, 250, 250, 250),
+    (250, 276, 250, 224),
+    (240, 240, 270, 240),
+    (235, 235, 255, 255),
+    (198, 312, 250, 240),
+    (250, 322, 188, 240),
+    (250, 370, 250, 130),
+)
+_EXPECTED_EXTRA_EVALUATION_SCORES_RATE_01 = _replace_expected_items(
+    _EXPECTED_EXTRA_EVALUATION_SCORES_BEFORE,
+    {7: (235, 255, 265, 235)},
+)
+
+_EXPECTED_EXPANDED_EVALUATION_TRANSITIONS_BEFORE = (
+    _EXPECTED_EVALUATION_TRANSITIONS_BEFORE
+    + _EXPECTED_EXTRA_EVALUATION_TRANSITIONS_BEFORE
+)
+_EXPECTED_EXPANDED_EVALUATION_TRANSITIONS_LARGER = (
+    _EXPECTED_EVALUATION_TRANSITIONS_AFTER
+    + _EXPECTED_EXTRA_EVALUATION_TRANSITIONS_LARGER
+)
+_EXPECTED_EXPANDED_PROJECT_TRACES_BEFORE = (
+    _EXPECTED_PROJECT_TRACES_BEFORE + _EXPECTED_EXTRA_PROJECT_TRACES_BEFORE
+)
+_EXPECTED_EXPANDED_PROJECT_TRACES_RATE_01 = (
+    _EXPECTED_PROJECT_TRACES_AFTER + _EXPECTED_EXTRA_PROJECT_TRACES_RATE_01
+)
+_EXPECTED_EXPANDED_PROJECT_TRACES_RATE_005 = (
+    _EXPECTED_PROJECT_TRACES_AFTER + _EXPECTED_EXTRA_PROJECT_TRACES_RATE_005
+)
+_EXPECTED_EXPANDED_PROJECT_REWARDS_BEFORE = (
+    _EXPECTED_PROJECT_REWARDS_BEFORE + _EXPECTED_EXTRA_PROJECT_REWARDS_BEFORE
+)
+_EXPECTED_EXPANDED_PROJECT_REWARDS_RATE_01 = (
+    _EXPECTED_PROJECT_REWARDS_AFTER + _EXPECTED_EXTRA_PROJECT_REWARDS_RATE_01
+)
+_EXPECTED_EXPANDED_PROJECT_REWARDS_RATE_005 = (
+    _EXPECTED_PROJECT_REWARDS_AFTER + _EXPECTED_EXTRA_PROJECT_REWARDS_BEFORE
+)
+_EXPECTED_EXPANDED_EVALUATION_SCORES_BEFORE = (
+    _EXPECTED_EVALUATION_SCORES_BEFORE + _EXPECTED_EXTRA_EVALUATION_SCORES_BEFORE
+)
+_EXPECTED_EXPANDED_EVALUATION_SCORES_RATE_01 = (
+    _EXPECTED_EVALUATION_SCORES_AFTER + _EXPECTED_EXTRA_EVALUATION_SCORES_RATE_01
+)
+_EXPECTED_EXPANDED_EVALUATION_SCORES_RATE_005 = (
+    _EXPECTED_EVALUATION_SCORES_AFTER + _EXPECTED_EXTRA_EVALUATION_SCORES_BEFORE
 )
 
 _EXPECTED_RATE_005_INITIAL_OBJECTIVES = (
@@ -154,7 +295,8 @@ _WARNINGS = (
     "rates are predeclared 0.01, 0.005, 0.001 and 0.0001",
     "all branches start from identical reviewed imitation parameters",
     "all fixed evaluation paths perform zero gradient updates",
-    "project sums are -454, -454, -320 and -320 against initial -320",
+    "32-seed project sums are -650, -635, -501 and -501 against initial -501",
+    "rates 0.01 and 0.005 no longer have identical fixed evaluation behavior",
     "smaller rates change parameters but leave fixed greedy behavior unchanged",
     "unchanged behavior is not improvement or policy-quality evidence",
     "no rate is ranked, selected, promoted or approved for scale-up",
@@ -276,6 +418,28 @@ def _apply_variable_rate_raw_return_update(
             float(jnp.linalg.norm(updated - initial))
             for initial, updated in zip(parameters, updated_parameters)
         ),
+    )
+
+
+def _evaluate_parameters(
+    parameters,
+    environment,
+    step_fn,
+    rule_policy_fn,
+    jax,
+    jnp,
+):
+    return tuple(
+        _collect_mixed_policy_evaluation_round(
+            seed,
+            parameters,
+            environment,
+            step_fn,
+            rule_policy_fn,
+            jax,
+            jnp,
+        )
+        for seed in MAHJAX_CATEGORICAL_MLP_LEARNING_RATE_EVALUATION_SEEDS
     )
 
 
@@ -434,17 +598,23 @@ def _train_and_evaluate_rate(
         )
         if initial_item != rate_item
     )
-    if learning_rate in (0.01, 0.005):
-        expected_transitions = _EXPECTED_EVALUATION_TRANSITIONS_AFTER
-        expected_traces = _EXPECTED_PROJECT_TRACES_AFTER
-        expected_rewards = _EXPECTED_PROJECT_REWARDS_AFTER
-        expected_scores = _EXPECTED_EVALUATION_SCORES_AFTER
-        expected_changed = (32,)
+    if learning_rate == 0.01:
+        expected_transitions = _EXPECTED_EXPANDED_EVALUATION_TRANSITIONS_LARGER
+        expected_traces = _EXPECTED_EXPANDED_PROJECT_TRACES_RATE_01
+        expected_rewards = _EXPECTED_EXPANDED_PROJECT_REWARDS_RATE_01
+        expected_scores = _EXPECTED_EXPANDED_EVALUATION_SCORES_RATE_01
+        expected_changed = (32, 39, 43, 44, 50)
+    elif learning_rate == 0.005:
+        expected_transitions = _EXPECTED_EXPANDED_EVALUATION_TRANSITIONS_LARGER
+        expected_traces = _EXPECTED_EXPANDED_PROJECT_TRACES_RATE_005
+        expected_rewards = _EXPECTED_EXPANDED_PROJECT_REWARDS_RATE_005
+        expected_scores = _EXPECTED_EXPANDED_EVALUATION_SCORES_RATE_005
+        expected_changed = (32, 39, 44, 50)
     else:
-        expected_transitions = _EXPECTED_EVALUATION_TRANSITIONS_BEFORE
-        expected_traces = _EXPECTED_PROJECT_TRACES_BEFORE
-        expected_rewards = _EXPECTED_PROJECT_REWARDS_BEFORE
-        expected_scores = _EXPECTED_EVALUATION_SCORES_BEFORE
+        expected_transitions = _EXPECTED_EXPANDED_EVALUATION_TRANSITIONS_BEFORE
+        expected_traces = _EXPECTED_EXPANDED_PROJECT_TRACES_BEFORE
+        expected_rewards = _EXPECTED_EXPANDED_PROJECT_REWARDS_BEFORE
+        expected_scores = _EXPECTED_EXPANDED_EVALUATION_SCORES_BEFORE
         expected_changed = ()
     if (
         evaluation_transitions != expected_transitions
@@ -542,11 +712,11 @@ def run_mahjax_categorical_mlp_learning_rate_comparison_smoke(
     )
     initial_scores = tuple(item.final_scores for item in initial_evaluation)
     if (
-        initial_transitions != _EXPECTED_EVALUATION_TRANSITIONS_BEFORE
-        or initial_traces != _EXPECTED_PROJECT_TRACES_BEFORE
-        or initial_rewards != _EXPECTED_PROJECT_REWARDS_BEFORE
-        or initial_scores != _EXPECTED_EVALUATION_SCORES_BEFORE
-        or sum(initial_rewards) != -320.0
+        initial_transitions != _EXPECTED_EXPANDED_EVALUATION_TRANSITIONS_BEFORE
+        or initial_traces != _EXPECTED_EXPANDED_PROJECT_TRACES_BEFORE
+        or initial_rewards != _EXPECTED_EXPANDED_PROJECT_REWARDS_BEFORE
+        or initial_scores != _EXPECTED_EXPANDED_EVALUATION_SCORES_BEFORE
+        or sum(initial_rewards) != -501.0
     ):
         raise MahJaxCategoricalMlpLearningRateComparisonSmokeError(
             "initial fixed evaluation differs from the probe"
@@ -625,7 +795,7 @@ def run_mahjax_categorical_mlp_learning_rate_comparison_smoke(
             initial_identical,
             pairwise_distinct,
             all_changed,
-            larger_identity,
+            not larger_identity,
             smaller_initial_identity,
             disjoint,
         )

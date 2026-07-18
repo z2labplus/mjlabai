@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.27
+
+- Implemented the exact `04AA` fixed evaluation-breadth extension in the
+  existing learning-rate comparison source and test only.
+- Preserved the seven-symbol public API, exact four rates, five training seeds,
+  five updates, trajectories, objectives and parameter deltas.
+- Expanded zero-update evaluation to exact seeds `20..51`; complete traces,
+  rewards and scores pin sums `-501/-650/-635/-501/-501` and changed seeds
+  `(32,39,43,44,50)/(32,39,44,50)/()/()`.
+- Nine focused and all 450 explicit repository tests pass with two existing
+  skips; compile, dependency and diff checks pass. No rate selection, extra
+  sweep, scale-up, persistence, real data, production evaluation, strength
+  claim or P9-P12 work was added.
+
 ## 2026-07-19 - v4.26
 
 - Added `04AA`; reviewed commit `41b98d3` against exact `04Z` approval.

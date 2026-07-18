@@ -28,16 +28,17 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 direct implementation of the `04AA`-approved categorical-MLP learning-rate
-fixed-evaluation extension. Four independent branches keep exact rates
+P8 exact code review of the implemented `04AA` categorical-MLP learning-rate
+fixed-evaluation extension. Four independent branches retain exact rates
 `(0.01,0.005,0.001,0.0001)`, training seeds `(1,3,5,7,11)`, five legal updates
-and reviewed objectives; only zero-update evaluation expands from seeds
-`20..35` to exact `20..51`. Independent probes pin combined initial/rate sums
-`-501/-650/-635/-501/-501` and changed seeds
-`(32,39,43,44,50)/(32,39,44,50)/()/()`. `04AA` reviewed `41b98d3`, recorded
-`A. Review can close` and left zero gates before this exact two-file code task.
-This is bounded sensitivity/evaluation-breadth evidence, not rate selection,
-robust evaluation, production evaluation, improvement or strength.
+and reviewed objectives; zero-update evaluation now covers seeds `20..51`.
+Nine focused and all 450 explicit repository tests pass with two existing skips
+and pin combined initial/rate sums
+`-501/-650/-635/-501/-501`, positive/negative counts and changed seeds
+`(32,39,43,44,50)/(32,39,44,50)/()/()`. Review closure must directly make a
+material algorithm/evidence decision, not add rates or planning. This is
+bounded sensitivity/evaluation-breadth evidence, not rate selection, robust
+evaluation, production evaluation, improvement or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
