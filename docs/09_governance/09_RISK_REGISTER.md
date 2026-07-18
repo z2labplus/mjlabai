@@ -19,6 +19,17 @@
 | Two losses or parameter changes are mislabeled improvement or strength. | Evidence / Scope | Critical | High | Frozen evidence grade and warnings deny improvement, evaluation, self-play strength, stable-dan and LuckyJ claims. | Open |
 | A successful review restarts documentation instead of progressing execution. | Governance / Delivery | High | Medium | Exactly one review is next; closure must directly approve/defer a material executable P8 task or record a genuine blocker. | Mitigated |
 
+## 2026-07-18 — P8 two-project-seat shared-policy update approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Four project seats generate zero raw rewards and a no-op update. | ML / Signal | High | Realized | Seeds `0..15` were probed and all were zero; defer that path and approve the nonzero two-project/two-rule seed-0 bridge instead. | Mitigated |
+| Shared-project objective attributes the wrong seat return to a decision. | ML / Credit assignment | Critical | Medium | Record every project actor and index exact cumulative raw return by actor for each selected log probability; pin both project returns and source formula. | Open |
+| Rule-seat actions accidentally enter the project gradient batch. | Engineering / Correctness | Critical | Low | Store project features/masks/actions only inside the `(0,2)` branch; full policy trace and counts must prove 44 project versus 48 rule actions. | Open |
+| Mid-round or per-seat updates violate on-policy collection. | ML / Correctness | High | Low | Collect one terminal round first, then execute exactly one shared update; AST/source tests forbid update inside the environment loop. | Open |
+| Partial self-play bridge is mislabeled production self-play strength. | Evidence / Scope | Critical | High | Fixed evidence grade and warnings identify two-project/two-rule bridge only and deny improvement/evaluation/stable-dan/LuckyJ claims. | Open |
+| Approval triggers another planning chain instead of code. | Governance / Delivery | High | Medium | `04T` leaves zero gates and `10_NEXT` requires direct implementation. | Mitigated |
+
 ## 2026-07-18 — P4 bounded MahJax rollout implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

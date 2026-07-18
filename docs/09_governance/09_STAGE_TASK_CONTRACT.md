@@ -2,12 +2,13 @@
 
 ## Current stage
 
-P8 exact implementation review of the completed `04S`-approved MahJax two-
-round sequential on-policy raw-outcome training smoke: fixed seeds `(1,5)`,
-direct parameter continuity and exactly two updates against fixed rule
-opponents. The implementation and 384-test repository regression pass; one
-review must now close or identify a concrete blocker, then directly approve or
-defer material P8 execution rather than create another documentation chain.
+P8 direct implementation of the exact `04T`-approved MahJax two-project-seat
+shared-policy raw-outcome update smoke: seed `0`, shared project parameters in
+seats `(0,2)`, fixed bundled rule policies in seats `(1,3)`, one legal terminal
+round and exactly one actor-indexed aggregate update. `04T` review-closes the
+two-round sequential implementation after all 384 explicit repository tests
+pass. Zero planning gates remain before this code; another documentation chain
+is forbidden.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -587,7 +588,5 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04S` two-round parameter-continuous training implementation.
-Do not broaden code unless a concrete blocker is found. Review closure must
-directly approve or defer a material executable P8 task; no new boundary or
-proposal chain may intervene.
+Implement the exact `04T` two-project-seat shared-policy raw-outcome update.
+No proposal, boundary or review may intervene before code.

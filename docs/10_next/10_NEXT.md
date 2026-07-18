@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact MahJax two-round sequential on-policy raw-outcome training smoke implementation.
+- [ ] Implement the exact MahJax two-project-seat shared-policy raw-outcome update smoke.
 
 Current execution charter:
 
@@ -22,19 +22,20 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review the exact `04S` implementation in the approved source/test files and
-  its governance synchronization; do not broaden the implementation.
-- Confirm the one-step public API/result remains unchanged, private helper
-  reuse preserves seed-1 behavior, and direct parameter carry reaches seed 5.
-- Confirm exact two-round/two-update diagnostics, legality, determinism,
-  frozen output, no I/O/persistence and all validation evidence.
-- Modify code/tests only if a concrete correctness blocker is found. Otherwise
-  record one review decision and directly approve or defer the next material
-  executable P8 task; another boundary/proposal chain is forbidden.
-- No third/variable trainer, replay, production self-play, evaluation, real
-  data, Tenhou, strength claim or P9-P12 work.
+- Execute exact `04T` in its two approved source/test files plus governance.
+- Seed `0`; shared project parameters in seats `(0,2)`; fixed bundled rule
+  policies in seats `(1,3)`; independent init/rule/project RNG streams.
+- One 256-cap round, complete traces and legal checks. Project seats sample
+  legal-masked categorical actions from public features.
+- After terminal only, use each project decision's actor-indexed cumulative raw
+  reward `/100` in one shared masked-log-probability update at `0.1`.
+- Pin `04T` transitions/counts/outcomes/objective/deltas and frozen summary.
+- No four-project-seat update, second round, replay, persistence, production
+  self-play/evaluation, real data, Tenhou, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `1141765` against exact `04S` approval in `04T`. Decision: `A. Review can close.` Confirmed exact files/API, unchanged one-round public behavior, one exact two-item loop, direct parameter carry, independent per-round RNG, complete legality, raw-return-only objectives, two finite updates, frozen output and no I/O/replay/persistence. Nineteen focused and all 384 explicit repository tests pass with two skips; compile, dependency, diff and independent probes pass. A continuity probe changes seed-5 initial objective from fresh `-0.85021764` to carried `-0.85308558`. Accepted the two-round scope and directly approved exact seed-0 shared project seats `(0,2)` versus fixed rule seats `(1,3)` with one actor-indexed aggregate raw-outcome update. An all-project-seat seeds-0..15 probe was deferred because every cumulative reward was zero. Zero gates remain before code. No production self-play, evaluation, real data, strength or P9-P12 work was added.
 
 - [x] 2026-07-18 Implemented the exact `04S`-approved MahJax two-round sequential on-policy raw-outcome training smoke. Added a six-symbol frozen diagnostic module and nine focused tests, while privately extracting the reviewed one-round raw-outcome update without changing its public API/result. Exact seeds `(1,5)` execute in order against fixed bundled rule opponents, with updated arrays carried directly into round 2 and exactly two total updates. The rounds terminate legally in 37/32 transitions with project actions `(20,84,16,30,27,26,3,13)` and `(12,6,31,84,13,32,33)`, return scales `-0.39/-0.4`, objective changes `-0.86367577->-0.88331068` and `-0.85308558->-0.87257379`, per-step weight/bias deltas `0.04220101/0.01279154` and `0.04183802/0.01353321`, and final initial-to-end deltas `0.06373481/0.02013424`. Nineteen focused and all 384 explicit repository tests pass with two existing skips; compile, dependency, diff and direct probes pass. No replay, production self-play, persistence, evaluation, real data, Tenhou, strength or P9-P12 work was added. One exact code review is next; another docs chain is forbidden.
 

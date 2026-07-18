@@ -268,6 +268,38 @@ Status:
 
 Implemented; exact two-round training review is current next.
 
+## 2026-07-18 — DR-0197 — Close Two-Round Review And Approve Two Project Seats
+
+Decision:
+
+```text
+A. Review can close.
+Accept the exact `04S` two-round implementation and directly approve the exact
+`04T` two-project-seat shared-policy raw-outcome update smoke.
+```
+
+Rationale and evidence:
+
+- `1141765` conforms and all 384 explicit repository tests pass with two skips.
+- Independent probing confirms seed-5 consumes the seed-1 updated parameters.
+- Four project seats over seeds `0..15` produce only zero raw returns, so that
+  immediate update would not change parameters and is not material progress.
+- Two shared project seats `(0,2)` against fixed rule seats `(1,3)` produce a
+  legal nonzero seed-0 terminal result and finite aggregate shared-policy update.
+
+Consequences:
+
+- The next exact code introduces more than one project-controlled participant
+  in the same environment round and updates their shared policy from each
+  acting seat's authoritative cumulative raw outcome.
+- It remains a bridge with fixed opponents, not production self-play,
+  evaluation, improvement, league or strength evidence.
+- Zero planning/review gates remain before implementation.
+
+Status:
+
+Approved; direct two-project-seat update implementation is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

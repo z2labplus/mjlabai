@@ -8,6 +8,24 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — Two-round review and non-degenerate multi-project bridge probe
+
+- Type: exact code-review closure, current-scope acceptance and direct bounded
+  two-project-seat P8 update-task approval evidence.
+- `04T` records `A. Review can close`; 19 focused and all 384 explicit tests
+  pass with two existing skips plus compile/dependency/diff/direct probes.
+- Continuity probe: seed-5 fresh versus carried initial objective is
+  `-0.85021764` versus `-0.85308558`, confirming round-1 parameters feed round 2.
+- All-project seats over seeds `0..15` terminate legally but yield all-zero
+  cumulative rewards, so an immediate four-project update would have zero
+  gradient and is deferred.
+- Seed-0 project seats `(0,2)` versus fixed rule seats `(1,3)` yields 92 legal
+  transitions, project returns `-0.1/-0.1`, objective
+  `-0.19244556 -> -0.19273609` and nonzero deltas
+  `0.00523261 / 0.00124493`.
+- Evidence grade: exact multi-project bridge-update task approval only; not
+  production self-play, evaluation, improvement, league or strength.
+
 ### 2026-07-18 — Two-round sequential raw-outcome training smoke
 
 - Type: executable P8 local parameter-continuity and repeated environment-

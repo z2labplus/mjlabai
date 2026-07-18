@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.12
+
+- Added `04T`; reviewed commit `1141765` against exact `04S` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed unchanged one-round public behavior, one exact two-item loop,
+  direct parameter continuity, per-round RNG separation, full legality, two
+  raw-only finite updates, deterministic frozen output and no persistence.
+- Validation passed: 19 focused and all 384 explicit repository tests with two
+  skips; compile, dependency, diff and independent continuity probes pass.
+- All-project-seat seeds `0..15` were legal but all-zero reward, so that
+  degenerate update was deferred. Directly approved exact seed-0 project seats
+  `(0,2)` versus fixed rule seats `(1,3)` with one aggregate actor-indexed raw-
+  outcome update. No production self-play/evaluation/strength/P9-P12 added.
+
 ## 2026-07-18 - v4.11
 
 - Implemented the exact `04S` P8 MahJax two-round sequential on-policy raw-

@@ -27,14 +27,14 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is exact implementation review of the completed `04S`-
-approved two-round sequential on-policy raw-outcome training smoke. Fixed seeds
-`(1,5)` now execute with direct parameter carry and exactly one raw-return
-update per round; 19 focused and all 384 explicit repository tests pass with
-two existing skips. The review must verify this exact implementation and then
-directly approve or defer a material executable P8 task rather than start a new
-documentation chain. This is P8 local bounded RL training evidence, not
-production self-play, evaluation or strength evidence:
+Current active stage is direct implementation of the exact `04T`-approved
+MahJax two-project-seat shared-policy raw-outcome update smoke. `04T` review-
+closes the two-round sequential training implementation after 19 focused and
+all 384 explicit repository tests pass. The next code uses shared project
+parameters in seats `(0,2)`, fixed rule policies in seats `(1,3)` and one
+actor-indexed aggregate raw-outcome update after a legal seed-0 terminal round.
+This is a bounded P8 bridge toward self-play, not production self-play,
+evaluation or strength evidence:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -863,11 +863,10 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Review the exact two-round sequential raw-outcome training implementation.
-Confirm direct parameter continuity, two legal deterministic rounds, two
-finite updates, unchanged one-round public behavior, no persistence and the
-384-test result. If no blocker exists, directly approve or defer the next
-material executable P8 step; do not restart a boundary/proposal chain.
+Implement the exact `04T` two-project-seat shared-policy seed-0 raw-outcome
+update. Use project seats `(0,2)`, fixed rule seats `(1,3)`, one legal terminal
+round and exactly one shared actor-indexed return update. Zero planning gates
+remain before code; do not restart a boundary/proposal chain.
 ```
 
 Latest Akochan F1 audit summary:
@@ -1146,9 +1145,9 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is one exact code review of the implemented MahJax
-  seeds-1/5 two-round sequential raw-outcome training smoke. P8 bounded local
-  training is active; production self-play, evaluation, league, real data,
-  Tenhou and P9-P12 remain unapproved. Do not make strength claims.
+- Current next work is direct code for the exact `04T` two-project-seat shared-
+  policy raw-outcome update. P8 bounded local training is active; production
+  self-play, evaluation, league, real data, Tenhou and P9-P12 remain
+  unapproved. Do not make strength claims.
 - Technical decisions become project facts only after they are recorded in Git
   and the governing repository documents; no external chat handoff is required.

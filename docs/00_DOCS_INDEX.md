@@ -187,6 +187,14 @@ direct parameter continuity and applies exactly two raw-outcome updates. One
 exact code review is next. This is bounded local P8 training-smoke evidence,
 not production self-play, evaluation, improvement or strength evidence.
 
+`docs/04_rl_selfplay/04T_P8_TWO_ROUND_POLICY_GRADIENT_IMPLEMENTATION_REVIEW.md`
+reviews commit `1141765`, records `A. Review can close`, accepts the exact two-
+round implementation and directly approves one exact seed-0 shared-project-
+policy update with project seats `(0,2)` and fixed rule seats `(1,3)`. It also
+records that all-project-seat seeds `0..15` yielded zero cumulative raw rewards,
+so that degenerate path is deferred. This is review/task-approval evidence,
+not production self-play, evaluation or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
