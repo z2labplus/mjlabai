@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — First two-project-seat shared-policy raw-outcome update
+
+- Type: executable P8 local multi-project participant bridge-update evidence.
+- Seed 0: shared project seats `(0,2)` and fixed rule seats `(1,3)` complete 92
+  legal transitions. The gradient batch contains exactly 44 project decisions;
+  all 48 fixed-rule decisions are excluded.
+- Cumulative raw rewards are `(-10,-10,-10,20)`. Both project actor returns are
+  `-0.1`; one aggregate update moves objective
+  `-0.19244556 -> -0.19273609` and weight/bias deltas are
+  `0.00523261 / 0.00124493`.
+- Validation: 10 focused, 29 three-generation RL and all 394 explicit repository
+  tests pass with two existing skips; compile/dependency/diff checks pass.
+- Evidence grade: P8 local two-project-seat shared-policy raw-outcome update
+  smoke only; not four-seat/production self-play, evaluation or strength.
+
 ### 2026-07-18 — Two-round review and non-degenerate multi-project bridge probe
 
 - Type: exact code-review closure, current-scope acceptance and direct bounded

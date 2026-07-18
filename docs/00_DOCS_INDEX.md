@@ -195,6 +195,14 @@ records that all-project-seat seeds `0..15` yielded zero cumulative raw rewards,
 so that degenerate path is deferred. This is review/task-approval evidence,
 not production self-play, evaluation or strength evidence.
 
+The exact `04T` two-project-seat task is implemented in
+`src/mjlabai/rl/mahjax_two_project_seat_policy_gradient_smoke.py` with focused
+tests in `tests/rl/test_mahjax_two_project_seat_policy_gradient_smoke.py`.
+Project seats `(0,2)` share one policy and contribute actor-indexed raw returns
+to one aggregate terminal update; fixed rule seats `(1,3)` never enter the
+gradient batch. One exact code review is next. This is a bounded multi-project
+bridge, not production self-play, evaluation, improvement or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

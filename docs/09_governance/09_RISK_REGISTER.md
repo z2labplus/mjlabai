@@ -30,6 +30,17 @@
 | Partial self-play bridge is mislabeled production self-play strength. | Evidence / Scope | Critical | High | Fixed evidence grade and warnings identify two-project/two-rule bridge only and deny improvement/evaluation/stable-dan/LuckyJ claims. | Open |
 | Approval triggers another planning chain instead of code. | Governance / Delivery | High | Medium | `04T` leaves zero gates and `10_NEXT` requires direct implementation. | Mitigated |
 
+## 2026-07-18 — P8 two-project-seat shared-policy update implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Actor-indexed returns are assigned to the wrong project decisions. | ML / Credit assignment | Critical | Low | The project actor trace is stored, source indexes `return_scales[actor_batch]`, both seat returns are pinned and focused tests pass. | Mitigated |
+| Fixed-rule decisions contaminate the shared gradient. | Engineering / Correctness | Critical | Low | Project tensors append only in the project-seat branch; policy trace pins 44 project and 48 rule decisions. | Mitigated |
+| An illegal categorical or rule action enters the round. | Engineering / Correctness | Critical | Low | Every one of 92 actions is checked against and stored with the full authoritative legal tuple. | Mitigated |
+| Update occurs before terminal or more than once. | ML / Correctness | High | Low | One environment `for` completes before objective definition; one value-and-gradient call and one update are source-tested. | Mitigated |
+| Bounded bridge is overclaimed as production self-play strength. | Evidence / Scope | Critical | High | Frozen warnings and evidence grade deny four-seat/production self-play, improvement, evaluation, stable-dan and LuckyJ claims. | Open |
+| Review restarts docs instead of progressing executable learning. | Governance / Delivery | High | Medium | Exactly one code review is next; closure directly approves/defer material P8 execution or records a genuine blocker. | Mitigated |
+
 ## 2026-07-18 — P4 bounded MahJax rollout implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

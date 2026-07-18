@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact MahJax two-project-seat shared-policy raw-outcome update smoke.
+- [ ] Review the exact MahJax two-project-seat shared-policy raw-outcome update smoke implementation.
 
 Current execution charter:
 
@@ -22,18 +22,20 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Execute exact `04T` in its two approved source/test files plus governance.
-- Seed `0`; shared project parameters in seats `(0,2)`; fixed bundled rule
-  policies in seats `(1,3)`; independent init/rule/project RNG streams.
-- One 256-cap round, complete traces and legal checks. Project seats sample
-  legal-masked categorical actions from public features.
-- After terminal only, use each project decision's actor-indexed cumulative raw
-  reward `/100` in one shared masked-log-probability update at `0.1`.
-- Pin `04T` transitions/counts/outcomes/objective/deltas and frozen summary.
-- No four-project-seat update, second round, replay, persistence, production
-  self-play/evaluation, real data, Tenhou, strength claim or P9-P12.
+- Review the exact `04T` implementation in its two approved source/test files
+  plus governance; do not broaden code unless a concrete blocker is found.
+- Confirm exact participants/RNG, one 256-cap legal round, complete traces,
+  project-only gradient batch, actor-indexed returns and one terminal update.
+- Confirm exact counts/outcomes/objective/deltas, frozen summary, determinism,
+  validation and no I/O/replay/persistence.
+- If review closes, directly approve or defer the next material executable P8
+  task; another boundary/proposal chain is forbidden.
+- No four-project-seat update, second round, production self-play/evaluation,
+  real data, Tenhou, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `04T`-approved MahJax two-project-seat shared-policy raw-outcome update smoke in one new seven-symbol module with 10 focused tests. Seed 0 splits independent init/rule/project RNG; project seats `(0,2)` share reviewed imitation parameters and sample legal-masked categorical actions while fixed rule seats `(1,3)` never enter the gradient batch. One 92-transition terminal round has seat counts `(21,22,23,26)`, 44 project decisions, final raw `(-10,-10,-10,30)`, cumulative `(-10,-10,-10,20)` and global scores `(240,240,240,270)`. Actor-indexed project returns are `-0.1/-0.1`; exactly one aggregate `0.1` update changes objective `-0.19244556->-0.19273609` and weight/bias L2 by `0.00523261/0.00124493`. Twenty-nine three-generation RL tests and all 394 explicit repository tests pass with two skips; compile, dependency and diff checks pass. No four-project-seat update, second round, replay, persistence, production self-play/evaluation, real data, Tenhou, strength or P9-P12 work was added. One exact code review is next.
 
 - [x] 2026-07-18 Reviewed commit `1141765` against exact `04S` approval in `04T`. Decision: `A. Review can close.` Confirmed exact files/API, unchanged one-round public behavior, one exact two-item loop, direct parameter carry, independent per-round RNG, complete legality, raw-return-only objectives, two finite updates, frozen output and no I/O/replay/persistence. Nineteen focused and all 384 explicit repository tests pass with two skips; compile, dependency, diff and independent probes pass. A continuity probe changes seed-5 initial objective from fresh `-0.85021764` to carried `-0.85308558`. Accepted the two-round scope and directly approved exact seed-0 shared project seats `(0,2)` versus fixed rule seats `(1,3)` with one actor-indexed aggregate raw-outcome update. An all-project-seat seeds-0..15 probe was deferred because every cumulative reward was zero. Zero gates remain before code. No production self-play, evaluation, real data, strength or P9-P12 work was added.
 

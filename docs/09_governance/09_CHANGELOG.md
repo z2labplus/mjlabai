@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.13
+
+- Implemented the exact `04T` P8 MahJax two-project-seat shared-policy raw-
+  outcome update smoke and 10 focused tests.
+- Seed 0 uses project seats `(0,2)`, fixed rule seats `(1,3)`, independent RNG,
+  one 92-step legal terminal round and a project-only gradient batch.
+- Actor-indexed returns `-0.1/-0.1` drive exactly one aggregate update; objective
+  changes `-0.19244556 -> -0.19273609` with nonzero weight/bias deltas.
+- Validation passed: 29 three-generation RL tests and all 394 explicit
+  repository tests with two skips; compile, dependency and diff checks pass.
+- No four-project update, second round, replay, persistence, production self-
+  play/evaluation, real data, Tenhou, strength or P9-P12 work was added.
+
 ## 2026-07-18 - v4.12
 
 - Added `04T`; reviewed commit `1141765` against exact `04S` approval.

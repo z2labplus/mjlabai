@@ -300,6 +300,36 @@ Status:
 
 Approved; direct two-project-seat update implementation is current next.
 
+## 2026-07-18 — DR-0198 — Complete First Multi-Project Shared Update
+
+Decision:
+
+```text
+Complete the exact `04T` two-project-seat shared-policy raw-outcome update and
+require one exact implementation review before expansion.
+```
+
+Rationale and evidence:
+
+- Two project-controlled seats share one in-memory policy and act legally in the
+  same terminal MahJax round while two fixed rule seats preserve nonzero signal.
+- Only the 44 project decisions enter the gradient batch; each uses the exact
+  cumulative raw return of its acting seat.
+- Exactly one finite shared update changes parameters and objective.
+- Ten focused and all 394 explicit repository tests pass with two skips.
+
+Consequences:
+
+- The repository now performs one environment-outcome update from trajectories
+  produced by more than one project-controlled participant in the same round.
+- This remains a two-project/two-rule bridge, not production self-play,
+  evaluation, improvement, league, model-strength or Tenhou evidence.
+- Exactly one code review is next; another docs chain is barred.
+
+Status:
+
+Implemented; exact two-project-seat update review is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:
