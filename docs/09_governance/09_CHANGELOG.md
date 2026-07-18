@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.08
+
+- Added `04R`; reviewed commit `4d7ef8d` against exact `04Q` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed seat-policy ownership, RNG separation, three JITs, one cap loop,
+  complete legality, exact raw/global result, determinism and no persistence.
+- Validation passed: 10 focused and all 365 tests with two skips; compile,
+  dependency, diff and independent probes pass.
+- Directly approved the first exact environment raw-outcome on-policy update:
+  one seed-1 sampled project trajectory, raw return scale `-0.39`, one masked
+  log-policy gradient step at `0.1`. No self-play learning, evaluation,
+  real data, strength or P9-P12 work was added.
+
 ## 2026-07-18 - v4.07
 
 - Implemented the exact `04Q` P8 mixed-policy MahJax single-round smoke and 10

@@ -159,6 +159,12 @@ reviewed trained project policy and seats 1-3 use the pinned rule policy; every
 action records policy identity and complete legality. One exact code review is
 next. This is not learning, league, evaluation or strength evidence.
 
+`docs/04_rl_selfplay/04R_P8_MAHJAX_MIXED_POLICY_ROUND_IMPLEMENTATION_REVIEW.md`
+reviews commit `4d7ef8d`, records `A. Review can close`, accepts the exact mixed
+round and directly approves one exact seed-1 on-policy raw-outcome gradient
+update with zero gates before code. It is review/task-approval evidence only,
+not self-play learning, evaluation or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

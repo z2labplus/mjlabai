@@ -153,6 +153,35 @@ Status:
 
 Implemented; exact mixed-round review is current next.
 
+## 2026-07-18 — DR-0193 — Close Mixed Review And Approve First Raw-Outcome RL Update
+
+Decision:
+
+```text
+A. Review can close.
+Accept the exact `04Q` mixed-policy round and directly approve the exact `04R`
+one-round on-policy raw-outcome gradient update.
+```
+
+Rationale and evidence:
+
+- `4d7ef8d` conforms and all 365 tests pass with two existing skips.
+- Participant identity, legal actions and raw outcome now provide the minimum
+  executable authority needed for one environment-backed RL update.
+- Independent seed-1 categorical probe yields eight legal project decisions,
+  raw return scale `-0.39`, finite gradient and deterministic parameter deltas.
+
+Consequences:
+
+- The next task performs the project's first actual environment-outcome-driven
+  parameter update, exactly once and entirely in memory.
+- Opponents remain fixed rule policies; self-play learning/evaluation/strength
+  remain unapproved.
+
+Status:
+
+Approved; direct one-round on-policy update implementation is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

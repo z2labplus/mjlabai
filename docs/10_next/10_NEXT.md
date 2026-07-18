@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact MahJax trained-project/rule-policy mixed single-round smoke implementation.
+- [ ] Implement the exact MahJax one-round on-policy raw-outcome gradient update smoke.
 
 Current execution charter:
 
@@ -22,20 +22,23 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review commit implementation against exact `04Q` files/API and source bounds.
-- Recheck trained project seat 0/rule seats 1-3 identity, init/policy RNG split,
-  three JITs, one 256-cap loop, public encoding, complete legal tuples/actions,
-  frozen output and no persistence.
-- Pin 54 transitions, 10 project turns/all action 71, terminal/no truncation,
-  raw/cumulative outcome and global scores from `04Q`; rerun determinism/cap.
-- Run focused/full/compile/dependency/diff and direct probes. Change production
-  code only for a concrete blocker in approved files.
-- On closure directly accept/reject and approve/defer one material executable
-  next task; another planning/review chain is forbidden.
-- No learning, multiple games/league/evaluation, real data, Tenhou, strength,
-  broad P8 or P9-P12.
+- Execute exact `04R` in one new RL source/test pair plus direct governance.
+- Use reviewed trained parameters; split seed 1 into independent init, rule and
+  project RNG streams. Seat 0 samples from legal-masked categorical logits;
+  seats 1-3 use the fixed bundled rule policy.
+- Pin pre-update 37-step terminal round, eight project actions
+  `(20,84,16,30,27,26,3,13)`, cumulative raw seat reward `-39`, normalized
+  return `-0.39`, raw `(-39,39,0,0)`, scores `(211,289,250,250)`.
+- Apply exactly one JIT `value_and_grad` update to
+  `-return * mean(selected legal log probability)` at learning rate `0.1`.
+  Pin objective `-0.86367577 -> -0.88331068`, weight/bias deltas
+  `0.04220101/0.01279154`; rerun same seed and report legality/outcome.
+- Frozen summary only. No replay/second update/self-play learning, persistence,
+  evaluation/league, real data, Tenhou, strength or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `4d7ef8d` against exact `04Q` approval in `04R`. Decision: `A. Review can close.` Confirmed six-symbol API, private trained parameters, exact seat-policy ownership, init/rule RNG separation, three JITs, one 256-cap loop, public encoding, every action legal, exact 54-step raw/cumulative/global outcome, deterministic cap behavior, warnings and no persistence. Ten focused and all 365 tests pass with two skips; compile, dependency, diff and independent probes pass. Accepted the mixed round and directly approved the first exact environment raw-outcome on-policy update. Independent seed-1 probe samples eight legal project actions with separate RNG, return scale `-0.39`, finite objective and nonzero one-step parameter deltas. Zero gates remain before code. No self-play learning, evaluation, real data, strength or P9-P12 work was added.
 
 - [x] 2026-07-18 Implemented the exact `04Q`-approved MahJax trained-project/rule-policy mixed single-round smoke. Added one six-symbol environment module and 10 focused tests. The reviewed trained project policy controls seat 0; pinned bundled rule policy controls seats 1-3 with separate RNG. Three JIT functions and one 256-cap loop record every acting seat, policy ID, complete legal tuple and selected action. Seed 0 terminates legally in 54 transitions with 10 project turns, raw `(0,0,140,-120)`, cumulative `(0,0,120,-140)` and global scores `(250,250,380,120)`. All 365 tests pass with two skips. No learning/persistence, multiple games, league/evaluation, real data, Tenhou, strength or P9-P12 work was added. One exact code review is next.
 

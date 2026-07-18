@@ -8,6 +8,19 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — Mixed round review and first on-policy update probe
+
+- Type: exact code-review closure, current-scope acceptance and direct P8
+  environment-outcome gradient-update task approval evidence.
+- `04R` records `A. Review can close`; 10 focused and all 365 tests pass with
+  two existing skips, plus compile/dependency/diff/direct probes.
+- Independent proper on-policy seed-1 probe uses separate init/rule/project RNG:
+  37 transitions, eight legal project samples, cumulative seat-0 raw `-39`,
+  normalized return `-0.39`, objective `-0.86367577 -> -0.88331068` after one
+  `0.1` update, parameter deltas `0.04220101 / 0.01279154`.
+- Evidence grade: exact P8 local one-round update task approval only; not
+  self-play learning, improvement, evaluation, league or strength.
+
 ### 2026-07-18 — First MahJax trained-project/rule-policy mixed round
 
 - Type: executable P8 local mixed-policy environment-interaction smoke.

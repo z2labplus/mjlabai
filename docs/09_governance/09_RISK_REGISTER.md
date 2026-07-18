@@ -122,6 +122,16 @@
 | Raw score is mistaken for comparative strength. | Evidence / Scope | Critical | High | One-round evidence grade/warnings deny evaluation, ranking, promotion and strength claims. | Open |
 | Review starts another documentation chain. | Governance / Delivery | High | Medium | Exactly one code review is next; closure must directly approve/defer material execution or record a genuine blocker. | Mitigated |
 
+## 2026-07-18 — P8 first environment raw-outcome update approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Greedy/off-policy actions are mislabeled on-policy. | ML / Correctness | Critical | Medium | Project actions must be sampled from the exact legal-masked categorical distribution with a separate recorded RNG stream. | Open |
+| Reward shaping or evaluation metric leaks into update. | Research / Correctness | Critical | Medium | Use only cumulative raw environment reward for project seat divided by 100; no baseline/discount/bootstrap. | Open |
+| One update becomes an epoch/replay/self-play trainer. | Governance / Scope | High | Medium | Exactly one round and one gradient step; source tests forbid second loop/replay/persistence. | Open |
+| Negative-return update is overclaimed as improvement. | Evidence / Scope | Critical | High | Report objective/deltas and legality only; warnings deny improvement, evaluation and strength. | Open |
+| Another planning chain delays the approved update. | Governance / Delivery | High | Medium | `04R` leaves zero gates and `10_NEXT` requires direct implementation. | Mitigated |
+
 ## 2026-07-18 — P8 bounded policy-improvement sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

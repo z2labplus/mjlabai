@@ -27,12 +27,12 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is the one exact implementation review of the completed
-`04Q`-approved MahJax mixed-policy single round. The trained project policy now
-controls seat 0 while bundled rule policies control seats 1-3; all 54 actions
-are environment-legal and the raw terminal outcome/global scores are preserved.
-This is local mixed-policy interaction smoke, not self-play learning, production
-evaluation or strength evidence:
+Current active stage is direct implementation of the exact `04R`-approved first
+MahJax on-policy raw-outcome gradient update. `04R` review-closes the mixed
+project/rule-policy round. The next code samples project seat-0 actions from its
+masked categorical policy in one seed-1 round, converts only cumulative raw
+seat reward `-39` to scale `-0.39`, and applies exactly one update. This is P8
+local RL-update smoke, not self-play learning, evaluation or strength evidence:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
