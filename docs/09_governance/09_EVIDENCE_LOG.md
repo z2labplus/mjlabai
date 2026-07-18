@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P4 bundled rule-policy environment bridge implementation
+
+- Type: executable pinned local policy-to-environment single-round smoke.
+- Added `mahjax_rule_based_single_round_smoke.py`, six package exports and 11
+  focused tests under exact `04M` approval.
+- Seed-0 result: 54 legal transitions, terminal true, truncated false, final
+  raw rewards `(0,0,150,-120)`, cumulative raw rewards `(-20,0,130,-130)` and
+  global seat scores `(240,250,390,120)`.
+- Independent API probe confirms first action 27 is in its complete legal tuple
+  and final action 74 is in final legal tuple `(74,84)`.
+- Validation: all 325 repository tests OK with two existing skips; compile,
+  dependency and diff checks pass.
+- Evidence grade: P4 pinned local rule-policy-to-environment single-round smoke
+  only; not learned self-play, training/evaluation, strength or Tenhou evidence.
+
 ### 2026-07-18 — P4 rollout review closure and rule-policy approval probe
 
 - Type: exact code-review closure, current-scope acceptance and direct next

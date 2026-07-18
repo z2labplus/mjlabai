@@ -19,6 +19,15 @@ from mjlabai.environment.mahjax_single_round_rollout_smoke import (
     run_mahjax_single_round_rollout_smoke,
 )
 
+from mjlabai.environment.mahjax_rule_based_single_round_smoke import (
+    MAHJAX_RULE_BASED_SINGLE_ROUND_SMOKE_VERSION,
+    MAHJAX_RULE_BASED_SINGLE_ROUND_TRANSITION_CAP,
+    MahJaxRuleBasedSingleRoundResult,
+    MahJaxRuleBasedSingleRoundSmokeError,
+    MahJaxRuleBasedSingleRoundStep,
+    run_mahjax_rule_based_single_round_smoke,
+)
+
 from mjlabai.environment.synthetic_transition_smoke import (
     SYNTHETIC_ENVIRONMENT_ID,
     SYNTHETIC_ENVIRONMENT_TRANSITION_SMOKE_VERSION,
@@ -35,6 +44,8 @@ __all__ = [
     "MAHJAX_ENVIRONMENT_VERSION",
     "MAHJAX_INTEGRATION_SMOKE_VERSION",
     "MAHJAX_PACKAGE_VERSION",
+    "MAHJAX_RULE_BASED_SINGLE_ROUND_SMOKE_VERSION",
+    "MAHJAX_RULE_BASED_SINGLE_ROUND_TRANSITION_CAP",
     "MAHJAX_SINGLE_ROUND_ROLLOUT_SMOKE_VERSION",
     "MAHJAX_SINGLE_ROUND_TRANSITION_CAP",
     "SYNTHETIC_ENVIRONMENT_ID",
@@ -46,10 +57,14 @@ __all__ = [
     "SyntheticEnvironmentTransitionSmokeError",
     "MahJaxIntegrationSmokeError",
     "MahJaxIntegrationSmokeResult",
+    "MahJaxRuleBasedSingleRoundResult",
+    "MahJaxRuleBasedSingleRoundSmokeError",
+    "MahJaxRuleBasedSingleRoundStep",
     "MahJaxSingleRoundRolloutResult",
     "MahJaxSingleRoundRolloutSmokeError",
     "MahJaxSingleRoundStep",
     "apply_synthetic_environment_transition_smoke",
     "run_mahjax_integration_smoke",
+    "run_mahjax_rule_based_single_round_smoke",
     "run_mahjax_single_round_rollout_smoke",
 ]

@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.99
+
+- Implemented the exact `04M` P4 MahJax bundled rule-policy four-seat
+  single-round smoke with six-symbol API, package exports and 11 focused tests.
+- Separate initialization/policy RNG streams, two JIT functions and one
+  256-cap loop validate every policy action against the full legal tuple.
+- Seed 0 terminates in 54 transitions with final raw rewards
+  `(0,0,150,-120)`, cumulative `(-20,0,130,-130)` and global seat scores
+  `(240,250,390,120)`.
+- Validation passed: 11 focused and all 325 tests with two existing skips;
+  compile, dependency, diff and independent API probes pass.
+- One exact code review is next. No learned model, training, production
+  self-play, real data, Tenhou, strength, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.98
 
 - Added `04M`; reviewed `a8fd6b1` plus exact fix `86199af` against `04L`.

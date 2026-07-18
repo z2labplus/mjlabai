@@ -14,6 +14,32 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0184 — Complete Bundled Rule Policy Environment Bridge
+
+Decision:
+
+```text
+Complete the exact `04M` bundled-rule-policy round and require one exact review.
+```
+
+Rationale and evidence:
+
+- The pinned bundled red rule policy selects an environment-legal action at
+  every transition across all four seats.
+- Separate deterministic RNG streams and one hard-capped round produce the
+  exact seed-0 54-step nontrivial terminal result.
+- Eleven focused and all 325 tests pass with two existing skips.
+
+Consequences:
+
+- P4 now has executable policy-output-to-environment-terminal evidence.
+- One exact code review must close before acceptance or a project-model bridge.
+- This is not learned self-play, training, evaluation or strength evidence.
+
+Status:
+
+Implemented; exact code review is current next.
+
 ## 2026-07-18 — DR-0183 — Close Rollout Review And Approve Rule Policy Bridge
 
 Decision:

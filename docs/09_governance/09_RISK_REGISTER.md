@@ -30,6 +30,16 @@
 | One all-seat heuristic round is mislabeled production self-play or strength. | Evidence / Scope | High | High | Fixed warnings and evidence grade only P4 policy-to-environment smoke; no learned model, comparison or promotion. | Open |
 | Another docs chain delays the approved code. | Governance / Delivery | High | Medium | `04M` leaves zero gates and `10_NEXT` requires direct implementation. | Mitigated |
 
+## 2026-07-18 — P4 bundled MahJax rule-policy implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Bundled rule policy emits an illegal environment action. | Engineering / Correctness | High | Low | All 54 seed-0 actions and every runtime action are checked against the complete pre-state legal tuple; focused tests pass. | Mitigated |
+| Policy RNG and environment RNG are coupled or unstable. | Engineering / Reproducibility | High | Low | Root key is split once into init/policy streams and policy stream once per transition; repeated seed-0 results are equal. | Mitigated |
+| Global scores are rotated into observer order. | Engineering / Correctness | High | Low | Result reads `state.round_state.score`; source assertion and exact non-tie result pin global seat order. | Mitigated |
+| Passing heuristic round is mistaken for learned self-play or strength. | Evidence / Scope | High | High | Fixed warnings and governance grade only policy-to-environment smoke; no learned model or comparison. | Open |
+| Review triggers another planning chain instead of material progress. | Governance / Delivery | High | Medium | Exactly one code review is next; closure must directly decide project-model bridge/P4 status or record a genuine blocker. | Mitigated |
+
 ## 2026-07-18 — P8 bounded policy-improvement sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

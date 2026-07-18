@@ -90,6 +90,15 @@ the bounded rollout scope and directly approves one exact MahJax bundled
 rule-policy single-round implementation with zero gates before code. It is P4
 environment/policy integration review evidence only, not self-play or strength.
 
+The exact `04M` rule-policy bridge is implemented in
+`src/mjlabai/environment/mahjax_rule_based_single_round_smoke.py` with focused
+tests in `tests/environment/test_mahjax_rule_based_single_round_smoke.py`. All
+four seats use the pinned bundled red rule policy; every action is checked
+against the complete environment legal tuple. Seed 0 terminates in 54 steps
+with raw outcome and global seat scores recorded. One exact code review is
+next. This is P4 policy-to-environment smoke only, not learned self-play or
+strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

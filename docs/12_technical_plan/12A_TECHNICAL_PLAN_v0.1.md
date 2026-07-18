@@ -28,11 +28,11 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P4 direct implementation of the exact `04M`-approved MahJax bundled
-rule-policy four-seat single-round smoke. `04M` review-closed the bounded
-lowest-legal rollout after the global-seat-score fix, accepted that scope and
-used a successful 54-transition rule-policy probe to leave zero gates before
-the exact next code. No learned model or production self-play is approved.
+P4 exact code-review gate for the implemented `04M`-approved MahJax bundled
+rule-policy four-seat single-round smoke. The executable reaches the exact
+seed-0 54-transition terminal raw outcome while checking every policy action
+against environment legality; 325 tests pass. No learned model or production
+self-play is approved.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

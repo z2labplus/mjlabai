@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact P4 MahJax bundled rule-policy single-round smoke.
+- [ ] Review the exact P4 MahJax bundled rule-policy single-round smoke implementation.
 
 Current execution charter:
 
@@ -22,21 +22,22 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Execute exactly the direct approval in `04M`: one source module, one focused
-  test module, package exports and direct governance synchronization only.
-- Use separate deterministic initialization/policy RNG streams, exactly one
-  JIT environment step, exactly one JIT bundled red rule policy, one explicit
-  `for` bounded at 256 and complete environment-owned legal tuples.
-- Pin seed 0 to 54 transitions, terminal/no truncation, final raw rewards
-  `(0,0,150,-120)`, cumulative raw rewards `(-20,0,130,-130)` and global seat
-  scores `(240,250,390,120)`.
+- Review commit `HEAD` against `04M`: exact six symbols/package exports,
+  separate RNG streams, two JIT calls, one 256-cap loop, full legal tuples,
+  bundled-policy action legality, monotonic progress, raw/cumulative rewards,
+  global seat scores, failures and warnings.
+- Rerun focused/full tests, compile, dependency/diff checks and an independent
+  normalized seed-0 trace/result probe. Change production code/tests only after
+  recording a concrete blocker.
 - No learned/project model, update/training, multiple games, reward shaping,
   persistence, path/CLI, GPU, real data, Tenhou/platform, production self-play/
   evaluation, strength claim, broad P8 or P9-P12.
-- Zero documentation/proposal gates remain before code. Stop on any exact API,
-  legality, pin, cap or deterministic-result blocker instead of widening scope.
+- Only one review is allowed. Closure must directly decide a materially
+  progressive project-policy bridge or P4/P8 stage status; no docs chain.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `04M`-approved P4 MahJax bundled rule-policy four-seat single-round smoke. Added `src/mjlabai/environment/mahjax_rule_based_single_round_smoke.py`, six package exports and 11 focused tests. Separate initialization/policy RNG streams, one JIT environment step, one JIT bundled red rule policy and one explicit 256-cap loop verify every selected action against the full environment legal tuple. Seed 0 terminates in 54 transitions without truncation, with final raw rewards `(0,0,150,-120)`, cumulative raw rewards `(-20,0,130,-130)` and global seat scores `(240,250,390,120)`. Independent API probing confirms first action 27 and last action 74 are legal. All 325 repository tests pass with two existing skips; compile, dependency and diff checks pass. No learned model, training, production self-play/evaluation, real data, Tenhou, strength, broad P8 or P9-P12 work was added. One exact review is next; another planning chain is forbidden.
 
 - [x] 2026-07-18 Reviewed commits `a8fd6b1` and exact score-order fix `86199af` against `04L` in `04M`. Decision: `A. Review can close after the exact global-seat-score blocker fix.` Confirmed exact API/pins, one JIT step, one 256-cap loop, full legal/action/player trace, deterministic seed-0 94-step terminal/raw outcome, global seat scores, explicit errors, exports, warnings and forbidden scope. Twelve focused and all 314 repository tests pass with two existing skips; compile, dependency, diff and independent trace/score-order probes pass. Accepted this rollout scope as current-scope complete and directly approved the exact bundled MahJax red rule-policy four-seat single-round implementation in `04M`. An exploratory seed-0 probe reaches terminal in 54 legal transitions with final raw rewards `(0,0,150,-120)`, cumulative `(-20,0,130,-130)` and global scores `(240,250,390,120)`. Zero gates remain before code. No learned model, training, production self-play, real data, Tenhou, strength, broad P8 or P9-P12 work was added.
 

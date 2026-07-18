@@ -27,11 +27,11 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the exact `04M`-approved P4
-MahJax bundled rule-policy four-seat single-round smoke. `04M` review-closed
-the 94-transition lowest-legal rollout after the exact global-seat-score fix
-and leaves zero gates before this policy-to-environment code. It is not
-training, production self-play or strength evidence:
+Current active stage is one exact code-review gate for the implemented
+`04M`-approved P4 MahJax bundled rule-policy four-seat single-round smoke.
+Seed 0 reaches a nontrivial terminal raw outcome in 54 legal transitions. This
+is policy-to-environment integration smoke, not training, production self-play
+or strength evidence:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
