@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P4 transition current-scope acceptance plus selection
-or rejection of one proven local riichi Mahjong environment integration path:
+Current active stage is direct P4 MahJax `v0.1.2` local integration smoke
+implementation after the exact integration-path decision in `04J`:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

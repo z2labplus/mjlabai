@@ -94,6 +94,16 @@
 | External environment selection ignores license/version/platform viability. | Dependency / Compliance | High | Medium | Next decision must use primary sources and record identity, license, version, compatibility and installability before approval. | Open |
 | A broad dependency is installed before exact approval. | Dependency / Scope | Medium | Medium | Current decision forbids install/implementation and must pin an exact integration smoke first. | Mitigated |
 
+## 2026-07-18 — P4 MahJax integration-path decision risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| MahJax alpha/provisional API changes invalidate the integration. | Dependency / Compatibility | High | Medium | Pin package `0.1.2`, tag/commit and JAX/JAXLIB `0.4.30`; smoke only documented public API; any pin change requires a new decision. | Mitigated |
+| Transitive dependency resolution fails on the current CPython 3.9/macOS arm64 host. | Dependency / Platform | High | Medium | Official package metadata and exact JAXLIB arm64 wheel are recorded; next task must stop on resolution/import failure rather than change pins. | Open |
+| Passing one MahJax transition is overclaimed as full Tenhou-rule conformance. | Evidence / Scope | High | High | `04J` grades only pinned local integration smoke evidence and requires separate conformance work. | Open |
+| Third-party package contents are copied into the repository. | Compliance / Repository | High | Low | Install only from pinned PyPI dependencies; prohibit vendoring source, wheels, binaries and artifacts. | Mitigated |
+| Dependency integration triggers another documentation chain instead of code. | Governance / Delivery | High | Medium | `04J` records zero gates and `10_NEXT` requires direct implementation. | Mitigated |
+
 ## 2026-07-18 — P8 interleaved trace approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

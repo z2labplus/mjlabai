@@ -8,6 +8,26 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P4 proven environment integration-path selection
+
+- Type: external primary-source dependency evidence plus internal exact-task
+  approval.
+- Selected MahJax `v0.1.2`, commit
+  `3f9cee195dcbe226c26c9f8802b1a3cb9e2de14f`, Apache-2.0.
+- Sources checked 2026-07-18:
+  <https://github.com/nissymori/mahjax>,
+  <https://github.com/nissymori/mahjax/releases/tag/v0.1.2>,
+  <https://pypi.org/project/mahjax/0.1.2/> and pinned source API/docs.
+- Evidence: Python `>=3.9`, pure-Python MahJax wheel, CPython 3.9/macOS arm64
+  JAXLIB `0.4.30` wheel, public red-mahjong init/legal-mask/observe/step/
+  reward/terminal API and active 2026 maintenance.
+- Alternatives: official `mjx` package documentation excludes Apple Silicon;
+  <https://github.com/MahjongRepository/mahjong> describes a hand calculator,
+  not an environment lifecycle.
+- Evidence grade: P4 dependency identity/rights/platform/interface selection
+  evidence only; install and executable conformance remain next. Not gameplay,
+  self-play, model-strength, Tenhou, stable-dan or P8-P12 evidence.
+
 ### 2026-07-18 — P4 synthetic environment transition review closure
 
 - Type: internal exact code-review closure evidence.

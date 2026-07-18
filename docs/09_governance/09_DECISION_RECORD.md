@@ -14,6 +14,37 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0177 — Select MahJax P4 Integration Path
+
+Decision:
+
+```text
+Accept the exact `04H`/`04I` scope as current-scope complete.
+Select MahJax v0.1.2 / commit 3f9cee1 / Apache-2.0.
+Proceed directly to the exact local CPU integration smoke in `04J`.
+```
+
+Rationale and evidence:
+
+- Official source/release/package metadata show a maintained four-player
+  riichi environment with init, legal-action mask, observation, transition,
+  reward and terminal-state interfaces.
+- The pinned package plus JAX/JAXLIB `0.4.30` supports the checked CPython
+  3.9/macOS arm64 host.
+- Legacy `mjx` lacks Apple Silicon support; `MahjongRepository/mahjong` is a
+  hand/scoring calculator, not an environment.
+
+Consequences:
+
+- Added `04J` with exact source, rights, pins, API, files, tests and stops.
+- Zero gates remain before installing and implementing the smoke.
+- No real data, Tenhou, production self-play/training/evaluation, strength,
+  broad P8 or P9-P12 approval follows.
+
+Status:
+
+Approved; direct pinned integration implementation is current next.
+
 ## 2026-07-18 — DR-0176 — Exact P4 Transition Review Closure
 
 Decision:

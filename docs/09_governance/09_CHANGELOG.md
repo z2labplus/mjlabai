@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.92
+
+- Accepted the exact `04H`/`04I` synthetic transition scope as current-scope
+  complete and selected MahJax `v0.1.2` as the one P4 integration path.
+- Pinned source tag/commit, Apache-2.0 license, PyPI wheel hash, host/runtime
+  compatibility, public init/legal-mask/observe/step API and exact next files.
+- Rejected legacy `mjx` for Apple Silicon incompatibility and
+  `MahjongRepository/mahjong` because it is not a game environment.
+- New `10_NEXT` first item directly installs pinned MahJax/JAX dependencies
+  and implements one CPU-only local legal transition smoke; zero gates remain.
+- No dependency was installed and no code, real data, Tenhou, self-play,
+  training, strength claim, broad P8 or P9-P12 work was added by this decision.
+
 ## 2026-07-18 - v3.91
 
 - Reviewed commit `897bfd3` against the exact `04H` approval in `04I`.

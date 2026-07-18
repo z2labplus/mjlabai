@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Decide P4 current-scope acceptance and select or reject one proven local riichi Mahjong environment integration path.
+- [ ] Install and implement the approved MahJax v0.1.2 local environment integration smoke.
 
 Current execution charter:
 
@@ -22,20 +22,21 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Accept or reject only the exact `04H` implementation review-closed in `04I`;
-  do not re-review or modify its production code/tests.
-- Inspect current primary sources for proven local/offline riichi Mahjong
-  environment or rules implementations. Verify source identity, license,
-  latest usable version/tag, Python/platform compatibility, installability,
-  legal-action/state-transition/observation interface and maintenance status.
-- Select exactly one integration-smoke path with pinned source/version/license,
-  exact files/API/tests and zero gates before code, or record a concrete
-  blocker and next lowest-cost resolution. No proposal chain may intervene.
-- Do not install or implement in this decision. Do not use real Tenhou/
-  platform data, accounts or automation; do not train/run production self-play,
-  make strength claims, or enter broad P8/P9-P12.
+- Execute exactly `04J`: pin `mahjax==0.1.2`, `jax==0.4.30` and
+  `jaxlib==0.4.30`; add only the approved integration module, package export,
+  focused tests and direct governance synchronization.
+- Use public `mahjax.make("red_mahjong")`, `env.init`, environment-owned
+  `legal_action_mask`, `env.observe` and one legal `env.step` only.
+- Remain CPU-only/local/offline. Do not use GPU, remote services, real Tenhou,
+  platform data/accounts/automation, external logs, real haifu or model output.
+- Do not vendor third-party source/artifacts, broaden rules/action adapters,
+  train, run self-play/evaluation, claim strength, or enter broad P8/P9-P12.
+- Zero documentation/proposal gates remain before code. If pinned install or
+  API compatibility fails, record the exact blocker instead of changing pins.
 
 ## Completed
+
+- [x] 2026-07-18 Accepted the exact `04H` transition scope review-closed in `04I` and selected one proven environment integration path in `04J`: MahJax `v0.1.2`, commit `3f9cee1`, Apache-2.0. Primary sources confirm a maintained four-player red-riichi environment with public init/legal-mask/observe/step/reward/terminal surfaces; package and JAX pins are compatible with the checked CPython 3.9/macOS arm64 host. Rejected legacy `mjx` because its published macOS support excludes Apple Silicon and rejected `MahjongRepository/mahjong` because it is a hand/scoring calculator rather than an environment. The next exact task pins `mahjax==0.1.2`, `jax==0.4.30`, `jaxlib==0.4.30` and implements one CPU-only legal transition smoke in the exact approved files with zero gates before code. No dependency was installed and no code, real data, Tenhou, self-play, training, strength claim or P8-P12 work was added by this decision.
 
 - [x] 2026-07-18 Reviewed commit `897bfd3` against the exact `04H` approval in `04I`. Decision: `A. Review can close.` Confirmed exact eight-symbol API, frozen action/state/result, fixed environment/ruleset/version/provenance, two authoritative legal actions, strict actor/type/tile/tsumogiri matching with action-ID exclusion, applied legal identity, deterministic event, immutable terminal next-seat state, errors, warnings and forbidden scope. Twelve focused tests and the full explicit 291-test repository run pass with two environment-gated skips; compile/diff checks and independent both-action/all-seat probes pass. No production code/test change or blocker was required. The next decision must accept/reject this scope and select or reject one proven local riichi Mahjong environment integration path from primary-source/license/installability evidence; another authored transition wrapper or docs chain is forbidden.
 

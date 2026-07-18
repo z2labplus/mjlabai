@@ -46,6 +46,14 @@ environment integration path rather than add another authored wrapper. It is
 P4 single-transition review evidence only, not gameplay/self-play or strength
 evidence.
 
+`docs/04_rl_selfplay/04J_P4_PROVEN_RIICHI_ENVIRONMENT_INTEGRATION_PATH_DECISION.md`
+accepts the exact `04H`/`04I` scope and selects MahJax `v0.1.2` at commit
+`3f9cee1` under Apache-2.0 as the pinned P4 local environment path. It records
+host compatibility, rejected alternatives, public API, exact files, pins,
+tests and stop conditions with zero gates before executable integration. It is
+dependency-selection evidence only, not gameplay, self-play or strength
+evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
