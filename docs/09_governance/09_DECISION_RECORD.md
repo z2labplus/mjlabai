@@ -14,6 +14,35 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0157 — Exact P8 Bounded Tabular Trainer Implemented
+
+Decision:
+
+```text
+Implement the exact `12AM` bounded synthetic/local tabular trainer smoke and
+advance directly to one code-review gate.
+```
+
+Rationale and evidence:
+
+- The task had zero remaining approval gates and fixed three exact source/test
+  files plus direct governance synchronization.
+- The implementation is the first bounded loop-based training smoke: 1 through
+  8 ordered in-memory passes, with one reviewed table-helper call per pass.
+- Eleven focused tests plus 101 approved regressions pass; compile and diff
+  checks pass.
+
+Consequences:
+
+- A bounded synthetic/local tabular training-loop artifact now exists.
+- The next task is its one exact implementation review, not a new boundary.
+- No model/network, optimizer, environment, self-play, production training/
+  evaluation, real data, strength, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Implemented; exact code review is current next.
+
 ## 2026-07-18 — DR-0156 — Two-Pass Acceptance And Bounded Trainer Approval
 
 Decision:

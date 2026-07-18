@@ -1,5 +1,21 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.72
+
+- Implemented the exact `12AM` bounded synthetic/local tabular trainer smoke.
+- Added the approved trainer module and 11 focused tests, and exported its five
+  public symbols through `mjlabai.rl`.
+- Enforced an exact tuple of 1 through 8 ordered passes, reviewed table-helper
+  reuse, state continuity, global record-ID uniqueness, frozen history and
+  pass-indexed chained errors.
+- Validation passed: 11 trainer tests, 101 approved regressions, compile checks
+  and `git diff --check`.
+- New `10_NEXT` first item is one exact implementation review; no sibling
+  boundary or proposal may intervene.
+- No unbounded loop, shuffle/minibatch/early-stop, persistence, environment,
+  self-play, model/network/optimizer/checkpoint, production evaluation, real/
+  external/platform data, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.71
 
 - Accepted the exact `12AK`/`12AL` two-pass sequence as current-scope complete

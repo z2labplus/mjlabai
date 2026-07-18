@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement exact bounded P8 synthetic/local tabular trainer smoke only.
+- [ ] Review exact bounded P8 synthetic/local tabular trainer smoke implementation.
 
 Current execution charter:
 
@@ -22,21 +22,23 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This first loop-based training smoke is directly approved by `12AM`; do not
-  insert another proposal, boundary, review or approval task.
-- Create/modify only `src/mjlabai/rl/__init__.py`,
-  `src/mjlabai/rl/synthetic_tabular_trainer_smoke.py`,
-  `tests/rl/test_synthetic_tabular_trainer_smoke.py` and direct governance
-  synchronization.
-- Implement the exact five-symbol API, exact outer tuple, 1-through-8 pass
-  bound, ordered table-helper loop, continuity, global ID uniqueness, frozen
-  output, tests and evidence grade in `12AM`.
-- Do not add more than eight passes, while/unbounded loop, shuffle/minibatch/
+- Review commit `HEAD` against the exact `12AM` approval and only the three
+  approved source/test files plus direct governance synchronization.
+- Verify the five-symbol API, exact outer tuple, hard 1-through-8 pass bound,
+  ordered table-helper loop, continuity, global ID uniqueness, frozen output,
+  error chaining, exports, tests, warnings and evidence grade.
+- Run the 11 focused trainer tests, the 101 approved regressions, compile/diff
+  checks and small in-memory adversarial probes.
+- Do not modify production code or tests unless a concrete blocker is found.
+  Do not create another boundary/proposal chain or approve a sibling feature.
+- Do not add more than eight passes, an unbounded loop, shuffle/minibatch/
   retry/early-stop, persistence, fixture/data, replay/environment/self-play,
   model/network/optimizer/checkpoint, production evaluation, path/CLI,
   dependency, real/external/platform data, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `12AM`-approved bounded P8 synthetic/local tabular trainer smoke. Added `src/mjlabai/rl/synthetic_tabular_trainer_smoke.py`, exported its five approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_tabular_trainer_smoke.py`. The frozen helper accepts only an exact tuple of 1 through 8 reviewed traces, iterates in input order, calls the reviewed table helper once per pass, carries final table state into the next pass, rejects duplicate record IDs globally, wraps pass failures with chained causes and returns immutable training history. Eleven focused trainer tests and 101 approved regressions pass; compile and diff checks pass. No unbounded loop, shuffle/minibatch/early-stop, persistence, fixture/data, replay/environment/self-play, model/network/optimizer/checkpoint, production evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is bounded synthetic/local tabular training-loop smoke evidence only, not model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 
 - [x] 2026-07-18 Accepted the exact `12AK` implementation review-closed in `12AL` as current-scope complete and directly approved the first loop-based training smoke in `12AM`. The selected outcome is one deterministic standard-library in-memory synthetic/local tabular trainer over an exact tuple of 1 through 8 reviewed traces. It iterates in input order, calls the reviewed table helper once per pass, carries table state, rejects duplicate IDs globally and returns frozen training history. `12AM` fixes the only approved files, five-symbol API, hard pass cap, inputs, semantics, output, 11 test categories and evidence grade; zero gates remain before code. No code, test, unbounded loop, shuffle/minibatch, persistence, fixture/data, replay/environment/self-play, model/network/optimizer/checkpoint, production evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added in this decision. The next task is direct trainer implementation, not another docs gate.
 

@@ -33,6 +33,13 @@ from mjlabai.rl.synthetic_policy_table_update_sequence_smoke import (
     SyntheticPolicyTableUpdateSequenceSmokeError,
     apply_synthetic_policy_table_update_sequence_smoke,
 )
+from mjlabai.rl.synthetic_tabular_trainer_smoke import (
+    MAX_SYNTHETIC_TABULAR_TRAINING_PASSES,
+    SYNTHETIC_TABULAR_TRAINER_SMOKE_VERSION,
+    SyntheticTabularTrainerSmokeError,
+    SyntheticTabularTrainingResult,
+    train_synthetic_policy_table_smoke,
+)
 
 __all__ = [
     "SYNTHETIC_LOCAL_SOURCE_KIND",
@@ -41,11 +48,15 @@ __all__ = [
     "SYNTHETIC_POLICY_UPDATE_TRACE_SMOKE_VERSION",
     "SYNTHETIC_POLICY_TABLE_UPDATE_SMOKE_VERSION",
     "SYNTHETIC_POLICY_TABLE_UPDATE_SEQUENCE_SMOKE_VERSION",
+    "MAX_SYNTHETIC_TABULAR_TRAINING_PASSES",
+    "SYNTHETIC_TABULAR_TRAINER_SMOKE_VERSION",
     "SyntheticPolicyTableEntry",
     "SyntheticPolicyTableUpdateResult",
     "SyntheticPolicyTableUpdateSmokeError",
     "SyntheticPolicyTableUpdateSequenceResult",
     "SyntheticPolicyTableUpdateSequenceSmokeError",
+    "SyntheticTabularTrainerSmokeError",
+    "SyntheticTabularTrainingResult",
     "SyntheticPolicyUpdateInput",
     "SyntheticPolicyUpdateResult",
     "SyntheticPolicyUpdateSequenceResult",
@@ -58,4 +69,5 @@ __all__ = [
     "apply_synthetic_policy_update_trace_smoke",
     "apply_synthetic_policy_table_update_smoke",
     "apply_synthetic_policy_table_update_sequence_smoke",
+    "train_synthetic_policy_table_smoke",
 ]

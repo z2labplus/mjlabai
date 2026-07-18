@@ -8,6 +8,23 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 bounded synthetic/local tabular trainer implementation
+
+- Type: internal executable bounded synthetic/local training-loop smoke
+  evidence.
+- Added only the `12AM`-approved trainer module, package exports, focused tests
+  and direct governance synchronization.
+- The helper accepts 1 through 8 ordered reviewed traces, calls the reviewed
+  table updater once per pass, carries table state and rejects record-ID reuse
+  across the whole run.
+- Validation: 11 focused trainer tests and 101 approved regressions passed;
+  compile and diff checks passed.
+- Evidence grade: P8 bounded synthetic/local tabular training-loop smoke
+  evidence only; implementation review remains next. This is not model/network
+  training, an environment, self-play, production training/evaluation,
+  model-strength, Tenhou, stable-dan, LuckyJ, candidate-promotion or P9-P12
+  evidence.
+
 ### 2026-07-18 — P8 two-pass acceptance and bounded trainer approval
 
 - Type: internal current-scope acceptance / exact bounded implementation
