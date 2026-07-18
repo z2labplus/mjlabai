@@ -8,6 +8,19 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — First RL update review and two-round continuity probe
+
+- Type: exact code-review closure, acceptance and direct bounded two-round P8
+  training-task approval evidence.
+- `04S` records `A. Review can close`; 10 focused and all 375 tests pass with
+  two existing skips plus compile/dependency/diff/direct probes.
+- Independent sequential probe: seed 1 reproduces `04R`; seed 5 after direct
+  parameter carry yields 32 transitions, seven project samples, return `-0.4`,
+  objective `-0.85308564 -> -0.87257367`, weight/bias deltas
+  `0.04183802 / 0.01353321`, all finite/legal/deterministic.
+- Evidence grade: bounded two-round task approval only; not self-play learning,
+  evaluation, improvement, league or strength.
+
 ### 2026-07-18 — First environment raw-outcome on-policy gradient update
 
 - Type: executable P8 local one-round RL parameter-update smoke evidence.

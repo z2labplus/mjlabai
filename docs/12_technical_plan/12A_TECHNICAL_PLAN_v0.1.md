@@ -28,11 +28,11 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 exact implementation review of the completed `04R` first environment raw-
-outcome on-policy gradient update. Seed 1 supplies eight legal project samples,
-raw return scale `-0.39`, one finite update and nonzero parameter deltas; the
-post-update round remains legal/deterministic. All 375 tests pass with two
-skips. This is not self-play learning, evaluation, improvement or strength.
+P8 direct implementation of the exact `04S`-approved two-round sequential raw-
+outcome training smoke. `04S` review-closes the first real environment update
+after all 375 tests pass. The next code executes exact seeds `(1,5)`, carries
+parameters directly and applies exactly one raw-return update per round. This
+is not self-play learning, evaluation, improvement or strength evidence.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

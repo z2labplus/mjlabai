@@ -172,6 +172,12 @@ legal seed-1 project trajectory with independent RNG, uses only normalized raw
 seat reward and applies exactly one finite in-memory gradient update. One exact
 code review is next. This is not self-play, improvement or strength evidence.
 
+`docs/04_rl_selfplay/04S_P8_ONE_ROUND_POLICY_GRADIENT_IMPLEMENTATION_REVIEW.md`
+reviews commit `4b779d5`, records `A. Review can close`, accepts the first raw-
+outcome update and directly approves one exact seeds-1/5 two-round sequential
+training smoke with direct parameter continuity. It is review/task-approval
+evidence only, not self-play, evaluation or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

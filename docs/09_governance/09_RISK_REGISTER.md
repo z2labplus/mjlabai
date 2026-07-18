@@ -142,6 +142,16 @@
 | Objective decrease is overclaimed as play improvement. | Evidence / Scope | Critical | High | Post trajectory/outcome is unchanged and warnings deny improvement, evaluation/ranking and strength. | Open |
 | Review starts another documentation chain. | Governance / Delivery | High | Medium | Exactly one review is next; closure must directly approve/defer material execution or record a genuine blocker. | Mitigated |
 
+## 2026-07-18 — P8 two-round sequential training approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Second round restarts from imitation parameters. | ML / Correctness | Critical | Medium | Directly pass step-0 updated arrays into seed-5 collection and assert continuity/delta lineage. | Open |
+| Two fixed rounds silently become a general trainer/replay loop. | Governance / Scope | High | Medium | Exact seeds tuple `(1,5)`, exactly two iterations/updates, no input/path/retry/replay. | Open |
+| Round-specific RNG is reused across seeds. | Engineering / Reproducibility | High | Low | Each collector derives three streams from its exact distinct round seed. | Open |
+| Two negative returns are overclaimed as learning quality. | Evidence / Scope | Critical | High | Report mechanics/objectives/deltas only; fixed warnings deny improvement/evaluation/strength. | Open |
+| Another planning chain delays approved sequence. | Governance / Delivery | High | Medium | `04S` leaves zero gates and `10_NEXT` requires direct implementation. | Mitigated |
+
 ## 2026-07-18 — P8 bounded policy-improvement sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

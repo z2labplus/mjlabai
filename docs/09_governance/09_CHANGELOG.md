@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.10
+
+- Added `04S`; reviewed commit `4b779d5` against exact `04R` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed genuine categorical on-policy actions, three RNG streams, raw-only
+  return, exactly one finite update, legal deterministic pre/post rounds and no
+  replay/persistence/self-play/evaluation surface.
+- Validation passed: 10 focused and all 375 tests with two skips; compile,
+  dependency, diff and independent probes pass.
+- Directly approved exact seeds `(1,5)` two-round sequential raw-outcome
+  training with parameter continuity and two total updates. No self-play
+  learning, evaluation, real data, strength or P9-P12 work was added.
+
 ## 2026-07-18 - v4.09
 
 - Implemented the exact `04R` first P8 MahJax on-policy raw-outcome gradient

@@ -211,6 +211,32 @@ Status:
 
 Implemented; exact one-round update review is current next.
 
+## 2026-07-18 — DR-0195 — Close First RL Update Review And Approve Two Rounds
+
+Decision:
+
+```text
+A. Review can close.
+Accept the exact `04R` update and directly approve the exact `04S` two-round
+sequential raw-outcome training smoke.
+```
+
+Rationale and evidence:
+
+- `4b779d5` conforms and all 375 tests pass with two existing skips.
+- The first update is truly on-policy, legal, raw-return-only and bounded.
+- Independent `(1,5)` sequence probe yields finite deterministic objectives and
+  deltas for both rounds under direct parameter carry.
+
+Consequences:
+
+- Exactly two sequential environment updates are now directly executable.
+- Fixed rule opponents remain; no self-play/evaluation/strength is approved.
+
+Status:
+
+Approved; direct two-round training implementation is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

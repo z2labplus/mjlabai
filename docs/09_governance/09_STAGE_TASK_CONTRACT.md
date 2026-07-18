@@ -2,9 +2,9 @@
 
 ## Current stage
 
-P8 exact implementation review of the completed `04R` MahJax one-round
-on-policy raw-outcome gradient update. Exactly one legal mixed trajectory and
-one update are implemented; review must not expand into self-play/evaluation.
+P8 direct implementation of the exact `04S`-approved MahJax two-round
+sequential on-policy raw-outcome training smoke, fixed seeds `(1,5)`, direct
+parameter continuity and exactly two updates against fixed rule opponents.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -584,6 +584,5 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04R` seed-1 categorical trajectory and one normalized raw-
-outcome gradient update. No production change absent a blocker. Closure must
-directly approve/defer material execution; another planning chain is forbidden.
+Implement exact `04S` two-round parameter-continuous training. No proposal,
+boundary or review may intervene before code.
