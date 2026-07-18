@@ -211,6 +211,16 @@ outcome smoke. Independent probes show this representation yields nonzero raw
 outcomes in 7 of 16 exact project-only rounds. This is review/task-approval
 evidence, not production training, self-play evaluation or strength evidence.
 
+The exact `04U` categorical-MLP task is implemented in
+`src/mjlabai/supervised/mahjax_categorical_mlp_imitation_training_smoke.py`
+with focused tests in
+`tests/supervised/test_mahjax_categorical_mlp_imitation_training_smoke.py`.
+It uses exact public current-player features, separated local teacher seeds,
+48 deterministic Adam epochs and 16 legal terminal all-project diagnostics;
+seven fixed seeds produce nonzero raw outcomes. One exact code review is next.
+This is local initialization/outcome smoke evidence, not an RL update,
+production self-play evaluation, improvement or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

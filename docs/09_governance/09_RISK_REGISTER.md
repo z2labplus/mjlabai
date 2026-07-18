@@ -9,6 +9,17 @@
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
 
+## 2026-07-18 — P7/P8 categorical MLP training implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Categorical features leak opponent-private state. | Research / Leakage | Critical | Low | Runtime encoder accepts only the exact current-player observation dict; focused source/layout tests prohibit direct player-hand state reads. | Mitigated |
+| Train/evaluation source separation or teacher legality drifts. | Research / Correctness | Critical | Low | Exact disjoint seeds and `482/221` counts are pinned; every teacher label is checked against its authoritative 87-action mask. | Mitigated |
+| Tiny-data overfitting is mistaken for general policy quality. | ML / Evidence | Critical | High | Report both train/eval loss and accuracy; evidence grade explicitly limits this to local imitation/outcome smoke. | Open |
+| Public API exposes arrays or training silently persists artifacts. | Governance / Artifact | High | Low | Frozen public result has no parameters; arrays remain in an unexported in-process helper and source tests forbid path/save/load behavior. | Mitigated |
+| Seven nonzero outcomes are mislabeled RL improvement or strength. | Evidence / Scope | Critical | High | No RL update or baseline comparison occurs; warnings deny production self-play, evaluation, stable-dan and LuckyJ claims. | Open |
+| Review restarts planning instead of applying outcome signal. | Governance / Delivery | High | Medium | Exactly one code review is next; closure must directly approve/defer one material raw-outcome update or record a genuine blocker. | Mitigated |
+
 ## 2026-07-18 — P8 two-round sequential raw-outcome training risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

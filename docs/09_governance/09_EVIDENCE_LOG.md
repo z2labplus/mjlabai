@@ -8,6 +8,23 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — Categorical MLP training and nonzero all-project outcomes
+
+- Type: executable P7/P8 local representation, imitation-training and
+  all-project raw-outcome-signal smoke evidence.
+- Exact disjoint local teacher seeds produce `482/221` legal examples. The
+  `882->64 ReLU->87` model trains for 48 deterministic full-batch Adam epochs.
+- Train/evaluation loss changes from `1.95389104/2.03622222` to
+  `0.36734492/1.77358353`; exact accuracy changes from
+  `0.28215769/0.23076925` to `0.93153530/0.58371043`.
+- All-project seeds `0..15` terminate legally. Nonzero cumulative raw outcomes
+  occur at `(0,1,3,5,6,7,10)` with exact `04U` vectors; no update occurs in
+  those diagnostic rounds.
+- Validation: nine focused and all 404 explicit repository tests pass with two
+  skips; compilation and an independent public-result probe pass.
+- Evidence grade: local categorical-MLP initialization/outcome smoke only;
+  not RL improvement, production self-play/evaluation or strength evidence.
+
 ### 2026-07-18 — Multi-project review and categorical-MLP signal probe
 
 - Type: exact review closure after blocker fix plus direct executable

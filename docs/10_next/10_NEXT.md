@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact MahJax categorical-feature MLP imitation training and all-project outcome smoke.
+- [ ] Review the exact MahJax categorical-feature MLP imitation training and all-project outcome smoke implementation.
 
 Current execution charter:
 
@@ -22,18 +22,31 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Execute exact `04U` in its two approved source/test files plus governance.
-- Encode exact 882 categorical observation features; no hidden opponent state.
-- Collect legal bundled-rule labels from train seeds `0..7` and independent
-  evaluation seeds `8..11`; no saved dataset.
-- Train exact `882->64 ReLU->87` MLP for 48 full-batch Adam epochs and pin
-  `04U` counts/losses/accuracies.
-- Run exact greedy all-project rounds for seeds `0..15`; pin legal terminal
-  diagnostics and nonzero seeds `(0,1,3,5,6,7,10)`; no RL update.
-- Frozen summary/private in-process arrays only. No persistence, external/real
-  data, production self-play/evaluation, strength claim or P9-P12.
+- Review only the exact `04U` source/test implementation and direct governance.
+- Verify the 882-feature current-player encoder, exact `482/221` separated
+  examples, `882->64 ReLU->87` model and 48 full-batch Adam epochs.
+- Verify exact losses/accuracies, private in-process parameters, deterministic
+  frozen result and no persistence or opponent-hidden-state access.
+- Verify all 16 greedy all-project rounds are legal/terminal and exact nonzero
+  seeds/outcomes match `04U`; no RL update occurs in the implementation.
+- Change code/tests only for a concrete blocker. On closure, directly approve
+  or defer one material P8 raw-outcome update using this non-degenerate policy;
+  another proposal/boundary chain is forbidden.
+- No external/real data, production self-play/evaluation, strength claim or
+  P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `04U`-approved categorical-feature MLP
+  imitation training and all-project outcome smoke in its two approved files.
+  Exact train/evaluation seeds yield `482/221` legal examples; the
+  `882->64 ReLU->87` model trains for 48 Adam epochs, reaching train/eval loss
+  `0.36734492/1.77358353` and exact accuracy `0.93153530/0.58371043`. Greedy
+  shared-project seeds `0..15` all terminate legally, with exact nonzero raw
+  outcomes at `(0,1,3,5,6,7,10)`. Nine focused and all 404 explicit repository
+  tests pass with two skips; compile and direct probes pass. No persistence,
+  RL update, production self-play/evaluation, real data, strength or P9-P12
+  work was added. One exact implementation review is next.
 
 - [x] 2026-07-18 Reviewed commit `c47bb73` against exact `04T` approval in `04U`. One blocker was found and fixed: runtime-loading failure leaked the old module's exception type; the exact source/test fix now wraps it in the new public error. Decision after fix: `A. Review can close.` Eleven focused and all 395 explicit repository tests pass with two skips; compile, dependency, diff and direct probes pass. Confirmed exact participants, independent RNG, 44 project-only gradient decisions, actor-indexed returns, one legal 92-step terminal round, one finite aggregate update, frozen output and no I/O/replay/persistence. Representation probes found the current scaled-ID linear policy yields zero all-project outcomes even after expanded linear training. A categorical 882-feature, 64-hidden MLP trained for 48 epochs reaches train/eval accuracy `0.93153530/0.58371043` and produces nonzero outcomes in 7 of 16 all-project seeds. Directly approved that exact executable initialization/outcome smoke with zero gates before code. No production self-play/evaluation, real data, strength or P9-P12 work was added.
 

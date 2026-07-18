@@ -362,6 +362,37 @@ Status:
 
 Approved; direct categorical-MLP training/outcome implementation is current next.
 
+## 2026-07-18 — DR-0200 — Complete Categorical MLP Outcome-Signal Training
+
+Decision:
+
+```text
+Complete the exact `04U` categorical-feature MLP imitation training and
+all-project outcome smoke, then require one exact implementation review.
+```
+
+Rationale and evidence:
+
+- Exact current-player categorical features replace the measured scaled-ID
+  linear representation blocker without opponent-hidden-state access.
+- Disjoint local teacher seeds yield `482/221` legal examples; 48 Adam epochs
+  improve train/evaluation loss and exact imitation accuracy.
+- All 16 shared-project rounds terminate legally and seven fixed seeds produce
+  nonzero cumulative raw outcomes, creating usable future update signal.
+- Nine focused and all 404 explicit repository tests pass with two skips.
+
+Consequences:
+
+- The repository now has a non-degenerate all-project policy initialization for
+  a future exact environment raw-outcome update.
+- No update occurs in this task; the result is not improvement, evaluation,
+  self-play strength, stable-dan or LuckyJ evidence.
+- Exactly one code review is next; another docs chain is barred.
+
+Status:
+
+Implemented; exact categorical-MLP training/outcome review is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

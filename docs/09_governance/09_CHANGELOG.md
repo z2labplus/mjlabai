@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.15
+
+- Implemented the exact `04U` categorical-feature MahJax MLP imitation
+  training and all-project outcome smoke in the two approved source/test files.
+- Exact disjoint train/evaluation sources contain `482/221` legal decisions;
+  the `882->64 ReLU->87` model runs 48 deterministic full-batch Adam epochs.
+- Final train/eval loss is `0.36734492/1.77358353`; exact accuracy is
+  `0.93153530/0.58371043`, with nonzero parameter change and no persistence.
+- All 16 shared-project greedy rounds terminate legally. Exact nonzero seeds
+  are `(0,1,3,5,6,7,10)` with the reviewed raw-outcome vectors.
+- Validation passed: nine focused and all 404 explicit repository tests with
+  two skips, compile and direct probes. No RL update, production self-play/
+  evaluation, real data, strength or P9-P12 work was added.
+
 ## 2026-07-18 - v4.14
 
 - Added `04U`; reviewed commit `c47bb73` against exact `04T` approval.

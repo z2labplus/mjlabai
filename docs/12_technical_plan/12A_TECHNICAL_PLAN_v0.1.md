@@ -28,14 +28,16 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 direct implementation of the exact `04U`-approved categorical-feature MLP
-imitation training and all-project outcome smoke. `04U` review-closes the two-
-project-seat update after one runtime-error blocker fix and all 395 explicit
-tests pass. The next code uses 882 categorical features, a 64-hidden MLP, exact
-local train/eval seeds and 48 Adam epochs, then runs all-project seeds `0..15`.
-The probe yields seven nonzero terminal outcomes, directly addressing the
-current linear-policy zero-signal blocker. This is local initialization/outcome
-evidence, not production self-play, evaluation, improvement or strength.
+P8 exact implementation review of the `04U`-approved categorical-feature MLP
+imitation training and all-project outcome smoke. Exact local train/evaluation
+sources contain `482/221` legal examples; the `882->64 ReLU->87` model trains
+for 48 Adam epochs and reaches evaluation loss/accuracy
+`1.77358353/0.58371043`. All 16 shared-project rounds terminate legally and
+seven fixed seeds yield nonzero raw outcomes, resolving the current linear-
+policy zero-signal blocker at this diagnostic level. Nine focused and all 404
+explicit tests pass with two skips. One code review is next, not another
+planning chain. This is local initialization/outcome evidence, not an RL
+update, production self-play, evaluation, improvement or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
