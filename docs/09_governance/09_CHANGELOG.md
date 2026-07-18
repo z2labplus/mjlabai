@@ -1,5 +1,26 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.55
+
+- Implemented the exact minimal P8 synthetic/local policy-update smoke
+  approved by `12AC`.
+- Added:
+  - `src/mjlabai/rl/__init__.py`
+  - `src/mjlabai/rl/synthetic_policy_update_smoke.py`
+  - `tests/rl/test_synthetic_policy_update_smoke.py`
+- Implemented one immutable, deterministic, standard-library, single-record
+  tabular action-value update with exact terminal/non-terminal formulas.
+- Enforced finite numeric values, learning-rate/discount ranges, terminal
+  consistency, ASCII identifier tokens and synthetic/local provenance flags.
+- Validation passed: 11 focused RL tests, 46 approved P6/P7 regression tests
+  and `git diff --check`.
+- New `10_NEXT` first item: `Review exact minimal P8 synthetic/local policy-
+  update smoke implementation.`
+- No fixture/data, environment, episode, self-play, model, optimizer, training
+  loop, evaluation, artifact, path/CLI, dependency, real/external/platform
+  data, broad P8 or P9-P12 work was added. This is numerical smoke evidence
+  only, not model-strength evidence.
+
 ## 2026-07-18 - v3.54
 
 - Approved the next exact minimal P8 synthetic/local policy-update smoke

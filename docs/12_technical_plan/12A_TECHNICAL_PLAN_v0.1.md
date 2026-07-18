@@ -28,7 +28,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 exact minimal synthetic/local policy-update smoke implementation.
+P8 exact minimal synthetic/local policy-update smoke implementation review.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
@@ -121,8 +121,10 @@ synthetic/local policy-update smoke as the executable outcome. `12AC` records
 `Approved for next exact minimal implementation task`, fixes the exact three
 source/test files, single-record tabular action-value formula, provenance and
 validation boundaries, and records the user-authorized P8-E15 transition.
-The next first task is `Implement exact minimal P8 synthetic/local policy-
-update smoke only.` No mandatory gate remains before that exact task. Broad
+The exact implementation now exists in the three `12AC`-approved files and
+passes 11 focused tests plus 46 approved P6/P7 regression tests. The next first
+task is `Review exact minimal P8 synthetic/local policy-update smoke
+implementation.` Broad
 P8, production training/evaluation, self-play, model/artifact use, real data,
 strength claims and P9-P12 remain unapproved.
 
@@ -614,9 +616,10 @@ P8 training / evaluation model-use boundary = defined in `12Y` and reviewed
 in `12Z`; review can close.
 P8 model / artifact provenance manifest boundary = defined in `12AA` and
 reviewed in `12AB`; review can close with no genuine blocker.
-P8 exact minimal synthetic/local policy-update smoke = approved in `12AC` for
-three exact source/test files and one deterministic action-value update only.
-Next = implement that exact minimal smoke; no additional docs gate.
+P8 exact minimal synthetic/local policy-update smoke = implemented in the
+three `12AC`-approved source/test files with one deterministic action-value
+update only; 57 tests pass.
+Next = review that exact implementation; no sibling boundary or planning chain.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -750,7 +753,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Review P8 training / evaluation model-use boundary before any implementation.
+Review exact minimal P8 synthetic/local policy-update smoke implementation.
 ```
 
 `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`
@@ -782,8 +785,8 @@ boundary; `12Z` reviews it and records `A. Review can close` without modifying
 `12Y`. `12AA` defines the docs-only model/artifact provenance-manifest
 boundary. `12AB` reviews it, records `A. Review can close`, finds no genuine
 blocker and leaves `12AA` unchanged. `12AC` approves exactly one deterministic
-CPU-only synthetic/local policy-update smoke and the next task is its direct
-implementation. The approval does not cover broad P8, model loading, source/
+CPU-only synthetic/local policy-update smoke. That exact implementation is
+complete and the next task is its direct review. The approval does not cover broad P8, model loading, source/
 real-data work, datasets, production training/evaluation, model-output
 integration, self-play/RL/league, P9-P12 or model-strength claims.
 

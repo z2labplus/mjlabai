@@ -8,6 +8,26 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 minimal synthetic/local policy-update smoke implementation
+
+- Type: internal executable / synthetic numerical smoke evidence.
+- Stage: exact minimal P8 synthetic/local policy-update implementation review.
+- Added files:
+  - `src/mjlabai/rl/__init__.py`
+  - `src/mjlabai/rl/synthetic_policy_update_smoke.py`
+  - `tests/rl/test_synthetic_policy_update_smoke.py`
+- Behavior: one deterministic terminal or non-terminal tabular action-value
+  update over one already-loaded project-authored synthetic/local record.
+- Validation:
+  - focused RL suite: 11 tests passed.
+  - approved P6/P7 regression set: 46 tests passed.
+  - `git diff --check`: passed.
+- Evidence grade:
+  - P8 synthetic/local numerical policy-update smoke evidence only.
+- Not evidence of an RL algorithm choice, environment, self-play, production
+  training, evaluation, model quality, Tenhou/stable-dan/LuckyJ performance,
+  candidate promotion, broad P8 or P9-P12.
+
 ### 2026-07-18 — P8 minimal synthetic/local policy-update smoke approval decision
 
 - Type: internal governance / exact implementation approval-decision evidence.

@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement exact minimal P8 synthetic/local policy-update smoke only.
+- [ ] Review exact minimal P8 synthetic/local policy-update smoke implementation.
 
 Current execution charter:
 
@@ -22,43 +22,24 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is the exact implementation approved by `12AC`. Implement it now; do
-  not insert another proposal, boundary or approval task.
-- Create or modify only:
-  - `src/mjlabai/rl/__init__.py`
-  - `src/mjlabai/rl/synthetic_policy_update_smoke.py`
-  - `tests/rl/test_synthetic_policy_update_smoke.py`
-  - direct docs/governance synchronization required by this implementation.
-- Use Python standard library only, CPU only and deterministic in-memory
-  project-authored synthetic/local inputs only.
-- Implement one frozen input dataclass, one frozen result dataclass, one
-  validation error and one single-record update function as approved in
-  `12AC`.
-- Implement exactly:
-  - terminal target: `reward`.
-  - non-terminal target: `reward + discount_factor * next_max_action_value`.
-  - TD error: `target_value - current_action_value`.
-  - updated value: `current_action_value + learning_rate * td_error`.
-- Enforce finite numeric inputs, `0 < learning_rate <= 1`,
-  `0 <= discount_factor <= 1`, terminal/next-value consistency and all
-  synthetic/local provenance guardrails.
-- Do not mutate the input. Repeated identical calls must return equal results.
-- Output only the approved numerical diagnostics, safety summary, evidence
-  grade and non-evidence warnings.
-- Do not add fixtures or data files, batch/episode/environment/self-play
-  behavior, action selection, model output, neural networks, optimizer,
-  autograd, tensors, training loops, evaluation, checkpoint or artifacts.
-- Do not add path/file/URL ingestion, parser/reader, CLI, new dependencies,
-  timing, nondeterminism, concurrency, GPU or distributed execution.
-- Do not use real Tenhou/haifu, external logs, platform data, accounts,
-  secrets, third-party binaries/services or unknown model artifacts.
-- Do not create platform automation, scraping, evasion or account tooling.
-- Keep broad P8 and P9-P12 unapproved. Make no model-strength, Tenhou ranked,
-  stable-dan, LuckyJ comparison or candidate-promotion claim.
-- Stop before commit if any exact file, formula, API, input/output, dependency
-  or evidence boundary in `12AC` cannot be preserved.
+- Review only the three exact implementation/test files approved by `12AC`
+  against its formula, API, validation, provenance, output and evidence
+  boundaries.
+- Re-run the focused RL test and approved P6/P7 regression commands.
+- Do not add another sibling boundary, proposal or approval document.
+- Do not expand into fixtures/data, batch/episode/environment/self-play,
+  action selection, models, optimizers, training loops, evaluation, artifacts,
+  paths/CLI, new dependencies, real/external/platform data or P9-P12.
+- If a blocker exists, record the exact finding and set an exact fix task. If
+  none exists, close this implementation review and select one concrete P8
+  execution/acceptance decision rather than another planning chain.
+- Keep the evidence grade at P8 synthetic/local numerical policy-update smoke
+  evidence only. Make no model-strength, Tenhou ranked, stable-dan, LuckyJ or
+  candidate-promotion claim.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact minimal P8 synthetic/local policy-update smoke approved by `12AC`: added `src/mjlabai/rl/__init__.py`, `src/mjlabai/rl/synthetic_policy_update_smoke.py` and `tests/rl/test_synthetic_policy_update_smoke.py`. The standard-library helper performs one deterministic terminal or non-terminal tabular action-value update over one immutable, already-loaded project-authored synthetic/local record; validates finite numbers, parameter ranges, identifier tokens, terminal consistency and exact provenance guardrails; and returns only approved diagnostics, an all-safe summary, evidence grade and warnings. The focused suite ran 11 tests and the six approved P6/P7 regression modules ran 46 tests, all passing; `git diff --check` passed. No fixture/data, environment, episode, self-play, action selection, model, optimizer, training loop, evaluation, artifact, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is executable numerical smoke evidence only, not model-strength evidence. The next task is `Review exact minimal P8 synthetic/local policy-update smoke implementation.`
 
 - [x] 2026-07-18 Approved the exact minimal P8 synthetic/local policy-update smoke implementation: added `docs/12_technical_plan/12AC_P8_MINIMAL_SYNTHETIC_LOCAL_POLICY_UPDATE_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`, recorded `Approved for next exact minimal implementation task`, and limited the future implementation to `src/mjlabai/rl/__init__.py`, `src/mjlabai/rl/synthetic_policy_update_smoke.py`, `tests/rl/test_synthetic_policy_update_smoke.py` and direct docs/governance synchronization. The approved behavior is one deterministic CPU-only standard-library tabular action-value temporal-difference update over one in-memory project-authored synthetic/local record, with exact terminal/non-terminal target, TD-error and updated-value formulas, finite-number/provenance validation, immutable input, deterministic result, evidence warnings and tests. User instruction to continue after `12AB` records the exact P8-E15 human transition authorization; `12AC` satisfies PM-E14; the new exact `10_NEXT` task satisfies P8-E14/PM-E15 for this task only. No implementation was executed in this decision. No fixture/data, environment, episode, self-play, model, checkpoint, optimizer, training loop, evaluation, real/external/platform data, CLI, dependency, strength claim, broad P8 or P9-P12 work was added or approved. The next task is `Implement exact minimal P8 synthetic/local policy-update smoke only.`
 

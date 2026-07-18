@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is the exact minimal P8 synthetic/local policy-update
-smoke implementation authorized by `12AC`:
+Current active stage is review of the exact minimal P8 synthetic/local policy-
+update smoke implementation authorized by `12AC`:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -128,12 +128,12 @@ implementation and external artifact use remain deferred. `12AB` reviews
 executable outcome is one exact deterministic CPU-only synthetic/local
 policy-update smoke. `12AC` records `Approved for next exact minimal
 implementation task`, names the exact three source/test files and fixes the
-single-record tabular action-value target, TD-error and update formulas. User
-instruction to continue records the exact human transition authorization.
-The next first task is `Implement exact minimal P8 synthetic/local
-policy-update smoke only.` No gate remains before that exact code task. Broad
-P8 entry, production training/evaluation, self-play, model/artifact use, real
-data, strength claims and P9-P12 remain unapproved.
+single-record tabular action-value target, TD-error and update formulas. That
+exact code is now implemented in `src/mjlabai/rl/` with 11 focused tests; the
+approved 46-test P6/P7 regression set also passes. The next first task is
+`Review exact minimal P8 synthetic/local policy-update smoke implementation.`
+Broad P8 entry, production training/evaluation, self-play, model/artifact use,
+real data, strength claims and P9-P12 remain unapproved.
 
 Anti-overdocumentation governance is now mandatory. A boundary may use one
 definition plus one review by default; more than four consecutive docs-only

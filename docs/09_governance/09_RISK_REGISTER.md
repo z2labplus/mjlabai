@@ -9,6 +9,15 @@
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
 
+## 2026-07-18 — P8 minimal policy-update smoke implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Numerical smoke silently accepts invalid or non-local inputs. | Engineering / Data | High | Low | Exact finite-value, type, identifier, terminal-state and provenance validation is covered by focused tests. | Mitigated |
+| A one-record update is mistaken for a production training system. | Evidence / Scope | High | High | Module/result warnings and governance records explicitly deny environment, episode, self-play, model, optimizer, training-loop and strength semantics. | Open |
+| The implementation mutates input or becomes nondeterministic. | Engineering / Reproducibility | Medium | Low | Frozen dataclasses plus repeated-call equality and immutability tests. | Mitigated |
+| Code review expands into another long docs-only planning chain. | Governance / Delivery | High | Medium | `10_NEXT` permits one exact implementation review and requires an execution/acceptance decision when no blocker exists. | Open |
+
 ## 2026-07-18 — P8 minimal policy-update smoke approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
@@ -18,7 +27,7 @@
 | Synthetic flags are bypassed and real/model/self-play data reaches the helper. | Data / Compliance | High | Low | Require exact synthetic/local provenance values and reject real, external, platform, model-output and self-play flags. | Open |
 | NaN, infinity, bool-as-number or invalid hyperparameters produce misleading output. | Engineering / Correctness | Medium | Medium | Require finite-number checks, strict ranges and terminal/next-value consistency tests. | Open |
 | Passing smoke tests are overclaimed as learning quality or strength. | Evidence / Research | High | High | Result warnings and governance grade remain numerical smoke evidence only; no Tenhou/stable-dan/LuckyJ claim. | Open |
-| Another docs gate delays the approved executable task. | Governance / Delivery | High | Medium | `10_NEXT` points directly to implementation; no proposal/boundary/review may be inserted first. | Mitigated |
+| Another docs gate delays the approved executable task. | Governance / Delivery | High | Medium | The exact executable task is complete; no proposal/boundary/review was inserted before it. | Closed |
 
 ## 2026-07-18 — P8 provenance-manifest boundary review risks
 
@@ -31,7 +40,8 @@
 | Real data, external artifacts or framework dependencies enter through the minimal task. | Compliance / Scope | High | Medium | Permit only in-memory project-authored synthetic/local records; forbid ingestion, weights, third-party binaries/services and broad dependencies. | Open |
 
 The review found no blocker that requires another boundary document. The
-exact approval decision is now recorded in `12AC` and implementation is next.
+exact approval decision is recorded in `12AC`, and its implementation is now
+complete pending one exact code-review gate.
 
 ## 2026-07-15 — P8 model / artifact provenance manifest boundary definition risks
 

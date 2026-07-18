@@ -2,7 +2,7 @@
 
 ## Current stage
 
-P8 exact minimal synthetic/local policy-update smoke implementation.
+P8 exact minimal synthetic/local policy-update smoke implementation review.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -73,8 +73,10 @@ storage, signing, packaging and external-artifact choice remains deferred.
 `12AB` reviews `12AA`, records `A. Review can close`, finds no genuine blocker
 and leaves `12AA` unchanged. `12AC` records `Approved for next exact minimal
 implementation task` for one deterministic single-record tabular action-value
-update and three exact source/test files. The current first task is `Implement
-exact minimal P8 synthetic/local policy-update smoke only.` Production code
+update and three exact source/test files. That implementation is now complete
+with 11 focused tests and 46 approved regression tests passing. The current
+first task is `Review exact minimal P8 synthetic/local policy-update smoke
+implementation.` Production code
 outside that exact approval, fixtures, data files, manifest schemas/loaders/
 artifacts, source approval,
 source ingestion, broad
@@ -384,8 +386,8 @@ P6 implementation = closed except for separately approved future tasks
 P8 model-output interface dependency boundary = defined in `12W` and reviewed in `12X`; review can close
 P8 training / evaluation model-use boundary = defined in `12Y` and reviewed in `12Z`; review can close
 P8 model / artifact provenance manifest boundary = defined in `12AA` and reviewed in `12AB`; review can close
-P8 exact minimal synthetic/local policy-update smoke = approved in `12AC`; no gate remains before exact code
-Next = implement that exact minimal smoke only
+P8 exact minimal synthetic/local policy-update smoke = implemented in the three `12AC`-approved files; exact implementation review is next
+Next = review that exact implementation; no sibling boundary or planning chain
 ```
 
 ## AI role
@@ -394,10 +396,10 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Implement only the deterministic CPU-only standard-library P8 synthetic/local
-policy-update smoke approved in `12AC`. Create only the three exact source/test
-files, enforce the exact formula, provenance, validation, output and evidence
-boundaries, and stop on any scope expansion. Broad P8, source/real-data work,
+Review only the deterministic CPU-only standard-library P8 synthetic/local
+policy-update smoke implemented in the three `12AC`-approved source/test files.
+Verify the exact formula, provenance, validation, output and evidence
+boundaries, and record an exact blocker if any exists. Broad P8, source/real-data work,
 datasets, production training/evaluation, self-play/league, model/artifact use,
 model-output integration, CLI, P9-P12 and strength claims remain unapproved.
 

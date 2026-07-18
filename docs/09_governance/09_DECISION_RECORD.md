@@ -14,6 +14,47 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0141 — Exact Minimal P8 Policy-Update Smoke Implemented
+
+Decision:
+
+```text
+Execute the exact `12AC` implementation without scope expansion; review it next.
+```
+
+Context:
+
+- `12AC` approved one deterministic in-memory synthetic/local numerical update
+  in three exact source/test files.
+- No mandatory gate remained before that implementation.
+
+Rationale:
+
+- Executing the smallest approved artifact ends the P8 docs-only chain and
+  validates learning-update mechanics without introducing a model,
+  environment, self-play or production training loop.
+
+Consequences:
+
+- Added `src/mjlabai/rl/__init__.py`,
+  `src/mjlabai/rl/synthetic_policy_update_smoke.py` and
+  `tests/rl/test_synthetic_policy_update_smoke.py`.
+- 11 focused tests and 46 approved regression tests pass.
+- The next task is one exact implementation review, not another boundary.
+- Broad P8, real data, models, self-play, production training/evaluation,
+  strength claims and P9-P12 remain unapproved.
+
+Linked docs:
+
+- `docs/12_technical_plan/12AC_P8_MINIMAL_SYNTHETIC_LOCAL_POLICY_UPDATE_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+Implemented; exact code-review gate is next.
+
 ## 2026-07-18 — DR-0140 — Exact Minimal P8 Synthetic/Local Policy-Update Smoke Approval
 
 Decision:
