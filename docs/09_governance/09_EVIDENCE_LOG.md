@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P4 rule-policy review and project model bridge probe
+
+- Type: exact code-review closure, current-scope acceptance and direct next
+  executable task-approval evidence.
+- `04N` records `A. Review can close`; 11 focused and all 325 tests pass with
+  two existing skips.
+- Primary installed runtime behavior: `observe_type="2D"` raises not-developed;
+  current public dict shapes flatten to exactly 630 audited features.
+- Independent random-initialized `(630,87)` masked-linear-policy seed-0 probe:
+  91 legal transitions, terminal true, no truncation, zero raw/cumulative
+  rewards and global scores `(250,250,250,250)`.
+- Evidence grade: P4 bridge review and P4/P8 untrained model-output task approval
+  only; not training, production self-play, model strength or Tenhou evidence.
+
 ### 2026-07-18 — P4 bundled rule-policy environment bridge implementation
 
 - Type: executable pinned local policy-to-environment single-round smoke.

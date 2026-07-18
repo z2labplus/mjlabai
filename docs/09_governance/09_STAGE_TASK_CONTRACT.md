@@ -2,9 +2,9 @@
 
 ## Current stage
 
-P4 exact code-review gate for the implemented `04M`-approved MahJax bundled
-rule-policy four-seat single-round smoke with deterministic seed-0 54-step
-terminal raw outcome.
+P4/P8 direct implementation of the exact `04N`-approved MahJax 630-feature
+public-observation encoder and project-owned random-initialized masked
+87-action linear-policy single-round smoke.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -584,5 +584,5 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04M` bundled rule-policy round implementation. No production
-change absent a concrete blocker and no new proposal/boundary chain.
+Implement the exact `04N` public-observation/linear-policy round bridge. No
+proposal, boundary or review may intervene before code.

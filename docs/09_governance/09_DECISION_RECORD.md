@@ -14,6 +14,35 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0185 — Close Rule Policy Review And Approve Project Model Bridge
+
+Decision:
+
+```text
+A. Review can close.
+Accept the exact bundled-policy bridge and directly approve the `04N`
+public-observation encoder plus masked untrained 87-action linear-policy round.
+```
+
+Rationale and evidence:
+
+- `76632c9` conforms exactly and all 325 tests pass.
+- MahJax `v0.1.2` has no implemented 2D observation, so an explicit audited
+  public dict encoder is required before a project model can act.
+- An independent 630-feature/87-action probe terminates seed 0 legally in 91
+  transitions, proving the exact next path is executable.
+
+Consequences:
+
+- Exact `04N` files/API/encoder/model/mask/outcome/tests are directly approved.
+- No proposal/boundary/review may intervene before code.
+- Parameters are random-initialized and immutable; no training or strength
+  evidence follows.
+
+Status:
+
+Approved; direct project model-output bridge implementation is current next.
+
 ## 2026-07-18 — DR-0184 — Complete Bundled Rule Policy Environment Bridge
 
 Decision:

@@ -40,6 +40,17 @@
 | Passing heuristic round is mistaken for learned self-play or strength. | Evidence / Scope | High | High | Fixed warnings and governance grade only policy-to-environment smoke; no learned model or comparison. | Open |
 | Review triggers another planning chain instead of material progress. | Governance / Delivery | High | Medium | Exactly one code review is next; closure must directly decide project-model bridge/P4 status or record a genuine blocker. | Mitigated |
 
+## 2026-07-18 — P4/P8 project linear-policy bridge approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Encoder leaks hidden/opponent-private environment state. | Research / Leakage | Critical | Low | Encode only exact `environment.observe(state)` dict keys/shapes; source tests prohibit direct hidden-state feature reads. | Open |
+| Observation schema/shape drift silently changes the model input. | Engineering / Contract | High | Medium | Exact key set, shapes, order, scaling and 630 feature count are validated before scoring. | Open |
+| Linear model selects an illegal action. | Engineering / Correctness | High | Low | Mask all 87 scores with environment legal mask and verify selected action against complete legal tuple before step. | Open |
+| Random initialized output is mistaken for trained policy quality. | Evidence / Scope | High | High | Fixed warnings identify untrained random parameters and deny training, evaluation, strength and promotion claims. | Open |
+| Bridge turns into training or multiple-game execution. | Governance / Scope | High | Medium | Exact single-round API forbids labels/loss/update/optimizer/dataset and retains one 256-cap loop. | Open |
+| Another docs chain delays executable bridge. | Governance / Delivery | High | Medium | `04N` leaves zero gates; `10_NEXT` requires direct code. | Mitigated |
+
 ## 2026-07-18 — P8 bounded policy-improvement sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

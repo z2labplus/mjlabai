@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.00
+
+- Added `04N`; reviewed commit `76632c9` against exact `04M` approval.
+- Decision: `A. Review can close.` No blocker or source/test fix is required.
+- Confirmed exact API, independent RNG streams, two JITs, one 256-cap loop,
+  every bundled-policy action legal, exact 54-step raw/global result and scope.
+- Validation passed: 11 focused and all 325 tests with two skips; compile,
+  dependency, diff and normalized result probes pass.
+- Directly approved one exact 630-public-feature, masked 87-action project-owned
+  untrained linear-policy round with zero gates before code. No training,
+  production self-play, real data, Tenhou, strength, broad P8 or P9-P12 work.
+
 ## 2026-07-18 - v3.99
 
 - Implemented the exact `04M` P4 MahJax bundled rule-policy four-seat

@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact P4 MahJax bundled rule-policy single-round smoke implementation.
+- [ ] Implement the exact P4/P8 MahJax public-observation encoder and masked untrained linear-policy round smoke.
 
 Current execution charter:
 
@@ -22,20 +22,24 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review commit `HEAD` against `04M`: exact six symbols/package exports,
-  separate RNG streams, two JIT calls, one 256-cap loop, full legal tuples,
-  bundled-policy action legality, monotonic progress, raw/cumulative rewards,
-  global seat scores, failures and warnings.
-- Rerun focused/full tests, compile, dependency/diff checks and an independent
-  normalized seed-0 trace/result probe. Change production code/tests only after
-  recording a concrete blocker.
-- No learned/project model, update/training, multiple games, reward shaping,
-  persistence, path/CLI, GPU, real data, Tenhou/platform, production self-play/
-  evaluation, strength claim, broad P8 or P9-P12.
-- Only one review is allowed. Closure must directly decide a materially
-  progressive project-policy bridge or P4/P8 stage status; no docs chain.
+- Execute exactly `04N` in its one source/test module plus package exports and
+  direct governance. Encode only the exact public dict into 630 fixed-scaled
+  float32 features; reject key/shape/non-finite drift.
+- Split root RNG into environment/model streams; create project-owned random
+  `(630,87)` weights at scale `0.01`, zero bias, one JIT score function, one JIT
+  step function and one explicit 256-cap loop. Mask illegal scores before argmax.
+- Pin seed 0 to 91 legal transitions, terminal/no truncation, zero final and
+  cumulative raw rewards, global scores `(250,250,250,250)`, first action 10
+  and final action 7.
+- No hidden state, labels/dataset/loss/update/optimizer/checkpoint/training,
+  multiple games, persistence/path/CLI, real data, Tenhou, production self-play/
+  evaluation, strength, broad P8 or P9-P12.
+- Zero gates remain before code; stop on exact schema, legality, cap, API or
+  deterministic-result blocker rather than widening scope.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `76632c9` against exact `04M` approval in `04N`. Decision: `A. Review can close.` Confirmed six-symbol API/exports, independent init/policy RNG, two JIT calls, one 256-cap loop, full legal tuples, every bundled-rule-policy action legal, monotonic progress, exact seed-0 54-step terminal/raw/cumulative/global-score result, failures, warnings and forbidden scope. Eleven focused and all 325 tests pass with two existing skips; compile, dependency, diff and independent probes pass. Accepted the bridge as current-scope complete and directly approved the exact 630-public-feature, masked project-owned random-initialized 87-action linear-policy round. MahJax 2D observation is not implemented, while an independent dict-encoder/model probe terminates seed 0 legally in 91 transitions. Zero gates remain before code. No training, production self-play/evaluation, real data, Tenhou, strength, broad P8 or P9-P12 work was added.
 
 - [x] 2026-07-18 Implemented the exact `04M`-approved P4 MahJax bundled rule-policy four-seat single-round smoke. Added `src/mjlabai/environment/mahjax_rule_based_single_round_smoke.py`, six package exports and 11 focused tests. Separate initialization/policy RNG streams, one JIT environment step, one JIT bundled red rule policy and one explicit 256-cap loop verify every selected action against the full environment legal tuple. Seed 0 terminates in 54 transitions without truncation, with final raw rewards `(0,0,150,-120)`, cumulative raw rewards `(-20,0,130,-130)` and global seat scores `(240,250,390,120)`. Independent API probing confirms first action 27 and last action 74 are legal. All 325 repository tests pass with two existing skips; compile, dependency and diff checks pass. No learned model, training, production self-play/evaluation, real data, Tenhou, strength, broad P8 or P9-P12 work was added. One exact review is next; another planning chain is forbidden.
 

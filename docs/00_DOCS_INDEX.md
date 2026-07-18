@@ -99,6 +99,13 @@ with raw outcome and global seat scores recorded. One exact code review is
 next. This is P4 policy-to-environment smoke only, not learned self-play or
 strength evidence.
 
+`docs/04_rl_selfplay/04N_P4_MAHJAX_RULE_POLICY_ROUND_IMPLEMENTATION_REVIEW.md`
+reviews commit `76632c9`, records `A. Review can close`, accepts the exact
+bundled-policy bridge and directly approves a 630-feature public-observation
+encoder plus masked project-owned 87-action linear-policy round with zero gates
+before code. It is policy/environment review and task-approval evidence only,
+not learned-model or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
