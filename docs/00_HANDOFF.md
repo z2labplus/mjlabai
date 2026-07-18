@@ -27,17 +27,15 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is the exact implementation review of the `04U`-approved
-MahJax categorical-feature MLP imitation training and all-project outcome
-smoke. The implementation now collects `482/221` legal train/evaluation
-examples, trains the exact `882->64 ReLU->87` model for 48 Adam epochs and
-reaches train/eval accuracy `0.93153530/0.58371043`. All 16 greedy shared-
-project rounds terminate legally; exact seeds `(0,1,3,5,6,7,10)` produce
-nonzero raw outcomes, resolving the previous linear-policy zero-signal blocker
-at this local diagnostic level. Nine focused and all 404 explicit tests pass
-with two skips. The next task is one code review, not another planning chain.
-This remains local imitation/outcome smoke evidence, not an RL update,
-production self-play/evaluation, improvement or strength evidence:
+Current active stage is direct implementation of the exact `04V`-approved
+MahJax categorical-MLP all-project-seat raw-outcome update. `04V` review-closes
+commit `78a9f7b`: the exact 882-feature MLP training and all-project outcome
+smoke conforms, and all 404 explicit tests pass with two skips. An independent
+seed-1 categorical-sampling probe gives 77 legal terminal actions, actor counts
+`(21,22,17,17)`, cumulative raw rewards `(-20,70,-20,-30)` and one finite
+actor-indexed shared update with objective `0.09366636->0.09301171`. Exact code
+is directly approved with zero planning gates. This is one bounded local P8
+update, not production self-play/evaluation, improvement or strength evidence:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

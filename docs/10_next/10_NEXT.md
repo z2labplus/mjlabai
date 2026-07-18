@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact MahJax categorical-feature MLP imitation training and all-project outcome smoke implementation.
+- [ ] Implement the exact MahJax categorical-MLP all-project-seat raw-outcome policy-gradient update smoke.
 
 Current execution charter:
 
@@ -22,20 +22,31 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the exact `04U` source/test implementation and direct governance.
-- Verify the 882-feature current-player encoder, exact `482/221` separated
-  examples, `882->64 ReLU->87` model and 48 full-batch Adam epochs.
-- Verify exact losses/accuracies, private in-process parameters, deterministic
-  frozen result and no persistence or opponent-hidden-state access.
-- Verify all 16 greedy all-project rounds are legal/terminal and exact nonzero
-  seeds/outcomes match `04U`; no RL update occurs in the implementation.
-- Change code/tests only for a concrete blocker. On closure, directly approve
-  or defer one material P8 raw-outcome update using this non-degenerate policy;
-  another proposal/boundary chain is forbidden.
-- No external/real data, production self-play/evaluation, strength claim or
-  P9-P12.
+- Execute exact `04V` in its two approved source/test files plus governance.
+- Reuse the reviewed private categorical-MLP parameters; all four seats share
+  the policy and sample legal-masked categorical actions in exact seed `1`.
+- Split environment/policy RNG; pin 77 legal terminal transitions, seat counts
+  `(21,22,17,17)`, exact actor/action/legal traces and raw/global outcomes.
+- Weight every selected log probability by its actor's cumulative raw reward
+  divided by 100; apply exactly one shared update at `0.01`.
+- Pin objective `0.09366636->0.09301171`, four parameter deltas and identical
+  post-update replay; frozen summary/private arrays only.
+- No second update/round, replay, baseline/critic/discount/shaping, persistence,
+  external/real data, production self-play/evaluation, strength or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `78a9f7b` against exact `04U` approval in
+  `04V`. Decision: `A. Review can close.` Confirmed exact ten-symbol API,
+  current-player-only 882-feature encoding, disjoint `482/221` legal examples,
+  exact MLP/Adam training, pinned metrics, private arrays, deterministic frozen
+  output and 16 legal terminal all-project diagnostics. Nine focused and all
+  404 explicit tests pass with two skips; compile/dependency/diff and direct
+  probes pass. Accepted the scope and directly approved exact seed-1 shared
+  four-project-seat categorical sampling with one actor-indexed raw-outcome
+  update. Probe objective is `0.09366636->0.09301171` with all four parameter
+  groups changing. Zero gates remain before code. No production self-play/
+  evaluation, real data, strength or P9-P12 work was added.
 
 - [x] 2026-07-18 Implemented the exact `04U`-approved categorical-feature MLP
   imitation training and all-project outcome smoke in its two approved files.

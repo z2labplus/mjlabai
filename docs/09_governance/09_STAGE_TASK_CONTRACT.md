@@ -2,13 +2,13 @@
 
 ## Current stage
 
-P8 exact implementation review of the `04U`-approved MahJax categorical-
-feature MLP imitation training and all-project outcome smoke. The two approved
-source/test files now implement exact `482/221` separated legal examples, 882
-features, 64 hidden units, 48 Adam epochs and greedy all-project seeds `0..15`.
-All rounds terminate legally and exact seeds `(0,1,3,5,6,7,10)` yield nonzero
-raw outcomes. Nine focused and all 404 explicit tests pass with two skips. One
-code review is next; another proposal/boundary chain is forbidden.
+P8 direct implementation of the exact `04V`-approved categorical-MLP shared
+all-project-seat raw-outcome update. `04V` review-closes commit `78a9f7b` with
+all 404 explicit tests passing. The exact seed-1 probe has 77 legal terminal
+actions, actor counts `(21,22,17,17)`, cumulative raw
+`(-20,70,-20,-30)` and one finite actor-indexed `0.01` update across all four
+parameter arrays. Zero planning gates remain before code; another proposal or
+boundary is forbidden.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -588,7 +588,5 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04U` categorical-feature MLP imitation training and all-
-project outcome implementation. Change code/tests only for a concrete blocker;
-closure must directly approve/defer one material P8 raw-outcome update or record
-a genuine blocker. No proposal or boundary may intervene.
+Implement the exact `04V` categorical-MLP all-project-seat raw-outcome policy-
+gradient update smoke. No proposal, boundary or review may intervene before code.

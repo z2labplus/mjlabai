@@ -9,6 +9,17 @@
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
 
+## 2026-07-18 — P8 categorical MLP all-project update approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Shared actions receive another seat's return. | ML / Credit assignment | Critical | Medium | Record every actor and index the exact four-seat cumulative raw-return vector per selected log probability; pin seat counts and formula. | Open |
+| All-seat rollout is deterministic greedy data rather than on-policy samples. | ML / Correctness | Critical | Low | Split a dedicated policy RNG and sample every action from legal-masked categorical logits; pin exact sampled trace. | Open |
+| A rule participant or illegal action contaminates the all-project batch. | Engineering / Correctness | Critical | Low | All seats use one project policy; store all 77 full legal masks/actions/actors and reject any mismatch. | Open |
+| One update becomes an optimizer loop, replay or reward-shaped trainer. | Governance / Scope | High | Medium | Exact contract permits one value/gradient and one `0.01` update only; tests/source reject second update, replay, baseline, critic, discount and shaping. | Open |
+| Objective decrease is mislabeled gameplay improvement. | Evidence / Scope | Critical | High | Same-seed post trajectory is unchanged; evidence grade denies evaluation, policy quality, stable-dan and LuckyJ claims. | Open |
+| Approval starts another planning chain instead of code. | Governance / Delivery | High | Medium | `04V` leaves zero gates and `10_NEXT` requires direct implementation. | Mitigated |
+
 ## 2026-07-18 — P7/P8 categorical MLP training implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

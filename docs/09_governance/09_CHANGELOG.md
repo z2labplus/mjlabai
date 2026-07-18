@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.16
+
+- Added `04V`; reviewed commit `78a9f7b` against exact `04U` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed exact current-player encoder, source separation, legal labels,
+  model/optimizer, pinned metrics, private arrays, all-project legality/outcomes,
+  frozen output and no persistence.
+- Validation passed: nine focused and all 404 explicit tests with two skips;
+  compile, dependency, diff and independent probes pass.
+- Directly approved exact seed-1 all-project categorical sampling and one
+  actor-indexed raw-outcome update at `0.01`; probe changes objective
+  `0.09366636->0.09301171` and all parameter groups. No production self-play/
+  evaluation, real data, strength or P9-P12 work was added.
+
 ## 2026-07-18 - v4.15
 
 - Implemented the exact `04U` categorical-feature MahJax MLP imitation

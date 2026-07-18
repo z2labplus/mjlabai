@@ -393,6 +393,37 @@ Status:
 
 Implemented; exact categorical-MLP training/outcome review is current next.
 
+## 2026-07-18 — DR-0201 — Close Categorical Review And Approve All-Project Update
+
+Decision:
+
+```text
+A. Review can close.
+Accept the exact `04U` implementation and directly approve the exact `04V`
+seed-1 shared four-project-seat actor-indexed raw-outcome update.
+```
+
+Rationale and evidence:
+
+- `78a9f7b` conforms and all 404 explicit tests pass with two skips.
+- The trained MLP supplies non-degenerate all-project outcome signal without
+  hidden-state features or persistence.
+- An independent categorical seed-1 probe completes 77 legal transitions and
+  gives nonzero returns for every seat.
+- One actor-indexed `0.01` update changes the objective and all parameter arrays
+  finitely, providing the smallest material next P8 execution.
+
+Consequences:
+
+- Exact `04V` files/API/seed/formula/learning-rate/diagnostics are directly
+  executable with zero additional planning gates.
+- No second update, optimizer loop, replay, production self-play/evaluation or
+  strength claim is approved.
+
+Status:
+
+Approved; direct all-project raw-outcome update implementation is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

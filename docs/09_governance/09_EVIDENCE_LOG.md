@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — Categorical MLP review and first all-project update probe
+
+- Type: exact code-review closure, current-scope acceptance and direct bounded
+  all-project P8 update-task approval evidence.
+- `04V` records `A. Review can close`; nine focused and all 404 explicit tests
+  pass with two skips plus compile/dependency/diff/direct probes.
+- Independent seed-1 shared-policy categorical rollout: 77 legal transitions,
+  actor counts `(21,22,17,17)`, cumulative raw `(-20,70,-20,-30)` and global
+  scores `(230,320,230,220)`.
+- One actor-indexed update at `0.01` changes objective
+  `0.09366636->0.09301171` and all four parameter arrays finitely; post replay
+  is identical at this small step.
+- Evidence grade: exact local all-project update task approval only; not
+  production self-play, evaluation, improvement, league or strength evidence.
+
 ### 2026-07-18 — Categorical MLP training and nonzero all-project outcomes
 
 - Type: executable P7/P8 local representation, imitation-training and

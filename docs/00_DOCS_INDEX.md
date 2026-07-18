@@ -221,6 +221,14 @@ seven fixed seeds produce nonzero raw outcomes. One exact code review is next.
 This is local initialization/outcome smoke evidence, not an RL update,
 production self-play evaluation, improvement or strength evidence.
 
+`docs/04_rl_selfplay/04V_P8_CATEGORICAL_MLP_IMITATION_TRAINING_IMPLEMENTATION_REVIEW.md`
+reviews commit `78a9f7b`, records `A. Review can close`, accepts the exact
+categorical-MLP training/outcome scope and directly approves one seed-1 shared
+four-project-seat actor-indexed raw-outcome update. The probe completes 77
+legal transitions and one finite update with all four parameter groups changing.
+This is review/task-approval evidence, not production self-play, evaluation,
+improvement or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
