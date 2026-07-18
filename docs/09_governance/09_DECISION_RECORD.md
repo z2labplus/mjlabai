@@ -424,6 +424,37 @@ Status:
 
 Approved; direct all-project raw-outcome update implementation is current next.
 
+## 2026-07-18 — DR-0202 — Complete First Shared All-Project Policy Update
+
+Decision:
+
+```text
+Complete the exact `04V` shared categorical-MLP all-project-seat raw-outcome
+update and require one exact implementation review before repetition.
+```
+
+Rationale and evidence:
+
+- All four project seats sample from one shared reviewed policy with separate
+  environment/policy RNG and complete legal-mask checks.
+- All 77 decisions retain actor identity, so each selected log probability uses
+  the exact cumulative raw return of its acting seat.
+- Exactly one finite update changes the objective and all four parameter arrays;
+  post replay remains deterministic and legal.
+- Nine focused and all 413 explicit repository tests pass with two skips.
+
+Consequences:
+
+- The repository now executes an environment raw-outcome update from all four
+  project-controlled seats sharing one nonlinear policy.
+- This remains one round and one update, not repeated self-play learning,
+  evaluation, improvement, league, strength or Tenhou evidence.
+- Exactly one code review is next; another docs chain is barred.
+
+Status:
+
+Implemented; exact shared all-project update review is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

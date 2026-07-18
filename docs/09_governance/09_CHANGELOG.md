@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.17
+
+- Implemented the exact `04V` P8 categorical-MLP shared all-project-seat raw-
+  outcome update smoke and nine focused tests.
+- Exact seed 1 splits environment/policy RNG; all four seats sample from one
+  shared policy and complete 77 legal terminal actions with decision counts
+  `(21,22,17,17)` and cumulative raw `(-20,70,-20,-30)`.
+- Acting-seat raw returns drive exactly one aggregate `0.01` update. Objective
+  changes `0.09366636->0.09301171` and all four parameter arrays change.
+- Same-seed post replay remains identical and legal; no result array persists.
+- Validation passed: nine focused and all 413 explicit tests with two skips;
+  compile, dependency, diff and direct probes pass. No second update/round,
+  replay, production self-play/evaluation, real data, strength or P9-P12 added.
+
 ## 2026-07-18 - v4.16
 
 - Added `04V`; reviewed commit `78a9f7b` against exact `04U` approval.

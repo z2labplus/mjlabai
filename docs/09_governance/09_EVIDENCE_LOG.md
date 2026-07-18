@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — First shared four-project-seat raw-outcome update
+
+- Type: executable P8 local shared-policy all-project-seat parameter-update
+  smoke evidence.
+- Exact seed 1 uses separate environment/policy RNG streams. All four seats
+  share the reviewed categorical MLP and sample 77 environment-legal actions;
+  seat decision counts are `(21,22,17,17)`.
+- Cumulative raw rewards `(-20,70,-20,-30)` are divided by 100 and indexed by
+  each action's actor. One `0.01` update changes objective
+  `0.09366636->0.09301171` and all four parameter groups finitely.
+- The exact same-seed post replay preserves trajectory/outcome at this small
+  step. Validation: nine focused and all 413 explicit tests pass with two
+  skips; compile/dependency/diff and independent public-result probes pass.
+- Evidence grade: P8 local one-round shared all-project update smoke only; not
+  repeated self-play learning, evaluation, improvement, league or strength.
+
 ### 2026-07-18 — Categorical MLP review and first all-project update probe
 
 - Type: exact code-review closure, current-scope acceptance and direct bounded

@@ -229,6 +229,15 @@ legal transitions and one finite update with all four parameter groups changing.
 This is review/task-approval evidence, not production self-play, evaluation,
 improvement or strength evidence.
 
+The exact `04V` all-project update is implemented in
+`src/mjlabai/rl/mahjax_categorical_mlp_all_project_policy_gradient_smoke.py`
+with focused tests in
+`tests/rl/test_mahjax_categorical_mlp_all_project_policy_gradient_smoke.py`.
+All four seats sample from one shared reviewed MLP; actor-indexed cumulative raw
+returns drive exactly one finite update. One exact code review is next. This is
+bounded local P8 update evidence, not production self-play, evaluation,
+improvement or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

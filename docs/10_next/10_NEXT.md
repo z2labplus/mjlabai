@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact MahJax categorical-MLP all-project-seat raw-outcome policy-gradient update smoke.
+- [ ] Review the exact MahJax categorical-MLP all-project-seat raw-outcome policy-gradient update smoke implementation.
 
 Current execution charter:
 
@@ -22,19 +22,33 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Execute exact `04V` in its two approved source/test files plus governance.
-- Reuse the reviewed private categorical-MLP parameters; all four seats share
-  the policy and sample legal-masked categorical actions in exact seed `1`.
-- Split environment/policy RNG; pin 77 legal terminal transitions, seat counts
-  `(21,22,17,17)`, exact actor/action/legal traces and raw/global outcomes.
-- Weight every selected log probability by its actor's cumulative raw reward
-  divided by 100; apply exactly one shared update at `0.01`.
-- Pin objective `0.09366636->0.09301171`, four parameter deltas and identical
-  post-update replay; frozen summary/private arrays only.
-- No second update/round, replay, baseline/critic/discount/shaping, persistence,
-  external/real data, production self-play/evaluation, strength or P9-P12.
+- Review only the exact `04V` source/test implementation and direct governance.
+- Verify all four seats share the reviewed private categorical MLP, sample from
+  legal-masked logits and use independent environment/policy RNG streams.
+- Verify exact 77-step terminal trajectory, actor counts `(21,22,17,17)`, full
+  action/legal traces and raw/global outcomes.
+- Verify actor-indexed raw returns, exactly one `0.01` update, objective
+  `0.09366636->0.09301171`, four finite parameter deltas and identical post
+  replay; public output must remain frozen and array-free.
+- Change code/tests only for a concrete blocker. On closure, directly approve
+  or defer one material repeated-update/round P8 task; another docs chain is
+  forbidden.
+- No replay, baseline/critic/discount/shaping, persistence, external/real data,
+  production self-play/evaluation, strength or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `04V`-approved categorical-MLP shared
+  all-project-seat raw-outcome update in two new source/test files. Exact seed
+  `1` splits independent environment/policy RNG, all four project seats sample
+  77 legal terminal actions with counts `(21,22,17,17)`, and cumulative raw
+  rewards are `(-20,70,-20,-30)`. Actor-indexed returns drive exactly one
+  `0.01` update; objective changes `0.09366636->0.09301171` and all four
+  parameter groups change finitely. The same-seed post replay is identical.
+  Nine focused and all 413 explicit tests pass with two skips; compile,
+  dependency, diff and direct probes pass. No second update/round, replay,
+  persistence, production self-play/evaluation, real data, strength or P9-P12
+  work was added. One exact code review is next.
 
 - [x] 2026-07-18 Reviewed commit `78a9f7b` against exact `04U` approval in
   `04V`. Decision: `A. Review can close.` Confirmed exact ten-symbol API,

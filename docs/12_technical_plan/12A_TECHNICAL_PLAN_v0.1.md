@@ -28,15 +28,14 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 direct implementation of the exact `04V`-approved categorical-MLP shared
-all-project-seat raw-outcome update. `04V` review-closes commit `78a9f7b` after
-confirming exact representation/training/outcome behavior and all 404 explicit
-tests. A seed-1 categorical rollout completes 77 legal terminal transitions
-with actor counts `(21,22,17,17)` and cumulative raw rewards
-`(-20,70,-20,-30)`. One exact actor-indexed `0.01` update changes objective
-`0.09366636->0.09301171` and all four parameter arrays. Zero planning gates
-remain before code. This is one bounded local P8 update, not production self-
-play, evaluation, improvement or strength.
+P8 exact implementation review of the `04V`-approved categorical-MLP shared
+all-project-seat raw-outcome update. Exact seed 1 completes 77 legal terminal
+transitions with actor counts `(21,22,17,17)` and cumulative raw rewards
+`(-20,70,-20,-30)`. One actor-indexed `0.01` update changes objective
+`0.09366636->0.09301171` and all four parameter arrays; same-seed post replay
+is identical. Nine focused and all 413 explicit tests pass with two skips. One
+code review is next, not another planning chain. This is one bounded local P8
+update, not production self-play, evaluation, improvement or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

@@ -9,6 +9,17 @@
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
 
+## 2026-07-18 — P8 categorical MLP all-project update implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Shared trajectory assigns a seat's return to another seat's action. | ML / Credit assignment | Critical | Low | Store all 77 actors; result exposes decision returns and tests compare each against `seat_return_scales[actor]`. | Mitigated |
+| Sampling bypasses environment legality. | Engineering / Correctness | Critical | Low | Every categorical draw follows legal masking and is checked/stored with the complete legal tuple before step. | Mitigated |
+| Rule-policy actions contaminate the all-project update. | ML / Ownership | Critical | Low | No rule policy is imported; every seat uses the same project policy ID and shared arrays. | Mitigated |
+| Float32 return checks fail spuriously or hide drift. | Engineering / Numerical | Medium | Realized | Replace exact Python equality with explicit `1e-6` tolerance while retaining exact raw rewards and fixed objective/delta tolerances. | Mitigated |
+| One objective decrease is mistaken for gameplay improvement. | Evidence / Scope | Critical | High | Post trajectory/outcome is identical; warnings deny evaluation, quality, stable-dan and LuckyJ claims. | Open |
+| Review restarts documentation instead of repeated execution. | Governance / Delivery | High | Medium | Exactly one code review is next; closure directly approves/defer a repeated update/round task or records a blocker. | Mitigated |
+
 ## 2026-07-18 — P8 categorical MLP all-project update approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
