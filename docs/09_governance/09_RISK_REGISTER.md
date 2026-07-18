@@ -73,6 +73,19 @@ zero-update diagnostics are now pinned in the existing source/tests. The
 observed larger-rate degradation and smaller-rate behavioral insensitivity are
 evidence, not an approved rate choice. One exact review is next.
 
+## 2026-07-19 — P8 frozen-policy outcome-census approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Nonzero-only training seeds overstate learnability and bias comparisons. | Research / Selection bias | Critical | Realized | Pin full predeclared `0..31` census and 5/5 versus 10/32 rates before defining a replacement split. | Open |
+| Census results are used to cherry-pick another favorable split. | Evaluation / Leakage | Critical | High | This task records outcomes only and explicitly forbids choosing a new split or algorithm. | Open |
+| Zero outcomes are dropped from denominators. | Evidence / Integrity | Critical | High | Return every seed record and exact zero/nonzero tuples; total must remain 32. | Open |
+| Action paths drift while outcome vectors remain equal. | Engineering / Regression | High | Medium | Pin transition count, global scores and deterministic SHA-256 action-trace digest per seed. | Open |
+| Census is mislabeled policy quality or strength. | Evidence / Scope | Critical | High | Classify only signal-sparsity/selection-bias evidence; no model ranking or promotion. | Open |
+
+Approval status: `04AB` leaves zero gates before the exact two-file census.
+No replacement training/evaluation split is approved by this review.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

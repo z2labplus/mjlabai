@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.28
+
+- Added `04AB`; reviewed commit `375a193` against exact `04AA` approval.
+- Decision: `A. Review can close.` Nine focused and all 450 tests pass with two
+  skips; compile, dependency and diff checks pass.
+- Rejected bounded probes: running baseline `-673`, unstable naive critic,
+  behavior-identical KL `lambda=1`, unstable KL `lambda=100`, Adam `-653`.
+- Frozen-policy seeds `0..31` contain only 10 nonzero outcomes, while existing
+  training seeds `(1,3,5,7,11)` are all nonzero. Directly approved exact census
+  code to record this selection bias before more algorithm work.
+- No replacement split, optimizer/critic selection, training scale-up, real
+  data, production evaluation, strength claim or P9-P12 work was added.
+
 ## 2026-07-19 - v4.27
 
 - Implemented the exact `04AA` fixed evaluation-breadth extension in the

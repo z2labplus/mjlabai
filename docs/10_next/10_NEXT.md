@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact MahJax categorical-MLP 32-seed fixed learning-rate evaluation implementation.
+- [ ] Implement the exact frozen MahJax categorical-MLP all-project outcome census on seeds `0..31`.
 
 Current execution charter:
 
@@ -22,21 +22,31 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review exact commit/files against `04AA`; change source/tests only for a
-  concrete blocker and add no sibling proposal or boundary.
-- Verify unchanged seven-symbol API, rates/order, initial arrays, training
-  seeds/trajectories, five updates, objectives and parameter deltas.
-- Verify exact evaluation seeds `20..51`, zero evaluation updates, identical
-  RNG/participants and full transition/action/reward/score pinning.
-- Verify sums `-501/-650/-635/-501/-501`, positives `1/0/0/1/1`, negatives
-  `16/18/17/16/16` and changed seeds
-  `(32,39,43,44,50)/(32,39,44,50)/()/()`.
-- Verify larger-rate behavior distinction, smaller-rate initial identity,
-  frozen array-free output and explicit non-selection/non-strength wording.
-- Closure must directly choose or defer a material algorithm/evidence task;
-  no new rate/sweep, scale-up, real data, production evaluation or P9-P12.
+- Add only the exact `04AB`-approved census source/test plus direct governance;
+  do not modify existing source/test logic or public APIs.
+- Load reviewed imitation parameters once, freeze them, and run exact seeds
+  `tuple(range(32))` once each with all four seats using the reviewed legal
+  categorical all-project collector; perform zero updates.
+- Record frozen per-seed transition count, raw-return vector, final scores and
+  deterministic SHA-256 action-trace digest; pin all exact probe values.
+- Pin nonzero seeds `(1,3,5,7,11,24,25,26,27,31)`, exact zero complement,
+  census rate `10/32` and reference-training rate `5/5`.
+- Preserve all 32 records and explicit outcome-selection-bias warnings; choose
+  no replacement training/evaluation split and expose no parameter arrays.
+- No policy/value update, optimizer, critic, rate/estimator sweep, persistence,
+  real data, production self-play/evaluation, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Reviewed commit `375a193` against exact `04AA` approval in
+  `04AB`. Decision: `A. Review can close.` Confirmed unchanged API/training,
+  exact `20..51` zero-update evaluation, complete diagnostics and sums
+  `-501/-650/-635/-501/-501`. Nine focused and all 450 explicit tests pass with
+  two skips. Bounded probes reject running baseline `-673`, unstable naive
+  critic, ineffective/unstable KL and Adam `-653`. Frozen-policy seeds `0..31`
+  reveal only 10 nonzero outcomes while existing training seeds are 5/5
+  nonzero. Directly approved exact census code; zero gates remain. No algorithm
+  or replacement split was selected and no strength/P9-P12 work was added.
 
 - [x] 2026-07-19 Implemented the exact `04AA`-approved evaluation-breadth
   extension in the existing source/test only. Exact rates, identical initial

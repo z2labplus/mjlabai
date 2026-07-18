@@ -2,15 +2,13 @@
 
 ## Current stage
 
-P8 exact code review of the implemented `04AA` fixed evaluation-breadth
-extension. Existing rates `(0.01,0.005,0.001,0.0001)`, training seeds, five
-updates, formulas and parameter diagnostics are unchanged; exact zero-update
-evaluation now covers seeds `20..51`. Nine focused and all 450 explicit
-repository tests pass with two existing skips and pin combined sums
-`-501/-650/-635/-501/-501`, counts and changed seeds
-`(32,39,43,44,50)/(32,39,44,50)/()/()`. Review closure must directly make one
-material algorithm/evidence decision; no new rate, planning chain, training
-scale-up, selection or strength claim is allowed.
+P8 direct implementation of the `04AB`-approved frozen reviewed-imitation-policy
+all-project outcome census on exact seeds `0..31`. The policy remains frozen;
+all seats sample legal actions and every seed record retains transitions, raw
+returns, scores and a trace digest. Probes find nonzero seeds
+`(1,3,5,7,11,24,25,26,27,31)` and show existing training seeds are 5/5 nonzero
+versus census 10/32. No replacement split, policy/value update, algorithm
+selection, scale-up or strength claim is allowed.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -590,6 +588,6 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04AA` 32-seed fixed learning-rate evaluation implementation.
-Change code/tests only for a blocker; closure must directly choose or defer one
-material algorithm/evidence task without another proposal chain.
+Implement the exact `04AB` frozen-policy all-project outcome census in its two
+approved files. Pin every seed and selection-bias summary; choose no replacement
+split and add no update, optimizer, critic or production path.

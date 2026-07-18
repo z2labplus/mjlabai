@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Fixed evaluation review and training-seed selection-bias probe
+
+- Type: exact code-review closure, rejected algorithm probes and frozen-policy
+  census task-approval evidence.
+- `04AB` records `A. Review can close`; nine focused and all 450 explicit tests
+  pass with two skips plus compile/dependency/diff checks.
+- Running baseline gives `-673`; naive critic and high-KL updates are unstable;
+  KL `lambda=1` reproduces raw `-650`; standard Adam gives `-653`. None is
+  selected or approved.
+- Frozen reviewed-policy seeds `0..31` produce nonzero outcomes only at
+  `(1,3,5,7,11,24,25,26,27,31)`. Existing training seeds are exact all-nonzero
+  `(1,3,5,7,11)`: 5/5 versus census 10/32.
+- Evidence grade: bounded failure and seed/outcome selection-bias evidence
+  only; not algorithm ranking, improvement, robust evaluation or strength.
+
 ### 2026-07-19 — Executable 32-seed fixed learning-rate evaluation breadth
 
 - Type: executable P8 local fixed evaluation-breadth diagnostic evidence.

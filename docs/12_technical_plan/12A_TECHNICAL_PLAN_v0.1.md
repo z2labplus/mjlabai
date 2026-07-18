@@ -28,17 +28,16 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 exact code review of the implemented `04AA` categorical-MLP learning-rate
-fixed-evaluation extension. Four independent branches retain exact rates
-`(0.01,0.005,0.001,0.0001)`, training seeds `(1,3,5,7,11)`, five legal updates
-and reviewed objectives; zero-update evaluation now covers seeds `20..51`.
-Nine focused and all 450 explicit repository tests pass with two existing skips
-and pin combined initial/rate sums
-`-501/-650/-635/-501/-501`, positive/negative counts and changed seeds
-`(32,39,43,44,50)/(32,39,44,50)/()/()`. Review closure must directly make a
-material algorithm/evidence decision, not add rates or planning. This is
-bounded sensitivity/evaluation-breadth evidence, not rate selection, robust
-evaluation, production evaluation, improvement or strength.
+P8 direct implementation of the `04AB`-approved frozen reviewed-imitation-policy
+all-project outcome census on exact seeds `0..31`. `04AB` reviewed commit
+`375a193`, accepted the 32-seed fixed evaluation, rejected worse/unstable or
+ineffective running-baseline/critic/KL/Adam probes and exposed a critical seed
+selection issue: only `(1,3,5,7,11,24,25,26,27,31)` are nonzero, while existing
+training seeds `(1,3,5,7,11)` are 5/5 nonzero. The exact two-file census records
+all seeds and trace digests with the policy frozen and no updates; it does not
+select a replacement split. This is bounded signal-sparsity/selection-bias
+evidence, not algorithm selection, production evaluation, improvement or
+strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
