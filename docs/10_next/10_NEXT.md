@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the approved MahJax v0.1.2 local environment integration smoke implementation.
+- [ ] Decide MahJax integration current-scope acceptance and directly approve or defer one exact bounded single-round MahJax rollout smoke.
 
 Current execution charter:
 
@@ -22,18 +22,20 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review commit implementing `04J` against only the exact package pins, files,
-  seven-symbol API, deterministic seed-0 diagnostics, public MahJax API,
-  one legal step, errors, warnings and twelve test requirements.
-- Re-run the focused integration tests, all repository tests, compile and diff
-  checks, plus one independent seed-0 result probe.
-- Fix only a concrete conformance/correctness blocker in the approved files;
-  otherwise do not modify production code or tests.
-- Do not add adapter/rules/conformance breadth, another docs chain, real data,
-  Tenhou/platform access, model output, training, self-play, evaluation,
-  strength claims, broad P8 or P9-P12.
+- Accept or reject only commit `7ab90d5` review-closed in `04K`.
+- If accepted, inspect the pinned MahJax public single-round lifecycle and
+  directly approve exactly one deterministic local rollout smoke with a hard
+  transition cap, environment-owned legal actions, terminal/raw-reward
+  diagnostics, exact files/API/tests and zero gates before code; otherwise
+  record one concrete blocker and lowest-cost resolution.
+- Do not implement in this decision and do not add another boundary/proposal.
+- Do not use real Tenhou/platform data/accounts/automation, external logs,
+  real haifu, model output, training, production self-play/evaluation, strength
+  claims, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `7ab90d5` against the exact `04J` approval in `04K`. Decision: `A. Review can close.` Confirmed exact MahJax/JAX/JAXLIB pins, seven-symbol API, frozen diagnostics, public red-mahjong init/observe/legal-mask/step use, exact bool masks, deterministic seed-0 identity, lowest legal action selection, one-step progress, errors, warnings and forbidden-scope compliance. Independent direct-MahJax probing confirms legal tuple `(2, 4, 5, 8, 10, 11, 14, 17, 19, 21, 27, 71)` and project/direct transition agreement. Eleven focused tests and all 302 repository tests pass with two existing environment-gated skips; pip, compile and diff checks pass. No production code/test change or blocker was required. The next decision must accept/reject this scope and directly approve or defer one hard-capped single-round rollout smoke; another one-step wrapper or docs chain is forbidden.
 
 - [x] 2026-07-18 Installed and implemented the exact `04J`-approved MahJax local environment integration smoke. Pinned `mahjax==0.1.2`, `jax==0.4.30` and `jaxlib==0.4.30` in `pyproject.toml`; added `src/mjlabai/environment/mahjax_integration_smoke.py`, exported its seven-symbol surface, and added 11 focused tests. On macOS arm64/CPython 3.9 seed 0, public `red_mahjong` initialization yields player 2, 12 environment-owned legal actions and lowest legal action 2; one public `env.step` advances step 0 to 1, player 2 to 3, exposes 13 next legal actions, returns four zero rewards and remains non-terminal/non-truncated. Focused and full validation pass: 302 repository tests OK with two existing environment-gated skips, compile and diff checks pass. No third-party source/artifact was vendored; no real data, Tenhou, model output, training, self-play, evaluation, strength claim, broad P8 or P9-P12 work was added. This is P4 pinned local integration smoke evidence only; one exact implementation review is next.
 

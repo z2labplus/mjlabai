@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.94
+
+- Reviewed commit `7ab90d5` against the exact `04J` MahJax approval in `04K`.
+- Decision: `A. Review can close.` No blocker or code/test fix is required.
+- Confirmed exact pins/API, environment-owned bool masks, deterministic seed-0
+  observation/legal action/state progress, errors, warnings and forbidden scope.
+- Validation passed: 11 focused tests; all 302 repository tests with two
+  existing skips; pip/compile/diff and independent direct-MahJax probe.
+- New `10_NEXT` first item must accept/reject this scope and directly approve
+  or defer one hard-capped single-round rollout; another wrapper/docs chain is
+  forbidden. No self-play, strength, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.93
 
 - Installed and implemented the exact `04J`-approved MahJax `v0.1.2` local

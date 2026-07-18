@@ -114,6 +114,14 @@
 | One successful transition is mistaken for full rules conformance or self-play readiness. | Evidence / Scope | High | High | Frozen evidence grade/warnings and governance explicitly deny those claims; exact review and later conformance remain required. | Open |
 | JAX compilation cost is mistaken for training compute. | Evidence / Operations | Medium | Medium | The smoke executes only CPU initialization/observation/one transition; no optimizer, dataset, model or loop exists. | Mitigated |
 
+## 2026-07-18 — P4 MahJax integration implementation review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Review misses divergence between wrapper diagnostics and direct MahJax state. | Engineering / Quality | High | Low | Independent probe compares full legal tuple, selected action, players, step and next legal count against direct public API calls. | Mitigated |
+| Review closure is mistaken for full environment conformance or self-play readiness. | Evidence / Scope | High | High | `04K` grades only pinned one-transition integration review evidence and requires bounded rollout before broader use. | Open |
+| Successful review creates another one-step wrapper or docs chain. | Governance / Delivery | High | High | `10_NEXT` requires direct acceptance plus bounded single-round approval/deferment. | Mitigated |
+
 ## 2026-07-18 — P8 interleaved trace approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

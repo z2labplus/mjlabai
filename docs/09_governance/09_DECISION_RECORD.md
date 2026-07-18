@@ -14,6 +14,35 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0179 — MahJax Integration Review Closure
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Rationale and evidence:
+
+- Commit `7ab90d5` conforms to every `04J` pin, file, API, observation,
+  legal-mask/action, transition, result, error, warning and scope rule.
+- Independent direct-MahJax probing confirms the full seed-0 legal tuple and
+  direct/project transition agreement.
+- All 302 repository tests pass with two existing skips; focused, pip,
+  compile and diff checks pass.
+
+Consequences:
+
+- Added `04K`; no production code or test change was required.
+- The next decision must accept/reject the integration and directly approve or
+  defer one hard-capped single-round rollout smoke.
+- Another one-step wrapper or docs chain is forbidden; no self-play, strength,
+  broad P8 or P9-P12 approval follows.
+
+Status:
+
+Review closed; bounded single-round acceptance/approval decision is current.
+
 ## 2026-07-18 — DR-0178 — Implement Pinned MahJax Integration Smoke
 
 Decision:

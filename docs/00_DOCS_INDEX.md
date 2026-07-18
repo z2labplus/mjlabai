@@ -60,6 +60,12 @@ The exact `04J` integration is implemented in
 JAX CPU runtime and executes one environment-owned legal transition. This is
 P4 local integration smoke evidence only; its exact code review is next.
 
+`docs/04_rl_selfplay/04K_P4_MAHJAX_INTEGRATION_SMOKE_IMPLEMENTATION_REVIEW.md`
+reviews commit `7ab90d5`, records `A. Review can close`, confirms exact pins,
+public API, legal-mask/action/state diagnostics and 302 passing tests, and
+requires direct acceptance plus bounded single-round rollout approval or
+deferment. It is P4 integration review evidence only, not strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

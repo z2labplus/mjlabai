@@ -8,6 +8,18 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P4 pinned MahJax integration review closure
+
+- Type: internal exact dependency-integration code-review closure evidence.
+- Added `04K`; decision: `A. Review can close.`
+- Evidence: exact pins/files/API, bool masks, public observation, lowest legal
+  action, state/reward progress, deterministic result, errors, warnings and
+  forbidden-scope compliance; direct legal tuple/transition probe agreement.
+- Validation: 11 focused tests, all 302 repository tests OK with two existing
+  environment-gated skips, pip/compile/diff checks and independent probe.
+- Evidence grade: P4 pinned local environment integration review closure
+  evidence only; not conformance, episode, self-play, strength or P8-P12.
+
 ### 2026-07-18 — P4 pinned MahJax integration implementation
 
 - Type: executable pinned third-party local environment integration evidence.
