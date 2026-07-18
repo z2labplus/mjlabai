@@ -9,6 +9,17 @@
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
 
+## 2026-07-18 — P8 minimal policy-update smoke approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Exact approval expands into a training loop, environment or self-play. | Governance / Scope | High | Medium | `12AC` permits one single-record numerical update and three exact source/test files only; stop on expansion. | Open |
+| The tabular update is mistaken for selection of the project mainline RL algorithm. | Research / Decision | High | Medium | Classify the equation as numerical smoke only; explicitly deny algorithm/mainline selection. | Open |
+| Synthetic flags are bypassed and real/model/self-play data reaches the helper. | Data / Compliance | High | Low | Require exact synthetic/local provenance values and reject real, external, platform, model-output and self-play flags. | Open |
+| NaN, infinity, bool-as-number or invalid hyperparameters produce misleading output. | Engineering / Correctness | Medium | Medium | Require finite-number checks, strict ranges and terminal/next-value consistency tests. | Open |
+| Passing smoke tests are overclaimed as learning quality or strength. | Evidence / Research | High | High | Result warnings and governance grade remain numerical smoke evidence only; no Tenhou/stable-dan/LuckyJ claim. | Open |
+| Another docs gate delays the approved executable task. | Governance / Delivery | High | Medium | `10_NEXT` points directly to implementation; no proposal/boundary/review may be inserted first. | Mitigated |
+
 ## 2026-07-18 — P8 provenance-manifest boundary review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
@@ -19,8 +30,8 @@
 | Synthetic policy-update output is overclaimed as learning quality or model strength. | Evidence / Research | High | High | Grade future output as engineering smoke evidence only; forbid Tenhou, stable-dan, LuckyJ and promotion claims. | Open |
 | Real data, external artifacts or framework dependencies enter through the minimal task. | Compliance / Scope | High | Medium | Permit only in-memory project-authored synthetic/local records; forbid ingestion, weights, third-party binaries/services and broad dependencies. | Open |
 
-The review found no blocker that requires another boundary document. One
-exact approval decision remains before minimal executable code.
+The review found no blocker that requires another boundary document. The
+exact approval decision is now recorded in `12AC` and implementation is next.
 
 ## 2026-07-15 — P8 model / artifact provenance manifest boundary definition risks
 

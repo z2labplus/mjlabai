@@ -1,5 +1,26 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.54
+
+- Approved the next exact minimal P8 synthetic/local policy-update smoke
+  implementation.
+- Added:
+  - `docs/12_technical_plan/12AC_P8_MINIMAL_SYNTHETIC_LOCAL_POLICY_UPDATE_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
+- Decision: `Approved for next exact minimal implementation task.`
+- Limited the future implementation to three exact source/test files and one
+  deterministic standard-library single-record tabular action-value update.
+- Fixed exact formulas, validation, immutable/deterministic behavior, output
+  warnings, tests, rollback and stop conditions.
+- Recorded the user's instruction to continue after `12AB` as exact P8-E15
+  human transition authorization for this task only.
+- New `10_NEXT` first item: `Implement exact minimal P8 synthetic/local
+  policy-update smoke only.` No additional docs gate may precede it.
+- Validation passed: `git diff --check` and 46 existing supervised/data unit
+  tests. The future RL test was not created or run.
+- No implementation, test, fixture, data, model/artifact use, environment,
+  self-play, production training/evaluation, real-data work, strength claim,
+  broad P8 or P9-P12 work was added in this approval decision.
+
 ## 2026-07-18 - v3.53
 
 - Reviewed the P8 model / artifact provenance-manifest boundary.

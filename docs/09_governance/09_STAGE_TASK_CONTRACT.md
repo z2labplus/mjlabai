@@ -2,7 +2,7 @@
 
 ## Current stage
 
-P8 exact minimal synthetic/local policy-update smoke approval decision.
+P8 exact minimal synthetic/local policy-update smoke implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -71,10 +71,11 @@ attestation, compatibility, eligibility, reproducibility, candidate fields,
 PM-E1 through PM-E15 and stop conditions. Every concrete algorithm, format,
 storage, signing, packaging and external-artifact choice remains deferred.
 `12AB` reviews `12AA`, records `A. Review can close`, finds no genuine blocker
-and leaves `12AA` unchanged. The current first task is `Decide whether to
-approve an exact minimal P8 synthetic/local policy-update smoke implementation.`
-This is the one remaining docs-only approval gate before an exact executable
-task. Production code, tests, fixtures, data files, manifest schemas/loaders/
+and leaves `12AA` unchanged. `12AC` records `Approved for next exact minimal
+implementation task` for one deterministic single-record tabular action-value
+update and three exact source/test files. The current first task is `Implement
+exact minimal P8 synthetic/local policy-update smoke only.` Production code
+outside that exact approval, fixtures, data files, manifest schemas/loaders/
 artifacts, source approval,
 source ingestion, broad
 parser / reader / ingestion, feature extraction, label generation, dataset
@@ -377,13 +378,14 @@ P8 raw-outcome / environment-provenance boundary = defined in `12U` and reviewed
 Full P7 = closed for documented supervised-learning scope only
 Full P6 = closed for documented P6 data-system scope only
 P7 broad implementation = not approved
-P8-P12 entry = not approved
+Exact P8 synthetic/local policy-update smoke entry = approved in `12AC` only
+Broad P8 and P9-P12 entry = not approved
 P6 implementation = closed except for separately approved future tasks
 P8 model-output interface dependency boundary = defined in `12W` and reviewed in `12X`; review can close
 P8 training / evaluation model-use boundary = defined in `12Y` and reviewed in `12Z`; review can close
 P8 model / artifact provenance manifest boundary = defined in `12AA` and reviewed in `12AB`; review can close
-P8 executable exit = one exact approval decision remains before minimal synthetic/local policy-update smoke code
-Next = decide whether to approve that exact minimal implementation
+P8 exact minimal synthetic/local policy-update smoke = approved in `12AC`; no gate remains before exact code
+Next = implement that exact minimal smoke only
 ```
 
 ## AI role
@@ -392,13 +394,12 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Decide whether one exact deterministic CPU-only standard-library P8
-synthetic/local policy-update smoke may be implemented next. The decision must
-name exact files, behavior, inputs, outputs, invariants, tests, rollback,
-evidence grade and prohibitions. It must not implement anything, approve broad
-P8, source/real-data work, datasets, production training/evaluation,
-self-play/league, model/artifact use, model-output integration, CLI, P9-P12 or
-model-strength claims.
+Implement only the deterministic CPU-only standard-library P8 synthetic/local
+policy-update smoke approved in `12AC`. Create only the three exact source/test
+files, enforce the exact formula, provenance, validation, output and evidence
+boundaries, and stop on any scope expansion. Broad P8, source/real-data work,
+datasets, production training/evaluation, self-play/league, model/artifact use,
+model-output integration, CLI, P9-P12 and strength claims remain unapproved.
 
 This supports the north-star target by ensuring that any future supervised
 learning, RL, search, league or LuckyJ validation work starts only after the
@@ -432,6 +433,7 @@ and first-task boundaries.
 - `docs/12_technical_plan/12Z_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/12_technical_plan/12AA_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
 - `docs/12_technical_plan/12AB_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/12_technical_plan/12AC_P8_MINIMAL_SYNTHETIC_LOCAL_POLICY_UPDATE_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
 - `docs/04_rl_selfplay/04F_ALGORITHM_CANDIDATE_TABLE.md`
 - `docs/04_rl_selfplay/04G_ALGORITHM_RACING_FUNNEL.md`
 - `docs/05_evaluation/05G_RACING_FUNNEL_EVALUATION.md`

@@ -28,7 +28,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 exact minimal synthetic/local policy-update smoke approval decision.
+P8 exact minimal synthetic/local policy-update smoke implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
@@ -117,12 +117,14 @@ identity, serialization/storage, signing/attestation, package, retention and
 external-artifact choices remain deferred. `12AB` reviews `12AA`, records
 `A. Review can close`, finds no genuine blocker and leaves `12AA` unchanged.
 The anti-overdocumentation exit report identifies one exact minimal P8
-synthetic/local policy-update smoke as the executable outcome, with one exact
-approval decision remaining before code. The next first task is `Decide
-whether to approve an exact minimal P8 synthetic/local policy-update smoke
-implementation.` It is a docs-only approval decision, not implementation.
-Broad P8, production training/evaluation, self-play, model/artifact use, real
-data, strength claims and P9-P12 remain unapproved.
+synthetic/local policy-update smoke as the executable outcome. `12AC` records
+`Approved for next exact minimal implementation task`, fixes the exact three
+source/test files, single-record tabular action-value formula, provenance and
+validation boundaries, and records the user-authorized P8-E15 transition.
+The next first task is `Implement exact minimal P8 synthetic/local policy-
+update smoke only.` No mandatory gate remains before that exact task. Broad
+P8, production training/evaluation, self-play, model/artifact use, real data,
+strength claims and P9-P12 remain unapproved.
 
 Earlier context:
 The exact `03AU`-approved implementation added
@@ -588,7 +590,8 @@ source ingestion, feature extraction, label generation, dataset construction,
 training, evaluation, model-output integration, self-play, league or P8-P12
 was added.
 P7 broad implementation = not approved.
-P8-P12 entry = not approved.
+Exact P8 synthetic/local policy-update smoke entry = approved in `12AC` only.
+Broad P8 and P9-P12 entry = not approved.
 P6 implementation = closed except for separately approved future tasks.
 P7 minimal synthetic/local parser-reader smoke extension implementation review
 = complete in `03BB`; review cannot close because explicit test coverage is
@@ -611,9 +614,9 @@ P8 training / evaluation model-use boundary = defined in `12Y` and reviewed
 in `12Z`; review can close.
 P8 model / artifact provenance manifest boundary = defined in `12AA` and
 reviewed in `12AB`; review can close with no genuine blocker.
-P8 anti-overdocumentation exit = one exact approval gate remains before the
-minimal synthetic/local policy-update smoke implementation.
-Next = decide whether to approve that exact minimal implementation.
+P8 exact minimal synthetic/local policy-update smoke = approved in `12AC` for
+three exact source/test files and one deterministic action-value update only.
+Next = implement that exact minimal smoke; no additional docs gate.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -778,10 +781,10 @@ records `A. Review can close`. `12Y` defines the training/evaluation model-use
 boundary; `12Z` reviews it and records `A. Review can close` without modifying
 `12Y`. `12AA` defines the docs-only model/artifact provenance-manifest
 boundary. `12AB` reviews it, records `A. Review can close`, finds no genuine
-blocker and leaves `12AA` unchanged. The next task is one exact approval
-decision for a deterministic CPU-only synthetic/local policy-update smoke.
-That decision does not implement code or approve broad P8, model loading,
-source/real-data work, datasets, production training/evaluation, model-output
+blocker and leaves `12AA` unchanged. `12AC` approves exactly one deterministic
+CPU-only synthetic/local policy-update smoke and the next task is its direct
+implementation. The approval does not cover broad P8, model loading, source/
+real-data work, datasets, production training/evaluation, model-output
 integration, self-play/RL/league, P9-P12 or model-strength claims.
 
 `docs/03_supervised_policy/03BG_FULL_P7_CLOSURE_CRITERIA_AFTER_PARSER_READER_SMOKE_EXTENSION_CURRENT_SCOPE_ACCEPTANCE.md`

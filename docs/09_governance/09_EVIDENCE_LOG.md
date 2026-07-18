@@ -8,6 +8,33 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 minimal synthetic/local policy-update smoke approval decision
+
+- Type: internal governance / exact implementation approval-decision evidence.
+- Stage: exact minimal P8 synthetic/local policy-update smoke implementation.
+- Added document:
+  - `docs/12_technical_plan/12AC_P8_MINIMAL_SYNTHETIC_LOCAL_POLICY_UPDATE_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
+- Decision: `Approved for next exact minimal implementation task.`
+- Exact approved future files:
+  - `src/mjlabai/rl/__init__.py`
+  - `src/mjlabai/rl/synthetic_policy_update_smoke.py`
+  - `tests/rl/test_synthetic_policy_update_smoke.py`
+- Approved behavior: one deterministic standard-library single-record tabular
+  action-value update over in-memory project-authored synthetic/local input.
+- P8-E15 authorization: user instructed Codex to continue after `12AB`
+  reported that this exact approval gate remained before code.
+- Selected next task:
+  - `Implement exact minimal P8 synthetic/local policy-update smoke only.`
+- Validation:
+  - `git diff --check`: passed.
+  - 46 existing supervised/data unit tests: passed.
+  - future RL test: not created or run in this decision task.
+- Evidence grade:
+  - P8 exact minimal synthetic/local policy-update smoke approval-decision
+    evidence only.
+- Not evidence of implementation, a trained model, self-play, evaluation,
+  model strength, Tenhou/stable-dan/LuckyJ, promotion, broad P8 or P9-P12.
+
 ### 2026-07-18 — P8 model / artifact provenance-manifest boundary review
 
 - Type: internal documentation / P8 provenance-manifest boundary review

@@ -14,6 +14,53 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0140 — Exact Minimal P8 Synthetic/Local Policy-Update Smoke Approval
+
+Decision:
+
+```text
+Approved for next exact minimal implementation task.
+```
+
+Context:
+
+- `12AB` closed the `12AA` boundary review with no genuine blocker.
+- The anti-overdocumentation rule required a direct executable/approval exit.
+- The user instructed Codex to continue after being told one approval gate
+  remained before code.
+
+Rationale:
+
+- A single deterministic tabular action-value update is the smallest safe
+  executable P8 learning-mechanics check.
+- It needs no model, environment, episode, self-play, dataset, artifact, ML
+  framework, real data or external service.
+- Exact formulas, files, validation, provenance and stop conditions keep the
+  task auditable and prevent broad P8 or strength overclaim.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12AC_P8_MINIMAL_SYNTHETIC_LOCAL_POLICY_UPDATE_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`.
+- Approved only three exact source/test files plus direct governance sync.
+- Recorded exact P8-E15 human transition authorization for this task only.
+- The next task is `Implement exact minimal P8 synthetic/local policy-update
+  smoke only.`
+- No additional docs gate may precede that implementation.
+- Broad P8, self-play, production training/evaluation, model/artifact use,
+  real data, strength claims and P9-P12 remain unapproved.
+
+Linked docs:
+
+- `docs/12_technical_plan/12AB_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/12_technical_plan/12AC_P8_MINIMAL_SYNTHETIC_LOCAL_POLICY_UPDATE_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+Exact implementation approved and first in `10_NEXT`; implementation not yet executed.
+
 ## 2026-07-18 — DR-0139 — P8 Model / Artifact Provenance-Manifest Boundary Review
 
 Decision:
@@ -62,7 +109,7 @@ Linked docs:
 
 Status:
 
-Boundary review complete; exact minimal implementation approval decision next.
+Boundary review complete; exact minimal implementation approved in DR-0140.
 
 ## 2026-07-15 — DR-0138 — P8 Model / Artifact Provenance Manifest Boundary Definition
 

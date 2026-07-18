@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Decide whether to approve an exact minimal P8 synthetic/local policy-update smoke implementation.
+- [ ] Implement exact minimal P8 synthetic/local policy-update smoke only.
 
 Current execution charter:
 
@@ -22,37 +22,45 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is one docs-only exact approval decision after the reviewed `12AA` / `12AB`
-  boundary pair. It is not implementation.
-- Decide only whether to approve one deterministic, CPU-only, standard-library
-  P8 synthetic/local policy-update smoke over in-memory project-authored records.
-- The decision must name the exact future behavior, exact files, inputs,
-  outputs, invariants, tests, evidence grade, rollback and stop conditions.
-- Candidate future file scope must remain narrow, preferably limited to one
-  `src/mjlabai/rl` module, one `tests/rl` module and direct package/governance
-  synchronization required by the implementation.
-- If approved, set the next first task directly to the exact implementation.
-  Do not create another proposal, sibling boundary or review document first.
-- If rejected or deferred, record one genuine blocker and whether a human
-  decision, stage deferment or closure is required.
-- Do not create or modify implementation, tests, fixtures or data in this
-  approval-decision task.
-- Do not approve broad P8 entry, production training, tuning, self-play,
-  league, matches, evaluation, inference or model-output integration.
-- Do not approve real Tenhou/haifu, external logs, platform data, accounts,
-  source ingestion, datasets, broad parser/reader/file ingestion or CLI.
-- Do not approve a model, checkpoint, weight, snapshot, persisted artifact,
-  third-party binary/service, GPU/distributed work or new framework dependency.
-- Do not run training, tuning, self-play, league, Tenhou, model-output,
-  `system.exe`, `libai.so` or unknown-artifact commands.
+- This is the exact implementation approved by `12AC`. Implement it now; do
+  not insert another proposal, boundary or approval task.
+- Create or modify only:
+  - `src/mjlabai/rl/__init__.py`
+  - `src/mjlabai/rl/synthetic_policy_update_smoke.py`
+  - `tests/rl/test_synthetic_policy_update_smoke.py`
+  - direct docs/governance synchronization required by this implementation.
+- Use Python standard library only, CPU only and deterministic in-memory
+  project-authored synthetic/local inputs only.
+- Implement one frozen input dataclass, one frozen result dataclass, one
+  validation error and one single-record update function as approved in
+  `12AC`.
+- Implement exactly:
+  - terminal target: `reward`.
+  - non-terminal target: `reward + discount_factor * next_max_action_value`.
+  - TD error: `target_value - current_action_value`.
+  - updated value: `current_action_value + learning_rate * td_error`.
+- Enforce finite numeric inputs, `0 < learning_rate <= 1`,
+  `0 <= discount_factor <= 1`, terminal/next-value consistency and all
+  synthetic/local provenance guardrails.
+- Do not mutate the input. Repeated identical calls must return equal results.
+- Output only the approved numerical diagnostics, safety summary, evidence
+  grade and non-evidence warnings.
+- Do not add fixtures or data files, batch/episode/environment/self-play
+  behavior, action selection, model output, neural networks, optimizer,
+  autograd, tensors, training loops, evaluation, checkpoint or artifacts.
+- Do not add path/file/URL ingestion, parser/reader, CLI, new dependencies,
+  timing, nondeterminism, concurrency, GPU or distributed execution.
+- Do not use real Tenhou/haifu, external logs, platform data, accounts,
+  secrets, third-party binaries/services or unknown model artifacts.
 - Do not create platform automation, scraping, evasion or account tooling.
-- Keep P9-P12 unapproved and make no model-strength, Tenhou ranked, stable-dan,
-  LuckyJ comparison or candidate-promotion claim.
-- This decision is the one remaining mandatory gate before the exact minimal
-  executable smoke task. Another docs-only planning boundary is forbidden
-  unless a genuine blocker is recorded and the user explicitly approves it.
+- Keep broad P8 and P9-P12 unapproved. Make no model-strength, Tenhou ranked,
+  stable-dan, LuckyJ comparison or candidate-promotion claim.
+- Stop before commit if any exact file, formula, API, input/output, dependency
+  or evidence boundary in `12AC` cannot be preserved.
 
 ## Completed
+
+- [x] 2026-07-18 Approved the exact minimal P8 synthetic/local policy-update smoke implementation: added `docs/12_technical_plan/12AC_P8_MINIMAL_SYNTHETIC_LOCAL_POLICY_UPDATE_SMOKE_IMPLEMENTATION_APPROVAL_DECISION.md`, recorded `Approved for next exact minimal implementation task`, and limited the future implementation to `src/mjlabai/rl/__init__.py`, `src/mjlabai/rl/synthetic_policy_update_smoke.py`, `tests/rl/test_synthetic_policy_update_smoke.py` and direct docs/governance synchronization. The approved behavior is one deterministic CPU-only standard-library tabular action-value temporal-difference update over one in-memory project-authored synthetic/local record, with exact terminal/non-terminal target, TD-error and updated-value formulas, finite-number/provenance validation, immutable input, deterministic result, evidence warnings and tests. User instruction to continue after `12AB` records the exact P8-E15 human transition authorization; `12AC` satisfies PM-E14; the new exact `10_NEXT` task satisfies P8-E14/PM-E15 for this task only. No implementation was executed in this decision. No fixture/data, environment, episode, self-play, model, checkpoint, optimizer, training loop, evaluation, real/external/platform data, CLI, dependency, strength claim, broad P8 or P9-P12 work was added or approved. The next task is `Implement exact minimal P8 synthetic/local policy-update smoke only.`
 
 - [x] 2026-07-18 Reviewed the P8 model / artifact provenance manifest boundary before any implementation: added `docs/12_technical_plan/12AB_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`, reviewed `12AA` scope, authority, artifact classes, three-layer identity, components, creation/derivation and acyclic lineage, lifecycle, freeze/thaw/revocation, verification/attestation, compatibility, locator/storage separation, eligibility, reproducibility, candidate fields, PM-E1 through PM-E15 and stop conditions. Decision: `A. Review can close.` No genuine blocker was found; one repeated sentence is non-blocking and `12AA` was not modified. Anti-overdocumentation exit: the concrete executable outcome is an exact minimal P8 synthetic/local policy-update smoke, one exact approval decision remains, and no sibling boundary may be added without a genuine blocker and explicit user approval. No code, tests, fixtures, data, manifest/schema/loader/artifact, model/checkpoint/weight use, training/evaluation/inference, self-play/RL/league, source/real-data work, strength claim or P9-P12 work was added or approved. The next task is `Decide whether to approve an exact minimal P8 synthetic/local policy-update smoke implementation.`
 
