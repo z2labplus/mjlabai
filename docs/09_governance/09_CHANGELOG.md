@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.05
+
+- Implemented the exact `04P` P7/P8 held-out trained-imitation-policy MahJax
+  round smoke and nine focused tests.
+- Refactored training behind a private in-process helper; the public training
+  API remains frozen-summary-only and no parameters/data/artifact are exposed.
+- Identical seed-2 environments run initial and trained model parameters through
+  public 630-feature encoding and authoritative 87-action masks. Both terminate
+  without truncation; traces contain 88/94 legal actions, first actions 12/71,
+  global scores `(250,250,250,250)` and unequal behavior.
+- Validation passed: all 355 tests with two existing skips. No persistence,
+  reward/RL update, self-play learning, real data, Tenhou, strength or P9-P12.
+
 ## 2026-07-18 - v4.04
 
 - Added `04P`; reviewed commit `1ae9755` against exact `04O` approval.

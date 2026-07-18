@@ -92,6 +92,16 @@
 | Changed trajectory is mistaken for improved strength. | Evidence / Scope | Critical | High | Report behavior change only; warnings deny quality, reward, ranking, Tenhou, stable-dan and LuckyJ claims. | Open |
 | Another planning chain delays the approved round. | Governance / Delivery | High | Medium | `04P` leaves zero gates and `10_NEXT` requires direct implementation. | Mitigated |
 
+## 2026-07-18 — P7/P8 held-out trained-policy round implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Private parameter handoff leaks into the public API or persistence. | Governance / Scope | High | Low | Helper remains absent from `__all__`; result exposes only frozen diagnostics and source tests forbid file/save/load behavior. | Mitigated |
+| Before/after rounds use different initial states. | Research / Correctness | High | Low | Both calls use exact seed 2 and identical environment configuration; seed identities are pinned. | Mitigated |
+| Trained policy emits an illegal action. | Engineering / Correctness | Critical | Low | Every score vector is masked and all 94 trained actions are stored with/rechecked against complete legal tuples. | Mitigated |
+| Changed trajectory is overclaimed as improved play. | Evidence / Scope | Critical | High | Warnings explicitly classify behavior change only and deny quality/strength/ranking claims. | Open |
+| Review starts another documentation chain. | Governance / Delivery | High | Medium | Exactly one review is next; closure must directly approve/defer material execution or record a genuine blocker. | Mitigated |
+
 ## 2026-07-18 — P8 bounded policy-improvement sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

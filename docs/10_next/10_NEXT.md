@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact held-out-seed MahJax trained-imitation-policy round smoke.
+- [ ] Review the exact held-out-seed MahJax trained-imitation-policy round smoke implementation.
 
 Current execution charter:
 
@@ -22,20 +22,22 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Execute exactly `04P`: privately expose initial/trained in-memory parameters
-  without changing the public training API, then run identical seed-2 initial
-  and trained model rounds through the public encoder and legal mask.
-- Use only the four exact source/test files approved in `04P`; no package export
-  is required. Hard-cap each round at 256 and record complete legal/action
-  traces, raw outcomes, global scores and reviewed training summary.
-- Pin initial/trained transition counts 88/94, terminal/no truncation, scores
-  `(250,250,250,250)`, first actions 12/71 and unequal trajectories.
-- Return frozen diagnostics only; no path, save/load, dataset, parameter,
-  checkpoint or artifact output.
-- No reward/RL update, self-play learning, production evaluation, real data,
-  Tenhou, strength claim, broad P8 or P9-P12.
+- Review commit implementation against exact `04P` files/API and source bounds.
+- Confirm private parameter handoff is absent from `__all__`, public training
+  still returns only its frozen summary, and no path/save/load surface exists.
+- Recheck identical seed 2, public 630-feature encoding, complete legal tuples,
+  authoritative masking, 256 caps, exact 88/94 terminal traces, global scores,
+  raw outcomes, first actions and deterministic trajectory change.
+- Run focused/full/compile/dependency/diff and independent direct probes. Change
+  production code only for a concrete blocker in approved files.
+- On closure, directly accept/reject and approve/defer one materially progressive
+  executable next task; another planning/review chain is forbidden.
+- No reward/RL update, production self-play/evaluation, real data, Tenhou,
+  strength claim, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `04P`-approved held-out-seed MahJax trained-imitation-policy round smoke. Refactored the reviewed training behind an unexported private in-process parameter helper while preserving its public frozen-summary API; added one environment module and nine focused tests. Identical seed-2 environments run initial/trained parameters through the public 630-feature encoder and authoritative 87-action mask. Both terminate without truncation after 88/94 fully legal transitions, global scores remain `(250,250,250,250)`, first actions are 12/71 and trajectories differ. All 355 tests pass with two existing skips. No persistence, reward/RL update, self-play learning, production evaluation, real data, Tenhou, strength claim or P9-P12 work was added. One exact code review is next.
 
 - [x] 2026-07-18 Reviewed commit `1ae9755` against exact `04O` approval in `04P`. Decision: `A. Review can close.` Confirmed nine-symbol API, public-only seed-separated 54/64 collection, every teacher label legal, exact 630-feature/87-action model, 16 deterministic masked-cross-entropy updates, strictly decreasing loss history, expected metrics/deltas, frozen summary, no persistence and forbidden scope. Ten focused and all 346 tests pass with two skips; compile, dependency, diff and independent probes pass. Accepted the training smoke and directly approved one exact held-out seed-2 before/after trained-policy MahJax round. Independent probe yields legal terminal 88/94-step unequal traces with global scores `(250,250,250,250)`. Zero gates remain before code. No reward/RL, self-play learning, real data, Tenhou, strength or P9-P12 work was added.
 

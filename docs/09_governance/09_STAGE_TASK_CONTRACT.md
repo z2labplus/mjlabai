@@ -2,10 +2,10 @@
 
 ## Current stage
 
-P7/P8 direct implementation of the exact `04P`-approved held-out-seed MahJax
-trained-imitation-policy round over the reviewed 630-feature, 87-action project
-linear model. The first gradient training is review-closed; parameter handoff
-must remain private and in memory.
+P7/P8 exact implementation review of the completed `04P`-approved held-out-seed
+MahJax trained-imitation-policy round over the reviewed 630-feature, 87-action
+project linear model. Private parameter handoff and 88/94-step seed-2 traces
+are implemented; review must not expand training or claim improvement.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -585,6 +585,7 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04P` private parameter handoff and identical seed-2
-initial/trained legal-masked rounds. No proposal, boundary or review may
-intervene before code.
+Review the exact `04P` private parameter handoff and identical seed-2
+initial/trained legal-masked rounds. No production change absent a concrete
+blocker. Closure must directly approve/defer a material executable next task;
+another planning chain is forbidden.

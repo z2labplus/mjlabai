@@ -28,13 +28,12 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7/P8 direct implementation of the exact `04P`-approved held-out seed-2
-before/after trained-imitation-policy MahJax round. `04P` review-closes the
-first environment-backed parameter training after 346 passing tests. An
-independent probe shows both parameter sets terminate legally on seed 2 and
-produce different 88/94-step traces. The next code must preserve private
-in-memory-only parameters and authoritative legal masking. This is not
-production training, self-play/RL or strength evidence.
+P7/P8 exact implementation review of the completed `04P`-approved held-out
+seed-2 before/after trained-imitation-policy MahJax round. Private in-memory
+parameter handoff preserves the public summary API; both policies use the
+public encoder and legal mask, terminate without truncation and produce
+different 88/94-step traces. All 355 tests pass with two existing skips. This
+is not improvement, production training, self-play/RL or strength evidence.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

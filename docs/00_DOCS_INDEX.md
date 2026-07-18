@@ -137,6 +137,15 @@ environment round with private in-memory parameter handoff and zero gates
 before code. It is implementation-review/task-approval evidence only, not
 policy-quality, production training, self-play or strength evidence.
 
+The exact `04P` held-out environment-use smoke is implemented in
+`src/mjlabai/environment/mahjax_trained_imitation_policy_round_smoke.py` with
+focused tests in
+`tests/environment/test_mahjax_trained_imitation_policy_round_smoke.py`. The
+training module now provides a private in-process parameter handoff while its
+public summary API remains unchanged. Seed-2 initial/trained traces terminate
+legally in 88/94 steps and differ. One exact code review is next; this is not
+policy-quality, self-play/RL or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

@@ -71,6 +71,34 @@ Status:
 
 Approved; direct held-out trained-policy round implementation is current next.
 
+## 2026-07-18 — DR-0190 — Complete Held-Out Trained-Policy Environment Use
+
+Decision:
+
+```text
+Complete the exact `04P` seed-2 initial/trained policy environment smoke and
+require one exact implementation review before further P8 progression.
+```
+
+Rationale and evidence:
+
+- Private in-process parameters preserve the public summary-only training API.
+- Both initial and trained models use the same held-out environment seed and
+  public encoder/authoritative legal mask; all 88/94 actions are legal.
+- Training changes the environment action trace while both rounds terminate.
+- Nine focused and all 355 tests pass with two existing skips.
+
+Consequences:
+
+- The repository now proves real trained parameters affect legal environment
+  decisions on a seed outside train/evaluation-label collection.
+- Behavior change is not improvement or strength evidence.
+- Exactly one code review is next; another planning chain is barred.
+
+Status:
+
+Implemented; exact held-out-round review is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

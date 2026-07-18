@@ -207,9 +207,8 @@ def _collect_decisions(seed, jax, jnp, mahjax, rule_based_player):
     )
 
 
-def run_mahjax_rule_policy_imitation_training_smoke(
-) -> MahJaxImitationTrainingResult:
-    """Collect two local rounds and apply sixteen full-batch gradient steps."""
+def _train_mahjax_rule_policy_imitation_parameters():
+    """Return initial/trained arrays and diagnostics for in-process smoke use."""
 
     jax, jnp, mahjax, rule_based_player = _load_pinned_runtime()
     if mahjax.__version__ != _MAHJAX_PACKAGE_VERSION:
@@ -360,7 +359,7 @@ def run_mahjax_rule_policy_imitation_training_smoke(
             "training must improve approved loss/accuracy diagnostics and change parameters"
         )
 
-    return MahJaxImitationTrainingResult(
+    result = MahJaxImitationTrainingResult(
         training_version=MAHJAX_IMITATION_TRAINING_SMOKE_VERSION,
         package_version=_MAHJAX_PACKAGE_VERSION,
         environment_id=_MAHJAX_ENVIRONMENT_ID,
@@ -394,6 +393,15 @@ def run_mahjax_rule_policy_imitation_training_smoke(
         evidence_grade=_EVIDENCE_GRADE,
         warnings=_WARNINGS,
     )
+    return initial_weights, initial_biases, weights, biases, result
+
+
+def run_mahjax_rule_policy_imitation_training_smoke(
+) -> MahJaxImitationTrainingResult:
+    """Collect two local rounds and apply sixteen full-batch gradient steps."""
+
+    _, _, _, _, result = _train_mahjax_rule_policy_imitation_parameters()
+    return result
 
 
 __all__ = [

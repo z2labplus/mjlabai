@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — Held-out trained-imitation-policy environment round
+
+- Type: executable P7/P8 local in-memory trained-parameter environment-use
+  smoke evidence.
+- A private helper passes reviewed initial/trained parameters without changing
+  the public training summary API or persisting any artifact.
+- On identical held-out seed 2, initial/trained policies select 88/94 fully
+  legal actions, both terminate without truncation, global scores remain
+  `(250,250,250,250)`, first actions are 12/71 and traces differ.
+- Validation: nine focused and all 355 repository tests pass with two existing
+  skips; compile/dependency/diff checks remain next before commit.
+- Evidence grade: local trained-policy held-out environment smoke only; not
+  policy quality, reward/RL, self-play, production evaluation or strength.
+
 ### 2026-07-18 — First imitation training review and held-out-use probe
 
 - Type: exact implementation-review closure, current-scope acceptance and
