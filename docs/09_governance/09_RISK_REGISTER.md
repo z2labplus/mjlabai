@@ -9,6 +9,17 @@
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
 
+## 2026-07-18 — P8 categorical MLP two-round sequence approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Round 2 silently restarts from imitation parameters. | ML / Continuity | Critical | Medium | Assign update-1 arrays directly before seed 3; pin fresh versus carried seed-3 objective difference and final initial-to-end deltas. | Open |
+| Private seed generalization changes reviewed seed-1 public behavior. | Engineering / Regression | High | Low | Add a private seed argument only; rerun all existing `04V` tests and exact public result. | Open |
+| A second-round actor receives a first-round return. | ML / Credit assignment | Critical | Low | Build separate trajectory/actor return tensors per loop item and call the reviewed helper once per round. | Open |
+| Two updates turn into an unbounded trainer. | Governance / Scope | High | Medium | Exact tuple `(1,3)`, one two-item loop and exactly two helper calls; tests reject third round/update. | Open |
+| Repeated objective decreases are overclaimed as strength. | Evidence / Scope | Critical | High | Post trajectories remain unchanged; evidence grade denies improvement/evaluation/stable-dan/LuckyJ. | Open |
+| Approval restarts planning instead of code. | Governance / Delivery | High | Medium | `04W` leaves zero gates and `10_NEXT` requires direct implementation. | Mitigated |
+
 ## 2026-07-18 — P8 categorical MLP all-project update implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

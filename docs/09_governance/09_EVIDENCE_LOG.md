@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — All-project update review and two-round continuity probe
+
+- Type: exact code-review closure, current-scope acceptance and direct bounded
+  repeated all-project P8 training-task approval evidence.
+- `04W` records `A. Review can close`; nine focused and all 413 explicit tests
+  pass with two skips plus compile/dependency/diff/direct probes.
+- Seed-3 after direct seed-1 parameter carry completes 84 legal actions with
+  actor counts `(23,22,19,20)`, cumulative raw `(-10,-10,20,-10)` and objective
+  `-0.05535889->-0.05543957`.
+- Fresh seed-3 initial objective is `-0.05533995`, proving the carried parameters
+  alter the round-2 objective. Both updates change all four arrays; final deltas
+  are `(0.0010158311,0.0001864599,0.0025688238,0.0002769242)`.
+- Evidence grade: exact two-round all-project training task approval only; not
+  production self-play, evaluation, improvement, league or strength.
+
 ### 2026-07-18 — First shared four-project-seat raw-outcome update
 
 - Type: executable P8 local shared-policy all-project-seat parameter-update

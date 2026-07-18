@@ -455,6 +455,36 @@ Status:
 
 Implemented; exact shared all-project update review is current next.
 
+## 2026-07-18 — DR-0203 — Close Four-Seat Update Review And Approve Two Rounds
+
+Decision:
+
+```text
+A. Review can close.
+Accept the exact `04V` update and directly approve the exact `04W` seeds-(1,3)
+two-round sequential shared all-project training smoke.
+```
+
+Rationale and evidence:
+
+- `d59f4a1` conforms and all 413 explicit tests pass with two skips.
+- The first all-project update has correct ownership, legality, actor-indexed
+  returns, one finite update and no persistence or scope drift.
+- Carried seed-3 parameters produce a legal nonzero round and an objective
+  distinct from fresh imitation parameters; a second update changes all arrays.
+- A fixed two-round sequence is the smallest material proof of repeated shared
+  four-seat environment training.
+
+Consequences:
+
+- Exact `04W` files/API/seeds/continuity/diagnostics are directly executable.
+- No third round, unbounded trainer, replay, production self-play/evaluation or
+  strength claim is approved.
+
+Status:
+
+Approved; direct two-round all-project training implementation is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

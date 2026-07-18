@@ -238,6 +238,13 @@ returns drive exactly one finite update. One exact code review is next. This is
 bounded local P8 update evidence, not production self-play, evaluation,
 improvement or strength evidence.
 
+`docs/04_rl_selfplay/04W_P8_ALL_PROJECT_POLICY_GRADIENT_IMPLEMENTATION_REVIEW.md`
+reviews commit `d59f4a1`, records `A. Review can close`, accepts the first
+shared four-project-seat update and directly approves an exact seeds `(1,3)`
+two-round sequence with direct parameter continuity and two updates. This is
+review/task-approval evidence, not production self-play, evaluation,
+improvement or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

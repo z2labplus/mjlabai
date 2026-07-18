@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.18
+
+- Added `04W`; reviewed commit `d59f4a1` against exact `04V` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed shared policy ownership, RNG split, all 77 legal samples, exact
+  actor-indexed returns, one update/objective/deltas, post replay, frozen result
+  and no I/O/replay/rule participant.
+- Validation passed: nine focused and all 413 explicit tests with two skips;
+  compile, dependency, diff and independent probes pass.
+- Directly approved seeds `(1,3)` two-round all-project training with direct
+  parameter carry and two total updates. Probe seed 3 is legal/nonzero and its
+  carried objective differs from fresh parameters. No production self-play/
+  evaluation, real data, strength or P9-P12 work was added.
+
 ## 2026-07-18 - v4.17
 
 - Implemented the exact `04V` P8 categorical-MLP shared all-project-seat raw-
