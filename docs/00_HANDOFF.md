@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P4 MahJax integration current-scope acceptance plus
-direct bounded single-round rollout approval/deferment after `04K` review:
+Current active stage is direct implementation of the exact `04L`-approved P4
+MahJax deterministic hard-capped single-round rollout smoke:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

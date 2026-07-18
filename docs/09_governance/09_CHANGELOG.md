@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.95
+
+- Accepted the exact MahJax integration review-closed in `04K` as
+  current-scope complete and directly approved bounded rollout `04L`.
+- Independent pinned-runtime JIT probing confirms seed 0 reaches a terminal
+  single round in 94 transitions with no truncation and zero raw rewards.
+- Fixed exact files, six-symbol API, 256 cap, one JIT step, one bounded loop,
+  complete trace/raw outcome, seed-0 values and thirteen test categories.
+- New `10_NEXT` first item is direct rollout implementation; zero gates remain.
+- No code, real data, Tenhou, model, self-play, strength, broad P8 or P9-P12
+  work was added by this decision.
+
 ## 2026-07-18 - v3.94
 
 - Reviewed commit `7ab90d5` against the exact `04J` MahJax approval in `04K`.

@@ -122,6 +122,16 @@
 | Review closure is mistaken for full environment conformance or self-play readiness. | Evidence / Scope | High | High | `04K` grades only pinned one-transition integration review evidence and requires bounded rollout before broader use. | Open |
 | Successful review creates another one-step wrapper or docs chain. | Governance / Delivery | High | High | `10_NEXT` requires direct acceptance plus bounded single-round approval/deferment. | Mitigated |
 
+## 2026-07-18 — P4 bounded MahJax single-round rollout approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Rollout hangs or grows into an unbounded episode runner. | Engineering / Scope | High | Medium | Exact one `for` loop, immutable cap 256, cap-exhaustion error and zero `while` are required. | Mitigated |
+| Eager JAX execution makes the smoke operationally unusable. | Engineering / Performance | Medium | Realized | Exploratory eager path was stopped; exact implementation requires one `jax.jit(environment.step)` and blocking state readiness. | Mitigated |
+| Action policy injects model or project legality instead of environment authority. | Architecture / Correctness | High | Medium | Every step records the complete environment mask and selects only its lowest `True` index; no callback/adapter is allowed. | Mitigated |
+| Raw environment rewards are reshaped or overclaimed. | RL / Evidence | High | High | Store raw per-step/final/cumulative four-vectors only; fixed warnings deny objective, quality and strength claims. | Open |
+| One deterministic round is mistaken for production self-play. | Evidence / Scope | High | High | `04L` limits evidence to one bounded P4 environment rollout and forbids model participants/multiple games. | Open |
+
 ## 2026-07-18 — P8 interleaved trace approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

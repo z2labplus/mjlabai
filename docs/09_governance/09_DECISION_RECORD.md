@@ -14,6 +14,36 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0180 — Approve Bounded MahJax Single-Round Rollout
+
+Decision:
+
+```text
+Accept the exact `04J`/`04K` integration as current-scope complete.
+Approve the exact `04L` 256-cap JIT single-round rollout implementation.
+```
+
+Rationale and evidence:
+
+- The pinned environment integration is review-closed with no blocker.
+- An independent JIT probe reaches terminal seed-0 state in 94 legal
+  transitions, without truncation, with four zero raw/cumulative rewards and
+  equal final scores.
+- JIT removes the unsuitable repeated eager compile overhead while preserving
+  the exact public environment transition.
+
+Consequences:
+
+- `04L` fixes exact files/API/cap/policy/trace/outcome/tests and leaves zero
+  gates before code.
+- This advances P4 from one transition to one complete bounded round.
+- No model, production self-play/training/evaluation, real data, strength,
+  broad P8 or P9-P12 approval follows.
+
+Status:
+
+Approved; direct exact rollout implementation is current next.
+
 ## 2026-07-18 — DR-0179 — MahJax Integration Review Closure
 
 Decision:

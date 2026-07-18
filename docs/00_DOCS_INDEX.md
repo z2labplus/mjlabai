@@ -66,6 +66,12 @@ public API, legal-mask/action/state diagnostics and 302 passing tests, and
 requires direct acceptance plus bounded single-round rollout approval or
 deferment. It is P4 integration review evidence only, not strength evidence.
 
+`docs/04_rl_selfplay/04L_P4_MAHJAX_SINGLE_ROUND_ROLLOUT_APPROVAL.md` accepts
+the `04J`/`04K` integration scope and directly approves one exact JIT-compiled,
+256-step-capped, lowest-legal-action single-round rollout with complete trace,
+raw outcome and seed-0 acceptance values. Zero gates remain before code. It is
+task-approval evidence only, not self-play or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

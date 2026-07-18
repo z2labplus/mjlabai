@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P4 bounded MahJax rollout approval probe
+
+- Type: internal current-scope acceptance, executable exploratory probe and
+  exact next-task approval evidence.
+- Pinned seed-0 lowest-legal-action JIT probe: 94 transitions, terminated true,
+  truncated false, no nonzero reward event, final/cumulative rewards all zero,
+  final scores `(250,250,250,250)` in MahJax units.
+- First JIT step compiled in about 7.35 seconds on the checked CPU host; total
+  probe completed in about 7.44 seconds. This is operational evidence only,
+  not a latency benchmark.
+- `04L` approves one exact 256-cap implementation with zero gates before code.
+- Evidence grade: P4 bounded rollout task-approval evidence only; not
+  self-play, training/evaluation, model-strength, Tenhou or P8-P12 evidence.
+
 ### 2026-07-18 — P4 pinned MahJax integration review closure
 
 - Type: internal exact dependency-integration code-review closure evidence.

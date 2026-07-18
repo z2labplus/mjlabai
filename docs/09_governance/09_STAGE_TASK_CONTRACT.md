@@ -2,8 +2,8 @@
 
 ## Current stage
 
-P4 MahJax integration current-scope acceptance and direct bounded single-round
-rollout approval/deferment after `04K` closed the exact implementation review.
+P4 direct implementation of the exact `04L`-approved MahJax deterministic
+single-round rollout with one JIT step function and hard 256-transition cap.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -583,5 +583,5 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Accept/reject the exact `04J`/`04K` MahJax integration and directly approve or
-defer one hard-capped local single-round rollout. Do not implement it yet.
+Implement the exact `04L` MahJax single-round rollout. No proposal/review gate
+may intervene before code.

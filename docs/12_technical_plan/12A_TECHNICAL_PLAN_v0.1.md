@@ -28,9 +28,9 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P4 MahJax integration current-scope acceptance and direct bounded single-round
-rollout approval/deferment after `04K` review-closed the exact pinned local
-init/observe/legal-step implementation with 302 repository tests passing.
+P4 direct implementation of the exact `04L`-approved MahJax deterministic
+single-round rollout after `04K` review-closed the pinned integration and an
+independent JIT probe terminated seed 0 in 94 legal transitions.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
