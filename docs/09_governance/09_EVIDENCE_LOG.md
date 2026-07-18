@@ -8,6 +8,19 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Return-estimator review and raw-return step-size probe
+
+- Type: exact code-review closure plus bounded learning-rate sensitivity task
+  approval evidence.
+- `04Z` records `A. Review can close`; ten focused and all 441 explicit tests
+  pass with two skips plus compile/dependency/diff checks.
+- Rates `0.01/0.005/0.001/0.0001` all change parameters after five exact raw-
+  return updates. Fixed evaluation aggregates are `-454/-454/-320/-320`.
+- Rates `0.001/0.0001` retain initial greedy evaluation behavior; this is no
+  degradation in the fixed diagnostic, not improvement or optimality.
+- Evidence grade: bounded step-size sensitivity and task approval only; not
+  rate selection, robust evaluation, strength or promotion evidence.
+
 ### 2026-07-19 — Executable return-estimator failure comparison
 
 - Type: executable P8 local three-branch return-estimator failure-comparison

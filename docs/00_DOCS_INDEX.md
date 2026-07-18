@@ -286,6 +286,13 @@ evaluation, pinning initial/raw/centered/standardized aggregates
 `-320/-454/-454/-490`. One exact review is next; this is failure-comparison,
 not estimator-selection or strength evidence.
 
+`docs/04_rl_selfplay/04Z_P8_RETURN_ESTIMATOR_COMPARISON_IMPLEMENTATION_REVIEW.md`
+reviews commit `fa3471e`, records `A. Review can close`, accepts the exact
+three-estimator comparison and directly approves a four-rate raw-return
+sensitivity implementation. Probes record aggregates `-454/-454/-320/-320`
+for rates `0.01/0.005/0.001/0.0001`. This is review/task-approval evidence,
+not optimal-rate selection or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

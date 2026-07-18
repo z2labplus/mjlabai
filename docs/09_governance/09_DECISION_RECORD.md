@@ -1,5 +1,21 @@
 # 09_DECISION_RECORD
 
+## 2026-07-19 — Review estimator comparison and directly probe fixed step sizes
+
+Decision:
+
+```text
+A. Review can close for commit `fa3471e`.
+Directly approve one exact raw-return comparison at fixed rates
+0.01, 0.005, 0.001 and 0.0001.
+```
+
+Reason: the implementation matches `04Y` and all tests pass. Probes show the
+two larger rates cross the same fixed greedy behavior threshold and regress,
+while the smaller rates change parameters without changing fixed evaluation.
+The next comparison records sensitivity without selecting a rate or using
+evaluation to update parameters.
+
 ## 2026-07-19 — Review five-round failure diagnostic and directly compare return estimators
 
 Decision:

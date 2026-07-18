@@ -40,6 +40,16 @@ formulas, parameter distinction, no-update evaluation and non-selection wording
 are now pinned by source/tests. The fixed regression remains unresolved; the
 next review may approve one separate bounded step-size diagnostic, not scale-up.
 
+## 2026-07-19 — P8 raw-return learning-rate comparison approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Fixed rates become an implicit hyperparameter sweep/selection. | Governance / Leakage | Critical | Medium | Exact four predeclared rates; output forbids ranking, selection, early stopping and adaptive values. | Open |
+| Small-rate unchanged greedy behavior is called improvement. | Evidence / Interpretation | Critical | High | Pin nonzero parameter deltas separately; warnings state unchanged behavior is not quality/strength. | Open |
+| Branches receive different trajectories for reasons other than rate. | ML / Comparison | High | Low | Identical seeds/RNG and complete legal trajectory pinning for all branches. | Open |
+| Evaluation is used to update/select a branch. | Evaluation / Leakage | Critical | Low | Evaluation update count zero; no selected-rate field or returned arrays. | Open |
+| Four-rate diagnostic triggers scale-up despite tiny sample. | Research / Statistics | High | High | One implementation/review only; next action must address evaluation breadth or algorithm design, not scale training. | Open |
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

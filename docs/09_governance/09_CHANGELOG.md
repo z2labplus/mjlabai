@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.24
+
+- Added `04Z`; reviewed commit `fa3471e` against exact `04Y` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed exact formulas, independent branches, five legal updates each,
+  fixed zero-update evaluation, complete diagnostics and frozen output.
+- Validation passed: ten focused and all 441 explicit tests with two skips;
+  compile, dependency and diff checks pass.
+- Fixed raw-return rate probes record `-454/-454/-320/-320` for
+  `0.01/0.005/0.001/0.0001`. Directly approved exact step-size sensitivity
+  code. No optimal-rate/strength claim, real data or P9-P12 work was added.
+
 ## 2026-07-19 - v4.23
 
 - Implemented the exact `04Y` raw/centered/standardized return-estimator

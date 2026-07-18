@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact MahJax categorical-MLP raw/centered/standardized return-estimator comparison smoke implementation.
+- [ ] Implement the exact MahJax categorical-MLP raw-return learning-rate comparison smoke.
 
 Current execution charter:
 
@@ -22,21 +22,32 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review the exact two `04Y`-approved files and implementation commit; change
-  code/tests only for a concrete blocker.
-- Verify exact seven-symbol API, identical initial branch parameters, five
-  independent updates per estimator and complete legal terminal trajectories.
-- Verify raw-helper reuse and exact centered/standardized formulas, objectives,
-  per-step/final deltas and branch-final parameter distinction.
-- Verify disjoint fixed evaluation, identical RNG/rule participants, zero eval
-  updates, full traces/scores/rewards and `-320/-454/-454/-490` aggregates.
-- Verify centered parameter difference/evaluation identity, standardized exact
-  changed seeds and explicit non-selection/failure-evidence wording.
-- Closure must directly approve or defer one bounded learning-rate/step-size
-  diagnostic implementation; no sibling proposal/boundary, scale-up, real
-  data, production self-play/evaluation, strength claim or P9-P12.
+- Execute exact `04Z` in its two approved source/test files plus governance.
+- Branch identical reviewed imitation parameters into exact fixed learning
+  rates `(0.01,0.005,0.001,0.0001)` using raw actor-indexed returns only.
+- Apply five updates per branch on exact seeds `(1,3,5,7,11)`; `0.01` reuses
+  the reviewed helper and all branches remain independent.
+- Evaluate initial and four branches without updates on disjoint seeds `20..35`
+  under identical environment/rule RNG and fixed participant roles.
+- Pin aggregates `-320/-454/-454/-320/-320`, changed seeds, complete traces,
+  objectives/deltas and 0.01/0.005 versus initial/0.001/0.0001 identities.
+- Report step-size sensitivity only. No rate selection, extra/adaptive rate,
+  optimizer change, persistence, real data, production self-play/evaluation,
+  strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Reviewed commit `fa3471e` against exact `04Y` approval in
+  `04Z`. Decision: `A. Review can close.` Confirmed exact API, independent
+  branch initialization, exact formulas, five legal updates per branch,
+  disjoint zero-update fixed evaluation, frozen output, non-selection warnings
+  and no I/O/real-data/production path. Ten focused and all 441 explicit tests
+  pass with two skips; compile/dependency/diff checks pass. Raw-return probes
+  show fixed aggregates `-454/-454/-320/-320` for rates
+  `0.01/0.005/0.001/0.0001`; every branch changes parameters, while the two
+  smaller rates leave fixed greedy behavior unchanged. Directly approved exact
+  four-rate sensitivity code; zero gates remain. No optimal-rate or strength
+  claim was made.
 
 - [x] 2026-07-19 Implemented the exact `04Y`-approved raw/seat-centered/seat-
   standardized return-estimator comparison in two files. Three branches start
