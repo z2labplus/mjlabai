@@ -110,8 +110,11 @@ def run_synthetic_policy_improvement_sequence_smoke(
         )
 
     step_ids = []
-    normalized_candidate_batches = []
+    seen_step_ids = set()
     global_record_ids = []
+    seen_record_ids = set()
+    current_model = initial_model
+    step_results = []
     for step_index, step in enumerate(steps, start=1):
         if type(step) is not SyntheticPolicyImprovementStepInput:
             raise SyntheticPolicyImprovementSequenceSmokeError(
@@ -121,7 +124,12 @@ def run_synthetic_policy_improvement_sequence_smoke(
             raise SyntheticPolicyImprovementSequenceSmokeError(
                 f"step {step_index} step_id must be a non-empty string"
             )
+        if step.step_id in seen_step_ids:
+            raise SyntheticPolicyImprovementSequenceSmokeError(
+                "step_ids must be pairwise distinct"
+            )
         step_ids.append(step.step_id)
+        seen_step_ids.add(step.step_id)
         try:
             batches = _normalize_candidate_batches(
                 step.candidate_transition_batches
@@ -130,28 +138,17 @@ def run_synthetic_policy_improvement_sequence_smoke(
             raise SyntheticPolicyImprovementSequenceSmokeError(
                 f"step {step_index} failed: {exc}"
             ) from exc
-        normalized_candidate_batches.append(batches)
-        global_record_ids.extend(
+        step_record_ids = tuple(
             transition.record_id
             for batch in batches
             for transition in batch
         )
-
-    if len(set(step_ids)) != len(step_ids):
-        raise SyntheticPolicyImprovementSequenceSmokeError(
-            "step_ids must be pairwise distinct"
-        )
-    if len(set(global_record_ids)) != len(global_record_ids):
-        raise SyntheticPolicyImprovementSequenceSmokeError(
-            "candidate transition record_ids must be globally pairwise distinct across all steps"
-        )
-
-    current_model = initial_model
-    step_results = []
-    for step_index, (step, batches) in enumerate(
-        zip(steps, normalized_candidate_batches),
-        start=1,
-    ):
+        if seen_record_ids.intersection(step_record_ids):
+            raise SyntheticPolicyImprovementSequenceSmokeError(
+                "candidate transition record_ids must be globally pairwise distinct across all steps"
+            )
+        global_record_ids.extend(step_record_ids)
+        seen_record_ids.update(step_record_ids)
         try:
             result = run_synthetic_one_step_policy_improvement_smoke(
                 current_model,

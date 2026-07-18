@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import ast
 from dataclasses import FrozenInstanceError, asdict, fields, replace
 import inspect
 from pathlib import Path
@@ -377,6 +378,11 @@ class SyntheticPolicyImprovementSequenceSmokeTests(unittest.TestCase):
         )
         source = inspect.getsource(sequence_module)
         self.assertEqual(source.count("run_synthetic_one_step_policy_improvement_smoke("), 1)
+        syntax_tree = ast.parse(source)
+        self.assertEqual(
+            sum(isinstance(node, ast.For) for node in ast.walk(syntax_tree)),
+            1,
+        )
         for forbidden in (
             "target - prediction",
             "weights[action_index]",
