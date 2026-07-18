@@ -20,6 +20,11 @@
 | Evaluation path accidentally updates parameters. | ML / Leakage | Critical | Low | Evaluation helper accepts frozen arrays and contains no gradient/update; source tests pin separation. | Open |
 | Known regression is followed by scale-up before algorithm diagnosis. | Governance / Research | High | Medium | After implementation/review, next task must analyze/compare a bounded variance-control update, not increase rounds blindly. | Open |
 
+Implementation status: the exact source/test now pins all listed separation
+and regression checks; the realized-regression risk is mitigated as evidence,
+not solved as an algorithmic issue. Scale-up remains prohibited pending a
+bounded variance-control/reward-estimator comparison.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

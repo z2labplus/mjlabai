@@ -261,6 +261,15 @@ scope and directly approves five exact training updates followed by disjoint
 regression rather than improvement. This is review/task-approval evidence, not
 production evaluation or strength evidence.
 
+The exact `04X` task is implemented in
+`src/mjlabai/rl/mahjax_categorical_mlp_five_round_training_evaluation_smoke.py`
+with focused tests in
+`tests/rl/test_mahjax_categorical_mlp_five_round_training_evaluation_smoke.py`.
+It chains five reviewed updates and performs a zero-update 16-seed fixed
+mixed-policy comparison. It pins the observed `-320->-454` regression as
+failure evidence. One exact code review is next; this is not production
+evaluation, improvement or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

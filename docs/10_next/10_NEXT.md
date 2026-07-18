@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact MahJax categorical-MLP five-round all-project training and fixed mixed-policy evaluation smoke.
+- [ ] Review the exact MahJax categorical-MLP five-round training and fixed mixed-policy evaluation smoke implementation.
 
 Current execution charter:
 
@@ -22,20 +22,32 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Execute exact `04X` in its two approved source/test files plus governance.
-- Train exact ordered seeds `(1,3,5,7,11)` with five total reviewed actor-
-  indexed `0.01` updates and direct parameter continuity.
-- Evaluate initial/trained parameters without updates on disjoint seeds `20..35`:
-  greedy project seat 0 versus fixed bundled-rule seats `(1,2,3)` with identical
-  environment/rule RNG before/after.
-- Pin legal trajectories, outcomes/objectives/deltas, project rewards/scores,
-  changed seed `(32,)`, aggregate `-320->-454` and positive/negative counts.
-- Report this as evaluation regression/failure evidence, never improvement;
-  frozen summary/private arrays only.
-- No sixth update, reward/algorithm change, replay, persistence, external/real
-  data, production self-play/evaluation, strength or P9-P12.
+- Review the exact two `04X`-approved implementation files and implementation
+  commit; change code/tests only for a concrete blocker.
+- Verify the exact seven-symbol API, five ordered training updates, parameter
+  continuity, legal terminal trajectories and private-array/frozen output.
+- Verify disjoint seeds `20..35`, identical before/after environment/rule RNG,
+  greedy project seat 0, fixed rule seats and zero evaluation updates.
+- Verify complete pinned traces/scores/rewards, changed seed `(32,)`, aggregate
+  `-320->-454`, positive `1->0`, negative `8->9` and explicit regression wording.
+- Closure must directly approve or defer one bounded variance-control/reward-
+  estimator comparison implementation; no sibling proposal or boundary.
+- No scale-up, adaptive evaluation, persistence, external/real data, production
+  self-play/evaluation, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `04X`-approved five-round all-project
+  categorical-MLP training plus fixed mixed-policy evaluation smoke in the two
+  approved files. Exact seeds `(1,3,5,7,11)` apply five directly chained
+  actor-indexed `0.01` updates. Initial/trained parameters are evaluated with
+  zero updates on disjoint seeds `20..35`, project seat 0 greedy versus three
+  fixed rule seats under identical RNG. Nine focused tests, including a full
+  deterministic repeat, and all 431 explicit repository tests pass with two
+  existing skips. The result pins failure evidence: raw sum
+  `-320->-454`, positive rounds `1->0`, negative `8->9`, only seed 32 changes
+  and falls `+74->-60`. No persistence, real data, production evaluation,
+  strength claim or P9-P12 work was added. One exact code review is next.
 
 - [x] 2026-07-18 Reviewed commit `9cfdb4d` against exact `04W` approval in
   `04X`. Decision: `A. Review can close.` Confirmed private seed refactor,

@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.21
+
+- Implemented the exact `04X` P8 five-round shared categorical-MLP training
+  plus fixed mixed-policy before/after evaluation in two approved files.
+- Five legal terminal seeds `(1,3,5,7,11)` apply five directly chained reviewed
+  actor-indexed `0.01` updates; all four final parameter groups change.
+- Disjoint evaluation seeds `20..35` compare initial/trained greedy project
+  seat 0 against three fixed rule seats with identical RNG and zero updates.
+- Pinned the observed failure: raw sum `-320->-454`, positive `1->0`, negative
+  `8->9`, only seed 32 changes and falls `+74->-60`.
+- Nine focused and all 431 explicit repository tests pass with two existing
+  skips; compile, dependency and diff checks pass. No persistence, real data,
+  production evaluation, improvement/strength claim or P9-P12 work was added.
+
 ## 2026-07-18 - v4.20
 
 - Added `04X`; reviewed commit `9cfdb4d` against exact `04W` approval.

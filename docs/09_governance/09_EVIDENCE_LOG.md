@@ -8,6 +8,23 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — Five-round training and fixed mixed-policy failure diagnostic
+
+- Type: executable P8 local repeated shared-policy training plus independent
+  fixed mixed-policy failure-diagnostic evidence.
+- Exact seeds `(1,3,5,7,11)` complete legal terminal rounds and apply five
+  directly chained actor-indexed `0.01` updates; all parameter groups change.
+- Initial/trained parameters receive no updates on disjoint evaluation seeds
+  `20..35`; project seat 0 is greedy and seats 1/2/3 use the fixed bundled rule
+  policy with identical environment/rule RNG before and after.
+- Project raw sum regresses `-320->-454`; positive rounds `1->0`, negative
+  rounds `8->9`, and only seed 32 changes, from `+74` to `-60`.
+- Validation: nine focused tests including deterministic repeat and all 431
+  explicit repository tests pass with two existing skips; compile, dependency
+  and diff checks pass.
+- Evidence grade: P8 local bounded failure diagnostic only; not robust policy
+  evaluation, improvement, model strength, promotion, stable-dan or LuckyJ.
+
 ### 2026-07-18 — Two-round review and fixed-evaluation regression probe
 
 - Type: exact code-review closure plus bounded five-update/fixed-evaluation

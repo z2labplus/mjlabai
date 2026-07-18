@@ -27,16 +27,18 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the exact `04X`-approved
-MahJax categorical-MLP five-round training plus fixed mixed-policy evaluation
-smoke. `04X` review-closes commit `9cfdb4d`; all 422 explicit tests pass with
-two skips. The next code carries five exact all-project raw-outcome updates,
-then compares initial/trained project seat 0 against fixed rule seats on 16
-disjoint seeds without evaluation updates. The probe finds degradation:
-project raw sum `-320->-454`, with seed 32 changing `+74->-60`. This task will
-record that failure honestly, not claim improvement. Zero planning gates
-remain. It is bounded local training/evaluation diagnostic evidence, not
-production evaluation or strength evidence:
+Current active stage is one exact code review of the implemented `04X` MahJax
+categorical-MLP five-round training plus fixed mixed-policy evaluation smoke.
+The implementation runs five directly chained updates on seeds `(1,3,5,7,11)`
+and evaluates initial/trained parameters without updates on disjoint seeds
+`20..35`. Nine focused tests, including a deterministic full repeat, and all
+431 explicit repository tests pass with two existing skips. The
+frozen result records degradation honestly: project raw sum `-320->-454`,
+positive rounds `1->0`, negative rounds `8->9`, and only seed 32 changes from
+`+74` to `-60`. Review closure must directly approve or defer one bounded
+variance-control/reward-estimator comparison, not add another planning chain.
+This is local P8 failure-diagnostic evidence, not production evaluation or
+strength evidence:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
