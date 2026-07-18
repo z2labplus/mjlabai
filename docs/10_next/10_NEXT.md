@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review exact P8 synthetic/local linear-model inference and greedy-decision diagnostic implementation.
+- [ ] Decide current-scope acceptance and directly approve or defer exact P8 one-step synthetic/local policy-improvement closed-loop smoke.
 
 Current execution charter:
 
@@ -22,21 +22,23 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review commit `HEAD` against the exact `12AQ` approval and only the three
-  approved source/test files plus direct governance synchronization.
-- Verify the six-symbol API, exact model/probes/provenance, reviewed helper
-  reuse, action values, lower-index tie rule, frozen output, error wrapping,
-  exports, tests, warnings and evidence grade.
-- Run the 11 focused decision tests, the 125 approved regressions, compile/diff
-  checks and small independent numerical/adversarial probes.
-- Do not modify production code or tests unless a concrete blocker is found.
-  Do not create another boundary/proposal chain or approve a sibling feature.
-- Do not add dynamic model/probes, stochastic selection, training changes,
-  model loading, persistence/checkpoint, replay/environment/gameplay/self-play,
-  production evaluation, path/CLI, dependency, real/external/platform data,
-  broad P8 or P9-P12.
+- Accept or reject only the exact `12AQ` implementation review-closed in
+  `12AR`; do not re-review or modify production code/tests.
+- If accepted, make one decision that directly approves or defers one exact
+  one-step synthetic/local policy-improvement closed-loop smoke linking the
+  reviewed greedy decision, selected project-authored transition, reviewed
+  linear training helper and before/after decision diagnostics.
+- Fix exact model, transition/action binding, helper calls, files, API, frozen
+  outputs, tests, rollback, stop conditions and evidence grade. Leave zero
+  gates before code if approved; no proposal or sibling boundary may intervene.
+- Do not implement the loop in this decision. Do not approve a general
+  environment/episode, self-play, real/external/platform data, model loading,
+  persistence/checkpoint, CLI/path ingestion, dependency, production
+  evaluation, strength claim, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `475997a2934f689521d480376d816237f659dccc` against the exact `12AQ` approval in `12AR`. Decision: `A. Review can close.` Confirmed exact approved files/API, reviewed fixed model, exact three safe probes, canonical provenance, exact `(0,1)` action order, one/three/six reviewed helper calls, exact action values, lower-index tie behavior, deterministic frozen diagnostics, chained errors, exports, warnings and forbidden-scope compliance. Eleven decision tests and 125 approved regressions pass; compile/diff checks and independent numerical, tuple-subclass, duplicate-ID, external-log and non-mutation probes pass. No production code or test was modified and no blocker was found. The next decision must accept or reject this scope and directly approve or defer one materially progressive one-step closed-loop P8 task; another inference wrapper or boundary chain is forbidden.
 
 - [x] 2026-07-18 Implemented the exact `12AQ`-approved P8 synthetic/local linear-model inference and greedy-decision diagnostic. Added `src/mjlabai/rl/synthetic_linear_greedy_decision_smoke.py`, exported its six approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_linear_greedy_decision_smoke.py`. The frozen deterministic diagnostic validates one reviewed fixed linear model and exactly three project-authored synthetic/local probes, reuses the reviewed model/feature/action-value helpers, computes both values exactly once per probe, selects action 1 only when `q1 > q0`, and otherwise selects lower-index action 0 with explicit tie diagnostics. Eleven focused decision tests and 125 approved regressions pass; compile and diff checks pass. No dynamic model/probes, stochastic selection, training changes, model loading, persistence/checkpoint, replay/environment/gameplay/self-play, production evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is fixed synthetic/local inference/decision diagnostic evidence only, not policy-quality or model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 

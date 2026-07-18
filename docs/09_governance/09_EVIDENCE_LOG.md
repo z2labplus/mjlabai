@@ -8,6 +8,19 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 linear greedy-decision implementation review closure
+
+- Type: internal exact code-review closure evidence.
+- Added `12AR`; decision: `A. Review can close.`
+- Evidence: exact `12AQ` file/API/model/probe/provenance/helper/value/tie/
+  output/error/test and forbidden-scope compliance, 136 passing tests,
+  compile/diff checks and independent probes.
+- No production code or test was modified and no blocker was found.
+- Evidence grade: P8 exact synthetic/local linear-model inference and greedy-
+  decision implementation review closure evidence only; not environment,
+  self-play, production evaluation, policy-quality, model-strength or P9-P12
+  evidence.
+
 ### 2026-07-18 — P8 synthetic/local linear-model greedy-decision implementation
 
 - Type: internal executable fixed model-output diagnostic evidence.

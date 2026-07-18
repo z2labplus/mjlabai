@@ -85,6 +85,14 @@
 | Greedy decisions are overclaimed as policy quality or strength evidence. | Evidence / Scope | High | High | Fixed warnings and evidence grade explicitly exclude production evaluation, policy quality and strength claims. | Open |
 | Another docs chain delays approved inference code. | Governance / Delivery | High | Medium | Direct implementation is complete; the next task is one exact code review, not another boundary/proposal chain. | Closed |
 
+## 2026-07-18 — P8 linear greedy-decision implementation review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Review closure is mistaken for policy-quality or strength evidence. | Evidence / Scope | High | High | `12AR` grades only exact fixed synthetic/local inference review closure and explicitly denies those claims. | Open |
+| Successful review creates another inference wrapper or planning chain. | Governance / Delivery | High | Medium | `10_NEXT` requires current-scope acceptance plus direct one-step closed-loop approval/deferment; sibling boundaries are forbidden. | Mitigated |
+| Narrow tests miss helper, ordering or tie drift. | Engineering / Quality | Medium | Low | Review reruns all 136 approved tests plus exact Q-value/action/tie/helper-call and adversarial probes. | Mitigated |
+
 ## 2026-07-18 — P8 two-step sequence implementation review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

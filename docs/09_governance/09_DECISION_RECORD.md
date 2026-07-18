@@ -14,6 +14,35 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0164 — Exact P8 Linear Greedy Decision Review Closure
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Rationale and evidence:
+
+- Commit `475997a` conforms to every exact `12AQ` file, API, model/probe,
+  provenance, helper, value, tie, output, error, test and forbidden-scope rule.
+- All 136 approved tests, compile/diff checks and independent probes pass.
+- No correctness, scope, provenance, evidence or test blocker was found.
+
+Consequences:
+
+- Added `12AR` as the one exact implementation review.
+- The next decision must accept/reject this scope and directly approve or
+  defer one non-repetitive one-step closed-loop P8 outcome; another inference
+  wrapper or boundary chain is forbidden.
+- No general environment, self-play, production evaluation, real data,
+  strength claim, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Review closed; current-scope acceptance and next exact execution decision is
+current next.
+
 ## 2026-07-18 — DR-0163 — Exact P8 Linear Greedy Decision Implemented
 
 Decision:

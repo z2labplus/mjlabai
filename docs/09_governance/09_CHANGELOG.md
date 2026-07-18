@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.79
+
+- Reviewed commit `475997a` against the exact `12AQ` approval in `12AR`.
+- Decision: `A. Review can close.` No blocker or code/test fix is required.
+- Confirmed fixed model/probes/provenance, helper reuse, action values, tie
+  behavior, frozen diagnostics, errors, exports, warnings and forbidden scope.
+- Validation passed: 11 decision tests, 125 approved regressions, compile/diff
+  checks and independent numerical/adversarial probes.
+- New `10_NEXT` first item must directly accept/reject this scope and approve
+  or defer one exact one-step policy-improvement closed-loop outcome.
+- No production code, test, environment/gameplay, self-play, production
+  evaluation, real/external/platform data, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.78
 
 - Implemented the exact `12AQ` synthetic/local linear-model inference and
