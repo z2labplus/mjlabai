@@ -28,13 +28,13 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7/P8 exact implementation review of the completed `04O`-approved first
-environment-backed parameter training. It uses 54 seed-0 train and 64 seed-1
-evaluation public decisions from the bundled rule policy, exact
-630-feature/87-action masked cross-entropy and 16 full-batch gradient steps.
-The executable result reproduces lower train/eval loss, higher held-out
-imitation accuracy and nonzero parameter deltas. Nothing is persisted. This
-is not production training or strength evidence.
+P7/P8 direct implementation of the exact `04P`-approved held-out seed-2
+before/after trained-imitation-policy MahJax round. `04P` review-closes the
+first environment-backed parameter training after 346 passing tests. An
+independent probe shows both parameter sets terminate legally on seed 2 and
+produce different 88/94-step traces. The next code must preserve private
+in-memory-only parameters and authoritative legal masking. This is not
+production training, self-play/RL or strength evidence.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

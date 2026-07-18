@@ -82,6 +82,16 @@
 | Tiny imitation improvement is mistaken for model strength. | Evidence / Scope | Critical | High | Frozen evidence grade and warnings deny production, policy-quality, Tenhou, stable-dan, LuckyJ and promotion claims. | Open |
 | Review starts another documentation chain. | Governance / Delivery | High | Medium | Exactly one implementation review is next; closure must directly approve/defer material execution or record a genuine blocker. | Mitigated |
 
+## 2026-07-18 — P7/P8 held-out trained-policy round approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Parameter handoff becomes persistence or a public artifact API. | Governance / Scope | High | Medium | Private in-process helper only; public training API remains summary-only and source tests forbid path/save/load behavior. | Open |
+| Rollout leaks training/evaluation seed behavior. | Research / Leakage | High | Low | Use exact held-out seed 2, distinct from train 0 and evaluation-label 1; pin all three identities. | Open |
+| Trained logits bypass authoritative legality. | Engineering / Correctness | Critical | Low | Mask all 87 scores and record/recheck the complete legal tuple before every environment step. | Open |
+| Changed trajectory is mistaken for improved strength. | Evidence / Scope | Critical | High | Report behavior change only; warnings deny quality, reward, ranking, Tenhou, stable-dan and LuckyJ claims. | Open |
+| Another planning chain delays the approved round. | Governance / Delivery | High | Medium | `04P` leaves zero gates and `10_NEXT` requires direct implementation. | Mitigated |
+
 ## 2026-07-18 — P8 bounded policy-improvement sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

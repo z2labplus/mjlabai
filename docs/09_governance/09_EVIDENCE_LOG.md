@@ -8,6 +8,18 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — First imitation training review and held-out-use probe
+
+- Type: exact implementation-review closure, current-scope acceptance and
+  direct held-out environment-use task approval evidence.
+- `04P` records `A. Review can close`; 10 focused and all 346 tests pass with
+  two existing skips, plus compile/dependency/diff checks.
+- Independent seed-2 probe: untrained 88 transitions versus trained 94;
+  both terminate without truncation, every action is legal, global scores are
+  `(250,250,250,250)`, and action traces differ.
+- Evidence grade: P7/P8 local imitation-training review and exact held-out-use
+  approval only; not policy quality, self-play/RL, production or strength.
+
 ### 2026-07-18 — First environment-backed imitation gradient training smoke
 
 - Type: executable P7/P8 local in-memory parameter-training smoke evidence.

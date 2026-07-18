@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.04
+
+- Added `04P`; reviewed commit `1ae9755` against exact `04O` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed exact two-seed collection, legal labels, public features, 16
+  deterministic masked-gradient updates, metrics, frozen output and scope.
+- Validation passed: 10 focused and all 346 tests with two skips; compile,
+  dependency, diff and independent numeric/determinism probes pass.
+- Independent seed-2 environment probe shows initial/trained policies both
+  terminate legally and produce different 88/94-step traces. Directly approved
+  that private in-memory parameter-to-environment round next. No persistence,
+  reward/RL, self-play learning, real data, strength or P9-P12 work was added.
+
 ## 2026-07-18 - v4.03
 
 - Implemented the exact `04O` P7/P8 MahJax bundled-rule-policy imitation

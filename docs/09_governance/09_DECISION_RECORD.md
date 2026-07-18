@@ -42,6 +42,35 @@ Status:
 
 Implemented; exact training-smoke review is current next.
 
+## 2026-07-18 — DR-0189 — Close First Training Review And Approve Held-Out Use
+
+Decision:
+
+```text
+A. Review can close.
+Accept the exact `04O` training and directly approve the exact `04P` seed-2
+before/after trained-policy environment round with zero gates before code.
+```
+
+Rationale and evidence:
+
+- `1ae9755` conforms and all 346 tests pass with two existing skips.
+- Independent seed-2 probing shows both initial and trained parameter sets
+  terminate legally, while trajectories differ (88 versus 94 transitions).
+- A private in-memory parameter handoff is the smallest material next proof;
+  another interface or planning document is not justified.
+
+Consequences:
+
+- Exact `04P` files/API/seed/outcomes/tests are directly executable.
+- Public training summary behavior remains unchanged and no artifact may be
+  saved or loaded.
+- No reward/RL, production self-play/evaluation or strength claim is approved.
+
+Status:
+
+Approved; direct held-out trained-policy round implementation is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

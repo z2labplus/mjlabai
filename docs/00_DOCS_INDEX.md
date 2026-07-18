@@ -130,6 +130,13 @@ deterministic full-batch masked-cross-entropy gradient updates. It returns a
 frozen summary only. One exact implementation review is next; this is local
 training-smoke evidence, not production training or strength evidence.
 
+`docs/04_rl_selfplay/04P_P7_P8_MAHJAX_IMITATION_TRAINING_IMPLEMENTATION_REVIEW.md`
+reviews commit `1ae9755`, records `A. Review can close`, accepts the exact
+training smoke and directly approves one seed-2 before/after trained-policy
+environment round with private in-memory parameter handoff and zero gates
+before code. It is implementation-review/task-approval evidence only, not
+policy-quality, production training, self-play or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
