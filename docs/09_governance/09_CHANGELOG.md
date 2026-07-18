@@ -1,5 +1,21 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.69
+
+- Implemented the exact `12AK` fixed two-pass synthetic/local policy-table
+  update sequence smoke.
+- Added the approved sequence module and 11 focused tests, and exported the
+  four approved public symbols through `mjlabai.rl`.
+- Reused the reviewed table helper explicitly twice; enforced pass-state
+  continuity, eight distinct IDs, frozen outputs, error chains and warnings.
+- Validation passed: 11 sequence tests, 90 approved regressions, compile checks
+  and `git diff --check`.
+- New `10_NEXT` first item is one exact implementation review; no sibling
+  boundary or proposal may intervene.
+- No third pass, variable epoch/trainer, persistence, environment, self-play,
+  model/optimizer, production training/evaluation, real/external/platform data,
+  broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.68
 
 - Accepted the exact `12AI`/`12AJ` fixed table update as current-scope complete

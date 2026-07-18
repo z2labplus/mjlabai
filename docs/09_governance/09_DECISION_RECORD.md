@@ -14,6 +14,36 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0154 — Exact P8 Two-Pass Table Sequence Implemented
+
+Decision:
+
+```text
+Implement the exact `12AK` fixed two-pass synthetic/local policy-table update
+sequence smoke and advance to code review.
+```
+
+Rationale and evidence:
+
+- The task had zero remaining approval gates and fixed three exact source/test
+  files plus direct governance synchronization.
+- The implementation calls the reviewed table helper exactly twice and adds no
+  duplicate numerical or table-update logic.
+- Eleven sequence tests plus 90 previously approved tests pass; compile and
+  diff checks pass.
+
+Consequences:
+
+- The sequence provides executable repeated parameter-state continuity smoke
+  evidence without becoming a variable epoch, trainer or model.
+- The next task is one exact implementation review against `12AK`.
+- No environment, self-play, model, production training/evaluation, real data,
+  strength claim, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Implementation complete; exact code review is current next.
+
 ## 2026-07-18 — DR-0153 — Fixed Policy-Table Acceptance And Two-Pass Approval
 
 Decision:

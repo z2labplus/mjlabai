@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 fixed two-pass policy-table sequence implementation
+
+- Type: internal executable synthetic/local repeated table-state smoke evidence.
+- Added only the `12AK`-approved sequence module, exports, focused tests and
+  direct governance synchronization.
+- The helper calls the reviewed table updater exactly twice, carries the first
+  final state into the second pass and rejects duplicate IDs across both
+  traces.
+- Validation: 11 sequence tests and 90 approved regressions passed; compile
+  and diff checks passed.
+- Evidence grade: P8 synthetic/local fixed two-pass policy-table update
+  sequence smoke evidence only; implementation review remains next. This is
+  not a variable trainer, persistent policy/model/checkpoint, environment,
+  self-play, production training, model-strength, Tenhou, stable-dan, LuckyJ,
+  candidate-promotion or P9-P12 evidence.
+
 ### 2026-07-18 — P8 fixed-table acceptance and two-pass approval
 
 - Type: internal current-scope acceptance / exact executable-task approval

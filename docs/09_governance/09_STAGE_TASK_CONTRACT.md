@@ -3,7 +3,7 @@
 ## Current stage
 
 P8 exact minimal synthetic/local fixed two-pass policy-table update sequence
-smoke implementation.
+smoke implementation review.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -96,8 +96,9 @@ approved module/export/test files and 90 approved tests pass. The current first
 task is now current-scope acceptance after `12AJ` records `A. Review can close`
 with no blocker. `12AK` accepts that exact scope as current-scope complete and
 directly approves one fixed two-pass table-update sequence that reuses the
-table helper. The current first task is direct implementation; no sibling
-boundary, proposal, review or approval may precede it.
+table helper. That exact implementation is complete in the approved module/
+export/test files and 101 approved tests pass. The current first task is one
+exact code review; no sibling boundary, proposal or approval may precede it.
 Production code
 outside that exact approval, fixtures, data files, manifest schemas/loaders/
 artifacts, source approval,
@@ -418,8 +419,8 @@ P8 exact interleaved trace scope = accepted as current-scope complete in `12AI`
 P8 exact fixed two-key policy-value table update smoke = implemented in the three `12AI`-approved files; 90 tests pass
 P8 exact fixed policy-table implementation review = closed in `12AJ`; no blocker
 P8 exact fixed policy-table scope = accepted as current-scope complete in `12AK`
-P8 exact fixed two-pass policy-table update sequence = directly approved in `12AK`; zero gates remain before code
-Next = implement the exact `12AK` sequence task; no sibling boundary chain
+P8 exact fixed two-pass policy-table update sequence = implemented in the three `12AK`-approved files; 101 tests pass
+Next = review the exact `12AK` sequence implementation; no sibling boundary chain
 ```
 
 ## AI role
@@ -428,10 +429,11 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Implement the exact `12AK`-approved fixed two-pass policy-table update sequence
-smoke. Reuse the reviewed table helper explicitly twice, carry pass 1 finals
-into pass 2, reject duplicate IDs across both traces and add only the approved
-module, export and focused tests. Broad P8, source/real-data work,
+Review the exact `12AK`-approved fixed two-pass policy-table update sequence
+implementation. Confirm two explicit table-helper calls, pass continuity,
+eight distinct IDs, frozen outputs, error chains, exports, warnings and 101
+passing tests; modify code/tests only if a genuine blocker is found. Broad P8,
+source/real-data work,
 datasets, production training/evaluation, self-play/league, model/artifact use,
 model-output integration, CLI, P9-P12 and strength claims remain unapproved.
 
