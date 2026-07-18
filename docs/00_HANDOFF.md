@@ -27,16 +27,16 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is the exact implementation review of the `04W`-approved
-MahJax categorical-MLP two-round sequential all-project training smoke. Exact
-seeds `(1,3)` complete legal 77/84-step rounds, then apply two actor-indexed
-`0.01` updates with direct shared-parameter continuity. Both objectives decrease,
-all four final parameter groups change and post-update seed-3 replay remains
-identical. The existing public seed-1 result is unchanged. Nine new focused,
-nine old focused and all 422 explicit tests pass with two skips. One code
-review is next, not another planning chain. This is bounded local repeated-
-update evidence, not production self-play/evaluation, improvement or strength
-evidence:
+Current active stage is direct implementation of the exact `04X`-approved
+MahJax categorical-MLP five-round training plus fixed mixed-policy evaluation
+smoke. `04X` review-closes commit `9cfdb4d`; all 422 explicit tests pass with
+two skips. The next code carries five exact all-project raw-outcome updates,
+then compares initial/trained project seat 0 against fixed rule seats on 16
+disjoint seeds without evaluation updates. The probe finds degradation:
+project raw sum `-320->-454`, with seed 32 changing `+74->-60`. This task will
+record that failure honestly, not claim improvement. Zero planning gates
+remain. It is bounded local training/evaluation diagnostic evidence, not
+production evaluation or strength evidence:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

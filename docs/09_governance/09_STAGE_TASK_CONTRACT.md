@@ -2,12 +2,12 @@
 
 ## Current stage
 
-P8 exact implementation review of the `04W`-approved categorical-MLP two-round
-sequential all-project training smoke. Exact seeds `(1,3)` produce legal 77/84-
-step nonzero rounds; two actor-indexed `0.01` updates carry shared arrays
-directly and change all four final parameter groups. Nine new focused, nine old
-focused and all 422 explicit tests pass with two skips. One code review is next;
-another proposal/boundary is forbidden.
+P8 direct implementation of the exact `04X`-approved categorical-MLP five-round
+all-project training plus disjoint fixed mixed-policy evaluation smoke. `04X`
+review-closes commit `9cfdb4d` with all 422 explicit tests passing. Exact train
+seeds `(1,3,5,7,11)` and evaluation seeds `20..35` are fixed; the probe records
+project raw regression `-320->-454` and seed-32 `+74->-60`. Zero planning gates
+remain before code; another proposal/boundary is forbidden.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -587,6 +587,5 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04W` categorical-MLP two-round sequential all-project-seat
-training implementation. Change code/tests only for a blocker; closure must
-directly approve/defer bounded multi-round training plus fixed evaluation.
+Implement the exact `04X` categorical-MLP five-round training and fixed mixed-
+policy evaluation smoke. No proposal, boundary or review before code.

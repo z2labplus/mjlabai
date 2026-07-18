@@ -9,6 +9,17 @@
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
 
+## 2026-07-18 — P8 five-round training/fixed-evaluation approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Training consumes or adapts to evaluation seeds. | Evaluation / Leakage | Critical | Low | Exact train `(1,3,5,7,11)` and evaluation `20..35` tuples are disjoint; no evaluation result enters an update. | Open |
+| Before/after mixed rounds use different rule/environment RNG. | Evaluation / Correctness | Critical | Low | Reinitialize each model with the exact same seed split and fixed rule policy; pin traces/scores/rewards. | Open |
+| Evaluation regression is hidden behind training-objective decreases. | Research / Integrity | Critical | Realized | Public result/tests pin `-320->-454`, positive/negative counts and seed-32 `+74->-60`; warnings call it regression. | Mitigated |
+| Tiny 16-round diagnostic is overclaimed as robust degradation or strength. | Evidence / Statistics | High | High | Classify only bounded failure diagnostic; no uncertainty/ranking/stable-dan claim. | Open |
+| Evaluation path accidentally updates parameters. | ML / Leakage | Critical | Low | Evaluation helper accepts frozen arrays and contains no gradient/update; source tests pin separation. | Open |
+| Known regression is followed by scale-up before algorithm diagnosis. | Governance / Research | High | Medium | After implementation/review, next task must analyze/compare a bounded variance-control update, not increase rounds blindly. | Open |
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

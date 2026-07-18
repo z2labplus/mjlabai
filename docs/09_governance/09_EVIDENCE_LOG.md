@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — Two-round review and fixed-evaluation regression probe
+
+- Type: exact code-review closure plus bounded five-update/fixed-evaluation
+  failure-diagnostic task approval evidence.
+- `04X` records `A. Review can close`; nine new focused, nine prior focused and
+  all 422 explicit tests pass with two skips plus compile/dependency/diff/probes.
+- Training seeds `(1,3,5,7,11)` each have nonzero terminal outcomes and one
+  direct update. Disjoint evaluation seeds are `20..35` with project seat 0
+  versus three fixed rule seats and identical before/after environment/rule RNG.
+- Evaluation project raw sum regresses `-320->-454`; positive rounds `1->0`,
+  negative `8->9`, and only seed 32 changes, from `+74` to `-60`.
+- Evidence grade: bounded regression/failure probe and exact task approval only;
+  not production evaluation, improvement, model strength or promotion evidence.
+
 ### 2026-07-18 — Two sequential shared all-project raw-outcome updates
 
 - Type: executable P8 local repeated shared-policy parameter-continuity and

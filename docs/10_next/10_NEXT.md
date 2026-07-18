@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact MahJax categorical-MLP two-round sequential all-project-seat raw-outcome training smoke implementation.
+- [ ] Implement the exact MahJax categorical-MLP five-round all-project training and fixed mixed-policy evaluation smoke.
 
 Current execution charter:
 
@@ -22,20 +22,32 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the exact `04W` implementation and direct governance.
-- Verify the private seed generalization preserves the complete public `04V`
-  seed-1 result and no other reviewed behavior changes.
-- Verify exact ordered seeds `(1,3)`, two legal terminal rounds, two actor-
-  indexed updates, direct parameter carry and exact trajectories/outcomes.
-- Verify objective pairs, per-step/final deltas, fresh-versus-carried seed-3
-  objective and post-update-2 replay; output remains frozen and array-free.
-- Change code/tests only for a concrete blocker. On closure, directly approve
-  or defer one bounded multi-round training plus independent fixed-evaluation
-  task; another docs chain is forbidden.
-- No third round/update in this implementation, replay, persistence, external/
-  real data, production self-play/evaluation, strength or P9-P12.
+- Execute exact `04X` in its two approved source/test files plus governance.
+- Train exact ordered seeds `(1,3,5,7,11)` with five total reviewed actor-
+  indexed `0.01` updates and direct parameter continuity.
+- Evaluate initial/trained parameters without updates on disjoint seeds `20..35`:
+  greedy project seat 0 versus fixed bundled-rule seats `(1,2,3)` with identical
+  environment/rule RNG before/after.
+- Pin legal trajectories, outcomes/objectives/deltas, project rewards/scores,
+  changed seed `(32,)`, aggregate `-320->-454` and positive/negative counts.
+- Report this as evaluation regression/failure evidence, never improvement;
+  frozen summary/private arrays only.
+- No sixth update, reward/algorithm change, replay, persistence, external/real
+  data, production self-play/evaluation, strength or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `9cfdb4d` against exact `04W` approval in
+  `04X`. Decision: `A. Review can close.` Confirmed private seed refactor,
+  unchanged public seed-1 behavior, exact two-item loop, legal 77/84-step
+  trajectories, two actor-indexed updates, direct parameter continuity, exact
+  objectives/deltas/outcomes, frozen output and no I/O/replay. Nine new focused,
+  nine prior focused and all 422 explicit tests pass with two skips; compile,
+  dependency, diff and direct probes pass. Accepted the scope and directly
+  approved exact five-round training plus disjoint 16-seed fixed mixed-policy
+  evaluation. Probe finds a regression: project raw sum `-320->-454`, changed
+  seed `(32,)`, `+74->-60`. Zero gates remain before code. No strength claim,
+  production self-play/evaluation, real data or P9-P12 work was added.
 
 - [x] 2026-07-18 Implemented the exact `04W`-approved categorical-MLP two-
   round sequential all-project training smoke. The reviewed private rollout

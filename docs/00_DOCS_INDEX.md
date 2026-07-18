@@ -254,6 +254,13 @@ apply two direct actor-indexed updates with parameter continuity. One exact code
 review is next. This is bounded repeated-update evidence, not production self-
 play, evaluation, improvement or strength evidence.
 
+`docs/04_rl_selfplay/04X_P8_TWO_ROUND_ALL_PROJECT_TRAINING_IMPLEMENTATION_REVIEW.md`
+reviews commit `9cfdb4d`, records `A. Review can close`, accepts the two-round
+scope and directly approves five exact training updates followed by disjoint
+16-seed mixed-policy before/after evaluation. The probe records a performance
+regression rather than improvement. This is review/task-approval evidence, not
+production evaluation or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

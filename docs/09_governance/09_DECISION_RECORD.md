@@ -516,6 +516,37 @@ Status:
 
 Implemented; exact two-round all-project training review is current next.
 
+## 2026-07-18 — DR-0205 — Close Two-Round Review And Require Fixed Evaluation
+
+Decision:
+
+```text
+A. Review can close.
+Accept the exact `04W` sequence and directly approve the exact `04X` five-round
+training plus disjoint 16-seed mixed-policy before/after evaluation smoke.
+```
+
+Rationale and evidence:
+
+- `9cfdb4d` conforms and all 422 explicit tests pass with two skips.
+- The project now has correct repeated parameter continuity but no independent
+  evidence that raw-return updates improve behavior.
+- A bounded five-update/fixed-evaluation probe changes one evaluation trajectory
+  and worsens project raw sum `-320->-454`, exposing a high-variance failure.
+- Recording that failure before changing reward/algorithm is more informative
+  than adding another unmeasured training wrapper.
+
+Consequences:
+
+- Exact `04X` train/evaluation seeds, participants, metrics and regression are
+  directly executable with zero planning gates.
+- The regression is not statistically robust strength evidence and cannot guide
+  promotion; it must motivate bounded algorithm diagnosis after review.
+
+Status:
+
+Approved; direct five-round training/fixed-evaluation implementation is next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

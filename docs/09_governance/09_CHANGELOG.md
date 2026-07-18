@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.20
+
+- Added `04X`; reviewed commit `9cfdb4d` against exact `04W` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed private seed refactor regression, exact two rounds/updates, direct
+  parameter continuity, objectives/deltas/outcomes, frozen result and no I/O.
+- Validation passed: nine new focused, nine prior focused and all 422 explicit
+  tests with two skips; compile, dependency, diff and probes pass.
+- Five-update/disjoint-evaluation probe shows a regression: project raw sum
+  `-320->-454`, positive rounds `1->0`, negative `8->9`, changed seed 32
+  `+74->-60`. Directly approved recording this exact bounded experiment. No
+  production evaluation, real data, strength or P9-P12 work was added.
+
 ## 2026-07-18 - v4.19
 
 - Implemented the exact `04W` P8 categorical-MLP seeds `(1,3)` two-round
