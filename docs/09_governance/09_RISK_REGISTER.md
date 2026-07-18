@@ -104,6 +104,16 @@
 | Third-party package contents are copied into the repository. | Compliance / Repository | High | Low | Install only from pinned PyPI dependencies; prohibit vendoring source, wheels, binaries and artifacts. | Mitigated |
 | Dependency integration triggers another documentation chain instead of code. | Governance / Delivery | High | Medium | `04J` records zero gates and `10_NEXT` requires direct implementation. | Mitigated |
 
+## 2026-07-18 — P4 MahJax integration implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Pinned dependencies fail on the checked host. | Dependency / Platform | High | Medium | Exact user-site installation and import succeeded on CPython 3.9/macOS arm64; versions are asserted in code/tests. | Closed |
+| The smoke accidentally chooses an illegal action. | Environment / Correctness | High | Low | Selection enumerates only `True` entries from the public environment-owned mask and chooses its lowest index; deterministic result is pinned. | Mitigated |
+| Public observation or transition API drifts. | Dependency / Compatibility | High | Medium | Package/runtime versions and exact keys/identity/step behavior are asserted; any version change requires a new decision. | Mitigated |
+| One successful transition is mistaken for full rules conformance or self-play readiness. | Evidence / Scope | High | High | Frozen evidence grade/warnings and governance explicitly deny those claims; exact review and later conformance remain required. | Open |
+| JAX compilation cost is mistaken for training compute. | Evidence / Operations | Medium | Medium | The smoke executes only CPU initialization/observation/one transition; no optimizer, dataset, model or loop exists. | Mitigated |
+
 ## 2026-07-18 — P8 interleaved trace approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

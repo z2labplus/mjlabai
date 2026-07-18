@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P4 pinned MahJax integration implementation
+
+- Type: executable pinned third-party local environment integration evidence.
+- Installed exact `mahjax==0.1.2`, `jax==0.4.30`, `jaxlib==0.4.30` on the
+  checked CPython 3.9/macOS arm64 CPU host without vendoring artifacts.
+- Seed-0 result: initial player 2, step 0, 12 legal actions, selected lowest
+  action 2, public 12-key observation; next player 3, step 1, 13 legal actions,
+  four zero rewards, not terminated and not truncated.
+- Validation: 11 focused tests; all 302 repository tests OK with two existing
+  environment-gated skips; compile/diff and independent result probe pass.
+- Evidence grade: P4 pinned third-party local riichi environment integration
+  smoke evidence only; exact review remains next. Not full Tenhou-rule
+  conformance, self-play, training/evaluation, strength or P8-P12 evidence.
+
 ### 2026-07-18 — P4 proven environment integration-path selection
 
 - Type: external primary-source dependency evidence plus internal exact-task

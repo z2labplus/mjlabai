@@ -28,9 +28,9 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P4 direct MahJax `v0.1.2` local environment integration smoke implementation
-after `04J` accepted the exact transition scope, selected tag/commit/license,
-pinned the compatible JAX CPU runtime and fixed exact files/API/tests.
+P4 exact MahJax `v0.1.2` local environment integration smoke code review after
+the `04J` implementation pinned the compatible JAX CPU runtime, executed one
+public environment-owned legal transition and passed all 302 repository tests.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

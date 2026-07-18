@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.93
+
+- Installed and implemented the exact `04J`-approved MahJax `v0.1.2` local
+  environment integration smoke on CPython 3.9/macOS arm64 CPU.
+- Pinned MahJax/JAX/JAXLIB, added one frozen seven-symbol integration module,
+  package exports and 11 focused tests.
+- Seed 0 proves public init/observation, 12 authoritative legal actions,
+  lowest legal action 2 and one transition to step 1 with 13 next actions.
+- Validation passed: full 302-test repository run with two existing skips,
+  compile/diff checks and independent result probe.
+- New `10_NEXT` first item is one exact code review. No vendoring, real data,
+  Tenhou, model output, training, self-play, strength or P8-P12 work was added.
+
 ## 2026-07-18 - v3.92
 
 - Accepted the exact `04H`/`04I` synthetic transition scope as current-scope

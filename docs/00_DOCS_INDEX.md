@@ -54,6 +54,12 @@ tests and stop conditions with zero gates before executable integration. It is
 dependency-selection evidence only, not gameplay, self-play or strength
 evidence.
 
+The exact `04J` integration is implemented in
+`src/mjlabai/environment/mahjax_integration_smoke.py` with focused tests in
+`tests/environment/test_mahjax_integration_smoke.py`. It pins the package and
+JAX CPU runtime and executes one environment-owned legal transition. This is
+P4 local integration smoke evidence only; its exact code review is next.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

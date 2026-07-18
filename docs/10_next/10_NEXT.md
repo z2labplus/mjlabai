@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Install and implement the approved MahJax v0.1.2 local environment integration smoke.
+- [ ] Review the approved MahJax v0.1.2 local environment integration smoke implementation.
 
 Current execution charter:
 
@@ -22,19 +22,20 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Execute exactly `04J`: pin `mahjax==0.1.2`, `jax==0.4.30` and
-  `jaxlib==0.4.30`; add only the approved integration module, package export,
-  focused tests and direct governance synchronization.
-- Use public `mahjax.make("red_mahjong")`, `env.init`, environment-owned
-  `legal_action_mask`, `env.observe` and one legal `env.step` only.
-- Remain CPU-only/local/offline. Do not use GPU, remote services, real Tenhou,
-  platform data/accounts/automation, external logs, real haifu or model output.
-- Do not vendor third-party source/artifacts, broaden rules/action adapters,
-  train, run self-play/evaluation, claim strength, or enter broad P8/P9-P12.
-- Zero documentation/proposal gates remain before code. If pinned install or
-  API compatibility fails, record the exact blocker instead of changing pins.
+- Review commit implementing `04J` against only the exact package pins, files,
+  seven-symbol API, deterministic seed-0 diagnostics, public MahJax API,
+  one legal step, errors, warnings and twelve test requirements.
+- Re-run the focused integration tests, all repository tests, compile and diff
+  checks, plus one independent seed-0 result probe.
+- Fix only a concrete conformance/correctness blocker in the approved files;
+  otherwise do not modify production code or tests.
+- Do not add adapter/rules/conformance breadth, another docs chain, real data,
+  Tenhou/platform access, model output, training, self-play, evaluation,
+  strength claims, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Installed and implemented the exact `04J`-approved MahJax local environment integration smoke. Pinned `mahjax==0.1.2`, `jax==0.4.30` and `jaxlib==0.4.30` in `pyproject.toml`; added `src/mjlabai/environment/mahjax_integration_smoke.py`, exported its seven-symbol surface, and added 11 focused tests. On macOS arm64/CPython 3.9 seed 0, public `red_mahjong` initialization yields player 2, 12 environment-owned legal actions and lowest legal action 2; one public `env.step` advances step 0 to 1, player 2 to 3, exposes 13 next legal actions, returns four zero rewards and remains non-terminal/non-truncated. Focused and full validation pass: 302 repository tests OK with two existing environment-gated skips, compile and diff checks pass. No third-party source/artifact was vendored; no real data, Tenhou, model output, training, self-play, evaluation, strength claim, broad P8 or P9-P12 work was added. This is P4 pinned local integration smoke evidence only; one exact implementation review is next.
 
 - [x] 2026-07-18 Accepted the exact `04H` transition scope review-closed in `04I` and selected one proven environment integration path in `04J`: MahJax `v0.1.2`, commit `3f9cee1`, Apache-2.0. Primary sources confirm a maintained four-player red-riichi environment with public init/legal-mask/observe/step/reward/terminal surfaces; package and JAX pins are compatible with the checked CPython 3.9/macOS arm64 host. Rejected legacy `mjx` because its published macOS support excludes Apple Silicon and rejected `MahjongRepository/mahjong` because it is a hand/scoring calculator rather than an environment. The next exact task pins `mahjax==0.1.2`, `jax==0.4.30`, `jaxlib==0.4.30` and implements one CPU-only legal transition smoke in the exact approved files with zero gates before code. No dependency was installed and no code, real data, Tenhou, self-play, training, strength claim or P8-P12 work was added by this decision.
 

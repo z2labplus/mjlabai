@@ -2,8 +2,8 @@
 
 ## Current stage
 
-P4 direct MahJax `v0.1.2` local environment integration smoke implementation
-after `04J` accepted the exact transition scope and selected the pinned path.
+P4 exact MahJax `v0.1.2` local environment integration smoke code review after
+the `04J` implementation passed 302 repository tests and independent probing.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -583,5 +583,5 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Install and implement the exact `04J`-approved MahJax `v0.1.2` local CPU
-environment integration smoke. No proposal/review gate may intervene.
+Review the exact `04J`-approved MahJax `v0.1.2` local CPU integration smoke.
+Fix only a concrete blocker; no sibling boundary or proposal may intervene.

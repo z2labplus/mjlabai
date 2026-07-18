@@ -14,6 +14,36 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0178 — Implement Pinned MahJax Integration Smoke
+
+Decision:
+
+```text
+Implement the exact `04J` MahJax v0.1.2 local CPU integration smoke and
+advance directly to one exact code-review gate.
+```
+
+Rationale and evidence:
+
+- Exact package/JAX pins resolve and import on CPython 3.9/macOS arm64.
+- Seed 0 exposes a public observation and 12 environment-owned legal actions;
+  applying lowest action 2 advances the public state exactly once and exposes
+  13 legal actions for the next player without termination or truncation.
+- Eleven focused tests and all 302 repository tests pass with two existing
+  environment-gated skips; compile/diff and independent probe pass.
+
+Consequences:
+
+- P4 now has executable integration with a proven full riichi environment,
+  not only a project-authored transition contract.
+- The next task is one exact implementation review.
+- Full rule conformance, adapters, episodes, self-play, training, strength,
+  broad P8 and P9-P12 remain unapproved.
+
+Status:
+
+Implemented; exact integration code review is current next.
+
 ## 2026-07-18 — DR-0177 — Select MahJax P4 Integration Path
 
 Decision:
