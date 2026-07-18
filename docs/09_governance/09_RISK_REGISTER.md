@@ -39,6 +39,16 @@
 | Sequence smoke is overclaimed as a trainer or production training result. | Evidence / Scope | High | High | Fixed warnings and evidence grade explicitly exclude variable epoch/trainer, production training and strength claims. | Open |
 | Another docs chain delays the approved sequence. | Governance / Delivery | High | Medium | Direct implementation is complete; the next task is one exact code review, not another boundary/proposal chain. | Closed |
 
+## 2026-07-18 — P8 bounded tabular trainer approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Bounded trainer silently becomes unbounded production training. | Governance / Scope | High | Medium | Enforce exact tuple input and hard `1..8` pass count; forbid while loops, schedules, retry and early stopping. | Open |
+| Loop changes reviewed update semantics or loses table continuity. | Engineering / Correctness | High | Medium | Call the reviewed table helper once per ordered pass and feed each final table directly to the next pass. | Open |
+| Duplicate records across variable passes hide replay/reuse. | Engineering / Correctness | Medium | Medium | Flatten validated record IDs and require global pairwise uniqueness before returning success. | Open |
+| Trainer smoke is overclaimed as model/network or production training evidence. | Evidence / Scope | High | High | Warnings and evidence grade explicitly limit claims to bounded synthetic/local tabular loop smoke. | Open |
+| Another docs chain delays the approved trainer. | Governance / Delivery | High | Medium | `12AM` records zero remaining gates and puts direct implementation first in `10_NEXT`. | Mitigated |
+
 ## 2026-07-18 — P8 two-step sequence implementation review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

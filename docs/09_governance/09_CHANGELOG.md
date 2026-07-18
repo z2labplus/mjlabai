@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.71
+
+- Accepted the exact `12AK`/`12AL` two-pass sequence as current-scope complete
+  in `12AM`.
+- Directly approved the first bounded loop-based synthetic/local tabular
+  trainer smoke, with a hard maximum of eight ordered passes.
+- Fixed exact files, five-symbol API, inputs, state continuity, global ID
+  uniqueness, output, tests, stop conditions and evidence grade.
+- Set remaining mandatory gates before code to zero; `10_NEXT` now requires
+  direct trainer implementation.
+- No code, model/network, optimizer, environment, self-play, persistence,
+  real/external/platform data, production evaluation, broad P8 or P9-P12 work
+  was added in this decision.
+
 ## 2026-07-18 - v3.70
 
 - Reviewed commit `ea3fdd9` against the exact `12AK` approval in `12AL`.

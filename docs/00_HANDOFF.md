@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is acceptance of the exact P8 fixed two-pass sequence and
-direct approval/defer decision for one bounded synthetic/local tabular trainer:
+Current active stage is direct implementation of the exact bounded P8
+synthetic/local tabular trainer smoke approved by `12AM`:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -163,8 +163,8 @@ reuses the reviewed table helper twice. That implementation now exists in the
 three approved source/test files, carries pass state exactly and passes 11
 focused sequence tests plus 90 approved regressions. `12AL` reviews it, records
 `A. Review can close` and finds no blocker. The first `10_NEXT` item must
-approve or defer one bounded trainer with exact limits; a third fixed-pass
-wrapper or sibling boundary is forbidden.
+now implement the `12AM`-approved trainer over 1 through 8 ordered in-memory
+traces; zero gates remain before code and another docs gate is forbidden.
 Broad P8 entry, production
 training/evaluation, self-play, model/artifact use, real data, strength claims
 and P9-P12 remain unapproved.

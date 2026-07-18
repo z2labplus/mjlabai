@@ -69,6 +69,7 @@ docs/12_technical_plan/12AI_P8_INTERLEAVED_TRACE_ACCEPTANCE_AND_POLICY_TABLE_UPD
 docs/12_technical_plan/12AJ_P8_FIXED_POLICY_TABLE_UPDATE_SMOKE_IMPLEMENTATION_REVIEW.md
 docs/12_technical_plan/12AK_P8_POLICY_TABLE_ACCEPTANCE_AND_TWO_PASS_SEQUENCE_APPROVAL_DECISION.md
 docs/12_technical_plan/12AL_P8_TWO_PASS_POLICY_TABLE_SEQUENCE_IMPLEMENTATION_REVIEW.md
+docs/12_technical_plan/12AM_P8_TWO_PASS_ACCEPTANCE_AND_BOUNDED_TABULAR_TRAINER_APPROVAL_DECISION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -447,6 +448,14 @@ confirms exactly two helper calls, state continuity, eight distinct IDs,
 frozen output, errors, exports, warnings and forbidden-scope compliance, and
 reports 101 passing tests plus independent probes. It is review-closure
 evidence only, not production training, self-play, model-strength or P9-P12
+evidence.
+
+`docs/12_technical_plan/12AM_P8_TWO_PASS_ACCEPTANCE_AND_BOUNDED_TABULAR_TRAINER_APPROVAL_DECISION.md`
+accepts the review-closed two-pass sequence as current-scope complete and
+directly approves the first bounded loop-based synthetic/local tabular trainer
+smoke. It fixes a hard eight-pass cap, files, five-symbol API, inputs, output,
+tests and forbidden scope with zero gates before code. It is task-approval
+evidence only, not model/network training, self-play, strength or P9-P12
 evidence.
 
 ## Supervised-policy files

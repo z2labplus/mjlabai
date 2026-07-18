@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Decide whether to accept fixed two-pass scope and directly approve or defer exact bounded synthetic/local tabular trainer implementation.
+- [ ] Implement exact bounded P8 synthetic/local tabular trainer smoke only.
 
 Current execution charter:
 
@@ -22,19 +22,23 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Accept or reject only the exact `12AK` implementation reviewed and closed in
-  `12AL`.
-- Do not approve a third fixed-pass wrapper. Decide in this single gate whether
-  one exact bounded synthetic/local tabular trainer is safe and materially
-  progressive; if approved, bind exact pass limit, files, API, inputs, outputs,
-  tests, rollback, stop conditions and evidence grade with zero further gate
-  before code.
-- Do not modify production code/tests or add persistence, fixture/data, replay
-  buffer, path/CLI, dependency, environment/gameplay, self-play, model/network,
-  production evaluation, artifact, real/external/platform data, broad P8 or
-  P9-P12 in this decision.
+- This first loop-based training smoke is directly approved by `12AM`; do not
+  insert another proposal, boundary, review or approval task.
+- Create/modify only `src/mjlabai/rl/__init__.py`,
+  `src/mjlabai/rl/synthetic_tabular_trainer_smoke.py`,
+  `tests/rl/test_synthetic_tabular_trainer_smoke.py` and direct governance
+  synchronization.
+- Implement the exact five-symbol API, exact outer tuple, 1-through-8 pass
+  bound, ordered table-helper loop, continuity, global ID uniqueness, frozen
+  output, tests and evidence grade in `12AM`.
+- Do not add more than eight passes, while/unbounded loop, shuffle/minibatch/
+  retry/early-stop, persistence, fixture/data, replay/environment/self-play,
+  model/network/optimizer/checkpoint, production evaluation, path/CLI,
+  dependency, real/external/platform data, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Accepted the exact `12AK` implementation review-closed in `12AL` as current-scope complete and directly approved the first loop-based training smoke in `12AM`. The selected outcome is one deterministic standard-library in-memory synthetic/local tabular trainer over an exact tuple of 1 through 8 reviewed traces. It iterates in input order, calls the reviewed table helper once per pass, carries table state, rejects duplicate IDs globally and returns frozen training history. `12AM` fixes the only approved files, five-symbol API, hard pass cap, inputs, semantics, output, 11 test categories and evidence grade; zero gates remain before code. No code, test, unbounded loop, shuffle/minibatch, persistence, fixture/data, replay/environment/self-play, model/network/optimizer/checkpoint, production evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added in this decision. The next task is direct trainer implementation, not another docs gate.
 
 - [x] 2026-07-18 Reviewed commit `ea3fdd94536ddcd8cc762ae47f015fe24b5586a6` against the exact `12AK` approval in `12AL`. Decision: `A. Review can close.` Confirmed exact approved files/API, exact two-trace outer input, exactly two explicit table-helper calls, pass-state continuity, eight pairwise-distinct IDs, pass-indexed error chains, deterministic frozen initial/intermediate/final output, exports, warnings and forbidden-scope compliance. Eleven sequence tests and 90 approved regressions all pass; compile/diff checks and independent probes pass. No production code or test was modified and no blocker was found. The next decision must accept or reject this scope and directly approve or defer one non-repetitive executable outcome; a third fixed-pass wrapper is forbidden.
 

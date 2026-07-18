@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 two-pass acceptance and bounded trainer approval
+
+- Type: internal current-scope acceptance / exact bounded implementation
+  approval evidence.
+- Decision: the `12AK` implementation closed by `12AL` is `ACCEPTED as
+  current-scope complete` for its exact synthetic/local scope.
+- `12AM` directly approves the first loop-based trainer smoke with a hard
+  eight-pass cap; no docs gate remains before code.
+- Basis: 101 approved tests, compile/diff checks and independent probes pass;
+  `12AL` found no blocker.
+- Evidence grade: P8 bounded synthetic/local trainer-task approval evidence
+  only; not model/network training, environment, self-play, production
+  training, model-strength, Tenhou, stable-dan, LuckyJ or P9-P12 evidence.
+
 ### 2026-07-18 — P8 two-pass table sequence implementation review closure
 
 - Type: internal exact code-review closure evidence.

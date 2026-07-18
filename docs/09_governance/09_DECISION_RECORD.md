@@ -14,6 +14,36 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0156 — Two-Pass Acceptance And Bounded Trainer Approval
+
+Decision:
+
+```text
+ACCEPTED as current-scope complete.
+Approve direct implementation of one exact bounded synthetic/local tabular
+trainer smoke with 1 through 8 ordered passes.
+```
+
+Rationale and evidence:
+
+- `12AL` closed the two-pass review with no blocker and 101 passing tests.
+- A capped ordered loop is the smallest non-repetitive transition from fixed
+  sequences to executable training behavior.
+- Reusing the reviewed table helper preserves numerical and guardrail logic.
+- Anti-overdocumentation governance forbids another fixed-pass wrapper.
+
+Consequences:
+
+- Added `12AM` with exact hard cap, files, API, input, semantics, output,
+  tests, stop conditions and evidence grade.
+- Zero mandatory gates remain before trainer code.
+- No model/network, optimizer, environment, self-play, production training/
+  evaluation, real data, strength, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Two-pass scope accepted; bounded trainer implementation is current next.
+
 ## 2026-07-18 — DR-0155 — Exact P8 Two-Pass Sequence Review Closure
 
 Decision:
