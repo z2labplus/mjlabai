@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Decide current-scope acceptance and directly approve next exact executable P8 task after interleaved trace review closure.
+- [ ] Implement exact minimal P8 synthetic/local fixed two-key policy-value table update smoke only.
 
 Current execution charter:
 
@@ -22,18 +22,23 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Accept or reject only the exact `12AG` implementation reviewed and closed in
-  `12AH`.
-- If accepted, directly bind one materially progressive executable P8 task
-  with exact behavior, files, tests, rollback, stop conditions and evidence
-  grade. One decision gate remains before that code.
-- Do not add a sibling boundary/proposal or repeat the reviewed trace. Do not
-  modify production code/tests or add fixture/data, replay buffer, path/CLI,
-  dependency, environment/gameplay, self-play, model/optimizer, production
-  training/evaluation, artifact, real/external/platform data, broad P8 or
-  P9-P12 in this decision.
+- This implementation is directly approved by `12AI`; do not insert another
+  proposal, boundary, review or approval task.
+- Create/modify only `src/mjlabai/rl/__init__.py`,
+  `src/mjlabai/rl/synthetic_policy_table_update_smoke.py`,
+  `tests/rl/test_synthetic_policy_table_update_smoke.py` and direct
+  docs/governance synchronization.
+- Implement the exact five-symbol API, fixed two-entry table input, reviewed
+  four-record trace input, trace-helper reuse, frozen output, tests, rollback,
+  stop conditions and evidence grade in `12AI`.
+- Do not add variable tables/mappings, batch/epoch/trainer, persistence,
+  fixture/data, replay buffer, path/CLI, dependency, environment/gameplay,
+  self-play, model/optimizer, production training/evaluation, artifact,
+  real/external/platform data, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Accepted the exact `12AG` implementation review-closed in `12AH` as current-scope complete and directly approved the next executable task in `12AI`. The selected outcome is one deterministic standard-library fixed two-key in-memory policy-value table update smoke that reuses the reviewed four-record trace helper, validates exact table keys and initial values, and returns two normalized frozen final entries. `12AI` fixes the only approved source/test files, five-symbol API, exact inputs, semantics, frozen output, 11 test categories, rollback, stop conditions and evidence grade; zero mandatory gates remain before code. No code, test, fixture/data, persistence, replay buffer, environment, self-play, model/optimizer, production training/evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added in this decision. The next task is direct implementation, not another docs gate.
 
 - [x] 2026-07-18 Reviewed commit `97a22881cb798e0e020beb93b7ad5d92e996eaca` against the exact `12AG` approval in `12AH`. Decision: `A. Review can close.` Confirmed exact approved files and four-symbol API, top-level tuple/type/length rejection, pairwise-distinct IDs, shared canonical source, two distinct A/B/A/B keys, non-terminal/terminal order, independent exact continuity, four calls to the reviewed single-step helper, step-indexed error chains, deterministic immutable output, package exports, warnings and forbidden-scope compliance. Eleven trace tests, 10 sequence tests, 12 base tests and 46 approved P6/P7 regressions all pass; compile/diff checks and independent in-memory probes pass. No production code or test was modified and no blocker was found. The next task is current-scope acceptance plus direct approval of one materially progressive executable P8 task, not another sibling boundary.
 

@@ -19,6 +19,16 @@
 | Trace smoke is overclaimed as training, replay or model evidence. | Evidence / Scope | High | High | Exact warnings and governance grade it as four-record synthetic/local numerical smoke only. | Open |
 | Another docs chain delays the approved trace. | Governance / Delivery | High | Medium | Direct implementation is complete; the next task is one exact code review, not another boundary/proposal chain. | Closed |
 
+## 2026-07-18 — P8 fixed policy-table update approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Fixed two-entry table silently becomes a generic mutable policy store or persistence layer. | Governance / Scope | High | Medium | `12AI` permits only an exact two-entry tuple, immutable normalized outputs and no mapping, dynamic key count, mutation or persistence API. | Open |
+| Table updater duplicates or changes reviewed trace calculations. | Engineering / Correctness | High | Medium | Require exactly one call to the reviewed trace helper and test absence of duplicated formulas/trace logic. | Open |
+| Initial table state does not bind exactly to trace key/value state. | Engineering / Correctness | High | Medium | Validate A/B key order and exact initial values against the reviewed trace result before constructing final entries. | Open |
+| Table smoke is overclaimed as a model, checkpoint or training result. | Evidence / Scope | High | High | Fixed warnings and evidence grade explicitly exclude persistent policy/model/checkpoint, training and strength claims. | Open |
+| Another docs chain delays the approved table implementation. | Governance / Delivery | High | Medium | `12AI` records zero remaining gates and puts direct implementation first in `10_NEXT`. | Mitigated |
+
 ## 2026-07-18 — P8 two-step sequence implementation review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

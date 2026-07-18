@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 interleaved-trace acceptance and policy-table approval
+
+- Type: internal current-scope acceptance / exact executable-task approval
+  evidence.
+- Decision: the `12AG` implementation closed by `12AH` is `ACCEPTED as
+  current-scope complete` for its exact synthetic/local numerical scope.
+- `12AI` directly approves one fixed two-key in-memory policy-value table
+  update smoke; no docs gate remains before code.
+- Basis: 79 approved tests, compile/diff checks and independent adversarial
+  probes pass; `12AH` found no blocker.
+- Evidence grade: P8 exact interleaved-trace acceptance and table-update task
+  approval evidence only; not environment, self-play, production training,
+  model-strength, Tenhou, stable-dan, LuckyJ, candidate-promotion or P9-P12
+  evidence.
+
 ### 2026-07-18 — P8 interleaved trace implementation review closure
 
 - Type: internal exact code-review closure evidence.

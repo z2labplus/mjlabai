@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.65
+
+- Accepted the exact `12AG`/`12AH` interleaved trace as current-scope complete
+  in `12AI`.
+- Directly approved one fixed two-key in-memory policy-value table update smoke
+  as the next executable task.
+- Fixed exact files, five-symbol API, table/trace inputs, helper reuse, frozen
+  output, 11 test categories, rollback, stop conditions and evidence grade.
+- Set the remaining mandatory gate count before code to zero; new `10_NEXT`
+  first item is direct table-update implementation.
+- No code, test, fixture/data, persistence, replay buffer, environment,
+  self-play, model, production training/evaluation, real/external/platform
+  data, broad P8 or P9-P12 work was added in this decision.
+
 ## 2026-07-18 - v3.64
 
 - Reviewed commit `97a2288` against the exact `12AG` approval in `12AH`.

@@ -14,6 +14,38 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0150 — Interleaved Trace Acceptance And Policy-Table Approval
+
+Decision:
+
+```text
+ACCEPTED as current-scope complete.
+Approve direct implementation of one exact fixed two-key synthetic/local
+policy-value table update smoke.
+```
+
+Rationale and evidence:
+
+- `12AH` closed the exact interleaved-trace review with no blocker and 79
+  passing tests.
+- A fixed two-key table state transition is materially more useful than adding
+  more trace records and remains far narrower than a trainer or model.
+- Reusing the trace helper preserves the reviewed numerical behavior and
+  avoids duplicated formulas.
+- Anti-overdocumentation governance requires direct execution now.
+
+Consequences:
+
+- Added `12AI` with exact files, API, inputs, semantics, output, tests,
+  rollback, stop conditions and evidence grade.
+- Zero mandatory gates remain before the exact table-update implementation.
+- No broad P8, environment, self-play, model, production training/evaluation,
+  real data, strength or P9-P12 approval follows.
+
+Status:
+
+Interleaved trace accepted; exact policy-table implementation is current next.
+
 ## 2026-07-18 — DR-0149 — Exact P8 Interleaved Trace Review Closure
 
 Decision:
