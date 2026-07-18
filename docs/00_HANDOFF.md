@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is the one exact implementation review of the completed
-`04H`-approved P4 synthetic/local environment transition prerequisite:
+Current active stage is P4 transition current-scope acceptance plus selection
+or rejection of one proven local riichi Mahjong environment integration path:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

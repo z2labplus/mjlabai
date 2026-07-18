@@ -2,8 +2,8 @@
 
 ## Current stage
 
-P4 exact single-transition synthetic/local environment-contract implementation
-review after the approved code and tests completed successfully.
+P4 single-transition current-scope acceptance and proven local riichi Mahjong
+environment integration-path decision after `04I` review closure.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition

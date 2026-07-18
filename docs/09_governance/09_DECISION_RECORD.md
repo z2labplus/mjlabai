@@ -14,6 +14,36 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0176 — Exact P4 Transition Review Closure
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Rationale and evidence:
+
+- Commit `897bfd3` conforms to every exact `04H` API, action, state, legality,
+  provenance, post-state and test rule.
+- All 291 explicit tests are OK with two environment-gated skips; compile/diff
+  checks and independent all-seat/action probes pass.
+- No correctness, scope, provenance, evidence or test blocker was found.
+
+Consequences:
+
+- Added `04I` as the one exact implementation review.
+- Another authored transition wrapper is forbidden. The next decision must
+  select or reject one proven local riichi Mahjong environment integration
+  path from primary-source, license and installability evidence.
+- No full engine, production self-play/evaluation, real data, Tenhou,
+  strength claim, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Review closed; P4 current-scope acceptance and integration-path decision is
+current next.
+
 ## 2026-07-18 — DR-0175 — Exact P4 Environment Transition Implemented
 
 Decision:

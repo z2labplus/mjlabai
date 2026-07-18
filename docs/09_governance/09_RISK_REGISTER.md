@@ -85,6 +85,15 @@
 | Passing smoke is overclaimed as gameplay/self-play/strength evidence. | Evidence / Scope | High | High | Fixed warnings and governance grade only P4 single-transition contract evidence. | Open |
 | A new docs chain follows successful implementation. | Governance / Delivery | High | Medium | The next task is one exact code review, followed by a material P4 implementation or dependency decision. | Mitigated |
 
+## 2026-07-18 — P4 transition implementation review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Review closure is mistaken for a real rules engine or gameplay evidence. | Evidence / Scope | High | High | `04I` grades only exact single-transition contract review closure and denies those claims. | Open |
+| Successful review creates another authored transition wrapper. | Governance / Delivery | High | High | `10_NEXT` bans another wrapper and requires a proven-engine integration decision. | Mitigated |
+| External environment selection ignores license/version/platform viability. | Dependency / Compliance | High | Medium | Next decision must use primary sources and record identity, license, version, compatibility and installability before approval. | Open |
+| A broad dependency is installed before exact approval. | Dependency / Scope | Medium | Medium | Current decision forbids install/implementation and must pin an exact integration smoke first. | Mitigated |
+
 ## 2026-07-18 — P8 interleaved trace approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

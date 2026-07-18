@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review exact minimal P4 synthetic/local environment transition smoke implementation.
+- [ ] Decide P4 current-scope acceptance and select or reject one proven local riichi Mahjong environment integration path.
 
 Current execution charter:
 
@@ -22,19 +22,22 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the exact `04H` implementation commit against its files,
-  eight-symbol API, exact action/state/result, strict matching, provenance,
-  deterministic post-state, errors, warnings and tests.
-- Independently probe both legal actions from all four seats, action-ID
-  exclusion, strict field rejection, red token preservation, non-mutation and
-  forbidden surface. Run twelve focused tests, all repository regressions,
-  compile checks and `git diff --check`.
-- Do not modify production code/tests unless a concrete blocker is proven.
-  Do not add another boundary/proposal or expand into a full Mahjong engine,
-  multi-step episode, rules/scoring/hidden-state/RNG, model/reward/training/
-  self-play/evaluation, dependency, real data, broad P8 or P9-P12 work.
+- Accept or reject only the exact `04H` implementation review-closed in `04I`;
+  do not re-review or modify its production code/tests.
+- Inspect current primary sources for proven local/offline riichi Mahjong
+  environment or rules implementations. Verify source identity, license,
+  latest usable version/tag, Python/platform compatibility, installability,
+  legal-action/state-transition/observation interface and maintenance status.
+- Select exactly one integration-smoke path with pinned source/version/license,
+  exact files/API/tests and zero gates before code, or record a concrete
+  blocker and next lowest-cost resolution. No proposal chain may intervene.
+- Do not install or implement in this decision. Do not use real Tenhou/
+  platform data, accounts or automation; do not train/run production self-play,
+  make strength claims, or enter broad P8/P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `897bfd3` against the exact `04H` approval in `04I`. Decision: `A. Review can close.` Confirmed exact eight-symbol API, frozen action/state/result, fixed environment/ruleset/version/provenance, two authoritative legal actions, strict actor/type/tile/tsumogiri matching with action-ID exclusion, applied legal identity, deterministic event, immutable terminal next-seat state, errors, warnings and forbidden scope. Twelve focused tests and the full explicit 291-test repository run pass with two environment-gated skips; compile/diff checks and independent both-action/all-seat probes pass. No production code/test change or blocker was required. The next decision must accept/reject this scope and select or reject one proven local riichi Mahjong environment integration path from primary-source/license/installability evidence; another authored transition wrapper or docs chain is forbidden.
 
 - [x] 2026-07-18 Implemented the exact `04H`-approved minimal P4 synthetic/local environment transition smoke. Added `src/mjlabai/environment/__init__.py`, `src/mjlabai/environment/synthetic_transition_smoke.py` and `tests/environment/test_synthetic_transition_smoke.py`. The frozen helper validates one fixed four-seat state with exactly two authoritative strict `dahai` legal actions, matches actor/type/tile/tsumogiri while excluding audit action ID, selects the authoritative legal action and returns one deterministic immutable terminal post-state with next-seat and provenance continuity. Twelve focused tests pass; the full explicit repository run reports 291 tests OK with two environment-gated skips, and compile/diff checks plus independent all-seat/action probes pass. No full Mahjong rules/legal-action/scoring engine, hand/tile ownership, hidden-state/RNG, multi-step episode, model/reward/training/self-play/evaluation, persistence, dependency, real data, Tenhou, broad P8 or P9-P12 work was added. This is single-transition P4 contract smoke evidence only, not gameplay or strength evidence. The next task is one exact implementation review, not another boundary chain.
 

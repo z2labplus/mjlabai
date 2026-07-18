@@ -38,6 +38,14 @@ strict-`dahai` synthetic/local environment-contract smoke with zero gates
 before code. It is task-approval evidence only, not a complete Mahjong
 environment, self-play, strength or P9-P12 evidence.
 
+`docs/04_rl_selfplay/04I_P4_SYNTHETIC_ENVIRONMENT_TRANSITION_IMPLEMENTATION_REVIEW.md`
+reviews commit `897bfd3`, records `A. Review can close`, confirms exact strict
+action/state/legality/post-state/provenance behavior and 291 explicit tests,
+and requires the next task to select or reject a proven local riichi Mahjong
+environment integration path rather than add another authored wrapper. It is
+P4 single-transition review evidence only, not gameplay/self-play or strength
+evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

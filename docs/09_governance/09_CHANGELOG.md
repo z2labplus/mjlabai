@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.91
+
+- Reviewed commit `897bfd3` against the exact `04H` approval in `04I`.
+- Decision: `A. Review can close.` No blocker or code/test fix is required.
+- Confirmed strict action/state authority, action-ID exclusion, deterministic
+  event/post-state, provenance, frozen diagnostics and forbidden scope.
+- Validation passed: 12 focused tests; full explicit repository run 291 OK
+  with two environment-gated skips; compile/diff and all-seat/action probes.
+- New `10_NEXT` first item must select/reject one proven local riichi Mahjong
+  environment integration path; another authored transition wrapper is banned.
+- No full engine, episode, self-play, real data, Tenhou, strength claim, broad
+  P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.90
 
 - Implemented the exact `04H` single-transition P4 synthetic/local environment

@@ -8,6 +8,18 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P4 synthetic environment transition review closure
+
+- Type: internal exact code-review closure evidence.
+- Added `04I`; decision: `A. Review can close.`
+- Evidence: exact `04H` API/action/state/strict-match/provenance/event/post-
+  state/error/test and forbidden-scope compliance, 291 explicit tests OK with
+  two environment-gated skips, compile/diff and all-seat/action probes.
+- No production code or test was modified and no blocker was found.
+- Evidence grade: P4 exact single-transition synthetic/local environment-
+  contract review closure evidence only; not a rules/scoring engine, gameplay,
+  self-play, strength or P9-P12 evidence.
+
 ### 2026-07-18 — P4 synthetic environment transition implementation
 
 - Type: internal executable single-transition environment-contract smoke
