@@ -14,6 +14,38 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0170 — Exact P8 Bounded Sequence Review Closure
+
+Decision:
+
+```text
+A. Review can close after blocker fix.
+```
+
+Rationale and evidence:
+
+- Initial review found two explicit step traversals, violating the exact
+  single bounded traversal required by `12AU`.
+- Commit `8897793` performs validation, global identity checking, reviewed
+  one-step execution and model carry in one loop and adds AST coverage.
+- All 267 explicit tests are OK with two environment-gated skips; compile/diff
+  checks and independent one/two/four-step probes pass.
+- No correctness, scope, provenance, evidence or test blocker remains.
+
+Consequences:
+
+- Added `12AV` as the one exact implementation review.
+- The next decision must accept/reject this scope and directly approve or
+  defer one bounded two-policy alternating interaction; another single-policy
+  wrapper or boundary chain is forbidden.
+- No general environment, production self-play/evaluation, real data,
+  strength claim, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Review closed after exact fix; current-scope acceptance and next exact
+execution decision is current next.
+
 ## 2026-07-18 — DR-0169 — Exact P8 Bounded Sequence Implemented
 
 Decision:

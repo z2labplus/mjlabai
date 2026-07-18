@@ -78,6 +78,7 @@ docs/12_technical_plan/12AR_P8_LINEAR_GREEDY_DECISION_IMPLEMENTATION_REVIEW.md
 docs/12_technical_plan/12AS_P8_GREEDY_DECISION_ACCEPTANCE_AND_ONE_STEP_POLICY_IMPROVEMENT_APPROVAL.md
 docs/12_technical_plan/12AT_P8_ONE_STEP_POLICY_IMPROVEMENT_IMPLEMENTATION_REVIEW.md
 docs/12_technical_plan/12AU_P8_ONE_STEP_ACCEPTANCE_AND_BOUNDED_POLICY_IMPROVEMENT_SEQUENCE_APPROVAL.md
+docs/12_technical_plan/12AV_P8_BOUNDED_POLICY_IMPROVEMENT_SEQUENCE_IMPLEMENTATION_REVIEW.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -530,6 +531,13 @@ improvement sequence. It fixes step input, helper reuse, model continuity,
 global identity, output, tests and forbidden scope with zero gates before code.
 It is task-approval evidence only, not a general environment, self-play,
 production evaluation, policy-quality, strength or P9-P12 evidence.
+
+`docs/12_technical_plan/12AV_P8_BOUNDED_POLICY_IMPROVEMENT_SEQUENCE_IMPLEMENTATION_REVIEW.md`
+reviews commits `338de0a` and `8897793`, records the initial double-traversal
+blocker and exact single-pass fix, then closes the review after 267 explicit
+tests, compile/diff checks and independent 1/2/4-step probes. It is bounded
+synthetic/local sequence review evidence only, not environment/self-play,
+policy-quality, strength or P9-P12 evidence.
 
 ## Supervised-policy files
 

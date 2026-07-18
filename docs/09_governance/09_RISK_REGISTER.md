@@ -28,6 +28,15 @@
 | Passing sequence tests are mistaken for self-play or strength evidence. | Evidence / Scope | High | High | Fixed result warnings and governance grade only bounded synthetic/local sequence smoke evidence. | Open |
 | A new documentation chain follows successful implementation. | Governance / Delivery | High | Medium | The next task is one exact code review, after which a material executable outcome or scope decision is required. | Mitigated |
 
+## 2026-07-18 — P8 bounded sequence implementation review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Two-pass validation/execution violated the approved single bounded traversal. | Engineering / Conformance | Medium | Realized | Fixed in `8897793`; AST regression requires exactly one explicit `for` and zero `while` nodes. | Closed |
+| Review closure is mistaken for self-play or strength evidence. | Evidence / Scope | High | High | `12AV` grades only exact bounded synthetic/local sequence review closure and denies those claims. | Open |
+| Successful review creates another single-policy wrapper or planning chain. | Governance / Delivery | High | Medium | `10_NEXT` requires acceptance plus direct two-policy interaction approval/deferment; sibling boundaries are forbidden. | Mitigated |
+| Narrow tests miss continuity or global identity drift. | Engineering / Quality | Medium | Low | Review reruns 267 explicit tests and independent 1/2/4-step call/continuity/identity/non-mutation probes. | Mitigated |
+
 ## 2026-07-18 — P8 interleaved trace approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

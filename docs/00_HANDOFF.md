@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is the one exact implementation review of the completed
-`12AU`-approved bounded P8 synthetic/local policy-improvement sequence:
+Current active stage is bounded-sequence current-scope acceptance and direct
+two-policy alternating interaction approval/deferment after `12AV` closure:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

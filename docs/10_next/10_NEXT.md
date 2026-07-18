@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review exact bounded P8 synthetic/local policy-improvement sequence smoke implementation.
+- [ ] Decide bounded-sequence current-scope acceptance and directly approve or defer exact bounded P8 synthetic/local two-policy alternating policy-improvement interaction smoke.
 
 Current execution charter:
 
@@ -22,19 +22,22 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the exact `12AU` implementation commit against its files,
-  six-symbol API, 1-through-4 hard cap, exact frozen input/output, reviewed
-  one-step helper reuse, model continuity, global IDs, errors and tests.
-- Independently probe one-, two- and four-step results, helper call order,
-  non-mutation, deterministic output and forbidden surface. Run the ten
-  focused tests, all repository regressions, compile checks and
-  `git diff --check`.
-- Do not modify production code/tests unless a concrete blocker is proven.
-  Do not add another boundary/proposal or expand into a general environment,
-  episode generator, replay, self-play, persistence, production evaluation,
-  real/external/platform data, strength claim, broad P8 or P9-P12 work.
+- Accept or reject only the exact `12AU` implementation review-closed in
+  `12AV`; do not re-review or modify its production code/tests.
+- If accepted, make one decision that directly approves or defers one exact
+  deterministic bounded interaction over exactly two synthetic/local policy
+  model states, alternating reviewed policy-improvement work with hard turn
+  bounds and explicit independent policy-state continuity.
+- Fix exact files, API, turn/actor/input/output, helper reuse, identity, tests,
+  rollback, stop conditions and evidence grade with zero gates before code.
+  No proposal or sibling boundary may intervene.
+- Do not implement the interaction in this decision. Do not approve a general
+  environment/episode generator, replay, production self-play, persistence,
+  real/external/platform data, strength claim, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commits `338de0a` and `8897793` against the exact `12AU` approval in `12AV`. Initial review found one conformance blocker: two step traversals instead of the approved single bounded traversal. The exact source/test fix merges validation, global identity, one-step execution and model carry into one loop and adds an AST regression assertion. Decision after fix: `A. Review can close.` Confirmed exact files/six-symbol API, 1-through-4 cap, frozen input/output, reviewed helper reuse, model continuity, global IDs, indexed chained errors, warnings and forbidden scope. Ten focused tests and the full explicit 267-test repository run pass with two environment-gated skips; compile/diff checks and independent 1/2/4-step probes pass. No blocker remains. The next decision must accept/reject this scope and directly approve or defer a materially progressive bounded two-policy alternating interaction; another single-policy wrapper or boundary chain is forbidden.
 
 - [x] 2026-07-18 Implemented the exact `12AU`-approved bounded P8 synthetic/local policy-improvement sequence smoke. Added `src/mjlabai/rl/synthetic_policy_improvement_sequence_smoke.py`, exported its six approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_policy_improvement_sequence_smoke.py`. The frozen deterministic helper accepts exactly 1 through 4 frozen steps, validates every candidate batch, enforces globally unique transition IDs, calls the reviewed one-step helper once per step and carries each final model directly into the next step. Ten focused tests pass; the full explicit repository run reports 267 tests OK with two environment-gated skips, and compile/diff checks pass. No general environment/episode, replay, self-play, stochastic exploration, persistence/checkpoint, production evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is bounded synthetic/local sequence smoke evidence only, not policy-quality or model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 

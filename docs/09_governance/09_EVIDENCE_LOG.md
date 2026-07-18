@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 bounded sequence implementation review closure
+
+- Type: internal exact code-review closure evidence after blocker fix.
+- Added `12AV`; decision: `A. Review can close after blocker fix.`
+- Initial blocker: implementation traversed step inputs twice. Commit `8897793`
+  merged validation, identity checks, one-step execution and model carry into
+  one bounded loop and added AST regression coverage.
+- Evidence: exact `12AU` file/API/input/bound/helper/continuity/identity/output/
+  error/test and forbidden-scope compliance, 267 explicit tests OK with two
+  environment-gated skips, compile/diff checks and independent probes.
+- Evidence grade: P8 exact bounded synthetic/local policy-improvement sequence
+  implementation review closure evidence only; not general environment/self-
+  play, production evaluation, policy-quality, strength or P9-P12 evidence.
+
 ### 2026-07-18 — P8 bounded policy-improvement sequence implementation
 
 - Type: internal executable bounded sequence smoke evidence.

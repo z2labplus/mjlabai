@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.85
+
+- Reviewed commits `338de0a` and `8897793` against `12AU` in `12AV`.
+- Found one initial blocker: two step traversals instead of the approved single
+  bounded traversal. The exact source/test fix merged validation and execution
+  into one loop and added an AST regression assertion.
+- Decision after fix: `A. Review can close.` No blocker remains.
+- Validation passed: 10 focused tests; full explicit repository run 267 OK
+  with two environment-gated skips; compile/diff and independent 1/2/4-step
+  probes passed.
+- New `10_NEXT` first item must directly accept/reject this scope and approve
+  or defer one exact bounded two-policy alternating interaction.
+- No general environment/episode, replay, production self-play, real data,
+  strength claim, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.84
 
 - Implemented the exact `12AU` bounded synthetic/local policy-improvement
