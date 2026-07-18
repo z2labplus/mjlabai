@@ -14,6 +14,38 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0171 — Bounded Sequence Acceptance And Two-Policy Approval
+
+Decision:
+
+```text
+ACCEPTED as current-scope complete.
+Approved for next exact bounded implementation task.
+```
+
+Rationale and evidence:
+
+- `12AV` closed the exact bounded sequence review after the single-pass fix.
+- All 267 explicit tests are OK with two environment-gated skips; compile/diff
+  checks and independent probes pass.
+- An exact alternating two-policy interaction is the smallest material step
+  from single-policy updates toward multi-policy P8 execution without adding
+  an environment or production self-play system.
+
+Consequences:
+
+- Added `12AW` with exact files, eight-symbol API, two participants, two/four
+  turns, actor/non-actor continuity, global IDs, outputs and tests.
+- Zero gates remain before direct code implementation; another docs gate may
+  not intervene.
+- No general environment, episode/outcome, replay, production self-play/
+  evaluation, real data, strength claim, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Accepted and approved; direct two-policy interaction implementation is current
+next.
+
 ## 2026-07-18 — DR-0170 — Exact P8 Bounded Sequence Review Closure
 
 Decision:

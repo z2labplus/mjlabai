@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Decide bounded-sequence current-scope acceptance and directly approve or defer exact bounded P8 synthetic/local two-policy alternating policy-improvement interaction smoke.
+- [ ] Implement exact bounded P8 synthetic/local two-policy alternating policy-improvement interaction smoke only.
 
 Current execution charter:
 
@@ -22,20 +22,22 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Accept or reject only the exact `12AU` implementation review-closed in
-  `12AV`; do not re-review or modify its production code/tests.
-- If accepted, make one decision that directly approves or defers one exact
-  deterministic bounded interaction over exactly two synthetic/local policy
-  model states, alternating reviewed policy-improvement work with hard turn
-  bounds and explicit independent policy-state continuity.
-- Fix exact files, API, turn/actor/input/output, helper reuse, identity, tests,
-  rollback, stop conditions and evidence grade with zero gates before code.
-  No proposal or sibling boundary may intervene.
-- Do not implement the interaction in this decision. Do not approve a general
-  environment/episode generator, replay, production self-play, persistence,
-  real/external/platform data, strength claim, broad P8 or P9-P12.
+- Implement only the exact `12AW` files and eight-symbol public API.
+- Accept exactly two frozen participants and exactly two or four frozen turns
+  alternating participant 0/1. Reuse the reviewed one-step helper once per
+  turn, update only the actor model, preserve independent policy continuity
+  and enforce globally unique candidate-transition IDs.
+- Return only the exact frozen turn/interaction results approved in `12AW` and
+  add the twelve focused test categories. Run all repository regressions,
+  focused tests, compile checks and `git diff --check`.
+- Do not add a general environment, episode/outcome generator, opponent-
+  derived state, replay, production self-play, stochastic exploration,
+  persistence/checkpoint, path/CLI, dependency, production evaluation,
+  real/external/platform data, strength claim, broad P8 or P9-P12 work.
 
 ## Completed
+
+- [x] 2026-07-18 Accepted the exact `12AU` bounded sequence review-closed in `12AV` as current-scope complete and directly approved the bounded two-policy alternating interaction implementation in `12AW`. The next executable task accepts exactly two frozen policy participants and exactly two or four A/B alternating turns, calls the reviewed one-step helper once per actor turn, updates only that actor, preserves independent policy-state continuity and enforces global candidate-transition identity. `12AW` fixes exact files, eight-symbol API, participants, turns, semantics, outputs, twelve test categories and evidence grade; zero gates remain before code. No code, test, fixture/data, general environment/episode/outcome, replay, production self-play, stochastic exploration, persistence/checkpoint, production evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added by this decision. The next task is direct implementation, not another docs gate.
 
 - [x] 2026-07-18 Reviewed commits `338de0a` and `8897793` against the exact `12AU` approval in `12AV`. Initial review found one conformance blocker: two step traversals instead of the approved single bounded traversal. The exact source/test fix merges validation, global identity, one-step execution and model carry into one loop and adds an AST regression assertion. Decision after fix: `A. Review can close.` Confirmed exact files/six-symbol API, 1-through-4 cap, frozen input/output, reviewed helper reuse, model continuity, global IDs, indexed chained errors, warnings and forbidden scope. Ten focused tests and the full explicit 267-test repository run pass with two environment-gated skips; compile/diff checks and independent 1/2/4-step probes pass. No blocker remains. The next decision must accept/reject this scope and directly approve or defer a materially progressive bounded two-policy alternating interaction; another single-policy wrapper or boundary chain is forbidden.
 

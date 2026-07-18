@@ -28,8 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 bounded-sequence current-scope acceptance and direct next exact two-policy
-alternating interaction approval/deferment after `12AV` review closure.
+P8 exact bounded synthetic/local two-policy alternating interaction
+implementation after `12AW` approval, with zero remaining gates before code.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

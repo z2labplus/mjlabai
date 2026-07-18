@@ -37,6 +37,16 @@
 | Successful review creates another single-policy wrapper or planning chain. | Governance / Delivery | High | Medium | `10_NEXT` requires acceptance plus direct two-policy interaction approval/deferment; sibling boundaries are forbidden. | Mitigated |
 | Narrow tests miss continuity or global identity drift. | Engineering / Quality | Medium | Low | Review reruns 267 explicit tests and independent 1/2/4-step call/continuity/identity/non-mutation probes. | Mitigated |
 
+## 2026-07-18 — P8 two-policy alternating interaction approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Two-policy smoke is misrepresented as a real environment or production self-play episode. | Governance / Evidence | High | High | Exact API has only two/four authored turns, no state-transition/outcome authority, and fixed warnings deny those claims. | Open |
+| Actor update mutates the non-actor model. | Engineering / Correctness | High | Medium | Turn result records non-actor before/after equality; focused tests verify every turn. | Mitigated |
+| A/B continuity or alternation is broken. | Engineering / Correctness | High | Medium | Exact actor sequence starts at participant 0 and alternates; helper-call and four-turn tests verify independent model lineage. | Mitigated |
+| Candidate records are reused across policies or turns. | Engineering / Correctness | Medium | Medium | All `8 * turn_count` candidate IDs must be globally unique. | Mitigated |
+| Another docs chain delays approved interaction code. | Governance / Delivery | High | Medium | `12AW` records zero remaining gates and `10_NEXT` requires direct implementation. | Mitigated |
+
 ## 2026-07-18 — P8 interleaved trace approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

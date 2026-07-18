@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 bounded-sequence acceptance and two-policy approval
+
+- Type: internal current-scope acceptance / exact executable-task approval.
+- Decision: the `12AU` implementation closed by `12AV` is `ACCEPTED as
+  current-scope complete` for its exact synthetic/local scope.
+- `12AW` directly approves exactly two participants and two/four A/B turns
+  with reviewed helper reuse, independent policy-model continuity and global
+  candidate IDs; no gate remains before code.
+- Basis: 267 explicit tests are OK with two environment-gated skips;
+  compile/diff checks and independent probes pass; `12AV` has no blocker.
+- Evidence grade: P8 bounded synthetic/local two-policy interaction task-
+  approval evidence only; not environment/episode, production self-play,
+  policy-quality, model-strength or P9-P12 evidence.
+
 ### 2026-07-18 — P8 bounded sequence implementation review closure
 
 - Type: internal exact code-review closure evidence after blocker fix.

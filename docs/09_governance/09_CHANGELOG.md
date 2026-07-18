@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.86
+
+- Accepted the exact `12AU`/`12AV` bounded sequence as current-scope complete
+  in `12AW`.
+- Directly approved one exact two-policy synthetic/local interaction with
+  exactly two or four A/B alternating turns, independent model continuity and
+  one reviewed one-step helper call per turn.
+- Fixed exact files, eight-symbol API, participants, turns, outputs, twelve
+  test categories and evidence grade with zero remaining gates before code.
+- New `10_NEXT` first item is direct two-policy interaction implementation;
+  another proposal, boundary or approval gate may not intervene.
+- No code, environment/episode/outcome, replay, production self-play,
+  production evaluation, real data, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.85
 
 - Reviewed commits `338de0a` and `8897793` against `12AU` in `12AV`.
