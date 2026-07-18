@@ -8,6 +8,19 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 interleaved trace implementation review closure
+
+- Type: internal exact code-review closure evidence.
+- Added `12AH`; decision: `A. Review can close.`
+- Evidence: exact `12AG` file/API/input/order/continuity/helper-reuse/error-
+  chain/output/test and forbidden-scope compliance, 79 passing tests,
+  compile/diff checks and independent in-memory adversarial probes.
+- No production code or test was modified and no blocker was found.
+- Evidence grade: P8 exact synthetic/local four-record interleaved two-key
+  policy-update trace implementation review closure evidence only; not
+  environment, self-play, production training, model-strength, Tenhou,
+  stable-dan, LuckyJ, candidate-promotion or P9-P12 evidence.
+
 ### 2026-07-18 — P8 interleaved policy-update trace smoke implementation
 
 - Type: internal executable synthetic/local numerical smoke evidence.

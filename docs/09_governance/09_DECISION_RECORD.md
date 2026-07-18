@@ -14,6 +14,35 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0149 — Exact P8 Interleaved Trace Review Closure
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Rationale and evidence:
+
+- Commit `97a2288` conforms to every exact `12AG` file, API, input, ordering,
+  continuity, output, test and forbidden-scope requirement.
+- All four numerical updates reuse the reviewed single-step helper.
+- All 79 approved tests, compile/diff checks and independent adversarial probes
+  pass.
+- No correctness, scope, provenance, evidence or test blocker was found.
+
+Consequences:
+
+- Added `12AH` as the one exact implementation review.
+- The next task is current-scope acceptance and direct approval of one next
+  executable P8 task; no sibling proposal or boundary may intervene.
+- No environment, self-play, model, production training/evaluation, real data,
+  strength claim, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Review closed; current-scope acceptance and exact next-task decision is next.
+
 ## 2026-07-18 — DR-0148 — Exact P8 Interleaved Trace Smoke Implemented
 
 Decision:

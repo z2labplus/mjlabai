@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.64
+
+- Reviewed commit `97a2288` against the exact `12AG` approval in `12AH`.
+- Decision: `A. Review can close.` No blocker or code/test fix is required.
+- Confirmed exact file/API/tuple/key/order/continuity/helper-reuse/error-chain/
+  output/export/warning and forbidden-scope compliance.
+- Validation passed: 11 trace tests, 10 sequence tests, 12 base tests, 46
+  approved regressions, compile/diff checks and independent in-memory probes.
+- New `10_NEXT` first item is current-scope acceptance plus direct approval of
+  one next executable P8 task, not another sibling boundary.
+- No production code, test, fixture/data, environment, self-play, model,
+  training/evaluation, real/external/platform data, broad P8 or P9-P12 work was
+  added in this review.
+
 ## 2026-07-18 - v3.63
 
 - Implemented the exact `12AG` four-record A/B/A/B interleaved two-key

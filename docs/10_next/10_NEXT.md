@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review exact minimal P8 synthetic/local four-record interleaved policy-update trace smoke implementation.
+- [ ] Decide current-scope acceptance and directly approve next exact executable P8 task after interleaved trace review closure.
 
 Current execution charter:
 
@@ -22,22 +22,20 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the exact implementation in `src/mjlabai/rl/__init__.py`,
-  `src/mjlabai/rl/synthetic_policy_update_trace_smoke.py` and
-  `tests/rl/test_synthetic_policy_update_trace_smoke.py` against `12AG`.
-- Confirm exact tuple/type/length enforcement, pairwise-distinct IDs, shared
-  synthetic/local source, exact A/B/A/B key and terminal order, independent
-  continuity, four calls to the reviewed single-step helper, frozen output,
-  error chaining, public exports, warnings and forbidden-scope compliance.
-- Re-run the 11 trace tests, 10 sequence tests, 12 base tests and 46 approved
-  P6/P7 regressions. Do not modify production code or tests unless a genuine
-  blocker is found and recorded as one exact fix task.
-- Do not insert a sibling boundary/proposal, add variable batches/epochs,
-  fixture/data, replay buffer, path/CLI, dependency, environment/gameplay,
-  self-play, model/optimizer, production training/evaluation, artifact,
-  real/external/platform data, broad P8 or P9-P12.
+- Accept or reject only the exact `12AG` implementation reviewed and closed in
+  `12AH`.
+- If accepted, directly bind one materially progressive executable P8 task
+  with exact behavior, files, tests, rollback, stop conditions and evidence
+  grade. One decision gate remains before that code.
+- Do not add a sibling boundary/proposal or repeat the reviewed trace. Do not
+  modify production code/tests or add fixture/data, replay buffer, path/CLI,
+  dependency, environment/gameplay, self-play, model/optimizer, production
+  training/evaluation, artifact, real/external/platform data, broad P8 or
+  P9-P12 in this decision.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `97a22881cb798e0e020beb93b7ad5d92e996eaca` against the exact `12AG` approval in `12AH`. Decision: `A. Review can close.` Confirmed exact approved files and four-symbol API, top-level tuple/type/length rejection, pairwise-distinct IDs, shared canonical source, two distinct A/B/A/B keys, non-terminal/terminal order, independent exact continuity, four calls to the reviewed single-step helper, step-indexed error chains, deterministic immutable output, package exports, warnings and forbidden-scope compliance. Eleven trace tests, 10 sequence tests, 12 base tests and 46 approved P6/P7 regressions all pass; compile/diff checks and independent in-memory probes pass. No production code or test was modified and no blocker was found. The next task is current-scope acceptance plus direct approval of one materially progressive executable P8 task, not another sibling boundary.
 
 - [x] 2026-07-18 Implemented the exact `12AG`-approved four-record A/B/A/B interleaved two-key P8 synthetic/local policy-update trace smoke. Added `src/mjlabai/rl/synthetic_policy_update_trace_smoke.py`, exported its four approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_policy_update_trace_smoke.py`. The frozen helper accepts only an exact four-record tuple, validates pairwise-distinct IDs, one shared source, two distinct keys, non-terminal first occurrences, terminal second occurrences and independent exact continuity, and delegates all four numerical updates to the reviewed single-step helper. Eleven focused tests, 10 sequence tests, 12 base tests and 46 approved P6/P7 regressions all pass; compile and diff checks pass. No variable batch/epoch, fixture/data, replay buffer, environment, self-play, model/optimizer, production training/evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is synthetic/local numerical smoke evidence only, not model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 

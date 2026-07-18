@@ -2,8 +2,8 @@
 
 ## Current stage
 
-P8 exact minimal synthetic/local four-record interleaved policy-update trace
-smoke implementation review.
+P8 exact interleaved policy-update trace current-scope acceptance and direct
+next-executable-task decision.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -88,8 +88,10 @@ reviews the implementation, records `A. Review can close`, finds no blocker and
 leaves code/tests unchanged. `12AG` accepts that exact two-step scope and
 directly approves one fixed four-record A/B/A/B two-key trace smoke. That
 exact implementation is complete in the approved module/export/test files and
-79 approved tests pass. The current first task is one exact code review; no
-sibling boundary, proposal or approval may precede it.
+79 approved tests pass. `12AH` reviews it, records `A. Review can close` and
+finds no blocker. The current first task must accept or reject that exact scope
+and, if accepted, directly bind one next executable P8 task; no sibling
+boundary or proposal may precede it.
 Production code
 outside that exact approval, fixtures, data files, manifest schemas/loaders/
 artifacts, source approval,
@@ -405,7 +407,8 @@ P8 exact single-record policy-update smoke = accepted as current-scope complete 
 P8 exact two-step chained policy-update sequence smoke = implemented and review-closed in `12AF`; 68 tests pass
 P8 exact two-step sequence scope = accepted as current-scope complete in `12AG`
 P8 exact four-record interleaved trace smoke = implemented in the three `12AG`-approved files; 79 tests pass
-Next = review the exact `12AG` trace implementation; no sibling boundary chain
+P8 exact four-record interleaved trace implementation review = closed in `12AH`; no blocker
+Next = decide current-scope acceptance and directly approve one exact executable P8 task if accepted
 ```
 
 ## AI role
@@ -414,11 +417,11 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Review the exact `12AG`-approved four-record A/B/A/B interleaved two-key
-policy-update trace smoke implementation. Confirm helper reuse, the fixed
-key/terminal/continuity contract, frozen diagnostics, error chains, public
-exports, warnings and 79 passing tests; modify code/tests only if a genuine
-blocker is found. Broad P8, source/real-data work,
+Accept or reject only the exact `12AG` implementation review-closed in `12AH`.
+If accepted, directly define one materially progressive executable P8 task
+with exact behavior, files, tests, rollback, stop conditions and evidence
+grade; do not add a sibling boundary or modify code/tests in this decision.
+Broad P8, source/real-data work,
 datasets, production training/evaluation, self-play/league, model/artifact use,
 model-output integration, CLI, P9-P12 and strength claims remain unapproved.
 
