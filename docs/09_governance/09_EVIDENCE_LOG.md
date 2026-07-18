@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 synthetic/local linear-model greedy-decision implementation
+
+- Type: internal executable fixed model-output diagnostic evidence.
+- Added only the `12AQ`-approved decision module, package exports, focused
+  tests and direct governance synchronization.
+- The diagnostic computes two reviewed linear action values for three safe
+  synthetic/local probes and uses the exact deterministic lower-index tie rule.
+- Validation: 11 focused decision tests and 125 approved regressions passed;
+  compile and diff checks passed.
+- Evidence grade: P8 exact synthetic/local linear-model inference and greedy-
+  decision diagnostic evidence only; implementation review remains next. This
+  is not environment/self-play, production inference/evaluation, policy
+  quality, model-strength, Tenhou, stable-dan, LuckyJ or P9-P12 evidence.
+
 ### 2026-07-18 — P8 linear model-training acceptance and greedy-decision approval
 
 - Type: internal current-scope acceptance / exact model-output diagnostic task

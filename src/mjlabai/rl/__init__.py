@@ -51,6 +51,14 @@ from mjlabai.rl.synthetic_linear_action_value_training_smoke import (
     SyntheticLinearQTransition,
     train_synthetic_linear_action_value_model_smoke,
 )
+from mjlabai.rl.synthetic_linear_greedy_decision_smoke import (
+    SYNTHETIC_LINEAR_GREEDY_DECISION_SMOKE_VERSION,
+    SyntheticLinearDecision,
+    SyntheticLinearDecisionProbe,
+    SyntheticLinearGreedyDecisionDiagnosticResult,
+    SyntheticLinearGreedyDecisionSmokeError,
+    run_synthetic_linear_greedy_decision_diagnostic,
+)
 
 __all__ = [
     "SYNTHETIC_LOCAL_SOURCE_KIND",
@@ -65,6 +73,7 @@ __all__ = [
     "LINEAR_ACTION_VALUE_FEATURE_COUNT",
     "LINEAR_ACTION_VALUE_ACTION_COUNT",
     "MAX_SYNTHETIC_LINEAR_TRAINING_EPOCHS",
+    "SYNTHETIC_LINEAR_GREEDY_DECISION_SMOKE_VERSION",
     "SyntheticPolicyTableEntry",
     "SyntheticPolicyTableUpdateResult",
     "SyntheticPolicyTableUpdateSmokeError",
@@ -76,6 +85,10 @@ __all__ = [
     "SyntheticLinearActionValueTrainingResult",
     "SyntheticLinearActionValueTrainingSmokeError",
     "SyntheticLinearQTransition",
+    "SyntheticLinearDecision",
+    "SyntheticLinearDecisionProbe",
+    "SyntheticLinearGreedyDecisionDiagnosticResult",
+    "SyntheticLinearGreedyDecisionSmokeError",
     "SyntheticPolicyUpdateInput",
     "SyntheticPolicyUpdateResult",
     "SyntheticPolicyUpdateSequenceResult",
@@ -90,4 +103,5 @@ __all__ = [
     "apply_synthetic_policy_table_update_sequence_smoke",
     "train_synthetic_policy_table_smoke",
     "train_synthetic_linear_action_value_model_smoke",
+    "run_synthetic_linear_greedy_decision_diagnostic",
 ]

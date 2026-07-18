@@ -79,11 +79,11 @@
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
 |---|---|---|---|---|---|
-| Diagnostic silently becomes generic production inference or gameplay. | Governance / Scope | High | Medium | `12AQ` fixes one model, exactly three probes, two actions and three exact source/test files; environment/gameplay/model loading are forbidden. | Open |
-| Action-value formula diverges from reviewed training semantics. | Engineering / Correctness | High | Medium | New module must call reviewed model/feature/action-value helpers; focused tests reject formula copies and verify helper calls. | Open |
-| Tie or action ordering is ambiguous. | Engineering / Correctness | Medium | Medium | `12AQ` fixes action tuple `(0,1)` and lower-index action 0 on exact equality; focused tests cover ties. | Open |
+| Diagnostic silently becomes generic production inference or gameplay. | Governance / Scope | High | Medium | Implementation fixes one model and exactly three probes, exposes no loader/environment/gameplay API, and focused tests reject dynamic inputs. | Mitigated |
+| Action-value formula diverges from reviewed training semantics. | Engineering / Correctness | High | Medium | Implementation calls reviewed model/feature/action-value helpers; focused tests verify one/three/six calls and absence of formula copies. | Mitigated |
+| Tie or action ordering is ambiguous. | Engineering / Correctness | Medium | Medium | Exact `(0,1)` validation and lower-index action 0 on equality are implemented and tested. | Mitigated |
 | Greedy decisions are overclaimed as policy quality or strength evidence. | Evidence / Scope | High | High | Fixed warnings and evidence grade explicitly exclude production evaluation, policy quality and strength claims. | Open |
-| Another docs chain delays approved inference code. | Governance / Delivery | High | Medium | `12AQ` records zero remaining gates and puts direct implementation first in `10_NEXT`. | Mitigated |
+| Another docs chain delays approved inference code. | Governance / Delivery | High | Medium | Direct implementation is complete; the next task is one exact code review, not another boundary/proposal chain. | Closed |
 
 ## 2026-07-18 — P8 two-step sequence implementation review risks
 

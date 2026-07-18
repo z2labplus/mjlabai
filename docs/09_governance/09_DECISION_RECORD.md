@@ -14,6 +14,35 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0163 — Exact P8 Linear Greedy Decision Implemented
+
+Decision:
+
+```text
+Implement the exact `12AQ` synthetic/local linear-model inference and greedy-
+decision diagnostic and advance directly to one code-review gate.
+```
+
+Rationale and evidence:
+
+- The task had zero remaining approval gates and fixed three exact source/test
+  files plus direct governance synchronization.
+- The implementation connects reviewed trained-model semantics to deterministic
+  action values and decisions without adding an environment or model loader.
+- Eleven focused tests plus 125 approved regressions pass; compile and diff
+  checks pass.
+
+Consequences:
+
+- A fixed synthetic/local training-to-model-output artifact now exists.
+- The next task is its one exact implementation review, not a new boundary.
+- No environment, self-play, production inference/evaluation, persistence,
+  real data, strength, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Implemented; exact code review is current next.
+
 ## 2026-07-18 — DR-0162 — Linear Model Acceptance And Greedy Decision Approval
 
 Decision:

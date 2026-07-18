@@ -1,5 +1,22 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.78
+
+- Implemented the exact `12AQ` synthetic/local linear-model inference and
+  greedy-decision diagnostic.
+- Added the approved decision module and 11 focused tests, and exported its six
+  public symbols through `mjlabai.rl`.
+- Reused reviewed model/feature/action-value helpers for exactly three probes;
+  enforced safe provenance, two action values, lower-index tie behavior,
+  frozen output and chained errors.
+- Validation passed: 11 decision tests, 125 approved regressions, compile
+  checks and `git diff --check`.
+- New `10_NEXT` first item is one exact implementation review; no sibling
+  boundary or proposal may intervene.
+- No environment/gameplay, replay, self-play, stochastic selection, model
+  loading, persistence, production evaluation, real/external/platform data,
+  broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.77
 
 - Accepted the exact `12AO`/`12AP` linear model training as current-scope

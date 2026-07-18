@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement exact P8 synthetic/local linear-model inference and greedy-decision diagnostic only.
+- [ ] Review exact P8 synthetic/local linear-model inference and greedy-decision diagnostic implementation.
 
 Current execution charter:
 
@@ -22,21 +22,23 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This first training-to-model-output smoke is directly approved by `12AQ`;
-  do not insert another proposal, boundary, review or approval task.
-- Create/modify only `src/mjlabai/rl/__init__.py`,
-  `src/mjlabai/rl/synthetic_linear_greedy_decision_smoke.py`,
-  `tests/rl/test_synthetic_linear_greedy_decision_smoke.py` and direct
-  governance synchronization.
-- Implement the exact six-symbol API, exact three probes, reviewed helper
-  reuse, exact action values, lower-index tie rule, frozen outputs, 11 test
-  categories and evidence grade in `12AQ`.
-- Do not add dynamic model/probes, stochastic action selection, training
-  changes, model loading, persistence/checkpoint, replay/environment/gameplay/
-  self-play, production evaluation, path/CLI, dependency, real/external/
-  platform data, broad P8 or P9-P12.
+- Review commit `HEAD` against the exact `12AQ` approval and only the three
+  approved source/test files plus direct governance synchronization.
+- Verify the six-symbol API, exact model/probes/provenance, reviewed helper
+  reuse, action values, lower-index tie rule, frozen output, error wrapping,
+  exports, tests, warnings and evidence grade.
+- Run the 11 focused decision tests, the 125 approved regressions, compile/diff
+  checks and small independent numerical/adversarial probes.
+- Do not modify production code or tests unless a concrete blocker is found.
+  Do not create another boundary/proposal chain or approve a sibling feature.
+- Do not add dynamic model/probes, stochastic selection, training changes,
+  model loading, persistence/checkpoint, replay/environment/gameplay/self-play,
+  production evaluation, path/CLI, dependency, real/external/platform data,
+  broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `12AQ`-approved P8 synthetic/local linear-model inference and greedy-decision diagnostic. Added `src/mjlabai/rl/synthetic_linear_greedy_decision_smoke.py`, exported its six approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_linear_greedy_decision_smoke.py`. The frozen deterministic diagnostic validates one reviewed fixed linear model and exactly three project-authored synthetic/local probes, reuses the reviewed model/feature/action-value helpers, computes both values exactly once per probe, selects action 1 only when `q1 > q0`, and otherwise selects lower-index action 0 with explicit tie diagnostics. Eleven focused decision tests and 125 approved regressions pass; compile and diff checks pass. No dynamic model/probes, stochastic selection, training changes, model loading, persistence/checkpoint, replay/environment/gameplay/self-play, production evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is fixed synthetic/local inference/decision diagnostic evidence only, not policy-quality or model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 
 - [x] 2026-07-18 Accepted the exact `12AO` implementation review-closed in `12AP` as current-scope complete and directly approved the first training-to-model-output smoke in `12AQ`. The selected outcome is a deterministic synthetic/local inference and greedy-decision diagnostic over one frozen fixed linear action-value model and exactly three project-authored probes. `12AQ` fixes the exact files, six-symbol API, probe/provenance boundary, reviewed model/feature/action-value helper reuse, exact lower-index tie rule, output, 11 test categories and evidence grade; zero gates remain before code. No code, test, fixture/data, environment/gameplay, replay, self-play, stochastic selection, model loading, persistence/checkpoint, production inference/evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added in this decision. The next task is direct inference/decision implementation, not another docs gate.
 

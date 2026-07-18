@@ -3,7 +3,7 @@
 ## Current stage
 
 P8 exact synthetic/local linear-model inference and greedy-decision diagnostic
-implementation approved by `12AQ`.
+implementation review.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -106,8 +106,8 @@ approves the linear model-training smoke with zero remaining gates. The exact
 implementation is complete and passes 125 tests. `12AP` reviews it, records
 `A. Review can close` and finds no blocker. `12AQ` accepts that exact scope and
 directly approves the greedy-decision diagnostic with zero remaining gates.
-The current first task is direct implementation; no sibling proposal,
-boundary, review or approval may precede it.
+The exact implementation is complete and passes 136 tests. The current first
+task is its one code review; no sibling proposal or boundary may precede it.
 Production code
 outside that exact approval, fixtures, data files, manifest schemas/loaders/
 artifacts, source approval,
@@ -439,7 +439,8 @@ P8 exact synthetic/local linear action-value model training smoke = implemented 
 P8 exact linear model-training implementation review = closed in `12AP`; no blocker
 P8 exact linear model-training scope = accepted as current-scope complete in `12AQ`
 P8 exact synthetic/local inference and greedy-decision diagnostic = directly approved in `12AQ`; zero gates remain before code
-Next = implement the exact `12AQ` inference/decision task; no sibling boundary chain
+P8 exact synthetic/local inference and greedy-decision diagnostic = implemented in the three `12AQ`-approved files; 136 tests pass
+Next = review the exact `12AQ` inference/decision implementation; no sibling boundary chain
 ```
 
 ## AI role
@@ -448,10 +449,11 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Implement the exact `12AQ`-approved synthetic/local linear-model inference and
-greedy-decision diagnostic. Use only one reviewed fixed model, three exact
-probes, reviewed action-value helpers and the lower-index tie rule. Broad P8,
-source/real-data work,
+Review the exact `12AQ`-approved synthetic/local linear-model inference and
+greedy-decision implementation. Verify fixed inputs, provenance, helper reuse,
+values, tie behavior, frozen output, errors, exports, tests and warnings
+without changing code unless a concrete blocker exists. Broad P8, source/
+real-data work,
 datasets, production training/evaluation, self-play/league, model/artifact use,
 model-output integration, CLI, P9-P12 and strength claims remain unapproved.
 
