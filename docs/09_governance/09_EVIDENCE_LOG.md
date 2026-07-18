@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 bounded policy-improvement sequence implementation
+
+- Type: internal executable bounded sequence smoke evidence.
+- Added only the `12AU`-approved sequence module, package exports, focused
+  tests and direct governance synchronization.
+- The helper runs one through four reviewed closed-loop steps, carries final
+  model state and enforces global candidate-transition identity.
+- Validation: 10 focused tests; full explicit repository run 267 OK with two
+  environment-gated skips; compile/diff checks and independent 1/2/4-step
+  probes passed.
+- Evidence grade: P8 exact bounded synthetic/local policy-improvement sequence
+  smoke evidence only; implementation review remains next. This is not a
+  general environment/self-play system, production evaluation, policy-quality,
+  model-strength, Tenhou, stable-dan, LuckyJ or P9-P12 evidence.
+
 ### 2026-07-18 — P8 one-step acceptance and bounded-sequence approval
 
 - Type: internal current-scope acceptance / exact executable-task approval.

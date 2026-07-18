@@ -19,6 +19,15 @@
 | Sequence action changes are overclaimed as policy quality or strength evidence. | Evidence / Scope | High | High | Frozen warnings and governance classify this as bounded synthetic/local sequence smoke only. | Open |
 | Another docs chain delays approved code. | Governance / Delivery | High | Medium | `12AU` records zero remaining gates and `10_NEXT` requires direct implementation. | Mitigated |
 
+## 2026-07-18 — P8 bounded sequence implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Implementation exceeds the four-step bound or adds hidden retry behavior. | Engineering / Scope | High | Low | Exact tuple/type and 0/5 rejection tests plus source inspection enforce one bounded `for` loop and no retry/while path. | Mitigated |
+| Model continuity or helper reuse silently diverges. | Engineering / Correctness | High | Low | Focused mock-call tests and independent 1/2/4-step probes verify one reviewed call per step and direct final-model carry. | Mitigated |
+| Passing sequence tests are mistaken for self-play or strength evidence. | Evidence / Scope | High | High | Fixed result warnings and governance grade only bounded synthetic/local sequence smoke evidence. | Open |
+| A new documentation chain follows successful implementation. | Governance / Delivery | High | Medium | The next task is one exact code review, after which a material executable outcome or scope decision is required. | Mitigated |
+
 ## 2026-07-18 — P8 interleaved trace approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

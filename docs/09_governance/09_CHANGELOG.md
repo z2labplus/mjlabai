@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.84
+
+- Implemented the exact `12AU` bounded synthetic/local policy-improvement
+  sequence smoke.
+- Added the approved sequence module and 10 focused tests, and exported its six
+  public symbols through `mjlabai.rl`.
+- Enforced the hard 1-through-4 cap, frozen exact steps, reviewed one-step
+  helper reuse, model continuity, global candidate IDs and indexed errors.
+- Validation passed: 10 focused tests; full explicit repository run 267 OK
+  with two environment-gated skips; compile and diff checks passed.
+- New `10_NEXT` first item is one exact implementation review; no sibling
+  boundary or proposal may intervene.
+- No general environment/episode, replay, self-play, persistence, production
+  evaluation, real/external/platform data, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.83
 
 - Accepted the exact `12AS`/`12AT` one-step closed loop as current-scope
@@ -7,7 +22,7 @@
 - Directly approved an exact 1-through-4-step synthetic/local policy-
   improvement sequence that reuses the reviewed one-step helper, carries model
   state and enforces global candidate-transition identity.
-- Fixed exact files, seven-symbol API, input/continuity/output boundaries, ten
+- Fixed exact files, six-symbol API, input/continuity/output boundaries, ten
   test categories and evidence grade with zero remaining gates before code.
 - New `10_NEXT` first item is direct bounded-sequence implementation; another
   proposal, boundary or approval gate may not intervene.

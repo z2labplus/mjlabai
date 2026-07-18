@@ -14,6 +14,36 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0169 — Exact P8 Bounded Sequence Implemented
+
+Decision:
+
+```text
+Implement the exact `12AU` bounded synthetic/local policy-improvement sequence
+and advance directly to one code-review gate.
+```
+
+Rationale and evidence:
+
+- The task had zero remaining approval gates and fixed three exact source/test
+  files plus direct governance synchronization.
+- The implementation reuses the reviewed one-step helper for every step and
+  adds only bounded model-state continuity and global record identity.
+- Ten focused tests and the full 267-test explicit repository run pass with
+  two environment-gated skips; compile and diff checks pass.
+
+Consequences:
+
+- A hard-capped 1-through-4-step synthetic/local policy-improvement sequence
+  artifact now exists.
+- The next task is its one exact implementation review, not a new boundary.
+- No general environment, self-play, production evaluation, persistence, real
+  data, strength, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Implemented; exact code review is current next.
+
 ## 2026-07-18 — DR-0168 — One-Step Acceptance And Bounded Sequence Approval
 
 Decision:
@@ -33,7 +63,7 @@ Rationale and evidence:
 
 Consequences:
 
-- Added `12AU` with exact files, seven-symbol API, 1-through-4 hard cap,
+- Added `12AU` with exact files, six-symbol API, 1-through-4 hard cap,
   one-step helper reuse, model continuity, global IDs, output and tests.
 - Zero gates remain before direct code implementation; another docs gate may
   not intervene.

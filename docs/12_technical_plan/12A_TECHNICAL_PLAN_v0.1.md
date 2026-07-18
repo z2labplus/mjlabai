@@ -29,7 +29,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 
 ```text
 P8 exact bounded synthetic/local policy-improvement sequence implementation
-after `12AU` approval, with zero remaining gates before code.
+review after the approved code and tests completed successfully.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

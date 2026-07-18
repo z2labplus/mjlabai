@@ -65,6 +65,14 @@ from mjlabai.rl.synthetic_one_step_policy_improvement_smoke import (
     SyntheticOneStepPolicyImprovementSmokeError,
     run_synthetic_one_step_policy_improvement_smoke,
 )
+from mjlabai.rl.synthetic_policy_improvement_sequence_smoke import (
+    MAX_SYNTHETIC_POLICY_IMPROVEMENT_STEPS,
+    SYNTHETIC_POLICY_IMPROVEMENT_SEQUENCE_SMOKE_VERSION,
+    SyntheticPolicyImprovementSequenceResult,
+    SyntheticPolicyImprovementSequenceSmokeError,
+    SyntheticPolicyImprovementStepInput,
+    run_synthetic_policy_improvement_sequence_smoke,
+)
 
 __all__ = [
     "SYNTHETIC_LOCAL_SOURCE_KIND",
@@ -81,6 +89,8 @@ __all__ = [
     "MAX_SYNTHETIC_LINEAR_TRAINING_EPOCHS",
     "SYNTHETIC_LINEAR_GREEDY_DECISION_SMOKE_VERSION",
     "SYNTHETIC_ONE_STEP_POLICY_IMPROVEMENT_SMOKE_VERSION",
+    "SYNTHETIC_POLICY_IMPROVEMENT_SEQUENCE_SMOKE_VERSION",
+    "MAX_SYNTHETIC_POLICY_IMPROVEMENT_STEPS",
     "SyntheticPolicyTableEntry",
     "SyntheticPolicyTableUpdateResult",
     "SyntheticPolicyTableUpdateSmokeError",
@@ -98,6 +108,9 @@ __all__ = [
     "SyntheticLinearGreedyDecisionSmokeError",
     "SyntheticOneStepPolicyImprovementResult",
     "SyntheticOneStepPolicyImprovementSmokeError",
+    "SyntheticPolicyImprovementStepInput",
+    "SyntheticPolicyImprovementSequenceResult",
+    "SyntheticPolicyImprovementSequenceSmokeError",
     "SyntheticPolicyUpdateInput",
     "SyntheticPolicyUpdateResult",
     "SyntheticPolicyUpdateSequenceResult",
@@ -114,4 +127,5 @@ __all__ = [
     "train_synthetic_linear_action_value_model_smoke",
     "run_synthetic_linear_greedy_decision_diagnostic",
     "run_synthetic_one_step_policy_improvement_smoke",
+    "run_synthetic_policy_improvement_sequence_smoke",
 ]
