@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.09
+
+- Implemented the exact `04R` first P8 MahJax on-policy raw-outcome gradient
+  update smoke and 10 focused tests.
+- Seed 1 uses independent environment/rule/project RNG streams. Project seat 0
+  samples eight actions from legal-masked categorical logits against fixed rule
+  seats; all 37 transitions are legal and terminal.
+- Cumulative raw seat-0 reward `-39` is divided only by 100. Exactly one update
+  at `0.1` moves objective `-0.86367577 -> -0.88331068` and changes weights/
+  biases by L2 `0.04220101 / 0.01279154`.
+- All 375 tests pass with two skips. No replay, second update, self-play learning,
+  persistence, evaluation, real data, strength or P9-P12 work was added.
+
 ## 2026-07-18 - v4.08
 
 - Added `04R`; reviewed commit `4d7ef8d` against exact `04Q` approval.

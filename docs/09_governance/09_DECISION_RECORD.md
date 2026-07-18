@@ -182,6 +182,35 @@ Status:
 
 Approved; direct one-round on-policy update implementation is current next.
 
+## 2026-07-18 — DR-0194 — Complete First Environment Raw-Outcome RL Update
+
+Decision:
+
+```text
+Complete the exact `04R` one-round on-policy raw-outcome gradient update and
+require one exact implementation review before any expansion.
+```
+
+Rationale and evidence:
+
+- Project actions are truly categorical on-policy samples with separate RNG;
+  all actions and participant identities are environment-legal.
+- Only cumulative raw project-seat reward divided by 100 enters the objective.
+- Exactly one update yields finite expected objective/parameter deltas and a
+  deterministic legal post-update replay.
+- Ten focused and all 375 tests pass with two existing skips.
+
+Consequences:
+
+- The repository has performed its first actual environment-outcome-driven
+  project parameter update.
+- It remains one mixed-policy round, not self-play learning or improvement.
+- Exactly one code review is next; another planning chain is barred.
+
+Status:
+
+Implemented; exact one-round update review is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

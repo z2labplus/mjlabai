@@ -132,6 +132,16 @@
 | Negative-return update is overclaimed as improvement. | Evidence / Scope | Critical | High | Report objective/deltas and legality only; warnings deny improvement, evaluation and strength. | Open |
 | Another planning chain delays the approved update. | Governance / Delivery | High | Medium | `04R` leaves zero gates and `10_NEXT` requires direct implementation. | Mitigated |
 
+## 2026-07-18 — P8 first environment raw-outcome update implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Project actions are not truly on-policy. | ML / Correctness | Critical | Low | Separate project RNG samples every seat-0 action from exact legal-masked categorical logits; source/tests pin the call. | Mitigated |
+| Non-raw reward or future information enters update. | Research / Leakage | Critical | Low | Objective reads only terminal cumulative raw seat-0 reward `/100` and public decision features/masks/actions. | Mitigated |
+| Single update expands into hidden trainer/replay. | Governance / Scope | High | Low | Source has one environment loop, no update loop/replay/path/save and exact `update_count=1`. | Mitigated |
+| Objective decrease is overclaimed as play improvement. | Evidence / Scope | Critical | High | Post trajectory/outcome is unchanged and warnings deny improvement, evaluation/ranking and strength. | Open |
+| Review starts another documentation chain. | Governance / Delivery | High | Medium | Exactly one review is next; closure must directly approve/defer material execution or record a genuine blocker. | Mitigated |
+
 ## 2026-07-18 — P8 bounded policy-improvement sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

@@ -165,6 +165,13 @@ round and directly approves one exact seed-1 on-policy raw-outcome gradient
 update with zero gates before code. It is review/task-approval evidence only,
 not self-play learning, evaluation or strength evidence.
 
+The exact `04R` update is implemented in
+`src/mjlabai/rl/mahjax_one_round_policy_gradient_smoke.py` with focused tests
+in `tests/rl/test_mahjax_one_round_policy_gradient_smoke.py`. It samples one
+legal seed-1 project trajectory with independent RNG, uses only normalized raw
+seat reward and applies exactly one finite in-memory gradient update. One exact
+code review is next. This is not self-play, improvement or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

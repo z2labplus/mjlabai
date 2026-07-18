@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — First environment raw-outcome on-policy gradient update
+
+- Type: executable P8 local one-round RL parameter-update smoke evidence.
+- Seed 1 independently seeds environment, fixed rule opponents and project
+  categorical actions. Eight project samples and all 37 mixed actions are legal.
+- Raw cumulative project reward `-39` yields return scale `-0.39`. Exactly one
+  masked log-policy update changes objective `-0.86367577 -> -0.88331068`,
+  weight delta `0.04220101` and bias delta `0.01279154`.
+- Updated parameters rerun the exact same legal 37-step trajectory/outcome at
+  this small learning rate; no improvement is claimed.
+- Validation: 10 focused and all 375 tests pass with two existing skips.
+- Evidence grade: P8 local one-round on-policy gradient-update smoke only; not
+  self-play learning, production evaluation, league or strength evidence.
+
 ### 2026-07-18 — Mixed round review and first on-policy update probe
 
 - Type: exact code-review closure, current-scope acceptance and direct P8
