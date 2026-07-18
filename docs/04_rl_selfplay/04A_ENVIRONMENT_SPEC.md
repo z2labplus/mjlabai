@@ -7,6 +7,7 @@
 | Hidden information | Must not leak unseen tiles | Planned |
 | Opponent policies | Support league/self-play opponents | Planned |
 | Logging | Full decision trace reproducible | Planned |
+| Synthetic transition contract smoke | Prove one authoritative strict-action match and immutable state progression | Implemented in `src/mjlabai/environment/synthetic_transition_smoke.py`; not a rules engine |
 
 ## Invalid environment examples
 

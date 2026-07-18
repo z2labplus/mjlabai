@@ -75,6 +75,16 @@
 | Transition mutates input or permits reuse/terminal stepping. | Engineering / Integrity | High | Medium | Frozen dataclasses, terminal/wrong-index rejection, deterministic post-state and non-mutation tests are required. | Mitigated |
 | New P4 prerequisite starts another long docs chain. | Governance / Delivery | High | High | `04H` records zero remaining gates and `10_NEXT` requires direct implementation. | Mitigated |
 
+## 2026-07-18 — P4 synthetic environment transition implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Authored legal set is mistaken for derived Mahjong legality. | Architecture / Evidence | High | High | Module and result warnings identify contract smoke only; `04A` keeps legal-action engine planned. | Open |
+| Audit action ID accidentally controls legality. | Engineering / Correctness | Medium | Low | Focused and independent tests vary action IDs while binding actor/type/tile/tsumogiri. | Mitigated |
+| State progression mutates or permits a second transition. | Engineering / Integrity | High | Low | Frozen objects, terminal post-state, step-index guard and non-mutation tests prevent reuse. | Mitigated |
+| Passing smoke is overclaimed as gameplay/self-play/strength evidence. | Evidence / Scope | High | High | Fixed warnings and governance grade only P4 single-transition contract evidence. | Open |
+| A new docs chain follows successful implementation. | Governance / Delivery | High | Medium | The next task is one exact code review, followed by a material P4 implementation or dependency decision. | Mitigated |
+
 ## 2026-07-18 — P8 interleaved trace approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

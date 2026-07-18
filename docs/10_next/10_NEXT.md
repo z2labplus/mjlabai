@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement exact minimal P4 synthetic/local environment transition smoke only.
+- [ ] Review exact minimal P4 synthetic/local environment transition smoke implementation.
 
 Current execution charter:
 
@@ -22,20 +22,21 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Implement only the exact `04H` files and eight-symbol public API.
-- Accept one exact frozen P4 state with four-seat identity and exactly two
-  strict canonical `dahai` legal actions, apply one strictly matching proposed
-  action, and return one deterministic immutable terminal post-state.
-- Validate fixed environment/ruleset/version/provenance, acting seat, action
-  fields, unique legal identities/canonical tuples and exact result fields.
-  Add the twelve focused test categories and run all repository regressions,
+- Review only the exact `04H` implementation commit against its files,
+  eight-symbol API, exact action/state/result, strict matching, provenance,
+  deterministic post-state, errors, warnings and tests.
+- Independently probe both legal actions from all four seats, action-ID
+  exclusion, strict field rejection, red token preservation, non-mutation and
+  forbidden surface. Run twelve focused tests, all repository regressions,
   compile checks and `git diff --check`.
-- Do not add a general Mahjong engine, multi-step episode, tile ownership,
-  rules/scoring/hidden-state/RNG, model/reward/training/self-play/evaluation,
-  persistence, dependency, CLI/path, real/external/platform data, Tenhou
-  integration, strength claim, broad P8 or P9-P12 work.
+- Do not modify production code/tests unless a concrete blocker is proven.
+  Do not add another boundary/proposal or expand into a full Mahjong engine,
+  multi-step episode, rules/scoring/hidden-state/RNG, model/reward/training/
+  self-play/evaluation, dependency, real data, broad P8 or P9-P12 work.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `04H`-approved minimal P4 synthetic/local environment transition smoke. Added `src/mjlabai/environment/__init__.py`, `src/mjlabai/environment/synthetic_transition_smoke.py` and `tests/environment/test_synthetic_transition_smoke.py`. The frozen helper validates one fixed four-seat state with exactly two authoritative strict `dahai` legal actions, matches actor/type/tile/tsumogiri while excluding audit action ID, selects the authoritative legal action and returns one deterministic immutable terminal post-state with next-seat and provenance continuity. Twelve focused tests pass; the full explicit repository run reports 291 tests OK with two environment-gated skips, and compile/diff checks plus independent all-seat/action probes pass. No full Mahjong rules/legal-action/scoring engine, hand/tile ownership, hidden-state/RNG, multi-step episode, model/reward/training/self-play/evaluation, persistence, dependency, real data, Tenhou, broad P8 or P9-P12 work was added. This is single-transition P4 contract smoke evidence only, not gameplay or strength evidence. The next task is one exact implementation review, not another boundary chain.
 
 - [x] 2026-07-18 Accepted the exact `12AW` two-policy interaction review-closed in `12AX` as current-scope complete, confirmed that P4 has only planned/environment-boundary documentation and no executable state-transition authority, deferred further P8 interaction wrapping, activated the P4 prerequisite and directly approved the exact single-transition implementation in `04H`. The next executable task adds one four-seat synthetic/local state with exactly two strict `dahai` legal actions and one immutable terminal transition. `04H` fixes exact files, eight-symbol API, action/state/result fields, strict matching, provenance, post-state, twelve test categories and evidence grade; zero gates remain before code. No code, general Mahjong engine, multi-step episode, rules/scoring/hidden-state/RNG, model/reward/training/self-play/evaluation, dependency, real data, Tenhou integration, broad P8 or P9-P12 work was added by this decision. The next task is direct P4 implementation, not another docs gate.
 

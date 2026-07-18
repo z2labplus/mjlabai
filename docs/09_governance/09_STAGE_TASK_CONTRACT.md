@@ -3,7 +3,7 @@
 ## Current stage
 
 P4 exact single-transition synthetic/local environment-contract implementation
-after `04H` prerequisite activation and approval; zero gates remain before code.
+review after the approved code and tests completed successfully.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition

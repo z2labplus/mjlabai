@@ -14,6 +14,35 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0175 — Exact P4 Environment Transition Implemented
+
+Decision:
+
+```text
+Implement the exact `04H` single-transition synthetic/local environment smoke
+and advance directly to one code-review gate.
+```
+
+Rationale and evidence:
+
+- The task had zero remaining gates and fixed three exact source/test files
+  plus direct governance synchronization.
+- It establishes the repository's first executable authority for legal-action
+  matching and immutable environment state progression.
+- Twelve focused tests and the full 291-test explicit repository run pass with
+  two environment-gated skips; compile/diff and independent probes pass.
+
+Consequences:
+
+- A fixed single-transition P4 environment-contract artifact now exists.
+- The next task is its one exact implementation review, not a new boundary.
+- No full rules/scoring engine, episode, self-play, real data, Tenhou,
+  strength, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Implemented; exact P4 code review is current next.
+
 ## 2026-07-18 — DR-0174 — Activate P4 Environment Prerequisite
 
 Decision:

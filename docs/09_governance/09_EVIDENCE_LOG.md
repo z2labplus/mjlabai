@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P4 synthetic environment transition implementation
+
+- Type: internal executable single-transition environment-contract smoke
+  evidence.
+- Added only the `04H`-approved environment package/module, focused tests and
+  direct governance synchronization.
+- The helper owns strict legality selection from two authoritative state
+  actions and creates one immutable terminal post-state with provenance.
+- Validation: 12 focused tests; full explicit repository run 291 OK with two
+  environment-gated skips; compile/diff and independent all-seat/action probes.
+- Evidence grade: P4 exact single-transition synthetic/local environment-
+  contract smoke evidence only; implementation review remains next. This is
+  not a Mahjong rules/scoring engine, game episode, self-play, model-strength,
+  Tenhou, stable-dan, LuckyJ or P9-P12 evidence.
+
 ### 2026-07-18 — P8 acceptance and P4 environment transition approval
 
 - Type: internal current-scope acceptance / prerequisite activation / exact

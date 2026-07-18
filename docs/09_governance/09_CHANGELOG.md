@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.90
+
+- Implemented the exact `04H` single-transition P4 synthetic/local environment
+  contract smoke.
+- Added the environment package/module and 12 focused tests with the approved
+  eight-symbol public API.
+- Validated fixed identity/provenance, two authoritative strict `dahai`
+  actions, action-ID-excluded matching and immutable terminal state progress.
+- Validation passed: 12 focused tests; full explicit repository run 291 OK
+  with two environment-gated skips; compile/diff and all-seat/action probes.
+- New `10_NEXT` first item is one exact implementation review; no sibling
+  boundary or proposal may intervene.
+- No rules/scoring engine, hand/hidden-state/RNG, multi-step episode, self-play,
+  real data, Tenhou, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.89
 
 - Accepted the exact `12AW`/`12AX` two-policy interaction as current-scope
