@@ -14,6 +14,38 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0159 — Bounded Trainer Acceptance And Linear Model Approval
+
+Decision:
+
+```text
+ACCEPTED as current-scope complete.
+Approve direct implementation of one exact synthetic/local two-feature,
+two-action linear action-value model training smoke.
+```
+
+Rationale and evidence:
+
+- `12AN` closed the bounded trainer review with no blocker and 112 passing
+  tests.
+- A fixed linear value function is the smallest non-repetitive step from a
+  table trainer to actual parameterized model training.
+- Fixed shapes, four transitions and an eight-epoch cap preserve a narrow,
+  deterministic, dependency-free synthetic/local scope.
+
+Consequences:
+
+- Added `12AO` with exact files, API, model/input shapes, formulas, outputs,
+  tests, stop conditions and evidence grade.
+- Zero mandatory gates remain before model-training code.
+- No environment, self-play, production training/evaluation, persistence,
+  checkpoint, real data, strength, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Bounded trainer accepted; exact linear model-training implementation is
+current next.
+
 ## 2026-07-18 — DR-0158 — Exact P8 Bounded Trainer Review Closure
 
 Decision:

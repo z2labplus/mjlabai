@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.74
+
+- Accepted the exact `12AM`/`12AN` bounded trainer as current-scope complete
+  in `12AO`.
+- Directly approved the first fixed-dimension synthetic/local linear action-
+  value model training smoke, with two features, two actions, four transitions
+  and at most eight epochs.
+- Fixed exact files, nine-symbol API, model/transition provenance, TD formulas,
+  output, tests, stop conditions and evidence grade.
+- Set remaining mandatory gates before code to zero; `10_NEXT` now requires
+  direct model-training implementation.
+- No code, environment, replay, self-play, generic optimizer, tensor framework,
+  persistence/checkpoint, real/external/platform data, production evaluation,
+  broad P8 or P9-P12 work was added in this decision.
+
 ## 2026-07-18 - v3.73
 
 - Reviewed commit `cd9cdc1` against the exact `12AM` approval in `12AN`.

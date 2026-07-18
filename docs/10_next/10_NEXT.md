@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Decide current-scope acceptance and directly approve or defer exact minimal P8 synthetic/local linear action-value model training smoke.
+- [ ] Implement exact minimal P8 synthetic/local linear action-value model training smoke only.
 
 Current execution charter:
 
@@ -22,20 +22,24 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Accept or reject only the exact `12AM` implementation review-closed in
-  `12AN`; do not re-review or modify production code/tests.
-- If accepted, make one decision that directly approves or defers one exact
-  standard-library in-memory synthetic/local linear action-value model
-  training smoke. Fix dimensions, formulas, update cap, files, API, immutable
-  inputs/outputs, tests, rollback, stop conditions and evidence grade.
-- This decision must leave zero gates before code if it approves the task; no
-  proposal, sibling boundary or extra review may intervene.
-- Do not implement the model task in this decision. Do not approve an
-  environment, self-play, replay buffer, real/external/platform data,
-  persistence/checkpoint, CLI/path ingestion, dependency, production training/
-  evaluation, strength claim, broad P8 or P9-P12.
+- This first parameterized model-training smoke is directly approved by
+  `12AO`; do not insert another proposal, boundary, review or approval task.
+- Create/modify only `src/mjlabai/rl/__init__.py`,
+  `src/mjlabai/rl/synthetic_linear_action_value_training_smoke.py`,
+  `tests/rl/test_synthetic_linear_action_value_training_smoke.py` and direct
+  governance synchronization.
+- Implement the exact nine-symbol API, fixed 2-feature/2-action model, exact
+  four-transition tuple, 1-through-8 epoch bound, ordered TD update formulas,
+  frozen output, 13 test categories and evidence grade in `12AO`.
+- Do not add dynamic dimensions/actions, more transitions/epochs, shuffle/
+  minibatch/retry/early-stop, persistence/checkpoint, dataset/dataloader,
+  replay/environment/self-play, generic optimizer, tensor framework,
+  production evaluation, path/CLI, dependency, real/external/platform data,
+  broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Accepted the exact `12AM` implementation review-closed in `12AN` as current-scope complete and directly approved the first parameterized synthetic/local model-training smoke in `12AO`. The selected outcome is a deterministic standard-library two-feature/two-action linear Q model trained over exactly four project-authored synthetic/local transitions for 1 through 8 epochs. `12AO` fixes the exact files, nine-symbol API, model/transition shapes, provenance, TD target/error/weight-update formulas, output, 13 test categories and evidence grade; zero gates remain before code. No code, test, fixture/data, environment, replay, self-play, generic optimizer, tensor framework, persistence/checkpoint, production training/evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added in this decision. The next task is direct model-training implementation, not another docs gate.
 
 - [x] 2026-07-18 Reviewed commit `cd9cdc1b9f968955d723d70cdf045ce03608c10f` against the exact `12AM` approval in `12AN`. Decision: `A. Review can close.` Confirmed exact approved files/API, exact 1-through-8 outer tuple, hard pass cap, ordered reviewed table-helper calls, pass-state continuity, global record-ID uniqueness, pass-indexed chained errors, deterministic frozen output, exports, warnings and forbidden-scope compliance. Eleven trainer tests and 101 approved regressions pass; compile/diff checks and independent one/two/eight-pass, tuple-subclass, nine-pass, duplicate-ID and non-mutation probes pass. No production code or test was modified and no blocker was found. The next decision must accept or reject this scope and directly approve or defer one materially progressive executable P8 task; a sibling trainer wrapper or another boundary chain is forbidden.
 

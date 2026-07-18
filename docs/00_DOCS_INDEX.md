@@ -71,6 +71,7 @@ docs/12_technical_plan/12AK_P8_POLICY_TABLE_ACCEPTANCE_AND_TWO_PASS_SEQUENCE_APP
 docs/12_technical_plan/12AL_P8_TWO_PASS_POLICY_TABLE_SEQUENCE_IMPLEMENTATION_REVIEW.md
 docs/12_technical_plan/12AM_P8_TWO_PASS_ACCEPTANCE_AND_BOUNDED_TABULAR_TRAINER_APPROVAL_DECISION.md
 docs/12_technical_plan/12AN_P8_BOUNDED_TABULAR_TRAINER_IMPLEMENTATION_REVIEW.md
+docs/12_technical_plan/12AO_P8_BOUNDED_TRAINER_ACCEPTANCE_AND_LINEAR_ACTION_VALUE_MODEL_TRAINING_APPROVAL_DECISION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -466,6 +467,14 @@ uniqueness, frozen output, errors, exports, warnings and forbidden-scope
 compliance, and reports 112 passing tests plus independent probes. It is
 review-closure evidence only, not model/network or production training,
 self-play, model-strength or P9-P12 evidence.
+
+`docs/12_technical_plan/12AO_P8_BOUNDED_TRAINER_ACCEPTANCE_AND_LINEAR_ACTION_VALUE_MODEL_TRAINING_APPROVAL_DECISION.md`
+accepts the exact bounded trainer as current-scope complete and directly
+approves the first fixed-dimension synthetic/local linear action-value model
+training smoke. It fixes the two-feature/two-action model, exact four
+transitions, 1-through-8 epochs, TD formulas, files, API, outputs, tests and
+forbidden scope with zero gates before code. It is task-approval evidence
+only, not production model training, self-play, strength or P9-P12 evidence.
 
 ## Supervised-policy files
 

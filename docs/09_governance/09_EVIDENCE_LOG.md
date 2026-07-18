@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 bounded trainer acceptance and linear model-training approval
+
+- Type: internal current-scope acceptance / exact parameterized model-training
+  task approval evidence.
+- Decision: the `12AM` implementation closed by `12AN` is `ACCEPTED as
+  current-scope complete` for its exact synthetic/local scope.
+- `12AO` directly approves a fixed two-feature/two-action linear action-value
+  model trained on four in-memory synthetic transitions for at most eight
+  epochs; no docs gate remains before code.
+- Basis: 112 approved tests, compile/diff checks and independent probes pass;
+  `12AN` found no blocker.
+- Evidence grade: P8 exact synthetic/local linear model-training task approval
+  evidence only; not production model training, environment, self-play,
+  model-strength, Tenhou, stable-dan, LuckyJ or P9-P12 evidence.
+
 ### 2026-07-18 — P8 bounded tabular trainer implementation review closure
 
 - Type: internal exact code-review closure evidence.

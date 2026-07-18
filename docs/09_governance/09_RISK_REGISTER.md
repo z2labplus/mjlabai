@@ -57,6 +57,16 @@
 | Successful review creates another planning chain instead of progressive code. | Governance / Delivery | High | Medium | `10_NEXT` requires current-scope acceptance plus direct approval/deferment of one exact model-training smoke; sibling boundaries are forbidden. | Mitigated |
 | Narrow tests miss cap, identity or mutation regressions. | Engineering / Quality | Medium | Low | Review reruns all 112 approved tests plus one/two/eight-pass, tuple-subclass, nine-pass, duplicate-ID and non-mutation probes. | Mitigated |
 
+## 2026-07-18 — P8 linear action-value model training approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Fixed linear smoke silently becomes generic or production model training. | Governance / Scope | High | Medium | `12AO` fixes two features, two actions, exactly four transitions, at most eight epochs and three exact source/test files. | Open |
+| TD target or selected-action update formula is implemented incorrectly. | Engineering / Correctness | High | Medium | `12AO` fixes formulas explicitly; focused tests require exact one/two-epoch parameters, terminal/non-terminal behavior and selected-row-only updates. | Open |
+| Unsafe or model-generated transition data enters the smoke. | Data / Provenance | High | Low | Exact project-authored synthetic/local source and all provenance flags are validated on every frozen transition. | Open |
+| Model-training smoke is overclaimed as production training or strength evidence. | Evidence / Scope | High | High | Fixed warnings and evidence grade explicitly exclude environment/self-play, production training and strength claims. | Open |
+| Another docs chain delays approved model-training code. | Governance / Delivery | High | Medium | `12AO` records zero remaining gates and puts direct implementation first in `10_NEXT`. | Mitigated |
+
 ## 2026-07-18 — P8 two-step sequence implementation review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

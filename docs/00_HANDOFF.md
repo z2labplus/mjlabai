@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is current-scope acceptance and next exact executable P8
-task decision after bounded trainer review closure:
+Current active stage is direct implementation of the exact minimal P8
+synthetic/local linear action-value model training smoke approved by `12AO`:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -169,8 +169,10 @@ table helper once per pass, carries table state, rejects global record-ID
 reuse and returns frozen history. Eleven focused trainer tests plus 101
 approved regressions pass. `12AN` reviews that implementation, records
 `A. Review can close`, confirms 112 tests plus independent probes and finds no
-blocker. The first `10_NEXT` item must accept/reject that exact scope and
-directly approve or defer one materially progressive executable P8 task;
+blocker. `12AO` accepts that exact scope as current-scope complete and directly
+approves a fixed two-feature/two-action linear Q model trained on exactly four
+project-authored synthetic/local transitions for 1 through 8 epochs. Zero
+gates remain before code. The first `10_NEXT` item is direct implementation;
 another boundary/proposal chain is forbidden. Broad P8 entry, production
 training/evaluation, self-play, model/artifact use, real data, strength claims
 and P9-P12 remain unapproved.
