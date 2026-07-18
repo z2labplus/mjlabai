@@ -30,6 +30,14 @@ docs/10_next/10_NEXT.md
 
 ## Technical plan files
 
+`docs/04_rl_selfplay/04H_P4_MINIMAL_SYNTHETIC_ENVIRONMENT_TRANSITION_APPROVAL.md`
+accepts the bounded P8 two-policy interaction only for its synthetic/local
+scope, confirms the missing environment authority, activates the P4
+prerequisite and directly approves one exact single-transition four-seat
+strict-`dahai` synthetic/local environment-contract smoke with zero gates
+before code. It is task-approval evidence only, not a complete Mahjong
+environment, self-play, strength or P9-P12 evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

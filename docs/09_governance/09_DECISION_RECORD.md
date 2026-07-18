@@ -14,6 +14,42 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0174 — Activate P4 Environment Prerequisite
+
+Decision:
+
+```text
+Accept the exact P8 two-policy interaction current scope.
+Defer further P8 interaction wrappers.
+Activate P4 and approve the exact `04H` environment transition implementation.
+```
+
+Rationale and evidence:
+
+- `12AX` closed the exact two-policy interaction review with 279 explicit
+  tests OK and no blocker.
+- P4 remains `Future`/planned in milestones and `04A`, while the source tree
+  has no environment package, state object or transition authority.
+- P8 cannot become meaningful self-play by adding more policy wrappers without
+  state, legality and transition ownership.
+- `12S`/`12T` already define/review the authority separation needed to approve
+  one narrow synthetic/local transition.
+
+Consequences:
+
+- Added `04H` with exact files, eight-symbol API, fixed action/state/result,
+  strict legality, provenance, terminal post-state and tests.
+- P4 becomes the active prerequisite; zero gates remain before exact code.
+- P8 remains open but further execution is deferred until this prerequisite is
+  implemented and reviewed.
+- No general Mahjong engine, production self-play, real data, Tenhou,
+  strength claim, broad P8 or P9-P12 approval follows.
+
+Status:
+
+P4 prerequisite active; direct exact transition implementation is current
+next.
+
 ## 2026-07-18 — DR-0173 — Exact P8 Two-Policy Interaction Review Closure
 
 Decision:

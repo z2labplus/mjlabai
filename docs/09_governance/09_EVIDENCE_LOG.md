@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 acceptance and P4 environment transition approval
+
+- Type: internal current-scope acceptance / prerequisite activation / exact
+  executable-task approval evidence.
+- Decision: the `12AW` interaction closed by `12AX` is accepted for its exact
+  synthetic/local scope; additional interaction wrappers are deferred.
+- Inspection found no environment package/state/transition implementation;
+  `04A` remains planned and `12S`/`12T` are boundary docs only.
+- `04H` activates P4 and directly approves one exact single-transition,
+  four-seat, strict-`dahai` synthetic/local environment smoke with no gate
+  before code.
+- Evidence grade: P4 environment-transition task-approval evidence only; not a
+  complete Mahjong environment, self-play, model-strength or P9-P12 evidence.
+
 ### 2026-07-18 — P8 two-policy interaction implementation review closure
 
 - Type: internal exact code-review closure evidence.

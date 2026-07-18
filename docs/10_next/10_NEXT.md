@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Decide two-policy interaction current-scope acceptance and resolve the P8 environment prerequisite without another synthetic interaction wrapper.
+- [ ] Implement exact minimal P4 synthetic/local environment transition smoke only.
 
 Current execution charter:
 
@@ -22,21 +22,22 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Accept or reject only the exact `12AW` implementation review-closed in
-  `12AX`; do not re-review or modify its production code/tests.
-- Inspect existing P4 environment/interface contracts and implementation
-  status. Choose one outcome: directly approve one exact minimal unified
-  synthetic/local environment state-transition implementation with zero gates
-  before code, or defer P8 and activate the missing P4 prerequisite.
-- Fix exact stage ownership, files/API/input/output/tests and evidence grade if
-  implementation is approved. No proposal, sibling boundary or additional
-  review may intervene before that code.
-- Do not add another synthetic policy-interaction wrapper. Do not implement in
-  this decision or approve a general Mahjong engine, production self-play,
-  real/external/platform data, Tenhou integration, strength claim, broad P8 or
-  P9-P12.
+- Implement only the exact `04H` files and eight-symbol public API.
+- Accept one exact frozen P4 state with four-seat identity and exactly two
+  strict canonical `dahai` legal actions, apply one strictly matching proposed
+  action, and return one deterministic immutable terminal post-state.
+- Validate fixed environment/ruleset/version/provenance, acting seat, action
+  fields, unique legal identities/canonical tuples and exact result fields.
+  Add the twelve focused test categories and run all repository regressions,
+  compile checks and `git diff --check`.
+- Do not add a general Mahjong engine, multi-step episode, tile ownership,
+  rules/scoring/hidden-state/RNG, model/reward/training/self-play/evaluation,
+  persistence, dependency, CLI/path, real/external/platform data, Tenhou
+  integration, strength claim, broad P8 or P9-P12 work.
 
 ## Completed
+
+- [x] 2026-07-18 Accepted the exact `12AW` two-policy interaction review-closed in `12AX` as current-scope complete, confirmed that P4 has only planned/environment-boundary documentation and no executable state-transition authority, deferred further P8 interaction wrapping, activated the P4 prerequisite and directly approved the exact single-transition implementation in `04H`. The next executable task adds one four-seat synthetic/local state with exactly two strict `dahai` legal actions and one immutable terminal transition. `04H` fixes exact files, eight-symbol API, action/state/result fields, strict matching, provenance, post-state, twelve test categories and evidence grade; zero gates remain before code. No code, general Mahjong engine, multi-step episode, rules/scoring/hidden-state/RNG, model/reward/training/self-play/evaluation, dependency, real data, Tenhou integration, broad P8 or P9-P12 work was added by this decision. The next task is direct P4 implementation, not another docs gate.
 
 - [x] 2026-07-18 Reviewed commit `b2e6ade` against the exact `12AW` approval in `12AX`. Decision: `A. Review can close.` Confirmed exact files/eight-symbol API, two frozen participants, two/four A/B turns, actor-only updates, independent policy continuity, non-actor equality, one reviewed helper call per turn, global candidate IDs, one bounded loop, frozen output, indexed chained errors, warnings and forbidden scope. Twelve focused tests and the full explicit 279-test repository run pass with two environment-gated skips; compile/diff checks and independent two/four-turn probes pass. No production code/test change or blocker was required. The next decision must accept/reject this scope and resolve the missing environment prerequisite by direct exact implementation approval or P8 deferment to P4; another synthetic interaction wrapper or docs chain is forbidden.
 

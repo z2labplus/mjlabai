@@ -62,8 +62,18 @@
 |---|---|---|---|---|---|
 | Review closure is mistaken for an environment, self-play or strength result. | Evidence / Scope | High | High | `12AX` grades only exact synthetic/local interaction review closure and explicitly denies those claims. | Open |
 | Successful review creates another synthetic interaction wrapper. | Governance / Delivery | High | High | `10_NEXT` forbids another wrapper and requires direct environment-prerequisite resolution. | Mitigated |
-| P8 keeps advancing while P4 environment ownership remains unresolved. | Architecture / Stage | High | High | Next decision must inspect P4 contracts and either approve exact P4-owned code or defer P8 to P4. | Open |
+| P8 keeps advancing while P4 environment ownership remains unresolved. | Architecture / Stage | High | High | `04H` now defers further P8 wrappers, activates P4 and requires direct exact transition implementation. | Mitigated |
 | Narrow tests miss actor/non-actor lineage drift. | Engineering / Quality | Medium | Low | Review reruns 279 explicit tests plus independent two/four-turn lineage, helper, identity and non-mutation probes. | Mitigated |
+
+## 2026-07-18 — P4 exact synthetic environment transition approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Single transition is overclaimed as a complete Mahjong environment. | Evidence / Scope | High | High | `04H` and fixed warnings explicitly exclude hand/rules/scoring/hidden-state/RNG/multi-step/self-play claims. | Open |
+| Caller-supplied legal actions are mistaken for a real legality engine. | Architecture / Correctness | High | High | Evidence is contract-authority smoke only; legal-set derivation remains a future P4 gap and cannot support real play. | Open |
+| Action equality silently normalizes tiles or ignores strict fields. | Engineering / Correctness | High | Medium | Exact actor/type/tile/tsumogiri comparison, verbatim token tests and no parser/normalizer are required. | Mitigated |
+| Transition mutates input or permits reuse/terminal stepping. | Engineering / Integrity | High | Medium | Frozen dataclasses, terminal/wrong-index rejection, deterministic post-state and non-mutation tests are required. | Mitigated |
+| New P4 prerequisite starts another long docs chain. | Governance / Delivery | High | High | `04H` records zero remaining gates and `10_NEXT` requires direct implementation. | Mitigated |
 
 ## 2026-07-18 — P8 interleaved trace approval risks
 

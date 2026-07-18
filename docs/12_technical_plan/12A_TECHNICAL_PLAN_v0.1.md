@@ -28,8 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 two-policy interaction current-scope acceptance and environment-prerequisite
-resolution after `12AX` review closure; another interaction wrapper is banned.
+P4 exact single-transition synthetic/local environment-contract implementation
+after `04H` prerequisite activation and approval; zero gates remain before code.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

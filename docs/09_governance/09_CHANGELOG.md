@@ -1,5 +1,21 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.89
+
+- Accepted the exact `12AW`/`12AX` two-policy interaction as current-scope
+  complete.
+- Repository inspection confirmed that P4 has planned/boundary docs but no
+  environment package, authoritative state object or executable transition.
+- Deferred further P8 interaction wrapping, activated the P4 environment
+  prerequisite and directly approved one exact single-transition strict-
+  `dahai` synthetic/local environment smoke in `04H`.
+- Fixed exact files, eight-symbol API, action/state/result, provenance, strict
+  matching, terminal post-state and twelve tests with zero gates before code.
+- New `10_NEXT` first item is direct P4 implementation; no docs gate may
+  intervene.
+- No code, general engine, multi-step episode, self-play, real data, Tenhou,
+  strength claim, broad P8 or P9-P12 work was added in this decision.
+
 ## 2026-07-18 - v3.88
 
 - Reviewed commit `b2e6ade` against the exact `12AW` approval in `12AX`.
