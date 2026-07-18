@@ -126,6 +126,33 @@ Status:
 
 Approved; direct mixed-policy round implementation is current next.
 
+## 2026-07-18 — DR-0192 — Complete First Environment Mixed-Policy Round
+
+Decision:
+
+```text
+Complete the exact `04Q` trained-project-seat versus bundled-rule-seats round
+and require one exact implementation review before further P8 progression.
+```
+
+Rationale and evidence:
+
+- Exact seat-policy identities, separate RNG, three JITs, one cap loop and
+  complete legal traces are implemented.
+- Seed 0 terminates in 54 transitions with nonzero raw outcome and global
+  seat scores; all 365 tests pass with two existing skips.
+
+Consequences:
+
+- The repository has an environment-backed mixed-policy interaction with
+  explicit participant ownership and raw outcome.
+- It remains one round, with no learning, comparison or strength evidence.
+- Exactly one code review is next; another planning chain is barred.
+
+Status:
+
+Implemented; exact mixed-round review is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

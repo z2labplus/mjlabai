@@ -8,6 +8,18 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — First MahJax trained-project/rule-policy mixed round
+
+- Type: executable P8 local mixed-policy environment-interaction smoke.
+- Added exact `04Q` source/test. Project seat 0 uses reviewed trained in-memory
+  parameters; rule seats 1-3 use the pinned bundled policy and separate RNG.
+- Seed-0 result: 54 fully legal transitions, 10 project turns, terminal/no
+  truncation, raw `(0,0,140,-120)`, cumulative `(0,0,120,-140)`, global scores
+  `(250,250,380,120)`.
+- Validation: 10 focused and all 365 tests pass with two existing skips.
+- Evidence grade: local mixed-policy single-round interaction smoke only; not
+  learning, evaluation, league, self-play strength or Tenhou evidence.
+
 ### 2026-07-18 — Held-out trained-policy review and mixed-policy probe
 
 - Type: exact code-review closure, current-scope acceptance and direct mixed-

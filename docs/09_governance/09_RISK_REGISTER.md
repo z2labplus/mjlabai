@@ -112,6 +112,16 @@
 | One mixed round is mislabeled self-play evaluation or strength. | Evidence / Scope | Critical | High | Fixed evidence grade/warnings deny self-play learning, ranking, promotion and strength claims. | Open |
 | Another planning chain delays approved mixed interaction. | Governance / Delivery | High | Medium | `04Q` leaves zero gates and `10_NEXT` requires direct implementation. | Mitigated |
 
+## 2026-07-18 — P8 mixed-policy single-round implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Seat-policy ownership drifts. | Engineering / Correctness | High | Low | Every frozen step records acting seat and exact expected policy ID; focused tests cover all 54 transitions. | Mitigated |
+| Rule RNG or environment RNG is coupled. | Engineering / Reproducibility | High | Low | Root splits init/policy streams once; rule stream advances only on rule-policy turns; repeated result is equal. | Mitigated |
+| Mixed participant selects an illegal action. | Engineering / Correctness | Critical | Low | All 54 actions are rechecked against stored complete environment legal tuples. | Mitigated |
+| Raw score is mistaken for comparative strength. | Evidence / Scope | Critical | High | One-round evidence grade/warnings deny evaluation, ranking, promotion and strength claims. | Open |
+| Review starts another documentation chain. | Governance / Delivery | High | Medium | Exactly one code review is next; closure must directly approve/defer material execution or record a genuine blocker. | Mitigated |
+
 ## 2026-07-18 — P8 bounded policy-improvement sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

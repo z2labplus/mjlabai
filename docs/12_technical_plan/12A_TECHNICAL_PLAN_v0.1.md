@@ -28,11 +28,11 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 direct implementation of the exact `04Q`-approved MahJax mixed-policy
-single round. `04Q` review-closes the held-out trained-policy round after all
-355 tests pass. The next code fixes the reviewed trained project policy in
-seat 0, bundled rule policies in seats 1-3, full legal traces and raw outcome.
-This is not self-play learning, production evaluation or strength evidence.
+P8 exact implementation review of the completed `04Q` MahJax mixed-policy
+single round. The trained project policy controls seat 0, rule policies seats
+1-3, and all 54 seed-0 actions carry policy identity and complete legality.
+Raw/cumulative outcomes and global scores are preserved; all 365 tests pass
+with two skips. This is not learning, production evaluation or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

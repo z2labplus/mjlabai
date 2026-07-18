@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.07
+
+- Implemented the exact `04Q` P8 mixed-policy MahJax single-round smoke and 10
+  focused tests.
+- Seat 0 uses reviewed trained in-memory project parameters; seats 1-3 use the
+  pinned bundled rule policy with a separate RNG stream. One loop and three
+  JIT functions record policy identity, complete legal tuples and actions.
+- Seed 0 terminates legally in 54 transitions; project seat acts 10 times,
+  final raw rewards are `(0,0,140,-120)`, cumulative `(0,0,120,-140)`, and
+  global scores `(250,250,380,120)`.
+- All 365 tests pass with two skips. No learning/persistence, multiple games,
+  league/evaluation, real data, strength or P9-P12 work was added.
+
 ## 2026-07-18 - v4.06
 
 - Added `04Q`; reviewed commit `c266945` against exact `04P` approval.

@@ -2,9 +2,9 @@
 
 ## Current stage
 
-P8 direct implementation of the exact `04Q`-approved MahJax mixed-policy
-single round: reviewed trained project policy in seat 0 and pinned bundled rule
-policy in seats 1-3. No learning, multi-game evaluation or strength claim.
+P8 exact implementation review of the completed `04Q` MahJax mixed-policy
+single round: trained project policy in seat 0 and pinned bundled rule policy
+in seats 1-3. Review must not add learning, evaluation or strength claims.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -584,5 +584,6 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04Q` one-project-seat/three-rule-seat seed-0 legal-masked
-round. No proposal, boundary or review may intervene before code.
+Review the exact `04Q` one-project-seat/three-rule-seat seed-0 legal-masked
+round. No production change absent a concrete blocker. Closure must directly
+approve/defer material executable progress; another planning chain is forbidden.

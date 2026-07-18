@@ -27,11 +27,10 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the exact `04Q`-approved
-MahJax mixed-policy single round. `04Q` review-closes the held-out trained-policy
-round and accepts it as current-scope complete. The next executable task fixes
-the trained project policy in seat 0 and the pinned bundled rule policy in seats
-1-3, checks every action against environment legality and records raw outcome.
+Current active stage is the one exact implementation review of the completed
+`04Q`-approved MahJax mixed-policy single round. The trained project policy now
+controls seat 0 while bundled rule policies control seats 1-3; all 54 actions
+are environment-legal and the raw terminal outcome/global scores are preserved.
 This is local mixed-policy interaction smoke, not self-play learning, production
 evaluation or strength evidence:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can

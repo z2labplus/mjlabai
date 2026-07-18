@@ -152,6 +152,13 @@ trained-policy round and directly approves one exact mixed-policy round with
 the trained project policy in seat 0 and bundled rule policies in seats 1-3.
 It is review/task-approval evidence only, not self-play, evaluation or strength.
 
+The exact `04Q` mixed-policy round is implemented in
+`src/mjlabai/environment/mahjax_mixed_policy_round_smoke.py` with focused tests
+in `tests/environment/test_mahjax_mixed_policy_round_smoke.py`. Seat 0 uses the
+reviewed trained project policy and seats 1-3 use the pinned rule policy; every
+action records policy identity and complete legality. One exact code review is
+next. This is not learning, league, evaluation or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
