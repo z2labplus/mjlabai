@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact MahJax categorical-MLP raw/centered/standardized return-estimator comparison smoke.
+- [ ] Review the exact MahJax categorical-MLP raw/centered/standardized return-estimator comparison smoke implementation.
 
 Current execution charter:
 
@@ -22,21 +22,34 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Execute exact `04Y` in its two approved source/test files plus governance.
-- Branch identical reviewed imitation parameters into raw, per-round seat-
-  centered and per-round seat-standardized estimators.
-- Apply five total `0.01` updates per branch on exact seeds `(1,3,5,7,11)`;
-  raw reuses the reviewed helper and branches remain independent.
-- Evaluate initial and all three trained branches without updates on disjoint
-  seeds `20..35`, project seat 0 greedy versus fixed rule seats with identical
-  environment/rule RNG.
-- Pin initial/raw/centered/standardized aggregates `-320/-454/-454/-490`, raw-
-  centered behavior identity and standardized changed seeds `(20,27,31,32,35)`.
-- Report bounded failure-comparison evidence only. No estimator selection,
-  extra estimator, learning-rate sweep, persistence, real data, production
-  self-play/evaluation, strength claim or P9-P12.
+- Review the exact two `04Y`-approved files and implementation commit; change
+  code/tests only for a concrete blocker.
+- Verify exact seven-symbol API, identical initial branch parameters, five
+  independent updates per estimator and complete legal terminal trajectories.
+- Verify raw-helper reuse and exact centered/standardized formulas, objectives,
+  per-step/final deltas and branch-final parameter distinction.
+- Verify disjoint fixed evaluation, identical RNG/rule participants, zero eval
+  updates, full traces/scores/rewards and `-320/-454/-454/-490` aggregates.
+- Verify centered parameter difference/evaluation identity, standardized exact
+  changed seeds and explicit non-selection/failure-evidence wording.
+- Closure must directly approve or defer one bounded learning-rate/step-size
+  diagnostic implementation; no sibling proposal/boundary, scale-up, real
+  data, production self-play/evaluation, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Implemented the exact `04Y`-approved raw/seat-centered/seat-
+  standardized return-estimator comparison in two files. Three branches start
+  from identical reviewed imitation parameters, each performs five independent
+  legal terminal updates on `(1,3,5,7,11)`, and receives zero-update evaluation
+  on disjoint seeds `20..35` under identical environment/rule RNG. Ten focused
+  tests including a full deterministic repeat and all 441 explicit repository
+  tests pass with two existing skips. Initial/raw/centered/
+  standardized aggregates are exactly `-320/-454/-454/-490`; centering changes
+  parameters but not greedy evaluation behavior, and standardization changes
+  `(20,27,31,32,35)` while worsening the fixed diagnostic. No estimator was
+  selected; no persistence, real data, production evaluation, strength claim
+  or P9-P12 work was added. One exact code review is next.
 
 - [x] 2026-07-19 Reviewed commit `7026a0c` against exact `04X` approval in
   `04Y`. Decision: `A. Review can close.` Confirmed exact seven-symbol API,

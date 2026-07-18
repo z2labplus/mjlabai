@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.23
+
+- Implemented the exact `04Y` raw/centered/standardized return-estimator
+  comparison and ten focused tests in the two approved files.
+- Three branches start from identical arrays and independently run five legal
+  terminal updates; raw reuses the reviewed helper and transforms are exact.
+- Fixed zero-update evaluation under identical RNG records initial/raw/
+  centered/standardized project aggregates `-320/-454/-454/-490`.
+- Centered parameters differ from raw while evaluation behavior is identical;
+  standardized changes five seeds and worsens this fixed diagnostic.
+- Ten focused and all 441 explicit repository tests pass with two existing
+  skips; compile, dependency and diff checks pass. No estimator selection,
+  extra estimator/sweep, persistence, real data, production evaluation,
+  strength claim or P9-P12 work was added.
+
 ## 2026-07-19 - v4.22
 
 - Added `04Y`; reviewed commit `7026a0c` against exact `04X` approval.

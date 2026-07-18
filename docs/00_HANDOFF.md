@@ -27,17 +27,18 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the exact `04Y`-approved
-MahJax categorical-MLP return-estimator comparison. `04Y` review-closes commit
-`7026a0c`; nine focused and all 431 explicit tests pass with two skips. Exact
-raw, per-round seat-centered and per-round seat-standardized branches start
-from identical imitation parameters, train on `(1,3,5,7,11)` and are evaluated
-without updates on disjoint seeds `20..35`. Probes record fixed aggregates
-`-454/-454/-490` against initial `-320`: centering changes parameters but not
-greedy evaluation behavior; standardization worsens the fixed diagnostic and
-changes seeds `(20,27,31,32,35)`. Zero planning gates remain before code. This
-is local P8 failure-comparison evidence, not estimator selection, production
-evaluation or strength evidence:
+Current active stage is one exact code review of the implemented `04Y` MahJax
+categorical-MLP return-estimator comparison. Raw, per-round seat-centered and
+per-round seat-standardized branches start from identical imitation parameters,
+each train for five legal terminal updates on `(1,3,5,7,11)`, and receive zero-
+update fixed evaluation on disjoint seeds `20..35`. Ten focused tests including
+a deterministic full repeat and all 441 explicit repository tests pass with
+two existing skips. Initial/raw/centered/standardized aggregates
+are `-320/-454/-454/-490`: centering changes parameters but not greedy behavior;
+standardization changes seeds `(20,27,31,32,35)` and worsens this diagnostic.
+Review closure must directly approve or defer a bounded learning-rate/step-size
+diagnostic, not add planning. This is local P8 failure-comparison evidence, not
+estimator selection, production evaluation or strength evidence:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

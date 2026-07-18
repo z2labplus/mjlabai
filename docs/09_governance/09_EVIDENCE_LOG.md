@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Executable return-estimator failure comparison
+
+- Type: executable P8 local three-branch return-estimator failure-comparison
+  smoke evidence.
+- Raw, seat-centered and seat-standardized branches start from identical
+  reviewed arrays and each perform five independent legal terminal updates.
+- Exact zero-update fixed evaluation records `-320/-454/-454/-490` for initial,
+  raw, centered and standardized; centered equals raw behavior despite distinct
+  parameters, while standardized changes five seeds and has eleven negatives.
+- Validation: ten focused tests including deterministic repeat and all 441
+  explicit repository tests pass with two existing skips; compile, dependency
+  and diff checks pass.
+- Evidence grade: bounded estimator failure comparison only; not estimator
+  ranking/selection, robust evaluation, improvement, strength or promotion.
+
 ### 2026-07-19 — Five-round review and return-estimator probes
 
 - Type: exact code-review closure plus bounded return-estimator failure-

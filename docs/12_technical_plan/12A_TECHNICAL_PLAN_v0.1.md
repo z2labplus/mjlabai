@@ -28,14 +28,15 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 direct implementation of the exact `04Y`-approved categorical-MLP raw/
-centered/standardized return-estimator comparison. `04Y` review-closes commit
-`7026a0c` with all 431 explicit tests passing. Three independent branches start
-from identical imitation arrays, run exact five updates on `(1,3,5,7,11)` and
-receive zero-update fixed evaluation on disjoint seeds `20..35`. Probes record
-initial/raw/centered/standardized aggregates `-320/-454/-454/-490`; centering
-does not change greedy evaluation behavior and standardization worsens this
-small diagnostic. Zero planning gates remain. This is bounded failure-
+P8 exact code review of the implemented `04Y` categorical-MLP raw/centered/
+standardized return-estimator comparison. Three independent branches start
+from identical imitation arrays, each run five legal updates, and receive fixed
+zero-update evaluation on disjoint seeds `20..35`. Ten focused and all 441
+explicit repository tests pass with two existing skips and pin initial/raw/
+centered/standardized aggregates `-320/-454/-454/-490`;
+centering changes parameters but not behavior, while standardization changes
+five seeds and worsens the diagnostic. Review closure must directly approve or
+defer one bounded learning-rate/step-size diagnostic. This is failure-
 comparison evidence, not estimator selection, production evaluation,
 improvement or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can

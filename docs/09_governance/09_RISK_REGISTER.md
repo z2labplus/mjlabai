@@ -35,6 +35,11 @@ bounded variance-control/reward-estimator comparison.
 | Standardization regression is overclaimed as general estimator ranking. | Evidence / Statistics | Critical | High | Classify only 16-seed failure diagnostic; no selection/promotion/superiority claim. | Open |
 | Comparison expands into an estimator or learning-rate sweep. | Governance / Scope | High | Medium | Exact three estimators, one fixed learning rate and five seeds; source/tests reject extras. | Open |
 
+Implementation status: exact branch initialization, training trajectories,
+formulas, parameter distinction, no-update evaluation and non-selection wording
+are now pinned by source/tests. The fixed regression remains unresolved; the
+next review may approve one separate bounded step-size diagnostic, not scale-up.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

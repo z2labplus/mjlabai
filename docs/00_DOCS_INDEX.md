@@ -277,6 +277,15 @@ standardized return-estimator comparison. Bounded probes record aggregates
 `-454/-454/-490` against initial `-320`. This is review/task-approval and
 failure-diagnostic evidence, not estimator selection or strength evidence.
 
+The exact `04Y` comparison is implemented in
+`src/mjlabai/rl/mahjax_categorical_mlp_return_estimator_comparison_smoke.py`
+with focused tests in
+`tests/rl/test_mahjax_categorical_mlp_return_estimator_comparison_smoke.py`.
+It runs three independent five-update branches and one fixed no-update
+evaluation, pinning initial/raw/centered/standardized aggregates
+`-320/-454/-454/-490`. One exact review is next; this is failure-comparison,
+not estimator-selection or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
