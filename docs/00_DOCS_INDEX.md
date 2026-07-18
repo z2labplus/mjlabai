@@ -270,6 +270,13 @@ mixed-policy comparison. It pins the observed `-320->-454` regression as
 failure evidence. One exact code review is next; this is not production
 evaluation, improvement or strength evidence.
 
+`docs/04_rl_selfplay/04Y_P8_FIVE_ROUND_TRAINING_EVALUATION_IMPLEMENTATION_REVIEW.md`
+reviews commit `7026a0c`, records `A. Review can close`, accepts the exact
+five-round/fixed-evaluation scope and directly approves a raw/centered/
+standardized return-estimator comparison. Bounded probes record aggregates
+`-454/-454/-490` against initial `-320`. This is review/task-approval and
+failure-diagnostic evidence, not estimator selection or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

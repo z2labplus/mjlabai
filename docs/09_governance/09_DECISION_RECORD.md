@@ -1,5 +1,22 @@
 # 09_DECISION_RECORD
 
+## 2026-07-19 — Review five-round failure diagnostic and directly compare return estimators
+
+Decision:
+
+```text
+A. Review can close for commit `7026a0c`.
+Directly approve one exact raw/seat-centered/seat-standardized estimator
+comparison on the same bounded train/evaluation seeds.
+```
+
+Reason: the implementation matches `04X` and all tests pass. Independent probes
+show that centering changes parameters without changing the fixed greedy result,
+while standardization increases parameter magnitude and worsens the diagnostic.
+The comparison is the lowest-cost material check before considering learning-
+rate control or a learned baseline. It is not estimator selection or strength
+evidence.
+
 ## Purpose
 
 This file records project-level technical and governance decisions.

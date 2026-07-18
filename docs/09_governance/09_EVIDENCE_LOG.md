@@ -8,6 +8,19 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Five-round review and return-estimator probes
+
+- Type: exact code-review closure plus bounded return-estimator failure-
+  comparison task approval evidence.
+- `04Y` records `A. Review can close`; nine focused and all 431 explicit tests
+  pass with two skips plus compile/dependency/diff checks.
+- Raw and seat-centered five-update branches produce different parameter
+  deltas but identical fixed evaluation behavior and aggregate `-454`.
+- Seat-standardized branch changes seeds `(20,27,31,32,35)`, has zero positive
+  and eleven negative rounds, and regresses to aggregate `-490`.
+- Evidence grade: bounded estimator failure probes and exact task approval only;
+  not estimator superiority, robust evaluation, strength or promotion evidence.
+
 ### 2026-07-18 — Five-round training and fixed mixed-policy failure diagnostic
 
 - Type: executable P8 local repeated shared-policy training plus independent

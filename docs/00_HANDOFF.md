@@ -27,18 +27,17 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is one exact code review of the implemented `04X` MahJax
-categorical-MLP five-round training plus fixed mixed-policy evaluation smoke.
-The implementation runs five directly chained updates on seeds `(1,3,5,7,11)`
-and evaluates initial/trained parameters without updates on disjoint seeds
-`20..35`. Nine focused tests, including a deterministic full repeat, and all
-431 explicit repository tests pass with two existing skips. The
-frozen result records degradation honestly: project raw sum `-320->-454`,
-positive rounds `1->0`, negative rounds `8->9`, and only seed 32 changes from
-`+74` to `-60`. Review closure must directly approve or defer one bounded
-variance-control/reward-estimator comparison, not add another planning chain.
-This is local P8 failure-diagnostic evidence, not production evaluation or
-strength evidence:
+Current active stage is direct implementation of the exact `04Y`-approved
+MahJax categorical-MLP return-estimator comparison. `04Y` review-closes commit
+`7026a0c`; nine focused and all 431 explicit tests pass with two skips. Exact
+raw, per-round seat-centered and per-round seat-standardized branches start
+from identical imitation parameters, train on `(1,3,5,7,11)` and are evaluated
+without updates on disjoint seeds `20..35`. Probes record fixed aggregates
+`-454/-454/-490` against initial `-320`: centering changes parameters but not
+greedy evaluation behavior; standardization worsens the fixed diagnostic and
+changes seeds `(20,27,31,32,35)`. Zero planning gates remain before code. This
+is local P8 failure-comparison evidence, not estimator selection, production
+evaluation or strength evidence:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

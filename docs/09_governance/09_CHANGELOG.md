@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.22
+
+- Added `04Y`; reviewed commit `7026a0c` against exact `04X` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed exact API, five legal updates, parameter continuity, disjoint fixed
+  no-update evaluation, complete traces/outcomes, frozen result and no I/O.
+- Validation passed: nine focused and all 431 explicit tests with two skips;
+  compile, dependency and diff checks pass.
+- Centered-return probe reproduces raw evaluation `-454`; standardized-return
+  probe worsens it to `-490` and changes five seeds. Directly approved exact
+  three-estimator comparison code. No estimator selection/strength claim,
+  production evaluation, real data or P9-P12 work was added.
+
 ## 2026-07-18 - v4.21
 
 - Implemented the exact `04X` P8 five-round shared categorical-MLP training

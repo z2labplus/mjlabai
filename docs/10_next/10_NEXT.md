@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact MahJax categorical-MLP five-round training and fixed mixed-policy evaluation smoke implementation.
+- [ ] Implement the exact MahJax categorical-MLP raw/centered/standardized return-estimator comparison smoke.
 
 Current execution charter:
 
@@ -22,20 +22,32 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review the exact two `04X`-approved implementation files and implementation
-  commit; change code/tests only for a concrete blocker.
-- Verify the exact seven-symbol API, five ordered training updates, parameter
-  continuity, legal terminal trajectories and private-array/frozen output.
-- Verify disjoint seeds `20..35`, identical before/after environment/rule RNG,
-  greedy project seat 0, fixed rule seats and zero evaluation updates.
-- Verify complete pinned traces/scores/rewards, changed seed `(32,)`, aggregate
-  `-320->-454`, positive `1->0`, negative `8->9` and explicit regression wording.
-- Closure must directly approve or defer one bounded variance-control/reward-
-  estimator comparison implementation; no sibling proposal or boundary.
-- No scale-up, adaptive evaluation, persistence, external/real data, production
+- Execute exact `04Y` in its two approved source/test files plus governance.
+- Branch identical reviewed imitation parameters into raw, per-round seat-
+  centered and per-round seat-standardized estimators.
+- Apply five total `0.01` updates per branch on exact seeds `(1,3,5,7,11)`;
+  raw reuses the reviewed helper and branches remain independent.
+- Evaluate initial and all three trained branches without updates on disjoint
+  seeds `20..35`, project seat 0 greedy versus fixed rule seats with identical
+  environment/rule RNG.
+- Pin initial/raw/centered/standardized aggregates `-320/-454/-454/-490`, raw-
+  centered behavior identity and standardized changed seeds `(20,27,31,32,35)`.
+- Report bounded failure-comparison evidence only. No estimator selection,
+  extra estimator, learning-rate sweep, persistence, real data, production
   self-play/evaluation, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Reviewed commit `7026a0c` against exact `04X` approval in
+  `04Y`. Decision: `A. Review can close.` Confirmed exact seven-symbol API,
+  five legal directly chained updates, fixed disjoint no-update evaluation,
+  complete pinned traces/outcomes, frozen array-free output, failure wording
+  and no I/O/real-data/production path. Nine focused and all 431 explicit tests
+  pass with two skips; compile/dependency/diff checks pass. Bounded probes show
+  centered returns change parameters but reproduce raw branch evaluation
+  `-454`, while standardized returns worsen it to `-490` and change seeds
+  `(20,27,31,32,35)`. Directly approved exact three-estimator comparison code;
+  zero gates remain. No estimator superiority or strength claim was made.
 
 - [x] 2026-07-18 Implemented the exact `04X`-approved five-round all-project
   categorical-MLP training plus fixed mixed-policy evaluation smoke in the two

@@ -25,6 +25,16 @@ and regression checks; the realized-regression risk is mitigated as evidence,
 not solved as an algorithmic issue. Scale-up remains prohibited pending a
 bounded variance-control/reward-estimator comparison.
 
+## 2026-07-19 — P8 return-estimator comparison approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Estimator branches do not start from identical parameters. | ML / Comparison | Critical | Low | Train imitation once, branch exact arrays in memory and pin independent ownership/initial identity. | Open |
+| Evaluation leaks into estimator updates. | Evaluation / Leakage | Critical | Low | Exact train/eval seed separation and zero-update evaluation helper for every branch. | Open |
+| Centered behavior identity is mistaken for parameter identity. | ML / Interpretation | High | High | Pin nonzero raw-vs-centered parameter difference and identical fixed traces separately. | Open |
+| Standardization regression is overclaimed as general estimator ranking. | Evidence / Statistics | Critical | High | Classify only 16-seed failure diagnostic; no selection/promotion/superiority claim. | Open |
+| Comparison expands into an estimator or learning-rate sweep. | Governance / Scope | High | Medium | Exact three estimators, one fixed learning rate and five seeds; source/tests reject extras. | Open |
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
