@@ -1,5 +1,22 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.63
+
+- Implemented the exact `12AG` four-record A/B/A/B interleaved two-key
+  synthetic/local policy-update trace smoke.
+- Added the approved trace module and 11 focused tests, and exported the four
+  approved public symbols through `mjlabai.rl`.
+- Reused the reviewed single-step helper for all four updates and enforced
+  exact tuple shape, key/terminal order, IDs, source, per-key continuity,
+  frozen diagnostics, error chaining and evidence warnings.
+- Validation passed: 11 trace, 10 sequence, 12 base and 46 approved P6/P7
+  regression tests, compile checks and `git diff --check`.
+- New `10_NEXT` first item is one exact implementation review; no sibling
+  boundary or proposal may intervene.
+- No variable batch/epoch, fixture/data, replay buffer, environment, self-play,
+  model/optimizer, production training/evaluation, real/external/platform data,
+  broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.62
 
 - Accepted the exact `12AE`/`12AF` two-step sequence as current-scope complete

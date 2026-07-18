@@ -3,7 +3,7 @@
 ## Current stage
 
 P8 exact minimal synthetic/local four-record interleaved policy-update trace
-smoke implementation.
+smoke implementation review.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -86,9 +86,10 @@ exists in the approved module/export/test files, delegates both updates to the
 reviewed helper and passes 10 sequence, 12 base and 46 regression tests. `12AF`
 reviews the implementation, records `A. Review can close`, finds no blocker and
 leaves code/tests unchanged. `12AG` accepts that exact two-step scope and
-directly approves one fixed four-record A/B/A/B two-key trace smoke. The
-current first task is direct implementation; no sibling boundary, proposal,
-review or approval may precede it.
+directly approves one fixed four-record A/B/A/B two-key trace smoke. That
+exact implementation is complete in the approved module/export/test files and
+79 approved tests pass. The current first task is one exact code review; no
+sibling boundary, proposal or approval may precede it.
 Production code
 outside that exact approval, fixtures, data files, manifest schemas/loaders/
 artifacts, source approval,
@@ -403,8 +404,8 @@ P8 exact minimal synthetic/local policy-update smoke = implemented and review-cl
 P8 exact single-record policy-update smoke = accepted as current-scope complete in `12AE`
 P8 exact two-step chained policy-update sequence smoke = implemented and review-closed in `12AF`; 68 tests pass
 P8 exact two-step sequence scope = accepted as current-scope complete in `12AG`
-P8 exact four-record interleaved trace smoke = directly approved in `12AG`; zero gates remain before code
-Next = implement the exact `12AG` trace task; no sibling boundary chain
+P8 exact four-record interleaved trace smoke = implemented in the three `12AG`-approved files; 79 tests pass
+Next = review the exact `12AG` trace implementation; no sibling boundary chain
 ```
 
 ## AI role
@@ -413,10 +414,11 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Implement the exact `12AG`-approved four-record A/B/A/B interleaved two-key
-policy-update trace smoke. Reuse the reviewed single-step helper, enforce the
-fixed key/terminal/continuity contract and add only the approved module, export
-and focused tests. Broad P8, source/real-data work,
+Review the exact `12AG`-approved four-record A/B/A/B interleaved two-key
+policy-update trace smoke implementation. Confirm helper reuse, the fixed
+key/terminal/continuity contract, frozen diagnostics, error chains, public
+exports, warnings and 79 passing tests; modify code/tests only if a genuine
+blocker is found. Broad P8, source/real-data work,
 datasets, production training/evaluation, self-play/league, model/artifact use,
 model-output integration, CLI, P9-P12 and strength claims remain unapproved.
 

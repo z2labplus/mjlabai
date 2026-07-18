@@ -29,7 +29,7 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 
 ```text
 P8 exact minimal synthetic/local four-record interleaved policy-update trace
-smoke implementation.
+smoke implementation review.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
@@ -132,12 +132,13 @@ sequence smoke that reuses the reviewed helper. That exact implementation now
 exists in the approved module/export/test files, enforces the exact two-record
 contract, and passes 10 sequence, 12 base and 46 approved regression tests.
 `12AF` reviews the implementation, records `A. Review can close`, confirms 68
-tests plus adversarial probes and finds no blocker. The next first task is
-current-scope acceptance plus direct approval of one next executable P8
-outcome. `12AG` accepts the exact two-step scope and directly approves a fixed
+tests plus adversarial probes and finds no blocker. `12AG` accepts the exact
+two-step scope and directly approves a fixed
 four-record A/B/A/B interleaved two-key trace smoke with exact independent
-continuity. Zero gates remain before that code, now first in `10_NEXT`; no
-sibling proposal or boundary may precede it. Broad
+continuity. That exact implementation now exists in the approved module,
+package export and test files; 11 trace tests plus 68 approved regressions
+pass. One exact implementation review is now first in `10_NEXT`; no sibling
+proposal or boundary may precede it. Broad
 P8, production training/evaluation, self-play, model/artifact use, real data,
 strength claims and P9-P12 remain unapproved.
 
@@ -637,8 +638,8 @@ in `12AE`.
 P8 exact two-step chained policy-update sequence smoke = implemented and
 review-closed in `12AF`; 68 tests pass.
 P8 exact two-step sequence scope = accepted as current-scope complete in `12AG`.
-P8 exact four-record interleaved trace smoke = directly approved in `12AG`; zero gates remain before code.
-Next = implement the exact `12AG` task; no sibling boundary chain.
+P8 exact four-record interleaved trace smoke = implemented in the three `12AG`-approved files; 79 tests pass.
+Next = review the exact `12AG` implementation; no sibling boundary chain.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -772,7 +773,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Implement exact minimal P8 synthetic/local four-record interleaved policy-update trace smoke only.
+Review exact minimal P8 synthetic/local four-record interleaved policy-update trace smoke implementation.
 ```
 
 `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`

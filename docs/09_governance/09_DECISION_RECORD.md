@@ -14,6 +14,36 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0148 — Exact P8 Interleaved Trace Smoke Implemented
+
+Decision:
+
+```text
+Implement the exact `12AG` four-record A/B/A/B interleaved two-key
+synthetic/local policy-update trace smoke and advance to code review.
+```
+
+Rationale and evidence:
+
+- The task had zero remaining approval gates and fixed three exact source/test
+  files plus direct governance synchronization.
+- The implementation reuses the reviewed single-step helper for all four
+  updates and adds no duplicate TD formula.
+- Eleven trace tests plus 68 previously approved tests pass; compile and diff
+  checks pass.
+
+Consequences:
+
+- The fixed trace now provides executable independent two-key continuity smoke
+  evidence without becoming a variable batch, replay buffer or training loop.
+- The next task is one exact implementation review against `12AG`.
+- No environment, self-play, model, production training/evaluation, real data,
+  strength claim, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Implementation complete; exact code review is current next.
+
 ## 2026-07-18 — DR-0147 — Two-Step Acceptance And Interleaved Trace Approval
 
 Decision:

@@ -27,9 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the exact minimal P8
-synthetic/local four-record interleaved policy-update trace smoke approved by
-`12AG`:
+Current active stage is review of the exact minimal P8 synthetic/local
+four-record interleaved policy-update trace smoke implemented under `12AG`:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -148,8 +147,11 @@ records `A. Review can close`, reports no blocker and leaves production code
 and tests unchanged. `12AG` accepts that exact scope as current-scope complete
 and directly approves a fixed four-record A/B/A/B trace over two distinct
 state-action keys, with exact per-key continuity and reuse of the reviewed
-single-step helper. Zero mandatory gates remain before that code, which is now
-first in `10_NEXT`; another sibling proposal or boundary is forbidden. Broad P8 entry, production
+single-step helper. That implementation now exists in the three approved
+source/test files, delegates all four calculations to the base helper and
+passes 11 focused trace tests plus 68 approved regressions. The first
+`10_NEXT` item is one exact code review; another sibling proposal or boundary
+is forbidden. Broad P8 entry, production
 training/evaluation, self-play, model/artifact use, real data, strength claims
 and P9-P12 remain unapproved.
 
@@ -743,8 +745,10 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Role split:
 
-- Web ChatGPT Pro: solution design, research, review and decision support.
-- Local Codex App: code, tests and documentation landing.
+- Local Codex App: continuous task execution, code, tests, review,
+  documentation, commit and push.
+- Web ChatGPT Pro: optional independent milestone review only; it is not a
+  required workflow hop and does not generate mandatory next prompts.
 - Git + docs: only source of truth.
 
 ## Algorithm selection stance

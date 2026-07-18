@@ -13,11 +13,11 @@
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
 |---|---|---|---|---|---|
-| Fixed trace silently becomes a generic batch, epoch or replay buffer. | Governance / Scope | High | Medium | `12AG` permits exactly four A/B/A/B records and no variable input length, dataset, persistence or replay API. | Open |
-| Interleaving corrupts continuity between independent state-action keys. | Engineering / Correctness | High | Medium | Require exact A/B/A/B identity and separately compare steps 3/1 and 4/2 updated/current values. | Open |
-| A duplicate formula diverges from the reviewed single-step helper. | Engineering / Correctness | High | Medium | Both keys and all four steps must delegate to `apply_synthetic_policy_update_smoke`; formula duplication is forbidden and tested. | Open |
+| Fixed trace silently becomes a generic batch, epoch or replay buffer. | Governance / Scope | High | Medium | Implementation accepts only an exact four-record tuple and exposes no variable input length, dataset, persistence or replay API. | Mitigated |
+| Interleaving corrupts continuity between independent state-action keys. | Engineering / Correctness | High | Medium | Focused tests verify exact A/B/A/B identity and separately reject steps 3/1 and 4/2 continuity mismatches. | Mitigated |
+| A duplicate formula diverges from the reviewed single-step helper. | Engineering / Correctness | High | Medium | All four calculations delegate to `apply_synthetic_policy_update_smoke`; focused tests verify four calls and absence of duplicated formulas. | Mitigated |
 | Trace smoke is overclaimed as training, replay or model evidence. | Evidence / Scope | High | High | Exact warnings and governance grade it as four-record synthetic/local numerical smoke only. | Open |
-| Another docs chain delays the approved trace. | Governance / Delivery | High | Medium | `12AG` records zero remaining gates and puts direct implementation first in `10_NEXT`. | Mitigated |
+| Another docs chain delays the approved trace. | Governance / Delivery | High | Medium | Direct implementation is complete; the next task is one exact code review, not another boundary/proposal chain. | Closed |
 
 ## 2026-07-18 — P8 two-step sequence implementation review risks
 

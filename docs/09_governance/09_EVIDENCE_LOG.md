@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 interleaved policy-update trace smoke implementation
+
+- Type: internal executable synthetic/local numerical smoke evidence.
+- Added only the `12AG`-approved trace module, package exports, focused tests
+  and direct governance synchronization.
+- The helper enforces exactly four A/B/A/B records over two independent keys
+  and delegates every calculation to the reviewed single-step helper.
+- Validation: 11 trace, 10 sequence, 12 base and 46 approved P6/P7 regression
+  tests passed; compile and diff checks passed.
+- Evidence grade: P8 synthetic/local four-record interleaved two-key numerical
+  policy-update trace smoke evidence only; implementation review remains next.
+  This is not environment, self-play, production training, model-strength,
+  Tenhou, stable-dan, LuckyJ, candidate-promotion or P9-P12 evidence.
+
 ### 2026-07-18 — P8 two-step acceptance and interleaved-trace approval
 
 - Type: internal current-scope acceptance / exact executable-task approval

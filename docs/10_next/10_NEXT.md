@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement exact minimal P8 synthetic/local four-record interleaved policy-update trace smoke only.
+- [ ] Review exact minimal P8 synthetic/local four-record interleaved policy-update trace smoke implementation.
 
 Current execution charter:
 
@@ -22,22 +22,24 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This implementation is directly approved by `12AG`; do not insert another
-  proposal, boundary, review or approval task.
-- Create/modify only `src/mjlabai/rl/__init__.py`,
-  `src/mjlabai/rl/synthetic_policy_update_trace_smoke.py`,
-  `tests/rl/test_synthetic_policy_update_trace_smoke.py` and direct
-  docs/governance synchronization.
-- Reuse the existing single-record helper for exactly four records in A/B/A/B
-  key order: two non-terminal first occurrences followed by two terminal
-  second occurrences with independent exact continuity per key.
-- Enforce the exact API, input, output, tests and stop conditions in `12AG`.
-- Do not add variable batches/epochs, fixture/data, replay buffer, path/CLI,
-  dependency, environment/gameplay, self-play, model/optimizer, production
-  training/evaluation, artifact, real/external/platform data, broad P8 or
-  P9-P12.
+- Review only the exact implementation in `src/mjlabai/rl/__init__.py`,
+  `src/mjlabai/rl/synthetic_policy_update_trace_smoke.py` and
+  `tests/rl/test_synthetic_policy_update_trace_smoke.py` against `12AG`.
+- Confirm exact tuple/type/length enforcement, pairwise-distinct IDs, shared
+  synthetic/local source, exact A/B/A/B key and terminal order, independent
+  continuity, four calls to the reviewed single-step helper, frozen output,
+  error chaining, public exports, warnings and forbidden-scope compliance.
+- Re-run the 11 trace tests, 10 sequence tests, 12 base tests and 46 approved
+  P6/P7 regressions. Do not modify production code or tests unless a genuine
+  blocker is found and recorded as one exact fix task.
+- Do not insert a sibling boundary/proposal, add variable batches/epochs,
+  fixture/data, replay buffer, path/CLI, dependency, environment/gameplay,
+  self-play, model/optimizer, production training/evaluation, artifact,
+  real/external/platform data, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `12AG`-approved four-record A/B/A/B interleaved two-key P8 synthetic/local policy-update trace smoke. Added `src/mjlabai/rl/synthetic_policy_update_trace_smoke.py`, exported its four approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_policy_update_trace_smoke.py`. The frozen helper accepts only an exact four-record tuple, validates pairwise-distinct IDs, one shared source, two distinct keys, non-terminal first occurrences, terminal second occurrences and independent exact continuity, and delegates all four numerical updates to the reviewed single-step helper. Eleven focused tests, 10 sequence tests, 12 base tests and 46 approved P6/P7 regressions all pass; compile and diff checks pass. No variable batch/epoch, fixture/data, replay buffer, environment, self-play, model/optimizer, production training/evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is synthetic/local numerical smoke evidence only, not model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 
 - [x] 2026-07-18 Accepted the exact `12AE` implementation closed by `12AF` as current-scope complete and directly approved the next executable task in `12AG`. The selected outcome is one deterministic standard-library four-record A/B/A/B interleaved two-key policy-update trace smoke that reuses the reviewed single-step helper, validates pairwise-distinct IDs, one shared synthetic/local source, two distinct state-action keys, non-terminal first occurrences, terminal second occurrences and exact independent continuity per key. `12AG` fixes the only approved source/test files, four-symbol API, input/order semantics, frozen output, 11 test categories, rollback, stop conditions and evidence grade; zero mandatory gates remain before code. No code, test, fixture/data, replay buffer, environment, self-play, model/optimizer, production training/evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added in this decision. The next task is direct implementation, not another docs gate.
 
