@@ -8,6 +8,19 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 two-policy interaction implementation review closure
+
+- Type: internal exact code-review closure evidence.
+- Added `12AX`; decision: `A. Review can close.`
+- Evidence: exact `12AW` file/API/participant/turn/alternation/helper/actor/non-
+  actor/identity/output/error/test and forbidden-scope compliance, 279 explicit
+  tests OK with two environment-gated skips, compile/diff checks and
+  independent two/four-turn probes.
+- No production code or test was modified and no blocker was found.
+- Evidence grade: P8 exact bounded synthetic/local two-policy interaction
+  review closure evidence only; not environment/game episode, production self-
+  play/evaluation, policy-quality, strength or P9-P12 evidence.
+
 ### 2026-07-18 — P8 bounded two-policy interaction implementation
 
 - Type: internal executable bounded multi-policy interaction smoke evidence.

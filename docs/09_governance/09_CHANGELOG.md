@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.88
+
+- Reviewed commit `b2e6ade` against the exact `12AW` approval in `12AX`.
+- Decision: `A. Review can close.` No blocker or code/test fix is required.
+- Confirmed participants, A/B turns, actor/non-actor continuity, helper reuse,
+  global IDs, bounded loop, frozen diagnostics, errors and forbidden scope.
+- Validation passed: 12 focused tests; full explicit repository run 279 OK
+  with two environment-gated skips; compile/diff and independent probes passed.
+- New `10_NEXT` first item must accept/reject this scope and resolve the
+  environment prerequisite; another synthetic interaction wrapper is banned.
+- No environment/episode/outcome, production self-play/evaluation, real data,
+  strength claim, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.87
 
 - Implemented the exact `12AW` bounded synthetic/local two-policy alternating

@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review exact bounded P8 synthetic/local two-policy alternating policy-improvement interaction smoke implementation.
+- [ ] Decide two-policy interaction current-scope acceptance and resolve the P8 environment prerequisite without another synthetic interaction wrapper.
 
 Current execution charter:
 
@@ -22,20 +22,23 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the exact `12AW` implementation commit against its files,
-  eight-symbol API, exact two participants, two/four A/B turns, frozen inputs/
-  outputs, reviewed helper reuse, actor/non-actor continuity, global IDs,
-  errors and tests.
-- Independently probe two/four-turn results, helper calls, independent policy
-  state, non-actor immutability, complete input non-mutation and forbidden
-  surface. Run twelve focused tests, all repository regressions, compile
-  checks and `git diff --check`.
-- Do not modify production code/tests unless a concrete blocker is proven.
-  Do not add another boundary/proposal or expand into a general environment,
-  game episode/outcome, replay, production self-play/evaluation, persistence,
-  real/external/platform data, strength claim, broad P8 or P9-P12 work.
+- Accept or reject only the exact `12AW` implementation review-closed in
+  `12AX`; do not re-review or modify its production code/tests.
+- Inspect existing P4 environment/interface contracts and implementation
+  status. Choose one outcome: directly approve one exact minimal unified
+  synthetic/local environment state-transition implementation with zero gates
+  before code, or defer P8 and activate the missing P4 prerequisite.
+- Fix exact stage ownership, files/API/input/output/tests and evidence grade if
+  implementation is approved. No proposal, sibling boundary or additional
+  review may intervene before that code.
+- Do not add another synthetic policy-interaction wrapper. Do not implement in
+  this decision or approve a general Mahjong engine, production self-play,
+  real/external/platform data, Tenhou integration, strength claim, broad P8 or
+  P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `b2e6ade` against the exact `12AW` approval in `12AX`. Decision: `A. Review can close.` Confirmed exact files/eight-symbol API, two frozen participants, two/four A/B turns, actor-only updates, independent policy continuity, non-actor equality, one reviewed helper call per turn, global candidate IDs, one bounded loop, frozen output, indexed chained errors, warnings and forbidden scope. Twelve focused tests and the full explicit 279-test repository run pass with two environment-gated skips; compile/diff checks and independent two/four-turn probes pass. No production code/test change or blocker was required. The next decision must accept/reject this scope and resolve the missing environment prerequisite by direct exact implementation approval or P8 deferment to P4; another synthetic interaction wrapper or docs chain is forbidden.
 
 - [x] 2026-07-18 Implemented the exact `12AW`-approved bounded P8 synthetic/local two-policy alternating interaction smoke. Added `src/mjlabai/rl/synthetic_two_policy_interaction_smoke.py`, exported its eight approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_two_policy_interaction_smoke.py`. The frozen deterministic helper accepts exactly two participants and exactly two or four A/B alternating turns, validates every candidate batch, calls the reviewed one-step helper once per turn, updates only the actor model, preserves each policy's independent continuity, records unchanged non-actor models and enforces global candidate-transition identity. Twelve focused tests pass; the full explicit repository run reports 279 tests OK with two environment-gated skips, and compile/diff checks plus independent two/four-turn probes pass. No general environment, game episode/outcome, replay, production self-play/evaluation, stochastic exploration, persistence/checkpoint, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is bounded synthetic/local two-policy interaction smoke evidence only, not self-play or model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 

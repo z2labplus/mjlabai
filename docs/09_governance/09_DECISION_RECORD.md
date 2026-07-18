@@ -14,6 +14,36 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0173 — Exact P8 Two-Policy Interaction Review Closure
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Rationale and evidence:
+
+- Commit `b2e6ade` conforms to every exact `12AW` file, API, participant,
+  turn, alternation, helper, continuity, identity, output and test rule.
+- All 279 explicit tests are OK with two environment-gated skips; compile/diff
+  checks and independent probes pass.
+- No correctness, scope, provenance, evidence or test blocker was found.
+
+Consequences:
+
+- Added `12AX` as the one exact implementation review.
+- Another synthetic interaction wrapper is forbidden. The next decision must
+  resolve the environment prerequisite through direct exact implementation
+  approval or P8 deferment to P4.
+- No environment, production self-play/evaluation, real data, strength claim,
+  broad P8 or P9-P12 approval follows.
+
+Status:
+
+Review closed; current-scope acceptance and environment-prerequisite decision
+is current next.
+
 ## 2026-07-18 — DR-0172 — Exact P8 Two-Policy Interaction Implemented
 
 Decision:

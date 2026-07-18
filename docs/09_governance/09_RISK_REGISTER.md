@@ -56,6 +56,15 @@
 | Passing interaction tests are mistaken for production self-play or strength evidence. | Evidence / Scope | High | High | Fixed result warnings and governance grade only bounded synthetic/local two-policy interaction smoke evidence. | Open |
 | A new documentation chain follows successful implementation. | Governance / Delivery | High | Medium | The next task is one exact code review, after which a material environment-facing outcome or scope decision is required. | Mitigated |
 
+## 2026-07-18 — P8 two-policy interaction implementation review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Review closure is mistaken for an environment, self-play or strength result. | Evidence / Scope | High | High | `12AX` grades only exact synthetic/local interaction review closure and explicitly denies those claims. | Open |
+| Successful review creates another synthetic interaction wrapper. | Governance / Delivery | High | High | `10_NEXT` forbids another wrapper and requires direct environment-prerequisite resolution. | Mitigated |
+| P8 keeps advancing while P4 environment ownership remains unresolved. | Architecture / Stage | High | High | Next decision must inspect P4 contracts and either approve exact P4-owned code or defer P8 to P4. | Open |
+| Narrow tests miss actor/non-actor lineage drift. | Engineering / Quality | Medium | Low | Review reruns 279 explicit tests plus independent two/four-turn lineage, helper, identity and non-mutation probes. | Mitigated |
+
 ## 2026-07-18 — P8 interleaved trace approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

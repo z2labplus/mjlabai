@@ -80,6 +80,7 @@ docs/12_technical_plan/12AT_P8_ONE_STEP_POLICY_IMPROVEMENT_IMPLEMENTATION_REVIEW
 docs/12_technical_plan/12AU_P8_ONE_STEP_ACCEPTANCE_AND_BOUNDED_POLICY_IMPROVEMENT_SEQUENCE_APPROVAL.md
 docs/12_technical_plan/12AV_P8_BOUNDED_POLICY_IMPROVEMENT_SEQUENCE_IMPLEMENTATION_REVIEW.md
 docs/12_technical_plan/12AW_P8_BOUNDED_SEQUENCE_ACCEPTANCE_AND_TWO_POLICY_INTERACTION_APPROVAL.md
+docs/12_technical_plan/12AX_P8_TWO_POLICY_INTERACTION_IMPLEMENTATION_REVIEW.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -547,6 +548,14 @@ synthetic/local interaction. It fixes participants, turns, helper reuse,
 independent policy-state continuity, global identity, output and tests with
 zero gates before code. It is task-approval evidence only, not an environment,
 production self-play, policy-quality, strength or P9-P12 evidence.
+
+`docs/12_technical_plan/12AX_P8_TWO_POLICY_INTERACTION_IMPLEMENTATION_REVIEW.md`
+reviews commit `b2e6ade`, records `A. Review can close`, confirms exact two-
+policy A/B alternation, reviewed helper reuse, independent actor/non-actor
+state, global identity, frozen output and 279 explicit tests. It forbids
+another interaction wrapper and requires the next decision to resolve the
+missing environment prerequisite. It is synthetic/local interaction review
+evidence only, not environment/self-play, strength or P9-P12 evidence.
 
 ## Supervised-policy files
 
