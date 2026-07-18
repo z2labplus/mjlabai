@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is current-scope acceptance and next exact executable P8
-task decision after the minimal policy-update smoke review closed:
+Current active stage is direct implementation of the exact minimal P8
+synthetic/local two-step policy-update sequence smoke approved by `12AE`:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -135,9 +135,12 @@ records `B. Review cannot close because blockers exist`: finite but non-float-
 representable `Real` input leaked raw `OverflowError`. The exact source/test
 fix now normalizes it to `SyntheticPolicyUpdateSmokeError`, adds regression
 coverage and passes 58 tests. The same `12AD` record now records `A. Review can
-close after blocker fix.` The next first task decides current-scope acceptance
-and one exactly bounded next executable P8 outcome without another boundary
-chain. Broad P8 entry, production
+close after blocker fix.` `12AE` accepts that exact single-record smoke as
+current-scope complete and directly approves one deterministic two-step
+chained synthetic/local update sequence. The approved task reuses the reviewed
+single-step helper, has zero remaining mandatory gates before code and is now
+first in `10_NEXT`; another proposal, boundary or approval task may not
+precede it. Broad P8 entry, production
 training/evaluation, self-play, model/artifact use, real data, strength claims
 and P9-P12 remain unapproved.
 

@@ -28,7 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 current-scope acceptance and next exact executable-task decision.
+P8 exact minimal synthetic/local two-step policy-update sequence smoke
+implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
@@ -125,8 +126,11 @@ The exact implementation exists in the three `12AC`-approved files and passes
 11 focused tests plus 46 approved P6/P7 regression tests. `12AD` reviews it
 and finds one raw `OverflowError` normalization blocker. The exact source/test
 fix now passes 58 tests; `12AD` records `A. Review can close after blocker
-fix.` The next first task is current-scope acceptance and one exact executable-
-task decision. Broad
+fix.` `12AE` accepts the exact single-record smoke as current-scope complete
+and directly approves one deterministic two-step chained synthetic/local
+sequence smoke that reuses the reviewed helper. Zero mandatory gates remain
+before that exact code task, which is now first in `10_NEXT`; no sibling
+proposal or boundary may precede it. Broad
 P8, production training/evaluation, self-play, model/artifact use, real data,
 strength claims and P9-P12 remain unapproved.
 
@@ -621,7 +625,11 @@ reviewed in `12AB`; review can close with no genuine blocker.
 P8 exact minimal synthetic/local policy-update smoke = implemented in the
 three `12AC`-approved source/test files; the `12AD` numeric-conversion blocker
 fix is implemented, 58 tests pass and `12AD` review is closed.
-Next = decide current-scope acceptance and exactly bound one next executable P8 task; no sibling boundary chain.
+P8 exact single-record policy-update smoke = accepted as current-scope complete
+in `12AE`.
+P8 exact two-step chained policy-update sequence smoke = directly approved in
+`12AE`; zero gates remain before code.
+Next = implement the exact `12AE` task; no sibling boundary chain.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -755,7 +763,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Decide current-scope acceptance and next exact executable P8 task after policy-update smoke review closure.
+Implement exact minimal P8 synthetic/local two-step policy-update sequence smoke only.
 ```
 
 `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`

@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 single-record smoke acceptance and two-step task approval
+
+- Type: internal current-scope acceptance / exact executable-task approval
+  evidence.
+- Decision: the `12AC`/`12AD` single-record smoke is `ACCEPTED as
+  current-scope complete` for its exact synthetic/local numerical scope.
+- `12AE` directly approves one exact two-step chained smoke that reuses the
+  existing helper; no additional docs gate remains before code.
+- Basis: 12 focused and 46 approved regression tests pass; implementation
+  review is closed and no genuine blocker remains.
+- Evidence grade: P8 exact policy-update smoke acceptance and next-task
+  approval evidence only; not model-strength, Tenhou, stable-dan, LuckyJ,
+  candidate-promotion or P9-P12 evidence.
+
 ### 2026-07-18 — P8 policy-update implementation re-review after blocker fix
 
 - Type: internal code-review closure evidence.

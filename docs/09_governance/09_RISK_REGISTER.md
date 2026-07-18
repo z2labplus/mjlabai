@@ -9,6 +9,16 @@
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
 
+## 2026-07-18 — P8 two-step policy-update sequence approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Two-step smoke expands into variable batches, episodes or an environment. | Governance / Scope | High | Medium | `12AE` permits exactly two records, exact ordering and exact files; stop on any third step, variable batch or gameplay state. | Open |
+| The base update formula is duplicated and later diverges. | Engineering / Correctness | High | Medium | The approved sequence helper must call the existing reviewed single-step helper and may not reimplement its formula. | Open |
+| Broken value continuity is silently accepted. | Engineering / Correctness | High | Low | Require exact equality between the first updated value and second current value, with focused rejection coverage. | Open |
+| The chained smoke is overclaimed as self-play, training or model evidence. | Evidence / Research | High | High | Result warnings and governance classify it as synthetic/local two-step numerical smoke only. | Open |
+| Another docs gate delays approved code despite no blocker. | Governance / Delivery | High | Medium | `12AE` records zero remaining gates and `10_NEXT` moves directly to implementation. | Mitigated |
+
 ## 2026-07-18 — P8 minimal policy-update smoke implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

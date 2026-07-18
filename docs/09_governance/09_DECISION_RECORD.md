@@ -14,6 +14,39 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0144 — Single-Record P8 Acceptance And Two-Step Task Approval
+
+Decision:
+
+```text
+ACCEPTED as current-scope complete.
+Approve direct implementation of one exact two-step chained synthetic/local
+policy-update sequence smoke.
+```
+
+Rationale and evidence:
+
+- `12AD` closed the exact implementation review after the conversion blocker
+  fix, with 12 focused plus 46 approved regression tests passing.
+- The single-record smoke is complete for its exact numerical scope.
+- A two-step chain is the smallest material progression that tests ordered
+  update continuity while reusing the reviewed formula and avoiding an
+  environment, episode, self-play, model or training loop.
+- Anti-overdocumentation governance requires direct execution because no
+  genuine blocker remains.
+
+Consequences:
+
+- Added `12AE` with exact files, API, tuple inputs, invariants, output, tests,
+  rollback, stop conditions and evidence grade.
+- Zero mandatory gates remain before the exact two-step implementation.
+- No broad P8, production training/evaluation, self-play, real data,
+  model-strength or P9-P12 approval follows.
+
+Status:
+
+Single-record scope accepted; exact two-step implementation is current next.
+
 ## 2026-07-18 — DR-0143 — Minimal P8 Policy-Update Re-review Closure
 
 Decision:

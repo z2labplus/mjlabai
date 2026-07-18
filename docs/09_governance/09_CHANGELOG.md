@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.59
+
+- Accepted the exact review-closed single-record P8 policy-update smoke as
+  current-scope complete in `12AE`.
+- Directly approved one deterministic two-step chained synthetic/local update
+  sequence as the next executable task, with exact files, API, tuple input,
+  continuity, output, tests, rollback and stop conditions.
+- Set the remaining mandatory gate count before that exact code task to zero;
+  no sibling proposal or boundary may precede it.
+- New `10_NEXT` first item is direct implementation of that two-step smoke.
+- No code, test, fixture/data, environment, self-play, model, production
+  training/evaluation, real/external/platform data, broad P8 or P9-P12 work was
+  added in this decision.
+
 ## 2026-07-18 - v3.58
 
 - Re-ran the P8 minimal policy-update implementation review in existing `12AD`.
