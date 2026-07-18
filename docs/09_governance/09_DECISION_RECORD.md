@@ -14,6 +14,56 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0139 — P8 Model / Artifact Provenance-Manifest Boundary Review
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Context:
+
+- `12AA` defined the P8 model/artifact provenance-manifest boundary.
+- The current task was its docs-only review.
+- P8 had exceeded the anti-overdocumentation threshold.
+
+Rationale:
+
+- Identity, components, lineage, lifecycle, verification, compatibility,
+  eligibility, reproducibility, PM-E1 through PM-E15 and stop conditions are
+  sufficient for this boundary.
+- No genuine blocker exists for a deterministic in-memory synthetic/local
+  policy-update smoke.
+- Deferred hash, serialization, storage, signature, package and external-
+  artifact choices are not required by that smoke.
+- Another sibling boundary would violate the required convergence rule.
+
+Consequences:
+
+- Added `docs/12_technical_plan/12AB_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`.
+- `12AA` was not modified.
+- The executable outcome is one exact minimal P8 synthetic/local policy-update
+  smoke implementation.
+- One mandatory exact approval decision remains before code.
+- The next task is `Decide whether to approve an exact minimal P8
+  synthetic/local policy-update smoke implementation.`
+- Broad P8, training/evaluation, self-play/RL/league, real data, artifact/model
+  use, strength claims and P9-P12 remain unapproved.
+
+Linked docs:
+
+- `docs/12_technical_plan/12AA_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`
+- `docs/12_technical_plan/12AB_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- `AGENTS.md`
+- `docs/10_next/10_NEXT.md`
+- `docs/00_HANDOFF.md`
+- `docs/09_governance/09_STAGE_TASK_CONTRACT.md`
+
+Status:
+
+Boundary review complete; exact minimal implementation approval decision next.
+
 ## 2026-07-15 — DR-0138 — P8 Model / Artifact Provenance Manifest Boundary Definition
 
 Decision:
@@ -63,7 +113,7 @@ Linked docs:
 
 Status:
 
-Provenance-manifest boundary definition complete; docs-only review pending.
+Provenance-manifest boundary definition complete; reviewed in DR-0139.
 
 ## 2026-07-15 — DR-0137 — P8 Training / Evaluation Model-Use Boundary Review
 

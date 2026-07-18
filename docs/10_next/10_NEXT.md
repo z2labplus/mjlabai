@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review P8 model / artifact provenance manifest boundary before any implementation.
+- [ ] Decide whether to approve an exact minimal P8 synthetic/local policy-update smoke implementation.
 
 Current execution charter:
 
@@ -22,61 +22,39 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This is a docs-only review gate for
-  `docs/12_technical_plan/12AA_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`.
-- Review only candidate model/artifact provenance-manifest vocabulary,
-  identity/content/lineage, components, lifecycle, freeze/thaw/revocation,
-  verification/attestation, compatibility, eligibility, reproducibility,
-  PM-E1 through PM-E15 and stop-condition boundaries.
-- Do not modify `12AA` unless a separately authorized blocker-resolution task
-  later requires it.
-- Do not create a manifest schema, record class, fixture, loader, validator,
-  model, checkpoint, weight, snapshot or artifact.
-- Do not approve P8 entry.
-- Do not approve P8 implementation.
-- Do not define or generate a P8 implementation prompt.
-- Do not prepare an implementation approval decision.
-- Do not implement model-output integration.
-- Do not load a model, checkpoint or weight.
-- Do not execute inference or action generation.
-- Do not implement a model-output schema, adapter, parser, reader, ingestion
-  path or CLI.
-- Do not execute self-play.
-- Do not execute reinforcement learning.
-- Do not implement a reward or objective.
-- Do not select an RL algorithm for execution.
-- Do not implement an environment, simulator or runner.
-- Do not execute transitions, episodes or matches.
-- Do not implement any P8-P12 task.
-- Keep P9-P12 unapproved.
-- Do not add implementation.
-- Do not add or modify code.
-- Do not add or modify tests.
-- Do not add fixtures or data files.
-- Do not approve source approval, source ingestion, broad parser / reader /
-  ingestion, actual feature extraction, actual label generation, supervised
-  dataset construction, split creation, leakage-test implementation,
-  training-data approval, training-run approval, training, model architecture /
-  trainer, evaluation implementation, metric implementation, evaluation
-  runner, benchmark harness, model-output integration, real data, self-play,
-  league or reinforcement-learning execution.
-- Do not run training, tuning, self-play, league, real Tenhou, real haifu,
-  external-log, platform-data, model-output, Akochan `system.exe`, `libai.so`,
-  third-party binary or unknown model artifact commands.
+- This is one docs-only exact approval decision after the reviewed `12AA` / `12AB`
+  boundary pair. It is not implementation.
+- Decide only whether to approve one deterministic, CPU-only, standard-library
+  P8 synthetic/local policy-update smoke over in-memory project-authored records.
+- The decision must name the exact future behavior, exact files, inputs,
+  outputs, invariants, tests, evidence grade, rollback and stop conditions.
+- Candidate future file scope must remain narrow, preferably limited to one
+  `src/mjlabai/rl` module, one `tests/rl` module and direct package/governance
+  synchronization required by the implementation.
+- If approved, set the next first task directly to the exact implementation.
+  Do not create another proposal, sibling boundary or review document first.
+- If rejected or deferred, record one genuine blocker and whether a human
+  decision, stage deferment or closure is required.
+- Do not create or modify implementation, tests, fixtures or data in this
+  approval-decision task.
+- Do not approve broad P8 entry, production training, tuning, self-play,
+  league, matches, evaluation, inference or model-output integration.
+- Do not approve real Tenhou/haifu, external logs, platform data, accounts,
+  source ingestion, datasets, broad parser/reader/file ingestion or CLI.
+- Do not approve a model, checkpoint, weight, snapshot, persisted artifact,
+  third-party binary/service, GPU/distributed work or new framework dependency.
+- Do not run training, tuning, self-play, league, Tenhou, model-output,
+  `system.exe`, `libai.so` or unknown-artifact commands.
 - Do not create platform automation, scraping, evasion or account tooling.
-- Do not download or use unknown model weights, `*.pth`, `*.pt`, `checkpoint`
-  or `snapshot` files.
-- Do not vendor or copy third-party source, binaries, params or artifacts into
-  this repository.
-- This review must report the concrete executable outcome it can unlock, any
-  genuine blocker, and the remaining mandatory gate count.
-- If no genuine blocker exists, do not select another sibling boundary task.
-  Select an exact minimal executable task, its exact approval decision, stage
-  closure/deferment or a human decision gate.
-- Because P8 has already exceeded four consecutive docs-only tasks, selecting
-  another docs-only planning boundary requires explicit user approval.
+- Keep P9-P12 unapproved and make no model-strength, Tenhou ranked, stable-dan,
+  LuckyJ comparison or candidate-promotion claim.
+- This decision is the one remaining mandatory gate before the exact minimal
+  executable smoke task. Another docs-only planning boundary is forbidden
+  unless a genuine blocker is recorded and the user explicitly approves it.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed the P8 model / artifact provenance manifest boundary before any implementation: added `docs/12_technical_plan/12AB_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`, reviewed `12AA` scope, authority, artifact classes, three-layer identity, components, creation/derivation and acyclic lineage, lifecycle, freeze/thaw/revocation, verification/attestation, compatibility, locator/storage separation, eligibility, reproducibility, candidate fields, PM-E1 through PM-E15 and stop conditions. Decision: `A. Review can close.` No genuine blocker was found; one repeated sentence is non-blocking and `12AA` was not modified. Anti-overdocumentation exit: the concrete executable outcome is an exact minimal P8 synthetic/local policy-update smoke, one exact approval decision remains, and no sibling boundary may be added without a genuine blocker and explicit user approval. No code, tests, fixtures, data, manifest/schema/loader/artifact, model/checkpoint/weight use, training/evaluation/inference, self-play/RL/league, source/real-data work, strength claim or P9-P12 work was added or approved. The next task is `Decide whether to approve an exact minimal P8 synthetic/local policy-update smoke implementation.`
 
 - [x] 2026-07-15 Defined the P8 model / artifact provenance manifest boundary before any implementation: added `docs/12_technical_plan/12AA_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md`, defining scope, planning recap, non-approval baseline, provenance vocabulary, authority separation, ten unapproved candidate artifact classes, three-layer logical/content/manifest identity, component/bundle boundaries, creation/derivation provenance, acyclic lineage, lifecycle vocabulary, freeze/thaw, verification/attestation, compatibility/dependency binding, locator/storage separation, revocation/quarantine/supersession, training/evaluation use binding, artifact eligibility, reproducibility, source/privacy/license/security boundaries, candidate manifest fields, evidence boundaries, PM-E1 through PM-E15, stop conditions, candidate directions and deferred decisions. Planning decision: `P8 model / artifact provenance manifest boundary is defined before any implementation.` Hash/canonicalization, serialization/storage, signature/attestation authority, package/component composition, retention/revocation implementation and third-party/remote artifact use remain deferred. No human decision was required. No manifest/schema/record/database/fixture/loader/validator/hasher/signer/verifier, model/checkpoint/snapshot/weight/artifact creation or loading, training/tuning/evaluation/inference, model-output integration, self-play/RL/league, source/real-data work, strength claim or P9-P12 work was added or approved. The next task is `Review P8 model / artifact provenance manifest boundary before any implementation.`
 

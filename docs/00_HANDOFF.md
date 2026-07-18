@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is P8 model / artifact provenance manifest boundary
-review before any implementation:
+Current active stage is the exact approval decision for a minimal P8
+synthetic/local policy-update smoke implementation:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -122,17 +122,16 @@ lineage, lifecycle, freeze/thaw/revocation, verification/attestation,
 compatibility, eligibility, reproducibility, candidate fields, PM-E1 through
 PM-E15 and stop conditions. Hash/canonicalization, serialization/storage,
 signature/attestation authority, package composition, retention/revocation
-implementation and external artifact use remain deferred. No human decision
-was needed. The next first task is `Review P8 model / artifact provenance
-manifest boundary before any implementation.` This task remains docs-only and
-does not approve P8-P12 entry, P8
-implementation, implementation prompts, broader P7 implementation, source
-approval/ingestion, feature/label/dataset work, training data/run, training,
-evaluation, model loading/inference/action generation, model-output
-integration, model-strength evidence, real data, self-play, league, RL,
-raw-outcome schema, environment/simulator/runner implementation, or a
-manifest/schema/record/database/loader/validator/artifact. P9-P12 remain
-unapproved.
+implementation and external artifact use remain deferred. `12AB` reviews
+`12AA`, records `A. Review can close`, finds no genuine blocker and leaves
+`12AA` unchanged. The definition/review pair is now complete. The concrete
+executable outcome is one exact deterministic CPU-only synthetic/local
+policy-update smoke; one mandatory exact approval decision remains before
+code. The next first task is `Decide whether to approve an exact minimal P8
+synthetic/local policy-update smoke implementation.` The decision is docs-only
+and may authorize only one exact future task. Broad P8 entry, production
+training/evaluation, self-play, model/artifact use, real data, strength claims
+and P9-P12 remain unapproved.
 
 Anti-overdocumentation governance is now mandatory. A boundary may use one
 definition plus one review by default; more than four consecutive docs-only
@@ -141,8 +140,9 @@ approval. Every docs-only task must name the executable outcome, real blocker,
 remaining mandatory gate count and exit criterion. A successful review with no
 genuine blocker must move toward an exact minimal executable/approval task,
 stage closure/deferment or a human decision gate rather than another sibling
-planning document. P8 has already exceeded this threshold, so the current
-`12AA` review must apply the exit rule.
+planning document. P8 has exceeded this threshold; `12AB` applies the exit
+rule and forbids another sibling boundary without a genuine blocker and
+explicit user approval.
 
 P0 / P1 / P2 are basically established.
 P3 baseline reproducibility audit produced current Mortal/Akochan funnel evidence.

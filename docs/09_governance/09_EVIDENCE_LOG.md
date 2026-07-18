@@ -8,6 +8,32 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 model / artifact provenance-manifest boundary review
+
+- Type: internal documentation / P8 provenance-manifest boundary review
+  evidence.
+- Stage: exact minimal P8 synthetic/local policy-update smoke approval decision.
+- Added document:
+  - `docs/12_technical_plan/12AB_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+- Review decision: `A. Review can close.`
+- Finding: no genuine blocker; `12AA` is sufficient and was not modified.
+- Anti-overdocumentation exit:
+  - executable outcome: exact minimal deterministic CPU-only synthetic/local
+    policy-update smoke.
+  - remaining mandatory gate count: one exact approval decision.
+  - another sibling boundary is prohibited without a genuine blocker and
+    explicit user approval.
+- Selected next task:
+  - `Decide whether to approve an exact minimal P8 synthetic/local policy-update smoke implementation.`
+- Validation:
+  - `git diff --check`: passed.
+  - 46 existing supervised/data unit tests: passed.
+- Evidence grade:
+  - P8 model / artifact provenance-manifest boundary review evidence only.
+- Not evidence of implementation, artifact/model use, training, evaluation,
+  self-play/RL/league, real data, model strength, Tenhou/stable-dan/LuckyJ,
+  promotion or P9-P12 approval.
+
 ### 2026-07-15 — P8 model / artifact provenance manifest boundary definition
 
 - Type: internal documentation / P8 model-artifact provenance-manifest

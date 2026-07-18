@@ -58,6 +58,7 @@ docs/12_technical_plan/12X_P8_MODEL_OUTPUT_INTERFACE_DEPENDENCY_BOUNDARY_REVIEW_
 docs/12_technical_plan/12Y_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12Z_P8_TRAINING_EVALUATION_MODEL_USE_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 docs/12_technical_plan/12AA_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_BEFORE_ANY_IMPLEMENTATION.md
+docs/12_technical_plan/12AB_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -349,6 +350,15 @@ PM-E15 and stop conditions; and defers every hash, serialization, storage,
 signature, package and external-artifact choice. It is boundary-definition
 evidence only, not a manifest/schema/loader/artifact, P8 entry/implementation,
 model use, training/evaluation, strength evidence or P9-P12 approval.
+
+`docs/12_technical_plan/12AB_P8_MODEL_ARTIFACT_PROVENANCE_MANIFEST_BOUNDARY_REVIEW_BEFORE_ANY_IMPLEMENTATION.md`
+reviews `12AA` and records `A. Review can close.` It finds no genuine blocker,
+keeps deferred format/hash/storage/signature choices non-blocking, leaves
+`12AA` unchanged and applies the anti-overdocumentation exit rule. The next
+task is one exact approval decision for a minimal P8 synthetic/local policy-
+update smoke; one mandatory gate remains before code. This is boundary-review
+evidence only, not P8 implementation, training, self-play, artifact use,
+strength evidence or P9-P12 approval.
 
 ## Supervised-policy files
 

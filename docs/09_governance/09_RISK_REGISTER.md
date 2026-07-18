@@ -9,6 +9,19 @@
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
 
+## 2026-07-18 — P8 provenance-manifest boundary review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| `12AB` review closure is mistaken for broad P8 or implementation approval. | Governance / Stage Control | High | Medium | Classify `12AB` as review evidence only; the next task is one separate exact approval decision. | Open |
+| Deferred hash, format, storage, signature or package choices are used to justify another planning chain. | Governance / Delivery | High | High | Treat them as non-blocking for an in-memory smoke; prohibit another sibling boundary without a genuine blocker and explicit user approval. | Mitigated |
+| The exact approval decision expands a smoke into production training, self-play or model integration. | Governance / Execution | High | Medium | Require deterministic CPU-only standard-library behavior, exact files/tests and explicit forbidden scope. | Open |
+| Synthetic policy-update output is overclaimed as learning quality or model strength. | Evidence / Research | High | High | Grade future output as engineering smoke evidence only; forbid Tenhou, stable-dan, LuckyJ and promotion claims. | Open |
+| Real data, external artifacts or framework dependencies enter through the minimal task. | Compliance / Scope | High | Medium | Permit only in-memory project-authored synthetic/local records; forbid ingestion, weights, third-party binaries/services and broad dependencies. | Open |
+
+The review found no blocker that requires another boundary document. One
+exact approval decision remains before minimal executable code.
+
 ## 2026-07-15 — P8 model / artifact provenance manifest boundary definition risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
