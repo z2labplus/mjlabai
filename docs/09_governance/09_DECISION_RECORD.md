@@ -14,6 +14,37 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0153 — Fixed Policy-Table Acceptance And Two-Pass Approval
+
+Decision:
+
+```text
+ACCEPTED as current-scope complete.
+Approve direct implementation of one exact fixed two-pass synthetic/local
+policy-table update sequence smoke.
+```
+
+Rationale and evidence:
+
+- `12AJ` closed the exact fixed-table review with no blocker and 90 passing
+  tests.
+- Two fixed chained table transitions provide the smallest useful repeated
+  parameter-state update without creating a variable trainer.
+- Reusing the table helper twice avoids duplicated formula/trace/table logic.
+- Anti-overdocumentation governance requires direct execution now.
+
+Consequences:
+
+- Added `12AK` with exact files, API, input, semantics, output, tests,
+  rollback, stop conditions and evidence grade.
+- Zero mandatory gates remain before the exact two-pass implementation.
+- No broad P8, environment, self-play, model, production training/evaluation,
+  real data, strength or P9-P12 approval follows.
+
+Status:
+
+Fixed table accepted; exact two-pass implementation is current next.
+
 ## 2026-07-18 — DR-0152 — Exact P8 Fixed Policy-Table Review Closure
 
 Decision:

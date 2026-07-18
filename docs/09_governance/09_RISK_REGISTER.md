@@ -29,6 +29,16 @@
 | Table smoke is overclaimed as a model, checkpoint or training result. | Evidence / Scope | High | High | Fixed warnings and evidence grade explicitly exclude persistent policy/model/checkpoint, training and strength claims. | Open |
 | Another docs chain delays the approved table implementation. | Governance / Delivery | High | Medium | Direct implementation is complete; the next task is one exact code review, not another boundary/proposal chain. | Closed |
 
+## 2026-07-18 — P8 fixed two-pass table sequence approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Fixed two-pass sequence silently becomes a variable epoch or trainer. | Governance / Scope | High | Medium | `12AK` permits exactly two explicit helper calls and forbids loops, third pass, dynamic pass count and early stopping. | Open |
+| Pass 2 does not start from pass 1 final table state. | Engineering / Correctness | High | Medium | Pass 1 final entries must be passed directly as pass 2 initial entries and both keys are covered by focused continuity tests. | Open |
+| Duplicate records across passes hide replay-like behavior. | Engineering / Correctness | Medium | Medium | Require pairwise-distinct IDs across both validated four-record traces. | Open |
+| Sequence smoke is overclaimed as a trainer or production training result. | Evidence / Scope | High | High | Fixed warnings and evidence grade explicitly exclude variable epoch/trainer, production training and strength claims. | Open |
+| Another docs chain delays the approved sequence. | Governance / Delivery | High | Medium | `12AK` records zero remaining gates and puts direct implementation first in `10_NEXT`. | Mitigated |
+
 ## 2026-07-18 — P8 two-step sequence implementation review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

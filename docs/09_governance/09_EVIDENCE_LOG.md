@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 fixed-table acceptance and two-pass approval
+
+- Type: internal current-scope acceptance / exact executable-task approval
+  evidence.
+- Decision: the `12AI` implementation closed by `12AJ` is `ACCEPTED as
+  current-scope complete` for its exact synthetic/local table-state scope.
+- `12AK` directly approves one fixed two-pass table-update sequence smoke; no
+  docs gate remains before code.
+- Basis: 90 approved tests, compile/diff checks and independent probes pass;
+  `12AJ` found no blocker.
+- Evidence grade: P8 exact fixed-table acceptance and two-pass task approval
+  evidence only; not environment, self-play, production training,
+  model-strength, Tenhou, stable-dan, LuckyJ, candidate-promotion or P9-P12
+  evidence.
+
 ### 2026-07-18 — P8 fixed policy-table implementation review closure
 
 - Type: internal exact code-review closure evidence.

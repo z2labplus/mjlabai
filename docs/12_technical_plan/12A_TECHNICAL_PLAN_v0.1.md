@@ -28,8 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 exact fixed policy-value table update current-scope acceptance and direct
-next-executable-task decision.
+P8 exact minimal synthetic/local fixed two-pass policy-table update sequence
+smoke implementation.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
@@ -147,7 +147,9 @@ that code. The exact implementation now exists in the approved module,
 package export and test files; 11 table tests plus 79 approved regressions
 pass. `12AJ` completes the exact implementation review, records `A. Review can
 close`, confirms 90 tests plus independent probes and finds no blocker.
-Current-scope acceptance and direct next-task approval is now first.
+`12AK` accepts the exact fixed-table scope and directly approves one fixed
+two-pass table-update sequence that calls the reviewed table helper twice.
+Zero gates remain before that code, now first in `10_NEXT`.
 Broad
 P8, production training/evaluation, self-play, model/artifact use, real data,
 strength claims and P9-P12 remain unapproved.
@@ -653,7 +655,9 @@ P8 exact four-record interleaved trace implementation review = closed in `12AH`;
 P8 exact interleaved trace scope = accepted as current-scope complete in `12AI`.
 P8 exact fixed two-key policy-value table update smoke = implemented in the three `12AI`-approved files; 90 tests pass.
 P8 exact fixed policy-table implementation review = closed in `12AJ`; no blocker.
-Next = decide current-scope acceptance and directly approve one exact executable P8 task if accepted.
+P8 exact fixed policy-table scope = accepted as current-scope complete in `12AK`.
+P8 exact fixed two-pass policy-table update sequence = directly approved in `12AK`; zero gates remain before code.
+Next = implement the exact `12AK` sequence task; no sibling boundary chain.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -787,7 +791,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Decide current-scope acceptance and directly approve next exact executable P8 task after fixed policy-table review closure.
+Implement exact minimal P8 synthetic/local fixed two-pass policy-table update sequence smoke only.
 ```
 
 `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`

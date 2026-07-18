@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.68
+
+- Accepted the exact `12AI`/`12AJ` fixed table update as current-scope complete
+  in `12AK`.
+- Directly approved one fixed two-pass policy-table update sequence smoke as
+  the next executable task.
+- Fixed exact files, four-symbol API, two-trace input, pass continuity, eight
+  distinct IDs, frozen output, tests, rollback and evidence grade.
+- Set the remaining mandatory gate count before code to zero; new `10_NEXT`
+  first item is direct sequence implementation.
+- No code, test, variable epoch/trainer, persistence, environment, self-play,
+  model, production training/evaluation, real/external/platform data, broad P8
+  or P9-P12 work was added in this decision.
+
 ## 2026-07-18 - v3.67
 
 - Reviewed commit `27a1ad9` against the exact `12AI` approval in `12AJ`.
