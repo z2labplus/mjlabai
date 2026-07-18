@@ -2,15 +2,13 @@
 
 ## Current stage
 
-P8 exact code review of the implemented `04AB` frozen reviewed-imitation-policy
-all-project outcome census on seeds `0..31`. The two-file implementation keeps
-the policy frozen, samples legal actions at all seats, retains transitions/raw
-returns/scores/trace digest for every seed and pins nonzero seeds
-`(1,3,5,7,11,24,25,26,27,31)`. Existing training seeds are 5/5 nonzero versus
-census 10/32. The review may fix only a genuine blocker; if it closes, it must
-directly approve or defer one material unbiased-seed diagnostic. No replacement
-split selection during review, policy/value update, algorithm selection,
-scale-up or strength claim is allowed.
+P8 direct implementation of the `04AC`-approved categorical-MLP training-seed
+protocol comparison. It must compare exact outcome-selected
+`(1,3,5,7,11)` and contiguous `(0,1,2,3,4)` branches from identical reviewed
+imitation arrays, with five exact raw-return update attempts and fixed zero-
+update evaluation on `20..51`. Probe sums are `-501/-650/-501`; zero-return
+seeds `(0,2,4)` remain as no-op attempts. No third protocol, seed search,
+protocol selection, algorithm change, scale-up or strength claim is allowed.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -590,7 +588,7 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04AB` frozen-policy all-project outcome census implementation.
-Verify every seed and selection-bias summary, no-update/no-I/O behavior and
-focused/full evidence. If review closes, directly approve or defer one material
-unbiased-seed diagnostic; do not restart a sibling docs chain.
+Implement the exact `04AC` training-seed protocol comparison in its two
+approved files. Pin both branches, no-op zero-return attempts and fixed
+evaluation diagnostics; select no protocol and add no third tuple, algorithm
+change, persistence, real data or production path.

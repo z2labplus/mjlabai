@@ -333,6 +333,13 @@ It retains seeds `0..31`, pins complete deterministic records and reports
 without selecting a replacement split or performing an update. This is P8
 signal-sparsity/selection-bias diagnostic evidence only, not strength evidence.
 
+`docs/04_rl_selfplay/04AC_P8_FROZEN_POLICY_OUTCOME_CENSUS_IMPLEMENTATION_REVIEW.md`
+reviews commit `87ea0c3`, records `A. Review can close`, confirms the exact
+10/32 census versus 5/5 reference-training bias and directly approves one
+two-branch outcome-selected-versus-contiguous seed-protocol comparison. The
+probe pins `-501/-650/-501`; this is selection-bias diagnostic approval, not
+protocol selection, improvement or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

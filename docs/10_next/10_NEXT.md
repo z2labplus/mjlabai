@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact frozen MahJax categorical-MLP all-project outcome census implementation.
+- [ ] Implement the exact MahJax categorical-MLP training-seed protocol comparison smoke.
 
 Current execution charter:
 
@@ -22,21 +22,30 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the two exact `04AB`-approved census files and direct governance;
-  change code/tests only if a genuine blocker is found.
-- Verify exact seeds `0..31`, frozen reviewed imitation parameters, legal
-  all-project trajectories, zero updates and all pinned transitions, returns,
-  scores and SHA-256 trace digests.
-- Verify the complete zero/nonzero partition, census rate `10/32`, reference-
-  training rate `5/5`, parameter immutability and explicit selection-bias scope.
-- Run focused/full validation and independent source/result checks.
-- If review closes, directly approve or defer one material unbiased-training-
-  seed diagnostic; do not add another proposal/boundary/review chain.
-- No replacement split selection during review, policy/value update, optimizer,
-  critic, scale-up, persistence, real data, production self-play/evaluation,
-  strength claim or P9-P12.
+- Add only the exact `04AC`-approved source/test plus direct governance; do not
+  modify existing source/test logic or public APIs.
+- Compare exact outcome-selected seeds `(1,3,5,7,11)` with exact contiguous
+  seeds `(0,1,2,3,4)` from identical reviewed imitation parameters.
+- Use the reviewed actor-indexed raw-return update at `0.01` once per exact
+  trajectory; retain zero-return seeds `(0,2,4)` as exact no-op attempts.
+- Evaluate initial and both branches with zero updates on exact seeds `20..51`;
+  pin sums `-501/-650/-501`, counts and changed seeds.
+- Return frozen array-free diagnostics; select no protocol or model.
+- No third protocol/seed search, optimizer/estimator/critic/reward change,
+  persistence, real data, production self-play/evaluation, strength claim or
+  P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Reviewed commit `87ea0c3` against exact `04AB` approval in
+  `04AC`. Decision: `A. Review can close.` Confirmed exact seven-symbol API,
+  frozen parameters, exact 32 legal records/digests, zero updates, complete
+  10/32 partition and explicit 5/5 reference-training selection bias. Nine
+  focused and all 459 explicit tests pass with two skips. An independent exact
+  A/B probe records initial/selected/contiguous fixed sums `-501/-650/-501`;
+  contiguous zero-return seeds `(0,2,4)` are no-op updates. Directly approved
+  the exact two-protocol comparison code with zero gates. No protocol was
+  selected and no strength, real-data or P9-P12 work was added.
 
 - [x] 2026-07-19 Implemented the exact `04AB`-approved frozen reviewed-
   imitation-policy all-project outcome census in two new files. Exact seeds

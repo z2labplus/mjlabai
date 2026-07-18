@@ -91,7 +91,23 @@ partition, 10/32-vs-5/5 rates, parameter immutability and no-update/no-split
 warnings are now pinned in source/tests. The selection bias is demonstrated,
 not resolved; choosing an unbiased replacement protocol remains a separate
 reviewed task. Nine focused and all 459 explicit tests pass with two skips.
-One exact code review is next.
+The exact code review is now closed in `04AC`.
+
+Review status: `04AC` closes the census review with no blocker. A controlled
+probe confirms the selected tuple degrades the fixed diagnostic to `-650`
+while contiguous `(0..4)` remains at initial `-501`; this does not select the
+contiguous tuple. The next exact implementation compares both protocols and
+must expose zero-return no-op attempts, with no third protocol or search.
+
+## 2026-07-19 — P8 training-seed protocol comparison approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Contiguous seeds are mislabeled optimal because they avoid degradation. | Evidence / Selection | Critical | High | Return no selected protocol; warnings state A/B bias diagnosis only. | Open |
+| Zero-return rounds are silently dropped or replaced. | Research / Integrity | Critical | High | Exact `(0,1,2,3,4)` tuple; five attempts; pin zero deltas for `(0,2,4)`. | Open |
+| Branch differences arise from initialization or evaluation RNG. | ML / Comparison | Critical | Low | Clone identical arrays; use exact same fixed evaluation seeds/environment/rule RNG. | Open |
+| Comparison expands into seed search or algorithm tuning. | Governance / Scope | High | Medium | Exact two protocols only; prohibit third tuple, replacement, rate/estimator/critic changes. | Open |
+| Fixed `-501/-650/-501` is overclaimed as strength. | Evidence / Statistics | Critical | High | Classify as deterministic selection-bias diagnostic only. | Open |
 
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 

@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Frozen-policy census review and seed-protocol A/B probe
+
+- Type: exact code-review closure plus bounded training-seed selection-bias
+  comparison task-approval evidence.
+- `04AC` records `A. Review can close`; nine focused and all 459 explicit tests
+  pass with two skips plus compile/dependency/diff checks.
+- The exact census retains 32 legal frozen-policy records with zero updates and
+  confirms 10/32 nonzero outcomes versus 5/5 in reference training seeds.
+- Identical-branch probe with fixed evaluation `20..51` records initial
+  `-501`, outcome-selected `(1,3,5,7,11)` `-650`, and contiguous
+  `(0,1,2,3,4)` `-501`; zero-return seeds `(0,2,4)` are exact no-op attempts.
+- Evidence grade: bounded selection-bias comparison and task approval only;
+  not protocol selection, improvement, robust evaluation or strength evidence.
+
 ### 2026-07-19 — Executable frozen-policy 32-seed outcome census
 
 - Type: executable P8 local signal-sparsity and seed-selection-bias evidence.

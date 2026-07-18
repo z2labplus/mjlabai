@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.30
+
+- Added `04AC`; reviewed commit `87ea0c3` against exact `04AB` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed exact frozen parameters, 32 legal records/digests, zero updates,
+  complete 10/32 partition and explicit 5/5 reference-training selection bias.
+- Validation passed: nine focused and all 459 explicit tests with two skips;
+  compile, dependency and diff checks pass.
+- Independent A/B probe records initial/selected/contiguous fixed sums
+  `-501/-650/-501`; directly approved the exact two-protocol comparison code.
+  No protocol selection, strength claim, real data or P9-P12 work was added.
+
 ## 2026-07-19 - v4.29
 
 - Implemented the exact `04AB` frozen reviewed-imitation-policy all-project
