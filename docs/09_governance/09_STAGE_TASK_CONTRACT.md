@@ -2,8 +2,8 @@
 
 ## Current stage
 
-P8 linear greedy-decision current-scope acceptance and next exact executable-
-task decision after `12AR` review closure.
+P8 exact one-step synthetic/local policy-improvement closed-loop smoke
+implementation approved by `12AS`.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -107,9 +107,10 @@ implementation is complete and passes 125 tests. `12AP` reviews it, records
 `A. Review can close` and finds no blocker. `12AQ` accepts that exact scope and
 directly approves the greedy-decision diagnostic with zero remaining gates.
 The exact implementation is complete and passes 136 tests. `12AR` reviews it,
-records `A. Review can close` and finds no blocker. The current first task must
-accept/reject that scope and directly approve or defer one exact one-step
-closed-loop outcome; no sibling proposal or boundary may precede it.
+records `A. Review can close` and finds no blocker. `12AS` accepts that exact
+scope and directly approves the one-step closed loop with zero remaining
+gates. The current first task is direct implementation; no sibling proposal,
+boundary, review or approval may precede it.
 Production code
 outside that exact approval, fixtures, data files, manifest schemas/loaders/
 artifacts, source approval,
@@ -443,7 +444,9 @@ P8 exact linear model-training scope = accepted as current-scope complete in `12
 P8 exact synthetic/local inference and greedy-decision diagnostic = directly approved in `12AQ`; zero gates remain before code
 P8 exact synthetic/local inference and greedy-decision diagnostic = implemented in the three `12AQ`-approved files; 136 tests pass
 P8 exact greedy-decision implementation review = closed in `12AR`; no blocker
-Next = current-scope acceptance plus one exact one-step closed-loop approval/defer decision
+P8 exact greedy-decision scope = accepted as current-scope complete in `12AS`
+P8 exact one-step synthetic/local policy-improvement closed loop = directly approved in `12AS`; zero gates remain before code
+Next = implement the exact `12AS` closed-loop task; no sibling boundary chain
 ```
 
 ## AI role
@@ -452,10 +455,10 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Accept or reject the exact greedy-decision scope closed in `12AR` and directly
-approve or defer one exact synthetic/local one-step policy-improvement closed-
-loop smoke. The decision must fix all executable boundaries in one record and
-leave zero gates before code if approved. Broad P8, source/real-data work,
+Implement the exact `12AS`-approved one-step synthetic/local policy-
+improvement closed loop. Reuse the reviewed before/after decision helper and
+one reviewed training call on only the selected candidate batch. Broad P8,
+source/real-data work,
 datasets, production training/evaluation, self-play/league, model/artifact use,
 model-output integration, CLI, P9-P12 and strength claims remain unapproved.
 

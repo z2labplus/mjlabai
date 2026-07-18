@@ -75,6 +75,7 @@ docs/12_technical_plan/12AO_P8_BOUNDED_TRAINER_ACCEPTANCE_AND_LINEAR_ACTION_VALU
 docs/12_technical_plan/12AP_P8_LINEAR_ACTION_VALUE_MODEL_TRAINING_IMPLEMENTATION_REVIEW.md
 docs/12_technical_plan/12AQ_P8_LINEAR_MODEL_TRAINING_ACCEPTANCE_AND_GREEDY_DECISION_APPROVAL.md
 docs/12_technical_plan/12AR_P8_LINEAR_GREEDY_DECISION_IMPLEMENTATION_REVIEW.md
+docs/12_technical_plan/12AS_P8_GREEDY_DECISION_ACCEPTANCE_AND_ONE_STEP_POLICY_IMPROVEMENT_APPROVAL.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -502,6 +503,14 @@ lower-index tie behavior, frozen output, errors, exports, warnings and
 forbidden-scope compliance, and reports 136 passing tests plus independent
 probes. It is review-closure evidence only, not environment, self-play,
 production evaluation, policy-quality, model-strength or P9-P12 evidence.
+
+`docs/12_technical_plan/12AS_P8_GREEDY_DECISION_ACCEPTANCE_AND_ONE_STEP_POLICY_IMPROVEMENT_APPROVAL.md`
+accepts the reviewed greedy-decision diagnostic as current-scope complete and
+directly approves one exact one-step synthetic/local policy-improvement closed
+loop. It fixes model/probes, two action-indexed candidate transition batches,
+reviewed helper sequence, output, tests and forbidden scope with zero gates
+before code. It is task-approval evidence only, not a general environment,
+self-play, production evaluation, policy-quality, strength or P9-P12 evidence.
 
 ## Supervised-policy files
 

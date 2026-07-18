@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Decide current-scope acceptance and directly approve or defer exact P8 one-step synthetic/local policy-improvement closed-loop smoke.
+- [ ] Implement exact P8 one-step synthetic/local policy-improvement closed-loop smoke only.
 
 Current execution charter:
 
@@ -22,21 +22,23 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Accept or reject only the exact `12AQ` implementation review-closed in
-  `12AR`; do not re-review or modify production code/tests.
-- If accepted, make one decision that directly approves or defers one exact
-  one-step synthetic/local policy-improvement closed-loop smoke linking the
-  reviewed greedy decision, selected project-authored transition, reviewed
-  linear training helper and before/after decision diagnostics.
-- Fix exact model, transition/action binding, helper calls, files, API, frozen
-  outputs, tests, rollback, stop conditions and evidence grade. Leave zero
-  gates before code if approved; no proposal or sibling boundary may intervene.
-- Do not implement the loop in this decision. Do not approve a general
-  environment/episode, self-play, real/external/platform data, model loading,
-  persistence/checkpoint, CLI/path ingestion, dependency, production
-  evaluation, strength claim, broad P8 or P9-P12.
+- This first decision-training-decision closed loop is directly approved by
+  `12AS`; do not insert another proposal, boundary, review or approval task.
+- Create/modify only `src/mjlabai/rl/__init__.py`,
+  `src/mjlabai/rl/synthetic_one_step_policy_improvement_smoke.py`,
+  `tests/rl/test_synthetic_one_step_policy_improvement_smoke.py` and direct
+  governance synchronization.
+- Implement the exact four-symbol API, exact model/probes/two candidate
+  batches, action-to-batch binding, decision/trainer/decision helper sequence,
+  frozen output, 10 test categories and evidence grade in `12AS`.
+- Do not add a general environment/transition function, episode/multiple
+  steps, self-play, stochastic exploration, replay, dynamic batches, model
+  loading, persistence/checkpoint, production evaluation, path/CLI,
+  dependency, real/external/platform data, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Accepted the exact `12AQ` implementation review-closed in `12AR` as current-scope complete and directly approved the first decision-training-decision closed-loop smoke in `12AS`. The selected outcome starts from one frozen model, runs the reviewed greedy diagnostic on three probes, uses controlled probe 0 to select exactly one of two project-authored four-transition batches, runs the reviewed trainer for exactly one epoch, and reruns the reviewed diagnostic on the same probes. `12AS` fixes exact files, four-symbol API, input/batch/action binding, helper order, output, 10 test categories and evidence grade; zero gates remain before code. No code, test, fixture/data, general environment/episode, replay, self-play, stochastic exploration, model loading, persistence/checkpoint, production evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added in this decision. The next task is direct closed-loop implementation, not another docs gate.
 
 - [x] 2026-07-18 Reviewed commit `475997a2934f689521d480376d816237f659dccc` against the exact `12AQ` approval in `12AR`. Decision: `A. Review can close.` Confirmed exact approved files/API, reviewed fixed model, exact three safe probes, canonical provenance, exact `(0,1)` action order, one/three/six reviewed helper calls, exact action values, lower-index tie behavior, deterministic frozen diagnostics, chained errors, exports, warnings and forbidden-scope compliance. Eleven decision tests and 125 approved regressions pass; compile/diff checks and independent numerical, tuple-subclass, duplicate-ID, external-log and non-mutation probes pass. No production code or test was modified and no blocker was found. The next decision must accept or reject this scope and directly approve or defer one materially progressive one-step closed-loop P8 task; another inference wrapper or boundary chain is forbidden.
 

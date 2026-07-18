@@ -14,6 +14,38 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0165 — Greedy Decision Acceptance And Closed-Loop Approval
+
+Decision:
+
+```text
+ACCEPTED as current-scope complete.
+Approve direct implementation of one exact one-step synthetic/local policy-
+improvement closed-loop smoke.
+```
+
+Rationale and evidence:
+
+- `12AR` closed the greedy-decision review with no blocker and 136 passing
+  tests.
+- A single decision-selected training batch followed by another decision is
+  the smallest non-repetitive closed-loop connection among reviewed helpers.
+- Exact action binding and one fixed epoch preserve a deterministic,
+  dependency-free synthetic/local scope.
+
+Consequences:
+
+- Added `12AS` with exact files, API, inputs, helper order, outputs, tests,
+  stop conditions and evidence grade.
+- Zero mandatory gates remain before closed-loop code.
+- No general environment, self-play, production evaluation, persistence, real
+  data, strength, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Greedy decision accepted; exact one-step closed-loop implementation is current
+next.
+
 ## 2026-07-18 — DR-0164 — Exact P8 Linear Greedy Decision Review Closure
 
 Decision:

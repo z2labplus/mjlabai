@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 greedy-decision acceptance and one-step closed-loop approval
+
+- Type: internal current-scope acceptance / exact closed-loop task approval
+  evidence.
+- Decision: the `12AQ` implementation closed by `12AR` is `ACCEPTED as
+  current-scope complete` for its exact synthetic/local scope.
+- `12AS` directly approves one before-decision, one selected four-transition
+  batch, one reviewed training epoch and one after-decision; no docs gate
+  remains before code.
+- Basis: 136 approved tests, compile/diff checks and independent probes pass;
+  `12AR` found no blocker.
+- Evidence grade: P8 exact one-step synthetic/local closed-loop task approval
+  evidence only; not a general environment, self-play, production evaluation,
+  policy-quality, model-strength or P9-P12 evidence.
+
 ### 2026-07-18 — P8 linear greedy-decision implementation review closure
 
 - Type: internal exact code-review closure evidence.

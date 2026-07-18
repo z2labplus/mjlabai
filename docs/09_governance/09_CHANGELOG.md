@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.80
+
+- Accepted the exact `12AQ`/`12AR` greedy-decision diagnostic as current-scope
+  complete in `12AS`.
+- Directly approved the first decision-training-decision closed-loop smoke,
+  selecting one action-indexed synthetic transition batch for one reviewed
+  training epoch before an after-decision diagnostic.
+- Fixed exact files, four-symbol API, inputs, action binding, helper sequence,
+  output, tests, stop conditions and evidence grade.
+- Set remaining mandatory gates before code to zero; `10_NEXT` now requires
+  direct closed-loop implementation.
+- No code, general environment/episode, replay, self-play, model loading,
+  persistence, real/external/platform data, production evaluation, broad P8 or
+  P9-P12 work was added in this decision.
+
 ## 2026-07-18 - v3.79
 
 - Reviewed commit `475997a` against the exact `12AQ` approval in `12AR`.

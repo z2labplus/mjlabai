@@ -28,8 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 linear greedy-decision current-scope acceptance and next exact executable-
-task decision after `12AR` review closure.
+P8 exact one-step synthetic/local policy-improvement closed-loop smoke
+implementation approved by `12AS`.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
@@ -165,8 +165,9 @@ records `A. Review can close` and finds no blocker. The current first task must
 approves fixed-model inference and deterministic greedy decisions over exactly
 three synthetic/local probes. That exact implementation is complete and
 passes 136 tests. `12AR` reviews it, records `A. Review can close` and finds no
-blocker. The current first task must accept/reject that scope and directly
-approve or defer one exact one-step closed-loop outcome. Broad
+blocker. `12AS` accepts that exact scope as current-scope complete and directly
+approves one before-decision, one selected transition batch, one reviewed
+training epoch and one after-decision. Zero gates remain before code. Broad
 P8, production training/evaluation, self-play, model/artifact use, real data,
 strength claims and P9-P12 remain unapproved.
 
@@ -685,7 +686,9 @@ P8 exact linear model-training scope = accepted as current-scope complete in `12
 P8 exact synthetic/local inference and greedy-decision diagnostic = directly approved in `12AQ`; zero gates remain before code.
 P8 exact synthetic/local inference and greedy-decision diagnostic = implemented in the three `12AQ`-approved files; 136 tests pass.
 P8 exact greedy-decision implementation review = closed in `12AR`; no blocker.
-Next = current-scope acceptance plus one exact one-step closed-loop approval/defer decision.
+P8 exact greedy-decision scope = accepted as current-scope complete in `12AS`.
+P8 exact one-step synthetic/local policy-improvement closed loop = directly approved in `12AS`; zero gates remain before code.
+Next = implement the exact `12AS` closed-loop task; no sibling boundary chain.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -819,8 +822,8 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Decide current-scope acceptance and directly approve or defer exact P8 one-
-step synthetic/local policy-improvement closed-loop smoke.
+Implement exact P8 one-step synthetic/local policy-improvement closed-loop
+smoke only.
 ```
 
 `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`
