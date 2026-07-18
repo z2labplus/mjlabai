@@ -51,6 +51,16 @@
 | Bridge turns into training or multiple-game execution. | Governance / Scope | High | Medium | Exact single-round API forbids labels/loss/update/optimizer/dataset and retains one 256-cap loop. | Open |
 | Another docs chain delays executable bridge. | Governance / Delivery | High | Medium | `04N` leaves zero gates; `10_NEXT` requires direct code. | Mitigated |
 
+## 2026-07-18 — P4/P8 project linear-policy bridge implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Encoder leaks hidden/opponent-private environment state. | Research / Leakage | Critical | Low | Runtime reads only `environment.observe(state)`; source assertion excludes player-hand private state; exact keys/shapes are pinned. | Mitigated |
+| Feature contract silently drifts. | Engineering / Contract | High | Low | Missing/extra keys, wrong shape and non-finite probes fail; exact 630 count and scaling sentinels are tested. | Mitigated |
+| Project model emits an illegal action. | Engineering / Correctness | High | Low | All 91 seed-0 actions and every runtime decision are selected after the authoritative mask and checked against the complete legal tuple. | Mitigated |
+| Random parameters are mistaken for trained policy quality. | Evidence / Scope | High | High | Model ID and warnings state random/untrained; governance denies evaluation/strength/promotion claims. | Open |
+| Review becomes another planning chain instead of training. | Governance / Delivery | High | Medium | Exactly one review is next; closure must directly approve/defer a minimal in-memory parameter-update task or record a genuine blocker. | Mitigated |
+
 ## 2026-07-18 — P8 bounded policy-improvement sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.01
+
+- Implemented the exact `04N` P4/P8 MahJax public-observation and untrained
+  linear-policy round bridge with nine-symbol API, exports and 11 focused tests.
+- Exact public dict validates/encodes to 630 finite float32 features; project
+  `(630,87)` weights plus 87 biases expose 54,897 immutable parameters.
+- Environment legality masks all 87 scores before deterministic argmax.
+- Seed 0 terminates in 91 legal transitions with zero raw/cumulative rewards
+  and global scores `(250,250,250,250)`.
+- Validation passed: 11 focused and all 336 tests with two existing skips;
+  compile, dependency, diff and independent API probes pass.
+- One exact review is next. No training/update, production self-play, real data,
+  Tenhou, strength, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v4.00
 
 - Added `04N`; reviewed commit `76632c9` against exact `04M` approval.

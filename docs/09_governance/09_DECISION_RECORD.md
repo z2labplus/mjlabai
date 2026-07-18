@@ -14,6 +14,33 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0186 — Complete Project Linear Policy Environment Bridge
+
+Decision:
+
+```text
+Complete the exact `04N` public-observation/masked-linear-policy round and
+require one exact code review before parameter training.
+```
+
+Rationale and evidence:
+
+- The exact public-only encoder produces 630 finite features and rejects
+  key/shape/non-finite drift.
+- A project-owned 54,897-parameter 87-action model selects only environment-
+  legal actions and reaches the deterministic 91-step seed-0 terminal state.
+- Eleven focused and all 336 tests pass with two existing skips.
+
+Consequences:
+
+- The repository now has executable project model output driving MahJax.
+- One exact review must close before a minimal parameter-update task.
+- Parameters remain random and immutable; no strength claim follows.
+
+Status:
+
+Implemented; exact review is current next.
+
 ## 2026-07-18 — DR-0185 — Close Rule Policy Review And Approve Project Model Bridge
 
 Decision:

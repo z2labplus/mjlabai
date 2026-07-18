@@ -106,6 +106,14 @@ encoder plus masked project-owned 87-action linear-policy round with zero gates
 before code. It is policy/environment review and task-approval evidence only,
 not learned-model or strength evidence.
 
+The exact `04N` project model-output bridge is implemented in
+`src/mjlabai/environment/mahjax_linear_policy_round_smoke.py` with focused
+tests in `tests/environment/test_mahjax_linear_policy_round_smoke.py`. It
+encodes the exact public dict into 630 features, calculates 87 scores from
+54,897 random-initialized project parameters, applies the environment legal
+mask and completes seed 0 in 91 transitions. One exact review is next. It is
+untrained model-output integration evidence only, not training or strength.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

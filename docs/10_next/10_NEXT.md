@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact P4/P8 MahJax public-observation encoder and masked untrained linear-policy round smoke.
+- [ ] Review the exact P4/P8 MahJax public-observation encoder and masked untrained linear-policy round smoke implementation.
 
 Current execution charter:
 
@@ -22,22 +22,22 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Execute exactly `04N` in its one source/test module plus package exports and
-  direct governance. Encode only the exact public dict into 630 fixed-scaled
-  float32 features; reject key/shape/non-finite drift.
-- Split root RNG into environment/model streams; create project-owned random
-  `(630,87)` weights at scale `0.01`, zero bias, one JIT score function, one JIT
-  step function and one explicit 256-cap loop. Mask illegal scores before argmax.
-- Pin seed 0 to 91 legal transitions, terminal/no truncation, zero final and
-  cumulative raw rewards, global scores `(250,250,250,250)`, first action 10
-  and final action 7.
+- Review commit `HEAD` against `04N`: nine-symbol API/exports, exact public key/
+  shape/order/scaling validation, 630 finite features, 54,897 parameters,
+  independent RNG, two JITs, one 256-cap loop, 87-score legal masking,
+  deterministic terminal/raw/global result, failures and warnings.
+- Rerun focused/full tests, compile, dependency/diff checks and independent
+  encoder/result/source probes. Change production code/tests only after a
+  concrete blocker is recorded.
 - No hidden state, labels/dataset/loss/update/optimizer/checkpoint/training,
   multiple games, persistence/path/CLI, real data, Tenhou, production self-play/
   evaluation, strength, broad P8 or P9-P12.
-- Zero gates remain before code; stop on exact schema, legality, cap, API or
-  deterministic-result blocker rather than widening scope.
+- Exactly one review. If it closes, directly approve or defer one minimal
+  in-memory parameter-training task; no new boundary/proposal chain.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `04N`-approved P4/P8 MahJax public-observation and project-owned masked untrained linear-policy single-round smoke. Added `src/mjlabai/environment/mahjax_linear_policy_round_smoke.py`, nine package exports and 11 focused tests. Exact public dict keys/shapes encode to 630 finite float32 features; random-initialized `(630,87)` weights plus 87 biases yield 54,897 parameters. Two JIT functions and one explicit 256-cap loop mask all 87 scores by environment legality before argmax. Seed 0 terminates legally in 91 transitions with zero raw/cumulative rewards, global scores `(250,250,250,250)`, first action 10 and final action 7. All 336 tests pass with two existing skips; compile, dependency, diff and independent API probes pass. No hidden-state feature, labels/dataset/loss/update/training, production self-play/evaluation, real data, Tenhou, strength, broad P8 or P9-P12 work was added. One exact review is next, then direct minimal training approval/deferment.
 
 - [x] 2026-07-18 Reviewed commit `76632c9` against exact `04M` approval in `04N`. Decision: `A. Review can close.` Confirmed six-symbol API/exports, independent init/policy RNG, two JIT calls, one 256-cap loop, full legal tuples, every bundled-rule-policy action legal, monotonic progress, exact seed-0 54-step terminal/raw/cumulative/global-score result, failures, warnings and forbidden scope. Eleven focused and all 325 tests pass with two existing skips; compile, dependency, diff and independent probes pass. Accepted the bridge as current-scope complete and directly approved the exact 630-public-feature, masked project-owned random-initialized 87-action linear-policy round. MahJax 2D observation is not implemented, while an independent dict-encoder/model probe terminates seed 0 legally in 91 transitions. Zero gates remain before code. No training, production self-play/evaluation, real data, Tenhou, strength, broad P8 or P9-P12 work was added.
 

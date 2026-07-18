@@ -8,6 +8,19 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P4/P8 public-observation masked linear-policy bridge
+
+- Type: executable project-owned untrained model-output-to-environment smoke.
+- Added exact 630-feature public encoder, random-initialized `(630,87)` weights,
+  87 biases, legal masking, one-round trace, nine exports and 11 tests.
+- Seed-0 result: 54,897 parameters, 91 legal transitions, terminal true,
+  truncated false, zero final/cumulative raw rewards and global scores
+  `(250,250,250,250)`; first action 10 and final action 7 are legal.
+- Validation: all 336 repository tests OK with two existing skips; compile,
+  dependency and diff checks plus independent API probe pass.
+- Evidence grade: P4/P8 untrained project model-output bridge smoke only; not
+  parameter training, production self-play, evaluation, strength or Tenhou.
+
 ### 2026-07-18 — P4 rule-policy review and project model bridge probe
 
 - Type: exact code-review closure, current-scope acceptance and direct next

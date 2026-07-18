@@ -28,11 +28,11 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P4/P8 direct implementation of the exact `04N`-approved MahJax public dict
-observation encoder and project-owned untrained masked 87-action linear-policy
-single-round smoke. `04N` review-closed the bundled policy bridge and a
-successful 630-feature/91-transition probe leaves zero gates before code. No
-training or production self-play is approved.
+P4/P8 exact code-review gate for the implemented `04N`-approved 630-feature
+MahJax public-observation encoder and project-owned 54,897-parameter masked
+87-action linear-policy round. Seed 0 terminates legally in 91 transitions and
+336 tests pass. Parameters remain random/untrained; training is not yet
+approved until this single review closes.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
