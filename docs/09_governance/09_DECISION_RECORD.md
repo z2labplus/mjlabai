@@ -237,6 +237,37 @@ Status:
 
 Approved; direct two-round training implementation is current next.
 
+## 2026-07-18 — DR-0196 — Complete Two Sequential Raw-Outcome Updates
+
+Decision:
+
+```text
+Complete the exact `04S` seeds-1/5 two-round sequential on-policy raw-outcome
+training smoke and require one exact implementation review before expansion.
+```
+
+Rationale and evidence:
+
+- The reviewed one-round collector/update is privately reused without changing
+  its public API or seed-1 behavior.
+- Seed-1 updated arrays feed seed 5 directly, proving parameter continuity
+  across two legal terminal environment rounds and exactly two updates.
+- All objectives and parameter deltas are finite and deterministic; 19 focused
+  and all 384 explicit repository tests pass with two existing skips.
+
+Consequences:
+
+- The repository now performs more than one environment-outcome-driven update
+  on one continuous in-memory project policy.
+- Opponents remain fixed rule policies; this is not production self-play,
+  evaluation, improvement, league, model-strength or Tenhou evidence.
+- Exactly one code review is next. If it closes, another documentation chain is
+  forbidden; the decision must directly approve or defer material P8 execution.
+
+Status:
+
+Implemented; exact two-round training review is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

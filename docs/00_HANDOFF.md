@@ -27,12 +27,14 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the exact `04S`-approved
-two-round sequential on-policy raw-outcome training smoke. `04S` review-closes
-the first real environment-outcome update. The next code must execute fixed
-seeds `(1,5)`, carry parameters directly, and apply exactly one raw-return
-update per round. This is P8 local bounded RL training, not self-play learning,
-evaluation or strength evidence:
+Current active stage is exact implementation review of the completed `04S`-
+approved two-round sequential on-policy raw-outcome training smoke. Fixed seeds
+`(1,5)` now execute with direct parameter carry and exactly one raw-return
+update per round; 19 focused and all 384 explicit repository tests pass with
+two existing skips. The review must verify this exact implementation and then
+directly approve or defer a material executable P8 task rather than start a new
+documentation chain. This is P8 local bounded RL training evidence, not
+production self-play, evaluation or strength evidence:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -861,14 +863,11 @@ Latest Mortal F1 audit summary:
 Current expected direction:
 
 ```text
-Define P8 model-output interface dependency boundary before any
-implementation. `12V` reviews the `12U` raw-outcome/environment-provenance
-boundary and records `A. Review can close.` The model-output dependency task
-must remain docs-only and must not approve P8 entry, P8 implementation, an
-implementation prompt, implement a schema/adapter/integration, load a model/
-checkpoint/weight, execute inference/action generation, run environment,
-self-play, RL, training, evaluation or league, approve source/real-data work,
-claim model strength or enter P9-P12.
+Review the exact two-round sequential raw-outcome training implementation.
+Confirm direct parameter continuity, two legal deterministic rounds, two
+finite updates, unchanged one-round public behavior, no persistence and the
+384-test result. If no blocker exists, directly approve or defer the next
+material executable P8 step; do not restart a boundary/proposal chain.
 ```
 
 Latest Akochan F1 audit summary:
@@ -1147,10 +1146,9 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is docs-only P8 RL objective / reward specification
-  boundary review after the `12Q` definition. Full P7 is closed only
-  for documented P7
-  supervised-learning scope; P8 entry/implementation and P9-P12 remain
-  unapproved. Do not run self-play, RL, training, evaluation or league,
-  access real data, integrate model output or make strength claims.
-- Technical decisions from Web ChatGPT Pro must be written into Git + docs before becoming project facts.
+- Current next work is one exact code review of the implemented MahJax
+  seeds-1/5 two-round sequential raw-outcome training smoke. P8 bounded local
+  training is active; production self-play, evaluation, league, real data,
+  Tenhou and P9-P12 remain unapproved. Do not make strength claims.
+- Technical decisions become project facts only after they are recorded in Git
+  and the governing repository documents; no external chat handoff is required.

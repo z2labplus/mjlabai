@@ -28,11 +28,13 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 direct implementation of the exact `04S`-approved two-round sequential raw-
-outcome training smoke. `04S` review-closes the first real environment update
-after all 375 tests pass. The next code executes exact seeds `(1,5)`, carries
-parameters directly and applies exactly one raw-return update per round. This
-is not self-play learning, evaluation, improvement or strength evidence.
+P8 exact code review of the completed `04S`-approved two-round sequential raw-
+outcome training smoke. Exact seeds `(1,5)` now run with direct parameter carry
+and exactly one raw-return update per round; 19 focused and all 384 explicit
+repository tests pass with two existing skips. The review must verify the exact
+implementation and then directly approve or defer a material executable P8
+task rather than restart documentation. This is not production self-play,
+evaluation, improvement or strength evidence.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

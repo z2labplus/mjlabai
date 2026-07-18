@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact MahJax two-round sequential on-policy raw-outcome training smoke.
+- [ ] Review the exact MahJax two-round sequential on-policy raw-outcome training smoke implementation.
 
 Current execution charter:
 
@@ -22,19 +22,21 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Execute exact `04S` in the four approved source/test files plus governance.
-- Privately refactor/reuse the reviewed one-step collector/objective update while
-  preserving its public API/result. Start from reviewed imitation parameters.
-- Iterate exact seeds `(1,5)` in order, one legal on-policy round and one raw-
-  return update each; carry updated arrays directly into the second round.
-- Pin seed-1 `04R` values and seed-5 values: 32 transitions, seven actions
-  `(12,6,31,84,13,32,33)`, return `-0.4`, raw/cumulative/scores from `04S`,
-  objective `-0.85308564 -> -0.87257367`, deltas `0.04183802/0.01353321`.
-- Frozen summaries only. Exactly two rounds/updates; no third/variable trainer,
-  replay/self-play learning, persistence, evaluation, real data, Tenhou,
-  strength or P9-P12.
+- Review the exact `04S` implementation in the approved source/test files and
+  its governance synchronization; do not broaden the implementation.
+- Confirm the one-step public API/result remains unchanged, private helper
+  reuse preserves seed-1 behavior, and direct parameter carry reaches seed 5.
+- Confirm exact two-round/two-update diagnostics, legality, determinism,
+  frozen output, no I/O/persistence and all validation evidence.
+- Modify code/tests only if a concrete correctness blocker is found. Otherwise
+  record one review decision and directly approve or defer the next material
+  executable P8 task; another boundary/proposal chain is forbidden.
+- No third/variable trainer, replay, production self-play, evaluation, real
+  data, Tenhou, strength claim or P9-P12 work.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `04S`-approved MahJax two-round sequential on-policy raw-outcome training smoke. Added a six-symbol frozen diagnostic module and nine focused tests, while privately extracting the reviewed one-round raw-outcome update without changing its public API/result. Exact seeds `(1,5)` execute in order against fixed bundled rule opponents, with updated arrays carried directly into round 2 and exactly two total updates. The rounds terminate legally in 37/32 transitions with project actions `(20,84,16,30,27,26,3,13)` and `(12,6,31,84,13,32,33)`, return scales `-0.39/-0.4`, objective changes `-0.86367577->-0.88331068` and `-0.85308558->-0.87257379`, per-step weight/bias deltas `0.04220101/0.01279154` and `0.04183802/0.01353321`, and final initial-to-end deltas `0.06373481/0.02013424`. Nineteen focused and all 384 explicit repository tests pass with two existing skips; compile, dependency, diff and direct probes pass. No replay, production self-play, persistence, evaluation, real data, Tenhou, strength or P9-P12 work was added. One exact code review is next; another docs chain is forbidden.
 
 - [x] 2026-07-18 Reviewed commit `4b779d5` against exact `04R` approval in `04S`. Decision: `A. Review can close.` Confirmed exact API, independent init/rule/project RNG, genuine legal-masked categorical project samples, fixed rule opponents, public features, raw-return-only objective, exactly one JIT gradient update, finite exact objective/deltas, deterministic legal 37-step pre/post outcomes, warnings and no replay/persistence. Ten focused and all 375 tests pass with two skips; compile, dependency, diff and independent probes pass. Accepted the first RL update and directly approved exact seeds `(1,5)` two-round sequential training with direct parameter continuity and two total updates. Seed-5 probe is finite/legal and deterministic. Zero gates remain before code. No self-play learning, evaluation, real data, strength or P9-P12 work was added.
 

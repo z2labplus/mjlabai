@@ -9,6 +9,16 @@
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
 
+## 2026-07-18 — P8 two-round sequential raw-outcome training risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Round 2 silently restarts from imitation parameters instead of round-1 output. | ML / Correctness | Critical | Low | One explicit two-item loop assigns `weights, biases = update.weights, update.biases`; source and result tests pin continuity plus nonzero final initial-to-end deltas. | Mitigated |
+| Refactoring the one-round update changes its reviewed public behavior. | Engineering / Regression | High | Low | Helper remains private; unchanged public one-round result passes all prior focused tests and exact seed-1 values. | Mitigated |
+| One malformed or illegal trajectory enters an update. | Engineering / Correctness | Critical | Low | Reuse the reviewed collector's complete legal-mask validation; tests verify every action in both 37/32-step traces. | Mitigated |
+| Two losses or parameter changes are mislabeled improvement or strength. | Evidence / Scope | Critical | High | Frozen evidence grade and warnings deny improvement, evaluation, self-play strength, stable-dan and LuckyJ claims. | Open |
+| A successful review restarts documentation instead of progressing execution. | Governance / Delivery | High | Medium | Exactly one review is next; closure must directly approve/defer a material executable P8 task or record a genuine blocker. | Mitigated |
+
 ## 2026-07-18 — P4 bounded MahJax rollout implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

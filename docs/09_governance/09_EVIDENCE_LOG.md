@@ -8,6 +8,23 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — Two-round sequential raw-outcome training smoke
+
+- Type: executable P8 local parameter-continuity and repeated environment-
+  outcome update smoke evidence.
+- Seeds `(1,5)` run in order against fixed bundled rule opponents. Updated
+  arrays from seed 1 feed seed 5 directly; both rounds are terminal and every
+  action is checked against its authoritative legal tuple.
+- Seed 1 reproduces the reviewed 37-transition update. Seed 5 has 32
+  transitions, seven project actions, return `-0.4`, and objective
+  `-0.85308558 -> -0.87257379` with nonzero parameter deltas.
+- Exactly two updates yield final initial-to-end weight/bias L2 changes
+  `0.06373481 / 0.02013424`; no parameters or trajectories are persisted.
+- Validation: 19 focused and all 384 explicit repository tests pass with two
+  existing skips; compile, dependency, diff and direct probes pass.
+- Evidence grade: P8 local two-round sequential raw-outcome training smoke
+  only; not production self-play, evaluation, improvement, league or strength.
+
 ### 2026-07-18 — First RL update review and two-round continuity probe
 
 - Type: exact code-review closure, acceptance and direct bounded two-round P8

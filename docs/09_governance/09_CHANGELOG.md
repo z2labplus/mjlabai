@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.11
+
+- Implemented the exact `04S` P8 MahJax two-round sequential on-policy raw-
+  outcome training smoke and nine focused tests.
+- Refactored the reviewed one-round update into a private reusable helper while
+  preserving its public API/result, then ran seeds `(1,5)` with direct parameter
+  carry and exactly two total updates against fixed bundled rule opponents.
+- Both rounds are deterministic, terminal and fully legal. Return/objective/
+  delta diagnostics match the reviewed probes; final initial-to-end weight and
+  bias deltas are `0.06373481 / 0.02013424`.
+- Validation passed: 19 focused and all 384 explicit repository tests with two
+  skips; compile, dependency, diff and direct probes pass.
+- No replay, production self-play, persistence, evaluation, real data, Tenhou,
+  strength or P9-P12 work was added. One exact code review is next.
+
 ## 2026-07-18 - v4.10
 
 - Added `04S`; reviewed commit `4b779d5` against exact `04R` approval.

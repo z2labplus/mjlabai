@@ -178,6 +178,15 @@ outcome update and directly approves one exact seeds-1/5 two-round sequential
 training smoke with direct parameter continuity. It is review/task-approval
 evidence only, not self-play, evaluation or strength evidence.
 
+The exact `04S` two-round task is implemented in
+`src/mjlabai/rl/mahjax_two_round_policy_gradient_sequence_smoke.py` with
+focused tests in
+`tests/rl/test_mahjax_two_round_policy_gradient_sequence_smoke.py`. It reuses
+the reviewed private one-round collector/update, executes seeds `(1,5)` with
+direct parameter continuity and applies exactly two raw-outcome updates. One
+exact code review is next. This is bounded local P8 training-smoke evidence,
+not production self-play, evaluation, improvement or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

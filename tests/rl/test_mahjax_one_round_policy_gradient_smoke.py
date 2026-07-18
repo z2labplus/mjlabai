@@ -208,7 +208,10 @@ class MahJaxOneRoundPolicyGradientSmokeTests(unittest.TestCase):
         self.assertIn("jax.random.categorical", source)
         self.assertIn("encode_mahjax_public_observation", source)
         self.assertIn("jax.value_and_grad(objective", source)
-        self.assertIn("pre.cumulative_rewards[_PROJECT_SEAT] / 100.0", source)
+        self.assertIn(
+            "trajectory.cumulative_rewards[_PROJECT_SEAT] / 100.0",
+            source,
+        )
         self.assertIn("state.legal_action_mask", source)
         self.assertIn("state.round_state.score", source)
         for forbidden in (

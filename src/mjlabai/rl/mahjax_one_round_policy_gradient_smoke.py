@@ -82,6 +82,17 @@ class _RoundTrajectory:
 
 
 @dataclass(frozen=True)
+class _PolicyGradientUpdate:
+    weights: object
+    biases: object
+    return_scale: float
+    initial_objective: float
+    post_update_objective: float
+    weight_delta_l2: float
+    bias_delta_l2: float
+
+
+@dataclass(frozen=True)
 class MahJaxOneRoundPolicyGradientResult:
     """Immutable diagnostics from one raw-outcome gradient update."""
 
@@ -327,6 +338,45 @@ def _collect_on_policy_round(seed, weights, biases, jax, jnp, mahjax, rule_polic
     )
 
 
+def _apply_one_raw_outcome_update(weights, biases, trajectory, jax, jnp):
+    return_scale_array = jnp.float32(
+        trajectory.cumulative_rewards[_PROJECT_SEAT] / 100.0
+    )
+
+    def objective(model_weights, model_biases):
+        logits = trajectory.features @ model_weights + model_biases
+        legal_logits = jnp.where(trajectory.legal_masks, logits, -1e9)
+        log_probabilities = jax.nn.log_softmax(legal_logits, axis=1)
+        selected_log_probabilities = log_probabilities[
+            jnp.arange(trajectory.project_actions.shape[0]),
+            trajectory.project_actions,
+        ]
+        return -return_scale_array * jnp.mean(selected_log_probabilities)
+
+    objective_and_gradient = jax.jit(
+        jax.value_and_grad(objective, argnums=(0, 1))
+    )
+    initial_objective_array, gradients = objective_and_gradient(weights, biases)
+    updated_weights = (
+        weights - MAHJAX_ONE_ROUND_POLICY_GRADIENT_LEARNING_RATE * gradients[0]
+    )
+    updated_biases = (
+        biases - MAHJAX_ONE_ROUND_POLICY_GRADIENT_LEARNING_RATE * gradients[1]
+    )
+    updated_weights, updated_biases = jax.block_until_ready(
+        (updated_weights, updated_biases)
+    )
+    return _PolicyGradientUpdate(
+        weights=updated_weights,
+        biases=updated_biases,
+        return_scale=float(return_scale_array),
+        initial_objective=float(initial_objective_array),
+        post_update_objective=float(objective(updated_weights, updated_biases)),
+        weight_delta_l2=float(jnp.linalg.norm(updated_weights - weights)),
+        bias_delta_l2=float(jnp.linalg.norm(updated_biases - biases)),
+    )
+
+
 def run_mahjax_one_round_policy_gradient_smoke(
 ) -> MahJaxOneRoundPolicyGradientResult:
     """Apply exactly one raw-outcome policy-gradient update in memory."""
@@ -366,35 +416,13 @@ def run_mahjax_one_round_policy_gradient_smoke(
             "seed-1 pre-update diagnostics differ from the reviewed probe"
         )
 
-    return_scale_array = jnp.float32(pre.cumulative_rewards[_PROJECT_SEAT] / 100.0)
-
-    def objective(model_weights, model_biases):
-        logits = pre.features @ model_weights + model_biases
-        legal_logits = jnp.where(pre.legal_masks, logits, -1e9)
-        log_probabilities = jax.nn.log_softmax(legal_logits, axis=1)
-        selected_log_probabilities = log_probabilities[
-            jnp.arange(pre.project_actions.shape[0]),
-            pre.project_actions,
-        ]
-        return -return_scale_array * jnp.mean(selected_log_probabilities)
-
-    objective_and_gradient = jax.jit(
-        jax.value_and_grad(objective, argnums=(0, 1))
-    )
-    initial_objective_array, gradients = objective_and_gradient(weights, biases)
-    updated_weights = (
-        weights - MAHJAX_ONE_ROUND_POLICY_GRADIENT_LEARNING_RATE * gradients[0]
-    )
-    updated_biases = (
-        biases - MAHJAX_ONE_ROUND_POLICY_GRADIENT_LEARNING_RATE * gradients[1]
-    )
-    updated_weights, updated_biases = jax.block_until_ready(
-        (updated_weights, updated_biases)
-    )
-    initial_objective = float(initial_objective_array)
-    post_update_objective = float(objective(updated_weights, updated_biases))
-    weight_delta_l2 = float(jnp.linalg.norm(updated_weights - weights))
-    bias_delta_l2 = float(jnp.linalg.norm(updated_biases - biases))
+    update = _apply_one_raw_outcome_update(weights, biases, pre, jax, jnp)
+    updated_weights = update.weights
+    updated_biases = update.biases
+    initial_objective = update.initial_objective
+    post_update_objective = update.post_update_objective
+    weight_delta_l2 = update.weight_delta_l2
+    bias_delta_l2 = update.bias_delta_l2
 
     post = _collect_on_policy_round(
         MAHJAX_ONE_ROUND_POLICY_GRADIENT_SEED,
@@ -406,7 +434,7 @@ def run_mahjax_one_round_policy_gradient_smoke(
         rule_policy,
     )
     diagnostics = (
-        float(return_scale_array),
+        update.return_scale,
         initial_objective,
         post_update_objective,
         weight_delta_l2,
@@ -417,7 +445,7 @@ def run_mahjax_one_round_policy_gradient_smoke(
             "policy-gradient diagnostics must all be finite"
         )
     if (
-        abs(float(return_scale_array) - (-0.39)) > 1e-6
+        abs(update.return_scale - (-0.39)) > 1e-6
         or abs(initial_objective - (-0.86367577)) > 1e-5
         or abs(post_update_objective - (-0.88331068)) > 1e-5
         or abs(weight_delta_l2 - 0.04220101) > 1e-5
@@ -454,7 +482,7 @@ def run_mahjax_one_round_policy_gradient_smoke(
         project_decision_count=len(sampled_actions),
         sampled_project_actions=sampled_actions,
         cumulative_raw_project_reward=pre.cumulative_rewards[_PROJECT_SEAT],
-        return_scale=float(return_scale_array),
+        return_scale=update.return_scale,
         initial_objective=initial_objective,
         post_update_objective=post_update_objective,
         weight_delta_l2=weight_delta_l2,
