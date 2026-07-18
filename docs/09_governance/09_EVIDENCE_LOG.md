@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 synthetic/local linear action-value model training implementation
+
+- Type: internal executable fixed parameterized model-training smoke evidence.
+- Added only the `12AO`-approved model-training module, package exports,
+  focused tests and direct governance synchronization.
+- The trainer performs ordered Q-learning TD updates on a frozen two-feature,
+  two-action linear model over four project-authored synthetic/local
+  transitions for at most eight epochs.
+- Validation: 13 focused model-training tests and 112 approved regressions
+  passed; compile and diff checks passed.
+- Evidence grade: P8 exact synthetic/local linear action-value model training
+  smoke evidence only; implementation review remains next. This is not
+  environment/self-play or production model training, model-strength, Tenhou,
+  stable-dan, LuckyJ, candidate-promotion or P9-P12 evidence.
+
 ### 2026-07-18 — P8 bounded trainer acceptance and linear model-training approval
 
 - Type: internal current-scope acceptance / exact parameterized model-training

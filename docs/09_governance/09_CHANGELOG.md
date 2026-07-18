@@ -1,5 +1,22 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.75
+
+- Implemented the exact `12AO` synthetic/local linear action-value model
+  training smoke.
+- Added the approved model-training module and 13 focused tests, and exported
+  its nine public symbols through `mjlabai.rl`.
+- Enforced fixed two-feature/two-action model shape, four safe transitions,
+  1-through-8 ordered epochs, exact TD formulas, selected-action updates,
+  frozen diagnostics and finite-number error normalization.
+- Validation passed: 13 model-training tests, 112 approved regressions,
+  compile checks and `git diff --check`.
+- New `10_NEXT` first item is one exact implementation review; no sibling
+  boundary or proposal may intervene.
+- No dynamic model/data, environment, replay, self-play, generic optimizer,
+  tensor framework, persistence/checkpoint, production evaluation, real/
+  external/platform data, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.74
 
 - Accepted the exact `12AM`/`12AN` bounded trainer as current-scope complete

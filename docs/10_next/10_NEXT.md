@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement exact minimal P8 synthetic/local linear action-value model training smoke only.
+- [ ] Review exact minimal P8 synthetic/local linear action-value model training smoke implementation.
 
 Current execution charter:
 
@@ -22,22 +22,23 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This first parameterized model-training smoke is directly approved by
-  `12AO`; do not insert another proposal, boundary, review or approval task.
-- Create/modify only `src/mjlabai/rl/__init__.py`,
-  `src/mjlabai/rl/synthetic_linear_action_value_training_smoke.py`,
-  `tests/rl/test_synthetic_linear_action_value_training_smoke.py` and direct
-  governance synchronization.
-- Implement the exact nine-symbol API, fixed 2-feature/2-action model, exact
-  four-transition tuple, 1-through-8 epoch bound, ordered TD update formulas,
-  frozen output, 13 test categories and evidence grade in `12AO`.
-- Do not add dynamic dimensions/actions, more transitions/epochs, shuffle/
-  minibatch/retry/early-stop, persistence/checkpoint, dataset/dataloader,
-  replay/environment/self-play, generic optimizer, tensor framework,
-  production evaluation, path/CLI, dependency, real/external/platform data,
-  broad P8 or P9-P12.
+- Review commit `HEAD` against the exact `12AO` approval and only the three
+  approved source/test files plus direct governance synchronization.
+- Verify the nine-symbol API, fixed model/transition shapes, provenance,
+  1-through-8 epoch cap, exact ordered TD formulas, selected-action-only
+  updates, frozen output, error normalization, exports, tests and warnings.
+- Run the 13 focused model-training tests, the 112 approved regressions,
+  compile/diff checks and small independent numerical/adversarial probes.
+- Do not modify production code or tests unless a concrete blocker is found.
+  Do not create another boundary/proposal chain or approve a sibling feature.
+- Do not add dynamic model/data, more epochs, shuffle/minibatch/retry/
+  early-stop, persistence/checkpoint, dataset/dataloader, replay/environment/
+  self-play, generic optimizer, tensor framework, production evaluation,
+  path/CLI, dependency, real/external/platform data, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `12AO`-approved minimal P8 synthetic/local linear action-value model training smoke. Added `src/mjlabai/rl/synthetic_linear_action_value_training_smoke.py`, exported its nine approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_linear_action_value_training_smoke.py`. The frozen deterministic trainer validates a fixed two-feature/two-action model and exactly four project-authored synthetic/local transitions, runs 1 through 8 ordered epochs, computes terminal/non-terminal Q-learning targets and TD errors, updates only the selected action's two weights and bias, records per-epoch mean-squared TD error, and returns immutable normalized model diagnostics. Thirteen focused model-training tests and 112 approved regressions pass; compile and diff checks pass. No dynamic model/data, environment, replay, self-play, generic optimizer, tensor framework, persistence/checkpoint, dataset/dataloader, production evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is actual fixed synthetic/local parameter-training smoke evidence only, not production or model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 
 - [x] 2026-07-18 Accepted the exact `12AM` implementation review-closed in `12AN` as current-scope complete and directly approved the first parameterized synthetic/local model-training smoke in `12AO`. The selected outcome is a deterministic standard-library two-feature/two-action linear Q model trained over exactly four project-authored synthetic/local transitions for 1 through 8 epochs. `12AO` fixes the exact files, nine-symbol API, model/transition shapes, provenance, TD target/error/weight-update formulas, output, 13 test categories and evidence grade; zero gates remain before code. No code, test, fixture/data, environment, replay, self-play, generic optimizer, tensor framework, persistence/checkpoint, production training/evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added in this decision. The next task is direct model-training implementation, not another docs gate.
 

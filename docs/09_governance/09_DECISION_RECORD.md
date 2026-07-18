@@ -14,6 +14,36 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0160 — Exact P8 Linear Action-Value Model Training Implemented
+
+Decision:
+
+```text
+Implement the exact `12AO` synthetic/local linear action-value model training
+smoke and advance directly to one code-review gate.
+```
+
+Rationale and evidence:
+
+- The task had zero remaining approval gates and fixed three exact source/test
+  files plus direct governance synchronization.
+- The implementation performs actual deterministic parameter updates for a
+  fixed linear Q model without adding an environment, data pipeline or
+  external framework.
+- Thirteen focused tests plus 112 approved regressions pass; compile and diff
+  checks pass.
+
+Consequences:
+
+- A fixed synthetic/local parameterized model-training artifact now exists.
+- The next task is its one exact implementation review, not a new boundary.
+- No environment, self-play, production training/evaluation, persistence,
+  checkpoint, real data, strength, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Implemented; exact code review is current next.
+
 ## 2026-07-18 — DR-0159 — Bounded Trainer Acceptance And Linear Model Approval
 
 Decision:

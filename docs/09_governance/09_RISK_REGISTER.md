@@ -61,11 +61,11 @@
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
 |---|---|---|---|---|---|
-| Fixed linear smoke silently becomes generic or production model training. | Governance / Scope | High | Medium | `12AO` fixes two features, two actions, exactly four transitions, at most eight epochs and three exact source/test files. | Open |
-| TD target or selected-action update formula is implemented incorrectly. | Engineering / Correctness | High | Medium | `12AO` fixes formulas explicitly; focused tests require exact one/two-epoch parameters, terminal/non-terminal behavior and selected-row-only updates. | Open |
-| Unsafe or model-generated transition data enters the smoke. | Data / Provenance | High | Low | Exact project-authored synthetic/local source and all provenance flags are validated on every frozen transition. | Open |
+| Fixed linear smoke silently becomes generic or production model training. | Governance / Scope | High | Medium | Implementation fixes two features, two actions, exactly four transitions and at most eight epochs; focused tests reject dynamic shapes/counts. | Mitigated |
+| TD target or selected-action update formula is implemented incorrectly. | Engineering / Correctness | High | Medium | Exact one/two-epoch parameters, terminal/non-terminal targets, selected-row-only updates and update counts are tested. | Mitigated |
+| Unsafe or model-generated transition data enters the smoke. | Data / Provenance | High | Low | Exact project-authored synthetic/local source and all provenance flags are validated and rejection-tested on every frozen transition. | Mitigated |
 | Model-training smoke is overclaimed as production training or strength evidence. | Evidence / Scope | High | High | Fixed warnings and evidence grade explicitly exclude environment/self-play, production training and strength claims. | Open |
-| Another docs chain delays approved model-training code. | Governance / Delivery | High | Medium | `12AO` records zero remaining gates and puts direct implementation first in `10_NEXT`. | Mitigated |
+| Another docs chain delays approved model-training code. | Governance / Delivery | High | Medium | Direct implementation is complete; the next task is one exact code review, not another boundary/proposal chain. | Closed |
 
 ## 2026-07-18 — P8 two-step sequence implementation review risks
 
