@@ -27,8 +27,8 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is exact implementation review of the minimal P8
-synthetic/local linear action-value model training smoke approved by `12AO`:
+Current active stage is current-scope acceptance and next exact executable P8
+task decision after linear model-training review closure:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -175,8 +175,11 @@ project-authored synthetic/local transitions for 1 through 8 epochs. Zero
 gates remain before code. That exact implementation now exists in the three
 approved source/test files: it performs deterministic TD parameter updates on
 a frozen two-feature/two-action linear Q model and passes 13 focused tests plus
-112 approved regressions. The first `10_NEXT` item is its one exact code
-review; another boundary/proposal chain is forbidden. Broad P8 entry, production
+112 approved regressions. `12AP` reviews that implementation, records
+`A. Review can close`, confirms 125 tests plus independent probes and finds no
+blocker. The first `10_NEXT` item must accept/reject that scope and directly
+approve or defer one exact inference/greedy-decision executable task; another
+training wrapper or boundary chain is forbidden. Broad P8 entry, production
 training/evaluation, self-play, model/artifact use, real data, strength claims
 and P9-P12 remain unapproved.
 

@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review exact minimal P8 synthetic/local linear action-value model training smoke implementation.
+- [ ] Decide current-scope acceptance and directly approve or defer exact P8 synthetic/local linear-model inference and greedy-decision diagnostic.
 
 Current execution charter:
 
@@ -22,21 +22,22 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review commit `HEAD` against the exact `12AO` approval and only the three
-  approved source/test files plus direct governance synchronization.
-- Verify the nine-symbol API, fixed model/transition shapes, provenance,
-  1-through-8 epoch cap, exact ordered TD formulas, selected-action-only
-  updates, frozen output, error normalization, exports, tests and warnings.
-- Run the 13 focused model-training tests, the 112 approved regressions,
-  compile/diff checks and small independent numerical/adversarial probes.
-- Do not modify production code or tests unless a concrete blocker is found.
-  Do not create another boundary/proposal chain or approve a sibling feature.
-- Do not add dynamic model/data, more epochs, shuffle/minibatch/retry/
-  early-stop, persistence/checkpoint, dataset/dataloader, replay/environment/
-  self-play, generic optimizer, tensor framework, production evaluation,
-  path/CLI, dependency, real/external/platform data, broad P8 or P9-P12.
+- Accept or reject only the exact `12AO` implementation review-closed in
+  `12AP`; do not re-review or modify production code/tests.
+- If accepted, make one decision that directly approves or defers one exact
+  deterministic synthetic/local inference and greedy-decision diagnostic over
+  the fixed linear model. Fix input probes, formulas, tie behavior, files, API,
+  immutable outputs, tests, rollback, stop conditions and evidence grade.
+- This decision must leave zero gates before code if it approves the task; no
+  proposal, sibling boundary or extra review may intervene.
+- Do not implement the inference task in this decision. Do not approve an
+  environment/gameplay, self-play, real/external/platform data, model loading,
+  persistence/checkpoint, CLI/path ingestion, dependency, production
+  evaluation, strength claim, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `870befb7a4e52f3a61af609fdcf9c7ec02302849` against the exact `12AO` approval in `12AP`. Decision: `A. Review can close.` Confirmed exact approved files/API, fixed two-feature/two-action model, exact four safe transitions, source/provenance, 1-through-8 epoch bound, terminal/non-terminal target formulas, selected-action-only parameter updates, deterministic frozen diagnostics, finite-number error normalization, exports, warnings and forbidden-scope compliance. Thirteen model-training tests and 112 approved regressions pass; compile/diff checks and independent one/two/eight-epoch numerical, tuple-subclass, nine-epoch, external-log and non-mutation probes pass. No production code or test was modified and no blocker was found. The next decision must accept or reject this scope and directly approve or defer one materially progressive executable P8 task; another training wrapper or boundary chain is forbidden.
 
 - [x] 2026-07-18 Implemented the exact `12AO`-approved minimal P8 synthetic/local linear action-value model training smoke. Added `src/mjlabai/rl/synthetic_linear_action_value_training_smoke.py`, exported its nine approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_linear_action_value_training_smoke.py`. The frozen deterministic trainer validates a fixed two-feature/two-action model and exactly four project-authored synthetic/local transitions, runs 1 through 8 ordered epochs, computes terminal/non-terminal Q-learning targets and TD errors, updates only the selected action's two weights and bias, records per-epoch mean-squared TD error, and returns immutable normalized model diagnostics. Thirteen focused model-training tests and 112 approved regressions pass; compile and diff checks pass. No dynamic model/data, environment, replay, self-play, generic optimizer, tensor framework, persistence/checkpoint, dataset/dataloader, production evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is actual fixed synthetic/local parameter-training smoke evidence only, not production or model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 

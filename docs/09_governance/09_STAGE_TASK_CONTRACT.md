@@ -2,8 +2,8 @@
 
 ## Current stage
 
-P8 exact minimal synthetic/local linear action-value model training smoke
-implementation review.
+P8 linear model-training current-scope acceptance and next exact executable-
+task decision after `12AP` review closure.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -103,8 +103,10 @@ approves one bounded trainer with zero remaining gates. The exact trainer is
 now implemented and passes 112 tests. `12AN` reviews it, records `A. Review
 can close` and finds no blocker. `12AO` accepts that exact scope and directly
 approves the linear model-training smoke with zero remaining gates. The exact
-implementation is complete and passes 125 tests. The current first task is its
-one code review; no sibling proposal or boundary may precede it.
+implementation is complete and passes 125 tests. `12AP` reviews it, records
+`A. Review can close` and finds no blocker. The current first task must accept/
+reject that scope and directly approve or defer one exact inference/greedy-
+decision outcome; no sibling proposal or boundary may precede it.
 Production code
 outside that exact approval, fixtures, data files, manifest schemas/loaders/
 artifacts, source approval,
@@ -433,7 +435,8 @@ P8 bounded trainer implementation review = closed in `12AN`; no blocker
 P8 bounded trainer scope = accepted as current-scope complete in `12AO`
 P8 exact synthetic/local linear action-value model training smoke = directly approved in `12AO`; zero gates remain before code
 P8 exact synthetic/local linear action-value model training smoke = implemented in the three `12AO`-approved files; 125 tests pass
-Next = review the exact `12AO` model-training implementation; no sibling boundary chain
+P8 exact linear model-training implementation review = closed in `12AP`; no blocker
+Next = current-scope acceptance plus one exact inference/decision approval/defer decision
 ```
 
 ## AI role
@@ -442,11 +445,11 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Review the exact `12AO`-approved synthetic/local linear action-value model
-training implementation. Verify fixed shapes, provenance, formulas, cap,
-selected-action updates, immutable output, errors, exports, tests and warnings
-without changing code unless a concrete blocker exists. Broad P8,
-source/real-data work,
+Accept or reject the exact model-training scope closed in `12AP` and directly
+approve or defer one exact synthetic/local linear-model inference and greedy-
+decision diagnostic. The decision must fix all executable boundaries in one
+record and leave zero gates before code if approved. Broad P8, source/real-
+data work,
 datasets, production training/evaluation, self-play/league, model/artifact use,
 model-output integration, CLI, P9-P12 and strength claims remain unapproved.
 

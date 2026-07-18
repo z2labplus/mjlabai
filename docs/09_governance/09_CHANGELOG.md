@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.76
+
+- Reviewed commit `870befb` against the exact `12AO` approval in `12AP`.
+- Decision: `A. Review can close.` No blocker or code/test fix is required.
+- Confirmed fixed model/input shapes, provenance, epoch cap, TD formulas,
+  selected-action updates, frozen diagnostics, errors, exports, warnings and
+  forbidden-scope compliance.
+- Validation passed: 13 model-training tests, 112 approved regressions,
+  compile/diff checks and independent one/two/eight-epoch probes.
+- New `10_NEXT` first item must directly accept/reject this scope and approve
+  or defer one exact inference/greedy-decision executable outcome.
+- No production code, test, environment, self-play, production evaluation,
+  real/external/platform data, broad P8 or P9-P12 work was added in this review.
+
 ## 2026-07-18 - v3.75
 
 - Implemented the exact `12AO` synthetic/local linear action-value model

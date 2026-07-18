@@ -14,6 +14,36 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0161 — Exact P8 Linear Model Training Review Closure
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Rationale and evidence:
+
+- Commit `870befb` conforms to every exact `12AO` file, API, model/input,
+  provenance, epoch, formula, update, output, error, test and forbidden-scope
+  rule.
+- All 125 approved tests, compile/diff checks and independent probes pass.
+- No correctness, scope, provenance, evidence or test blocker was found.
+
+Consequences:
+
+- Added `12AP` as the one exact implementation review.
+- The next decision must accept/reject this scope and directly approve or
+  defer one non-repetitive executable inference/decision outcome; another
+  training wrapper or boundary chain is forbidden.
+- No environment, self-play, production training/evaluation, real data,
+  strength claim, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Review closed; current-scope acceptance and next exact execution decision is
+current next.
+
 ## 2026-07-18 — DR-0160 — Exact P8 Linear Action-Value Model Training Implemented
 
 Decision:

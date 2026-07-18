@@ -67,6 +67,14 @@
 | Model-training smoke is overclaimed as production training or strength evidence. | Evidence / Scope | High | High | Fixed warnings and evidence grade explicitly exclude environment/self-play, production training and strength claims. | Open |
 | Another docs chain delays approved model-training code. | Governance / Delivery | High | Medium | Direct implementation is complete; the next task is one exact code review, not another boundary/proposal chain. | Closed |
 
+## 2026-07-18 — P8 linear model-training implementation review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Review closure is mistaken for production model training or strength evidence. | Evidence / Scope | High | High | `12AP` grades only exact fixed synthetic/local model-training review closure and explicitly denies those claims. | Open |
+| Successful review creates another training wrapper or planning chain. | Governance / Delivery | High | Medium | `10_NEXT` requires current-scope acceptance plus direct inference/decision approval or deferment; sibling boundaries are forbidden. | Mitigated |
+| Narrow tests miss formula or numerical drift. | Engineering / Quality | Medium | Low | Review reruns all 125 approved tests plus exact one/two/eight-epoch parameter/loss and adversarial provenance/type probes. | Mitigated |
+
 ## 2026-07-18 — P8 two-step sequence implementation review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
