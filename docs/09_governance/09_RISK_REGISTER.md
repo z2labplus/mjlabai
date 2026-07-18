@@ -9,6 +9,16 @@
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
 
+## 2026-07-18 — P4 bounded MahJax rollout implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| JAX eager execution makes a bounded round operationally impractical. | Engineering / Runtime | Medium | Realized | Compile `environment.step` exactly once with JIT; seed-0 focused and full tests complete on the checked CPU host. | Mitigated |
+| Rollout silently exceeds its bound or steps from a finished state. | Engineering / Correctness | High | Low | One explicit `for`, hard 256 cap, terminal checks, monotonic step assertions and a cap-exhaustion regression test. | Mitigated |
+| Legal-action trace omits options or chooses an unauthorized action. | Engineering / Correctness | High | Low | Every pre-state requires the exact bool 87-action mask; immutable trace stores the complete sorted legal tuple and selects its first item. | Mitigated |
+| One deterministic environment round is mistaken for self-play or strength. | Evidence / Scope | High | High | API warnings and governance grade only P4 single-round environment smoke evidence; no model participants or comparison claims. | Open |
+| Review restarts another documentation chain. | Governance / Delivery | High | Medium | Only one exact implementation review is allowed; closure must directly decide a material executable next outcome or stage status. | Mitigated |
+
 ## 2026-07-18 — P8 bounded policy-improvement sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

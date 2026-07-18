@@ -9,7 +9,7 @@
 | Logging | Full decision trace reproducible | Planned |
 | Synthetic transition contract smoke | Prove one authoritative strict-action match and immutable state progression | Implemented in `src/mjlabai/environment/synthetic_transition_smoke.py`; not a rules engine |
 | Proven local riichi environment path | Pin a maintained licensed environment exposing legal actions, state transition and observation | MahJax `v0.1.2` / commit `3f9cee1` / Apache-2.0 selected in `04J`; public init/observe/legal-step integration review-closed in `04K`; bounded single-round decision next |
-| Bounded single-round environment rollout | Prove repeated authoritative legal transitions reach one terminal raw outcome under a hard cap | Exact 256-cap JIT/lowest-legal rollout approved in `04L`; direct implementation next |
+| Bounded single-round environment rollout | Prove repeated authoritative legal transitions reach one terminal raw outcome under a hard cap | Exact 256-cap JIT/lowest-legal rollout implemented; seed 0 terminates after 94 transitions; exact code review next |
 
 ## Invalid environment examples
 

@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.96
+
+- Implemented the exact `04L` P4 MahJax single-round rollout smoke.
+- Added one six-symbol rollout module, package exports and 11 focused tests.
+- Seed 0 executes 94 environment-owned legal transitions under a 256 cap,
+  terminates without truncation and records zero raw/cumulative rewards plus
+  final scores `(250,250,250,250)`.
+- Validation passed: all 313 repository tests with two existing skips,
+  compile, dependency and diff checks.
+- New `10_NEXT` first item is one exact implementation review. No model,
+  training, production self-play, real data, Tenhou, strength, broad P8 or
+  P9-P12 work was added.
+
 ## 2026-07-18 - v3.95
 
 - Accepted the exact MahJax integration review-closed in `04K` as

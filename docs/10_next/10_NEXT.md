@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact approved P4 MahJax single-round rollout smoke.
+- [ ] Review the exact P4 MahJax single-round rollout smoke implementation.
 
 Current execution charter:
 
@@ -22,19 +22,22 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Execute exactly `04L` in the exact two source/test files plus package export
-  and direct governance synchronization. Keep dependency pins unchanged.
-- Use one `jax.jit(environment.step)`, one explicit `for` bounded at 256,
-  environment-owned legal masks and the lowest legal action only.
-- Record immutable complete legal/action/player trace plus terminal, raw reward,
-  cumulative reward and final-score diagnostics; pin the seed-0 94-step result.
+- Review commit `HEAD` against `04L`: exact six-symbol module surface, package
+  exports, frozen trace/result, pinned identity, one JIT step function, one
+  256-cap loop, complete legal masks, lowest-action policy, monotonic progress,
+  raw/cumulative rewards, final scores, errors and warnings.
+- Rerun focused/full tests, compile, `pip check`, diff and an independent
+  normalized seed-0 result/trace probe. Modify no production code or tests
+  unless a concrete blocker is first recorded.
 - No model/policy callback, reward shaping, multiple games, path/CLI, GPU,
   real data, Tenhou/platform access, training, production self-play/evaluation,
   strength claim, broad P8 or P9-P12.
-- Zero documentation/proposal gates remain before code. Stop on any exact cap,
-  API, pin or deterministic-result blocker instead of widening scope.
+- Only one review gate is allowed. If it closes, directly decide a materially
+  progressive executable next outcome or P4/P8 stage status; no new docs chain.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `04L`-approved P4 pinned MahJax single-round rollout smoke. Added `src/mjlabai/environment/mahjax_single_round_rollout_smoke.py`, its six package exports and 11 focused tests. One `jax.jit(environment.step)` plus one explicit `for` bounded at 256 follows complete environment-owned legal masks and selects the lowest legal index. Seed 0 records 94 immutable player/legal/action diagnostics, terminates without truncation, preserves raw/cumulative rewards `(0,0,0,0)` and final MahJax scores `(250,250,250,250)`. All 313 repository tests pass with two existing skips; compile, dependency and diff checks pass. No model, learning, production self-play/evaluation, real data, Tenhou, strength claim, broad P8 or P9-P12 work was added. One exact implementation review is next; another boundary chain is forbidden.
 
 - [x] 2026-07-18 Accepted commit `7ab90d5` review-closed in `04K` as current-scope complete and directly approved the exact bounded single-round rollout in `04L`. An independent pinned-runtime JIT probe proves seed 0 terminates after 94 legal transitions, without truncation, with raw/cumulative rewards `(0,0,0,0)` and final MahJax scores `(250,250,250,250)`. `04L` fixes exact files, six-symbol API, 256-step cap, one `jax.jit` step function, one bounded `for`, complete legal/action/player trace, raw outcome, thirteen test categories and evidence grade with zero gates before code. The eager exploratory path was stopped because repeated JAX compile overhead was operationally unsuitable; this is not a training or latency benchmark result. No repository code, real data, Tenhou, model output, training, self-play, evaluation, strength claim, broad P8 or P9-P12 work was added by this decision.
 

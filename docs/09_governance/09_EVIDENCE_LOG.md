@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P4 bounded MahJax single-round rollout implementation
+
+- Type: executable pinned local environment rollout smoke evidence.
+- Added `mahjax_single_round_rollout_smoke.py`, package exports and 11 focused
+  tests under the exact `04L` scope.
+- Seed-0 result: 94 complete environment-owned legal-action trace entries,
+  terminated true, truncated false, final and cumulative raw rewards all zero,
+  final scores `(250,250,250,250)` in MahJax hundred-point units.
+- Validation: 11 focused tests and all 313 repository tests OK with two
+  existing environment-gated skips; compile, `pip check` and diff checks pass.
+- Evidence grade: P4 pinned local single-round environment rollout smoke
+  evidence only. Exact implementation review remains next; this is not
+  self-play, training/evaluation, model-strength, Tenhou or P8-P12 evidence.
+
 ### 2026-07-18 — P4 bounded MahJax rollout approval probe
 
 - Type: internal current-scope acceptance, executable exploratory probe and

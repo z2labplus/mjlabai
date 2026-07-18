@@ -14,6 +14,34 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0181 — Complete Exact MahJax Single-Round Rollout
+
+Decision:
+
+```text
+Complete the exact `04L` implementation and require one exact code review next.
+```
+
+Rationale and evidence:
+
+- The implementation uses one JIT step function and one explicit loop bounded
+  by the approved 256-transition cap.
+- Seed 0 deterministically reaches terminal after 94 lowest-legal-action
+  transitions and records the exact approved raw outcome.
+- Eleven focused tests and all 313 repository tests pass with two existing
+  environment-gated skips; compile, dependency and diff checks pass.
+
+Consequences:
+
+- P4 now has executable one-round environment evidence, beyond one transition.
+- One code review must verify exact `04L` conformance before acceptance.
+- No self-play, training, model strength, real data, Tenhou or P8-P12 approval
+  follows from this result.
+
+Status:
+
+Implemented; exact code review is current next.
+
 ## 2026-07-18 — DR-0180 — Approve Bounded MahJax Single-Round Rollout
 
 Decision:

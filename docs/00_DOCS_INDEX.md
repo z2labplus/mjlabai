@@ -58,7 +58,8 @@ The exact `04J` integration is implemented in
 `src/mjlabai/environment/mahjax_integration_smoke.py` with focused tests in
 `tests/environment/test_mahjax_integration_smoke.py`. It pins the package and
 JAX CPU runtime and executes one environment-owned legal transition. This is
-P4 local integration smoke evidence only; its exact code review is next.
+P4 local integration smoke evidence only; its exact code review closed in
+`04K`.
 
 `docs/04_rl_selfplay/04K_P4_MAHJAX_INTEGRATION_SMOKE_IMPLEMENTATION_REVIEW.md`
 reviews commit `7ab90d5`, records `A. Review can close`, confirms exact pins,
@@ -71,6 +72,14 @@ the `04J`/`04K` integration scope and directly approves one exact JIT-compiled,
 256-step-capped, lowest-legal-action single-round rollout with complete trace,
 raw outcome and seed-0 acceptance values. Zero gates remain before code. It is
 task-approval evidence only, not self-play or strength evidence.
+
+The exact `04L` rollout is implemented in
+`src/mjlabai/environment/mahjax_single_round_rollout_smoke.py` with focused
+tests in `tests/environment/test_mahjax_single_round_rollout_smoke.py`. It
+uses one JIT step function and one 256-cap loop to record all 94 seed-0 legal
+transitions, raw/cumulative rewards and final scores. One exact implementation
+review is next. This is P4 single-round environment smoke evidence only, not
+self-play, training, Tenhou or strength evidence.
 
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
