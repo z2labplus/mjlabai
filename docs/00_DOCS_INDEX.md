@@ -70,6 +70,7 @@ docs/12_technical_plan/12AJ_P8_FIXED_POLICY_TABLE_UPDATE_SMOKE_IMPLEMENTATION_RE
 docs/12_technical_plan/12AK_P8_POLICY_TABLE_ACCEPTANCE_AND_TWO_PASS_SEQUENCE_APPROVAL_DECISION.md
 docs/12_technical_plan/12AL_P8_TWO_PASS_POLICY_TABLE_SEQUENCE_IMPLEMENTATION_REVIEW.md
 docs/12_technical_plan/12AM_P8_TWO_PASS_ACCEPTANCE_AND_BOUNDED_TABULAR_TRAINER_APPROVAL_DECISION.md
+docs/12_technical_plan/12AN_P8_BOUNDED_TABULAR_TRAINER_IMPLEMENTATION_REVIEW.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -457,6 +458,14 @@ smoke. It fixes a hard eight-pass cap, files, five-symbol API, inputs, output,
 tests and forbidden scope with zero gates before code. It is task-approval
 evidence only, not model/network training, self-play, strength or P9-P12
 evidence.
+
+`docs/12_technical_plan/12AN_P8_BOUNDED_TABULAR_TRAINER_IMPLEMENTATION_REVIEW.md`
+reviews commit `cd9cdc1` against `12AM`, records `A. Review can close`,
+confirms the hard pass bound, ordered helper reuse, continuity, global ID
+uniqueness, frozen output, errors, exports, warnings and forbidden-scope
+compliance, and reports 112 passing tests plus independent probes. It is
+review-closure evidence only, not model/network or production training,
+self-play, model-strength or P9-P12 evidence.
 
 ## Supervised-policy files
 

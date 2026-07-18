@@ -2,7 +2,8 @@
 
 ## Current stage
 
-P8 exact bounded synthetic/local tabular trainer smoke implementation review.
+P8 bounded trainer current-scope acceptance and next exact executable-task
+decision after `12AN` review closure.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -99,8 +100,10 @@ table helper. That exact implementation is complete in the approved module/
 export/test files and 101 approved tests pass. `12AL` reviews it, records
 `A. Review can close` and finds no blocker. `12AM` accepts that exact scope and
 approves one bounded trainer with zero remaining gates. The exact trainer is
-now implemented and passes 112 tests. The current first task is its one code
-review; no sibling proposal or boundary may precede it.
+now implemented and passes 112 tests. `12AN` reviews it, records `A. Review
+can close` and finds no blocker. The current first task must accept/reject that
+scope and directly approve or defer one materially progressive executable P8
+outcome; no sibling proposal or boundary may precede it.
 Production code
 outside that exact approval, fixtures, data files, manifest schemas/loaders/
 artifacts, source approval,
@@ -425,7 +428,8 @@ P8 exact fixed two-pass policy-table update sequence = implemented in the three 
 P8 exact fixed two-pass sequence implementation review = closed in `12AL`; no blocker
 P8 exact fixed two-pass scope = accepted as current-scope complete in `12AM`
 P8 bounded synthetic/local tabular trainer = implemented exactly as approved in `12AM`; 112 tests pass
-Next = review the exact trainer implementation; no sibling boundary chain
+P8 bounded trainer implementation review = closed in `12AN`; no blocker
+Next = current-scope acceptance plus one exact executable-task approval/defer decision
 ```
 
 ## AI role
@@ -434,11 +438,10 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Review the exact `12AM`-approved bounded synthetic/local tabular trainer.
-Verify the ordered 1-through-8 loop, reviewed table-helper calls, state
-continuity, global ID uniqueness, immutable output, errors, exports, tests and
-warnings without changing code unless a concrete blocker exists. Broad P8,
-source/real-data work,
+Accept or reject the exact trainer scope closed in `12AN` and directly approve
+or defer one exact synthetic/local linear action-value model training smoke.
+The decision must fix all executable boundaries in one record and leave zero
+gates before code if approved. Broad P8, source/real-data work,
 datasets, production training/evaluation, self-play/league, model/artifact use,
 model-output integration, CLI, P9-P12 and strength claims remain unapproved.
 

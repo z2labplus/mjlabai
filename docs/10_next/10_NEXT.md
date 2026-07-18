@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review exact bounded P8 synthetic/local tabular trainer smoke implementation.
+- [ ] Decide current-scope acceptance and directly approve or defer exact minimal P8 synthetic/local linear action-value model training smoke.
 
 Current execution charter:
 
@@ -22,21 +22,22 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review commit `HEAD` against the exact `12AM` approval and only the three
-  approved source/test files plus direct governance synchronization.
-- Verify the five-symbol API, exact outer tuple, hard 1-through-8 pass bound,
-  ordered table-helper loop, continuity, global ID uniqueness, frozen output,
-  error chaining, exports, tests, warnings and evidence grade.
-- Run the 11 focused trainer tests, the 101 approved regressions, compile/diff
-  checks and small in-memory adversarial probes.
-- Do not modify production code or tests unless a concrete blocker is found.
-  Do not create another boundary/proposal chain or approve a sibling feature.
-- Do not add more than eight passes, an unbounded loop, shuffle/minibatch/
-  retry/early-stop, persistence, fixture/data, replay/environment/self-play,
-  model/network/optimizer/checkpoint, production evaluation, path/CLI,
-  dependency, real/external/platform data, broad P8 or P9-P12.
+- Accept or reject only the exact `12AM` implementation review-closed in
+  `12AN`; do not re-review or modify production code/tests.
+- If accepted, make one decision that directly approves or defers one exact
+  standard-library in-memory synthetic/local linear action-value model
+  training smoke. Fix dimensions, formulas, update cap, files, API, immutable
+  inputs/outputs, tests, rollback, stop conditions and evidence grade.
+- This decision must leave zero gates before code if it approves the task; no
+  proposal, sibling boundary or extra review may intervene.
+- Do not implement the model task in this decision. Do not approve an
+  environment, self-play, replay buffer, real/external/platform data,
+  persistence/checkpoint, CLI/path ingestion, dependency, production training/
+  evaluation, strength claim, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `cd9cdc1b9f968955d723d70cdf045ce03608c10f` against the exact `12AM` approval in `12AN`. Decision: `A. Review can close.` Confirmed exact approved files/API, exact 1-through-8 outer tuple, hard pass cap, ordered reviewed table-helper calls, pass-state continuity, global record-ID uniqueness, pass-indexed chained errors, deterministic frozen output, exports, warnings and forbidden-scope compliance. Eleven trainer tests and 101 approved regressions pass; compile/diff checks and independent one/two/eight-pass, tuple-subclass, nine-pass, duplicate-ID and non-mutation probes pass. No production code or test was modified and no blocker was found. The next decision must accept or reject this scope and directly approve or defer one materially progressive executable P8 task; a sibling trainer wrapper or another boundary chain is forbidden.
 
 - [x] 2026-07-18 Implemented the exact `12AM`-approved bounded P8 synthetic/local tabular trainer smoke. Added `src/mjlabai/rl/synthetic_tabular_trainer_smoke.py`, exported its five approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_tabular_trainer_smoke.py`. The frozen helper accepts only an exact tuple of 1 through 8 reviewed traces, iterates in input order, calls the reviewed table helper once per pass, carries final table state into the next pass, rejects duplicate record IDs globally, wraps pass failures with chained causes and returns immutable training history. Eleven focused trainer tests and 101 approved regressions pass; compile and diff checks pass. No unbounded loop, shuffle/minibatch/early-stop, persistence, fixture/data, replay/environment/self-play, model/network/optimizer/checkpoint, production evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is bounded synthetic/local tabular training-loop smoke evidence only, not model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 

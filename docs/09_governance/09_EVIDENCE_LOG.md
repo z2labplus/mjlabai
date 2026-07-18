@@ -8,6 +8,19 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 bounded tabular trainer implementation review closure
+
+- Type: internal exact code-review closure evidence.
+- Added `12AN`; decision: `A. Review can close.`
+- Evidence: exact `12AM` file/API/input/bound/helper/continuity/identity/error/
+  output/test and forbidden-scope compliance, 112 passing tests, compile/diff
+  checks and independent probes.
+- No production code or test was modified and no blocker was found.
+- Evidence grade: P8 exact bounded synthetic/local tabular training-loop smoke
+  implementation review closure evidence only; not model/network training,
+  environment, self-play, production training/evaluation, model-strength or
+  P9-P12 evidence.
+
 ### 2026-07-18 — P8 bounded synthetic/local tabular trainer implementation
 
 - Type: internal executable bounded synthetic/local training-loop smoke

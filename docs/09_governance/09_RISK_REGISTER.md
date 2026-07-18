@@ -49,6 +49,14 @@
 | Trainer smoke is overclaimed as model/network or production training evidence. | Evidence / Scope | High | High | Warnings and evidence grade explicitly limit claims to bounded synthetic/local tabular loop smoke. | Open |
 | Another docs chain delays the approved trainer. | Governance / Delivery | High | Medium | Direct implementation is complete; the next task is one exact code review, not another boundary/proposal chain. | Closed |
 
+## 2026-07-18 — P8 bounded tabular trainer implementation review risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Review closure is mistaken for model/network training or strength evidence. | Evidence / Scope | High | High | `12AN` grades only exact bounded synthetic/local tabular-loop review closure and explicitly denies those claims. | Open |
+| Successful review creates another planning chain instead of progressive code. | Governance / Delivery | High | Medium | `10_NEXT` requires current-scope acceptance plus direct approval/deferment of one exact model-training smoke; sibling boundaries are forbidden. | Mitigated |
+| Narrow tests miss cap, identity or mutation regressions. | Engineering / Quality | Medium | Low | Review reruns all 112 approved tests plus one/two/eight-pass, tuple-subclass, nine-pass, duplicate-ID and non-mutation probes. | Mitigated |
+
 ## 2026-07-18 — P8 two-step sequence implementation review risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

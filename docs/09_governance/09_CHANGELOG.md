@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.73
+
+- Reviewed commit `cd9cdc1` against the exact `12AM` approval in `12AN`.
+- Decision: `A. Review can close.` No blocker or code/test fix is required.
+- Confirmed the hard pass cap, ordered helper reuse, continuity, ID uniqueness,
+  frozen output, errors, exports, warnings and forbidden-scope compliance.
+- Validation passed: 11 trainer tests, 101 approved regressions, compile/diff
+  checks and independent one/two/eight-pass adversarial probes.
+- New `10_NEXT` first item must directly accept/reject this scope and approve
+  or defer one exact non-repetitive executable P8 outcome.
+- No production code, test, environment, self-play, model, production
+  training/evaluation, real/external/platform data, broad P8 or P9-P12 work was
+  added in this review.
+
 ## 2026-07-18 - v3.72
 
 - Implemented the exact `12AM` bounded synthetic/local tabular trainer smoke.
