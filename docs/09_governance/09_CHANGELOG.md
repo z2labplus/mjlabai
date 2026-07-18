@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.19
+
+- Implemented the exact `04W` P8 categorical-MLP seeds `(1,3)` two-round
+  sequential all-project training smoke and nine focused tests.
+- Generalized only the reviewed private rollout helper to explicit seed; all
+  nine existing seed-1 public-result tests still pass unchanged.
+- Legal 77/84-step rounds have nonzero four-seat returns and exactly two direct
+  actor-indexed `0.01` updates. Both objectives decrease and all four initial-
+  to-final parameter deltas are nonzero.
+- Fresh versus carried seed-3 objective proves direct parameter continuity;
+  post-update-2 seed-3 replay remains identical and legal.
+- Validation passed: nine new focused, nine old focused and all 422 explicit
+  tests with two skips; compile/dependency/diff/direct probes pass. No third
+  round/update, replay, production evaluation, real data, strength/P9-P12 added.
+
 ## 2026-07-18 - v4.18
 
 - Added `04W`; reviewed commit `d59f4a1` against exact `04V` approval.

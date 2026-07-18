@@ -28,14 +28,14 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 direct implementation of the exact `04W`-approved categorical-MLP two-round
-sequential all-project training smoke. `04W` review-closes commit `d59f4a1`
-after confirming the first shared update and all 413 explicit tests. The next
-code executes exact seeds `(1,3)` with legal 77/84-step rounds, one actor-
-indexed `0.01` update after each terminal outcome and direct shared-parameter
-continuity. The seed-3 carried objective differs from fresh parameters and both
-updates change all four arrays. Zero planning gates remain. This is bounded
-local repeated-update evidence, not production self-play, evaluation,
+P8 exact implementation review of the `04W`-approved categorical-MLP two-round
+sequential all-project training smoke. Exact seeds `(1,3)` complete legal
+77/84-step rounds with one actor-indexed `0.01` update after each terminal
+outcome and direct shared-parameter continuity. The seed-3 carried objective
+differs from fresh parameters; both updates and all final parameter groups are
+nonzero. Nine new focused, nine old focused and all 422 explicit tests pass
+with two skips. One code review is next, not another planning chain. This is
+bounded local repeated-update evidence, not production self-play, evaluation,
 improvement or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted

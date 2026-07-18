@@ -196,12 +196,10 @@ def _legal_actions(mask: object) -> Tuple[int, ...]:
     return actions
 
 
-def _collect_all_project_round(parameters, jax, jnp, mahjax):
+def _collect_all_project_round(seed, parameters, jax, jnp, mahjax):
     try:
         init_key, policy_key = jax.random.split(
-            jax.random.PRNGKey(
-                MAHJAX_CATEGORICAL_MLP_ALL_PROJECT_POLICY_GRADIENT_SEED
-            )
+            jax.random.PRNGKey(seed)
         )
         environment = mahjax.make(
             _MAHJAX_ENVIRONMENT_ID,
@@ -393,7 +391,13 @@ def run_mahjax_categorical_mlp_all_project_policy_gradient_smoke(
             f"mahjax version must be {_MAHJAX_PACKAGE_VERSION!r}"
         )
 
-    pre = _collect_all_project_round(parameters, jax, jnp, mahjax)
+    pre = _collect_all_project_round(
+        MAHJAX_CATEGORICAL_MLP_ALL_PROJECT_POLICY_GRADIENT_SEED,
+        parameters,
+        jax,
+        jnp,
+        mahjax,
+    )
     pre_seat_counts = _seat_decision_counts(pre.actor_trace)
     if (
         len(pre.action_trace) != 77
@@ -445,7 +449,13 @@ def run_mahjax_categorical_mlp_all_project_policy_gradient_smoke(
             "shared update diagnostics differ from the reviewed probe"
         )
 
-    post = _collect_all_project_round(update.parameters, jax, jnp, mahjax)
+    post = _collect_all_project_round(
+        MAHJAX_CATEGORICAL_MLP_ALL_PROJECT_POLICY_GRADIENT_SEED,
+        update.parameters,
+        jax,
+        jnp,
+        mahjax,
+    )
     post_seat_counts = _seat_decision_counts(post.actor_trace)
     post_replay_identical = (
         post.actor_trace == pre.actor_trace

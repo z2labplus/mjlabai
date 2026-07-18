@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — Two sequential shared all-project raw-outcome updates
+
+- Type: executable P8 local repeated shared-policy parameter-continuity and
+  two-update smoke evidence.
+- Exact seeds `(1,3)` complete 77/84 legal terminal actions with seat counts
+  `(21,22,17,17)/(23,22,19,20)` and nonzero four-seat cumulative raw outcomes.
+- One actor-indexed `0.01` update follows each round. Objectives change
+  `0.09366636->0.09301171` and `-0.05535889->-0.05543957`; all four final
+  parameter deltas are nonzero.
+- Fresh seed-3 objective `-0.05533995` differs from carried `-0.05535889`,
+  proving round-1 arrays feed round 2. Post-update-2 replay remains identical.
+- Validation: nine new focused, nine old focused and all 422 explicit tests
+  pass with two skips; compile/dependency/diff/direct probes pass.
+- Evidence grade: P8 local exact two-round repeated-update smoke only; not
+  production self-play, evaluation, improvement, league or strength.
+
 ### 2026-07-18 — All-project update review and two-round continuity probe
 
 - Type: exact code-review closure, current-scope acceptance and direct bounded

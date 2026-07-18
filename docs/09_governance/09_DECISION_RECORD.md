@@ -485,6 +485,37 @@ Status:
 
 Approved; direct two-round all-project training implementation is current next.
 
+## 2026-07-18 — DR-0204 — Complete Two-Round Shared Four-Seat Training
+
+Decision:
+
+```text
+Complete the exact `04W` seeds-(1,3) two-round sequential all-project training
+smoke and require one exact implementation review before wider execution.
+```
+
+Rationale and evidence:
+
+- The private rollout helper now accepts explicit seed while all reviewed public
+  seed-1 behavior remains unchanged.
+- Exact ordered legal rounds apply one actor-indexed update each and carry arrays
+  directly, with fresh/carried objective evidence and nonzero final deltas.
+- Both terminal outcomes are nonzero for every seat and post round-2 replay is
+  deterministic.
+- Nine new focused, nine old focused and all 422 tests pass with two skips.
+
+Consequences:
+
+- The repository now executes repeated shared four-seat environment training
+  across two distinct local rounds.
+- This is still too small and has no independent before/after evaluation, so no
+  policy-improvement or strength conclusion is permitted.
+- Exactly one code review is next; another docs chain is barred.
+
+Status:
+
+Implemented; exact two-round all-project training review is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

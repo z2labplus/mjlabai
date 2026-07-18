@@ -9,6 +9,17 @@
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
 
+## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Private seed refactor changes reviewed seed-1 behavior. | Engineering / Regression | Critical | Low | Existing nine-test public seed-1 suite passes unchanged alongside all 422 repository tests. | Mitigated |
+| Round 2 silently reinitializes parameters. | ML / Continuity | Critical | Low | One loop assigns `parameters = update.parameters`; fresh/carried seed-3 objectives and final deltas prove continuity. | Mitigated |
+| Actor-indexed return tensors leak across rounds. | ML / Credit assignment | Critical | Low | Each loop creates a separate terminal trajectory and calls reviewed update once; exact round outcomes/objectives are pinned. | Mitigated |
+| Two-item loop expands into unbounded training. | Governance / Scope | High | Low | Seeds are exact constant `(1,3)`, round/update counts equal two and source/tests prohibit third-round behavior. | Mitigated |
+| Repeated loss decrease is mistaken for policy improvement. | Evidence / Scope | Critical | High | Both post replays remain unchanged; warnings deny evaluation/quality/stable-dan/LuckyJ claims. | Open |
+| Review continues narrow wrappers rather than adding independent evaluation. | Governance / Delivery | High | Medium | Exactly one code review is next; closure must approve/defer bounded multi-round training plus fixed independent evaluation. | Mitigated |
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

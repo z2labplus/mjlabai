@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact MahJax categorical-MLP two-round sequential all-project-seat raw-outcome training smoke.
+- [ ] Review the exact MahJax categorical-MLP two-round sequential all-project-seat raw-outcome training smoke implementation.
 
 Current execution charter:
 
@@ -22,19 +22,34 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Execute exact `04W` in its three approved source/test files plus governance.
-- Generalize only the reviewed private rollout helper to receive explicit seed;
-  preserve the public `04V` result exactly.
-- Execute ordered seeds `(1,3)` with one direct shared-parameter update after
-  each legal terminal round; exactly two rounds and two updates.
-- Pin 77/84 transitions, `(21,22,17,17)/(23,22,19,20)` seat counts, exact
-  outcomes, objective pairs, per-step and final parameter deltas.
-- Prove round-2 receives round-1 arrays and post-update seed-3 replay remains
-  identical; frozen summary/private arrays only.
-- No third round/update, replay, baseline/critic/discount/shaping, persistence,
-  external/real data, production self-play/evaluation, strength or P9-P12.
+- Review only the exact `04W` implementation and direct governance.
+- Verify the private seed generalization preserves the complete public `04V`
+  seed-1 result and no other reviewed behavior changes.
+- Verify exact ordered seeds `(1,3)`, two legal terminal rounds, two actor-
+  indexed updates, direct parameter carry and exact trajectories/outcomes.
+- Verify objective pairs, per-step/final deltas, fresh-versus-carried seed-3
+  objective and post-update-2 replay; output remains frozen and array-free.
+- Change code/tests only for a concrete blocker. On closure, directly approve
+  or defer one bounded multi-round training plus independent fixed-evaluation
+  task; another docs chain is forbidden.
+- No third round/update in this implementation, replay, persistence, external/
+  real data, production self-play/evaluation, strength or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `04W`-approved categorical-MLP two-
+  round sequential all-project training smoke. The reviewed private rollout
+  helper now takes an explicit seed while the public seed-1 result remains
+  unchanged. Exact seeds `(1,3)` complete legal 77/84-step rounds with seat
+  counts `(21,22,17,17)/(23,22,19,20)` and nonzero four-seat raw returns.
+  Exactly two actor-indexed `0.01` updates carry arrays directly; objective
+  pairs are `0.09366636->0.09301171` and
+  `-0.05535889->-0.05543957`. All four final parameter groups change and
+  post-update seed-3 replay is identical. Nine new focused, nine old focused
+  and all 422 explicit tests pass with two skips; compile/dependency/diff and
+  direct probes pass. No third round/update, replay, persistence, production
+  self-play/evaluation, real data, strength or P9-P12 work was added. One exact
+  code review is next.
 
 - [x] 2026-07-18 Reviewed commit `d59f4a1` against exact `04V` approval in
   `04W`. Decision: `A. Review can close.` Confirmed exact six-symbol API,

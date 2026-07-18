@@ -245,6 +245,15 @@ two-round sequence with direct parameter continuity and two updates. This is
 review/task-approval evidence, not production self-play, evaluation,
 improvement or strength evidence.
 
+The exact `04W` two-round task is implemented in
+`src/mjlabai/rl/mahjax_categorical_mlp_two_round_policy_gradient_sequence_smoke.py`
+with focused tests in
+`tests/rl/test_mahjax_categorical_mlp_two_round_policy_gradient_sequence_smoke.py`.
+The reviewed private rollout helper now accepts explicit seed; seeds `(1,3)`
+apply two direct actor-indexed updates with parameter continuity. One exact code
+review is next. This is bounded repeated-update evidence, not production self-
+play, evaluation, improvement or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
