@@ -1,5 +1,22 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.81
+
+- Implemented the exact `12AS` one-step synthetic/local policy-improvement
+  closed-loop smoke.
+- Added the approved closed-loop module and 10 focused tests, and exported its
+  four public symbols through `mjlabai.rl`.
+- Validated both candidate batches, bound controlled action to one selected
+  batch, called reviewed decision/training/decision helpers in exact order and
+  returned frozen before/train/after diagnostics.
+- Validation passed: 10 closed-loop tests, 136 approved regressions, compile
+  checks and `git diff --check`.
+- New `10_NEXT` first item is one exact implementation review; no sibling
+  boundary or proposal may intervene.
+- No general environment/episode, replay, self-play, stochastic exploration,
+  persistence, production evaluation, real/external/platform data, broad P8 or
+  P9-P12 work was added.
+
 ## 2026-07-18 - v3.80
 
 - Accepted the exact `12AQ`/`12AR` greedy-decision diagnostic as current-scope

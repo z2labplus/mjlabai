@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 one-step synthetic/local policy-improvement implementation
+
+- Type: internal executable fixed closed-loop smoke evidence.
+- Added only the `12AS`-approved closed-loop module, package exports, focused
+  tests and direct governance synchronization.
+- The helper runs one reviewed before decision, trains only one selected safe
+  four-transition batch for one epoch and runs one reviewed after decision.
+- Validation: 10 focused closed-loop tests and 136 approved regressions passed;
+  compile and diff checks passed.
+- Evidence grade: P8 exact one-step synthetic/local policy-improvement closed-
+  loop smoke evidence only; implementation review remains next. This is not a
+  general environment/self-play system, production evaluation, policy-quality,
+  model-strength, Tenhou, stable-dan, LuckyJ or P9-P12 evidence.
+
 ### 2026-07-18 — P8 greedy-decision acceptance and one-step closed-loop approval
 
 - Type: internal current-scope acceptance / exact closed-loop task approval

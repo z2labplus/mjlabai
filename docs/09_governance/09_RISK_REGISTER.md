@@ -97,11 +97,11 @@
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
 |---|---|---|---|---|---|
-| One-step smoke silently becomes a general environment or episode loop. | Governance / Scope | High | Medium | `12AS` fixes two candidate batches, one selected batch, one training epoch and exactly two decision calls; no loop/environment API is approved. | Open |
-| Wrong candidate batch is trained for the selected action. | Engineering / Correctness | High | Medium | First-transition action binding, global IDs, selected IDs and helper-call arguments are required and focused-tested. | Open |
-| Closed-loop code copies reviewed decision or training formulas. | Engineering / Correctness | High | Low | It must call reviewed helpers exactly two and one times; tests inspect call order and reject formula copies. | Open |
+| One-step smoke silently becomes a general environment or episode loop. | Governance / Scope | High | Medium | Implementation has no loop/environment API and fixes exactly two candidate batches, one selected batch, one epoch and two decision calls. | Mitigated |
+| Wrong candidate batch is trained for the selected action. | Engineering / Correctness | High | Medium | First-action binding, eight global IDs, selected IDs and exact trainer call arguments are implemented and tested for actions 0 and 1. | Mitigated |
+| Closed-loop code copies reviewed decision or training formulas. | Engineering / Correctness | High | Low | Implementation calls reviewed helpers exactly decision/training/decision; source tests reject copied Q/TD/greedy formulas. | Mitigated |
 | Action change is overclaimed as policy improvement or strength evidence. | Evidence / Scope | High | High | Fixed warnings classify it as one-step synthetic/local smoke only and explicitly deny policy-quality/strength claims. | Open |
-| Another docs chain delays approved closed-loop code. | Governance / Delivery | High | Medium | `12AS` records zero remaining gates and puts direct implementation first in `10_NEXT`. | Mitigated |
+| Another docs chain delays approved closed-loop code. | Governance / Delivery | High | Medium | Direct implementation is complete; the next task is one exact code review, not another boundary/proposal chain. | Closed |
 
 ## 2026-07-18 — P8 two-step sequence implementation review risks
 

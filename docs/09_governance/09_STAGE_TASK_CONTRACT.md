@@ -3,7 +3,7 @@
 ## Current stage
 
 P8 exact one-step synthetic/local policy-improvement closed-loop smoke
-implementation approved by `12AS`.
+implementation review.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -109,8 +109,9 @@ directly approves the greedy-decision diagnostic with zero remaining gates.
 The exact implementation is complete and passes 136 tests. `12AR` reviews it,
 records `A. Review can close` and finds no blocker. `12AS` accepts that exact
 scope and directly approves the one-step closed loop with zero remaining
-gates. The current first task is direct implementation; no sibling proposal,
-boundary, review or approval may precede it.
+gates. The exact implementation is complete and passes 146 tests. The current
+first task is its one code review; no sibling proposal or boundary may precede
+it.
 Production code
 outside that exact approval, fixtures, data files, manifest schemas/loaders/
 artifacts, source approval,
@@ -446,7 +447,8 @@ P8 exact synthetic/local inference and greedy-decision diagnostic = implemented 
 P8 exact greedy-decision implementation review = closed in `12AR`; no blocker
 P8 exact greedy-decision scope = accepted as current-scope complete in `12AS`
 P8 exact one-step synthetic/local policy-improvement closed loop = directly approved in `12AS`; zero gates remain before code
-Next = implement the exact `12AS` closed-loop task; no sibling boundary chain
+P8 exact one-step synthetic/local policy-improvement closed loop = implemented in the three `12AS`-approved files; 146 tests pass
+Next = review the exact `12AS` closed-loop implementation; no sibling boundary chain
 ```
 
 ## AI role
@@ -455,9 +457,10 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Implement the exact `12AS`-approved one-step synthetic/local policy-
-improvement closed loop. Reuse the reviewed before/after decision helper and
-one reviewed training call on only the selected candidate batch. Broad P8,
+Review the exact `12AS`-approved one-step synthetic/local policy-improvement
+closed-loop implementation. Verify candidate validation, action binding,
+helper order, selected IDs, immutable output, errors, exports, tests and
+warnings without changing code unless a concrete blocker exists. Broad P8,
 source/real-data work,
 datasets, production training/evaluation, self-play/league, model/artifact use,
 model-output integration, CLI, P9-P12 and strength claims remain unapproved.

@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement exact P8 one-step synthetic/local policy-improvement closed-loop smoke only.
+- [ ] Review exact P8 one-step synthetic/local policy-improvement closed-loop smoke implementation.
 
 Current execution charter:
 
@@ -22,21 +22,23 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This first decision-training-decision closed loop is directly approved by
-  `12AS`; do not insert another proposal, boundary, review or approval task.
-- Create/modify only `src/mjlabai/rl/__init__.py`,
-  `src/mjlabai/rl/synthetic_one_step_policy_improvement_smoke.py`,
-  `tests/rl/test_synthetic_one_step_policy_improvement_smoke.py` and direct
-  governance synchronization.
-- Implement the exact four-symbol API, exact model/probes/two candidate
-  batches, action-to-batch binding, decision/trainer/decision helper sequence,
-  frozen output, 10 test categories and evidence grade in `12AS`.
+- Review commit `HEAD` against the exact `12AS` approval and only the three
+  approved source/test files plus direct governance synchronization.
+- Verify the four-symbol API, exact model/probes/two batches, full candidate
+  validation, action binding, decision/trainer/decision helper order, selected
+  IDs, frozen output, error wrapping, tests, warnings and evidence grade.
+- Run the 10 focused closed-loop tests, the 136 approved regressions,
+  compile/diff checks and small independent action-0/action-1/adversarial probes.
+- Do not modify production code or tests unless a concrete blocker is found.
+  Do not create another boundary/proposal chain or approve a sibling feature.
 - Do not add a general environment/transition function, episode/multiple
   steps, self-play, stochastic exploration, replay, dynamic batches, model
   loading, persistence/checkpoint, production evaluation, path/CLI,
   dependency, real/external/platform data, broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `12AS`-approved P8 one-step synthetic/local policy-improvement closed-loop smoke. Added `src/mjlabai/rl/synthetic_one_step_policy_improvement_smoke.py`, exported its four approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_one_step_policy_improvement_smoke.py`. The frozen deterministic helper validates both exact action-indexed four-transition candidate batches, runs the reviewed before-decision helper, trains only the batch selected by controlled probe 0 for exactly one reviewed epoch, and runs the reviewed after-decision helper on the same probes. It wraps before/training/after errors by stage, preserves selected IDs and reports controlled action change without copying decision or TD formulas. Ten focused closed-loop tests and 136 approved regressions pass; compile and diff checks pass. No general environment/transition function, episode/multiple steps, replay, self-play, stochastic exploration, dynamic batches, model loading, persistence/checkpoint, production evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is one-step synthetic/local closed-loop smoke evidence only, not policy-quality or model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 
 - [x] 2026-07-18 Accepted the exact `12AQ` implementation review-closed in `12AR` as current-scope complete and directly approved the first decision-training-decision closed-loop smoke in `12AS`. The selected outcome starts from one frozen model, runs the reviewed greedy diagnostic on three probes, uses controlled probe 0 to select exactly one of two project-authored four-transition batches, runs the reviewed trainer for exactly one epoch, and reruns the reviewed diagnostic on the same probes. `12AS` fixes exact files, four-symbol API, input/batch/action binding, helper order, output, 10 test categories and evidence grade; zero gates remain before code. No code, test, fixture/data, general environment/episode, replay, self-play, stochastic exploration, model loading, persistence/checkpoint, production evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added in this decision. The next task is direct closed-loop implementation, not another docs gate.
 

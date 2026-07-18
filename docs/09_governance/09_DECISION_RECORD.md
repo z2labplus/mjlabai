@@ -14,6 +14,35 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0166 — Exact P8 One-Step Policy Improvement Implemented
+
+Decision:
+
+```text
+Implement the exact `12AS` one-step synthetic/local policy-improvement closed-
+loop smoke and advance directly to one code-review gate.
+```
+
+Rationale and evidence:
+
+- The task had zero remaining approval gates and fixed three exact source/test
+  files plus direct governance synchronization.
+- The implementation forms the first reviewed decision-training-decision loop
+  without adding a general environment, episode or self-play system.
+- Ten focused tests plus 136 approved regressions pass; compile and diff checks
+  pass.
+
+Consequences:
+
+- A fixed one-step synthetic/local policy-improvement loop artifact now exists.
+- The next task is its one exact implementation review, not a new boundary.
+- No general environment, self-play, production evaluation, persistence, real
+  data, strength, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Implemented; exact code review is current next.
+
 ## 2026-07-18 — DR-0165 — Greedy Decision Acceptance And Closed-Loop Approval
 
 Decision:
