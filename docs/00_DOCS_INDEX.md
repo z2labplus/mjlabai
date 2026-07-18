@@ -121,6 +121,15 @@ environment-backed rule-policy imitation parameter training with zero gates
 before code. It is bridge review and bounded training-task approval evidence,
 not production training or strength evidence.
 
+The exact `04O` training is implemented in
+`src/mjlabai/supervised/mahjax_rule_policy_imitation_training_smoke.py` with
+focused tests in
+`tests/supervised/test_mahjax_rule_policy_imitation_training_smoke.py`. It
+collects separate seed-0/seed-1 public decisions in memory and applies 16
+deterministic full-batch masked-cross-entropy gradient updates. It returns a
+frozen summary only. One exact implementation review is next; this is local
+training-smoke evidence, not production training or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

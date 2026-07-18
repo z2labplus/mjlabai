@@ -14,6 +14,34 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0188 — Complete First Environment-Backed Gradient Smoke
+
+Decision:
+
+```text
+Complete the exact `04O` in-memory bundled-rule-policy imitation training
+smoke and require one exact implementation review before a next expansion.
+```
+
+Rationale and evidence:
+
+- Exact seed-separated 54/64 public decisions are collected and legal-checked.
+- Sixteen deterministic full-batch gradient steps reduce train/eval masked
+  loss, improve held-out seed-1 imitation accuracy and change parameters.
+- Focused tests pin determinism, source bounds, metrics and no persistence.
+
+Consequences:
+
+- The project has executed real gradient-based parameter updates against an
+  environment-backed teacher trace for the first time.
+- The result remains a tiny local imitation diagnostic, not policy-quality,
+  model-strength, production training, self-play or Tenhou evidence.
+- Exactly one code review is required next; another planning chain is barred.
+
+Status:
+
+Implemented; exact training-smoke review is current next.
+
 ## 2026-07-18 — DR-0187 — Close Model Bridge Review And Approve First Training
 
 Decision:

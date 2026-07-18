@@ -27,11 +27,13 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the exact `04O`-approved
-P7/P8 in-memory MahJax bundled-rule-policy imitation training smoke. `04O`
-review-closed the 630-feature/87-action project model bridge and leaves zero
-gates before the first environment-backed parameter gradient updates. This is
-bounded local training smoke, not production training or strength evidence:
+Current active stage is the one exact implementation review of the completed
+`04O`-approved P7/P8 in-memory MahJax bundled-rule-policy imitation training
+smoke. The project has now executed its first environment-backed gradient
+updates: 54 seed-0 train decisions and 64 separate seed-1 evaluation decisions,
+16 full-batch masked-cross-entropy steps, lower train/eval losses and changed
+`(630,87)+87` parameters. Nothing was persisted. This is bounded local
+training-smoke evidence, not production training or strength evidence:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

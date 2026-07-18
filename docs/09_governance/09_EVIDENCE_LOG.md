@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — First environment-backed imitation gradient training smoke
+
+- Type: executable P7/P8 local in-memory parameter-training smoke evidence.
+- Added the exact `04O`-approved module and 10 focused tests. Separate MahJax
+  seed-0/seed-1 bundled-rule-policy rounds provide 54 train and 64 evaluation
+  public-observation decisions; every label is environment-legal.
+- Sixteen deterministic full-batch updates reduce train loss
+  `1.70919883 -> 1.38197553` and eval loss `1.76650584 -> 1.54172158`;
+  train accuracy rises `0.29629630 -> 0.51851851`, eval accuracy
+  `0.234375 -> 0.5`, weight delta L2 is `0.67900646` and bias delta L2 is
+  `0.23012902`.
+- No data, weights, checkpoint or artifact is returned or persisted.
+- Evidence grade: P7/P8 local synthetic rule-policy imitation training smoke
+  only; not production training, policy quality, self-play/RL, Tenhou,
+  stable-dan, LuckyJ or model-strength evidence.
+
 ### 2026-07-18 — P4/P8 bridge review and first training approval probe
 
 - Type: exact code-review closure, current-scope acceptance and direct actual

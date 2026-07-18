@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v4.03
+
+- Implemented the exact `04O` P7/P8 MahJax bundled-rule-policy imitation
+  training smoke in one supervised module with 10 focused tests.
+- Collected separate in-memory seed-0 train (54) and seed-1 evaluation (64)
+  public decisions; every label is checked against its 87-action legal mask.
+- Applied exactly 16 deterministic full-batch masked-cross-entropy updates to
+  54,897 project parameters. Train loss fell `1.70919883 -> 1.38197553`, eval
+  loss `1.76650584 -> 1.54172158`, and eval imitation accuracy rose
+  `0.234375 -> 0.5`; both weight and bias deltas are nonzero.
+- No dataset, weight, checkpoint or artifact was persisted. No reward/RL,
+  self-play learning, real data, Tenhou, production training/evaluation,
+  strength claim or P9-P12 work was added. One exact code review is next.
+
 ## 2026-07-18 - v4.02
 
 - Added `04O`; reviewed commit `d56271a` against exact `04N` approval.

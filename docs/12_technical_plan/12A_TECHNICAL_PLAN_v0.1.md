@@ -28,12 +28,13 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P7/P8 direct implementation of the exact `04O`-approved first environment-
-backed parameter training. It uses 54 seed-0 train and 64 seed-1 evaluation
-public decisions from the bundled rule policy, exact 630-feature/87-action
-masked cross-entropy and 16 full-batch gradient steps. The independent probe
-shows loss reduction and validation imitation accuracy improvement; zero gates
-remain before code. This is not production training or strength evidence.
+P7/P8 exact implementation review of the completed `04O`-approved first
+environment-backed parameter training. It uses 54 seed-0 train and 64 seed-1
+evaluation public decisions from the bundled rule policy, exact
+630-feature/87-action masked cross-entropy and 16 full-batch gradient steps.
+The executable result reproduces lower train/eval loss, higher held-out
+imitation accuracy and nonzero parameter deltas. Nothing is persisted. This
+is not production training or strength evidence.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

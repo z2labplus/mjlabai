@@ -2,9 +2,10 @@
 
 ## Current stage
 
-P7/P8 direct implementation of the exact `04O`-approved in-memory MahJax
-bundled-rule-policy imitation training smoke over the reviewed 630-feature,
-87-action project linear model.
+P7/P8 exact implementation review of the completed `04O`-approved in-memory
+MahJax bundled-rule-policy imitation training smoke over the reviewed
+630-feature, 87-action project linear model. The first real gradient updates
+are complete; this review must not expand training scope.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -584,5 +585,7 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04O` two-seed, 16-epoch in-memory imitation training
-smoke. No proposal, boundary or review may intervene before training code.
+Review the exact `04O` two-seed, 16-epoch in-memory imitation training smoke.
+No production change is allowed absent a concrete blocker. Review closure must
+directly approve/defer one materially progressive executable next task or
+record a genuine blocker; another planning chain is forbidden.

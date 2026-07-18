@@ -72,6 +72,16 @@
 | Imitating one heuristic/two seeds is overclaimed as policy quality. | Evidence / Scope | Critical | High | Warnings classify tiny local synthetic imitation only; holdout metric is diagnostic, not strength/promotion. | Open |
 | Another docs gate delays approved training. | Governance / Delivery | High | Medium | `04O` leaves zero gates; `10_NEXT` requires direct parameter-update code. | Mitigated |
 
+## 2026-07-18 — P7/P8 first environment-backed training implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Seed leakage invalidates the held-out diagnostic. | Research / Leakage | High | Low | Independent seed-0/seed-1 collection, exact 54/64 counts and source/result assertions preserve separation. | Mitigated |
+| Illegal teacher actions enter training. | Engineering / Correctness | Critical | Low | Every label is checked against the exact environment legal mask before collection; malformed labels fail. | Mitigated |
+| Numerical update is ineffective or nondeterministic. | ML / Correctness | High | Low | Exact losses/accuracies/delta norms, strict 16-value loss decrease and repeated equal summary are tested. | Mitigated |
+| Tiny imitation improvement is mistaken for model strength. | Evidence / Scope | Critical | High | Frozen evidence grade and warnings deny production, policy-quality, Tenhou, stable-dan, LuckyJ and promotion claims. | Open |
+| Review starts another documentation chain. | Governance / Delivery | High | Medium | Exactly one implementation review is next; closure must directly approve/defer material execution or record a genuine blocker. | Mitigated |
+
 ## 2026-07-18 — P8 bounded policy-improvement sequence approval risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
