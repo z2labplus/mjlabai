@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact frozen MahJax categorical-MLP all-project outcome census on seeds `0..31`.
+- [ ] Review the exact frozen MahJax categorical-MLP all-project outcome census implementation.
 
 Current execution charter:
 
@@ -22,21 +22,32 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Add only the exact `04AB`-approved census source/test plus direct governance;
-  do not modify existing source/test logic or public APIs.
-- Load reviewed imitation parameters once, freeze them, and run exact seeds
-  `tuple(range(32))` once each with all four seats using the reviewed legal
-  categorical all-project collector; perform zero updates.
-- Record frozen per-seed transition count, raw-return vector, final scores and
-  deterministic SHA-256 action-trace digest; pin all exact probe values.
-- Pin nonzero seeds `(1,3,5,7,11,24,25,26,27,31)`, exact zero complement,
-  census rate `10/32` and reference-training rate `5/5`.
-- Preserve all 32 records and explicit outcome-selection-bias warnings; choose
-  no replacement training/evaluation split and expose no parameter arrays.
-- No policy/value update, optimizer, critic, rate/estimator sweep, persistence,
-  real data, production self-play/evaluation, strength claim or P9-P12.
+- Review only the two exact `04AB`-approved census files and direct governance;
+  change code/tests only if a genuine blocker is found.
+- Verify exact seeds `0..31`, frozen reviewed imitation parameters, legal
+  all-project trajectories, zero updates and all pinned transitions, returns,
+  scores and SHA-256 trace digests.
+- Verify the complete zero/nonzero partition, census rate `10/32`, reference-
+  training rate `5/5`, parameter immutability and explicit selection-bias scope.
+- Run focused/full validation and independent source/result checks.
+- If review closes, directly approve or defer one material unbiased-training-
+  seed diagnostic; do not add another proposal/boundary/review chain.
+- No replacement split selection during review, policy/value update, optimizer,
+  critic, scale-up, persistence, real data, production self-play/evaluation,
+  strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Implemented the exact `04AB`-approved frozen reviewed-
+  imitation-policy all-project outcome census in two new files. Exact seeds
+  `0..31` are retained once each with zero updates; every record pins transition
+  count, raw-return vector, final scores and SHA-256 action-trace digest.
+  Nonzero outcomes occur only at `(1,3,5,7,11,24,25,26,27,31)`: census rate
+  `10/32`, versus reference training seeds `(1,3,5,7,11)` at `5/5`. Nine
+  focused and all 459 explicit repository tests pass with two skips. No
+  replacement split, algorithm/rate selection,
+  persistence, real data, production evaluation, strength claim or P9-P12 work
+  was added. One exact code review is next.
 
 - [x] 2026-07-19 Reviewed commit `375a193` against exact `04AA` approval in
   `04AB`. Decision: `A. Review can close.` Confirmed unchanged API/training,

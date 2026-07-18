@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.29
+
+- Implemented the exact `04AB` frozen reviewed-imitation-policy all-project
+  outcome census and nine focused tests in two new files.
+- Exact seeds `0..31` run once each with frozen parameters and zero updates;
+  every row pins transition count, raw returns, final scores and trace digest.
+- Nonzero outcomes are exactly `(1,3,5,7,11,24,25,26,27,31)`: 10/32 in the
+  census versus 5/5 in the existing reference training tuple.
+- Nine focused and all 459 explicit repository tests pass with two skips;
+  compile, dependency and diff checks pass. No replacement split, optimizer/
+  critic/rate selection, persistence, real data, production evaluation,
+  strength claim or P9-P12 work was added. One exact review is next.
+
 ## 2026-07-19 - v4.28
 
 - Added `04AB`; reviewed commit `375a193` against exact `04AA` approval.

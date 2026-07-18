@@ -86,6 +86,13 @@ evidence, not an approved rate choice. One exact review is next.
 Approval status: `04AB` leaves zero gates before the exact two-file census.
 No replacement training/evaluation split is approved by this review.
 
+Implementation status: all 32 predeclared records, exact zero/nonzero
+partition, 10/32-vs-5/5 rates, parameter immutability and no-update/no-split
+warnings are now pinned in source/tests. The selection bias is demonstrated,
+not resolved; choosing an unbiased replacement protocol remains a separate
+reviewed task. Nine focused and all 459 explicit tests pass with two skips.
+One exact code review is next.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

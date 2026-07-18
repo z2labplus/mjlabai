@@ -2,13 +2,15 @@
 
 ## Current stage
 
-P8 direct implementation of the `04AB`-approved frozen reviewed-imitation-policy
-all-project outcome census on exact seeds `0..31`. The policy remains frozen;
-all seats sample legal actions and every seed record retains transitions, raw
-returns, scores and a trace digest. Probes find nonzero seeds
-`(1,3,5,7,11,24,25,26,27,31)` and show existing training seeds are 5/5 nonzero
-versus census 10/32. No replacement split, policy/value update, algorithm
-selection, scale-up or strength claim is allowed.
+P8 exact code review of the implemented `04AB` frozen reviewed-imitation-policy
+all-project outcome census on seeds `0..31`. The two-file implementation keeps
+the policy frozen, samples legal actions at all seats, retains transitions/raw
+returns/scores/trace digest for every seed and pins nonzero seeds
+`(1,3,5,7,11,24,25,26,27,31)`. Existing training seeds are 5/5 nonzero versus
+census 10/32. The review may fix only a genuine blocker; if it closes, it must
+directly approve or defer one material unbiased-seed diagnostic. No replacement
+split selection during review, policy/value update, algorithm selection,
+scale-up or strength claim is allowed.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -588,6 +590,7 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04AB` frozen-policy all-project outcome census in its two
-approved files. Pin every seed and selection-bias summary; choose no replacement
-split and add no update, optimizer, critic or production path.
+Review the exact `04AB` frozen-policy all-project outcome census implementation.
+Verify every seed and selection-bias summary, no-update/no-I/O behavior and
+focused/full evidence. If review closes, directly approve or defer one material
+unbiased-seed diagnostic; do not restart a sibling docs chain.

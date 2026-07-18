@@ -28,16 +28,15 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 direct implementation of the `04AB`-approved frozen reviewed-imitation-policy
-all-project outcome census on exact seeds `0..31`. `04AB` reviewed commit
-`375a193`, accepted the 32-seed fixed evaluation, rejected worse/unstable or
-ineffective running-baseline/critic/KL/Adam probes and exposed a critical seed
-selection issue: only `(1,3,5,7,11,24,25,26,27,31)` are nonzero, while existing
-training seeds `(1,3,5,7,11)` are 5/5 nonzero. The exact two-file census records
-all seeds and trace digests with the policy frozen and no updates; it does not
-select a replacement split. This is bounded signal-sparsity/selection-bias
-evidence, not algorithm selection, production evaluation, improvement or
-strength.
+P8 exact code review of the implemented `04AB` frozen reviewed-imitation-policy
+all-project outcome census on seeds `0..31`. The exact two-file implementation
+records every seed's transitions, raw returns, scores and trace digest with the
+policy frozen and zero updates. It confirms nonzero seeds
+`(1,3,5,7,11,24,25,26,27,31)`: census 10/32 versus reference training 5/5.
+One exact review must verify this result and then directly approve or defer one
+material unbiased-seed diagnostic without another docs chain. No replacement
+split is selected yet. This is bounded signal-sparsity/selection-bias evidence,
+not algorithm selection, production evaluation, improvement or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

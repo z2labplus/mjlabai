@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Executable frozen-policy 32-seed outcome census
+
+- Type: executable P8 local signal-sparsity and seed-selection-bias evidence.
+- The reviewed imitation policy is loaded once and frozen; exact seeds `0..31`
+  run once each with all four seats sampling only legal actions and zero updates.
+- Complete records pin transition count, raw-return vector, final scores and
+  SHA-256 action-trace digest for every seed; zero-outcome records remain.
+- Nonzero seeds are exactly `(1,3,5,7,11,24,25,26,27,31)`: census 10/32,
+  while reference training seeds `(1,3,5,7,11)` are 5/5 nonzero.
+- Validation: nine focused tests pass in 315.269 seconds; all 459 explicit
+  repository tests pass in 2919.760 seconds with two existing skips. Compile,
+  dependency and diff checks pass.
+- Evidence grade: bounded frozen-policy signal-sparsity and outcome-selection-
+  bias evidence only; not algorithm selection, policy quality, improvement,
+  robust evaluation, model strength or promotion evidence.
+
 ### 2026-07-19 — Fixed evaluation review and training-seed selection-bias probe
 
 - Type: exact code-review closure, rejected algorithm probes and frozen-policy

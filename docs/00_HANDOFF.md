@@ -27,17 +27,17 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the `04AB`-approved frozen
+Current active stage is one exact code review of the `04AB`-approved frozen
 reviewed-imitation-policy all-project outcome census on exact seeds `0..31`.
-`04AB` reviewed commit `375a193`, recorded `A. Review can close` and accepted
-the 32-seed fixed learning-rate evaluation scope. Independent probes rejected
-a worse running baseline, numerically unstable critic/high-KL updates,
-behavior-identical low KL and non-improving Adam. More importantly, frozen-
-policy census probes find only 10/32 nonzero seeds while existing training
-seeds `(1,3,5,7,11)` are 5/5 nonzero, exposing outcome-selection bias. The next
-exact two-file code task records this census without updates or choosing a
-replacement split. This is bounded local P8 failure/selection-bias evidence,
-not algorithm selection, production evaluation, improvement or strength:
+The two-file implementation retains every seed once, performs zero updates and
+pins transitions, raw returns, final scores and action-trace digests. It
+confirms only 10/32 census seeds have nonzero outcomes while reference training
+seeds `(1,3,5,7,11)` are 5/5 nonzero, exposing outcome-selection bias. Nine
+focused and all 459 explicit repository tests pass with two skips. The review
+must verify the implementation and then directly
+approve or defer one material unbiased-seed diagnostic, without another docs
+chain. This is bounded local P8 signal-sparsity/selection-bias evidence, not
+algorithm selection, production evaluation, improvement or strength:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

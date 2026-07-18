@@ -324,6 +324,15 @@ and directly approves a `0..31` outcome census implementation. This is review/
 failure/selection-bias task-approval evidence, not algorithm selection or
 strength evidence.
 
+The exact `04AB` frozen-policy census is implemented in
+`src/mjlabai/rl/mahjax_categorical_mlp_frozen_policy_outcome_census_smoke.py`
+with focused coverage in
+`tests/rl/test_mahjax_categorical_mlp_frozen_policy_outcome_census_smoke.py`.
+It retains seeds `0..31`, pins complete deterministic records and reports
+10/32 nonzero census outcomes versus 5/5 in the reference training tuple,
+without selecting a replacement split or performing an update. This is P8
+signal-sparsity/selection-bias diagnostic evidence only, not strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
