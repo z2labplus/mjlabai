@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement exact minimal P8 synthetic/local two-step policy-update sequence smoke only.
+- [ ] Review exact minimal P8 synthetic/local two-step policy-update sequence smoke implementation.
 
 Current execution charter:
 
@@ -22,23 +22,25 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This implementation is directly approved by `12AE`; do not insert another
-  proposal, boundary, review or approval task.
-- Create/modify only `src/mjlabai/rl/__init__.py`,
-  `src/mjlabai/rl/synthetic_policy_update_sequence_smoke.py`,
-  `tests/rl/test_synthetic_policy_update_sequence_smoke.py` and direct
-  docs/governance synchronization.
-- Reuse the existing single-record helper and implement exactly two chained
-  records with first non-terminal, second terminal, same source/state/action,
-  distinct record IDs and exact value continuity.
-- Use standard library, CPU, deterministic in-memory synthetic/local input
-  only. Enforce the exact API/input/output/tests in `12AE`.
+- Review only the exact `12AE` implementation in
+  `src/mjlabai/rl/__init__.py`,
+  `src/mjlabai/rl/synthetic_policy_update_sequence_smoke.py` and
+  `tests/rl/test_synthetic_policy_update_sequence_smoke.py`.
+- Confirm exact two-record tuple enforcement, first non-terminal/second
+  terminal ordering, shared identity, distinct IDs, exact value continuity,
+  reuse of the single-step helper, error chaining, deterministic immutable
+  output, public exports and evidence warnings.
+- Re-run the 10 sequence tests, 12 base tests and 46 approved regressions.
+- Do not modify production code or tests unless a genuine blocker is found and
+  recorded. Do not create another sibling boundary or proposal.
 - Do not add a third step, variable batch, fixture/data, path/CLI, dependency,
   environment/episode/gameplay, self-play, model/optimizer, production
   training/evaluation, artifact, real/external/platform data, broad P8 or
   P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `12AE`-approved two-step chained P8 synthetic/local policy-update sequence smoke. Added `src/mjlabai/rl/synthetic_policy_update_sequence_smoke.py`, exported its four approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_policy_update_sequence_smoke.py`. The frozen deterministic helper accepts only an exact two-record tuple, requires first non-terminal/second terminal ordering, identical source/state/action, distinct record IDs and exact intermediate-value continuity, delegates both numerical updates to the reviewed single-step helper, wraps base failures with step index and chained cause, and emits only approved synthetic/local diagnostics and warnings. Ten new focused tests, 12 base tests and 46 P6/P7 regressions all pass; `git diff --check` passes. No third step, variable batch, fixture/data, environment/episode, self-play, model/optimizer, production training/evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is numerical smoke evidence only, not model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 
 - [x] 2026-07-18 Accepted the exact `12AC`/`12AD` single-record P8 policy-update smoke as current-scope complete and directly approved the next executable task in `12AE`. The next outcome is one deterministic standard-library two-step chained synthetic/local update sequence that reuses the existing helper, requires first non-terminal/second terminal ordering, identical source/state/action, distinct IDs and exact intermediate-value continuity. `12AE` fixes the only approved source/test files, API, inputs, outputs, tests, rollback, stop conditions and evidence grade; no further docs gate remains before code. No code, test, fixture/data, environment, self-play, model, training/evaluation, real/external/platform data, broad P8 or P9-P12 work was added in this decision. The next task is direct implementation.
 

@@ -13,11 +13,11 @@
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
 |---|---|---|---|---|---|
-| Two-step smoke expands into variable batches, episodes or an environment. | Governance / Scope | High | Medium | `12AE` permits exactly two records, exact ordering and exact files; stop on any third step, variable batch or gameplay state. | Open |
-| The base update formula is duplicated and later diverges. | Engineering / Correctness | High | Medium | The approved sequence helper must call the existing reviewed single-step helper and may not reimplement its formula. | Open |
-| Broken value continuity is silently accepted. | Engineering / Correctness | High | Low | Require exact equality between the first updated value and second current value, with focused rejection coverage. | Open |
+| Two-step smoke expands into variable batches, episodes or an environment. | Governance / Scope | High | Medium | Implementation accepts exactly two records and exposes no variable-batch, episode or environment API. | Mitigated |
+| The base update formula is duplicated and later diverges. | Engineering / Correctness | High | Medium | The sequence helper calls the existing reviewed single-step helper for both steps and contains no update formula. | Mitigated |
+| Broken value continuity is silently accepted. | Engineering / Correctness | High | Low | Exact equality is enforced and near-equal mismatch has focused rejection coverage. | Mitigated |
 | The chained smoke is overclaimed as self-play, training or model evidence. | Evidence / Research | High | High | Result warnings and governance classify it as synthetic/local two-step numerical smoke only. | Open |
-| Another docs gate delays approved code despite no blocker. | Governance / Delivery | High | Medium | `12AE` records zero remaining gates and `10_NEXT` moves directly to implementation. | Mitigated |
+| Another docs gate delays approved code despite no blocker. | Governance / Delivery | High | Medium | The exact implementation is complete; the next task is its single code review. | Closed |
 
 ## 2026-07-18 — P8 minimal policy-update smoke implementation risks
 

@@ -14,6 +14,35 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0145 — Exact P8 Two-Step Policy-Update Smoke Implemented
+
+Decision:
+
+```text
+Implement the exact `12AE` two-step task without scope expansion; review it next.
+```
+
+Rationale and evidence:
+
+- `12AE` left zero mandatory gates before this exact code task.
+- The implementation reuses the reviewed single-step helper and adds the
+  smallest material progression: ordered value continuity across two updates.
+- 10 sequence tests, 12 base tests and 46 approved regressions pass.
+
+Consequences:
+
+- Added `src/mjlabai/rl/synthetic_policy_update_sequence_smoke.py` and
+  `tests/rl/test_synthetic_policy_update_sequence_smoke.py`.
+- Updated `src/mjlabai/rl/__init__.py` with only the four approved exports.
+- The next task is one exact implementation review, not another planning
+  boundary.
+- No environment, self-play, model, production training/evaluation, real data,
+  strength or P9-P12 approval follows.
+
+Status:
+
+Implemented; exact code-review gate is next.
+
 ## 2026-07-18 — DR-0144 — Single-Record P8 Acceptance And Two-Step Task Approval
 
 Decision:

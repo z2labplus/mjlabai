@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.60
+
+- Implemented the exact `12AE` two-step chained synthetic/local policy-update
+  sequence smoke.
+- Added the approved sequence module and focused test module, and exported the
+  four approved public symbols through `mjlabai.rl`.
+- Reused the reviewed single-step helper; enforced exact tuple size, ordering,
+  identity, distinct IDs, continuity, error chaining and frozen diagnostics.
+- Validation passed: 10 sequence tests, 12 base tests, 46 approved P6/P7
+  regressions and `git diff --check`.
+- New `10_NEXT` first item is one exact implementation review.
+- No fixture/data, environment/episode, self-play, model/optimizer, production
+  training/evaluation, path/CLI, dependency, real/external/platform data,
+  broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.59
 
 - Accepted the exact review-closed single-record P8 policy-update smoke as

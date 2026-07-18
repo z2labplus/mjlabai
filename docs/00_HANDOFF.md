@@ -27,7 +27,7 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the exact minimal P8
+Current active stage is the exact implementation review of the minimal P8
 synthetic/local two-step policy-update sequence smoke approved by `12AE`:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
@@ -138,9 +138,12 @@ coverage and passes 58 tests. The same `12AD` record now records `A. Review can
 close after blocker fix.` `12AE` accepts that exact single-record smoke as
 current-scope complete and directly approves one deterministic two-step
 chained synthetic/local update sequence. The approved task reuses the reviewed
-single-step helper, has zero remaining mandatory gates before code and is now
-first in `10_NEXT`; another proposal, boundary or approval task may not
-precede it. Broad P8 entry, production
+single-step helper and has zero remaining mandatory gates before code. That
+exact implementation now exists in the three approved source/test files: it
+delegates both updates to the reviewed helper, enforces ordering, identity,
+distinct IDs and exact continuity, and passes 10 focused sequence tests, 12
+base tests and 46 approved regressions. The next first task is one exact code
+review, not another proposal or boundary. Broad P8 entry, production
 training/evaluation, self-play, model/artifact use, real data, strength claims
 and P9-P12 remain unapproved.
 

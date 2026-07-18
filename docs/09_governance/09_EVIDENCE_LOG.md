@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 two-step policy-update sequence smoke implementation
+
+- Type: internal executable synthetic/local numerical smoke evidence.
+- Added only the `12AE`-approved sequence module, package exports, focused test
+  module and direct governance synchronization.
+- The helper delegates both calculations to the reviewed single-step helper
+  and enforces exact two-step ordering, identity and value continuity.
+- Validation: 10 sequence, 12 base and 46 approved regression tests passed;
+  `git diff --check` passed.
+- Evidence grade: P8 synthetic/local two-step numerical policy-update sequence
+  smoke evidence only; implementation review remains next. This is not
+  self-play, production training, model-strength, Tenhou, stable-dan, LuckyJ,
+  candidate-promotion or P9-P12 evidence.
+
 ### 2026-07-18 — P8 single-record smoke acceptance and two-step task approval
 
 - Type: internal current-scope acceptance / exact executable-task approval
