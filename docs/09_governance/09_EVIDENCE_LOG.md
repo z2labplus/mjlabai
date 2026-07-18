@@ -8,6 +8,18 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 two-pass table sequence implementation review closure
+
+- Type: internal exact code-review closure evidence.
+- Added `12AL`; decision: `A. Review can close.`
+- Evidence: exact `12AK` file/API/input/helper/continuity/identity/output/test
+  and forbidden-scope compliance, 101 passing tests, compile/diff checks and
+  independent probes.
+- No production code or test was modified and no blocker was found.
+- Evidence grade: P8 exact synthetic/local fixed two-pass table sequence
+  implementation review closure evidence only; not variable/production
+  training, environment, self-play, model-strength or P9-P12 evidence.
+
 ### 2026-07-18 — P8 fixed two-pass policy-table sequence implementation
 
 - Type: internal executable synthetic/local repeated table-state smoke evidence.

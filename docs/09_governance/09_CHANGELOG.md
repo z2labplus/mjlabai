@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.70
+
+- Reviewed commit `ea3fdd9` against the exact `12AK` approval in `12AL`.
+- Decision: `A. Review can close.` No blocker or code/test fix is required.
+- Confirmed exact two-pass shape, helper calls, continuity, ID uniqueness,
+  frozen output, errors, exports, warnings and forbidden-scope compliance.
+- Validation passed: 11 sequence tests, 90 approved regressions, compile/diff
+  checks and independent probes.
+- New `10_NEXT` first item must directly approve or defer one bounded trainer;
+  a third fixed-pass wrapper and sibling boundary are forbidden.
+- No production code, test, environment, self-play, model, production
+  training/evaluation, real/external/platform data, broad P8 or P9-P12 work was
+  added in this review.
+
 ## 2026-07-18 - v3.69
 
 - Implemented the exact `12AK` fixed two-pass synthetic/local policy-table

@@ -28,8 +28,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 exact minimal synthetic/local fixed two-pass policy-table update sequence
-smoke implementation review.
+P8 exact fixed two-pass sequence acceptance and bounded synthetic/local
+tabular-trainer approval/defer decision.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
@@ -150,8 +150,10 @@ close`, confirms 90 tests plus independent probes and finds no blocker.
 `12AK` accepts the exact fixed-table scope and directly approves one fixed
 two-pass table-update sequence that calls the reviewed table helper twice.
 That exact implementation now exists in the approved module, package export
-and test files; 11 sequence tests plus 90 approved regressions pass. One exact
-implementation review is now first in `10_NEXT`.
+and test files; 11 sequence tests plus 90 approved regressions pass. `12AL`
+reviews it, records `A. Review can close`, confirms 101 tests plus independent
+probes and finds no blocker. A bounded-trainer approval/defer decision is next;
+a third fixed-pass wrapper is forbidden.
 Broad
 P8, production training/evaluation, self-play, model/artifact use, real data,
 strength claims and P9-P12 remain unapproved.
@@ -659,7 +661,8 @@ P8 exact fixed two-key policy-value table update smoke = implemented in the thre
 P8 exact fixed policy-table implementation review = closed in `12AJ`; no blocker.
 P8 exact fixed policy-table scope = accepted as current-scope complete in `12AK`.
 P8 exact fixed two-pass policy-table update sequence = implemented in the three `12AK`-approved files; 101 tests pass.
-Next = review the exact `12AK` sequence implementation; no sibling boundary chain.
+P8 exact fixed two-pass sequence implementation review = closed in `12AL`; no blocker.
+Next = accept/reject that scope and directly approve or defer one bounded trainer; no third fixed-pass wrapper.
 ```
 
 本技术方案不改变当前阶段，不允许跳过 Mortal/Akochan/Archer 等 baseline 的 F1/F2 复现与接口审计。
@@ -793,7 +796,7 @@ docs/10_next/10_NEXT.md 的第一项未完成任务。
 当前 `10_NEXT` 的下一步是：
 
 ```text
-Review exact minimal P8 synthetic/local fixed two-pass policy-table update sequence smoke implementation.
+Decide whether to accept fixed two-pass scope and directly approve or defer exact bounded synthetic/local tabular trainer implementation.
 ```
 
 `docs/12_technical_plan/12F_POST_FULL_P7_TRANSITION_REVIEW.md`

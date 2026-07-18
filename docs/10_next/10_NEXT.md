@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review exact minimal P8 synthetic/local fixed two-pass policy-table update sequence smoke implementation.
+- [ ] Decide whether to accept fixed two-pass scope and directly approve or defer exact bounded synthetic/local tabular trainer implementation.
 
 Current execution charter:
 
@@ -22,23 +22,21 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the exact implementation in `src/mjlabai/rl/__init__.py`,
-  `src/mjlabai/rl/synthetic_policy_table_update_sequence_smoke.py` and
-  `tests/rl/test_synthetic_policy_table_update_sequence_smoke.py` against
-  `12AK`.
-- Confirm exact outer/inner tuple enforcement, exactly two explicit table-
-  helper calls, pass continuity, eight distinct IDs, frozen initial/
-  intermediate/final outputs, error chaining, exports, warnings and forbidden
-  scope.
-- Re-run the 11 sequence tests and 90 approved regressions. Do not modify code
-  or tests unless a genuine blocker is found and recorded as one exact fix.
-- Do not insert a sibling boundary/proposal or add a third pass, variable
-  epochs/trainer, mutable table, persistence, fixture/data, replay buffer,
-  path/CLI, dependency, environment/gameplay, self-play, model/optimizer,
-  production training/evaluation, artifact, real/external/platform data,
-  broad P8 or P9-P12.
+- Accept or reject only the exact `12AK` implementation reviewed and closed in
+  `12AL`.
+- Do not approve a third fixed-pass wrapper. Decide in this single gate whether
+  one exact bounded synthetic/local tabular trainer is safe and materially
+  progressive; if approved, bind exact pass limit, files, API, inputs, outputs,
+  tests, rollback, stop conditions and evidence grade with zero further gate
+  before code.
+- Do not modify production code/tests or add persistence, fixture/data, replay
+  buffer, path/CLI, dependency, environment/gameplay, self-play, model/network,
+  production evaluation, artifact, real/external/platform data, broad P8 or
+  P9-P12 in this decision.
 
 ## Completed
+
+- [x] 2026-07-18 Reviewed commit `ea3fdd94536ddcd8cc762ae47f015fe24b5586a6` against the exact `12AK` approval in `12AL`. Decision: `A. Review can close.` Confirmed exact approved files/API, exact two-trace outer input, exactly two explicit table-helper calls, pass-state continuity, eight pairwise-distinct IDs, pass-indexed error chains, deterministic frozen initial/intermediate/final output, exports, warnings and forbidden-scope compliance. Eleven sequence tests and 90 approved regressions all pass; compile/diff checks and independent probes pass. No production code or test was modified and no blocker was found. The next decision must accept or reject this scope and directly approve or defer one non-repetitive executable outcome; a third fixed-pass wrapper is forbidden.
 
 - [x] 2026-07-18 Implemented the exact `12AK`-approved fixed two-pass P8 synthetic/local policy-table update sequence smoke. Added `src/mjlabai/rl/synthetic_policy_table_update_sequence_smoke.py`, exported its four approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_policy_table_update_sequence_smoke.py`. The frozen helper accepts only an exact outer tuple of two reviewed trace tuples, explicitly calls the reviewed table helper twice, carries pass 1 final entries into pass 2, rejects duplicate IDs across all eight records, wraps failures by pass with chained causes, and returns frozen initial/intermediate/final table states. Eleven focused sequence tests and 90 approved regressions all pass; compile and diff checks pass. No third pass, variable epoch/trainer, mutable table, persistence, fixture/data, replay buffer, environment, self-play, model/optimizer, production training/evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is fixed synthetic/local repeated table-state smoke evidence only, not model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 

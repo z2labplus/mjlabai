@@ -2,8 +2,8 @@
 
 ## Current stage
 
-P8 exact minimal synthetic/local fixed two-pass policy-table update sequence
-smoke implementation review.
+P8 exact fixed two-pass sequence acceptance and bounded synthetic/local
+tabular-trainer approval/defer decision.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -97,8 +97,10 @@ task is now current-scope acceptance after `12AJ` records `A. Review can close`
 with no blocker. `12AK` accepts that exact scope as current-scope complete and
 directly approves one fixed two-pass table-update sequence that reuses the
 table helper. That exact implementation is complete in the approved module/
-export/test files and 101 approved tests pass. The current first task is one
-exact code review; no sibling boundary, proposal or approval may precede it.
+export/test files and 101 approved tests pass. `12AL` reviews it, records
+`A. Review can close` and finds no blocker. The current first task must approve
+or defer one bounded trainer; no third fixed-pass wrapper or sibling boundary
+may precede it.
 Production code
 outside that exact approval, fixtures, data files, manifest schemas/loaders/
 artifacts, source approval,
@@ -420,7 +422,8 @@ P8 exact fixed two-key policy-value table update smoke = implemented in the thre
 P8 exact fixed policy-table implementation review = closed in `12AJ`; no blocker
 P8 exact fixed policy-table scope = accepted as current-scope complete in `12AK`
 P8 exact fixed two-pass policy-table update sequence = implemented in the three `12AK`-approved files; 101 tests pass
-Next = review the exact `12AK` sequence implementation; no sibling boundary chain
+P8 exact fixed two-pass sequence implementation review = closed in `12AL`; no blocker
+Next = accept/reject that scope and directly approve or defer one bounded trainer; no third fixed-pass wrapper
 ```
 
 ## AI role
@@ -429,11 +432,11 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Review the exact `12AK`-approved fixed two-pass policy-table update sequence
-implementation. Confirm two explicit table-helper calls, pass continuity,
-eight distinct IDs, frozen outputs, error chains, exports, warnings and 101
-passing tests; modify code/tests only if a genuine blocker is found. Broad P8,
-source/real-data work,
+Accept or reject only the exact `12AK` implementation review-closed in `12AL`.
+In the same decision, directly approve or defer one exact bounded
+synthetic/local tabular trainer with fixed pass limit, API, tests and stop
+conditions. Do not add a third fixed-pass wrapper or sibling boundary. Broad
+P8, source/real-data work,
 datasets, production training/evaluation, self-play/league, model/artifact use,
 model-output integration, CLI, P9-P12 and strength claims remain unapproved.
 

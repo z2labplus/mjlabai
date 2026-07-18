@@ -14,6 +14,33 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0155 — Exact P8 Two-Pass Sequence Review Closure
+
+Decision:
+
+```text
+A. Review can close.
+```
+
+Rationale and evidence:
+
+- Commit `ea3fdd9` conforms to every exact `12AK` file, API, input,
+  continuity, identity, output, test and forbidden-scope requirement.
+- All 101 approved tests, compile/diff checks and independent probes pass.
+- No correctness, scope, provenance, evidence or test blocker was found.
+
+Consequences:
+
+- Added `12AL` as the one exact implementation review.
+- The next decision must approve or defer one non-repetitive executable P8
+  outcome; a third fixed-pass wrapper is forbidden.
+- No environment, self-play, model, production training/evaluation, real data,
+  strength claim, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Review closed; bounded-trainer approval/defer decision is next.
+
 ## 2026-07-18 — DR-0154 — Exact P8 Two-Pass Table Sequence Implemented
 
 Decision:

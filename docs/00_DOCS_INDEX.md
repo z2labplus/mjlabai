@@ -68,6 +68,7 @@ docs/12_technical_plan/12AH_P8_INTERLEAVED_POLICY_UPDATE_TRACE_SMOKE_IMPLEMENTAT
 docs/12_technical_plan/12AI_P8_INTERLEAVED_TRACE_ACCEPTANCE_AND_POLICY_TABLE_UPDATE_APPROVAL_DECISION.md
 docs/12_technical_plan/12AJ_P8_FIXED_POLICY_TABLE_UPDATE_SMOKE_IMPLEMENTATION_REVIEW.md
 docs/12_technical_plan/12AK_P8_POLICY_TABLE_ACCEPTANCE_AND_TWO_PASS_SEQUENCE_APPROVAL_DECISION.md
+docs/12_technical_plan/12AL_P8_TWO_PASS_POLICY_TABLE_SEQUENCE_IMPLEMENTATION_REVIEW.md
 ```
 
 `docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md`
@@ -439,6 +440,14 @@ fixes files, four-symbol API, two-trace inputs, continuity, output, tests,
 rollback and stop conditions and leaves zero gates before code. It is
 acceptance/approval evidence only, not environment, self-play, production
 training, model-strength or P9-P12 evidence.
+
+`docs/12_technical_plan/12AL_P8_TWO_PASS_POLICY_TABLE_SEQUENCE_IMPLEMENTATION_REVIEW.md`
+reviews commit `ea3fdd9` against `12AK`, records `A. Review can close`,
+confirms exactly two helper calls, state continuity, eight distinct IDs,
+frozen output, errors, exports, warnings and forbidden-scope compliance, and
+reports 101 passing tests plus independent probes. It is review-closure
+evidence only, not production training, self-play, model-strength or P9-P12
+evidence.
 
 ## Supervised-policy files
 
