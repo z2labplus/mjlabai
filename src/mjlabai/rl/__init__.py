@@ -20,12 +20,23 @@ from mjlabai.rl.synthetic_policy_update_trace_smoke import (
     SyntheticPolicyUpdateTraceSmokeError,
     apply_synthetic_policy_update_trace_smoke,
 )
+from mjlabai.rl.synthetic_policy_table_update_smoke import (
+    SYNTHETIC_POLICY_TABLE_UPDATE_SMOKE_VERSION,
+    SyntheticPolicyTableEntry,
+    SyntheticPolicyTableUpdateResult,
+    SyntheticPolicyTableUpdateSmokeError,
+    apply_synthetic_policy_table_update_smoke,
+)
 
 __all__ = [
     "SYNTHETIC_LOCAL_SOURCE_KIND",
     "SYNTHETIC_POLICY_UPDATE_SMOKE_VERSION",
     "SYNTHETIC_POLICY_UPDATE_SEQUENCE_SMOKE_VERSION",
     "SYNTHETIC_POLICY_UPDATE_TRACE_SMOKE_VERSION",
+    "SYNTHETIC_POLICY_TABLE_UPDATE_SMOKE_VERSION",
+    "SyntheticPolicyTableEntry",
+    "SyntheticPolicyTableUpdateResult",
+    "SyntheticPolicyTableUpdateSmokeError",
     "SyntheticPolicyUpdateInput",
     "SyntheticPolicyUpdateResult",
     "SyntheticPolicyUpdateSequenceResult",
@@ -36,4 +47,5 @@ __all__ = [
     "apply_synthetic_policy_update_sequence_smoke",
     "apply_synthetic_policy_update_smoke",
     "apply_synthetic_policy_update_trace_smoke",
+    "apply_synthetic_policy_table_update_smoke",
 ]

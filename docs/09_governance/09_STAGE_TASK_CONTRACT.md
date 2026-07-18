@@ -3,7 +3,7 @@
 ## Current stage
 
 P8 exact minimal synthetic/local fixed two-key policy-value table update smoke
-implementation.
+implementation review.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -91,8 +91,10 @@ exact implementation is complete in the approved module/export/test files and
 79 approved tests pass. `12AH` reviews it, records `A. Review can close` and
 finds no blocker. `12AI` accepts that exact scope as current-scope complete and
 directly approves one fixed two-entry in-memory policy-value table update smoke
-that reuses the trace helper. The current first task is direct implementation;
-no sibling boundary, proposal, review or approval may precede it.
+that reuses the trace helper. That exact implementation is complete in the
+approved module/export/test files and 90 approved tests pass. The current first
+task is one exact code review; no sibling boundary, proposal or approval may
+precede it.
 Production code
 outside that exact approval, fixtures, data files, manifest schemas/loaders/
 artifacts, source approval,
@@ -410,8 +412,8 @@ P8 exact two-step sequence scope = accepted as current-scope complete in `12AG`
 P8 exact four-record interleaved trace smoke = implemented in the three `12AG`-approved files; 79 tests pass
 P8 exact four-record interleaved trace implementation review = closed in `12AH`; no blocker
 P8 exact interleaved trace scope = accepted as current-scope complete in `12AI`
-P8 exact fixed two-key policy-value table update smoke = directly approved in `12AI`; zero gates remain before code
-Next = implement the exact `12AI` table-update task; no sibling boundary chain
+P8 exact fixed two-key policy-value table update smoke = implemented in the three `12AI`-approved files; 90 tests pass
+Next = review the exact `12AI` table-update implementation; no sibling boundary chain
 ```
 
 ## AI role
@@ -420,10 +422,11 @@ Local Codex engineer + evidence keeper + scope controller.
 
 ## Stage goal
 
-Implement the exact `12AI`-approved fixed two-key in-memory policy-value table
-update smoke. Reuse the reviewed trace helper, enforce the exact table/trace
-key and initial-value contract, and add only the approved module, export and
-focused tests. Broad P8, source/real-data work,
+Review the exact `12AI`-approved fixed two-key in-memory policy-value table
+update smoke implementation. Confirm trace-helper reuse, exact table/trace key
+and initial-value binding, normalized frozen outputs, error chains, public
+exports, warnings and 90 passing tests; modify code/tests only if a genuine
+blocker is found. Broad P8, source/real-data work,
 datasets, production training/evaluation, self-play/league, model/artifact use,
 model-output integration, CLI, P9-P12 and strength claims remain unapproved.
 

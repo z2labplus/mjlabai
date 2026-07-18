@@ -14,6 +14,36 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0151 — Exact P8 Fixed Policy-Table Smoke Implemented
+
+Decision:
+
+```text
+Implement the exact `12AI` fixed two-key synthetic/local policy-value table
+update smoke and advance to code review.
+```
+
+Rationale and evidence:
+
+- The task had zero remaining approval gates and fixed three exact source/test
+  files plus direct governance synchronization.
+- The implementation calls the reviewed trace helper exactly once and adds no
+  duplicate TD formula or trace update logic.
+- Eleven table tests plus 79 previously approved tests pass; compile and diff
+  checks pass.
+
+Consequences:
+
+- The fixed table now provides executable two-key parameter-state transition
+  smoke evidence without becoming a mutable store, trainer or model.
+- The next task is one exact implementation review against `12AI`.
+- No environment, self-play, model, production training/evaluation, real data,
+  strength claim, broad P8 or P9-P12 approval follows.
+
+Status:
+
+Implementation complete; exact code review is current next.
+
 ## 2026-07-18 — DR-0150 — Interleaved Trace Acceptance And Policy-Table Approval
 
 Decision:

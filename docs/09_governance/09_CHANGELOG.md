@@ -1,5 +1,22 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.66
+
+- Implemented the exact `12AI` fixed two-key synthetic/local policy-value
+  table update smoke.
+- Added the approved table module and 11 focused tests, and exported the five
+  approved public symbols through `mjlabai.rl`.
+- Reused the reviewed trace helper exactly once; enforced exact tuple/entry/
+  field checks, A/B key and initial-value binding, normalized frozen entries,
+  error chaining and evidence warnings.
+- Validation passed: 11 table tests, 79 approved regressions, compile checks
+  and `git diff --check`.
+- New `10_NEXT` first item is one exact implementation review; no sibling
+  boundary or proposal may intervene.
+- No mutable/dynamic table, persistence, batch/epoch/trainer, fixture/data,
+  replay, environment, self-play, model/optimizer, production training/
+  evaluation, real/external/platform data, broad P8 or P9-P12 work was added.
+
 ## 2026-07-18 - v3.65
 
 - Accepted the exact `12AG`/`12AH` interleaved trace as current-scope complete

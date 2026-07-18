@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P8 fixed policy-value table update smoke implementation
+
+- Type: internal executable synthetic/local table-state smoke evidence.
+- Added only the `12AI`-approved table module, package exports, focused tests
+  and direct governance synchronization.
+- The helper binds exactly two immutable initial table entries to the reviewed
+  A/B trace keys and values, calls the trace helper once and returns two
+  normalized frozen final entries.
+- Validation: 11 table tests and 79 approved regression tests passed; compile
+  and diff checks passed.
+- Evidence grade: P8 synthetic/local fixed two-key policy-value table update
+  smoke evidence only; implementation review remains next. This is not a
+  persistent policy/model/checkpoint, environment, self-play, production
+  training, model-strength, Tenhou, stable-dan, LuckyJ, candidate-promotion or
+  P9-P12 evidence.
+
 ### 2026-07-18 — P8 interleaved-trace acceptance and policy-table approval
 
 - Type: internal current-scope acceptance / exact executable-task approval

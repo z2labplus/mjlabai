@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement exact minimal P8 synthetic/local fixed two-key policy-value table update smoke only.
+- [ ] Review exact minimal P8 synthetic/local fixed two-key policy-value table update smoke implementation.
 
 Current execution charter:
 
@@ -22,21 +22,24 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- This implementation is directly approved by `12AI`; do not insert another
-  proposal, boundary, review or approval task.
-- Create/modify only `src/mjlabai/rl/__init__.py`,
-  `src/mjlabai/rl/synthetic_policy_table_update_smoke.py`,
-  `tests/rl/test_synthetic_policy_table_update_smoke.py` and direct
-  docs/governance synchronization.
-- Implement the exact five-symbol API, fixed two-entry table input, reviewed
-  four-record trace input, trace-helper reuse, frozen output, tests, rollback,
-  stop conditions and evidence grade in `12AI`.
-- Do not add variable tables/mappings, batch/epoch/trainer, persistence,
-  fixture/data, replay buffer, path/CLI, dependency, environment/gameplay,
-  self-play, model/optimizer, production training/evaluation, artifact,
-  real/external/platform data, broad P8 or P9-P12.
+- Review only the exact implementation in `src/mjlabai/rl/__init__.py`,
+  `src/mjlabai/rl/synthetic_policy_table_update_smoke.py` and
+  `tests/rl/test_synthetic_policy_table_update_smoke.py` against `12AI`.
+- Confirm exact tuple/entry/field checks, A/B key and initial-value binding,
+  exactly one reviewed trace-helper call, frozen normalized entries, error
+  chaining, public exports, warnings and forbidden-scope compliance.
+- Re-run the 11 table tests and 79 approved regressions. Do not modify
+  production code or tests unless a genuine blocker is found and recorded as
+  one exact fix task.
+- Do not insert a sibling boundary/proposal or add variable/mutable tables,
+  mappings, batch/epoch/trainer, persistence, fixture/data, replay buffer,
+  path/CLI, dependency, environment/gameplay, self-play, model/optimizer,
+  production training/evaluation, artifact, real/external/platform data,
+  broad P8 or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-18 Implemented the exact `12AI`-approved fixed two-key P8 synthetic/local policy-value table update smoke. Added `src/mjlabai/rl/synthetic_policy_table_update_smoke.py`, exported its five approved public symbols through `src/mjlabai/rl/__init__.py`, and added `tests/rl/test_synthetic_policy_table_update_smoke.py`. The frozen helper accepts only an exact two-entry tuple plus the exact reviewed four-record trace input, validates exact entry types/fields, A/B key order and initial values, delegates numerical work exactly once to the trace helper, and returns two newly normalized frozen final entries. Eleven focused table tests and 79 approved regressions all pass; compile and diff checks pass. No variable/mutable table, mapping, persistence, batch/epoch/trainer, fixture/data, replay buffer, environment, self-play, model/optimizer, production training/evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added. This is synthetic/local table-state smoke evidence only, not model-strength evidence. The next task is one exact implementation review, not another boundary chain.
 
 - [x] 2026-07-18 Accepted the exact `12AG` implementation review-closed in `12AH` as current-scope complete and directly approved the next executable task in `12AI`. The selected outcome is one deterministic standard-library fixed two-key in-memory policy-value table update smoke that reuses the reviewed four-record trace helper, validates exact table keys and initial values, and returns two normalized frozen final entries. `12AI` fixes the only approved source/test files, five-symbol API, exact inputs, semantics, frozen output, 11 test categories, rollback, stop conditions and evidence grade; zero mandatory gates remain before code. No code, test, fixture/data, persistence, replay buffer, environment, self-play, model/optimizer, production training/evaluation, path/CLI, dependency, real/external/platform data, broad P8 or P9-P12 work was added in this decision. The next task is direct implementation, not another docs gate.
 
