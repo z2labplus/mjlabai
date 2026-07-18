@@ -31,7 +31,8 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 P4 exact code-review gate for the implemented `04L`-approved MahJax
 deterministic single-round rollout. The executable uses one JIT step function,
 one hard 256-transition loop and terminates seed 0 after 94 authoritative legal
-transitions with the exact approved raw outcome; 313 tests pass.
+transitions with the exact approved raw outcome. The review fix preserves
+global seat-ordered scores rather than observer-relative order; 314 tests pass.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

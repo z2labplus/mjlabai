@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-18 - v3.97
+
+- Fixed the exact MahJax rollout review blocker in the approved source/test
+  files: final scores now use authoritative global seat order from
+  `state.round_state.score`, not current-observer-relative observation order.
+- An independent rule-based terminal probe reproduced different vectors:
+  global `(240,250,390,120)` versus observer order `(390,120,240,250)`.
+- Added one regression assertion. Validation passed: 12 focused tests and all
+  314 repository tests with two existing skips.
+- The same exact implementation review remains current next. No scope expansion,
+  model, training, self-play, real data, Tenhou, strength or P8-P12 work was added.
+
 ## 2026-07-18 - v3.96
 
 - Implemented the exact `04L` P4 MahJax single-round rollout smoke.

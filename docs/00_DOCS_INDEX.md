@@ -78,8 +78,10 @@ The exact `04L` rollout is implemented in
 tests in `tests/environment/test_mahjax_single_round_rollout_smoke.py`. It
 uses one JIT step function and one 256-cap loop to record all 94 seed-0 legal
 transitions, raw/cumulative rewards and final scores. One exact implementation
-review is next. This is P4 single-round environment smoke evidence only, not
-self-play, training, Tenhou or strength evidence.
+review is next. A review probe found and fixed observer-relative score ordering;
+the result now reads authoritative global seat order from the environment
+state. This is P4 single-round environment smoke evidence only, not self-play,
+training, Tenhou or strength evidence.
 
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md

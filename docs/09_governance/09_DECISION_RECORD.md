@@ -14,6 +14,32 @@ Each decision should include:
 - Linked docs.
 - Status.
 
+## 2026-07-18 — DR-0182 — Preserve MahJax Global Seat Score Order
+
+Decision:
+
+```text
+Read final rollout scores from `state.round_state.score` in global seat order.
+Do not use observer-relative `observe(state)["scores"]` as a global result.
+```
+
+Rationale and evidence:
+
+- MahJax documents observation scores as current-player-relative order.
+- An independent non-tied terminal probe reproduced global
+  `(240,250,390,120)` and observer-relative `(390,120,240,250)`.
+- Seed 0's equal scores had hidden the semantic difference.
+
+Consequences:
+
+- The rollout result now preserves stable seat identity for future diagnostics.
+- One regression assertion prevents reintroduction of observer-order scores.
+- No policy, model, self-play or broader environment scope is approved.
+
+Status:
+
+Implemented during the exact `04L` code review; re-review remains next.
+
 ## 2026-07-18 — DR-0181 — Complete Exact MahJax Single-Round Rollout
 
 Decision:

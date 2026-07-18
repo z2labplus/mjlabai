@@ -77,6 +77,11 @@ class MahJaxSingleRoundRolloutSmokeTests(unittest.TestCase):
         self.assertEqual(self.result.cumulative_rewards, (0.0, 0.0, 0.0, 0.0))
         self.assertEqual(self.result.final_scores, (250, 250, 250, 250))
 
+    def test_final_scores_use_global_seat_order_not_observer_order(self) -> None:
+        source = inspect.getsource(rollout_module)
+        self.assertIn("state.round_state.score", source)
+        self.assertNotIn('final_observation["scores"]', source)
+
     def test_trace_is_complete_monotonic_and_uses_lowest_legal_action(self) -> None:
         self.assertEqual(len(self.result.trace), self.result.transition_count)
         self.assertEqual(

@@ -30,7 +30,8 @@ Current stage interpretation:
 Current active stage is one exact code-review gate for the implemented
 `04L`-approved P4 MahJax deterministic hard-capped single-round rollout smoke.
 The implementation executes one complete seed-0 round in 94 authoritative
-legal transitions and is not self-play, training or strength evidence:
+legal transitions, preserves global seat-ordered final scores after the exact
+review fix, and is not self-play, training or strength evidence:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

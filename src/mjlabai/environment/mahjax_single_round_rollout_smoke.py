@@ -228,15 +228,14 @@ def run_mahjax_single_round_rollout_smoke(
         )
 
     try:
-        final_observation = environment.observe(state)
-        final_scores = tuple(int(value) for value in final_observation["scores"])
+        final_scores = tuple(int(value) for value in state.round_state.score)
     except Exception as exc:
         raise MahJaxSingleRoundRolloutSmokeError(
-            "failed to read final scores from the public MahJax observation"
+            "failed to read final seat-ordered scores from the MahJax state"
         ) from exc
     if len(final_scores) != 4:
         raise MahJaxSingleRoundRolloutSmokeError(
-            "final observation scores must contain exactly four values"
+            "final seat-ordered scores must contain exactly four values"
         )
 
     return MahJaxSingleRoundRolloutResult(

@@ -16,6 +16,7 @@
 | JAX eager execution makes a bounded round operationally impractical. | Engineering / Runtime | Medium | Realized | Compile `environment.step` exactly once with JIT; seed-0 focused and full tests complete on the checked CPU host. | Mitigated |
 | Rollout silently exceeds its bound or steps from a finished state. | Engineering / Correctness | High | Low | One explicit `for`, hard 256 cap, terminal checks, monotonic step assertions and a cap-exhaustion regression test. | Mitigated |
 | Legal-action trace omits options or chooses an unauthorized action. | Engineering / Correctness | High | Low | Every pre-state requires the exact bool 87-action mask; immutable trace stores the complete sorted legal tuple and selects its first item. | Mitigated |
+| Final scores are mislabeled because observation order is relative to the current player. | Engineering / Correctness | High | Realized | Review probe reproduced the rotation; exact fix reads `state.round_state.score` and regression source assertion pins global seat order. | Closed |
 | One deterministic environment round is mistaken for self-play or strength. | Evidence / Scope | High | High | API warnings and governance grade only P4 single-round environment smoke evidence; no model participants or comparison claims. | Open |
 | Review restarts another documentation chain. | Governance / Delivery | High | Medium | Only one exact implementation review is allowed; closure must directly decide a material executable next outcome or stage status. | Mitigated |
 

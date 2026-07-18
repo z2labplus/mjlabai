@@ -8,6 +8,17 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-18 — P4 MahJax final-score ordering blocker fix
+
+- Type: exact implementation-review correctness fix evidence.
+- MahJax observation source defines `scores` in current-player perspective,
+  while `state.round_state.score` preserves global seat order.
+- Independent rule-based terminal probe: current player 2, global scores
+  `(240,250,390,120)`, observer-order scores `(390,120,240,250)`.
+- Exact source/test fix now reads global order and asserts the authority path.
+- Validation: 12 focused tests and all 314 repository tests OK with two existing
+  skips. Evidence grade remains P4 local environment rollout smoke only.
+
 ### 2026-07-18 — P4 bounded MahJax single-round rollout implementation
 
 - Type: executable pinned local environment rollout smoke evidence.
