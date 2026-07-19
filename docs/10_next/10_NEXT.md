@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact MahJax categorical-MLP predeclared raw-return versus causal running-baseline comparison smoke implementation.
+- [ ] Implement the exact MahJax categorical-MLP four-pass causal-baseline training and disjoint evaluation smoke.
 
 Current execution charter:
 
@@ -22,22 +22,33 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the two exact `04AE`-approved comparison files and direct
-  governance; change code/tests only for a genuine blocker.
-- Verify raw-reference reuse, identical initialization, exact ordered `0..31`
-  training and prior-record-only baseline update ordering.
-- Verify 10/32 versus 31/32 nonzero updates, complete identical training
-  trajectories/digests, final baseline/deltas and zero-update `52..83` result.
-- Pin unchanged reward vector/sum `-312`, counts `2/20`, changed-from-initial
-  `(52,65,72)` and changed-from-raw `(65,)`; verify no selection/persistence.
-- Run focused validation and independent source/result checks; full repository
-  validation from the implementation commit may be reused.
-- If review closes, directly approve or defer one material algorithmic or test-
-  runtime step; do not add a sibling proposal/boundary chain.
-- No third estimator, tuning/replay/scale-up, real data, strength claim or
-  P9-P12.
+- Add only the two exact `04AF`-approved source/test files and direct
+  governance synchronization; preserve existing reviewed APIs.
+- Load one reviewed initialization, evaluate exact `52..83`, then run exactly
+  four ordered `0..31` causal-baseline passes carrying policy/baseline state.
+- Pin exactly 128 attempts, per-pass nonzero updates `(31,32,32,32)`, nonzero
+  outcomes `(10,10,10,11)`, final baseline and parameter deltas from `04AF`.
+- Perform no intermediate evaluation/selection; final zero-update evaluation
+  pins exact `-312 -> -297`, counts `2/20 -> 2/19` and changed seeds
+  `(52,58,65,70,72)`.
+- Return complete frozen diagnostics, no arrays/checkpoint/persistence/I-O and
+  classify only a bounded deterministic improvement diagnostic.
+- No fifth pass, alternate pass count, early stop, third estimator, critic/
+  GAE/entropy/KL/clipping/optimizer/rate change, replay, real data, strength
+  claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Reviewed commit `6b9a640` against exact `04AE` approval in
+  `04AF`. Decision: `A. Review can close.` Confirmed prior-record causality,
+  exact 10/32-versus-31/32 updates, identical training digests, fixed `-312`
+  rewards, seed-65 raw/baseline behavior difference, no selection and all 487
+  tests passing with two skips. A leave-one-out batch probe leaves behavior
+  unchanged and is rejected. One predeclared four-pass probe performs 128
+  attempts and changes fixed evaluation from `-312` to `-297`, negative count
+  `20` to `19`, with changes `(52,58,65,70,72)`. Directly approved its exact
+  two-file implementation with zero gates. This is not robust improvement,
+  strength, real-data or P9-P12 evidence.
 
 - [x] 2026-07-19 Implemented the exact `04AE`-approved raw-return versus causal
   per-seat running-baseline comparison in two new files. The raw reference

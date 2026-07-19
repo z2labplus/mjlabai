@@ -2,14 +2,14 @@
 
 ## Current stage
 
-P8 exact code review of the implemented `04AE` categorical-MLP raw-return
-versus causal per-seat running-baseline comparison. The implementation reuses
-the reviewed raw reference, applies prior-record-only baselines on ordered
-`0..31`, pins 10/32 versus 31/32 nonzero updates and identical training
-trajectories/digests. Disjoint `52..83` rewards remain `-312` with counts
-`2/20`; baseline differs from raw at seed 65. Review may change code/tests only
-for a blocker and must directly approve/defer one material algorithmic or test-
-runtime step without a sibling docs chain.
+P8 direct implementation of the `04AF`-approved categorical-MLP four-pass
+causal-baseline training/evaluation diagnostic. `04AF` closes the exact raw-
+versus-baseline comparison review after all 487 tests pass. One predeclared
+probe runs exactly 4 x ordered `0..31` with continuous prior-record baseline
+and no intermediate selection, then changes disjoint `52..83` evaluation from
+`-312` to `-297` and negatives `20` to `19`, with positives fixed at `2`.
+The exact two-file task must pin this bounded diagnostic without fifth pass,
+tuning, checkpoint, real data or strength claim.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -589,7 +589,7 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04AE` raw-versus-causal-baseline implementation. Pin prior-
-record causality, identical training trajectories, 10/32 versus 31/32 updates,
-unchanged reward diagnostics, seed-65 behavior difference and no-selection
-scope. Directly approve/defer one material next step without another docs chain.
+Implement the exact `04AF` four-pass causal-baseline diagnostic: 128 ordered
+attempts, continuous baseline/policy state, no intermediate selection, and
+disjoint zero-update `-312 -> -297` evaluation. Pin complete diagnostics and
+no-checkpoint/non-strength scope. One exact implementation review follows.

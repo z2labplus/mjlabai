@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Causal-baseline review and bounded four-pass probe
+
+- Type: exact code-review closure plus bounded four-pass training task-
+  approval evidence.
+- `04AF` records `A. Review can close`; ten focused and all 487 explicit tests
+  pass with two skips plus compile/dependency/diff checks.
+- A frozen-census leave-one-out batch baseline makes one small update but
+  changes no fixed evaluation record; it is rejected.
+- A predeclared four-pass causal-baseline probe performs exactly 128 attempts,
+  no intermediate selection and records evaluation sum `-312 -> -297`,
+  positive count `2 -> 2`, negative count `20 -> 19` and changed seeds
+  `(52,58,65,70,72)`.
+- Evidence grade: bounded deterministic improvement probe and exact task
+  approval only; not robust improvement, checkpoint selection or strength.
+
 ### 2026-07-19 — Executable raw-versus-causal-baseline comparison
 
 - Type: executable P8 local signal-densification comparison evidence.

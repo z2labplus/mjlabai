@@ -28,15 +28,15 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 exact code review of the implemented `04AE`-approved categorical-MLP raw-
-return versus causal per-seat running-baseline comparison. The implementation
-pins prior-record causality, 10/32 raw versus 31/32 baseline nonzero updates and
-identical training trajectory counts/digests. Disjoint `52..83` reward vector,
-sum `-312` and counts `2/20` remain unchanged; baseline differs from raw in the
-complete seed-65 behavior record. Ten focused and all 487 explicit tests pass
-with two skips. One exact review must directly approve/defer a material next
-step without another docs chain. This is bounded algorithm-diagnostic evidence,
-not production evaluation, improvement or strength.
+P8 direct implementation of the `04AF`-approved categorical-MLP four-pass
+causal-baseline training/evaluation diagnostic. `04AF` review-accepts the raw-
+versus-baseline comparison after all 487 tests pass. A predeclared exact four-
+pass probe carries policy/baseline state over 128 attempts with no intermediate
+selection, then records disjoint `52..83` evaluation `-312 -> -297`, positive
+count `2 -> 2`, negative count `20 -> 19` and changed seeds
+`(52,58,65,70,72)`. The exact next two-file code must pin this bounded result
+without fifth pass, tuning, checkpoint or real data. This is deterministic
+improvement-diagnostic evidence, not robust evaluation or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

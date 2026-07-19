@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.36
+
+- Added `04AF`; reviewed commit `6b9a640` against exact `04AE` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed prior-record causality, 10/32-versus-31/32 update counts,
+  identical training digests, fixed `-312` rewards and no selection.
+- Validation passed: ten focused and all 487 explicit tests with two skips;
+  compile, dependency and diff checks pass.
+- Rejected a behavior-inert leave-one-out batch probe. A predeclared four-pass
+  probe changes fixed evaluation `-312 -> -297` and negatives `20 -> 19`;
+  directly approved exact code. No robust-improvement, strength or P9-P12
+  claim was added.
+
 ## 2026-07-19 - v4.35
 
 - Implemented the exact `04AE` raw-versus-causal-running-baseline comparison

@@ -379,6 +379,13 @@ trajectory digests, unchanged `-312` reward diagnostics and one complete
 raw-versus-baseline behavior difference at seed 65. This is bounded signal-
 densification evidence only, not improvement or strength evidence.
 
+`docs/04_rl_selfplay/04AF_P8_CAUSAL_RUNNING_BASELINE_COMPARISON_IMPLEMENTATION_REVIEW.md`
+reviews commit `6b9a640`, records `A. Review can close`, accepts the exact
+raw-versus-causal-baseline comparison and directly approves one exact four-pass
+training diagnostic. The predeclared probe records `-312 -> -297` with one
+fewer negative round and no added positive round. This is bounded task-
+approval evidence, not robust improvement or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

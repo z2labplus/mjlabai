@@ -156,6 +156,25 @@ disjoint zero-update reward identity and changed-from-initial/raw seeds are
 pinned in source/tests. Ten focused and all 487 explicit tests pass with two
 skips. No estimator or checkpoint is selected; one exact review is next.
 
+Review status: `04AF` closes the causal-baseline comparison review with no
+blocker. The leave-one-out batch probe is behavior-inert and rejected. The
+predeclared four-pass probe has one bounded reward improvement and is directly
+approved for exact implementation; it does not select a checkpoint.
+
+## 2026-07-19 — P8 bounded four-pass training approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Four passes become an open-ended training loop. | Governance / Scope | Critical | Medium | Exact outer range four and exact inner ordered `0..31`; tests/source reject fifth pass, alternate count and early stopping. | Open |
+| Evaluation is checked between passes and drives stopping. | Evaluation / Leakage | Critical | Medium | Evaluate only initial and after all 128 attempts; expose no intermediate evaluation or selected pass. | Open |
+| Repeated fixed seeds overfit the deterministic protocol. | Research / Generalization | Critical | High | Keep exact disjoint `52..83` diagnostic and classify only bounded evidence; no checkpoint selection or scale-up. | Open |
+| `-312 -> -297` is overclaimed as strength. | Evidence / Statistics | Critical | High | Pin only one negative-to-zero reward change, unchanged positive count and no uncertainty/strength claim. | Open |
+| Longer smoke further increases regression time. | Engineering / Delivery | High | Realized | Focused development test plus one full-suite run; next review must consider reusable execution/test tiering before another expensive branch. | Open |
+
+Approval status: `04AF` leaves zero gates before the exact two-file four-pass
+implementation. No fifth pass, tuning, checkpoint or production use is
+approved.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
