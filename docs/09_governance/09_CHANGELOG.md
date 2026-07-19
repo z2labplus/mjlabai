@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.45
+
+- Implemented the exact `04AJ` fast two-protocol robustness evidence gate and
+  matching tests in two new files.
+- The frozen array-free report pins reviewed reference/alternate primary deltas
+  `15/0` and replication deltas `121/0`, records both improvements as not
+  reproduced, sets robustness/selection false and selects nothing.
+- Source imports only standard-library dataclass/typing support and executes no
+  JAX, MahJax, environment, training or evaluation code. It has no threshold,
+  winner score, ranking, I/O or artifact path.
+- Seven focused tests pass in `0.001s`; 122 fast synthetic RL regressions pass
+  in `0.033s`. Compile, dependency and diff checks pass. No real data, strength
+  claim or P9-P12 work was added; one lightweight review is next.
+
 ## 2026-07-19 - v4.44
 
 - Added `04AJ`; reviewed commit `e462ff3` against exact `04AI` approval.

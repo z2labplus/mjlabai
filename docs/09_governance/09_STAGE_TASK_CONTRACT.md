@@ -2,15 +2,14 @@
 
 ## Current stage
 
-P8 direct implementation of the `04AJ`-approved fast no-selection two-protocol
-robustness evidence gate. `04AJ` accepts commit `e462ff3` after 11 focused and
-all 510 tests pass, records that alternate training retains initial
-`-312/-1056` and trails reference by `15/121`, and selects no protocol. The
-next exact source/test consumes reviewed summary values only and records
-disagreement/non-reproduction with robustness false and all selection fields
-`None`. It must not import or execute JAX, MahJax, environment, training or
-evaluation code. No threshold, third protocol/window/pass, real data, strength
-claim or P9-P12.
+P8 lightweight review of the implemented `04AJ`-approved fast no-selection
+two-protocol robustness evidence gate. The exact new source/test pins reviewed
+reference/alternate deltas `15/0` and `121/0`, records non-reproduction and
+robustness false, selects nothing and executes zero training/evaluation calls.
+Seven focused and 122 fast synthetic RL tests pass. Review must use lightweight
+source/provenance checks only and directly approve/defer one material variance-
+control task. No expensive-suite rerun, threshold, third protocol/window/pass,
+real data, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -590,8 +589,8 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04AJ` fast reviewed-summary robustness evidence gate in
-one new source/test only. Pin reference/alternate primary deltas `15/0` and
-replication deltas `121/0`, record non-reproduction and robustness false, and
-select nothing. No expensive imports/calls, threshold, training/evaluation,
-third protocol/window/pass, real data, strength claim or P9-P12.
+Review the exact `04AJ` fast robustness evidence gate once using recorded fast
+tests and lightweight source/provenance checks. Verify reviewed values,
+non-reproduction, no robustness/selection, standard-library-only imports and
+no threshold/ranking/I-O. Directly approve/defer one material P8 variance task;
+no expensive suite, third protocol/window/pass, strength claim or P9-P12.

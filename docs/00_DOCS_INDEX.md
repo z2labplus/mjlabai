@@ -435,6 +435,13 @@ alternate training and honest non-reproduction on both fixed windows, and
 selects no protocol. It directly approves one fast no-selection robustness
 evidence gate over reviewed summaries only, with zero additional documentation
 gates and no training/runtime dependency.
+
+That exact gate now exists in
+`src/mjlabai/rl/mahjax_categorical_mlp_four_pass_training_protocol_robustness_gate.py`
+with matching fast tests. It pins deltas `15/0` and `121/0`, records no
+reproduction/robustness/selection, imports no P8 runtime and passes seven
+focused plus 122 fast synthetic RL tests. This is executable claim-control
+evidence only, not a stronger model.
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

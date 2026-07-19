@@ -249,6 +249,12 @@ reviewed-summary no-selection evidence gate and forbids any expensive module
 import/call. Third-protocol/seed-search and strength-overclaim risks remain
 prohibited; the full-suite runtime risk remains open and requires tiered use.
 
+Gate implementation status: the exact `04AJ` report is standard-library only,
+executes zero training/evaluation calls, has no threshold/ranking/winner field
+and makes selection impossible. Seven focused and 122 fast synthetic RL tests
+pass. This mitigates evidence-overclaim risk without adding to the 6955-second
+suite; model variance and lack of robust improvement remain open research risks.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

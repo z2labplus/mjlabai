@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement a fast no-selection two-protocol robustness evidence gate over the reviewed MahJax four-pass summary values only.
+- [ ] Review the fast MahJax four-pass two-protocol robustness evidence gate implementation.
 
 Current execution charter:
 
@@ -22,17 +22,28 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Add only the exact `04AJ`-approved source/test plus direct governance.
-- Use reviewed immutable summary values only: reference/alternate primary
-  deltas `15/0` and replication deltas `121/0`.
-- Return a frozen array-free report with disagreement/non-reproduction,
-  robustness false and no selected protocol/model/pass/checkpoint.
-- Do not import or call JAX, MahJax, environments, training or evaluation; use
-  no threshold, ranking or winner score. Tests must remain fast.
+- Review only the exact `04AJ`-approved source/test and recorded fast evidence.
+- Verify reviewed deltas `15/0` and `121/0`, non-reproduction, robustness false,
+  no selection and frozen array-free output.
+- Confirm no JAX/MahJax/environment/training/evaluation import or call and no
+  threshold, ranking, winner score or I/O; do not run expensive suites.
+- Directly approve or defer one material P8 algorithmic variance-control task
+  without adding another boundary/proposal chain.
 - No third training protocol, seed search, fifth pass, third window, tuning,
   replay, artifact, real data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Implemented the exact `04AJ` fast no-selection two-protocol
+  robustness evidence gate in one new source/test pair. The frozen array-free
+  report uses reviewed primary reference/alternate deltas `15/0` and
+  replication deltas `121/0`, records both improvements as not reproduced,
+  sets robustness/selection false and leaves protocol/model/pass/checkpoint
+  selections `None`. It imports only standard-library dataclass/typing support
+  and performs zero training/evaluation calls. Seven focused tests pass in
+  `0.001s`; 122 fast synthetic RL regressions pass in `0.033s`. Compile,
+  dependency and diff checks pass. No runtime model dependency, threshold,
+  ranking, I/O, real data, strength claim or P9-P12 work was added.
 
 - [x] 2026-07-19 Reviewed commit `e462ff3` against exact `04AI` approval in
   `04AJ`. Decision: `A. Review can close.` Confirmed exact `116..147` x four,

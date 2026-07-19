@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Executable fast two-protocol robustness evidence gate
+
+- Type: executable P8 local reviewed-summary claim-control evidence.
+- The report pins primary deltas `15/0` and replication deltas `121/0` for
+  reference/alternate protocols, records no reproduced improvement and sets
+  robustness/selection false with all selection IDs `None`.
+- The module has standard-library-only imports and zero training/evaluation
+  calls. It does not import either expensive smoke module.
+- Seven focused tests pass in `0.001s`; 122 fast synthetic RL regressions pass
+  in `0.033s`. Compile, dependency and diff checks pass.
+- Evidence grade: P8 local reviewed-summary two-protocol robustness gating only;
+  not policy quality, robustness, strength, promotion, Tenhou, stable-dan,
+  LuckyJ or P9-P12 evidence.
+
 ### 2026-07-19 — Alternate-training sensitivity review and robustness-gate approval
 
 - Type: exact P8 implementation-review closure plus fast evidence-gate task
