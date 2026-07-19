@@ -46,8 +46,10 @@ skips (`6955.03s` wall). `04AJ` reviews commit `e462ff3`, records
 reviewed-summary robustness evidence gate with no training call. That gate is
 now implemented with seven focused and 122 fast synthetic RL tests passing.
 `04AK` closes its review and directly approves one real two-protocol four-pass
-leave-one-out batch-baseline variance-control training diagnostic. This is P8
-training-seed sensitivity work, not robust
+leave-one-out batch-baseline variance-control training diagnostic. That exact
+diagnostic is now implemented: both protocols change parameters but retain
+initial fixed-window rewards `-312/-1056`; ten focused and 122 fast tests pass.
+One lightweight review is next. This is P8 training-seed sensitivity work, not robust
 generalization, algorithm selection, production evaluation or strength:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
@@ -1159,7 +1161,7 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is direct implementation of the exact `04AK` two-protocol
+- Current next work is lightweight review of the exact `04AK` two-protocol
   four-pass leave-one-out batch-baseline variance-control training diagnostic.
   P8 bounded local diagnostics are active;
   production self-play, evaluation, league, real data, Tenhou and P9-P12 remain

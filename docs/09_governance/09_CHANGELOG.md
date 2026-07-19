@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.47
+
+- Implemented the exact `04AK` two-protocol four-pass leave-one-out batch-
+  baseline variance-control diagnostic and focused tests in two new files.
+- Independent identical-init branches use exact ordered `0..31` and
+  `116..147`. Each pass collects 32 frozen-policy trajectories, computes every
+  trajectory baseline from the other 31 same-seat returns and applies one mean
+  gradient update at `0.01`: 256 trajectories/eight updates total.
+- Both branches change parameters and lower each batch objective, but primary
+  and replication rewards both retain exact initial vectors/sums `-312/-1056`
+  with zero changed reward seeds. No protocol is selected.
+- Ten focused tests pass in `2440.773s` (`2449.75s` wall); 122 fast synthetic
+  RL tests pass in `0.035s`. Compile, dependency and diff checks pass. The full
+  suite is intentionally not rerun. No real data, strength claim or P9-P12.
+
 ## 2026-07-19 - v4.46
 
 - Added `04AK`; reviewed commit `e498fcb` against exact `04AJ` approval.

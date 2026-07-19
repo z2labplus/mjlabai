@@ -2,15 +2,14 @@
 
 ## Current stage
 
-P8 direct implementation of the `04AK`-approved real two-protocol four-pass
-leave-one-out batch-baseline variance-control training diagnostic. Two
-identical-initialization branches use exact `0..31` and `116..147`. Each pass
-collects 32 trajectories under frozen pass-start parameters, computes each
-trajectory's same-seat baseline from the other 31, then applies one mean
-objective update at `0.01`. Final-only zero-update evaluation uses `52..83`
-and `84..115`; results are retained without selection. No third protocol,
-search, fifth pass/window, full-suite rerun, real data, strength claim or
-P9-P12.
+P8 lightweight review of the implemented `04AK` two-protocol four-pass leave-
+one-out batch-baseline variance-control diagnostic. Exact `0..31` and
+`116..147` branches each collect 32 frozen-policy trajectories/pass and apply
+one other-31-baseline mean update/pass. Both change parameters but retain exact
+initial fixed-window rewards `-312/-1056`. Ten focused and 122 fast tests pass.
+Review must reuse evidence, select nothing and directly approve/defer one
+material update-scale/behavior task. No expensive rerun, third protocol/window/
+pass, real data, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -590,9 +589,8 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04AK` two-protocol four-pass leave-one-out batch-baseline
-diagnostic in one new source/test. Use exact two seed ranges, collect all 32
-trajectories before one update/pass, compute other-31 per-seat baselines, then
-run final-only existing fixed windows. Pin all results regardless of sign and
-select nothing. No third protocol/search/window/pass, full-suite, strength
-claim or P9-P12.
+Review the exact `04AK` batch-baseline implementation once using recorded
+probe/tests and lightweight source/provenance checks. Verify batch freezing,
+other-31 identity, eight updates, objective/delta evidence, unchanged fixed
+rewards and no selection. Directly approve/defer one material update-scale task;
+no expensive rerun, third protocol/window/pass, strength claim or P9-P12.

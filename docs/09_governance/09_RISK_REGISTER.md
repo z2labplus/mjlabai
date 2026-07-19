@@ -262,6 +262,13 @@ protocols. It forbids a third protocol/search/selection and will not rerun the
 full suite. Batch-estimator correctness, compute cost and non-reproduction
 remain open risks until the exact implementation evidence is recorded.
 
+Implementation status: the exact two-protocol batch estimator is implemented
+and verifies true other-31 baselines, eight bounded updates and complete legal
+diagnostics. Both branches change parameters but leave both fixed reward vectors
+unchanged at `-312/-1056`. This mitigates update-order variance but does not
+produce behavior improvement; update-scale/argmax-invariance risk is now open.
+Ten focused and 122 fast tests pass, and the expensive full suite is not rerun.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

@@ -448,6 +448,13 @@ reviews commit `e498fcb`, records `A. Review can close`, confirms exact fast
 claim-control behavior and directly approves a real two-protocol four-pass
 leave-one-out batch-baseline variance-control training diagnostic. It adds no
 planning chain; zero documentation gates remain before the exact code.
+
+That exact two-branch diagnostic now exists in
+`src/mjlabai/rl/mahjax_categorical_mlp_four_pass_leave_one_out_batch_training_protocol_smoke.py`
+with matching focused tests. It performs 256 trajectories/eight aggregate
+updates, validates true other-31 baselines and finds both protocols retain
+initial fixed-window rewards `-312/-1056` despite parameter changes. This is
+bounded variance-control evidence, not robust improvement or strength.
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

@@ -8,6 +8,23 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Executable two-protocol leave-one-out batch diagnostic
+
+- Type: executable P8 local algorithmic variance-control diagnostic evidence.
+- Two identical-init branches use exact `0..31` and `116..147`, four passes
+  each. Every pass collects all 32 trajectories before one aggregate update;
+  each trajectory's per-seat baseline excludes its own return.
+- The diagnostic executes 256 training trajectories/eight updates plus four
+  final zero-update fixed-window evaluations. Leave-one-out advantage sums are
+  centered per seat and all actions/terminations are valid.
+- Both protocols change parameters but retain exact initial primary and
+  replication rewards `-312/-1056`, with zero changed reward seeds.
+- Ten focused tests pass in `2440.773s`; 122 fast synthetic RL tests pass in
+  `0.035s`. Compile, dependency and diff checks pass; no full-suite rerun.
+- Evidence grade: bounded variance-control/non-improvement evidence only; not
+  robust improvement, model strength, promotion, Tenhou, stable-dan, LuckyJ or
+  P9-P12 evidence.
+
 ### 2026-07-19 — Robustness-gate review and batch-variance task approval
 
 - Type: exact P8 implementation-review closure plus material algorithmic

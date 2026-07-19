@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement an exact two-protocol four-pass leave-one-out batch-baseline variance-control training diagnostic.
+- [ ] Review the exact two-protocol four-pass leave-one-out batch-baseline variance-control diagnostic implementation.
 
 Current execution charter:
 
@@ -22,19 +22,31 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Add only the exact `04AK`-approved source/test plus direct governance.
-- Run independent identical-init branches on exact ordered `0..31` and
-  `116..147`, four passes each.
-- Collect all 32 trajectories under fixed pass-start parameters, use the other
-  31 same-seat returns as each trajectory's baseline, and apply exactly one
-  mean objective update per pass at `0.01`.
-- Evaluate only final policies on existing zero-update `52..83` and `84..115`;
-  pin all results regardless of sign and select nothing.
-- Run one probe and focused/fast checks only; do not rerun the full suite.
+- Review only the exact `04AK`-approved source/test and recorded probe/focused/
+  fast evidence; do not rerun either 2440-second execution or the full suite.
+- Verify identical initialization, exact two protocols/four passes, frozen
+  32-trajectory collection, other-31 same-seat baselines, one update/pass and
+  final-only existing windows.
+- Preserve the observed result: both protocols change parameters but both
+  fixed reward vectors remain at initial `-312/-1056`; select nothing.
+- Use lightweight source/provenance checks and directly approve/defer one
+  material update-scale/behavior-change task without another docs chain.
 - No third protocol, seed search, fifth pass, third window, tuning, replay,
   artifact, real data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Implemented the exact `04AK` two-protocol four-pass leave-one-
+  out batch-baseline diagnostic in one new source/test pair. Independent
+  identical-init branches use exact `0..31` and `116..147`; each of four passes
+  collects all 32 trajectories before one mean-gradient update at `0.01`, with
+  each trajectory's per-seat baseline computed from the other 31. Both
+  protocols change parameters but both final fixed-window reward vectors remain
+  at initial `-312/-1056`, with zero changed reward seeds. Ten focused tests
+  pass in `2440.773s` (`2449.75s` wall); 122 fast synthetic RL tests pass in
+  `0.035s`. Compile, dependency and diff checks pass. No protocol selection,
+  third protocol/window/pass, full suite, real data, strength claim or P9-P12
+  work was added. One lightweight implementation review is next.
 
 - [x] 2026-07-19 Reviewed commit `e498fcb` against exact `04AJ` approval in
   `04AK`. Decision: `A. Review can close.` Confirmed exact reviewed deltas,
