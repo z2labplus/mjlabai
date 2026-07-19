@@ -27,16 +27,15 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the `04AH`-approved second
-predeclared replication evaluation for the exact four-pass causal-baseline
-policy. `04AH` review-accepts the process-local immutable reuse after 20
-combined and all 498 tests pass, with no cache/state blocker. Before any fifth
-pass or tuning, the same exact four-pass policy must preserve primary `52..83`
-results and add zero-update initial/final evaluation on exact disjoint
-`84..115`, retaining complete diagnostics and accepting the observed result
-regardless of sign. No selection, checkpoint, training change or real data is
-allowed. This is bounded P8 replication evidence, not robust evaluation,
-algorithm selection, production evaluation or strength:
+Current active stage is review of the implemented `04AH`-approved second predeclared
+replication evaluation for the exact four-pass causal-baseline policy. Exact
+training remains 4 x ordered `0..31` and the primary `52..83` diagnostic
+remains `-312 -> -297`. Zero-update replication on exact disjoint `84..115`
+records `-1056 -> -935`, positive rounds `0 -> 0`, negative rounds `19 -> 18`
+and changed seeds `(84,89,92,94,102,103,104,106,110,113,114)`. The result was
+retained without selection. Eleven focused and all 499 tests pass with two
+skips. One exact code review is next. This is two-fixed-window P8 diagnostic evidence, not robust
+generalization, algorithm selection, production evaluation or strength:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -1147,8 +1146,8 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is direct code for the exact `04AH` second predeclared
-  evaluation window. P8 bounded local diagnostics are active;
+- Current next work is one exact code review of the implemented `04AH` second
+  predeclared evaluation window. P8 bounded local diagnostics are active;
   production self-play, evaluation, league, real data, Tenhou and P9-P12 remain
   unapproved. Do not make strength claims.
 - Technical decisions become project facts only after they are recorded in Git

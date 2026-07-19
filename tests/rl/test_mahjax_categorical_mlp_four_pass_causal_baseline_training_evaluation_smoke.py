@@ -70,7 +70,9 @@ class MahJaxCategoricalMlpFourPassCausalBaselineTrainingEvaluationSmokeTests(
         self.assertEqual(self.result.learning_rate, 0.01)
         self.assertEqual(self.result.update_attempt_count, 128)
         self.assertTrue(self.result.training_evaluation_seeds_disjoint)
-        self.assertEqual(self.result.evaluation_call_count, 2)
+        self.assertEqual(self.result.replication_evaluation_seeds, tuple(range(84, 116)))
+        self.assertTrue(self.result.all_seed_sets_pairwise_disjoint)
+        self.assertEqual(self.result.evaluation_call_count, 4)
         self.assertEqual(self.result.evaluation_update_count, 0)
         self.assertIsNone(self.result.selected_pass_index)
         self.assertIsNone(self.result.selected_checkpoint_id)
@@ -167,19 +169,92 @@ class MahJaxCategoricalMlpFourPassCausalBaselineTrainingEvaluationSmokeTests(
         self.assertEqual(self.result.final_evaluation_project_raw_rewards[6], 0.0)
         self.assertTrue(self.result.bounded_diagnostic_improved)
 
+    def test_predeclared_replication_evaluation_is_pinned_without_selection(self) -> None:
+        self.assertEqual(
+            self.result.initial_replication_project_raw_rewards,
+            (
+                -13.0, -10.0, 0.0, -77.0, -40.0, -10.0, 0.0, 0.0,
+                -180.0, -116.0, 0.0, -10.0, -160.0, 0.0, 0.0, 0.0,
+                0.0, -77.0, -20.0, -15.0, -10.0, 0.0, -10.0, -77.0,
+                0.0, -80.0, 0.0, -20.0, -15.0, -116.0, 0.0, 0.0,
+            ),
+        )
+        self.assertEqual(
+            self.result.final_replication_project_raw_rewards,
+            (
+                -13.0, -10.0, 0.0, -77.0, -40.0, -10.0, 0.0, 0.0,
+                -180.0, -116.0, 0.0, -10.0, -160.0, 0.0, 0.0, 0.0,
+                0.0, -77.0, -20.0, -10.0, -10.0, 0.0, -10.0, -77.0,
+                0.0, -80.0, 0.0, -20.0, -15.0, 0.0, 0.0, 0.0,
+            ),
+        )
+        self.assertEqual(
+            self.result.initial_replication_transition_counts,
+            (37, 88, 48, 65, 85, 82, 80, 69, 70, 81, 73, 72, 31, 65, 88, 55,
+             84, 35, 60, 87, 82, 66, 36, 48, 36, 59, 75, 86, 82, 76, 79, 76),
+        )
+        self.assertEqual(
+            self.result.final_replication_transition_counts,
+            (38, 88, 48, 65, 85, 81, 80, 69, 70, 81, 73, 72, 31, 65, 88, 55,
+             84, 35, 59, 50, 81, 66, 36, 48, 36, 59, 74, 86, 82, 79, 75, 76),
+        )
+        self.assertEqual(self.result.initial_replication_project_raw_sum, -1056.0)
+        self.assertEqual(self.result.final_replication_project_raw_sum, -935.0)
+        self.assertEqual(self.result.replication_project_raw_sum_delta, 121.0)
+        self.assertEqual(
+            (
+                self.result.initial_replication_positive_round_count,
+                self.result.final_replication_positive_round_count,
+            ),
+            (0, 0),
+        )
+        self.assertEqual(
+            (
+                self.result.initial_replication_negative_round_count,
+                self.result.final_replication_negative_round_count,
+            ),
+            (19, 18),
+        )
+        self.assertEqual(
+            self.result.changed_replication_evaluation_seeds,
+            (84, 89, 92, 94, 102, 103, 104, 106, 110, 113, 114),
+        )
+        for counts, traces, scores in (
+            (
+                self.result.initial_replication_transition_counts,
+                self.result.initial_replication_project_action_traces,
+                self.result.initial_replication_final_scores,
+            ),
+            (
+                self.result.final_replication_transition_counts,
+                self.result.final_replication_project_action_traces,
+                self.result.final_replication_final_scores,
+            ),
+        ):
+            self.assertEqual((len(counts), len(traces), len(scores)), (32, 32, 32))
+            self.assertTrue(
+                all(
+                    0 < len(project_trace) <= transition_count
+                    for project_trace, transition_count in zip(traces, counts)
+                )
+            )
+            self.assertTrue(all(len(score) == 4 for score in scores))
+
     def test_safety_and_non_strength_scope_are_explicit(self) -> None:
         self.assertTrue(self.result.all_training_actions_legal)
         self.assertTrue(self.result.all_rounds_terminated)
         self.assertTrue(self.result.safety_guardrails_all_satisfied)
         self.assertEqual(
             self.result.evidence_grade,
-            "P8 local exact four-pass causal-baseline deterministic improvement diagnostic evidence only",
+            "P8 local exact four-pass causal-baseline two-fixed-window deterministic diagnostic evidence only",
         )
         warning_text = " ".join(self.result.warnings).lower()
         for phrase in (
             "exactly 128 attempts",
             "evaluation occurs only before training and after all four passes",
-            "not robust improvement",
+            "replication outcome is retained regardless of sign and never selected",
+            "replication sum changes from -1056 to -935",
+            "two fixed deterministic windows are not robust or generalization evidence",
             "no fifth pass, alternate count, early stop",
             "not policy-quality, model-strength, stable-dan",
             "not tenhou or luckyj 10.68 comparison",
@@ -201,7 +276,7 @@ class MahJaxCategoricalMlpFourPassCausalBaselineTrainingEvaluationSmokeTests(
     def test_source_forbids_intermediate_selection_or_open_ended_training(self) -> None:
         source = inspect.getsource(smoke_module)
         self.assertIn("_PASS_COUNT = 4", source)
-        self.assertEqual(source.count("_evaluate("), 3)
+        self.assertEqual(source.count("_evaluate("), 5)
         self.assertIn("for _pass_index in range(_PASS_COUNT):", source)
         self.assertIn("selected_pass_index=None", source)
         self.assertNotIn("while ", source)

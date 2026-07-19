@@ -8,6 +8,24 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Executable four-pass replication evaluation
+
+- Type: executable P8 local two-fixed-window deterministic diagnostic evidence.
+- Exact 4 x ordered `0..31` training and primary zero-update `52..83`
+  diagnostics remain unchanged at `-312 -> -297`, positives `2 -> 2` and
+  negatives `20 -> 19`.
+- Predeclared zero-update replication `84..115` records `-1056 -> -935`,
+  positives `0 -> 0`, negatives `19 -> 18` and changed seeds
+  `(84,89,92,94,102,103,104,106,110,113,114)`.
+- Complete initial/final transition counts, project action traces, raw rewards
+  and final scores are retained in a frozen array-free result. Four evaluation
+  calls perform zero updates; no pass/checkpoint is selected.
+- Eleven focused tests pass in 1382.737 seconds. All 499 explicit tests pass
+  in 5622.879 seconds with two existing skips; compile/dependency/diff pass.
+- Evidence grade: two fixed deterministic windows only; not robust or
+  generalization evidence, model strength, promotion, Tenhou/stable-dan,
+  LuckyJ 10.68 comparison or P9-P12 evidence.
+
 ### 2026-07-19 — Result-reuse review and replication-evaluation approval
 
 - Type: exact P8 engineering implementation-review closure plus bounded

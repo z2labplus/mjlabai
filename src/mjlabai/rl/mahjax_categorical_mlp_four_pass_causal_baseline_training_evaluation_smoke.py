@@ -1,9 +1,10 @@
 """Run four exact causal-baseline MahJax training passes.
 
 The policy and prior-record per-seat baseline remain continuous across four
-ordered passes over seeds 0 through 31. Evaluation occurs only before training
-and after all 128 attempts on disjoint seeds 52 through 83. No intermediate
-selection, checkpoint, or parameter artifact exists.
+ordered passes over seeds 0 through 31. Primary and replication evaluation
+occur only before training and after all 128 attempts on disjoint seeds 52
+through 83 and 84 through 115. No intermediate selection, checkpoint, or
+parameter artifact exists.
 """
 
 from __future__ import annotations
@@ -39,7 +40,7 @@ from mjlabai.supervised.mahjax_categorical_mlp_imitation_training_smoke import (
 
 
 MAHJAX_CATEGORICAL_MLP_FOUR_PASS_CAUSAL_BASELINE_TRAINING_EVALUATION_SMOKE_VERSION = (
-    "p8_mahjax_categorical_mlp_four_pass_causal_baseline_training_evaluation_smoke_v0.1"
+    "p8_mahjax_categorical_mlp_four_pass_causal_baseline_training_evaluation_smoke_v0.2"
 )
 MAHJAX_CATEGORICAL_MLP_FOUR_PASS_CAUSAL_BASELINE_TRAINING_SEEDS = (
     MAHJAX_CATEGORICAL_MLP_PREDECLARED_RUNNING_BASELINE_TRAINING_SEEDS
@@ -47,6 +48,7 @@ MAHJAX_CATEGORICAL_MLP_FOUR_PASS_CAUSAL_BASELINE_TRAINING_SEEDS = (
 MAHJAX_CATEGORICAL_MLP_FOUR_PASS_CAUSAL_BASELINE_EVALUATION_SEEDS = (
     MAHJAX_CATEGORICAL_MLP_PREDECLARED_RUNNING_BASELINE_EVALUATION_SEEDS
 )
+_REPLICATION_EVALUATION_SEEDS = tuple(range(84, 116))
 
 _PASS_COUNT = 4
 _LEARNING_RATE = 0.01
@@ -71,8 +73,23 @@ _EXPECTED_FINAL_EVALUATION_REWARDS = (
     -80.0, 0.0, -20.0, -10.0, 0.0, -10.0, -10.0, -30.0,
 )
 _EXPECTED_CHANGED_EVALUATION_SEEDS = (52, 58, 65, 70, 72)
+_EXPECTED_INITIAL_REPLICATION_REWARDS = (
+    -13.0, -10.0, 0.0, -77.0, -40.0, -10.0, 0.0, 0.0,
+    -180.0, -116.0, 0.0, -10.0, -160.0, 0.0, 0.0, 0.0,
+    0.0, -77.0, -20.0, -15.0, -10.0, 0.0, -10.0, -77.0,
+    0.0, -80.0, 0.0, -20.0, -15.0, -116.0, 0.0, 0.0,
+)
+_EXPECTED_FINAL_REPLICATION_REWARDS = (
+    -13.0, -10.0, 0.0, -77.0, -40.0, -10.0, 0.0, 0.0,
+    -180.0, -116.0, 0.0, -10.0, -160.0, 0.0, 0.0, 0.0,
+    0.0, -77.0, -20.0, -10.0, -10.0, 0.0, -10.0, -77.0,
+    0.0, -80.0, 0.0, -20.0, -15.0, 0.0, 0.0, 0.0,
+)
+_EXPECTED_CHANGED_REPLICATION_EVALUATION_SEEDS = (
+    84, 89, 92, 94, 102, 103, 104, 106, 110, 113, 114,
+)
 _EVIDENCE_GRADE = (
-    "P8 local exact four-pass causal-baseline deterministic improvement "
+    "P8 local exact four-pass causal-baseline two-fixed-window deterministic "
     "diagnostic evidence only"
 )
 _WARNINGS = (
@@ -80,9 +97,13 @@ _WARNINGS = (
     "each pass uses ordered seeds 0 through 31 for exactly 128 attempts",
     "policy parameters and prior-record baseline remain continuous across passes",
     "evaluation occurs only before training and after all four passes",
+    "replication evaluation uses predeclared disjoint seeds 84 through 115",
+    "replication outcome is retained regardless of sign and never selected",
     "disjoint evaluation sum changes from -312 to -297",
     "negative rounds change from 20 to 19; positive rounds remain 2",
-    "one bounded deterministic diagnostic is not robust improvement",
+    "replication sum changes from -1056 to -935",
+    "replication negative rounds change from 19 to 18; positive rounds remain 0",
+    "two fixed deterministic windows are not robust or generalization evidence",
     "no fifth pass, alternate count, early stop, tuning or checkpoint selection",
     "no critic, GAE, entropy, KL, clipping, optimizer or rate change",
     "no replay buffer, persistence, artifact, external or real data",
@@ -107,6 +128,7 @@ class MahJaxCategoricalMlpFourPassCausalBaselineTrainingEvaluationResult:
     learning_rate: float
     training_seeds_per_pass: Tuple[int, ...]
     evaluation_seeds: Tuple[int, ...]
+    replication_evaluation_seeds: Tuple[int, ...]
     update_attempt_count: int
     per_pass_nonzero_update_counts: Tuple[int, ...]
     per_pass_nonzero_raw_outcome_counts: Tuple[int, ...]
@@ -136,6 +158,14 @@ class MahJaxCategoricalMlpFourPassCausalBaselineTrainingEvaluationResult:
     final_evaluation_project_raw_rewards: Tuple[float, ...]
     initial_evaluation_final_scores: Tuple[Tuple[int, ...], ...]
     final_evaluation_final_scores: Tuple[Tuple[int, ...], ...]
+    initial_replication_transition_counts: Tuple[int, ...]
+    final_replication_transition_counts: Tuple[int, ...]
+    initial_replication_project_action_traces: Tuple[Tuple[int, ...], ...]
+    final_replication_project_action_traces: Tuple[Tuple[int, ...], ...]
+    initial_replication_project_raw_rewards: Tuple[float, ...]
+    final_replication_project_raw_rewards: Tuple[float, ...]
+    initial_replication_final_scores: Tuple[Tuple[int, ...], ...]
+    final_replication_final_scores: Tuple[Tuple[int, ...], ...]
     initial_project_raw_sum: float
     final_project_raw_sum: float
     project_raw_sum_delta: float
@@ -145,6 +175,15 @@ class MahJaxCategoricalMlpFourPassCausalBaselineTrainingEvaluationResult:
     final_negative_round_count: int
     changed_evaluation_seeds: Tuple[int, ...]
     training_evaluation_seeds_disjoint: bool
+    initial_replication_project_raw_sum: float
+    final_replication_project_raw_sum: float
+    replication_project_raw_sum_delta: float
+    initial_replication_positive_round_count: int
+    final_replication_positive_round_count: int
+    initial_replication_negative_round_count: int
+    final_replication_negative_round_count: int
+    changed_replication_evaluation_seeds: Tuple[int, ...]
+    all_seed_sets_pairwise_disjoint: bool
     evaluation_call_count: int
     evaluation_update_count: int
     parameters_changed: bool
@@ -166,7 +205,7 @@ def _close(actual: float, expected: float, tolerance: float = 1e-5) -> bool:
     return math.isfinite(actual) and abs(actual - expected) <= tolerance
 
 
-def _evaluate(parameters, environment, step_fn, rule_policy_fn, jax, jnp):
+def _evaluate(parameters, environment, step_fn, rule_policy_fn, jax, jnp, seeds):
     return tuple(
         _collect_mixed_policy_evaluation_round(
             seed,
@@ -177,13 +216,13 @@ def _evaluate(parameters, environment, step_fn, rule_policy_fn, jax, jnp):
             jax,
             jnp,
         )
-        for seed in MAHJAX_CATEGORICAL_MLP_FOUR_PASS_CAUSAL_BASELINE_EVALUATION_SEEDS
+        for seed in seeds
     )
 
 
 def run_mahjax_categorical_mlp_four_pass_causal_baseline_training_evaluation_smoke(
 ) -> MahJaxCategoricalMlpFourPassCausalBaselineTrainingEvaluationResult:
-    """Run exactly four passes and one disjoint before/after evaluation."""
+    """Run four passes and two disjoint before/after evaluation windows."""
 
     try:
         jax, jnp, initial_parameters, _ = _train_mahjax_categorical_mlp_parameters()
@@ -220,6 +259,7 @@ def run_mahjax_categorical_mlp_four_pass_causal_baseline_training_evaluation_smo
         rule_policy_fn,
         jax,
         jnp,
+        MAHJAX_CATEGORICAL_MLP_FOUR_PASS_CAUSAL_BASELINE_EVALUATION_SEEDS,
     )
     initial_rewards = tuple(
         item.project_cumulative_raw_reward for item in initial_evaluation
@@ -227,6 +267,22 @@ def run_mahjax_categorical_mlp_four_pass_causal_baseline_training_evaluation_smo
     if initial_rewards != _EXPECTED_INITIAL_EVALUATION_REWARDS:
         raise MahJaxCategoricalMlpFourPassCausalBaselineTrainingEvaluationSmokeError(
             "initial evaluation differs from the approved probe"
+        )
+    initial_replication = _evaluate(
+        initial_parameters,
+        environment,
+        step_fn,
+        rule_policy_fn,
+        jax,
+        jnp,
+        _REPLICATION_EVALUATION_SEEDS,
+    )
+    initial_replication_rewards = tuple(
+        item.project_cumulative_raw_reward for item in initial_replication
+    )
+    if initial_replication_rewards != _EXPECTED_INITIAL_REPLICATION_REWARDS:
+        raise MahJaxCategoricalMlpFourPassCausalBaselineTrainingEvaluationSmokeError(
+            "initial replication evaluation differs from the approved probe"
         )
 
     parameters = tuple(initial_parameters)
@@ -309,9 +365,22 @@ def run_mahjax_categorical_mlp_four_pass_causal_baseline_training_evaluation_smo
         rule_policy_fn,
         jax,
         jnp,
+        MAHJAX_CATEGORICAL_MLP_FOUR_PASS_CAUSAL_BASELINE_EVALUATION_SEEDS,
     )
     final_rewards = tuple(
         item.project_cumulative_raw_reward for item in final_evaluation
+    )
+    final_replication = _evaluate(
+        parameters,
+        environment,
+        step_fn,
+        rule_policy_fn,
+        jax,
+        jnp,
+        _REPLICATION_EVALUATION_SEEDS,
+    )
+    final_replication_rewards = tuple(
+        item.project_cumulative_raw_reward for item in final_replication
     )
     changed_seeds = tuple(
         seed
@@ -331,6 +400,39 @@ def run_mahjax_categorical_mlp_four_pass_causal_baseline_training_evaluation_smo
     ).intersection(
         MAHJAX_CATEGORICAL_MLP_FOUR_PASS_CAUSAL_BASELINE_EVALUATION_SEEDS
     )
+    changed_replication_seeds = tuple(
+        seed
+        for seed, before, after in zip(
+            _REPLICATION_EVALUATION_SEEDS,
+            initial_replication,
+            final_replication,
+        )
+        if before != after
+    )
+    training_seed_set = set(
+        MAHJAX_CATEGORICAL_MLP_FOUR_PASS_CAUSAL_BASELINE_TRAINING_SEEDS
+    )
+    primary_evaluation_seed_set = set(
+        MAHJAX_CATEGORICAL_MLP_FOUR_PASS_CAUSAL_BASELINE_EVALUATION_SEEDS
+    )
+    replication_evaluation_seed_set = set(_REPLICATION_EVALUATION_SEEDS)
+    all_seed_sets_pairwise_disjoint = (
+        training_seed_set.isdisjoint(replication_evaluation_seed_set)
+        and primary_evaluation_seed_set.isdisjoint(replication_evaluation_seed_set)
+        and disjoint
+    )
+    initial_replication_positive = sum(
+        value > 0.0 for value in initial_replication_rewards
+    )
+    final_replication_positive = sum(
+        value > 0.0 for value in final_replication_rewards
+    )
+    initial_replication_negative = sum(
+        value < 0.0 for value in initial_replication_rewards
+    )
+    final_replication_negative = sum(
+        value < 0.0 for value in final_replication_rewards
+    )
     if (
         final_rewards != _EXPECTED_FINAL_EVALUATION_REWARDS
         or sum(initial_rewards) != -312.0
@@ -339,6 +441,14 @@ def run_mahjax_categorical_mlp_four_pass_causal_baseline_training_evaluation_smo
         or (initial_negative, final_negative) != (20, 19)
         or changed_seeds != _EXPECTED_CHANGED_EVALUATION_SEEDS
         or not disjoint
+        or final_replication_rewards != _EXPECTED_FINAL_REPLICATION_REWARDS
+        or sum(initial_replication_rewards) != -1056.0
+        or sum(final_replication_rewards) != -935.0
+        or (initial_replication_positive, final_replication_positive) != (0, 0)
+        or (initial_replication_negative, final_replication_negative) != (19, 18)
+        or changed_replication_seeds
+        != _EXPECTED_CHANGED_REPLICATION_EVALUATION_SEEDS
+        or not all_seed_sets_pairwise_disjoint
     ):
         raise MahJaxCategoricalMlpFourPassCausalBaselineTrainingEvaluationSmokeError(
             "final evaluation differs from the approved probe"
@@ -361,6 +471,7 @@ def run_mahjax_categorical_mlp_four_pass_causal_baseline_training_evaluation_smo
         evaluation_seeds=(
             MAHJAX_CATEGORICAL_MLP_FOUR_PASS_CAUSAL_BASELINE_EVALUATION_SEEDS
         ),
+        replication_evaluation_seeds=_REPLICATION_EVALUATION_SEEDS,
         update_attempt_count=completed_attempt_count,
         per_pass_nonzero_update_counts=tuple(per_pass_nonzero_updates),
         per_pass_nonzero_raw_outcome_counts=tuple(per_pass_nonzero_outcomes),
@@ -422,6 +533,26 @@ def run_mahjax_categorical_mlp_four_pass_causal_baseline_training_evaluation_smo
         final_evaluation_final_scores=tuple(
             item.final_scores for item in final_evaluation
         ),
+        initial_replication_transition_counts=tuple(
+            item.transition_count for item in initial_replication
+        ),
+        final_replication_transition_counts=tuple(
+            item.transition_count for item in final_replication
+        ),
+        initial_replication_project_action_traces=tuple(
+            item.project_action_trace for item in initial_replication
+        ),
+        final_replication_project_action_traces=tuple(
+            item.project_action_trace for item in final_replication
+        ),
+        initial_replication_project_raw_rewards=initial_replication_rewards,
+        final_replication_project_raw_rewards=final_replication_rewards,
+        initial_replication_final_scores=tuple(
+            item.final_scores for item in initial_replication
+        ),
+        final_replication_final_scores=tuple(
+            item.final_scores for item in final_replication
+        ),
         initial_project_raw_sum=sum(initial_rewards),
         final_project_raw_sum=sum(final_rewards),
         project_raw_sum_delta=sum(final_rewards) - sum(initial_rewards),
@@ -431,7 +562,18 @@ def run_mahjax_categorical_mlp_four_pass_causal_baseline_training_evaluation_smo
         final_negative_round_count=final_negative,
         changed_evaluation_seeds=changed_seeds,
         training_evaluation_seeds_disjoint=disjoint,
-        evaluation_call_count=2,
+        initial_replication_project_raw_sum=sum(initial_replication_rewards),
+        final_replication_project_raw_sum=sum(final_replication_rewards),
+        replication_project_raw_sum_delta=(
+            sum(final_replication_rewards) - sum(initial_replication_rewards)
+        ),
+        initial_replication_positive_round_count=initial_replication_positive,
+        final_replication_positive_round_count=final_replication_positive,
+        initial_replication_negative_round_count=initial_replication_negative,
+        final_replication_negative_round_count=final_replication_negative,
+        changed_replication_evaluation_seeds=changed_replication_seeds,
+        all_seed_sets_pairwise_disjoint=all_seed_sets_pairwise_disjoint,
+        evaluation_call_count=4,
         evaluation_update_count=0,
         parameters_changed=all(value > 0.0 for value in final_deltas),
         bounded_diagnostic_improved=True,

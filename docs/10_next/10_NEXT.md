@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Extend the exact MahJax four-pass causal-baseline smoke with predeclared replication evaluation seeds 84 through 115.
+- [ ] Review the MahJax four-pass causal-baseline replication evaluation implementation.
 
 Current execution charter:
 
@@ -22,18 +22,30 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Modify only the exact `04AH`-approved four-pass source/test files plus direct
-  governance; preserve exact training and primary `52..83` diagnostics.
-- Add exact disjoint replication evaluation seeds `84..115` before/after the
-  same 128 attempts, zero updates and no intermediate evaluation/selection.
-- Retain complete replication trajectories, rewards, scores, sums, counts and
-  changed seeds; total evaluation calls four and update count zero.
-- Pin the deterministic replication result regardless of sign; do not use it
-  for stopping, selection, tuning or checkpoint acceptance.
-- No fifth pass, alternate training seeds, algorithm/rate change, cache
-  expansion, real data, robust/strength claim or P9-P12.
+- Review only the completed replication implementation commit against exact
+  `04AH` approval, source/test invariants and passing focused/full-suite evidence.
+- Confirm unchanged 4 x ordered `0..31` training and primary `52..83`, exact
+  disjoint `84..115` rewards/counts/traces, four zero-update evaluations and
+  no intermediate selection or checkpoint.
+- Do not rerun the 93-minute full suite; use lightweight source/AST/provenance
+  probes and change code only if a concrete blocker exists.
+- Directly approve or defer one material P8 training-robustness task. Do not
+  add another evaluation window, fifth pass, tuning, real data, strength claim
+  or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Implemented the exact `04AH`-approved second predeclared
+  replication evaluation in the existing four-pass source/test. Exact 4 x
+  ordered `0..31` training and primary `52..83` remain unchanged at
+  `-312 -> -297`, positives `2 -> 2`, negatives `20 -> 19`. Zero-update
+  replication `84..115` records `-1056 -> -935`, positives `0 -> 0`, negatives
+  `19 -> 18` and changed seeds
+  `(84,89,92,94,102,103,104,106,110,113,114)`. Complete transitions, project
+  actions, rewards and scores are frozen; no pass/checkpoint is selected.
+  Eleven focused tests pass in `1382.737s`; all 499 tests pass in `5622.879s`
+  with two skips. No fifth pass, third window, tuning, artifact, real data,
+  robust/strength claim or P9-P12 was added. One exact code review is next.
 
 - [x] 2026-07-19 Reviewed commit `756c82d` against exact `04AG` approval in
   `04AH`. Decision: `A. Review can close.` Confirmed unchanged six-symbol API/

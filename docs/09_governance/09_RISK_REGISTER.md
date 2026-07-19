@@ -210,6 +210,13 @@ of sign. Two fixed windows still do not establish robust generalization.
 | Two windows are overclaimed as robust generalization. | Evidence / Statistics | Critical | High | Report vectors/counts and inconsistency explicitly; prohibit strength/promotion claims. | Open |
 | Added evaluation reverses runtime improvement. | Engineering / Delivery | High | Medium | Use existing frozen result shape and one full suite only; record elapsed time before approving further expansion. | Open |
 
+Implementation status: the predeclared `84..115` window is now pinned without
+changing training or primary `52..83`. It records `-1056 -> -935`, positives
+`0 -> 0`, negatives `19 -> 18` and all 11 changed seeds. Eleven focused and all
+499 tests pass with two skips. These two fixed windows remain insufficient for robust/generalization,
+model-strength or promotion claims; another adjacent evaluation window is not
+an acceptable next step.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

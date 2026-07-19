@@ -28,13 +28,13 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 direct implementation of the `04AH`-approved second disjoint replication
-evaluation for the exact four-pass causal-baseline policy. `04AH` review-
-accepts the process-local immutable reuse after 20 combined and all 498 tests
-pass. Exact four-pass training and primary `52..83` must remain unchanged; the
-next two-file code adds zero-update initial/final `84..115`, complete diagnostics
-and no selection, retaining the observed result regardless of sign. This is
-bounded replication work, not robust evaluation or strength.
+P8 review of the implemented `04AH`-approved second disjoint replication evaluation
+for the exact four-pass causal-baseline policy. Exact four-pass training and
+primary `52..83` remain unchanged. Zero-update initial/final `84..115` records
+`-1056 -> -935`, positives `0 -> 0`, negatives `19 -> 18` and complete changed
+seeds `(84,89,92,94,102,103,104,106,110,113,114)` with no selection. Eleven
+focused and all 499 tests pass with two skips. One exact review is next. This is bounded
+two-fixed-window diagnostic work, not robust evaluation or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

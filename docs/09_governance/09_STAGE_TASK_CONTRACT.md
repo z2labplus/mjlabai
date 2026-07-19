@@ -2,12 +2,13 @@
 
 ## Current stage
 
-P8 direct implementation of the `04AH`-approved second predeclared replication
-evaluation for the exact four-pass causal-baseline policy. `04AH` review-
-accepts process-local immutable reuse after all 498 tests pass. The next exact
-two-file code preserves 4 x ordered `0..31` and primary `52..83`, then adds
-zero-update initial/final `84..115` with complete diagnostics and no selection,
-accepting the outcome regardless of sign. No fifth pass, tuning, checkpoint,
+P8 review of the implemented `04AH`-approved second predeclared replication
+evaluation for the exact four-pass causal-baseline policy. The exact two-file
+change preserves 4 x ordered `0..31` and primary `52..83`, adds zero-update
+initial/final `84..115` with complete diagnostics and no selection, records
+`-1056 -> -935`, positives `0 -> 0` and negatives `19 -> 18`,
+accepting the outcome regardless of sign. Eleven focused and all 499 tests pass
+with two skips. No fifth pass, tuning, checkpoint,
 real data, robust claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
@@ -588,7 +589,8 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement exact `04AH` replication evaluation in the existing four-pass source/
-test only: preserve training/primary results, add disjoint zero-update
-`84..115` initial/final complete diagnostics, and retain result regardless of
-sign. No fifth pass, tuning, selection, strength claim or P9-P12.
+Review the exact `04AH` replication implementation once. Preserve training/
+primary results and exact `84..115` diagnostics; reuse the passing full suite
+and perform lightweight source/provenance checks. Directly approve/defer one
+material training-robustness task. No third window, fifth pass, tuning,
+selection, strength claim or P9-P12.

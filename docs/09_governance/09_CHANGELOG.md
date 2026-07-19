@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.41
+
+- Extended the exact four-pass causal-baseline source/test with the
+  `04AH`-approved predeclared disjoint replication evaluation `84..115`.
+- Exact training remains 4 x ordered `0..31` / 128 attempts; primary
+  `52..83` remains `-312 -> -297`, positives `2 -> 2`, negatives `20 -> 19`.
+- Replication records `-1056 -> -935`, positives `0 -> 0`, negatives `19 ->
+  18` and changed seeds `(84,89,92,94,102,103,104,106,110,113,114)`.
+- The frozen array-free result retains complete initial/final replication
+  transitions, project actions, rewards and final scores. Four evaluation
+  calls perform zero updates and no result selects a pass or checkpoint.
+- Eleven focused tests pass in `1382.737s`; all 499 explicit tests pass in
+  `5622.879s` with two skips. No fifth pass, tuning, third window, real data, strength claim or
+  P9-P12 work was added.
+
 ## 2026-07-19 - v4.40
 
 - Added `04AH`; reviewed commit `756c82d` against exact `04AG` approval.

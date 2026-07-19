@@ -407,6 +407,11 @@ reviews commit `756c82d`, records `A. Review can close`, accepts the exact
 process-local immutable reuse and directly approves one second predeclared
 `84..115` evaluation window for the same four-pass policy. It is bounded
 replication-task approval, not model selection or strength evidence.
+That approved two-file replication is now implemented in the existing
+four-pass source/test. It preserves exact training and primary results while
+pinning zero-update `84..115` rewards `-1056 -> -935`, positives `0 -> 0`,
+negatives `19 -> 18` and all changed seeds. Eleven focused and all 499 tests
+pass with two skips. It is not robust/generalization or strength evidence.
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust
