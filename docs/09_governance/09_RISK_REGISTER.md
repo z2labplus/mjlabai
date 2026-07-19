@@ -179,9 +179,10 @@ Implementation status: exact four/128 bounded loops, cross-pass baseline/policy
 continuity, no intermediate evaluation, complete diagnostics, final baseline/
 deltas, disjoint `-312 -> -297`, counts and changed seeds are pinned in source/
 tests. Ten focused and all 497 explicit tests pass with two skips. No pass or
-checkpoint is selected; one exact review is next. The realized full-suite
-runtime is 5890.810 seconds and must be addressed before another expensive
-training branch.
+checkpoint is selected. `04AG` closes the exact review with no blocker and
+directly approves process-local immutable raw-census result reuse. The realized
+full-suite runtime is 5890.810 seconds and must be reduced before another
+expensive training branch; disk caching or behavior changes remain forbidden.
 
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 

@@ -2,14 +2,13 @@
 
 ## Current stage
 
-P8 exact code review of the implemented `04AF` categorical-MLP four-pass
-causal-baseline training/evaluation diagnostic. The implementation runs exact
-4 x ordered `0..31`, 128 attempts, continuous policy/baseline state and no
-intermediate selection. Disjoint `52..83` evaluation changes `-312 -> -297`,
-positives `2 -> 2`, negatives `20 -> 19`, seed 58 `-15 -> 0` and complete
-records `(52,58,65,70,72)`. Review may change code/tests only for a blocker and
-must directly approve/defer bounded test-runtime reuse before another expensive
-branch; no fifth pass, tuning, checkpoint, real data or strength claim.
+P8 direct implementation of the `04AG`-approved process-local immutable raw-
+census result reuse. `04AG` review-accepts the exact four-pass diagnostic with
+no blocker after ten focused and all 497 tests pass. The next exact two-file
+code may cache at most one completed frozen array-free raw-census result keyed
+by runtime dependency callables, preserving patched failures, public API and
+all behavior while eliminating one duplicate comparison reference. No disk
+cache, fifth pass, tuning, checkpoint, real data or strength claim.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -589,7 +588,7 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04AF` four-pass implementation. Pin four/128 bounded loops,
-cross-pass continuity, no intermediate selection, complete legal diagnostics,
-`-312 -> -297`, counts/seed-58/changed seeds and no-checkpoint/non-strength
-scope. Directly approve/defer test-runtime reuse without another docs chain.
+Implement the exact `04AG` process-local immutable raw-census result reuse in
+the approved source/test only. Preserve dependency-patch failures and every
+diagnostic, then time raw-census plus comparison tests together. No disk cache,
+behavior change, new training branch, strength claim or P9-P12.

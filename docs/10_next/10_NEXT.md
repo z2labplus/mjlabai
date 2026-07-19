@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact MahJax categorical-MLP four-pass causal-baseline training and disjoint evaluation smoke implementation.
+- [ ] Implement process-local immutable raw-census result reuse for exact P8 regression tests.
 
 Current execution charter:
 
@@ -22,21 +22,28 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the two exact `04AF`-approved four-pass files and direct
-  governance; change code/tests only for a genuine blocker.
-- Verify exact four-pass/128-attempt nested loops, policy and prior-record
-  baseline continuity across pass edges, and no intermediate evaluation.
-- Verify per-pass update/outcome counts, complete 128 legal diagnostics, final
-  baseline/deltas and exactly two zero-update evaluations on disjoint `52..83`.
-- Pin exact `-312 -> -297`, counts `2/20 -> 2/19`, seed-58 `-15 -> 0`, changed
-  `(52,58,65,70,72)`, no selected pass/checkpoint and non-strength wording.
-- Reuse focused/full validation from implementation; run independent source/
-  result checks without another full 98-minute suite unless a blocker changes code.
-- If review closes, directly approve/defer one bounded test-runtime reuse step
-  before another expensive training branch; no sibling proposal/boundary chain.
-- No fifth pass/tuning/replay/real data/strength claim or P9-P12.
+- Modify only the exact `04AG`-approved raw-census source/test files plus direct
+  governance; preserve the public API and all deterministic diagnostics.
+- Cache at most one completed frozen array-free result in process memory, keyed
+  by exact runtime dependency callables; patched dependencies must not hit it.
+- Preserve wrapped failures, keep exceptions uncached, and add exact reuse and
+  dependency-patch regression coverage.
+- Run raw-census plus causal-baseline comparison tests together and record the
+  elapsed-time reduction from eliminating one duplicate raw reference.
+- No disk cache, serialization, parameters/checkpoints, path/CLI, behavior
+  change, new training branch, real data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Reviewed commit `2d75ee8` against exact `04AF` approval in
+  `04AG`. Decision: `A. Review can close.` Confirmed four/128 bounded loops,
+  cross-pass policy/baseline continuity, no intermediate evaluation/selection,
+  complete legal diagnostics, exact final baseline/deltas, `-312 -> -297`,
+  counts `2/20 -> 2/19`, seed-58 `-15 -> 0`, changed
+  `(52,58,65,70,72)` and no checkpoint/strength claim. Reused ten focused and
+  all 497 passing tests, plus independent AST/source checks. Directly approved
+  one exact process-local immutable raw-reference reuse implementation to
+  address the realized 5890.810-second regression runtime; zero gates remain.
 
 - [x] 2026-07-19 Implemented the exact `04AF`-approved four-pass causal-
   baseline training/evaluation diagnostic in two new files. One reviewed

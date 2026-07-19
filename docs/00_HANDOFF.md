@@ -27,18 +27,17 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is one exact code review of the implemented `04AF` MahJax
-categorical-MLP four-pass causal-baseline training/evaluation diagnostic. One
-reviewed initialization receives exactly four ordered `0..31` passes and 128
-attempts with continuous policy/baseline state and no intermediate evaluation
-or selection. Per-pass nonzero updates are `(31,32,32,32)` and nonzero outcomes
-`(10,10,10,11)`. Disjoint zero-update `52..83` evaluation moves
-`-312 -> -297`, positives `2 -> 2`, negatives `20 -> 19`; seed 58 changes
-`-15 -> 0` and complete changed seeds are `(52,58,65,70,72)`. Ten focused and
-all 497 explicit tests pass with two skips. One exact review must verify this
-and directly address test-runtime reuse before another expensive branch. This
-is a deterministic P8 improvement diagnostic, not robust evaluation,
-algorithm selection, production evaluation or strength:
+Current active stage is direct implementation of the `04AG`-approved process-
+local immutable raw-census result reuse. `04AG` review-accepts commit `2d75ee8`:
+exact four/128 continuous causal-baseline training, no intermediate selection,
+complete legal diagnostics and disjoint `-312 -> -297` evaluation all conform;
+ten focused and all 497 explicit tests pass with two skips. Full regression now
+takes 5890.810 seconds. The exact next two-file code may cache only one completed
+frozen array-free raw-census result keyed by runtime dependency callables so the
+later causal-baseline comparison does not repeat it; patched dependencies and
+failures must still execute. No behavior, disk artifact, parameter, checkpoint,
+training branch or public API may change. This is test-runtime engineering, not
+robust evaluation, algorithm selection, production evaluation or strength:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -1149,8 +1148,8 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is direct code for exact `04U` categorical MLP local
-  training and all-project outcome smoke. P8 bounded local training is active;
+- Current next work is direct code for exact `04AG` process-local immutable
+  raw-census result reuse. P8 bounded local diagnostics are active;
   production self-play, evaluation, league, real data, Tenhou and P9-P12 remain
   unapproved. Do not make strength claims.
 - Technical decisions become project facts only after they are recorded in Git

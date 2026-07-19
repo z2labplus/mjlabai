@@ -390,6 +390,12 @@ That exact `04AF` task is implemented in
 `src/mjlabai/rl/mahjax_categorical_mlp_four_pass_causal_baseline_training_evaluation_smoke.py`
 with focused tests in
 `tests/rl/test_mahjax_categorical_mlp_four_pass_causal_baseline_training_evaluation_smoke.py`.
+
+`docs/04_rl_selfplay/04AG_P8_FOUR_PASS_CAUSAL_BASELINE_IMPLEMENTATION_REVIEW.md`
+reviews commit `2d75ee8`, records `A. Review can close`, accepts the exact
+four-pass diagnostic and directly approves one process-local immutable raw-
+census result reuse task. It addresses realized regression runtime only and
+does not change training/evaluation behavior or provide strength evidence.
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

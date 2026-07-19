@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.38
+
+- Added `04AG`; reviewed commit `2d75ee8` against exact `04AF` approval.
+- Decision: `A. Review can close.` No code/test/scope blocker was found.
+- Confirmed exact four/128 loops, cross-pass continuity, no intermediate
+  evaluation/selection, complete legal diagnostics, final baseline/deltas and
+  disjoint `-312 -> -297`, counts `2/20 -> 2/19`, seed-58 `-15 -> 0`.
+- Reused ten focused and all 497 passing tests; independent AST/source checks
+  pass without duplicating the 5890.810-second suite.
+- Directly approved exact process-local immutable raw-census result reuse to
+  remove one duplicate reference computation. No behavior, new training,
+  strength claim or P9-P12 work was added.
+
 ## 2026-07-19 - v4.37
 
 - Implemented the exact `04AF` four-pass causal-baseline training/evaluation

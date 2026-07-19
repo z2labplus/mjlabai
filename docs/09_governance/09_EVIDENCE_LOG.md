@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Four-pass review and test-runtime reuse approval
+
+- Type: exact P8 implementation-review closure plus bounded engineering-task
+  approval evidence.
+- `04AG` records `A. Review can close` for commit `2d75ee8`; no blocker exists.
+- Exact four/128 continuity, no intermediate evaluation, complete legal
+  diagnostics, final baseline/deltas, `-312 -> -297`, counts `2/20 -> 2/19`,
+  seed-58 and changed-seed results conform to `04AF`.
+- Ten focused and all 497 tests already pass with two skips. Independent
+  AST/source checks pass; the 5890.810-second full run was not duplicated.
+- One exact process-local immutable raw-reference reuse task is directly
+  approved to reduce regression time without changing behavior.
+- Evidence grade: bounded implementation-review/engineering approval only;
+  not robust evaluation, model strength, promotion or P9-P12 evidence.
+
 ### 2026-07-19 — Executable bounded four-pass causal-baseline training
 
 - Type: executable P8 local deterministic improvement-diagnostic evidence.
