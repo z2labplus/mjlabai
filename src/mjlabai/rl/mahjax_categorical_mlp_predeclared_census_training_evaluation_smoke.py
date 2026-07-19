@@ -8,6 +8,7 @@ attempts. Initial and final parameters are evaluated without updates on seeds
 from __future__ import annotations
 
 from dataclasses import dataclass
+from functools import lru_cache
 import hashlib
 import math
 from typing import Optional, Tuple
@@ -209,9 +210,17 @@ def _close(actual: float, expected: float, tolerance: float = 1e-5) -> bool:
     return math.isfinite(actual) and abs(actual - expected) <= tolerance
 
 
-def _evaluate(parameters, environment, step_fn, rule_policy_fn, jax, jnp):
+def _evaluate(
+    parameters,
+    environment,
+    step_fn,
+    rule_policy_fn,
+    jax,
+    jnp,
+    collect_evaluation_round_fn,
+):
     return tuple(
-        _collect_mixed_policy_evaluation_round(
+        collect_evaluation_round_fn(
             seed,
             parameters,
             environment,
@@ -224,18 +233,23 @@ def _evaluate(parameters, environment, step_fn, rule_policy_fn, jax, jnp):
     )
 
 
-def run_mahjax_categorical_mlp_predeclared_census_training_evaluation_smoke(
+@lru_cache(maxsize=1)
+def _run_mahjax_categorical_mlp_predeclared_census_training_evaluation_smoke_cached(
+    train_parameters_fn,
+    load_runtime_fn,
+    collect_training_round_fn,
+    collect_evaluation_round_fn,
 ) -> MahJaxCategoricalMlpPredeclaredCensusTrainingEvaluationResult:
-    """Run one exact full-range training pass and disjoint evaluation."""
+    """Compute and retain one immutable result for exact dependency identities."""
 
     try:
-        jax, jnp, initial_parameters, _ = _train_mahjax_categorical_mlp_parameters()
+        jax, jnp, initial_parameters, _ = train_parameters_fn()
     except Exception as exc:
         raise MahJaxCategoricalMlpPredeclaredCensusTrainingEvaluationSmokeError(
             "reviewed categorical MLP in-memory training failed"
         ) from exc
     try:
-        _, _, mahjax = _load_pinned_runtime()
+        _, _, mahjax = load_runtime_fn()
         from mahjax.red_mahjong.players import rule_based_player
 
         environment = mahjax.make(
@@ -268,6 +282,7 @@ def run_mahjax_categorical_mlp_predeclared_census_training_evaluation_smoke(
         rule_policy_fn,
         jax,
         jnp,
+        collect_evaluation_round_fn,
     )
     initial_rewards = tuple(
         item.project_cumulative_raw_reward for item in initial_evaluation
@@ -283,7 +298,7 @@ def run_mahjax_categorical_mlp_predeclared_census_training_evaluation_smoke(
     nonzero_seeds = []
     zero_seeds = []
     for seed in MAHJAX_CATEGORICAL_MLP_PREDECLARED_CENSUS_TRAINING_SEEDS:
-        trajectory = _collect_all_project_round(seed, parameters, jax, jnp, mahjax)
+        trajectory = collect_training_round_fn(seed, parameters, jax, jnp, mahjax)
         before = tuple(parameters)
         update = _apply_actor_indexed_raw_outcome_update(
             parameters,
@@ -356,6 +371,7 @@ def run_mahjax_categorical_mlp_predeclared_census_training_evaluation_smoke(
         rule_policy_fn,
         jax,
         jnp,
+        collect_evaluation_round_fn,
     )
     final_rewards = tuple(
         item.project_cumulative_raw_reward for item in final_evaluation
@@ -433,6 +449,18 @@ def run_mahjax_categorical_mlp_predeclared_census_training_evaluation_smoke(
         safety_guardrails_all_satisfied=True,
         evidence_grade=_EVIDENCE_GRADE,
         warnings=_WARNINGS,
+    )
+
+
+def run_mahjax_categorical_mlp_predeclared_census_training_evaluation_smoke(
+) -> MahJaxCategoricalMlpPredeclaredCensusTrainingEvaluationResult:
+    """Run once per exact dependency set and reuse the frozen result in-process."""
+
+    return _run_mahjax_categorical_mlp_predeclared_census_training_evaluation_smoke_cached(
+        _train_mahjax_categorical_mlp_parameters,
+        _load_pinned_runtime,
+        _collect_all_project_round,
+        _collect_mixed_policy_evaluation_round,
     )
 
 

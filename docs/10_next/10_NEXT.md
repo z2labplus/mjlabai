@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement process-local immutable raw-census result reuse for exact P8 regression tests.
+- [ ] Review the process-local immutable raw-census result reuse implementation.
 
 Current execution charter:
 
@@ -22,18 +22,32 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Modify only the exact `04AG`-approved raw-census source/test files plus direct
-  governance; preserve the public API and all deterministic diagnostics.
-- Cache at most one completed frozen array-free result in process memory, keyed
-  by exact runtime dependency callables; patched dependencies must not hit it.
-- Preserve wrapped failures, keep exceptions uncached, and add exact reuse and
-  dependency-patch regression coverage.
-- Run raw-census plus causal-baseline comparison tests together and record the
-  elapsed-time reduction from eliminating one duplicate raw reference.
-- No disk cache, serialization, parameters/checkpoints, path/CLI, behavior
-  change, new training branch, real data, strength claim or P9-P12.
+- Review only the two exact `04AG`-approved source/test files and direct
+  governance; change code/tests only for a genuine blocker.
+- Verify public API/result identity, maxsize-one frozen-result reuse, dependency-
+  identity cache keys, uncached failures and no mutable arrays or persistence.
+- Verify raw-census plus causal-baseline comparison: 20 tests in `850.567s`
+  (`856.40s` wall), versus historical separate total `1310.550s`.
+- Verify all 498 tests pass in `5454.853s` with two skips, down `435.957s`
+  from the prior 497-test run despite one added cache test.
+- Reuse implementation validation; run only independent fast checks unless a
+  blocker changes code, then directly approve one material P8 algorithm task.
+- No cache broadening, behavior change, new training branch, real data,
+  strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Implemented the exact `04AG` process-local immutable raw-
+  census result reuse in the two approved files. A maxsize-one cache keys the
+  frozen array-free result by exact trainer/runtime/training-collector/
+  evaluation-collector callables, so patched dependencies miss and failures
+  remain uncached. Public API and every diagnostic remain unchanged. Raw-
+  census plus causal-baseline comparison passes 20 tests in `850.567s`
+  (`856.40s` wall), reducing the historical separate total by about `454.15s`
+  / `34.7%`. All 498 tests pass in `5454.853s` with two skips, `435.957s`
+  faster than the prior run despite one added test. No disk cache, parameters,
+  behavior change, new training, real data, strength claim or P9-P12 was added.
+  One exact code review is next.
 
 - [x] 2026-07-19 Reviewed commit `2d75ee8` against exact `04AF` approval in
   `04AG`. Decision: `A. Review can close.` Confirmed four/128 bounded loops,

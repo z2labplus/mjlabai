@@ -2,13 +2,13 @@
 
 ## Current stage
 
-P8 direct implementation of the `04AG`-approved process-local immutable raw-
-census result reuse. `04AG` review-accepts the exact four-pass diagnostic with
-no blocker after ten focused and all 497 tests pass. The next exact two-file
-code may cache at most one completed frozen array-free raw-census result keyed
-by runtime dependency callables, preserving patched failures, public API and
-all behavior while eliminating one duplicate comparison reference. No disk
-cache, fifth pass, tuning, checkpoint, real data or strength claim.
+P8 exact code review of the implemented `04AG` process-local immutable raw-
+census result reuse. The maxsize-one cache stores only a frozen array-free
+result, keys by exact runtime dependency callables and preserves patched
+failures/public API/diagnostics. Twenty combined tests pass in 850.567 seconds;
+all 498 pass in 5454.853 seconds with two skips, 435.957 seconds below the prior
+suite. Review may change code/tests only for a blocker and must directly return
+to one material P8 algorithm task. No cache broadening, real data or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -588,7 +588,7 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04AG` process-local immutable raw-census result reuse in
-the approved source/test only. Preserve dependency-patch failures and every
-diagnostic, then time raw-census plus comparison tests together. No disk cache,
-behavior change, new training branch, strength claim or P9-P12.
+Review the exact `04AG` reuse implementation. Verify maxsize-one dependency-
+keyed frozen-result reuse, uncached failures, unchanged API/diagnostics, no
+persistence and exact combined/full timing evidence. Directly approve one
+material P8 algorithm task without another docs chain; no P9-P12.

@@ -71,6 +71,19 @@ class MahJaxCategoricalMlpPredeclaredCensusTrainingEvaluationSmokeTests(
         self.assertEqual(self.result.evaluation_update_count, 0)
         self.assertIsNone(self.result.selected_checkpoint_id)
 
+    def test_completed_frozen_result_is_reused_in_process(self) -> None:
+        cache = (
+            smoke_module._run_mahjax_categorical_mlp_predeclared_census_training_evaluation_smoke_cached
+        )
+        before = cache.cache_info()
+        reused = run_mahjax_categorical_mlp_predeclared_census_training_evaluation_smoke()
+        after = cache.cache_info()
+
+        self.assertIs(reused, self.result)
+        self.assertEqual(after.maxsize, 1)
+        self.assertEqual(after.currsize, 1)
+        self.assertEqual(after.hits, before.hits + 1)
+
     def test_nonzero_and_noop_attempt_partition_is_exact(self) -> None:
         self.assertEqual(self.result.nonzero_update_count, 10)
         self.assertEqual(self.result.zero_return_noop_count, 22)
@@ -161,6 +174,10 @@ class MahJaxCategoricalMlpPredeclaredCensusTrainingEvaluationSmokeTests(
             self.assertIn(phrase, warning_text)
 
     def test_wraps_initial_training_failure(self) -> None:
+        cache = (
+            smoke_module._run_mahjax_categorical_mlp_predeclared_census_training_evaluation_smoke_cached
+        )
+        before = cache.cache_info()
         with patch.object(
             smoke_module,
             "_train_mahjax_categorical_mlp_parameters",
@@ -171,6 +188,13 @@ class MahJaxCategoricalMlpPredeclaredCensusTrainingEvaluationSmokeTests(
                 "reviewed categorical MLP in-memory training failed",
             ):
                 run_mahjax_categorical_mlp_predeclared_census_training_evaluation_smoke()
+        after = cache.cache_info()
+        self.assertEqual(after.currsize, before.currsize)
+        self.assertEqual(after.misses, before.misses + 1)
+        self.assertIs(
+            run_mahjax_categorical_mlp_predeclared_census_training_evaluation_smoke(),
+            self.result,
+        )
 
     def test_source_forbids_persistence_or_training_range_adaptation(self) -> None:
         source = inspect.getsource(smoke_module)

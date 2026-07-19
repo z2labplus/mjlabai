@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Executable process-local raw-reference reuse
+
+- Type: P8 local regression-runtime engineering evidence.
+- A maxsize-one process-local cache stores only the completed frozen array-free
+  raw-census result and keys by four exact runtime dependency callables.
+- Patched dependencies cause a miss; exceptions remain uncached; public API and
+  all reviewed raw-census diagnostics are unchanged.
+- Raw-census plus causal-baseline comparison: 20 tests pass in 850.567 seconds
+  (856.40 wall), versus 1310.550 seconds from the two historical focused runs.
+- Full explicit suite: 498 tests pass in 5454.853 seconds with two skips,
+  435.957 seconds below the prior 497-test run despite one additional test.
+- Compile, dependency and diff checks pass.
+- Evidence grade: regression-runtime equivalence/reuse only; not new training,
+  evaluation improvement, model strength, promotion or P9-P12 evidence.
+
 ### 2026-07-19 — Four-pass review and test-runtime reuse approval
 
 - Type: exact P8 implementation-review closure plus bounded engineering-task

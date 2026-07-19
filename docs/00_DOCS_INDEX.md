@@ -396,6 +396,11 @@ reviews commit `2d75ee8`, records `A. Review can close`, accepts the exact
 four-pass diagnostic and directly approves one process-local immutable raw-
 census result reuse task. It addresses realized regression runtime only and
 does not change training/evaluation behavior or provide strength evidence.
+
+That exact reuse is implemented in the existing raw-census source/test. It
+keeps the public result unchanged, bypasses cache on patched dependencies and
+reduces the full 498-test run to `5454.853s` with two skips. This is regression-
+runtime evidence only, not training or strength evidence.
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

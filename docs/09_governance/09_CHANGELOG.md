@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.39
+
+- Implemented the exact `04AG` maxsize-one process-local immutable raw-census
+  result reuse in the two approved existing files.
+- Cache keys include exact trainer, runtime loader, training collector and
+  evaluation collector callables; patched dependencies miss, failed calls are
+  uncached and the six-symbol public API/result diagnostics remain unchanged.
+- Raw-census plus causal-baseline comparison passes 20 tests in `850.567s`
+  (`856.40s` wall), about `454.15s` / `34.7%` below historical separate runs.
+- All 498 tests pass in `5454.853s` with two skips, `435.957s` faster than the
+  prior 497-test suite despite one added test; compile/dependency/diff pass.
+- No disk cache, mutable arrays, parameters, behavior change, new training,
+  real data, strength claim or P9-P12 work was added. One exact review is next.
+
 ## 2026-07-19 - v4.38
 
 - Added `04AG`; reviewed commit `2d75ee8` against exact `04AF` approval.

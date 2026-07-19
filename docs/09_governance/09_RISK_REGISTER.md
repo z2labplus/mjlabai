@@ -180,9 +180,20 @@ continuity, no intermediate evaluation, complete diagnostics, final baseline/
 deltas, disjoint `-312 -> -297`, counts and changed seeds are pinned in source/
 tests. Ten focused and all 497 explicit tests pass with two skips. No pass or
 checkpoint is selected. `04AG` closes the exact review with no blocker and
-directly approves process-local immutable raw-census result reuse. The realized
-full-suite runtime is 5890.810 seconds and must be reduced before another
-expensive training branch; disk caching or behavior changes remain forbidden.
+directly approves process-local immutable raw-census result reuse. That exact
+reuse is implemented: 20 combined tests pass in 850.567 seconds and all 498 in
+5454.853 seconds with two skips, reducing the prior full run by 435.957 seconds.
+One exact review is next; disk caching or behavior changes remain forbidden.
+
+## 2026-07-19 — P8 process-local result-reuse implementation risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Cached result hides a patched dependency failure. | Testing / Correctness | Critical | Low | Key by all four exact dependency callable identities; regression test proves patched trainer misses and raises. | Mitigated |
+| Cached mutable parameters leak across tests. | Testing / State | Critical | Low | Cache only frozen array-free result; existing result-surface tests reject parameter fields. | Mitigated |
+| Reuse changes public API or diagnostics. | Engineering / Regression | High | Low | Public wrapper and six-symbol `__all__` stay unchanged; 498 tests pass. | Mitigated |
+| In-memory optimization grows into persistent stale cache. | Governance / Scope | High | Medium | `maxsize=1`; no path, serialization, environment toggle or disk artifact. | Open |
+| Faster regression is overclaimed as model progress. | Evidence / Scope | Critical | High | Classify only engineering runtime evidence and preserve all non-strength warnings. | Open |
 
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
