@@ -144,10 +144,17 @@ selected. `04AE` closes the exact review with no blocker.
 | Raw and baseline branches differ in initialization or protocol. | ML / Comparison | Critical | Low | Reuse reviewed raw result, independently load identical imitation initialization and exact ordered/evaluation seed constants. | Open |
 | Comparison expands into critic/estimator/rate tuning. | Governance / Scope | High | Medium | Exact raw and one running-baseline branch only; prohibit third estimator, learned critic, sweep and scale-up. | Open |
 | Causal baseline result is used for checkpoint selection. | Evaluation / Leakage | Critical | High | Return no parameters, selected estimator or checkpoint; fixed evaluation performs zero updates. | Open |
+| Full explicit RL regression now takes over 76 minutes. | Engineering / Delivery | High | Realized | Keep focused tests as the development loop, run the full suite once per implementation, and require the next review to approve/defer bounded reuse or test tiering rather than silently duplicating expensive raw runs. | Open |
 
 Approval status: `04AE` leaves zero gates before the exact two-file comparison.
 Probe evidence shows denser updates but no reward improvement; neither branch is
 selected or approved for production training.
+
+Implementation status: prior-record causality, exact 10/32-versus-31/32 update
+counts, identical training trajectories/digests, final baseline/deltas,
+disjoint zero-update reward identity and changed-from-initial/raw seeds are
+pinned in source/tests. Ten focused and all 487 explicit tests pass with two
+skips. No estimator or checkpoint is selected; one exact review is next.
 
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 

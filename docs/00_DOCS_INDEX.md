@@ -370,6 +370,15 @@ baseline comparison. The probe changes nonzero updates from 10/32 to 31/32 but
 retains the fixed `-312` reward vector and counts. This is signal-densification
 task-approval evidence, not improvement or strength evidence.
 
+That exact `04AE` comparison is implemented in
+`src/mjlabai/rl/mahjax_categorical_mlp_predeclared_running_baseline_comparison_smoke.py`
+with focused tests in
+`tests/rl/test_mahjax_categorical_mlp_predeclared_running_baseline_comparison_smoke.py`.
+It pins 10/32 raw versus 31/32 causal-baseline updates, identical training
+trajectory digests, unchanged `-312` reward diagnostics and one complete
+raw-versus-baseline behavior difference at seed 65. This is bounded signal-
+densification evidence only, not improvement or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

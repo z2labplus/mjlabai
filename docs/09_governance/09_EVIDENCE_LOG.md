@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Executable raw-versus-causal-baseline comparison
+
+- Type: executable P8 local signal-densification comparison evidence.
+- The reviewed raw reference retains 10/32 nonzero updates. The independent
+  prior-record-only causal baseline branch produces 31/32 nonzero updates.
+- All 32 training transition counts and action digests are identical across
+  branches, isolating advantage estimation from sampled trajectory differences.
+- Disjoint zero-update evaluation `52..83` retains the exact raw reward vector,
+  sum `-312` and counts `2/20`; baseline differs from raw in the complete seed-
+  65 record without reward change.
+- Validation: ten focused tests pass in 851.549 seconds; all 487 explicit
+  repository tests pass in 4614.293 seconds with two existing skips. Compile,
+  dependency and diff checks pass.
+- Evidence grade: bounded signal-densification comparison only; not estimator
+  selection, reward improvement, robust evaluation or strength evidence.
+
 ### 2026-07-19 — Full-range review and causal-baseline probe
 
 - Type: exact code-review closure plus bounded causal-baseline comparison task-

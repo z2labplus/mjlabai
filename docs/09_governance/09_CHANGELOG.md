@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.35
+
+- Implemented the exact `04AE` raw-versus-causal-running-baseline comparison
+  and ten focused tests in two new files.
+- Raw remains 10/32 nonzero updates; the prior-record-only baseline produces
+  31/32 while all 32 training trajectory counts/digests remain identical.
+- Disjoint zero-update evaluation retains the exact raw reward vector/sum
+  `-312` and counts `2/20`; baseline differs from raw completely at seed 65.
+- Validation passes: ten focused tests in `851.549s` and all 487 explicit
+  repository tests in `4614.293s` with two skips; compile, dependency and diff
+  checks pass. No selection, persistence, replay, scale-up, real data, strength
+  claim or P9-P12 work was added. One exact review is next.
+
 ## 2026-07-19 - v4.34
 
 - Added `04AE`; reviewed commit `b525424` against exact `04AD` approval.

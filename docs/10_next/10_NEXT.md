@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact MahJax categorical-MLP predeclared raw-return versus causal running-baseline comparison smoke.
+- [ ] Review the exact MahJax categorical-MLP predeclared raw-return versus causal running-baseline comparison smoke implementation.
 
 Current execution charter:
 
@@ -22,21 +22,33 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Add only the two exact `04AE`-approved source/test files and direct
-  governance synchronization; preserve existing reviewed APIs.
-- Reuse the reviewed raw full-range result and train one independent causal
-  per-seat running-mean baseline branch on exact ordered seeds `0..31`.
-- Compute current advantage from prior-record means only; update the baseline
-  after the policy update. Pin seed 0 no-op and nonzero seeds `1..31`.
-- Evaluate with zero updates on exact disjoint seeds `52..83`; pin unchanged
-  vector/sum `-312`, counts `2/20`, changed seeds `(52,65,72)`, final baseline
-  and parameter deltas from `04AE`.
-- Return complete frozen diagnostics, no arrays, selected estimator/checkpoint,
-  persistence or I/O. Label signal densification without reward improvement.
-- No third estimator, critic/GAE/entropy/KL/clipping/optimizer/rate change,
-  repeat/replay/scale-up, real data, strength claim or P9-P12.
+- Review only the two exact `04AE`-approved comparison files and direct
+  governance; change code/tests only for a genuine blocker.
+- Verify raw-reference reuse, identical initialization, exact ordered `0..31`
+  training and prior-record-only baseline update ordering.
+- Verify 10/32 versus 31/32 nonzero updates, complete identical training
+  trajectories/digests, final baseline/deltas and zero-update `52..83` result.
+- Pin unchanged reward vector/sum `-312`, counts `2/20`, changed-from-initial
+  `(52,65,72)` and changed-from-raw `(65,)`; verify no selection/persistence.
+- Run focused validation and independent source/result checks; full repository
+  validation from the implementation commit may be reused.
+- If review closes, directly approve or defer one material algorithmic or test-
+  runtime step; do not add a sibling proposal/boundary chain.
+- No third estimator, tuning/replay/scale-up, real data, strength claim or
+  P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Implemented the exact `04AE`-approved raw-return versus causal
+  per-seat running-baseline comparison in two new files. The raw reference
+  remains 10/32 nonzero updates; the prior-record-only baseline branch produces
+  31/32 nonzero updates while preserving identical 32 training trajectory
+  counts/digests. Disjoint zero-update evaluation `52..83` retains the exact
+  raw reward vector/sum `-312` and counts `2/20`; baseline changes complete
+  behavior from initial at `(52,65,72)` and from raw at `(65,)`. Ten focused
+  and all 487 explicit tests pass with two skips. No estimator/checkpoint was
+  selected; no persistence, replay, scale-up, real data, strength claim or
+  P9-P12 work was added. One exact code review is next.
 
 - [x] 2026-07-19 Reviewed commit `b525424` against exact `04AD` approval in
   `04AE`. Decision: `A. Review can close.` Confirmed the six-symbol API, all

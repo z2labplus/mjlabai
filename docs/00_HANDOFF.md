@@ -27,16 +27,16 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the `04AE`-approved MahJax
+Current active stage is one exact code review of the implemented `04AE` MahJax
 categorical-MLP raw-return versus causal per-seat running-baseline comparison.
-`04AE` accepts the exact ordered `0..31` raw full-range implementation after
-nine focused and all 477 explicit tests pass with two skips. Independent
-full-range probes show seat-centering remains behavior-identical, while a
-prior-record-only running baseline changes nonzero updates from 10/32 to 31/32
-but retains the exact disjoint `52..83` reward vector/sum `-312`, counts `2/20`
-and changed records `(52,65,72)`. The exact next code must pin this signal
-densification without adding a third estimator, replay, scale-up or selection.
-This is bounded local P8 algorithm-diagnostic evidence, not algorithm
+The raw reference retains 10/32 nonzero updates; the prior-record-only baseline
+branch produces 31/32 while preserving all 32 training trajectory counts and
+digests. Disjoint zero-update evaluation `52..83` retains the exact reward
+vector/sum `-312` and counts `2/20`; complete baseline behavior differs from
+initial at `(52,65,72)` and from raw at `(65,)`. Ten focused and all 487
+explicit tests pass with two skips. One exact review must directly choose or
+defer the next material algorithmic/test-runtime step without another docs
+chain. This is bounded local P8 algorithm-diagnostic evidence, not algorithm
 selection, production evaluation, improvement or strength:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning

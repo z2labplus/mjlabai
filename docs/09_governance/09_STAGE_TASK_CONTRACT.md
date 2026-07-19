@@ -2,13 +2,14 @@
 
 ## Current stage
 
-P8 direct implementation of the `04AE`-approved categorical-MLP raw-return
-versus causal per-seat running-baseline comparison. `04AE` closes the exact
-full-range raw implementation review after all 477 tests pass. A prior-record-
-only baseline probe changes nonzero updates from 10/32 to 31/32 but leaves
-disjoint `52..83` reward vector/sum/counts and changed seeds unchanged. The
-exact two-file task must pin this signal densification without a third
-estimator, replay, scale-up, checkpoint selection or strength claim.
+P8 exact code review of the implemented `04AE` categorical-MLP raw-return
+versus causal per-seat running-baseline comparison. The implementation reuses
+the reviewed raw reference, applies prior-record-only baselines on ordered
+`0..31`, pins 10/32 versus 31/32 nonzero updates and identical training
+trajectories/digests. Disjoint `52..83` rewards remain `-312` with counts
+`2/20`; baseline differs from raw at seed 65. Review may change code/tests only
+for a blocker and must directly approve/defer one material algorithmic or test-
+runtime step without a sibling docs chain.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -588,7 +589,7 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04AE` raw-return versus causal running-baseline comparison
-on ordered training seeds `0..31` and disjoint zero-update evaluation `52..83`.
-Pin prior-record causality, 10/32 versus 31/32 nonzero updates, unchanged reward
-diagnostics and no-selection scope. One exact implementation review follows.
+Review the exact `04AE` raw-versus-causal-baseline implementation. Pin prior-
+record causality, identical training trajectories, 10/32 versus 31/32 updates,
+unchanged reward diagnostics, seed-65 behavior difference and no-selection
+scope. Directly approve/defer one material next step without another docs chain.
