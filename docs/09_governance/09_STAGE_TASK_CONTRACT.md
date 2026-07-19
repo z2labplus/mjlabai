@@ -2,13 +2,14 @@
 
 ## Current stage
 
-P8 direct implementation of the `04AD`-approved categorical-MLP predeclared
-census training and disjoint evaluation smoke. It must attempt one reviewed
-raw-return update for every exact seed `0..31` in order, retain all 22 zero/no-
-op attempts and pin 10 sequential nonzero seeds. Initial/final parameters use
-zero-update evaluation on disjoint `52..83`; probe sums are `-312/-312` with
-changed records `(52,65,72)`. No filtering, shuffle, replay, second pass,
-checkpoint selection, algorithm change, scale-up or strength claim is allowed.
+P8 exact code review of the implemented `04AD` categorical-MLP predeclared
+census training and disjoint evaluation smoke. The implementation retains all
+ordered seeds `0..31`, 10 nonzero updates, 22 no-op attempts and complete legal
+trajectory/update diagnostics. Zero-update evaluation on disjoint `52..83`
+pins identical raw vector/sums `-312/-312` and changed records `(52,65,72)`.
+Review may change code/tests only for a genuine blocker and must then directly
+approve or defer one material sparse-signal algorithmic task. No filtering,
+replay, second pass, checkpoint selection, scale-up or strength claim is allowed.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -588,7 +589,7 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04AD` full predeclared-range training/evaluation diagnostic
-in its two approved files. Pin all 32 attempts, disjoint fixed evaluation and
-no-selection scope; add no filtering, replay, second pass, persistence, real
-data or production path.
+Review the exact `04AD` full predeclared-range implementation. Pin API, all 32
+attempts, 10/22 partition, disjoint evaluation, unchanged raw rewards, changed
+records and no-selection scope. If review closes, directly approve or defer one
+material executable next step without a sibling docs chain.

@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Executable full predeclared-range training diagnostic
+
+- Type: executable P8 local sparse-signal/behavior-change evidence.
+- Exact ordered seeds `0..31` retain all 32 attempts, including 10 nonzero
+  updates and 22 exact zero-return no-ops.
+- Every legal terminal trajectory pins transitions, raw rewards, scores, action
+  digest, objectives and deltas; final parameter deltas are finite/nonzero.
+- Disjoint zero-update evaluation `52..83` pins identical initial/final raw
+  vector and sum `-312`, counts `2` positive / `20` negative, while complete
+  records change at `(52,65,72)`.
+- Validation: nine focused tests pass in 459.001 seconds; all 477 explicit
+  repository tests pass in 4185.294 seconds with two existing skips. Compile,
+  dependency and diff checks pass.
+- Evidence grade: bounded behavior-change/signal-sparsity diagnostic only; not
+  improvement, robust evaluation, checkpoint selection or strength evidence.
+
 ### 2026-07-19 — Seed-protocol review and full predeclared-range probe
 
 - Type: exact code-review closure plus bounded full-range training task-

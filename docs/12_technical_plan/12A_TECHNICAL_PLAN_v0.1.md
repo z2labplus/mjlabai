@@ -28,15 +28,15 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 direct implementation of the `04AD`-approved categorical-MLP predeclared
-census training and disjoint evaluation smoke. `04AD` reviews commit `ebc974c`,
-accepts the exact seed-protocol comparison and finds no blocker. A bounded probe
-trains every seed `0..31` in order, producing 10 nonzero and 22 retained no-op
-attempts. Disjoint zero-update evaluation `52..83` pins unchanged raw sums
-`-312/-312` and counts while complete records change at `(52,65,72)`. The next
-exact two-file implementation records this without selecting a checkpoint.
-This is bounded behavior-change/signal-sparsity evidence, not algorithm
-selection, production evaluation, improvement or strength.
+P8 exact code review of the implemented `04AD` categorical-MLP predeclared
+census training and disjoint evaluation smoke. One ordered pass retains every
+seed `0..31`, producing 10 nonzero updates and 22 exact no-op attempts with
+complete legal trajectory/update diagnostics. Disjoint zero-update evaluation
+`52..83` pins identical raw vector/sums `-312/-312` and counts while complete
+records change at `(52,65,72)`. One exact review must verify this and directly
+approve or defer one material sparse-signal algorithmic task without another
+docs chain. This is bounded behavior-change/signal-sparsity evidence, not
+algorithm selection, production evaluation, improvement or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

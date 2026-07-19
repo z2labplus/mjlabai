@@ -355,6 +355,14 @@ diagnostic with disjoint `52..83` zero-update evaluation. Probe sums remain
 `-312/-312` while seeds `(52,65,72)` change. This is behavior-change/signal-
 sparsity approval evidence, not improvement or strength evidence.
 
+That exact `04AD` task is implemented in
+`src/mjlabai/rl/mahjax_categorical_mlp_predeclared_census_training_evaluation_smoke.py`
+with focused tests in
+`tests/rl/test_mahjax_categorical_mlp_predeclared_census_training_evaluation_smoke.py`.
+It retains all 32 ordered attempts and disjoint `52..83` evaluation, pinning
+unchanged raw sum `-312` with changed records `(52,65,72)` and no selected
+checkpoint. This is behavior-change/signal-sparsity evidence only.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

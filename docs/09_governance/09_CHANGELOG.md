@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.33
+
+- Implemented the exact `04AD` predeclared full-range training/disjoint-
+  evaluation diagnostic and nine focused tests in two new files.
+- Ordered seeds `0..31` retain 32 attempts: 10 nonzero updates and 22 exact
+  zero-return no-ops, with complete trajectories/digests/objectives/deltas.
+- Disjoint zero-update evaluation `52..83` pins identical raw vector and sums
+  `-312/-312`, counts `2/20`, and changed complete records `(52,65,72)`.
+- Validation passes: nine focused tests in `459.001s` and all 477 explicit
+  repository tests in `4185.294s` with two skips; compile, dependency and diff
+  checks pass. No filtering/replay/second pass, checkpoint selection,
+  persistence, real data, production evaluation, strength claim or P9-P12
+  work was added. One exact review is next.
+
 ## 2026-07-19 - v4.32
 
 - Added `04AD`; reviewed commit `ebc974c` against exact `04AC` approval.

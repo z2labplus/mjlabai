@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact MahJax categorical-MLP predeclared census training and disjoint evaluation smoke.
+- [ ] Review the exact MahJax categorical-MLP predeclared census training and disjoint evaluation smoke implementation.
 
 Current execution charter:
 
@@ -22,19 +22,30 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Add only the exact `04AD`-approved source/test plus direct governance; do not
-  modify existing source/test logic or public APIs.
-- Train one branch on every exact seed `0..31` in order with one reviewed
-  `0.01` raw-return update attempt per legal terminal trajectory.
-- Retain all zero-return attempts; pin exact nonzero seeds
-  `(1,3,5,7,11,17,25,26,27,31)` and exact 22-seed no-op complement.
-- Evaluate initial/final parameters with zero updates on disjoint seeds
-  `52..83`; pin sums `-312/-312`, counts and changed seeds `(52,65,72)`.
-- Return frozen array-free diagnostics and no selected checkpoint/protocol.
-- No filtering/shuffle/replay/second pass, algorithm/rate change, persistence,
-  real data, production self-play/evaluation, strength claim or P9-P12.
+- Review only the two exact `04AD`-approved full-range files and direct
+  governance; change code/tests only for a genuine blocker.
+- Verify exact ordered `0..31` attempts, 10 nonzero and 22 no-op seeds,
+  complete legal trajectories/digests/objectives/deltas and parameter change.
+- Verify disjoint zero-update evaluation `52..83`, identical raw vector/sums
+  `-312/-312`, counts, changed records `(52,65,72)` and no selected checkpoint.
+- Run focused/full validation and independent source/result checks.
+- If review closes, directly approve or defer one material algorithmic step
+  informed by signal sparsity; do not add a sibling proposal/boundary chain.
+- No filtering/replay/second pass, algorithm scale-up, persistence, real data,
+  production self-play/evaluation, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Implemented the exact `04AD`-approved categorical-MLP
+  predeclared census training and disjoint evaluation smoke in two new files.
+  One ordered pass retains all seeds `0..31`: 32 attempts, 10 nonzero updates
+  at `(1,3,5,7,11,17,25,26,27,31)` and 22 exact no-ops. Zero-update evaluation
+  on disjoint `52..83` pins identical initial/final raw vector and sums
+  `-312/-312`, counts `2` positive / `20` negative, but changed complete records
+  `(52,65,72)`. Nine focused and all 477 explicit repository tests pass with
+  two skips. No filtering/replay/second pass,
+  checkpoint selection, persistence, real data, strength claim or P9-P12 work
+  was added. One exact code review is next.
 
 - [x] 2026-07-19 Reviewed commit `ebc974c` against exact `04AC` approval in
   `04AD`. Decision: `A. Review can close.` Confirmed exact API, identical

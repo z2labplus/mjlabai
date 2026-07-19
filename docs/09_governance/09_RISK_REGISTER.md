@@ -129,6 +129,12 @@ evaluation; no protocol or checkpoint is selected.
 | Changed traces with equal reward are called improvement. | Evidence / Interpretation | Critical | High | Pin `-312/-312`, unchanged reward vector and changed records separately. | Open |
 | Thirty-two attempts expand into replay or scale training. | Governance / Scope | High | Medium | One ordered pass only; prohibit shuffle, replay, epoch, second pass and artifacts. | Open |
 
+Implementation status: exact ordered attempts, 10/22 partition, zero/no-op
+invariants, complete trajectory/update diagnostics, disjoint fixed evaluation,
+unchanged raw vector and changed records are pinned in source/tests. Nine
+focused and all 477 explicit tests pass with two skips. No checkpoint is
+selected; one exact review is next.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
