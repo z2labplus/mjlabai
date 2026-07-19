@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.44
+
+- Added `04AJ`; reviewed commit `e462ff3` against exact `04AI` approval.
+- Decision: `A. Review can close.` No code, test, evidence or scope blocker was
+  found. Exact alternate training, final-only fixed evaluation, zero reference
+  reruns, complete diagnostics and no selection conform.
+- Parameters change but primary/replication rewards remain at initial
+  `-312/-1056`, trailing reference by `15/121`. The reference improvements do
+  not reproduce, so neither training protocol is selected.
+- Reused 11 focused and all 510 passing tests; lightweight commit/source/
+  provenance checks pass without repeating the `6955.03s` suite.
+- Rejected a third protocol/window/fifth pass and directly approved one fast
+  no-training robustness evidence gate over reviewed summary values. Zero
+  mandatory documentation gates remain; no strength claim or P9-P12 was added.
+
 ## 2026-07-19 - v4.43
 
 - Implemented the exact `04AI` alternate-training-seed sensitivity diagnostic

@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Alternate-training sensitivity review and robustness-gate approval
+
+- Type: exact P8 implementation-review closure plus fast evidence-gate task
+  approval.
+- `04AJ` records `A. Review can close` for commit `e462ff3`; no blocker exists.
+- Exact `116..147` x four, same initialization/rate/causal baseline, final-only
+  fixed windows, no reference rerun, complete diagnostics and no selection
+  conform to `04AI`.
+- Alternate parameters change but both reward vectors equal initialization and
+  trail reference by `15/121`; reference improvements do not reproduce.
+- Eleven focused and all 510 tests pass with two skips. Lightweight review
+  checks pass without repeating the `6955.03s` suite.
+- One fast no-training reviewed-summary robustness evidence gate is directly
+  approved. Evidence grade remains bounded review/task approval only, not
+  robustness, strength, promotion, Tenhou, stable-dan, LuckyJ or P9-P12.
+
 ### 2026-07-19 — Executable alternate-training-seed sensitivity diagnostic
 
 - Type: executable P8 local deterministic training-protocol sensitivity

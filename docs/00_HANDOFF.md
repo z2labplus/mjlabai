@@ -41,8 +41,10 @@ existing evaluation windows, with no protocol selection. Parameters change,
 but both final reward vectors exactly retain initial values (`-312` and
 `-1056`), falling `15` and `121` below the reviewed reference finals. Eleven
 focused tests pass in `1238.800s`; all 510 tests pass in `6943.869s` with two
-skips (`6955.03s` wall). One lightweight implementation review is next. This
-is P8 training-seed sensitivity work, not robust
+skips (`6955.03s` wall). `04AJ` reviews commit `e462ff3`, records
+`A. Review can close`, selects no protocol and directly approves one fast
+reviewed-summary robustness evidence gate with no training call. This is P8
+training-seed sensitivity work, not robust
 generalization, algorithm selection, production evaluation or strength:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
@@ -1154,8 +1156,8 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is validation/review of the exact `04AI` alternate-
-  training-seed sensitivity diagnostic. P8 bounded local diagnostics are active;
+- Current next work is direct implementation of the exact `04AJ` fast two-
+  protocol no-selection robustness evidence gate. P8 bounded local diagnostics are active;
   production self-play, evaluation, league, real data, Tenhou and P9-P12 remain
   unapproved. Do not make strength claims.
 - Technical decisions become project facts only after they are recorded in Git

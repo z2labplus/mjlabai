@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the MahJax four-pass alternate-training-seed sensitivity diagnostic implementation.
+- [ ] Implement a fast no-selection two-protocol robustness evidence gate over the reviewed MahJax four-pass summary values only.
 
 Current execution charter:
 
@@ -22,20 +22,28 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the committed `04AI`-approved implementation and its recorded
-  focused/full-suite evidence; do not rerun the 6955-second full suite.
-- Verify exact ordered `116..147` x four, same initialization/rate/causal
-  baseline, final-only zero-update `52..83` and `84..115`, and zero reference
-  branch reruns.
-- Preserve the negative non-reproduction result: changed parameters with
-  unchanged initial reward vectors `-312/-1056`, trailing reference by
-  `15/121`; select no protocol/model/pass/checkpoint.
-- Use lightweight source/AST/provenance checks only. Directly approve or defer
-  one material P8 variance/robustness task without adding a documentation chain.
+- Add only the exact `04AJ`-approved source/test plus direct governance.
+- Use reviewed immutable summary values only: reference/alternate primary
+  deltas `15/0` and replication deltas `121/0`.
+- Return a frozen array-free report with disagreement/non-reproduction,
+  robustness false and no selected protocol/model/pass/checkpoint.
+- Do not import or call JAX, MahJax, environments, training or evaluation; use
+  no threshold, ranking or winner score. Tests must remain fast.
 - No third training protocol, seed search, fifth pass, third window, tuning,
   replay, artifact, real data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Reviewed commit `e462ff3` against exact `04AI` approval in
+  `04AJ`. Decision: `A. Review can close.` Confirmed exact `116..147` x four,
+  matching initialization/rate/causal baseline, final-only fixed windows, zero
+  reference reruns, complete frozen diagnostics and no selection. Alternate
+  parameters change but rewards remain `-312/-1056`, trailing reference by
+  `15/121`; the improvements do not reproduce. Reused 11 focused and all 510
+  passing tests plus lightweight commit/source/provenance checks without
+  rerunning the 6955-second suite. Rejected a third protocol/window/fifth pass
+  and directly approved one fast no-training robustness evidence gate. Zero
+  mandatory documentation gates remain.
 
 - [x] 2026-07-19 Implemented the exact `04AI`-approved alternate-training-seed
   sensitivity diagnostic in one new source/test pair. Exact ordered
