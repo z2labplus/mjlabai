@@ -1,5 +1,22 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.43
+
+- Implemented the exact `04AI` alternate-training-seed sensitivity diagnostic
+  and 11 focused tests in two new files.
+- Exact ordered `116..147` x four performs 128 attempts with the same reviewed
+  initialization, `0.01` rate and causal prior-record per-seat baseline. The
+  reference branch is not rerun; only final fixed `52..83` and `84..115`
+  receive zero-update evaluation.
+- Parameters change, but alternate final reward vectors exactly retain initial
+  values: primary `-312` and replication `-1056`, respectively `15` and `121`
+  below the reviewed reference finals. No protocol/model/pass/checkpoint is
+  selected.
+- Eleven focused tests pass in `1238.800s`; all 510 explicit tests pass in
+  `6943.869s` with two skips (`6955.03s` wall). No seed search, third window,
+  fifth pass, tuning, artifact, real data, strength claim or P9-P12 work was
+  added. One lightweight implementation review is next.
+
 ## 2026-07-19 - v4.42
 
 - Added `04AI`; reviewed commit `17a3722` against exact `04AH` approval.

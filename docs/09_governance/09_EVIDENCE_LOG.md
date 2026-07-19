@@ -8,6 +8,23 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Executable alternate-training-seed sensitivity diagnostic
+
+- Type: executable P8 local deterministic training-protocol sensitivity
+  evidence.
+- One alternate branch uses exact ordered `116..147` x four / 128 attempts,
+  the same initialization, rate and causal prior-record baseline as reference.
+- No reference branch is rerun and no evaluation occurs before training ends.
+  Final zero-update evaluation uses only `52..83` and `84..115`.
+- Parameters change with per-pass nonzero updates `(24,32,32,32)`, but both
+  final reward vectors equal their initial vectors: primary `-312`, replication
+  `-1056`. They are `15` and `121` below reviewed reference finals.
+- Eleven focused tests pass in `1238.800s`; all 510 explicit repository tests
+  pass in `6943.869s` with two skips (`6955.03s` wall).
+- Evidence grade: bounded training-seed sensitivity/non-reproduction only;
+  not protocol selection, robustness, model strength, promotion, Tenhou,
+  stable-dan, LuckyJ or P9-P12 evidence.
+
 ### 2026-07-19 — Replication review and alternate-training sensitivity approval
 
 - Type: exact P8 implementation-review closure plus material training-

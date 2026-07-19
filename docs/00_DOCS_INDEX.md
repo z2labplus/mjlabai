@@ -419,6 +419,15 @@ training/primary invariants and the predeclared `84..115` diagnostics, and
 directly approves one alternate-training-seed sensitivity implementation using
 exact `116..147`. It rejects another evaluation window/fifth pass and is not
 robustness, selection or strength evidence.
+
+That exact alternate-training implementation now exists in
+`src/mjlabai/rl/mahjax_categorical_mlp_four_pass_training_seed_sensitivity_smoke.py`
+with focused tests in the matching `tests/rl/` file. Exact `116..147` x four
+changes parameters but leaves primary/replication rewards at initial
+`-312/-1056`, respectively `15/121` below the reviewed reference finals. This
+is bounded training-seed sensitivity evidence, not protocol selection or
+strength. Eleven focused tests and all 510 tests pass with two skips; one
+lightweight implementation review is next.
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

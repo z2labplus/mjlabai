@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement a predeclared alternate-training-seed sensitivity diagnostic for the exact MahJax four-pass causal-baseline policy.
+- [ ] Review the MahJax four-pass alternate-training-seed sensitivity diagnostic implementation.
 
 Current execution charter:
 
@@ -22,17 +22,32 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Add only the exact `04AI`-approved source/test plus direct governance.
-- Train one alternate branch on ordered seeds `116..147` for exact four passes/
-  128 attempts with the same reviewed initialization, rate and causal baseline.
-- Use only existing fixed zero-update evaluation `52..83` and `84..115`; no
-  evaluation between passes and no second reference training branch.
-- Pin complete alternate diagnostics regardless of sign and return no selected
-  protocol/model/pass/checkpoint.
-- No seed search, fifth pass, third window, tuning, replay, artifact, real data,
-  strength claim or P9-P12.
+- Review only the committed `04AI`-approved implementation and its recorded
+  focused/full-suite evidence; do not rerun the 6955-second full suite.
+- Verify exact ordered `116..147` x four, same initialization/rate/causal
+  baseline, final-only zero-update `52..83` and `84..115`, and zero reference
+  branch reruns.
+- Preserve the negative non-reproduction result: changed parameters with
+  unchanged initial reward vectors `-312/-1056`, trailing reference by
+  `15/121`; select no protocol/model/pass/checkpoint.
+- Use lightweight source/AST/provenance checks only. Directly approve or defer
+  one material P8 variance/robustness task without adding a documentation chain.
+- No third training protocol, seed search, fifth pass, third window, tuning,
+  replay, artifact, real data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Implemented the exact `04AI`-approved alternate-training-seed
+  sensitivity diagnostic in one new source/test pair. Exact ordered
+  `116..147` x four performs 128 attempts with the reviewed initialization,
+  `0.01` rate and causal prior-record baseline, never reruns the reference
+  branch and evaluates only final zero-update `52..83` and `84..115`.
+  Parameters change, but both reward vectors equal initialization at
+  `-312/-1056`, respectively `15/121` below reference. Eleven focused tests
+  pass in `1238.800s`; all 510 tests pass in `6943.869s` with two skips
+  (`6955.03s` wall). No protocol selection, seed search, third window, fifth
+  pass, real data, strength claim or P9-P12 work was added. One lightweight
+  implementation review is next.
 
 - [x] 2026-07-19 Reviewed commit `17a3722` against exact `04AH` approval in
   `04AI`. Decision: `A. Review can close.` Confirmed unchanged four/128

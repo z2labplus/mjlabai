@@ -2,14 +2,16 @@
 
 ## Current stage
 
-P8 direct implementation of the `04AI`-approved alternate-training-seed
+P8 validation of the implemented `04AI`-approved alternate-training-seed
 sensitivity diagnostic. `04AI` accepts commit `17a3722` after 11 focused and
 all 499 tests pass. The next exact new source/test trains ordered `116..147`
 for four passes/128 attempts with the same initialization/rate/causal baseline,
-then evaluates only final zero-update `52..83` and `84..115`. It compares with
-reviewed reference values and accepts the result regardless of sign. No seed
-search, reference rerun, third window, fifth pass, tuning, selection, real
-data, robust claim or P9-P12.
+then evaluates only final zero-update `52..83` and `84..115`. Parameters change
+but both reward vectors retain initial `-312/-1056`, trailing reference by
+`15/121`. Eleven focused tests and all 510 tests pass with two skips; one
+lightweight implementation review is next and must not repeat the 6955-second
+suite. No seed search, reference rerun, third window, fifth pass, tuning,
+selection, real data, robust claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -589,8 +591,9 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04AI` alternate-training-seed sensitivity diagnostic in
-one new source/test only. Use ordered `116..147` x four, the same reviewed
-initialization/rate/causal baseline and final zero-update existing evaluation
-windows. Pin result regardless of sign; no reference rerun, seed search,
-selection, third window, fifth pass, strength claim or P9-P12.
+Review the exact `04AI` alternate-training-seed sensitivity implementation
+once using recorded test evidence and lightweight source/AST/provenance checks.
+Preserve the negative non-reproduction result and no-selection scope; directly
+approve/defer one material P8 variance task without a documentation chain. No
+full-suite rerun, seed search, third protocol, third window, fifth pass,
+strength claim or P9-P12.

@@ -28,14 +28,17 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 direct implementation of the `04AI`-approved alternate-training-seed
+P8 validation of the implemented `04AI`-approved alternate-training-seed
 sensitivity diagnostic. `04AI` accepts the second-window implementation after
 11 focused and all 499 tests pass, rejects another evaluation window/fifth
 pass and approves exact ordered training seeds `116..147` x four with the same
 initialization/rate/causal baseline. Final zero-update evaluation uses only
-existing `52..83` and `84..115`; the reference is compared by reviewed values
-and the result is retained regardless of sign. This is bounded training-seed
-sensitivity work, not robust evaluation or strength.
+existing `52..83` and `84..115`; the reference is compared by reviewed values.
+Parameters change but both alternate reward vectors equal initialization at
+`-312/-1056`, respectively `15/121` below reference. Eleven focused tests and
+all 510 tests pass with two skips; one lightweight implementation review is
+next. This is bounded training-seed sensitivity work, not robust evaluation
+or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

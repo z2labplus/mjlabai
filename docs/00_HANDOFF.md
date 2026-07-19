@@ -27,7 +27,7 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the `04AI`-approved alternate
+Current active stage is validation of the implemented `04AI`-approved alternate
 training-seed sensitivity diagnostic after review-accepting the second predeclared
 replication evaluation for the exact four-pass causal-baseline policy. Exact
 training remains 4 x ordered `0..31` and the primary `52..83` diagnostic
@@ -37,8 +37,12 @@ and changed seeds `(84,89,92,94,102,103,104,106,110,113,114)`. The result was
 retained without selection. Eleven focused and all 499 tests pass with two
 skips; `04AI` finds no blocker. The next code uses exact alternate training
 seeds `116..147`, the same four-pass/rate/baseline contract and only the two
-existing evaluation windows, with no protocol selection. This is P8 training-
-seed sensitivity work, not robust
+existing evaluation windows, with no protocol selection. Parameters change,
+but both final reward vectors exactly retain initial values (`-312` and
+`-1056`), falling `15` and `121` below the reviewed reference finals. Eleven
+focused tests pass in `1238.800s`; all 510 tests pass in `6943.869s` with two
+skips (`6955.03s` wall). One lightweight implementation review is next. This
+is P8 training-seed sensitivity work, not robust
 generalization, algorithm selection, production evaluation or strength:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
@@ -1150,8 +1154,8 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is direct code for the exact `04AI` alternate-training-seed
-  sensitivity diagnostic. P8 bounded local diagnostics are active;
+- Current next work is validation/review of the exact `04AI` alternate-
+  training-seed sensitivity diagnostic. P8 bounded local diagnostics are active;
   production self-play, evaluation, league, real data, Tenhou and P9-P12 remain
   unapproved. Do not make strength claims.
 - Technical decisions become project facts only after they are recorded in Git

@@ -232,6 +232,16 @@ approves one exact alternate `116..147` training-seed sensitivity diagnostic.
 | Two training ranges are called robust/generalizable. | Evidence / Statistics | Critical | High | Classify only bounded training-seed sensitivity; prohibit robustness, strength and promotion claims. | Open |
 | New smoke further expands the already 93-minute suite. | Engineering / Delivery | High | High | One alternate branch, no reference rerun/third window; record elapsed and reconsider test tiering in review. | Open |
 
+Implementation status: exact `116..147` x four is implemented without a
+reference rerun or intermediate evaluation. Parameters change, but both fixed
+reward vectors remain identical to initialization (`-312/-1056`) and trail the
+reviewed reference finals by `15/121`. This realizes training-seed protocol
+sensitivity and prevents claiming the reference improvement as robust. Eleven
+focused and all 510 explicit tests pass, with two skips; no protocol is
+selected. The full suite takes `6943.869s` (`6955.03s` wall), so the runtime
+expansion risk is realized. The next review must reuse this evidence and
+require test tiering rather than blindly rerunning the full suite.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
