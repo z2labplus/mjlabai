@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact MahJax categorical-MLP predeclared census training and disjoint evaluation smoke implementation.
+- [ ] Implement the exact MahJax categorical-MLP predeclared raw-return versus causal running-baseline comparison smoke.
 
 Current execution charter:
 
@@ -22,19 +22,32 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the two exact `04AD`-approved full-range files and direct
-  governance; change code/tests only for a genuine blocker.
-- Verify exact ordered `0..31` attempts, 10 nonzero and 22 no-op seeds,
-  complete legal trajectories/digests/objectives/deltas and parameter change.
-- Verify disjoint zero-update evaluation `52..83`, identical raw vector/sums
-  `-312/-312`, counts, changed records `(52,65,72)` and no selected checkpoint.
-- Run focused/full validation and independent source/result checks.
-- If review closes, directly approve or defer one material algorithmic step
-  informed by signal sparsity; do not add a sibling proposal/boundary chain.
-- No filtering/replay/second pass, algorithm scale-up, persistence, real data,
-  production self-play/evaluation, strength claim or P9-P12.
+- Add only the two exact `04AE`-approved source/test files and direct
+  governance synchronization; preserve existing reviewed APIs.
+- Reuse the reviewed raw full-range result and train one independent causal
+  per-seat running-mean baseline branch on exact ordered seeds `0..31`.
+- Compute current advantage from prior-record means only; update the baseline
+  after the policy update. Pin seed 0 no-op and nonzero seeds `1..31`.
+- Evaluate with zero updates on exact disjoint seeds `52..83`; pin unchanged
+  vector/sum `-312`, counts `2/20`, changed seeds `(52,65,72)`, final baseline
+  and parameter deltas from `04AE`.
+- Return complete frozen diagnostics, no arrays, selected estimator/checkpoint,
+  persistence or I/O. Label signal densification without reward improvement.
+- No third estimator, critic/GAE/entropy/KL/clipping/optimizer/rate change,
+  repeat/replay/scale-up, real data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Reviewed commit `b525424` against exact `04AD` approval in
+  `04AE`. Decision: `A. Review can close.` Confirmed the six-symbol API, all
+  ordered `0..31` attempts, exact 10/22 update/no-op partition, complete legal
+  diagnostics, disjoint `52..83` zero-update evaluation, identical `-312`
+  reward vector/sums, changed records `(52,65,72)`, no checkpoint and all 477
+  tests passing with two skips. A full-range centered probe remains behavior-
+  identical. A causal prior-record per-seat running baseline creates 31/32
+  nonzero updates but leaves the same evaluation rewards/counts/changed seeds.
+  Directly approved one exact raw-versus-running-baseline implementation with
+  zero gates. No improvement, strength, real-data or P9-P12 claim was added.
 
 - [x] 2026-07-19 Implemented the exact `04AD`-approved categorical-MLP
   predeclared census training and disjoint evaluation smoke in two new files.

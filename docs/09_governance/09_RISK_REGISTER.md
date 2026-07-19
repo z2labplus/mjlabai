@@ -133,7 +133,21 @@ Implementation status: exact ordered attempts, 10/22 partition, zero/no-op
 invariants, complete trajectory/update diagnostics, disjoint fixed evaluation,
 unchanged raw vector and changed records are pinned in source/tests. Nine
 focused and all 477 explicit tests pass with two skips. No checkpoint is
-selected; one exact review is next.
+selected. `04AE` closes the exact review with no blocker.
+
+## 2026-07-19 — P8 causal running-baseline comparison approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Current outcome leaks into its own baseline. | ML / Causality | Critical | Medium | Compute the current advantage from prior records only; update the running mean after the policy update; tests pin seed-1 baseline zero and seed-2 prior mean. | Open |
+| More nonzero gradients are mislabeled better learning. | Evidence / Interpretation | Critical | High | Pin unchanged `-312` vector/counts separately and state signal densification without reward improvement. | Open |
+| Raw and baseline branches differ in initialization or protocol. | ML / Comparison | Critical | Low | Reuse reviewed raw result, independently load identical imitation initialization and exact ordered/evaluation seed constants. | Open |
+| Comparison expands into critic/estimator/rate tuning. | Governance / Scope | High | Medium | Exact raw and one running-baseline branch only; prohibit third estimator, learned critic, sweep and scale-up. | Open |
+| Causal baseline result is used for checkpoint selection. | Evaluation / Leakage | Critical | High | Return no parameters, selected estimator or checkpoint; fixed evaluation performs zero updates. | Open |
+
+Approval status: `04AE` leaves zero gates before the exact two-file comparison.
+Probe evidence shows denser updates but no reward improvement; neither branch is
+selected or approved for production training.
 
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 

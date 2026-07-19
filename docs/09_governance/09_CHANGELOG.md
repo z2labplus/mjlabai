@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.34
+
+- Added `04AE`; reviewed commit `b525424` against exact `04AD` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed exact ordered 32 attempts, 10/22 partition, complete legal
+  diagnostics, disjoint `-312/-312`, changed `(52,65,72)` and no checkpoint.
+- Validation passed: nine focused and all 477 explicit tests with two skips;
+  compile, dependency and diff checks pass.
+- Full-range probes reject seat-centering as behavior-identical and show a
+  causal prior-record running baseline densifies updates to 31/32 without
+  changing reward diagnostics. Directly approved the exact comparison code.
+  No improvement, selection, real-data, strength or P9-P12 claim was added.
+
 ## 2026-07-19 - v4.33
 
 - Implemented the exact `04AD` predeclared full-range training/disjoint-

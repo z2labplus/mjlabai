@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Full-range review and causal-baseline probe
+
+- Type: exact code-review closure plus bounded causal-baseline comparison task-
+  approval evidence.
+- `04AE` records `A. Review can close`; nine focused and all 477 explicit tests
+  pass with two skips plus compile/dependency/diff checks.
+- Seat-centered full-range training reproduces raw reward vector/sum/counts and
+  changed seeds. It is not selected.
+- A causal per-seat running-mean baseline uses prior records only, yields
+  nonzero updates on seeds `1..31` rather than raw's 10 seeds, and ends at
+  baseline `(-0.0121875,-0.015625,-0.05,0.0528125)`.
+- Its disjoint evaluation remains exactly `-312`, `2/20` and changed seeds
+  `(52,65,72)`. This is signal densification without reward improvement.
+- Evidence grade: bounded algorithm-diagnostic probe and exact task approval
+  only; not estimator selection, improvement, robust evaluation or strength.
+
 ### 2026-07-19 — Executable full predeclared-range training diagnostic
 
 - Type: executable P8 local sparse-signal/behavior-change evidence.

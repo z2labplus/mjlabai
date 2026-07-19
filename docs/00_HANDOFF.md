@@ -27,16 +27,16 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is one exact code review of the implemented `04AD` MahJax
-categorical-MLP predeclared census training and disjoint evaluation smoke. One
-ordered pass retains every seed `0..31`: 32 attempts, 10 nonzero updates at
-`(1,3,5,7,11,17,25,26,27,31)` and 22 exact no-ops. Zero-update evaluation on
-disjoint `52..83` records identical initial/final raw vector, sums `-312/-312`
-and counts `2/20`, while complete records change at `(52,65,72)`. Nine focused
-and all 477 explicit repository tests pass with two skips. The review must
-directly approve or defer one material algorithmic
-step informed by this sparse signal, without another docs chain. This is
-bounded local P8 signal-sparsity/behavior-change evidence, not algorithm
+Current active stage is direct implementation of the `04AE`-approved MahJax
+categorical-MLP raw-return versus causal per-seat running-baseline comparison.
+`04AE` accepts the exact ordered `0..31` raw full-range implementation after
+nine focused and all 477 explicit tests pass with two skips. Independent
+full-range probes show seat-centering remains behavior-identical, while a
+prior-record-only running baseline changes nonzero updates from 10/32 to 31/32
+but retains the exact disjoint `52..83` reward vector/sum `-312`, counts `2/20`
+and changed records `(52,65,72)`. The exact next code must pin this signal
+densification without adding a third estimator, replay, scale-up or selection.
+This is bounded local P8 algorithm-diagnostic evidence, not algorithm
 selection, production evaluation, improvement or strength:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning

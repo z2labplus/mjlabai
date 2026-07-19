@@ -363,6 +363,13 @@ It retains all 32 ordered attempts and disjoint `52..83` evaluation, pinning
 unchanged raw sum `-312` with changed records `(52,65,72)` and no selected
 checkpoint. This is behavior-change/signal-sparsity evidence only.
 
+`docs/04_rl_selfplay/04AE_P8_PREDECLARED_CENSUS_TRAINING_EVALUATION_IMPLEMENTATION_REVIEW.md`
+reviews commit `b525424`, records `A. Review can close`, accepts the exact raw
+full-range diagnostic and directly approves one raw-versus-causal-running-
+baseline comparison. The probe changes nonzero updates from 10/32 to 31/32 but
+retains the fixed `-312` reward vector and counts. This is signal-densification
+task-approval evidence, not improvement or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
