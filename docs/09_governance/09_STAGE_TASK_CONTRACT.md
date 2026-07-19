@@ -2,14 +2,13 @@
 
 ## Current stage
 
-P8 lightweight review of the implemented `04AK` two-protocol four-pass leave-
-one-out batch-baseline variance-control diagnostic. Exact `0..31` and
-`116..147` branches each collect 32 frozen-policy trajectories/pass and apply
-one other-31-baseline mean update/pass. Both change parameters but retain exact
-initial fixed-window rewards `-312/-1056`. Ten focused and 122 fast tests pass.
-Review must reuse evidence, select nothing and directly approve/defer one
-material update-scale/behavior task. No expensive rerun, third protocol/window/
-pass, real data, strength claim or P9-P12.
+P8 direct implementation of the `04AL`-approved fixed `32x` batch-size-
+compensated leave-one-out gradient diagnostic. Preserve the reviewed mean run
+at multiplier `1.0`; a new source/test use only multiplier `32.0`, base rate
+`0.01` and effective mean-gradient rate `0.32`. Run the same exact two protocols
+for four passes and final-only existing windows, compare reviewed summaries,
+retain all results and select nothing. No scale search, mean/online rerun, third
+protocol/window/pass, full suite, real data, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -589,8 +588,8 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04AK` batch-baseline implementation once using recorded
-probe/tests and lightweight source/provenance checks. Verify batch freezing,
-other-31 identity, eight updates, objective/delta evidence, unchanged fixed
-rewards and no selection. Directly approve/defer one material update-scale task;
-no expensive rerun, third protocol/window/pass, strength claim or P9-P12.
+Implement the exact `04AL` fixed `32x` batch-size-compensated diagnostic. Add a
+private explicit gradient multiplier while preserving mean behavior, then run
+only the new same-two-protocol branch at `32.0` and final fixed windows. Pin all
+results regardless of sign and select nothing. No scale search, mean/online
+rerun, third protocol/window/pass, full suite, strength claim or P9-P12.

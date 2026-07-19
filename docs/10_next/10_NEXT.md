@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact two-protocol four-pass leave-one-out batch-baseline variance-control diagnostic implementation.
+- [ ] Implement an exact batch-size-compensated leave-one-out batch-gradient diagnostic for the same two protocols.
 
 Current execution charter:
 
@@ -22,19 +22,30 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the exact `04AK`-approved source/test and recorded probe/focused/
-  fast evidence; do not rerun either 2440-second execution or the full suite.
-- Verify identical initialization, exact two protocols/four passes, frozen
-  32-trajectory collection, other-31 same-seat baselines, one update/pass and
-  final-only existing windows.
-- Preserve the observed result: both protocols change parameters but both
-  fixed reward vectors remain at initial `-312/-1056`; select nothing.
-- Use lightweight source/provenance checks and directly approve/defer one
-  material update-scale/behavior-change task without another docs chain.
+- Modify the exact `04AL`-approved private helper and add only the approved new
+  source/test plus direct governance. Preserve the mean run at multiplier `1.0`.
+- New run uses fixed gradient multiplier `32.0`, base rate `0.01` and effective
+  mean-gradient rate `0.32`; no other scale or search.
+- Use the same exact two protocols/four frozen-batch passes and final-only
+  zero-update `52..83` and `84..115`; do not rerun mean/online branches inside.
+- Compare reviewed immutable summaries, pin all results regardless of sign and
+  select no protocol/model/pass/checkpoint.
+- Run one probe and new focused/fast checks only; no existing expensive test or
+  full suite.
 - No third protocol, seed search, fifth pass, third window, tuning, replay,
   artifact, real data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Reviewed commit `e0f346a` against exact `04AK` approval in
+  `04AL`. Decision: `A. Review can close.` Confirmed exact frozen batches,
+  other-31 baselines, eight updates, complete legal diagnostics, final-only
+  windows and no selection. Both branches change parameters but retain initial
+  `-312/-1056`; agreement is no improvement, not robustness. Reused probe, ten
+  focused and 122 fast passing tests plus lightweight source/provenance checks.
+  Directly approved one fixed `32x` batch-size-compensated diagnostic with zero
+  documentation gates. No scale search, expensive rerun, third protocol/window/
+  pass, strength claim or P9-P12 was added.
 
 - [x] 2026-07-19 Implemented the exact `04AK` two-protocol four-pass leave-one-
   out batch-baseline diagnostic in one new source/test pair. Independent

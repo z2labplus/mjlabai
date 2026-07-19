@@ -269,6 +269,12 @@ unchanged at `-312/-1056`. This mitigates update-order variance but does not
 produce behavior improvement; update-scale/argmax-invariance risk is now open.
 Ten focused and 122 fast tests pass, and the expensive full suite is not rerun.
 
+Review status: `04AL` closes the implementation review with no blocker. The
+next exact task tests only the natural batch-size compensation multiplier
+`32.0` at base rate `0.01`, without searching scale or rerunning mean/online
+branches. Excessive update magnitude and behavior collapse are open risks; all
+results must be retained and no protocol may be selected.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

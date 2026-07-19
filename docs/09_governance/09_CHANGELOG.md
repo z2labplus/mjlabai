@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.48
+
+- Added `04AL`; reviewed commit `e0f346a` against exact `04AK` approval.
+- Decision: `A. Review can close.` Exact two branches/four passes, frozen batch
+  collection, other-31 baselines, eight aggregate updates, complete diagnostics
+  and no selection conform.
+- Both branches lower objectives/change parameters but retain exact initial
+  fixed-window rewards `-312/-1056`. Protocol agreement is no improvement, not
+  robustness or strength.
+- Reused the 2443.53-second probe, ten focused and 122 fast passing tests;
+  lightweight commit/source/provenance checks pass without expensive reruns.
+- Directly approved one fixed `32x` batch-size-compensated gradient diagnostic
+  for the same protocols. No scale search, third protocol, strength or P9-P12.
+
 ## 2026-07-19 - v4.47
 
 - Implemented the exact `04AK` two-protocol four-pass leave-one-out batch-

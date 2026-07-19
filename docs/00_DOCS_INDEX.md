@@ -455,6 +455,12 @@ with matching focused tests. It performs 256 trajectories/eight aggregate
 updates, validates true other-31 baselines and finds both protocols retain
 initial fixed-window rewards `-312/-1056` despite parameter changes. This is
 bounded variance-control evidence, not robust improvement or strength.
+
+`docs/04_rl_selfplay/04AL_P8_LEAVE_ONE_OUT_BATCH_TRAINING_PROTOCOL_IMPLEMENTATION_REVIEW.md`
+reviews commit `e0f346a`, records `A. Review can close`, confirms exact batch
+freezing/other-31 baselines/eight updates and honest no-improvement evidence,
+and directly approves one fixed `32x` batch-size-compensated gradient
+diagnostic over the same protocols. No new planning gate is introduced.
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

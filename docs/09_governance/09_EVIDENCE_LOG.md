@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Batch-baseline review and fixed scale task approval
+
+- Type: exact P8 implementation-review closure plus material update-scale task
+  approval.
+- `04AL` records `A. Review can close` for commit `e0f346a`; no blocker exists.
+- Exact batch freezing, other-31 baselines, eight aggregate updates, complete
+  legal diagnostics, final-only windows and no selection conform to `04AK`.
+- Both branches change parameters but retain initial `-312/-1056`; agreement is
+  no observed improvement, not robustness.
+- Probe/focused/fast evidence is reused and lightweight checks pass without an
+  expensive rerun.
+- One exact fixed `32x` batch-size compensation diagnostic is directly approved
+  with zero docs gates. Evidence remains non-strength/non-promotion P8 only.
+
 ### 2026-07-19 — Executable two-protocol leave-one-out batch diagnostic
 
 - Type: executable P8 local algorithmic variance-control diagnostic evidence.
