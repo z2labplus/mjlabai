@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Executable fixed-32x batch-size compensation diagnostic
+
+- Type: executable P8 local update-scale/behavior-change diagnostic evidence.
+- Existing mean behavior remains explicit at multiplier `1.0`; the new run uses
+  only fixed multiplier `32.0`, base rate `0.01`, effective mean rate `0.32`.
+- Exact existing two protocols/four passes/final windows run with no mean/online
+  rerun or selection. Both branches change parameters and lower objectives.
+- Reference primary/replication deltas are `+54/+121`, changed seeds `(58,61)`
+  and `(103,113)`. Alternate deltas are `-60/0`, changed primary seed `(73,)`.
+- Ten focused tests pass in `2431.292s`; 122 fast tests pass in `0.034s`.
+  Compile, dependency and diff checks pass; no full-suite rerun.
+- Evidence grade: bounded update-scale protocol-sensitivity evidence only; not
+  robust improvement, model strength, promotion, Tenhou, stable-dan, LuckyJ or
+  P9-P12 evidence.
+
 ### 2026-07-19 — Batch-baseline review and fixed scale task approval
 
 - Type: exact P8 implementation-review closure plus material update-scale task

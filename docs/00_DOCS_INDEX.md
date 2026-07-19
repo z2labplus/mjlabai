@@ -461,6 +461,13 @@ reviews commit `e0f346a`, records `A. Review can close`, confirms exact batch
 freezing/other-31 baselines/eight updates and honest no-improvement evidence,
 and directly approves one fixed `32x` batch-size-compensated gradient
 diagnostic over the same protocols. No new planning gate is introduced.
+
+That exact `32x` diagnostic now exists in
+`src/mjlabai/rl/mahjax_categorical_mlp_four_pass_batch_size_compensated_training_protocol_smoke.py`
+with matching focused tests. It preserves explicit `1x` mean behavior, runs
+only fixed `32x`, and records reference `+54/+121` versus alternate `-60/0`.
+This proves update magnitude can change behavior but does not establish a
+robust protocol or strength.
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

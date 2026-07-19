@@ -2,13 +2,14 @@
 
 ## Current stage
 
-P8 direct implementation of the `04AL`-approved fixed `32x` batch-size-
-compensated leave-one-out gradient diagnostic. Preserve the reviewed mean run
-at multiplier `1.0`; a new source/test use only multiplier `32.0`, base rate
-`0.01` and effective mean-gradient rate `0.32`. Run the same exact two protocols
-for four passes and final-only existing windows, compare reviewed summaries,
-retain all results and select nothing. No scale search, mean/online rerun, third
-protocol/window/pass, full suite, real data, strength claim or P9-P12.
+P8 lightweight review of the implemented `04AL` fixed `32x` batch-size-
+compensated leave-one-out gradient diagnostic. Existing mean behavior remains
+explicit at `1.0`; new exact two-protocol branches use only `32.0`. Reference
+changes `+54/+121`, alternate `-60/0`, so behavior changes but protocol
+sensitivity persists and nothing is selected. Ten focused and 122 fast tests
+pass. Review must reuse evidence and directly approve/defer one structural
+exploration/policy-distribution task. No scale search, expensive rerun, third
+protocol/window/pass, real data, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -588,8 +589,8 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04AL` fixed `32x` batch-size-compensated diagnostic. Add a
-private explicit gradient multiplier while preserving mean behavior, then run
-only the new same-two-protocol branch at `32.0` and final fixed windows. Pin all
-results regardless of sign and select nothing. No scale search, mean/online
-rerun, third protocol/window/pass, full suite, strength claim or P9-P12.
+Review the exact `04AL` fixed-32x implementation once using recorded evidence
+and lightweight source/provenance checks. Verify explicit mean preservation,
+only fixed `32x`, exact branches/windows, both favorable/adverse outcomes and
+no selection. Directly approve/defer one structural exploration task; no scale
+search, expensive rerun, third protocol/window/pass, strength claim or P9-P12.

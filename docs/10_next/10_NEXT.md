@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement an exact batch-size-compensated leave-one-out batch-gradient diagnostic for the same two protocols.
+- [ ] Review the exact fixed-32x batch-size-compensated leave-one-out gradient diagnostic implementation.
 
 Current execution charter:
 
@@ -22,20 +22,30 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Modify the exact `04AL`-approved private helper and add only the approved new
-  source/test plus direct governance. Preserve the mean run at multiplier `1.0`.
-- New run uses fixed gradient multiplier `32.0`, base rate `0.01` and effective
-  mean-gradient rate `0.32`; no other scale or search.
-- Use the same exact two protocols/four frozen-batch passes and final-only
-  zero-update `52..83` and `84..115`; do not rerun mean/online branches inside.
-- Compare reviewed immutable summaries, pin all results regardless of sign and
-  select no protocol/model/pass/checkpoint.
-- Run one probe and new focused/fast checks only; no existing expensive test or
-  full suite.
-- No third protocol, seed search, fifth pass, third window, tuning, replay,
-  artifact, real data, strength claim or P9-P12.
+- Review only the exact `04AL`-approved changes and recorded probe/focused/fast
+  evidence; do not rerun any 2400-second execution or the full suite.
+- Verify existing `1.0x` behavior remains explicit, new multiplier is only
+  `32.0`, exact two protocols/four passes/final windows and no selection.
+- Preserve both outcomes: reference `+54/+121`, alternate `-60/0`. Do not
+  promote the favorable branch or call the multiplier robust.
+- Use lightweight source/provenance checks and directly approve/defer one
+  material structural exploration/policy-distribution task without docs chain.
+- No multiplier/rate search, third protocol, seed search, fifth pass, third
+  window, replay, artifact, real data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Implemented the exact `04AL` fixed `32x` batch-size-
+  compensated leave-one-out gradient diagnostic. The reviewed private helpers
+  now accept an explicit multiplier while the existing mean path passes `1.0`;
+  the new source/test use only `32.0`, base rate `0.01` and effective mean rate
+  `0.32`. Same exact two protocols/four frozen-batch passes and final fixed
+  windows run without mean/online reruns or selection. Reference records
+  primary/replication deltas `+54/+121`; alternate records `-60/0`, proving
+  behavior change but persistent protocol sensitivity. Ten focused tests pass
+  in `2431.292s` (`2440.35s` wall); 122 fast tests pass in `0.034s`. Compile,
+  dependency and diff checks pass. No scale search, full suite, real data,
+  strength claim or P9-P12 work was added. One lightweight review is next.
 
 - [x] 2026-07-19 Reviewed commit `e0f346a` against exact `04AK` approval in
   `04AL`. Decision: `A. Review can close.` Confirmed exact frozen batches,

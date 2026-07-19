@@ -275,6 +275,12 @@ next exact task tests only the natural batch-size compensation multiplier
 branches. Excessive update magnitude and behavior collapse are open risks; all
 results must be retained and no protocol may be selected.
 
+Implementation status: fixed `32x` compensation changes behavior. Reference
+improves both fixed windows by `+54/+121`, while alternate degrades primary by
+`-60` and leaves replication unchanged. This realizes protocol-sensitivity and
+selection-bias risks; the favorable branch must not be promoted. Scale search
+is prohibited. Ten focused and 122 fast tests pass; no full-suite rerun.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

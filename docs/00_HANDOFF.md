@@ -50,7 +50,10 @@ leave-one-out batch-baseline variance-control training diagnostic. That exact
 diagnostic is now implemented: both protocols change parameters but retain
 initial fixed-window rewards `-312/-1056`; ten focused and 122 fast tests pass.
 `04AL` closes review and directly approves one exact fixed `32x` batch-size-
-compensated gradient diagnostic over the same two protocols. This is P8
+compensated gradient diagnostic over the same two protocols. That diagnostic
+is now implemented: reference changes `+54/+121`, alternate changes `-60/0`,
+so larger updates alter behavior but remain protocol-sensitive. Ten focused
+and 122 fast tests pass; one lightweight review is next. This is P8
 training-seed sensitivity work, not robust
 generalization, algorithm selection, production evaluation or strength:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
@@ -1163,7 +1166,7 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is direct implementation of the exact `04AL` fixed `32x`
+- Current next work is lightweight review of the exact `04AL` fixed `32x`
   batch-size-compensated leave-one-out gradient diagnostic.
   P8 bounded local diagnostics are active;
   production self-play, evaluation, league, real data, Tenhou and P9-P12 remain

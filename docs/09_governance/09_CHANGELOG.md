@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.49
+
+- Implemented the exact `04AL` fixed `32x` batch-size-compensated leave-one-out
+  gradient diagnostic and matching focused tests.
+- Existing private helpers now accept an explicit multiplier; the reviewed
+  mean path passes `1.0` and remains behaviorally pinned. The new source uses
+  only `32.0`, base rate `0.01` and effective mean-gradient rate `0.32`.
+- Same exact two branches/four frozen-batch passes/final windows run without
+  mean/online reruns or selection. Reference changes `+54/+121`; alternate
+  changes `-60/0`. Larger updates change behavior but remain protocol-sensitive.
+- Ten focused tests pass in `2431.292s` (`2440.35s` wall); 122 fast tests pass
+  in `0.034s`. Compile, dependency and diff checks pass. No scale search, full
+  suite, real data, strength claim or P9-P12 work was added.
+
 ## 2026-07-19 - v4.48
 
 - Added `04AL`; reviewed commit `e0f346a` against exact `04AK` approval.

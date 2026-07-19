@@ -267,7 +267,13 @@ def _trajectory_objective(parameters, trajectory, decision_advantages, jax, jnp)
     return -jnp.mean(decision_advantages * selected_log_probabilities)
 
 
-def _apply_leave_one_out_batch_update(parameters, trajectories, jax, jnp):
+def _apply_leave_one_out_batch_update(
+    parameters,
+    trajectories,
+    gradient_multiplier,
+    jax,
+    jnp,
+):
     normalized_returns = tuple(
         tuple(float(value) / 100.0 for value in trajectory.cumulative_rewards)
         for trajectory in trajectories
@@ -314,7 +320,8 @@ def _apply_leave_one_out_batch_update(parameters, trajectories, jax, jnp):
         )
 
     mean_gradients = tuple(
-        gradient / _TRAJECTORIES_PER_PASS for gradient in gradient_sums
+        gradient_multiplier * gradient / _TRAJECTORIES_PER_PASS
+        for gradient in gradient_sums
     )
     updated_parameters = jax.block_until_ready(
         tuple(
@@ -359,6 +366,7 @@ def _run_protocol(
     jax,
     jnp,
     mahjax,
+    gradient_multiplier,
 ):
     parameters = tuple(initial_parameters)
     all_pass_trajectories = []
@@ -372,6 +380,7 @@ def _run_protocol(
         update = _apply_leave_one_out_batch_update(
             pass_parameters,
             trajectories,
+            gradient_multiplier,
             jax,
             jnp,
         )
@@ -565,6 +574,7 @@ def run_mahjax_categorical_mlp_four_pass_leave_one_out_batch_training_protocol_s
         jax,
         jnp,
         mahjax,
+        1.0,
     )
     alternate = _run_protocol(
         _ALTERNATE_PROTOCOL_ID,
@@ -576,6 +586,7 @@ def run_mahjax_categorical_mlp_four_pass_leave_one_out_batch_training_protocol_s
         jax,
         jnp,
         mahjax,
+        1.0,
     )
     seed_sets = (
         set(reference.training_seeds_per_pass),
