@@ -195,6 +195,21 @@ One exact review is next; disk caching or behavior changes remain forbidden.
 | In-memory optimization grows into persistent stale cache. | Governance / Scope | High | Medium | `maxsize=1`; no path, serialization, environment toggle or disk artifact. | Open |
 | Faster regression is overclaimed as model progress. | Evidence / Scope | Critical | High | Classify only engineering runtime evidence and preserve all non-strength warnings. | Open |
 
+Review status: `04AH` closes the exact reuse implementation review with no
+blocker. Before any further training/tuning, it directly approves a second
+predeclared `84..115` evaluation window whose outcome must be kept regardless
+of sign. Two fixed windows still do not establish robust generalization.
+
+## 2026-07-19 — P8 second replication-evaluation approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Second window is chosen after inspecting outcomes. | Evaluation / Selection | Critical | Low | Predeclare exact `84..115` before implementation and retain result regardless of sign. | Mitigated |
+| Replication evaluation changes training behavior. | Evaluation / Leakage | Critical | Low | Preserve exact 4 x `0..31`; initial/final evaluation performs zero updates only. | Open |
+| Four evaluation calls become intermediate stopping. | Evaluation / Leakage | Critical | Low | Only initial primary/replication and final primary/replication; no evaluation between passes or selection field. | Open |
+| Two windows are overclaimed as robust generalization. | Evidence / Statistics | Critical | High | Report vectors/counts and inconsistency explicitly; prohibit strength/promotion claims. | Open |
+| Added evaluation reverses runtime improvement. | Engineering / Delivery | High | Medium | Use existing frozen result shape and one full suite only; record elapsed time before approving further expansion. | Open |
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

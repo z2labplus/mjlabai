@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.40
+
+- Added `04AH`; reviewed commit `756c82d` against exact `04AG` approval.
+- Decision: `A. Review can close.` No code/test/state/scope blocker was found.
+- Confirmed maxsize-one frozen array-free result, four exact callable cache
+  keys, patched-dependency miss, uncached errors, unchanged API/diagnostics and
+  no persistence.
+- Reused 20 combined and all 498 passing tests; fresh-process failure/cache and
+  AST checks pass without duplicating the 91-minute suite.
+- Directly approved one second predeclared disjoint `84..115` before/after
+  evaluation of the same four-pass policy, accepting result regardless of sign.
+  No fifth pass, tuning, selection, strength claim or P9-P12 work was added.
+
 ## 2026-07-19 - v4.39
 
 - Implemented the exact `04AG` maxsize-one process-local immutable raw-census

@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the process-local immutable raw-census result reuse implementation.
+- [ ] Extend the exact MahJax four-pass causal-baseline smoke with predeclared replication evaluation seeds 84 through 115.
 
 Current execution charter:
 
@@ -22,20 +22,27 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the two exact `04AG`-approved source/test files and direct
-  governance; change code/tests only for a genuine blocker.
-- Verify public API/result identity, maxsize-one frozen-result reuse, dependency-
-  identity cache keys, uncached failures and no mutable arrays or persistence.
-- Verify raw-census plus causal-baseline comparison: 20 tests in `850.567s`
-  (`856.40s` wall), versus historical separate total `1310.550s`.
-- Verify all 498 tests pass in `5454.853s` with two skips, down `435.957s`
-  from the prior 497-test run despite one added cache test.
-- Reuse implementation validation; run only independent fast checks unless a
-  blocker changes code, then directly approve one material P8 algorithm task.
-- No cache broadening, behavior change, new training branch, real data,
-  strength claim or P9-P12.
+- Modify only the exact `04AH`-approved four-pass source/test files plus direct
+  governance; preserve exact training and primary `52..83` diagnostics.
+- Add exact disjoint replication evaluation seeds `84..115` before/after the
+  same 128 attempts, zero updates and no intermediate evaluation/selection.
+- Retain complete replication trajectories, rewards, scores, sums, counts and
+  changed seeds; total evaluation calls four and update count zero.
+- Pin the deterministic replication result regardless of sign; do not use it
+  for stopping, selection, tuning or checkpoint acceptance.
+- No fifth pass, alternate training seeds, algorithm/rate change, cache
+  expansion, real data, robust/strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Reviewed commit `756c82d` against exact `04AG` approval in
+  `04AH`. Decision: `A. Review can close.` Confirmed unchanged six-symbol API/
+  diagnostics, maxsize-one frozen array-free cache, four exact callable keys,
+  patched-dependency miss, uncached failure, no persistence and exact combined/
+  full-suite timing reductions. No blocker was found. Before any fifth pass or
+  tuning, directly approved one exact second disjoint `84..115` before/after
+  evaluation of the same four-pass policy, with result accepted regardless of
+  sign and zero gates before code. No strength or P9-P12 claim was added.
 
 - [x] 2026-07-19 Implemented the exact `04AG` process-local immutable raw-
   census result reuse in the two approved files. A maxsize-one cache keys the

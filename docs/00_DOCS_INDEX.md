@@ -401,6 +401,12 @@ That exact reuse is implemented in the existing raw-census source/test. It
 keeps the public result unchanged, bypasses cache on patched dependencies and
 reduces the full 498-test run to `5454.853s` with two skips. This is regression-
 runtime evidence only, not training or strength evidence.
+
+`docs/04_rl_selfplay/04AH_P8_RAW_CENSUS_RESULT_REUSE_IMPLEMENTATION_REVIEW.md`
+reviews commit `756c82d`, records `A. Review can close`, accepts the exact
+process-local immutable reuse and directly approves one second predeclared
+`84..115` evaluation window for the same four-pass policy. It is bounded
+replication-task approval, not model selection or strength evidence.
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

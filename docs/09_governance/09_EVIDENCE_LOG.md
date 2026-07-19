@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Result-reuse review and replication-evaluation approval
+
+- Type: exact P8 engineering implementation-review closure plus bounded
+  replication-diagnostic task approval evidence.
+- `04AH` records `A. Review can close` for commit `756c82d`; no blocker exists.
+- Maxsize-one frozen result reuse, four callable keys, dependency-patch miss,
+  uncached failure, unchanged public diagnostics and no persistence conform.
+- Twenty combined and all 498 tests pass with two skips; fresh-process failure/
+  cache and AST checks pass without rerunning the full suite.
+- Exact second disjoint evaluation `84..115` is directly approved before any
+  fifth pass/tuning; its result must be recorded regardless of sign.
+- Evidence grade: engineering review and bounded replication approval only;
+  not robust evaluation, model strength, promotion or P9-P12 evidence.
+
 ### 2026-07-19 — Executable process-local raw-reference reuse
 
 - Type: P8 local regression-runtime engineering evidence.

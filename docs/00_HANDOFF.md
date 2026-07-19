@@ -27,17 +27,16 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is one exact code review of the implemented `04AG` process-
-local immutable raw-census result reuse. A maxsize-one cache keys the completed
-frozen array-free result by exact runtime dependency callables; patched
-dependencies miss, failures are uncached, and public API/diagnostics are
-unchanged. Raw-census plus causal-baseline comparison passes 20 tests in
-850.567 seconds (856.40 wall), about 454.15 seconds / 34.7% below the historical
-separate total. All 498 tests pass in 5454.853 seconds with two skips, 435.957
-seconds below the prior suite despite one added test. One exact review must
-verify this and directly return to a material P8 algorithm task. This is test-
-runtime engineering, not robust evaluation, algorithm selection, production
-evaluation or strength:
+Current active stage is direct implementation of the `04AH`-approved second
+predeclared replication evaluation for the exact four-pass causal-baseline
+policy. `04AH` review-accepts the process-local immutable reuse after 20
+combined and all 498 tests pass, with no cache/state blocker. Before any fifth
+pass or tuning, the same exact four-pass policy must preserve primary `52..83`
+results and add zero-update initial/final evaluation on exact disjoint
+`84..115`, retaining complete diagnostics and accepting the observed result
+regardless of sign. No selection, checkpoint, training change or real data is
+allowed. This is bounded P8 replication evidence, not robust evaluation,
+algorithm selection, production evaluation or strength:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded
@@ -1148,8 +1147,8 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is one exact review of the `04AG` process-local immutable
-  raw-census result reuse. P8 bounded local diagnostics are active;
+- Current next work is direct code for the exact `04AH` second predeclared
+  evaluation window. P8 bounded local diagnostics are active;
   production self-play, evaluation, league, real data, Tenhou and P9-P12 remain
   unapproved. Do not make strength claims.
 - Technical decisions become project facts only after they are recorded in Git

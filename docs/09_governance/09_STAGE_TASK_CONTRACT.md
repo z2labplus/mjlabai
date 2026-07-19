@@ -2,13 +2,13 @@
 
 ## Current stage
 
-P8 exact code review of the implemented `04AG` process-local immutable raw-
-census result reuse. The maxsize-one cache stores only a frozen array-free
-result, keys by exact runtime dependency callables and preserves patched
-failures/public API/diagnostics. Twenty combined tests pass in 850.567 seconds;
-all 498 pass in 5454.853 seconds with two skips, 435.957 seconds below the prior
-suite. Review may change code/tests only for a blocker and must directly return
-to one material P8 algorithm task. No cache broadening, real data or strength.
+P8 direct implementation of the `04AH`-approved second predeclared replication
+evaluation for the exact four-pass causal-baseline policy. `04AH` review-
+accepts process-local immutable reuse after all 498 tests pass. The next exact
+two-file code preserves 4 x ordered `0..31` and primary `52..83`, then adds
+zero-update initial/final `84..115` with complete diagnostics and no selection,
+accepting the outcome regardless of sign. No fifth pass, tuning, checkpoint,
+real data, robust claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -588,7 +588,7 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04AG` reuse implementation. Verify maxsize-one dependency-
-keyed frozen-result reuse, uncached failures, unchanged API/diagnostics, no
-persistence and exact combined/full timing evidence. Directly approve one
-material P8 algorithm task without another docs chain; no P9-P12.
+Implement exact `04AH` replication evaluation in the existing four-pass source/
+test only: preserve training/primary results, add disjoint zero-update
+`84..115` initial/final complete diagnostics, and retain result regardless of
+sign. No fifth pass, tuning, selection, strength claim or P9-P12.

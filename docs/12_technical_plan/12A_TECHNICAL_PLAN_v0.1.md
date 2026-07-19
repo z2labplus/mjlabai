@@ -28,14 +28,13 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 exact code review of the implemented `04AG` process-local immutable raw-
-census result reuse. The maxsize-one cache keys a completed frozen array-free
-result by four exact runtime dependency callables, so patched dependencies miss
-and failures remain uncached while public API/diagnostics remain unchanged.
-Twenty combined tests pass in 850.567 seconds; all 498 pass in 5454.853 seconds
-with two skips, 435.957 seconds faster than the prior suite. One exact review
-must directly return to a material algorithm task. This is engineering test-
-runtime evidence, not robust evaluation or strength.
+P8 direct implementation of the `04AH`-approved second disjoint replication
+evaluation for the exact four-pass causal-baseline policy. `04AH` review-
+accepts the process-local immutable reuse after 20 combined and all 498 tests
+pass. Exact four-pass training and primary `52..83` must remain unchanged; the
+next two-file code adds zero-update initial/final `84..115`, complete diagnostics
+and no selection, retaining the observed result regardless of sign. This is
+bounded replication work, not robust evaluation or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /
