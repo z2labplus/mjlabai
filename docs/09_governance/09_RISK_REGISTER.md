@@ -109,6 +109,12 @@ must expose zero-return no-op attempts, with no third protocol or search.
 | Comparison expands into seed search or algorithm tuning. | Governance / Scope | High | Medium | Exact two protocols only; prohibit third tuple, replacement, rate/estimator/critic changes. | Open |
 | Fixed `-501/-650/-501` is overclaimed as strength. | Evidence / Statistics | Critical | High | Classify as deterministic selection-bias diagnostic only. | Open |
 
+Implementation status: exact two-branch initialization, five attempts per
+protocol, zero-return no-ops, complete training diagnostics, fixed evaluation
+and `selected_protocol_id=None` are pinned in source/tests. Nine focused and all
+468 explicit tests pass with two skips. No protocol is approved for subsequent
+training; one exact review is next.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

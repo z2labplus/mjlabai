@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact MahJax categorical-MLP training-seed protocol comparison smoke.
+- [ ] Review the exact MahJax categorical-MLP training-seed protocol comparison smoke implementation.
 
 Current execution charter:
 
@@ -22,20 +22,30 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Add only the exact `04AC`-approved source/test plus direct governance; do not
-  modify existing source/test logic or public APIs.
-- Compare exact outcome-selected seeds `(1,3,5,7,11)` with exact contiguous
-  seeds `(0,1,2,3,4)` from identical reviewed imitation parameters.
-- Use the reviewed actor-indexed raw-return update at `0.01` once per exact
-  trajectory; retain zero-return seeds `(0,2,4)` as exact no-op attempts.
-- Evaluate initial and both branches with zero updates on exact seeds `20..51`;
-  pin sums `-501/-650/-501`, counts and changed seeds.
-- Return frozen array-free diagnostics; select no protocol or model.
-- No third protocol/seed search, optimizer/estimator/critic/reward change,
-  persistence, real data, production self-play/evaluation, strength claim or
-  P9-P12.
+- Review only the two exact `04AC`-approved comparison files and direct
+  governance; change code/tests only for a genuine blocker.
+- Verify identical branch initialization, exact selected/contiguous seed tuples,
+  five attempts each, zero-return no-op seeds `(0,2,4)` and complete pinned
+  training trajectories/objectives/deltas.
+- Verify zero-update fixed evaluation `20..51`, sums `-501/-650/-501`, counts,
+  changed seeds, frozen array-free result and `selected_protocol_id=None`.
+- Run focused/full validation and independent source/result checks.
+- If review closes, directly approve or defer one material predeclared-seed
+  training diagnostic; do not add a sibling proposal or boundary chain.
+- No third protocol/seed search, algorithm/rate change, persistence, real data,
+  production self-play/evaluation, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Implemented the exact `04AC`-approved categorical-MLP
+  training-seed protocol comparison in two new files. Identical branches use
+  outcome-selected `(1,3,5,7,11)` and contiguous `(0,1,2,3,4)` tuples with five
+  reviewed update attempts each; zero-return `(0,2,4)` attempts are exact
+  no-ops. Fixed zero-update evaluation `20..51` pins initial/selected/contiguous
+  sums `-501/-650/-501`, changed seeds `(32,39,43,44,50)/()` and no selected
+  protocol. Nine focused and all 468 explicit repository tests pass with two
+  skips. No third protocol, search, algorithm change, persistence, real data,
+  strength claim or P9-P12 work was added. One exact code review is next.
 
 - [x] 2026-07-19 Reviewed commit `87ea0c3` against exact `04AB` approval in
   `04AC`. Decision: `A. Review can close.` Confirmed exact seven-symbol API,

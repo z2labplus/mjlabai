@@ -27,16 +27,17 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the `04AC`-approved MahJax
-categorical-MLP training-seed protocol comparison. `04AC` reviewed commit
-`87ea0c3`, accepted the exact frozen-policy census and confirmed 10/32 census
-seeds versus 5/5 reference-training seeds have nonzero outcomes. An independent
-A/B probe starts both branches identically: outcome-selected `(1,3,5,7,11)`
-changes fixed evaluation `-501->-650`, while contiguous `(0,1,2,3,4)` retains
-zero-return seeds `(0,2,4)` as no-op attempts and remains `-501`. The next exact
-two-file code task records this comparison without selecting a protocol. This
-is bounded local P8 selection-bias evidence, not algorithm selection,
-production evaluation, improvement or strength:
+Current active stage is one exact code review of the implemented `04AC` MahJax
+categorical-MLP training-seed protocol comparison. Identical branches use
+outcome-selected `(1,3,5,7,11)` and contiguous `(0,1,2,3,4)` tuples with five
+reviewed update attempts each; zero-return `(0,2,4)` attempts are retained as
+exact no-ops. Fixed zero-update evaluation `20..51` records initial/selected/
+contiguous sums `-501/-650/-501`, changed seeds `(32,39,43,44,50)/()` and
+`selected_protocol_id=None`. Nine focused and all 468 explicit repository tests
+pass with two skips. The review must directly approve or defer one material
+predeclared-seed diagnostic without another docs chain. This is bounded local
+P8 selection-bias evidence, not algorithm
+selection, production evaluation, improvement or strength:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

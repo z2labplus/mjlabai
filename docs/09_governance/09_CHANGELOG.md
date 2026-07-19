@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.31
+
+- Implemented the exact `04AC` training-seed protocol comparison and nine
+  focused tests in two new files.
+- Identical branches use exact selected `(1,3,5,7,11)` and contiguous
+  `(0,1,2,3,4)` tuples with five reviewed raw-return update attempts each.
+- Zero-return seeds `(0,2,4)` remain exact no-ops; fixed zero-update evaluation
+  pins initial/selected/contiguous sums `-501/-650/-501` and no selected protocol.
+- Nine focused and all 468 explicit repository tests pass with two skips;
+  compile, dependency and diff checks pass. No third protocol/search,
+  algorithm/rate change, persistence, real data, production evaluation,
+  strength claim or P9-P12 work was added. One exact review is next.
+
 ## 2026-07-19 - v4.30
 
 - Added `04AC`; reviewed commit `87ea0c3` against exact `04AB` approval.

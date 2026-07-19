@@ -340,6 +340,14 @@ two-branch outcome-selected-versus-contiguous seed-protocol comparison. The
 probe pins `-501/-650/-501`; this is selection-bias diagnostic approval, not
 protocol selection, improvement or strength evidence.
 
+That exact `04AC` task is implemented in
+`src/mjlabai/rl/mahjax_categorical_mlp_training_seed_protocol_comparison_smoke.py`
+with focused tests in
+`tests/rl/test_mahjax_categorical_mlp_training_seed_protocol_comparison_smoke.py`.
+It retains five attempts in both fixed protocols, pins zero-return no-ops and
+fixed sums `-501/-650/-501`, and returns no selected protocol. This is bounded
+selection-bias evidence only, not protocol superiority or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

@@ -28,15 +28,15 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 direct implementation of the `04AC`-approved categorical-MLP training-seed
-protocol comparison. `04AC` reviews commit `87ea0c3`, accepts the exact 32-seed
-frozen-policy census and confirms census 10/32 versus reference training 5/5
-nonzero outcomes. An independent identical-branch probe records fixed sums
-`-501/-650/-501` for initial, outcome-selected `(1,3,5,7,11)` and contiguous
-`(0,1,2,3,4)` protocols; zero-return `(0,2,4)` updates are exact no-ops. The
-exact next two-file implementation records this comparison without selecting
-a protocol. This is bounded selection-bias evidence, not algorithm selection,
-production evaluation, improvement or strength.
+P8 exact code review of the implemented `04AC` categorical-MLP training-seed
+protocol comparison. Identical branches retain exact outcome-selected
+`(1,3,5,7,11)` and contiguous `(0,1,2,3,4)` tuples with five reviewed attempts
+each; zero-return `(0,2,4)` attempts are exact no-ops. Fixed zero-update
+evaluation `20..51` pins initial/selected/contiguous sums `-501/-650/-501`,
+changed seeds and no selected protocol. One exact review must verify this result
+and directly approve or defer one material predeclared-seed diagnostic without
+another docs chain. This is bounded selection-bias evidence, not algorithm
+selection, production evaluation, improvement or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

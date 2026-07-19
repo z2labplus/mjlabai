@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Executable training-seed protocol selection-bias comparison
+
+- Type: executable P8 local training-seed selection-bias diagnostic evidence.
+- Two independent identical branches retain exact selected `(1,3,5,7,11)` and
+  contiguous `(0,1,2,3,4)` tuples with five update attempts each.
+- Contiguous zero-return seeds `(0,2,4)` produce exact zero objectives/deltas
+  and remain in the protocol; no filtering or replacement occurs.
+- Fixed zero-update evaluation `20..51` pins initial/selected/contiguous sums
+  `-501/-650/-501`, changed seeds `(32,39,43,44,50)/()` and no selected protocol.
+- Validation: nine focused tests pass in 389.507 seconds; all 468 explicit
+  repository tests pass in 3482.351 seconds with two existing skips. Compile,
+  dependency and diff checks pass.
+- Evidence grade: bounded deterministic selection-bias comparison only; not
+  protocol selection, improvement, robust evaluation or strength evidence.
+
 ### 2026-07-19 — Frozen-policy census review and seed-protocol A/B probe
 
 - Type: exact code-review closure plus bounded training-seed selection-bias

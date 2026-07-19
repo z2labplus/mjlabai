@@ -2,13 +2,14 @@
 
 ## Current stage
 
-P8 direct implementation of the `04AC`-approved categorical-MLP training-seed
-protocol comparison. It must compare exact outcome-selected
-`(1,3,5,7,11)` and contiguous `(0,1,2,3,4)` branches from identical reviewed
-imitation arrays, with five exact raw-return update attempts and fixed zero-
-update evaluation on `20..51`. Probe sums are `-501/-650/-501`; zero-return
-seeds `(0,2,4)` remain as no-op attempts. No third protocol, seed search,
-protocol selection, algorithm change, scale-up or strength claim is allowed.
+P8 exact code review of the implemented `04AC` categorical-MLP training-seed
+protocol comparison. Identical branches retain exact outcome-selected
+`(1,3,5,7,11)` and contiguous `(0,1,2,3,4)` tuples, five raw-return update
+attempts, zero-return no-ops `(0,2,4)` and fixed zero-update evaluation
+`-501/-650/-501` on `20..51`. The result selects no protocol. Review may change
+code/tests only for a genuine blocker and must then directly approve or defer
+one material predeclared-seed diagnostic. No third protocol, seed search,
+algorithm change, scale-up or strength claim is allowed.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -588,7 +589,7 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04AC` training-seed protocol comparison in its two
-approved files. Pin both branches, no-op zero-return attempts and fixed
-evaluation diagnostics; select no protocol and add no third tuple, algorithm
-change, persistence, real data or production path.
+Review the exact `04AC` training-seed protocol comparison implementation. Pin
+API, branch independence, both exact tuples, no-op attempts, fixed diagnostics
+and no-selection scope. If review closes, directly approve or defer one
+material executable next step without a sibling docs chain.
