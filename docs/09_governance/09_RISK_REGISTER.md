@@ -255,6 +255,13 @@ and makes selection impossible. Seven focused and 122 fast synthetic RL tests
 pass. This mitigates evidence-overclaim risk without adding to the 6955-second
 suite; model variance and lack of robust improvement remain open research risks.
 
+Review status: `04AK` closes the gate implementation review with no blocker.
+The next exact experiment replaces online per-round updates with a predeclared
+leave-one-out batch baseline and one aggregate update per pass for both existing
+protocols. It forbids a third protocol/search/selection and will not rerun the
+full suite. Batch-estimator correctness, compute cost and non-reproduction
+remain open risks until the exact implementation evidence is recorded.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

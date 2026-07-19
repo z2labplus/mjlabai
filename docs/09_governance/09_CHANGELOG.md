@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.46
+
+- Added `04AK`; reviewed commit `e498fcb` against exact `04AJ` approval.
+- Decision: `A. Review can close.` Exact reviewed values, non-reproduction,
+  robustness/selection false, frozen array-free output, standard-library-only
+  imports and zero runtime/I-O behavior conform.
+- Reused seven focused and 122 fast synthetic RL passing tests; lightweight
+  commit/source/provenance checks pass. No expensive suite was rerun.
+- Directly approved one real two-protocol four-pass leave-one-out batch-baseline
+  variance-control training diagnostic. It uses the existing two seed protocols
+  and fixed windows, selects nothing and adds no planning gate.
+- No third protocol/window/pass, real data, strength claim or P9-P12 was added.
+
 ## 2026-07-19 - v4.45
 
 - Implemented the exact `04AJ` fast two-protocol robustness evidence gate and

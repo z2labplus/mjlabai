@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Robustness-gate review and batch-variance task approval
+
+- Type: exact P8 implementation-review closure plus material algorithmic
+  variance-control task approval.
+- `04AK` records `A. Review can close` for commit `e498fcb`; no blocker exists.
+- Exact reviewed deltas, no reproduced improvement, robustness/selection false,
+  frozen output, standard-library-only source and zero runtime calls conform.
+- Seven focused and 122 fast synthetic RL tests pass. Lightweight checks pass
+  without repeating the expensive suite.
+- One exact real two-protocol leave-one-out batch-baseline four-pass diagnostic
+  is directly approved with zero documentation gates.
+- Evidence grade remains bounded review/task approval only, not robustness,
+  strength, promotion, Tenhou, stable-dan, LuckyJ or P9-P12.
+
 ### 2026-07-19 — Executable fast two-protocol robustness evidence gate
 
 - Type: executable P8 local reviewed-summary claim-control evidence.

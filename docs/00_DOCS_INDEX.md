@@ -442,6 +442,12 @@ with matching fast tests. It pins deltas `15/0` and `121/0`, records no
 reproduction/robustness/selection, imports no P8 runtime and passes seven
 focused plus 122 fast synthetic RL tests. This is executable claim-control
 evidence only, not a stronger model.
+
+`docs/04_rl_selfplay/04AK_P8_FOUR_PASS_TRAINING_PROTOCOL_ROBUSTNESS_GATE_IMPLEMENTATION_REVIEW.md`
+reviews commit `e498fcb`, records `A. Review can close`, confirms exact fast
+claim-control behavior and directly approves a real two-protocol four-pass
+leave-one-out batch-baseline variance-control training diagnostic. It adds no
+planning chain; zero documentation gates remain before the exact code.
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

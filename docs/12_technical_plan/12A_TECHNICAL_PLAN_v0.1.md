@@ -39,8 +39,10 @@ Parameters change but both alternate reward vectors equal initialization at
 all 510 tests pass with two skips. `04AJ` closes review, selects no protocol and
 directly approves one fast reviewed-summary robustness evidence gate with no
 training/runtime import. That gate is implemented with seven focused and 122
-fast synthetic RL tests passing; lightweight review is next. This is bounded
-training-seed sensitivity work, not robust evaluation or strength.
+fast synthetic RL tests passing. `04AK` closes review and directly approves a
+real two-protocol four-pass leave-one-out batch-baseline variance-control
+diagnostic. This is bounded training-seed sensitivity work, not robust
+evaluation or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

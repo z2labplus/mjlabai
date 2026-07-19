@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the fast MahJax four-pass two-protocol robustness evidence gate implementation.
+- [ ] Implement an exact two-protocol four-pass leave-one-out batch-baseline variance-control training diagnostic.
 
 Current execution charter:
 
@@ -22,17 +22,29 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the exact `04AJ`-approved source/test and recorded fast evidence.
-- Verify reviewed deltas `15/0` and `121/0`, non-reproduction, robustness false,
-  no selection and frozen array-free output.
-- Confirm no JAX/MahJax/environment/training/evaluation import or call and no
-  threshold, ranking, winner score or I/O; do not run expensive suites.
-- Directly approve or defer one material P8 algorithmic variance-control task
-  without adding another boundary/proposal chain.
-- No third training protocol, seed search, fifth pass, third window, tuning,
-  replay, artifact, real data, strength claim or P9-P12.
+- Add only the exact `04AK`-approved source/test plus direct governance.
+- Run independent identical-init branches on exact ordered `0..31` and
+  `116..147`, four passes each.
+- Collect all 32 trajectories under fixed pass-start parameters, use the other
+  31 same-seat returns as each trajectory's baseline, and apply exactly one
+  mean objective update per pass at `0.01`.
+- Evaluate only final policies on existing zero-update `52..83` and `84..115`;
+  pin all results regardless of sign and select nothing.
+- Run one probe and focused/fast checks only; do not rerun the full suite.
+- No third protocol, seed search, fifth pass, third window, tuning, replay,
+  artifact, real data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Reviewed commit `e498fcb` against exact `04AJ` approval in
+  `04AK`. Decision: `A. Review can close.` Confirmed exact reviewed deltas,
+  non-reproduction, robustness/selection false, frozen array-free result,
+  standard-library-only imports and zero runtime/I-O. Reused seven focused and
+  122 fast synthetic RL passing tests plus lightweight commit/source/provenance
+  checks. Directly approved one real two-protocol four-pass leave-one-out
+  batch-baseline variance-control training diagnostic with zero documentation
+  gates. No expensive suite, third protocol/window/pass, strength claim or
+  P9-P12 was added.
 
 - [x] 2026-07-19 Implemented the exact `04AJ` fast no-selection two-protocol
   robustness evidence gate in one new source/test pair. The frozen array-free

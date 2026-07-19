@@ -2,14 +2,15 @@
 
 ## Current stage
 
-P8 lightweight review of the implemented `04AJ`-approved fast no-selection
-two-protocol robustness evidence gate. The exact new source/test pins reviewed
-reference/alternate deltas `15/0` and `121/0`, records non-reproduction and
-robustness false, selects nothing and executes zero training/evaluation calls.
-Seven focused and 122 fast synthetic RL tests pass. Review must use lightweight
-source/provenance checks only and directly approve/defer one material variance-
-control task. No expensive-suite rerun, threshold, third protocol/window/pass,
-real data, strength claim or P9-P12.
+P8 direct implementation of the `04AK`-approved real two-protocol four-pass
+leave-one-out batch-baseline variance-control training diagnostic. Two
+identical-initialization branches use exact `0..31` and `116..147`. Each pass
+collects 32 trajectories under frozen pass-start parameters, computes each
+trajectory's same-seat baseline from the other 31, then applies one mean
+objective update at `0.01`. Final-only zero-update evaluation uses `52..83`
+and `84..115`; results are retained without selection. No third protocol,
+search, fifth pass/window, full-suite rerun, real data, strength claim or
+P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -589,8 +590,9 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04AJ` fast robustness evidence gate once using recorded fast
-tests and lightweight source/provenance checks. Verify reviewed values,
-non-reproduction, no robustness/selection, standard-library-only imports and
-no threshold/ranking/I-O. Directly approve/defer one material P8 variance task;
-no expensive suite, third protocol/window/pass, strength claim or P9-P12.
+Implement the exact `04AK` two-protocol four-pass leave-one-out batch-baseline
+diagnostic in one new source/test. Use exact two seed ranges, collect all 32
+trajectories before one update/pass, compute other-31 per-seat baselines, then
+run final-only existing fixed windows. Pin all results regardless of sign and
+select nothing. No third protocol/search/window/pass, full-suite, strength
+claim or P9-P12.
