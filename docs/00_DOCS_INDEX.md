@@ -386,6 +386,15 @@ training diagnostic. The predeclared probe records `-312 -> -297` with one
 fewer negative round and no added positive round. This is bounded task-
 approval evidence, not robust improvement or strength evidence.
 
+That exact `04AF` task is implemented in
+`src/mjlabai/rl/mahjax_categorical_mlp_four_pass_causal_baseline_training_evaluation_smoke.py`
+with focused tests in
+`tests/rl/test_mahjax_categorical_mlp_four_pass_causal_baseline_training_evaluation_smoke.py`.
+It pins four passes/128 attempts with no intermediate selection and records
+fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
+round. This is bounded deterministic improvement evidence only, not robust
+evaluation or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md

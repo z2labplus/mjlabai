@@ -27,17 +27,18 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current active stage is direct implementation of the `04AF`-approved MahJax
-categorical-MLP four-pass causal-baseline training/evaluation diagnostic.
-`04AF` accepts the exact raw-versus-baseline comparison after ten focused and
-all 487 tests pass. A leave-one-out batch update is behavior-inert and rejected.
-One predeclared four-pass probe carries policy/baseline state over exactly 128
-attempts with no intermediate selection and changes disjoint `52..83`
-evaluation from `-312` to `-297`, negative count `20` to `19`, while positive
-count remains `2`; changed seeds are `(52,58,65,70,72)`. The exact next code
-must reproduce that bounded signal with no fifth pass, tuning, checkpoint or
-real data. This is a deterministic P8 improvement diagnostic, not robust
-evaluation, algorithm selection, production evaluation or strength:
+Current active stage is one exact code review of the implemented `04AF` MahJax
+categorical-MLP four-pass causal-baseline training/evaluation diagnostic. One
+reviewed initialization receives exactly four ordered `0..31` passes and 128
+attempts with continuous policy/baseline state and no intermediate evaluation
+or selection. Per-pass nonzero updates are `(31,32,32,32)` and nonzero outcomes
+`(10,10,10,11)`. Disjoint zero-update `52..83` evaluation moves
+`-312 -> -297`, positives `2 -> 2`, negatives `20 -> 19`; seed 58 changes
+`-15 -> 0` and complete changed seeds are `(52,58,65,70,72)`. Ten focused and
+all 497 explicit tests pass with two skips. One exact review must verify this
+and directly address test-runtime reuse before another expensive branch. This
+is a deterministic P8 improvement diagnostic, not robust evaluation,
+algorithm selection, production evaluation or strength:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close.` Full P7 is closed only for the documented P7 supervised-learning
 scope. `12F` completed the post-full-P7 transition review and recorded

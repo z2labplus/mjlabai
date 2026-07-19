@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact MahJax categorical-MLP four-pass causal-baseline training and disjoint evaluation smoke.
+- [ ] Review the exact MahJax categorical-MLP four-pass causal-baseline training and disjoint evaluation smoke implementation.
 
 Current execution charter:
 
@@ -22,22 +22,33 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Add only the two exact `04AF`-approved source/test files and direct
-  governance synchronization; preserve existing reviewed APIs.
-- Load one reviewed initialization, evaluate exact `52..83`, then run exactly
-  four ordered `0..31` causal-baseline passes carrying policy/baseline state.
-- Pin exactly 128 attempts, per-pass nonzero updates `(31,32,32,32)`, nonzero
-  outcomes `(10,10,10,11)`, final baseline and parameter deltas from `04AF`.
-- Perform no intermediate evaluation/selection; final zero-update evaluation
-  pins exact `-312 -> -297`, counts `2/20 -> 2/19` and changed seeds
-  `(52,58,65,70,72)`.
-- Return complete frozen diagnostics, no arrays/checkpoint/persistence/I-O and
-  classify only a bounded deterministic improvement diagnostic.
-- No fifth pass, alternate pass count, early stop, third estimator, critic/
-  GAE/entropy/KL/clipping/optimizer/rate change, replay, real data, strength
-  claim or P9-P12.
+- Review only the two exact `04AF`-approved four-pass files and direct
+  governance; change code/tests only for a genuine blocker.
+- Verify exact four-pass/128-attempt nested loops, policy and prior-record
+  baseline continuity across pass edges, and no intermediate evaluation.
+- Verify per-pass update/outcome counts, complete 128 legal diagnostics, final
+  baseline/deltas and exactly two zero-update evaluations on disjoint `52..83`.
+- Pin exact `-312 -> -297`, counts `2/20 -> 2/19`, seed-58 `-15 -> 0`, changed
+  `(52,58,65,70,72)`, no selected pass/checkpoint and non-strength wording.
+- Reuse focused/full validation from implementation; run independent source/
+  result checks without another full 98-minute suite unless a blocker changes code.
+- If review closes, directly approve/defer one bounded test-runtime reuse step
+  before another expensive training branch; no sibling proposal/boundary chain.
+- No fifth pass/tuning/replay/real data/strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Implemented the exact `04AF`-approved four-pass causal-
+  baseline training/evaluation diagnostic in two new files. One reviewed
+  initialization receives exactly four ordered `0..31` passes and 128 attempts
+  with continuous policy/baseline state and no intermediate evaluation or
+  selection. Per-pass nonzero updates are `(31,32,32,32)` and nonzero outcomes
+  `(10,10,10,11)`. Disjoint zero-update `52..83` evaluation moves
+  `-312 -> -297`, positives `2 -> 2`, negatives `20 -> 19`; seed 58 changes
+  `-15 -> 0`, and complete changed seeds are `(52,58,65,70,72)`. Ten focused
+  and all 497 explicit tests pass with two skips. No checkpoint, persistence,
+  real data, robust-strength claim or P9-P12 work was added. One exact review
+  is next.
 
 - [x] 2026-07-19 Reviewed commit `6b9a640` against exact `04AE` approval in
   `04AF`. Decision: `A. Review can close.` Confirmed prior-record causality,

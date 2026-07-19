@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Executable bounded four-pass causal-baseline training
+
+- Type: executable P8 local deterministic improvement-diagnostic evidence.
+- One reviewed initialization receives exact 4 x ordered `0..31`: 128 attempts,
+  continuous policy/baseline state and no intermediate evaluation or selection.
+- Per-pass nonzero update counts are `(31,32,32,32)` and nonzero raw-outcome
+  counts are `(10,10,10,11)`; all legal trajectory/update diagnostics remain.
+- Disjoint zero-update `52..83` evaluation records `-312 -> -297`, positive
+  count `2 -> 2`, negative count `20 -> 19`, seed-58 `-15 -> 0` and complete
+  changed seeds `(52,58,65,70,72)`.
+- Validation: ten focused tests pass in 1236.343 seconds; all 497 explicit
+  repository tests pass in 5890.810 seconds with two existing skips. Compile,
+  dependency and diff checks pass.
+- Evidence grade: bounded deterministic improvement diagnostic only; not robust
+  evaluation, checkpoint selection, model strength or promotion evidence.
+
 ### 2026-07-19 — Causal-baseline review and bounded four-pass probe
 
 - Type: exact code-review closure plus bounded four-pass training task-

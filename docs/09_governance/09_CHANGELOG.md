@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.37
+
+- Implemented the exact `04AF` four-pass causal-baseline training/evaluation
+  diagnostic and ten focused tests in two new files.
+- Exact 4 x ordered `0..31` yields 128 attempts with continuous baseline/policy
+  state, per-pass nonzero updates `(31,32,32,32)` and outcomes `(10,10,10,11)`.
+- Exactly two zero-update evaluations pin `-312 -> -297`, positives `2 -> 2`,
+  negatives `20 -> 19`, seed-58 `-15 -> 0` and changed
+  `(52,58,65,70,72)`.
+- Validation passes: ten focused tests in `1236.343s` and all 497 explicit
+  repository tests in `5890.810s` with two skips; compile, dependency and diff
+  checks pass. No fifth pass, selection, persistence, real data, strength claim
+  or P9-P12 work was added. One exact review is next.
+
 ## 2026-07-19 - v4.36
 
 - Added `04AF`; reviewed commit `6b9a640` against exact `04AE` approval.
