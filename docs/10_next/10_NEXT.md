@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the MahJax four-pass causal-baseline replication evaluation implementation.
+- [ ] Implement a predeclared alternate-training-seed sensitivity diagnostic for the exact MahJax four-pass causal-baseline policy.
 
 Current execution charter:
 
@@ -22,18 +22,27 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the completed replication implementation commit against exact
-  `04AH` approval, source/test invariants and passing focused/full-suite evidence.
-- Confirm unchanged 4 x ordered `0..31` training and primary `52..83`, exact
-  disjoint `84..115` rewards/counts/traces, four zero-update evaluations and
-  no intermediate selection or checkpoint.
-- Do not rerun the 93-minute full suite; use lightweight source/AST/provenance
-  probes and change code only if a concrete blocker exists.
-- Directly approve or defer one material P8 training-robustness task. Do not
-  add another evaluation window, fifth pass, tuning, real data, strength claim
-  or P9-P12.
+- Add only the exact `04AI`-approved source/test plus direct governance.
+- Train one alternate branch on ordered seeds `116..147` for exact four passes/
+  128 attempts with the same reviewed initialization, rate and causal baseline.
+- Use only existing fixed zero-update evaluation `52..83` and `84..115`; no
+  evaluation between passes and no second reference training branch.
+- Pin complete alternate diagnostics regardless of sign and return no selected
+  protocol/model/pass/checkpoint.
+- No seed search, fifth pass, third window, tuning, replay, artifact, real data,
+  strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Reviewed commit `17a3722` against exact `04AH` approval in
+  `04AI`. Decision: `A. Review can close.` Confirmed unchanged four/128
+  training and primary `-312 -> -297`, exact pairwise-disjoint `84..115`
+  replication `-1056 -> -935`, complete frozen diagnostics, four zero-update
+  evaluation calls, no selection/I-O and passing 11/499-test evidence. AST and
+  provenance checks pass without rerunning the 93-minute suite. Another window
+  and fifth pass are rejected. Directly approved one exact alternate training
+  range `116..147` sensitivity implementation with zero gates. No robustness,
+  strength, real-data or P9-P12 claim was added.
 
 - [x] 2026-07-19 Implemented the exact `04AH`-approved second predeclared
   replication evaluation in the existing four-pass source/test. Exact 4 x

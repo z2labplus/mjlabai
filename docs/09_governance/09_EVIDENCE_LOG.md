@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Replication review and alternate-training sensitivity approval
+
+- Type: exact P8 implementation-review closure plus material training-
+  sensitivity task approval evidence.
+- `04AI` records `A. Review can close` for commit `17a3722`; no blocker exists.
+- Exact four/128 training, unchanged primary diagnostics, pairwise-disjoint
+  replication vectors/counts/traces, zero evaluation updates, frozen result
+  and no selection conform to `04AH`.
+- Eleven focused and all 499 tests pass with two skips. AST/source/provenance
+  checks pass without rerunning the 5622.879-second suite.
+- Another fixed window and fifth pass are rejected. Exact alternate training
+  seeds `116..147` are directly approved for a non-selecting sensitivity
+  diagnostic against the existing two fixed evaluation windows.
+- Evidence grade: bounded implementation review/task approval only; not
+  robustness, model strength, promotion, Tenhou/stable-dan, LuckyJ or P9-P12.
+
 ### 2026-07-19 — Executable four-pass replication evaluation
 
 - Type: executable P8 local two-fixed-window deterministic diagnostic evidence.

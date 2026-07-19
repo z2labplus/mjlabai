@@ -28,13 +28,14 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 review of the implemented `04AH`-approved second disjoint replication evaluation
-for the exact four-pass causal-baseline policy. Exact four-pass training and
-primary `52..83` remain unchanged. Zero-update initial/final `84..115` records
-`-1056 -> -935`, positives `0 -> 0`, negatives `19 -> 18` and complete changed
-seeds `(84,89,92,94,102,103,104,106,110,113,114)` with no selection. Eleven
-focused and all 499 tests pass with two skips. One exact review is next. This is bounded
-two-fixed-window diagnostic work, not robust evaluation or strength.
+P8 direct implementation of the `04AI`-approved alternate-training-seed
+sensitivity diagnostic. `04AI` accepts the second-window implementation after
+11 focused and all 499 tests pass, rejects another evaluation window/fifth
+pass and approves exact ordered training seeds `116..147` x four with the same
+initialization/rate/causal baseline. Final zero-update evaluation uses only
+existing `52..83` and `84..115`; the reference is compared by reviewed values
+and the result is retained regardless of sign. This is bounded training-seed
+sensitivity work, not robust evaluation or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted
 current-scope synthetic/local smoke artifacts, docs-only readiness / boundary /

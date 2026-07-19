@@ -412,6 +412,13 @@ four-pass source/test. It preserves exact training and primary results while
 pinning zero-update `84..115` rewards `-1056 -> -935`, positives `0 -> 0`,
 negatives `19 -> 18` and all changed seeds. Eleven focused and all 499 tests
 pass with two skips. It is not robust/generalization or strength evidence.
+
+`docs/04_rl_selfplay/04AI_P8_FOUR_PASS_REPLICATION_EVALUATION_IMPLEMENTATION_REVIEW.md`
+reviews commit `17a3722`, records `A. Review can close`, confirms exact
+training/primary invariants and the predeclared `84..115` diagnostics, and
+directly approves one alternate-training-seed sensitivity implementation using
+exact `116..147`. It rejects another evaluation window/fifth pass and is not
+robustness, selection or strength evidence.
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

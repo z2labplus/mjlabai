@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.42
+
+- Added `04AI`; reviewed commit `17a3722` against exact `04AH` approval.
+- Decision: `A. Review can close.` No code/test/evidence/scope blocker exists.
+- Confirmed exact four/128 training, unchanged primary, pairwise-disjoint
+  `84..115` replication `-1056 -> -935`, complete frozen diagnostics, four
+  zero-update evaluations, no selection and unchanged six-symbol API.
+- Reused 11 focused and all 499 passing tests; lightweight AST/source/
+  provenance checks pass without repeating the 93-minute suite.
+- Rejected another evaluation window/fifth pass and directly approved one
+  exact alternate `116..147` training-seed sensitivity implementation. No
+  robustness, strength, real-data or P9-P12 claim was added.
+
 ## 2026-07-19 - v4.41
 
 - Extended the exact four-pass causal-baseline source/test with the

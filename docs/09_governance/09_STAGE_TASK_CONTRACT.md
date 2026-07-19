@@ -2,14 +2,14 @@
 
 ## Current stage
 
-P8 review of the implemented `04AH`-approved second predeclared replication
-evaluation for the exact four-pass causal-baseline policy. The exact two-file
-change preserves 4 x ordered `0..31` and primary `52..83`, adds zero-update
-initial/final `84..115` with complete diagnostics and no selection, records
-`-1056 -> -935`, positives `0 -> 0` and negatives `19 -> 18`,
-accepting the outcome regardless of sign. Eleven focused and all 499 tests pass
-with two skips. No fifth pass, tuning, checkpoint,
-real data, robust claim or P9-P12.
+P8 direct implementation of the `04AI`-approved alternate-training-seed
+sensitivity diagnostic. `04AI` accepts commit `17a3722` after 11 focused and
+all 499 tests pass. The next exact new source/test trains ordered `116..147`
+for four passes/128 attempts with the same initialization/rate/causal baseline,
+then evaluates only final zero-update `52..83` and `84..115`. It compares with
+reviewed reference values and accepts the result regardless of sign. No seed
+search, reference rerun, third window, fifth pass, tuning, selection, real
+data, robust claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -589,8 +589,8 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04AH` replication implementation once. Preserve training/
-primary results and exact `84..115` diagnostics; reuse the passing full suite
-and perform lightweight source/provenance checks. Directly approve/defer one
-material training-robustness task. No third window, fifth pass, tuning,
-selection, strength claim or P9-P12.
+Implement the exact `04AI` alternate-training-seed sensitivity diagnostic in
+one new source/test only. Use ordered `116..147` x four, the same reviewed
+initialization/rate/causal baseline and final zero-update existing evaluation
+windows. Pin result regardless of sign; no reference rerun, seed search,
+selection, third window, fifth pass, strength claim or P9-P12.

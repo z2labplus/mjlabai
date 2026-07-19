@@ -217,6 +217,21 @@ changing training or primary `52..83`. It records `-1056 -> -935`, positives
 model-strength or promotion claims; another adjacent evaluation window is not
 an acceptable next step.
 
+Review status: `04AI` closes the replication implementation review with no
+blocker. It rejects another adjacent window and fifth pass, and directly
+approves one exact alternate `116..147` training-seed sensitivity diagnostic.
+
+## 2026-07-19 — P8 alternate training-seed sensitivity approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Alternate seeds are searched or chosen after outcomes. | Research / Selection | Critical | Low | Predeclare exact ascending `116..147`; retain all attempts and result regardless of sign. | Mitigated |
+| Reference branch is rerun and doubles expensive work. | Engineering / Delivery | High | Medium | Compare against reviewed immutable reference values; execute only one alternate training branch. | Open |
+| Different training budget/rate/baseline confounds sensitivity. | ML / Comparison | Critical | Low | Exact same initialization, four passes, 128 attempts, 0.01 rate and causal prior-record baseline. | Open |
+| Existing evaluation windows drive stopping or protocol selection. | Evaluation / Leakage | Critical | Medium | Evaluate only after all alternate training, zero updates, no selected protocol/model/pass/checkpoint. | Open |
+| Two training ranges are called robust/generalizable. | Evidence / Statistics | Critical | High | Classify only bounded training-seed sensitivity; prohibit robustness, strength and promotion claims. | Open |
+| New smoke further expands the already 93-minute suite. | Engineering / Delivery | High | High | One alternate branch, no reference rerun/third window; record elapsed and reconsider test tiering in review. | Open |
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |
