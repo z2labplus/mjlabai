@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-19 — Seed-protocol review and full predeclared-range probe
+
+- Type: exact code-review closure plus bounded full-range training task-
+  approval evidence.
+- `04AD` records `A. Review can close`; nine focused and all 468 explicit tests
+  pass with two skips plus compile/dependency/diff checks.
+- Exact ordered training seeds `0..31` produce 10 nonzero and 22 zero/no-op
+  attempts; sequential nonzero seeds are `(1,3,5,7,11,17,25,26,27,31)`.
+- Disjoint zero-update evaluation `52..83` records identical initial/final raw
+  vector and sum `-312`, counts `2` positive / `20` negative, while complete
+  records change at `(52,65,72)`.
+- Evidence grade: bounded behavior-change/signal-sparsity probe and task
+  approval only; not improvement, robust evaluation or strength evidence.
+
 ### 2026-07-19 — Executable training-seed protocol selection-bias comparison
 
 - Type: executable P8 local training-seed selection-bias diagnostic evidence.

@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-19 - v4.32
+
+- Added `04AD`; reviewed commit `ebc974c` against exact `04AC` approval.
+- Decision: `A. Review can close.` No code/test blocker was found.
+- Confirmed two exact independent protocols, five attempts each, zero-return
+  no-ops, fixed `-501/-650/-501` diagnostics and no selected protocol.
+- Validation passed: nine focused and all 468 explicit tests with two skips;
+  compile, dependency and diff checks pass.
+- Full-range probe trains ordered `0..31`, retains 22 no-ops and evaluates
+  disjoint `52..83`; sums remain `-312/-312` while `(52,65,72)` change.
+  Directly approved exact code. No improvement/strength/P9-P12 claim was added.
+
 ## 2026-07-19 - v4.31
 
 - Implemented the exact `04AC` training-seed protocol comparison and nine

@@ -112,8 +112,22 @@ must expose zero-return no-op attempts, with no third protocol or search.
 Implementation status: exact two-branch initialization, five attempts per
 protocol, zero-return no-ops, complete training diagnostics, fixed evaluation
 and `selected_protocol_id=None` are pinned in source/tests. Nine focused and all
-468 explicit tests pass with two skips. No protocol is approved for subsequent
-training; one exact review is next.
+468 explicit tests pass with two skips. The exact review is now closed in
+`04AD`; no protocol is selected for production training.
+
+Review status: `04AD` closes the two-protocol review with no blocker. The next
+approved implementation uses every `0..31` seed in order and disjoint `52..83`
+evaluation; no protocol or checkpoint is selected.
+
+## 2026-07-19 — P8 full predeclared-range training approval risks
+
+| Risk | Category | Severity | Probability | Mitigation | Status |
+|---|---|---|---|---|---|
+| Sequential policy changes alter which seeds have nonzero outcomes. | ML / Interpretation | High | Realized | Pin every trajectory; distinguish frozen census from on-policy sequential outcomes. | Open |
+| Zero-return attempts are dropped, turning 32 attempts into 10 selected updates. | Research / Selection | Critical | High | Exact ordered `0..31`; return all 32 records and exact 22 no-op seeds. | Open |
+| Training/evaluation seed overlap contaminates the diagnostic. | Evaluation / Leakage | Critical | Low | Exact train `0..31`, evaluation `52..83`, and explicit disjoint invariant. | Open |
+| Changed traces with equal reward are called improvement. | Evidence / Interpretation | Critical | High | Pin `-312/-312`, unchanged reward vector and changed records separately. | Open |
+| Thirty-two attempts expand into replay or scale training. | Governance / Scope | High | Medium | One ordered pass only; prohibit shuffle, replay, epoch, second pass and artifacts. | Open |
 
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 

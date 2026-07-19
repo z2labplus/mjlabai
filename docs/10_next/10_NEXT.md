@@ -12,7 +12,7 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact MahJax categorical-MLP training-seed protocol comparison smoke implementation.
+- [ ] Implement the exact MahJax categorical-MLP predeclared census training and disjoint evaluation smoke.
 
 Current execution charter:
 
@@ -22,20 +22,29 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the two exact `04AC`-approved comparison files and direct
-  governance; change code/tests only for a genuine blocker.
-- Verify identical branch initialization, exact selected/contiguous seed tuples,
-  five attempts each, zero-return no-op seeds `(0,2,4)` and complete pinned
-  training trajectories/objectives/deltas.
-- Verify zero-update fixed evaluation `20..51`, sums `-501/-650/-501`, counts,
-  changed seeds, frozen array-free result and `selected_protocol_id=None`.
-- Run focused/full validation and independent source/result checks.
-- If review closes, directly approve or defer one material predeclared-seed
-  training diagnostic; do not add a sibling proposal or boundary chain.
-- No third protocol/seed search, algorithm/rate change, persistence, real data,
-  production self-play/evaluation, strength claim or P9-P12.
+- Add only the exact `04AD`-approved source/test plus direct governance; do not
+  modify existing source/test logic or public APIs.
+- Train one branch on every exact seed `0..31` in order with one reviewed
+  `0.01` raw-return update attempt per legal terminal trajectory.
+- Retain all zero-return attempts; pin exact nonzero seeds
+  `(1,3,5,7,11,17,25,26,27,31)` and exact 22-seed no-op complement.
+- Evaluate initial/final parameters with zero updates on disjoint seeds
+  `52..83`; pin sums `-312/-312`, counts and changed seeds `(52,65,72)`.
+- Return frozen array-free diagnostics and no selected checkpoint/protocol.
+- No filtering/shuffle/replay/second pass, algorithm/rate change, persistence,
+  real data, production self-play/evaluation, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-19 Reviewed commit `ebc974c` against exact `04AC` approval in
+  `04AD`. Decision: `A. Review can close.` Confirmed exact API, identical
+  branches, both fixed five-seed tuples, all attempts, zero-return no-ops,
+  complete training diagnostics, fixed evaluation `-501/-650/-501` and no
+  selected protocol. Nine focused and all 468 explicit tests pass with two
+  skips. A full-range probe trains exact `0..31`, finds 10 nonzero updates and
+  evaluates disjoint `52..83`: sums remain `-312/-312` while records change at
+  `(52,65,72)`. Directly approved exact full-range code with zero gates. No
+  improvement, strength, real-data or P9-P12 claim was added.
 
 - [x] 2026-07-19 Implemented the exact `04AC`-approved categorical-MLP
   training-seed protocol comparison in two new files. Identical branches use

@@ -348,6 +348,13 @@ It retains five attempts in both fixed protocols, pins zero-return no-ops and
 fixed sums `-501/-650/-501`, and returns no selected protocol. This is bounded
 selection-bias evidence only, not protocol superiority or strength evidence.
 
+`docs/04_rl_selfplay/04AD_P8_TRAINING_SEED_PROTOCOL_COMPARISON_IMPLEMENTATION_REVIEW.md`
+reviews commit `ebc974c`, records `A. Review can close`, confirms the exact
+two-protocol comparison and directly approves one ordered `0..31` training
+diagnostic with disjoint `52..83` zero-update evaluation. Probe sums remain
+`-312/-312` while seeds `(52,65,72)` change. This is behavior-change/signal-
+sparsity approval evidence, not improvement or strength evidence.
+
 ```text
 docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 docs/12_technical_plan/12B_POST_P5_TRANSITION_REVIEW.md
