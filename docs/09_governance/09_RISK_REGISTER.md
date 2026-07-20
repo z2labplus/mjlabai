@@ -21,6 +21,9 @@
 | MahJax bundled rule policy emits normal PON when only red PON is legal | Dependency / Legality | Critical | Realized | Exact mixed-half-game source/test permit only audited `75 -> 76` normalization when 75 illegal and 76 legal; raw/applied action is recorded and every other illegal output fails | Mitigated for exact smoke |
 | Project-model half-game smoke is mistaken for training success | Evidence / Interpretation | Critical | High | Implemented result pins zero half-game updates, one seed and no branch comparison/selection; full trace and warnings deny quality/strength/promotion | Mitigated for exact smoke |
 | A one-seat read-only half-game path is mistaken for production self-play readiness | Research / Scope | Critical | High | Require a separate reviewed learning task; this implementation freezes seat roles, one seed, one model and zero updates and makes no scale/reliability claim | Open |
+| Eager environment export creates a supervised-first circular import | Engineering / API | Critical | Realized | Resolve only mixed-half-game names lazily and run a separate-process supervised-first import regression | Mitigated |
+| One half-game raw-return update is overclaimed as learning success | ML / Evidence | Critical | High | Pin nonzero deltas together with disjoint seed-1 reward/score degradation; prohibit selection, rollback, second update and strength claims | Open |
+| Half-game terminal bankruptcy is mislabeled truncation or complete eight-round play | Environment / Semantics | High | Medium | Record terminated/truncated/final round and scores; classify early round-5 termination as environment-owned bankruptcy behavior | Open |
 
 ## 2026-07-18 — P8 five-round training/fixed-evaluation approval risks
 

@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact read-only MahJax categorical-MLP-seat-0 versus
-  rule-seats-1/2/3 half-game smoke implementation.
+- [ ] Implement one exact MahJax categorical-MLP-seat-0 half-game raw-outcome
+  update and disjoint read-only evaluation smoke.
 
 Current execution charter:
 
@@ -23,20 +23,28 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the exact implementation commit against `04AV`: API, pinned
-  runtime/model identity, one-loop control flow, strict legal masking, complete
-  transition/round provenance and immutable array-free output.
-- Verify the sole raw `PON=75` to legal `PON_RED=76` normalization at
-  `(450,3,75,76)` and rejection of every other illegal rule-policy output.
-- Reuse the passing focused evidence unless a blocker requires a rerun; do not
-  repeat expensive training or add another boundary/proposal chain.
-- Preserve zero half-game gradient/update/optimizer/selection and all non-
-  strength warnings. If review closes, directly approve or defer one material
-  P8 executable learning task using the existing half-game path.
-- No persistence, real data, production self-play/league, strength claim,
+- Add only the exact `04AW` source/test, direct RL exports and governance. No
+  definition/proposal/review gate remains before code.
+- Reuse reviewed in-memory categorical-MLP parameters and exact 882-feature
+  encoder. Train once on seed 0: sampled legal-masked seat 0, rule seats 1/2/3,
+  independent RNG streams and exact strict PON-to-PON_RED normalization.
+- Apply exactly one fixed `0.01` update using seat-0 cumulative raw return /100
+  on all seat-0 selected log probabilities. No second update or replay.
+- Evaluate initial/updated greedily on disjoint seed 1 with identical runtime/
+  rule RNG and zero evaluation updates. Pin all `04AW` probe values, including
+  the negative updated seed-1 result; no selection or rollback.
+- No persistence, real data, general self-play/league, tuning, strength claim,
   Tenhou or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Reviewed commit `4af4784` in `04AW`. Found and fixed one
+  import-order blocker by lazily exporting the mixed half-game API; a separate-
+  process supervised-first import regression now passes in `0.032s`. All exact
+  825-transition/200-project-decision/one-normalization terminal evidence
+  remains unchanged. Review closes after the fix and directly approves one
+  seed-0 half-game raw-outcome update plus disjoint seed-1 read-only evaluation,
+  with exact negative probe evidence and zero additional docs gates.
 
 - [x] 2026-07-20 Implemented the exact `04AV` read-only mixed MahJax half-game
   smoke. The reviewed 882-feature categorical MLP drives seat 0 and bundled

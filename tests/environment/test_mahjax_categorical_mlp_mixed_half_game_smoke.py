@@ -3,7 +3,9 @@ from __future__ import annotations
 import ast
 from dataclasses import FrozenInstanceError, fields
 import inspect
+import os
 from pathlib import Path
+import subprocess
 import sys
 import unittest
 from unittest import mock
@@ -23,6 +25,29 @@ from mjlabai.environment import (  # noqa: E402
     MahJaxCategoricalMlpMixedHalfGameStep,
     run_mahjax_categorical_mlp_mixed_half_game_smoke,
 )
+
+
+class MahJaxCategoricalMlpMixedHalfGameImportTests(unittest.TestCase):
+    def test_supervised_first_import_order_has_no_cycle(self) -> None:
+        environment = dict(os.environ)
+        environment["PYTHONPATH"] = str(SRC_ROOT)
+        completed = subprocess.run(
+            (
+                sys.executable,
+                "-c",
+                "from mjlabai.supervised.mahjax_categorical_mlp_imitation_training_smoke "
+                "import MAHJAX_CATEGORICAL_MLP_FEATURE_COUNT; "
+                "from mjlabai.environment import "
+                "MAHJAX_CATEGORICAL_MLP_MIXED_HALF_GAME_SMOKE_VERSION; "
+                "assert MAHJAX_CATEGORICAL_MLP_FEATURE_COUNT == 882",
+            ),
+            cwd=REPO_ROOT,
+            env=environment,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr)
 
 
 class MahJaxCategoricalMlpMixedHalfGameSmokeTests(unittest.TestCase):

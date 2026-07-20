@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.70
+
+- Added `04AW`; review accepts the exact mixed half-game implementation after
+  fixing one supervised-first circular-import blocker with lazy package exports.
+- Added a separate-process import-order regression; it passes in `0.032s` and
+  does not alter any half-game result.
+- A fixed one-update probe uses seed-0 sampled seat-0 raw return `-0.53`, moves
+  all four parameter arrays, then shows a disjoint seed-1 greedy seat-0 result
+  decreasing from cumulative reward `-300` to `-320` and score `-70` to `-80`.
+- Direct exact implementation is approved with zero docs gates. The negative
+  result must remain visible; no search, selection, persistence, strength or
+  P9-P12 is approved.
+
 ## 2026-07-20 - v4.69
 
 - Added the exact `04AV` read-only categorical-MLP-seat-0 versus bundled-rule-

@@ -597,6 +597,13 @@ It pins 825 legal transitions, 200 project-seat decisions, one audited
 PON-to-PON_RED normalization, eight round boundaries and zero updates. This is
 P4/P7/P8 local model/environment interface smoke evidence, not strength.
 
+`docs/04_rl_selfplay/04AW_P4_P8_MAHJAX_CATEGORICAL_MLP_MIXED_HALF_GAME_IMPLEMENTATION_REVIEW.md`
+reviews commit `4af4784`, fixes a supervised-first circular import with lazy
+package exports and records `A. Review can close after the exact import-order
+blocker fix`. It directly approves one exact sampled seed-0 half-game raw-
+outcome update plus disjoint seed-1 read-only evaluation. The probe's negative
+result is retained; this is mechanism-task approval, not strength evidence.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

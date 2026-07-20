@@ -1,14 +1,5 @@
 """Minimal environment-contract smoke helpers for MjLabAI."""
 
-from mjlabai.environment.mahjax_categorical_mlp_mixed_half_game_smoke import (
-    MAHJAX_CATEGORICAL_MLP_MIXED_HALF_GAME_PROJECT_SEAT,
-    MAHJAX_CATEGORICAL_MLP_MIXED_HALF_GAME_SMOKE_VERSION,
-    MahJaxCategoricalMlpMixedHalfGameResult,
-    MahJaxCategoricalMlpMixedHalfGameSmokeError,
-    MahJaxCategoricalMlpMixedHalfGameStep,
-    run_mahjax_categorical_mlp_mixed_half_game_smoke,
-)
-
 from mjlabai.environment.mahjax_integration_smoke import (
     MAHJAX_ENVIRONMENT_ID,
     MAHJAX_ENVIRONMENT_VERSION,
@@ -69,6 +60,31 @@ from mjlabai.environment.synthetic_transition_smoke import (
     SyntheticEnvironmentTransitionSmokeError,
     apply_synthetic_environment_transition_smoke,
 )
+
+
+_LAZY_MIXED_HALF_GAME_EXPORTS = frozenset(
+    {
+        "MAHJAX_CATEGORICAL_MLP_MIXED_HALF_GAME_PROJECT_SEAT",
+        "MAHJAX_CATEGORICAL_MLP_MIXED_HALF_GAME_SMOKE_VERSION",
+        "MahJaxCategoricalMlpMixedHalfGameResult",
+        "MahJaxCategoricalMlpMixedHalfGameSmokeError",
+        "MahJaxCategoricalMlpMixedHalfGameStep",
+        "run_mahjax_categorical_mlp_mixed_half_game_smoke",
+    }
+)
+
+
+def __getattr__(name: str):
+    if name not in _LAZY_MIXED_HALF_GAME_EXPORTS:
+        raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+    from importlib import import_module
+
+    module = import_module(
+        "mjlabai.environment.mahjax_categorical_mlp_mixed_half_game_smoke"
+    )
+    value = getattr(module, name)
+    globals()[name] = value
+    return value
 
 __all__ = [
     "MAHJAX_CATEGORICAL_MLP_MIXED_HALF_GAME_PROJECT_SEAT",

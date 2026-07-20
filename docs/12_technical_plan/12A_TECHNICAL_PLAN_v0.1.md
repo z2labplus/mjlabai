@@ -28,14 +28,14 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P4/P8 lightweight review of the implemented exact `04AV` read-only project-
-model mixed half-game. The correct 882-feature categorical MLP drives seat 0
-for 200 of 825 legal transitions; bundled rule policy drives seats 1/2/3.
-Only transition-450 actor-3 raw PON 75 to legal PON_RED 76 is normalized.
-Eight boundaries, round-8 scores `(40,265,379,316)` and zero half-game updates
-are pinned. Review must directly approve/defer one material P8 executable
-learning task without another proposal chain. This is not strength, Tenhou or
-P9-P12 evidence.
+P4/P8 exact `04AW` one-update half-game implementation. Review closes the
+read-only mixed path after a lazy-export import-order fix. The next code uses
+one seed-0 sampled project-seat trajectory and exactly one fixed `0.01` raw-
+outcome update, then compares initial/updated greedy policies on disjoint seed
+1 with zero evaluation updates. The probe moves all parameter groups but
+degrades seat-0 cumulative reward `-300 -> -320`; this negative result is fixed
+evidence, not a selection trigger. No second update, search, persistence,
+strength, Tenhou or P9-P12 evidence is approved.
 ```
 
 ```text

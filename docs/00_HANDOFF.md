@@ -27,14 +27,14 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current exact task is a lightweight review of the implemented `04AV` mixed
-half-game smoke. The reviewed categorical MLP drives seat 0 and bundled rule
-policy drives seats 1/2/3 through 825 legal transitions; 200 decisions belong
-to the project model. The only normalization is transition-450 actor-3 raw
-PON 75 to legal PON_RED 76. Eight boundaries and round-8 terminal scores
-`(40,265,379,316)` are pinned, with zero half-game updates. Review must directly
-approve or defer one material P8 executable learning task, without another
-proposal chain. This is not model-strength, Tenhou or P9-P12 evidence.
+Current exact code task after `04AW`: run one sampled seed-0 project-seat-0
+half-game versus bundled rule seats, then apply exactly one fixed `0.01`
+seat-0 cumulative-raw-return/100 update and greedily evaluate initial/updated
+policies on disjoint seed 1 with zero evaluation updates. The review fixed a
+supervised-first circular import using lazy environment exports. A fixed probe
+moves all four parameter arrays but degrades seed-1 seat-0 cumulative reward
+`-300 -> -320` and score `-70 -> -80`; that negative result must remain visible.
+No second update, search, persistence, strength, Tenhou or P9-P12 is approved.
 ```
 
 ```text

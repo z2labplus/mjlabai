@@ -8,6 +8,23 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Mixed half-game review fix and one-update probe
+
+- Type: P4/P8 implementation-review closure, import-order blocker evidence and
+  exact next executable learning-task approval.
+- Review found supervised-first import failed because the environment package
+  eagerly imported a module that imports the supervised module. Lazy resolution
+  of only the six new exports plus a separate-process regression fixes it.
+- One fixed in-memory seed-0 training probe completes 427 legal transitions and
+  102 seat-0 decisions, returns seat-0 raw scale `-0.53` and moves all four
+  parameter arrays after one fixed `0.01` update.
+- On disjoint greedy seed 1, initial versus updated seat-0 cumulative reward is
+  `-300/-320`, score is `-70/-80`, and transitions are `526/524`. Evaluation
+  has zero updates. This negative result is retained rather than selected away.
+- The next exact code task is directly approved. This is local mechanism and
+  failure evidence only, not improvement, strength, production self-play,
+  Tenhou, stable-dan, LuckyJ 10.68, promotion or P9-P12 evidence.
+
 ### 2026-07-20 — Executable read-only project-model mixed half-game smoke
 
 - Type: executable P4/P7/P8 local model/environment interface evidence.
@@ -20,7 +37,8 @@ Internal governance decisions that affect execution should also be noted here, b
   rewards `(-200,15,12,123)`.
 - Exactly one upstream legality mismatch is normalized: transition 450, actor
   3, raw PON 75 to legal PON_RED 76. All other illegal outputs are errors.
-- Eleven focused tests pass in `206.526s` plus compile/import checks.
+- Eleven focused tests pass in `206.526s` plus initial compile/environment-first
+  import checks; `04AW` separately records and fixes reverse import order.
 - Evidence is one pinned read-only local mixed-half-game smoke only, not
   learning, improvement, model strength, production self-play, Tenhou,
   stable-dan, LuckyJ 10.68, candidate promotion or P9-P12 evidence.
