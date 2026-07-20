@@ -490,6 +490,14 @@ update geometry/provenance and directly approves one fixed simultaneous
 symmetric conflict-projected one-step aggregate update at reviewed rate `0.32`
 with only existing windows. No docs gate remains before that exact code; no
 protocol, direction, projection or model is selected.
+
+That exact one-step diagnostic now exists in
+`src/mjlabai/rl/mahjax_categorical_mlp_first_pass_symmetric_conflict_projected_update_smoke.py`
+with matching focused tests. Projection moves cosine from approximately
+`-0.1868775008` to `+0.1868781623`; one `0.32` update changes parameters, but
+both fixed reward vectors remain exact `-312/-1056`. This is mechanism/no-
+behavior-change evidence only, not robust improvement or strength.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

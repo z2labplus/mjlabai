@@ -8,6 +8,25 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Executable symmetric conflict-projected one-step diagnostic
+
+- Type: executable P8 local robust-gradient mechanism diagnostic evidence.
+- Exact reviewed first batches use the single simultaneous symmetric projection
+  formula and one averaged update at fixed rate `0.32`; no formula/order/rate/
+  coefficient candidate is searched.
+- Original cosine is approximately `-0.1868775008`; projected cosine is
+  `+0.1868781623`. Combined global norm is `0.0209439239`; all four parameter
+  groups change after the one update.
+- Final fixed primary/replication reward vectors remain exact initial
+  `-312/-1056`, with zero changed seeds. Projection changes gradient geometry
+  but produces no observed fixed-window behavior change in this one step.
+- Probe completes in `733.19s`; nine focused tests pass in `722.105s`; 122
+  synthetic and seven claim-control tests plus compile/dependency/static/diff
+  checks pass. Existing expensive smokes and full suite are not rerun.
+- Evidence grade: bounded one-step mechanism/no-behavior-change evidence only;
+  not robust improvement, model strength, promotion, Tenhou, stable-dan,
+  LuckyJ or P9-P12 evidence.
+
 ### 2026-07-20 — Gradient-alignment review and conflict-projection approval
 
 - Type: exact P8 implementation-review closure plus material robust-gradient

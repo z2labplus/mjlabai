@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement one exact symmetric conflict-projected aggregate-gradient
-  update and fixed-window diagnostic from the reviewed two first-pass batches.
+- [ ] Review the exact symmetric conflict-projected aggregate-gradient one-step
+  update and fixed-window diagnostic implementation.
 
 Current execution charter:
 
@@ -23,19 +23,32 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Follow exact `04AN` approval with zero documentation gates before code.
-- Reuse identical initialization and exact first batches `0..31`/`116..147`.
-  Apply the one fixed symmetric projection formula to the original negative-
-  dot gradient pair, average the projected gradients and apply one update at
-  the already reviewed effective mean-gradient rate `0.32`.
-- Run only final zero-update `52..83` and `84..115` evaluations; pin any result
-  sign with complete geometry/provenance and no selection.
-- Do not call old public four-pass/mean/32x runs or the full suite.
-- No alternate projection/order/coefficient, multiplier/rate/optimizer/
-  exploration search, third protocol, second pass/update, third window,
-  replay, artifact, real data, strength claim or P9-P12.
+- Review only exact `04AN`-approved source/test changes and recorded probe,
+  focused and fast evidence. Do not rerun the 733-second diagnostic, either
+  prior expensive smoke or the full suite.
+- Verify exact simultaneous original-pair projection, fixed rate `0.32`, one
+  update, only fixed windows, complete geometry/provenance and no selection.
+- Preserve projection cosine `+0.1868781623`, changed parameters and unchanged
+  fixed rewards `-312/-1056` with zero changed seeds. This is geometry change
+  plus no observed behavior change, not improvement.
+- Directly approve/defer either one exact bounded multi-step conflict-projected
+  continuation or one materially different data/exploration diagnostic, with
+  no docs chain. No formula/rate/seed/optimizer search, real data, strength
+  claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Implemented the exact `04AN` symmetric conflict-projected
+  aggregate-gradient one-step update/fixed-window diagnostic. Exact first
+  batches and simultaneous projection move global cosine from about
+  `-0.1868775008` to `+0.1868781623`; combined norm is `0.0209439239` and all
+  parameter groups change after one fixed-rate `0.32` update. Final primary/
+  replication rewards remain exact initial `-312/-1056` with zero changed
+  seeds. No model/protocol/projection is selected. Probe completes in
+  `733.19s`; after correcting two test-only interface expectations, nine
+  focused tests pass in `722.105s` (`727.67s` wall). 122 synthetic and seven
+  claim-control tests plus compile/dependency/static/diff checks pass. No old
+  expensive run, search, real data, strength claim or P9-P12 was added.
 
 - [x] 2026-07-20 Reviewed commit `e94e4fe` against exact `04AM` approval in
   `04AN`. Decision: `A. Review can close.` Confirmed helper compatibility,

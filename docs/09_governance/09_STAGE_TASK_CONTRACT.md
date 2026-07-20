@@ -2,13 +2,13 @@
 
 ## Current stage
 
-P8 implementation of the exact `04AN` symmetric conflict-projected one-step
-aggregate-gradient diagnostic. Reuse identical initialization and exact first
-batches `0..31`/`116..147`; simultaneously project the original negative-dot
-pair with the single approved formula, average it and apply one update at fixed
-reviewed effective rate `0.32`. Evaluate only final `52..83` and `84..115`,
-retain all signs and select nothing. No alternate projection/order/coefficient,
-scale/seed/optimizer/exploration search, old public run, third
+P8 lightweight review of the exact `04AN` symmetric conflict-projected one-step
+implementation. Exact projection moves global cosine from about `-0.1868775008`
+to `+0.1868781623`; one fixed-rate `0.32` update changes all parameter groups,
+but fixed rewards remain exact `-312/-1056` with zero changed seeds. Review
+must preserve this as geometry-change/no-behavior-change evidence and directly
+approve/defer one bounded continuation or materially different coverage task.
+No formula/order/coefficient/rate/seed/optimizer search, expensive rerun, third
 protocol/window/pass, real data, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
@@ -589,9 +589,9 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04AN` symmetric conflict-projected aggregate-gradient
-one-step update/fixed-window diagnostic. Use only exact reviewed first batches,
-the simultaneous original-pair projection formula, one average/update at
-`0.32` and existing final windows. Pin every sign with complete geometry/
-provenance and no selection. No docs gate, alternate formula/order/coefficient,
-search, old public run, second update/pass, third window, strength or P9-P12.
+Review the exact `04AN` one-step conflict-projected implementation using
+recorded evidence/lightweight checks only. Verify formula, fixed `0.32`, one
+update, exact windows, complete geometry/provenance and no selection. Preserve
+positive projected cosine plus unchanged rewards without improvement claim.
+Directly approve/defer one bounded continuation or coverage task; no docs chain,
+expensive rerun, search, third protocol/window, strength claim or P9-P12.

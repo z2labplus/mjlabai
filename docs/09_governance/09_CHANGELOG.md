@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.53
+
+- Implemented the exact `04AN` symmetric conflict-projected one-step aggregate-
+  gradient update and matching focused tests.
+- Exact first batches and simultaneous projection move global cosine from
+  approximately `-0.1868775008` to `+0.1868781623`; combined global norm is
+  `0.0209439239`. One fixed-rate `0.32` update changes all parameter groups.
+- Final fixed primary/replication reward vectors remain exact initial values
+  `-312/-1056`, with zero changed seeds. Geometry changes but observed behavior
+  does not; no protocol/model/projection is selected.
+- Probe completes in `733.19s`. Two test-only interface expectations were
+  corrected; nine focused tests then pass in `722.105s` (`727.67s` wall).
+  122 synthetic and seven claim-control tests plus compile, dependency, static
+  scope and diff checks pass. No search, real data, strength or P9-P12 work.
+
 ## 2026-07-20 - v4.52
 
 - Added `04AN`; reviewed commit `e94e4fe` against exact `04AM` approval.

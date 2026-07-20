@@ -310,6 +310,16 @@ are open risks. Mitigations pin the negative original dot, both squared norms,
 the exact simultaneous formula, finite projected geometry, one update and all
 results regardless of sign. No protocol/projection/model is selected.
 
+Implementation status: simultaneous projection flips the measured global
+cosine from about `-0.1868775008` to `+0.1868781623`, and one update changes all
+parameter groups, but both fixed reward vectors remain exactly `-312/-1056`
+with zero changed seeds. Conflict geometry alone is therefore insufficient to
+produce observed one-step behavior change. Open risks are argmax invariance,
+insufficient bounded update count and narrow on-policy coverage. Review must
+choose directly between one hard-bounded continuation of the same fixed method
+and a materially different coverage diagnostic; it must not search rate,
+formula, protocol, seed or evaluation window or overclaim the zero change.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

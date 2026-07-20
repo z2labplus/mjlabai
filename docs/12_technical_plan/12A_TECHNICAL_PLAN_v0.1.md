@@ -56,7 +56,10 @@ first-step signals with no selection. Nine focused, 122 synthetic and seven
 claim-control tests pass. `04AN` review-closes that implementation and directly
 approves one exact simultaneous symmetric conflict projection, one aggregate
 update at fixed reviewed effective rate `0.32` and only the existing windows.
-Zero docs gates remain before code. This is bounded
+That code is implemented: projected cosine is `+0.1868781623`, every parameter
+group changes, but fixed rewards remain exact `-312/-1056` with zero changed
+seeds. Nine focused and 129 fast tests pass; one lightweight review is next.
+This is bounded
 training-seed sensitivity work,
 not robust evaluation or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
