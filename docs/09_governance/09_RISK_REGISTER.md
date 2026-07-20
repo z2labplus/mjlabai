@@ -16,6 +16,8 @@
 | Four-pass continuation becomes open-ended pass-count search | Governance / Selection | Critical | High | `04AT` fixes exactly four passes, final-only evaluation and no fifth pass/branch/rollback; retain all outcomes regardless of sign | Open |
 | Norm-matched unit-gradient geometry is mistaken for behavioral improvement | ML / Interpretation | Critical | Realized | Preserve all four nonzero updates alongside primary `0` delta and replication `-77` at seed `92`; classify as negative fixed-window evidence and prohibit a fifth pass/search | Mitigated |
 | Single-round training is scaled before a full-game environment path is verified | Research / Goal alignment | Critical | High | After lightweight implementation review, prefer an exact pinned MahJax `round_mode="half"` environment prerequisite over another gradient-mechanism continuation | Open |
+| Half-game environment smoke is mistaken for production self-play or strength | Evidence / Scope | Critical | High | `04AU` permits only all-rule-policy seed-0 local rollout with frozen provenance; no project model/update/comparison, and warnings deny strength/promotion/Tenhou claims | Open |
+| Half-game auto round transitions hide legality or RNG discontinuity | Environment / Correctness | High | Medium | Record every global transition plus round/round-step identity, legal mask/action, round boundaries, separate init/policy RNG and exact deterministic terminal result | Open |
 
 ## 2026-07-18 — P8 five-round training/fixed-evaluation approval risks
 

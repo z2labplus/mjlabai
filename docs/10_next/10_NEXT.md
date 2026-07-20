@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact four-pass shared norm-matched unit-gradient training and
-  final-only fixed-window implementation.
+- [ ] Implement one exact pinned MahJax half-game bundled-rule-policy rollout
+  smoke as the next P4/P8 environment prerequisite.
 
 Current execution charter:
 
@@ -23,21 +23,30 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Reuse the recorded probe, eight focused tests, 122 synthetic tests, seven
-  claim-control tests and lightweight checks; do not rerun the expensive
-  four-pass diagnostic unless a concrete blocker requires it.
-- Verify exactly four continuous passes over `0..31` and `116..147`, uniform
-  unit normalization, one per-pass raw-global norm match, four fixed `0.32`
-  updates, complete geometry/provenance and final-only evaluation.
-- Preserve the exact behavior result: primary stays `-312`; replication moves
-  `-1056 -> -1133`, with only seed `92` changing. This is bounded negative
-  behavior evidence, not improvement, robustness or strength.
-- Reject a fifth pass and all rate/scale/pass/seed/window/formula search.
-  Review must directly select a materially different P8 signal/environment
-  prerequisite or a stage decision, not another unit-gradient continuation.
-- No production self-play, real data, Tenhou, strength claim or P9-P12.
+- Add only the exact `04AU` source/test pair, optional direct environment
+  exports and governance synchronization.
+- Pin MahJax `0.1.2`, red-mahjong `beta`, JAX CPU, `round_mode="half"`,
+  `next_round_style="auto"`, exact seed `0` and bundled rule policy at all four
+  seats.
+- One explicit loop, hard cap `2048`, environment-owned legal masks and one
+  step per selected legal action. Record full transition/round provenance,
+  round boundaries, raw/cumulative rewards and global final scores.
+- Pin the reviewed probe: 938 legal transitions, natural termination at round
+  8, no truncation, final scores `(203,441,76,280)`, final raw rewards
+  `(-3,-3,-5,21)` and cumulative raw rewards `(73,151,-284,10)`.
+- No project model, learning/update/optimizer/checkpoint, production self-play,
+  league, real data, Tenhou connection, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Reviewed commit `4ccd386` in `04AU`; decision
+  `A. Review can close.` Confirmed exact four-pass continuity, fixed batches,
+  normalization/norm-match/update geometry, final-only windows and honest
+  primary `0` versus replication `-77` at seed `92`. Rejected fifth-pass and
+  all mechanism/parameter search. A local MahJax half-game seed-0 probe
+  terminates after 938 legal transitions in about 46.25 seconds. Directly
+  approved one exact rule-policy half-game environment smoke with zero docs
+  gates before code.
 
 - [x] 2026-07-20 Implemented the exact `04AT` four-pass shared norm-matched
   unit-gradient continuation. Four continuous fixed `0.32` updates use exact

@@ -28,6 +28,17 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
+P4/P8 implementation of the exact `04AU`-approved pinned local MahJax half-
+game bundled-rule-policy rollout smoke. `04AU` closes review of commit
+`4ccd386`, preserves primary 0 and replication -77 as negative fixed-window
+evidence and prohibits a fifth pass/search. A seed-0 `round_mode="half"` probe
+terminates after 938 legal transitions at round 8 without truncation, with
+final scores `(203,441,76,280)`. The next code pins that environment path with
+complete provenance only; it is not project-model training, production self-
+play, strength, Tenhou or P9-P12 evidence.
+```
+
+```text
 P8 lightweight review of the implemented exact four-pass shared norm-matched
 unit-gradient continuation. Four continuous passes use exact `0..31` and
 `116..147` batches, uniform normalization, per-pass raw-global norm matching

@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Four-pass review closure and half-game prerequisite approval
+
+- Type: exact P8 implementation-review closure plus P4/P8 local environment-
+  prerequisite approval.
+- `04AU` records `A. Review can close` for commit `4ccd386`; no conformance
+  blocker exists. Primary zero delta and replication `-77` at seed `92` remain
+  negative fixed-window evidence, so the unit-gradient branch stops.
+- An independent pinned MahJax `0.1.2` `round_mode="half"` seed-0 bundled-rule-
+  policy probe executes 938 legal transitions, terminates naturally at round 8
+  without truncation and yields final scores `(203,441,76,280)`.
+- One exact frozen half-game rollout smoke is directly approved with zero docs
+  gates. This is environment-path evidence only, not model strength, self-play
+  training, stable-dan, Tenhou, LuckyJ or P9-P12 evidence.
+
 ### 2026-07-20 — Executable four-pass norm-matched unit-gradient continuation
 
 - Type: executable P8 local four-pass training plus fixed-window negative

@@ -569,6 +569,13 @@ degrade replication `-1056 -> -1133` only at seed `92`. This is bounded P8
 mechanism/fixed-window negative evidence, not strength or permission for a
 fifth pass/search.
 
+`docs/04_rl_selfplay/04AU_P8_FOUR_PASS_NORM_MATCHED_UNIT_GRADIENT_TRAINING_IMPLEMENTATION_REVIEW.md`
+reviews commit `4ccd386`, records `A. Review can close`, stops that mechanism
+branch and directly approves one exact pinned local MahJax half-game bundled-
+rule-policy rollout smoke. A seed-0 feasibility probe terminates after 938
+legal transitions at round 8. This is environment-prerequisite approval only,
+not project-model training, self-play strength or P9-P12 evidence.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

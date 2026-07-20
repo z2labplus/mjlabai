@@ -1,5 +1,16 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.66
+
+- Added `04AU`; reviewed commit `4ccd386` and recorded
+  `A. Review can close` without rerunning the expensive diagnostic.
+- Preserved four nonzero updates plus primary zero delta and replication `-77`
+  at seed `92` as bounded negative behavior evidence.
+- Rejected a fifth pass and all rate/scale/pass/seed/window/formula search.
+- Verified a pinned local MahJax half-game seed-0 rule-policy probe terminates
+  after 938 legal transitions in about 46.25 seconds with final scores
+  `(203,441,76,280)`, and directly approved that exact environment smoke.
+
 ## 2026-07-20 - v4.65
 
 - Added the exact `04AT` four-pass shared norm-matched unit-gradient training

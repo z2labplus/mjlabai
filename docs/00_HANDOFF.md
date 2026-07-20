@@ -27,6 +27,17 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
+Current task after `04AU`: implement one exact pinned local MahJax half-game
+bundled-rule-policy rollout smoke. The prior four-pass unit-gradient branch is
+review-closed with primary delta 0 and replication delta -77 at seed 92; a
+fifth pass/search is prohibited. An independent seed-0 `round_mode="half"`
+probe executed 938 legal transitions, terminated naturally at round 8 without
+truncation and produced final scores `(203,441,76,280)` in about 46.25 seconds.
+The next code pins this full-game environment path only. It is not project-
+model training, production self-play, model strength, Tenhou or P9-P12.
+```
+
+```text
 Latest executable status: the exact `04AT` four-pass shared norm-matched
 unit-gradient continuation is implemented. Four continuous passes use exact
 training batches `0..31` and `116..147`, uniform per-trajectory normalization,
