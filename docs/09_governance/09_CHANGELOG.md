@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.55
+
+- Implemented the exact `04AO` four-pass shared-policy symmetric conflict-
+  projected training/fixed-window diagnostic and matching focused tests.
+- Factored the existing one-step projection/update arithmetic into one private
+  helper; first-pass pinned geometry is preserved exactly.
+- Four fixed `0.32` updates use exact batches `0..31` and `116..147`, carry one
+  shared parameter branch and perform no intermediate evaluation or selection.
+- All four original cosines are negative and projected cosines positive. Final
+  primary rewards remain `-312`; replication degrades `-1056 -> -1133`, with
+  only seed `92` changed. This is negative behavior evidence, not improvement.
+- One deterministic probe, nine focused, 122 synthetic and seven claim-control
+  tests pass; compile/dependency/static/diff checks pass. No search, real data,
+  strength claim or P9-P12 work was added.
+
 ## 2026-07-20 - v4.54
 
 - Added `04AO`; reviewed commit `032a340` against exact `04AN` approval.

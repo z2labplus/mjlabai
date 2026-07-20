@@ -504,6 +504,13 @@ one exact four-pass shared-policy continuation of the same fixed projection/
 rate/batches with final-only existing windows. Zero docs gates remain before
 that code; no method, pass, model or checkpoint is selected.
 
+That exact four-pass shared-policy diagnostic now exists in
+`src/mjlabai/rl/mahjax_categorical_mlp_four_pass_symmetric_conflict_projected_training_smoke.py`
+with matching focused tests. All four original cosines are negative and all
+projected cosines are positive, while final primary rewards remain `-312` and
+replication rewards move from `-1056` to `-1133` at seed `92`. This is
+mechanism plus bounded negative behavior evidence, not improvement or strength.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

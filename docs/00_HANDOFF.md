@@ -72,7 +72,12 @@ changes every parameter group, but both fixed reward vectors remain exact
 `04AO` review-closes commit `032a340`, selects nothing and directly approves
 one exact four-pass shared-policy continuation of the same fixed projection,
 rate and batches with final-only existing windows. Zero docs gates remain
-before that code.
+before that code. The exact implementation is now complete: every pass moves
+a negative original cosine to a positive projected cosine and updates the
+shared parameters, but final primary reward remains `-312` and replication
+reward degrades from `-1056` to `-1133`, with only seed `92` changed. Nine
+focused, 122 synthetic and seven claim-control tests pass. This is bounded
+negative behavior evidence; lightweight implementation review is next.
 This is P8
 training-seed sensitivity work, not robust
 generalization, algorithm selection, production evaluation or strength:
@@ -1186,7 +1191,7 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is direct implementation of the exact `04AO` four-pass
+- Current next work is lightweight review of the exact `04AO` four-pass
   shared-policy symmetric conflict-projected training/fixed-window diagnostic.
   P8 bounded local diagnostics are active;
   production self-play, evaluation, league, real data, Tenhou and P9-P12 remain

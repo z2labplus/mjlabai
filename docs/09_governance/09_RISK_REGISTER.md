@@ -327,6 +327,14 @@ Mitigation fixes both protocols in advance, records every pass regardless of
 sign, forbids intermediate evaluation/selection and allows only final existing
 windows. Fifth-pass, rate/formula/seed/window search remains prohibited.
 
+Implementation status: exact four-pass evidence confirms every projection
+changes negative cosine to positive, yet primary reward is unchanged and the
+replication window degrades by `77` at seed `92`. This falsifies any assumption
+that gradient agreement alone is sufficient for behavior improvement on these
+windows. Mitigation forbids adding a fifth pass or searching the projection/
+rate/windows; review must choose a materially different coverage or objective
+diagnostic and preserve the degradation as first-class evidence.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

@@ -61,7 +61,10 @@ group changes, but fixed rewards remain exact `-312/-1056` with zero changed
 seeds. Nine focused and 129 fast tests pass. `04AO` review-closes the one-step
 implementation and directly approves one exact four-pass shared-policy
 continuation of the same fixed method with final-only existing windows. Zero
-docs gates remain before code. This is bounded
+docs gates remain before code. That exact code is now implemented: all four
+original cosines are negative and projected cosines positive; primary reward
+stays `-312`, while replication degrades `-1056 -> -1133` at seed `92`.
+Lightweight review is next. This is bounded
 training-seed sensitivity work,
 not robust evaluation or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can

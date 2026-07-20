@@ -171,6 +171,12 @@ class MahJaxCategoricalMlpFirstPassSymmetricConflictProjectedUpdateResult:
     warnings: Tuple[str, ...]
 
 
+@dataclass(frozen=True)
+class _SymmetricConflictProjectedUpdate:
+    parameters: tuple
+    geometry: MahJaxCategoricalMlpSymmetricConflictProjectionGeometry
+
+
 def _group_norms(values, jnp):
     return tuple(float(jnp.linalg.norm(value)) for value in values)
 
@@ -198,6 +204,130 @@ def _all_close(actual, expected, tolerance=1e-6):
             for actual_item, expected_item in zip(actual, expected)
         )
     return math.isfinite(actual) and abs(actual - expected) <= tolerance
+
+
+def _apply_symmetric_conflict_projected_update(
+    parameters,
+    reference_gradients,
+    alternate_gradients,
+    jax,
+    jnp,
+):
+    original_dot = _dot(reference_gradients, alternate_gradients, jnp)
+    reference_squared_norm = _dot(reference_gradients, reference_gradients, jnp)
+    alternate_squared_norm = _dot(alternate_gradients, alternate_gradients, jnp)
+    if reference_squared_norm <= 0.0 or alternate_squared_norm <= 0.0:
+        raise MahJaxCategoricalMlpFirstPassSymmetricConflictProjectedUpdateSmokeError(
+            "approved projection requires two nonzero gradient vectors"
+        )
+    reference_coefficient = original_dot / alternate_squared_norm
+    alternate_coefficient = original_dot / reference_squared_norm
+    reference_projected = tuple(
+        reference_value - reference_coefficient * alternate_value
+        for reference_value, alternate_value in zip(
+            reference_gradients,
+            alternate_gradients,
+        )
+    )
+    alternate_projected = tuple(
+        alternate_value - alternate_coefficient * reference_value
+        for reference_value, alternate_value in zip(
+            reference_gradients,
+            alternate_gradients,
+        )
+    )
+    combined = tuple(
+        (reference_value + alternate_value) / 2.0
+        for reference_value, alternate_value in zip(
+            reference_projected,
+            alternate_projected,
+        )
+    )
+    updated_parameters = jax.block_until_ready(
+        tuple(
+            initial_value
+            - MAHJAX_CATEGORICAL_MLP_FIRST_PASS_SYMMETRIC_CONFLICT_PROJECTED_UPDATE_RATE
+            * gradient
+            for initial_value, gradient in zip(parameters, combined)
+        )
+    )
+
+    reference_projected_group_norms = _group_norms(reference_projected, jnp)
+    alternate_projected_group_norms = _group_norms(alternate_projected, jnp)
+    combined_group_norms = _group_norms(combined, jnp)
+    reference_projected_global_norm = _global_norm(reference_projected_group_norms)
+    alternate_projected_global_norm = _global_norm(alternate_projected_group_norms)
+    combined_global_norm = _global_norm(combined_group_norms)
+    projected_dot = _dot(reference_projected, alternate_projected, jnp)
+    projected_denominator = (
+        reference_projected_global_norm * alternate_projected_global_norm
+    )
+    projected_cosine = (
+        projected_dot / projected_denominator
+        if projected_denominator > 0.0
+        else math.nan
+    )
+    original_cosine = original_dot / math.sqrt(
+        reference_squared_norm * alternate_squared_norm
+    )
+    parameter_delta_l2 = tuple(
+        float(jnp.linalg.norm(updated - initial))
+        for initial, updated in zip(parameters, updated_parameters)
+    )
+    scalar_diagnostics = (
+        original_dot,
+        original_cosine,
+        reference_squared_norm,
+        alternate_squared_norm,
+        reference_coefficient,
+        alternate_coefficient,
+        *reference_projected_group_norms,
+        *alternate_projected_group_norms,
+        reference_projected_global_norm,
+        alternate_projected_global_norm,
+        projected_dot,
+        projected_cosine,
+        *combined_group_norms,
+        combined_global_norm,
+        *parameter_delta_l2,
+    )
+    all_finite = all(math.isfinite(value) for value in scalar_diagnostics)
+    all_nonzero = all(
+        value > 0.0
+        for value in (
+            reference_squared_norm,
+            alternate_squared_norm,
+            reference_projected_global_norm,
+            alternate_projected_global_norm,
+            combined_global_norm,
+        )
+    )
+    geometry = MahJaxCategoricalMlpSymmetricConflictProjectionGeometry(
+        original_global_dot_product=original_dot,
+        original_global_cosine_similarity=original_cosine,
+        reference_original_squared_norm=reference_squared_norm,
+        alternate_original_squared_norm=alternate_squared_norm,
+        reference_projection_coefficient=reference_coefficient,
+        alternate_projection_coefficient=alternate_coefficient,
+        reference_projected_parameter_group_l2=reference_projected_group_norms,
+        alternate_projected_parameter_group_l2=alternate_projected_group_norms,
+        reference_projected_global_l2=reference_projected_global_norm,
+        alternate_projected_global_l2=alternate_projected_global_norm,
+        projected_global_dot_product=projected_dot,
+        projected_global_cosine_similarity=projected_cosine,
+        combined_parameter_group_l2=combined_group_norms,
+        combined_global_l2=combined_global_norm,
+        update_rate=(
+            MAHJAX_CATEGORICAL_MLP_FIRST_PASS_SYMMETRIC_CONFLICT_PROJECTED_UPDATE_RATE
+        ),
+        parameter_delta_l2=parameter_delta_l2,
+        all_values_finite=all_finite,
+        all_required_norms_nonzero=all_nonzero,
+    )
+    return _SymmetricConflictProjectedUpdate(
+        parameters=updated_parameters,
+        geometry=geometry,
+    )
 
 
 def run_mahjax_categorical_mlp_first_pass_symmetric_conflict_projected_update_smoke(
@@ -248,95 +378,19 @@ def run_mahjax_categorical_mlp_first_pass_symmetric_conflict_projected_update_sm
         jnp,
         mahjax,
     )
-    original_dot = _dot(reference_gradients, alternate_gradients, jnp)
-    reference_squared_norm = _dot(reference_gradients, reference_gradients, jnp)
-    alternate_squared_norm = _dot(alternate_gradients, alternate_gradients, jnp)
-    if original_dot >= 0.0 or reference_squared_norm <= 0.0 or alternate_squared_norm <= 0.0:
+    update = _apply_symmetric_conflict_projected_update(
+        initial_parameters,
+        reference_gradients,
+        alternate_gradients,
+        jax,
+        jnp,
+    )
+    updated_parameters = update.parameters
+    geometry = update.geometry
+    if geometry.original_global_dot_product >= 0.0:
         raise MahJaxCategoricalMlpFirstPassSymmetricConflictProjectedUpdateSmokeError(
             "approved projection requires the reviewed negative-dot nonzero pair"
         )
-    reference_coefficient = original_dot / alternate_squared_norm
-    alternate_coefficient = original_dot / reference_squared_norm
-    reference_projected = tuple(
-        reference_value - reference_coefficient * alternate_value
-        for reference_value, alternate_value in zip(
-            reference_gradients,
-            alternate_gradients,
-        )
-    )
-    alternate_projected = tuple(
-        alternate_value - alternate_coefficient * reference_value
-        for reference_value, alternate_value in zip(
-            reference_gradients,
-            alternate_gradients,
-        )
-    )
-    combined = tuple(
-        (reference_value + alternate_value) / 2.0
-        for reference_value, alternate_value in zip(
-            reference_projected,
-            alternate_projected,
-        )
-    )
-    updated_parameters = jax.block_until_ready(
-        tuple(
-            initial_value
-            - MAHJAX_CATEGORICAL_MLP_FIRST_PASS_SYMMETRIC_CONFLICT_PROJECTED_UPDATE_RATE
-            * gradient
-            for initial_value, gradient in zip(initial_parameters, combined)
-        )
-    )
-
-    reference_projected_group_norms = _group_norms(reference_projected, jnp)
-    alternate_projected_group_norms = _group_norms(alternate_projected, jnp)
-    combined_group_norms = _group_norms(combined, jnp)
-    reference_projected_global_norm = _global_norm(reference_projected_group_norms)
-    alternate_projected_global_norm = _global_norm(alternate_projected_group_norms)
-    combined_global_norm = _global_norm(combined_group_norms)
-    projected_dot = _dot(reference_projected, alternate_projected, jnp)
-    projected_denominator = (
-        reference_projected_global_norm * alternate_projected_global_norm
-    )
-    projected_cosine = (
-        projected_dot / projected_denominator
-        if projected_denominator > 0.0
-        else math.nan
-    )
-    original_cosine = original_dot / math.sqrt(
-        reference_squared_norm * alternate_squared_norm
-    )
-    parameter_delta_l2 = tuple(
-        float(jnp.linalg.norm(updated - initial))
-        for initial, updated in zip(initial_parameters, updated_parameters)
-    )
-    scalar_diagnostics = (
-        original_dot,
-        original_cosine,
-        reference_squared_norm,
-        alternate_squared_norm,
-        reference_coefficient,
-        alternate_coefficient,
-        *reference_projected_group_norms,
-        *alternate_projected_group_norms,
-        reference_projected_global_norm,
-        alternate_projected_global_norm,
-        projected_dot,
-        projected_cosine,
-        *combined_group_norms,
-        combined_global_norm,
-        *parameter_delta_l2,
-    )
-    all_finite = all(math.isfinite(value) for value in scalar_diagnostics)
-    all_nonzero = all(
-        value > 0.0
-        for value in (
-            reference_squared_norm,
-            alternate_squared_norm,
-            reference_projected_global_norm,
-            alternate_projected_global_norm,
-            combined_global_norm,
-        )
-    )
 
     final_primary = _evaluate(
         updated_parameters,
@@ -361,49 +415,66 @@ def run_mahjax_categorical_mlp_first_pass_symmetric_conflict_projected_update_sm
         item.project_cumulative_raw_reward for item in final_replication
     )
     if (
-        abs(original_dot - _EXPECTED_GLOBAL_GRADIENT_DOT_PRODUCT) > 1e-8
-        or abs(original_cosine - _EXPECTED_GLOBAL_GRADIENT_COSINE_SIMILARITY) > 1e-6
-        or not all_finite
-        or not all_nonzero
-        or not all(value > 0.0 for value in parameter_delta_l2)
+        abs(
+            geometry.original_global_dot_product
+            - _EXPECTED_GLOBAL_GRADIENT_DOT_PRODUCT
+        )
+        > 1e-8
+        or abs(
+            geometry.original_global_cosine_similarity
+            - _EXPECTED_GLOBAL_GRADIENT_COSINE_SIMILARITY
+        )
+        > 1e-6
+        or not geometry.all_values_finite
+        or not geometry.all_required_norms_nonzero
+        or not all(value > 0.0 for value in geometry.parameter_delta_l2)
         or len(final_primary) != 32
         or len(final_replication) != 32
         or not _all_close(
-            reference_coefficient,
+            geometry.reference_projection_coefficient,
             _EXPECTED_REFERENCE_PROJECTION_COEFFICIENT,
         )
         or not _all_close(
-            alternate_coefficient,
+            geometry.alternate_projection_coefficient,
             _EXPECTED_ALTERNATE_PROJECTION_COEFFICIENT,
         )
         or not _all_close(
-            reference_projected_group_norms,
+            geometry.reference_projected_parameter_group_l2,
             _EXPECTED_REFERENCE_PROJECTED_GROUP_L2,
         )
         or not _all_close(
-            alternate_projected_group_norms,
+            geometry.alternate_projected_parameter_group_l2,
             _EXPECTED_ALTERNATE_PROJECTED_GROUP_L2,
         )
         or not _all_close(
-            reference_projected_global_norm,
+            geometry.reference_projected_global_l2,
             _EXPECTED_REFERENCE_PROJECTED_GLOBAL_L2,
         )
         or not _all_close(
-            alternate_projected_global_norm,
+            geometry.alternate_projected_global_l2,
             _EXPECTED_ALTERNATE_PROJECTED_GLOBAL_L2,
         )
         or not _all_close(
-            projected_dot,
+            geometry.projected_global_dot_product,
             _EXPECTED_PROJECTED_DOT_PRODUCT,
             tolerance=1e-8,
         )
         or not _all_close(
-            projected_cosine,
+            geometry.projected_global_cosine_similarity,
             _EXPECTED_PROJECTED_COSINE_SIMILARITY,
         )
-        or not _all_close(combined_group_norms, _EXPECTED_COMBINED_GROUP_L2)
-        or not _all_close(combined_global_norm, _EXPECTED_COMBINED_GLOBAL_L2)
-        or not _all_close(parameter_delta_l2, _EXPECTED_PARAMETER_DELTA_L2)
+        or not _all_close(
+            geometry.combined_parameter_group_l2,
+            _EXPECTED_COMBINED_GROUP_L2,
+        )
+        or not _all_close(
+            geometry.combined_global_l2,
+            _EXPECTED_COMBINED_GLOBAL_L2,
+        )
+        or not _all_close(
+            geometry.parameter_delta_l2,
+            _EXPECTED_PARAMETER_DELTA_L2,
+        )
         or primary_rewards != _EXPECTED_INITIAL_EVALUATION_REWARDS
         or replication_rewards != _EXPECTED_INITIAL_REPLICATION_REWARDS
         or tuple(item.transition_count for item in final_primary)
@@ -415,28 +486,6 @@ def run_mahjax_categorical_mlp_first_pass_symmetric_conflict_projected_update_sm
             "symmetric conflict-projected diagnostic differs from the approved contract"
         )
 
-    geometry = MahJaxCategoricalMlpSymmetricConflictProjectionGeometry(
-        original_global_dot_product=original_dot,
-        original_global_cosine_similarity=original_cosine,
-        reference_original_squared_norm=reference_squared_norm,
-        alternate_original_squared_norm=alternate_squared_norm,
-        reference_projection_coefficient=reference_coefficient,
-        alternate_projection_coefficient=alternate_coefficient,
-        reference_projected_parameter_group_l2=reference_projected_group_norms,
-        alternate_projected_parameter_group_l2=alternate_projected_group_norms,
-        reference_projected_global_l2=reference_projected_global_norm,
-        alternate_projected_global_l2=alternate_projected_global_norm,
-        projected_global_dot_product=projected_dot,
-        projected_global_cosine_similarity=projected_cosine,
-        combined_parameter_group_l2=combined_group_norms,
-        combined_global_l2=combined_global_norm,
-        update_rate=(
-            MAHJAX_CATEGORICAL_MLP_FIRST_PASS_SYMMETRIC_CONFLICT_PROJECTED_UPDATE_RATE
-        ),
-        parameter_delta_l2=parameter_delta_l2,
-        all_values_finite=all_finite,
-        all_required_norms_nonzero=all_nonzero,
-    )
     return MahJaxCategoricalMlpFirstPassSymmetricConflictProjectedUpdateResult(
         smoke_version=(
             MAHJAX_CATEGORICAL_MLP_FIRST_PASS_SYMMETRIC_CONFLICT_PROJECTED_UPDATE_SMOKE_VERSION

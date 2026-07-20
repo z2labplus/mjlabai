@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact four-pass shared-policy symmetric conflict-projected
-  training and fixed-window diagnostic.
+- [ ] Review the exact four-pass shared-policy symmetric conflict-projected
+  training and fixed-window diagnostic implementation.
 
 Current execution charter:
 
@@ -23,18 +23,31 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Follow exact `04AO` approval with zero docs gates before code.
-- Use one shared branch for exactly four passes. Every pass collects exact
-  frozen-policy batches `0..31` and `116..147`, applies the same simultaneous
-  projection/average and one fixed-rate `0.32` update, then carries parameters.
-- No intermediate evaluation. After pass four, use only final zero-update
-  `52..83` and `84..115`; pin all signs and select nothing.
-- Record all pass geometry/provenance, 256 trajectories/four updates/two final
-  evaluation calls in frozen array-free output.
-- No fifth pass, alternate formula/rate/update count, search, third protocol/
-  window, old expensive run, real data, strength claim or P9-P12.
+- Review only exact `04AO` source/test changes and recorded probe/focused/fast
+  evidence. Do not rerun the 2294-second focused test, probe, prior expensive
+  smokes or the full suite.
+- Verify private-helper compatibility, one shared branch, exact four-pass
+  continuity, fixed simultaneous projection/rate/batches, no intermediate
+  evaluation and final-only existing windows with complete provenance.
+- Preserve all negative original/positive projected cosine signs, primary
+  zero delta and replication `-77` at seed `92`. This is negative behavior
+  evidence, not improvement.
+- Directly approve/defer one materially different P8 coverage/objective task
+  or stage decision with no docs chain. No fifth pass, projection/rate/seed/
+  window search, real data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Implemented the exact `04AO` four-pass shared-policy
+  symmetric conflict-projected training/fixed-window diagnostic. One shared
+  branch uses exact `0..31` and `116..147` frozen batches per pass, the same
+  simultaneous projection and four fixed-rate `0.32` updates with no
+  intermediate evaluation or selection. All original cosines are negative
+  and projected cosines positive; final primary reward remains `-312`, while
+  replication degrades `-1056 -> -1133` at seed `92`. One deterministic probe,
+  nine focused tests in `2293.912s`, 122 synthetic and seven claim-control
+  tests plus compile/dependency/static/diff checks pass. No fifth pass/search,
+  real data, strength claim or P9-P12 was added.
 
 - [x] 2026-07-20 Reviewed commit `032a340` against exact `04AN` approval in
   `04AO`. Decision: `A. Review can close.` Confirmed simultaneous fixed

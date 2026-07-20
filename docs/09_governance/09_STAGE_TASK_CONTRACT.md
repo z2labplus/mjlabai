@@ -2,13 +2,13 @@
 
 ## Current stage
 
-P8 implementation of the exact `04AO` four-pass shared-policy symmetric
-conflict-projected training diagnostic. At each pass, collect exact `0..31`
-and `116..147` batches at shared pass-start parameters, apply the same fixed
-simultaneous projection and one `0.32` update, and carry parameters. Record all
-four passes and evaluate only final existing windows. No intermediate
-evaluation/selection, fifth pass, formula/order/rate/seed/optimizer search,
-expensive old run, third protocol/window, real data, strength claim or P9-P12.
+P8 lightweight implementation review of the exact `04AO` four-pass shared-
+policy symmetric conflict-projected diagnostic. Verify one shared parameter
+branch, exact four batches per protocol, fixed simultaneous projection/rate,
+continuity, no intermediate evaluation/selection and final existing windows.
+Preserve positive projected cosines plus primary no-change and replication
+`-77` degradation as negative behavior evidence. No expensive rerun, fifth
+pass, formula/rate/seed/window search, real data, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -588,9 +588,10 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04AO` four-pass shared-policy conflict-projected training
-diagnostic. Use exact two batches per pass, same simultaneous formula, four
-fixed `0.32` updates, direct continuity and no intermediate evaluation. After
-pass four use only existing windows, retain every sign and select nothing. No
-docs gate, fifth pass, alternate formula/rate/search, old expensive run,
-strength claim or P9-P12.
+Review the exact `04AO` four-pass shared-policy conflict-projected
+implementation using recorded evidence/lightweight checks only. Verify helper
+compatibility, exact four-pass continuity, fixed method, final-only windows,
+complete provenance and no selection. Preserve primary zero delta and
+replication `-77` without improvement claim. Directly approve one materially
+different bounded coverage/objective task or stage decision; no docs chain,
+expensive rerun, fifth pass/search, strength claim or P9-P12.

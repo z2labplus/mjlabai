@@ -8,6 +8,24 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Executable four-pass conflict-projected training diagnostic
+
+- Type: executable P8 local repeated robust-gradient mechanism diagnostic.
+- Exact shared parameters receive four fixed simultaneous projected updates at
+  rate `0.32`; every pass independently uses only `0..31` and `116..147` with
+  no intermediate evaluation, pass selection or checkpoint selection.
+- Original cosines are approximately `-0.186878`, `-0.149425`, `-0.401174`
+  and `-0.325207`; projected cosines are `+0.186878`, `+0.149425`, `+0.401174`
+  and `+0.325207`. All four parameter groups change continuously.
+- Final primary reward remains `-312` with zero changed seeds. Replication
+  reward moves from `-1056` to `-1133`; only seed `92` changes, for delta
+  `-77`. Gradient geometry improvement does not produce behavioral improvement.
+- One deterministic probe completes; nine focused tests pass in `2293.912s`;
+  122 synthetic and seven claim-control tests plus compile/dependency/static/
+  diff checks pass. Prior expensive smokes and the full suite are not rerun.
+- Evidence grade: bounded mechanism plus negative fixed-window behavior evidence
+  only; not robustness, strength, promotion, Tenhou, stable-dan or LuckyJ.
+
 ### 2026-07-20 — One-step projection review and four-pass approval
 
 - Type: exact P8 implementation-review closure plus bounded continuation
