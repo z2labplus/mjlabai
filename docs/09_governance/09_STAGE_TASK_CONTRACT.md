@@ -2,14 +2,13 @@
 
 ## Current stage
 
-P8 lightweight review of the exact `04AN` symmetric conflict-projected one-step
-implementation. Exact projection moves global cosine from about `-0.1868775008`
-to `+0.1868781623`; one fixed-rate `0.32` update changes all parameter groups,
-but fixed rewards remain exact `-312/-1056` with zero changed seeds. Review
-must preserve this as geometry-change/no-behavior-change evidence and directly
-approve/defer one bounded continuation or materially different coverage task.
-No formula/order/coefficient/rate/seed/optimizer search, expensive rerun, third
-protocol/window/pass, real data, strength claim or P9-P12.
+P8 implementation of the exact `04AO` four-pass shared-policy symmetric
+conflict-projected training diagnostic. At each pass, collect exact `0..31`
+and `116..147` batches at shared pass-start parameters, apply the same fixed
+simultaneous projection and one `0.32` update, and carry parameters. Record all
+four passes and evaluate only final existing windows. No intermediate
+evaluation/selection, fifth pass, formula/order/rate/seed/optimizer search,
+expensive old run, third protocol/window, real data, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -589,9 +588,9 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04AN` one-step conflict-projected implementation using
-recorded evidence/lightweight checks only. Verify formula, fixed `0.32`, one
-update, exact windows, complete geometry/provenance and no selection. Preserve
-positive projected cosine plus unchanged rewards without improvement claim.
-Directly approve/defer one bounded continuation or coverage task; no docs chain,
-expensive rerun, search, third protocol/window, strength claim or P9-P12.
+Implement the exact `04AO` four-pass shared-policy conflict-projected training
+diagnostic. Use exact two batches per pass, same simultaneous formula, four
+fixed `0.32` updates, direct continuity and no intermediate evaluation. After
+pass four use only existing windows, retain every sign and select nothing. No
+docs gate, fifth pass, alternate formula/rate/search, old expensive run,
+strength claim or P9-P12.

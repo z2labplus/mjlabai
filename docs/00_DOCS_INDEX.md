@@ -498,6 +498,12 @@ with matching focused tests. Projection moves cosine from approximately
 both fixed reward vectors remain exact `-312/-1056`. This is mechanism/no-
 behavior-change evidence only, not robust improvement or strength.
 
+`docs/04_rl_selfplay/04AO_P8_SYMMETRIC_CONFLICT_PROJECTED_UPDATE_IMPLEMENTATION_REVIEW.md`
+reviews commit `032a340`, records `A. Review can close` and directly approves
+one exact four-pass shared-policy continuation of the same fixed projection/
+rate/batches with final-only existing windows. Zero docs gates remain before
+that code; no method, pass, model or checkpoint is selected.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

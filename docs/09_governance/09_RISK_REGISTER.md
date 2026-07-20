@@ -320,6 +320,13 @@ choose directly between one hard-bounded continuation of the same fixed method
 and a materially different coverage diagnostic; it must not search rate,
 formula, protocol, seed or evaluation window or overclaim the zero change.
 
+Review status: `04AO` closes the one-step implementation review and approves
+exactly four shared-policy passes of the same formula/rate/batches. The main
+open risk is repeated projection overfitting the same two seed distributions.
+Mitigation fixes both protocols in advance, records every pass regardless of
+sign, forbids intermediate evaluation/selection and allows only final existing
+windows. Fifth-pass, rate/formula/seed/window search remains prohibited.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

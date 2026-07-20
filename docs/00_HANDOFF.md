@@ -69,7 +69,10 @@ gates remain before that code. The exact code is now implemented: projection
 moves global cosine from about `-0.1868775008` to `+0.1868781623`, one update
 changes every parameter group, but both fixed reward vectors remain exact
 `-312/-1056` with zero changed seeds. Nine focused and 129 fast tests pass;
-one lightweight review is next.
+`04AO` review-closes commit `032a340`, selects nothing and directly approves
+one exact four-pass shared-policy continuation of the same fixed projection,
+rate and batches with final-only existing windows. Zero docs gates remain
+before that code.
 This is P8
 training-seed sensitivity work, not robust
 generalization, algorithm selection, production evaluation or strength:
@@ -1183,8 +1186,8 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is lightweight review of the exact `04AN` symmetric
-  conflict-projected one-step aggregate-gradient update/fixed-window diagnostic.
+- Current next work is direct implementation of the exact `04AO` four-pass
+  shared-policy symmetric conflict-projected training/fixed-window diagnostic.
   P8 bounded local diagnostics are active;
   production self-play, evaluation, league, real data, Tenhou and P9-P12 remain
   unapproved. Do not make strength claims.

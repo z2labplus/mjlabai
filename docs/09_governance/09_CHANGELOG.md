@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.54
+
+- Added `04AO`; reviewed commit `032a340` against exact `04AN` approval.
+- Decision: `A. Review can close.` Exact simultaneous projection, fixed `0.32`,
+  one update, fixed windows, full geometry/provenance and no selection conform.
+- Positive projected cosine plus unchanged `-312/-1056` remains one-step no-
+  behavior-change evidence, not improvement.
+- Reused probe/nine focused/129 fast passing evidence; lightweight checks pass
+  without expensive reruns.
+- Directly approved one exact four-pass shared-policy continuation with the
+  same fixed method and no intermediate evaluation. No search, strength or
+  P9-P12 work was added.
+
 ## 2026-07-20 - v4.53
 
 - Implemented the exact `04AN` symmetric conflict-projected one-step aggregate-

@@ -8,6 +8,18 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — One-step projection review and four-pass approval
+
+- Type: exact P8 implementation-review closure plus bounded continuation
+  approval.
+- `04AO` records `A. Review can close` for commit `032a340`; no blocker exists.
+- Exact formula/rate/update/windows/provenance and no selection conform.
+- Projection changes geometry/parameters while fixed rewards retain
+  `-312/-1056`; this remains no-observed-behavior-change evidence only.
+- One exact four-pass shared-policy continuation of the same fixed method is
+  directly approved with zero docs gates and no intermediate evaluation.
+  Evidence remains local P8 diagnostic evidence, not strength.
+
 ### 2026-07-20 — Executable symmetric conflict-projected one-step diagnostic
 
 - Type: executable P8 local robust-gradient mechanism diagnostic evidence.

@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact symmetric conflict-projected aggregate-gradient one-step
-  update and fixed-window diagnostic implementation.
+- [ ] Implement the exact four-pass shared-policy symmetric conflict-projected
+  training and fixed-window diagnostic.
 
 Current execution charter:
 
@@ -23,20 +23,27 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only exact `04AN`-approved source/test changes and recorded probe,
-  focused and fast evidence. Do not rerun the 733-second diagnostic, either
-  prior expensive smoke or the full suite.
-- Verify exact simultaneous original-pair projection, fixed rate `0.32`, one
-  update, only fixed windows, complete geometry/provenance and no selection.
-- Preserve projection cosine `+0.1868781623`, changed parameters and unchanged
-  fixed rewards `-312/-1056` with zero changed seeds. This is geometry change
-  plus no observed behavior change, not improvement.
-- Directly approve/defer either one exact bounded multi-step conflict-projected
-  continuation or one materially different data/exploration diagnostic, with
-  no docs chain. No formula/rate/seed/optimizer search, real data, strength
-  claim or P9-P12.
+- Follow exact `04AO` approval with zero docs gates before code.
+- Use one shared branch for exactly four passes. Every pass collects exact
+  frozen-policy batches `0..31` and `116..147`, applies the same simultaneous
+  projection/average and one fixed-rate `0.32` update, then carries parameters.
+- No intermediate evaluation. After pass four, use only final zero-update
+  `52..83` and `84..115`; pin all signs and select nothing.
+- Record all pass geometry/provenance, 256 trajectories/four updates/two final
+  evaluation calls in frozen array-free output.
+- No fifth pass, alternate formula/rate/update count, search, third protocol/
+  window, old expensive run, real data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Reviewed commit `032a340` against exact `04AN` approval in
+  `04AO`. Decision: `A. Review can close.` Confirmed simultaneous fixed
+  projection, one `0.32` update, positive projected cosine, changed parameters,
+  exact fixed windows retaining `-312/-1056`, complete provenance and no
+  selection. Reused probe, nine focused and 129 fast passing tests plus
+  lightweight checks without expensive reruns. Rejected formula/rate/search
+  and directly approved one exact four-pass shared-policy continuation with
+  zero docs gates before code.
 
 - [x] 2026-07-20 Implemented the exact `04AN` symmetric conflict-projected
   aggregate-gradient one-step update/fixed-window diagnostic. Exact first
