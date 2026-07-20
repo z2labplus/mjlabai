@@ -8,6 +8,25 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Executable seat-0 half-game raw-outcome update
+
+- Type: executable P4/P7/P8 local half-game training and disjoint negative
+  behavior diagnostic evidence.
+- One seed-0 half-game samples only project seat 0 against three fixed bundled
+  rule seats. It terminates after 427 legal transitions and 102 project
+  decisions, with cumulative rewards `(-53,82,429,-468)`.
+- Seat-0 cumulative raw reward /100 gives return scale `-0.53`. Exactly one
+  fixed-rate `0.01` update changes all four arrays; objective moves
+  `-0.5453851223 -> -0.5463446379`.
+- Disjoint seed-1 greedy evaluation makes zero updates. Initial/updated seat-0
+  cumulative reward is `-300/-320`, final score is `-70/-80`, and transitions
+  are `526/524`. This is a retained negative result, not a selected model.
+- Ten focused tests pass in `139.407s`; all actions are legal and all three
+  half-games terminate without truncation.
+- Evidence is one-trajectory mechanism/failure evidence only, not general
+  learning, model strength, production self-play, Tenhou, stable-dan, LuckyJ
+  10.68, candidate promotion or P9-P12 evidence.
+
 ### 2026-07-20 — Mixed half-game review fix and one-update probe
 
 - Type: P4/P8 implementation-review closure, import-order blocker evidence and

@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.71
+
+- Added the exact `04AW` categorical-MLP seat-0 half-game raw-outcome update
+  module, direct RL exports and focused tests.
+- Seed-0 training completes 427 legal transitions and 102 project decisions,
+  applies raw return scale `-0.53` once at fixed rate `0.01`, and moves all four
+  parameter arrays.
+- Disjoint greedy seed-1 evaluation performs zero updates. Initial/updated
+  seat-0 cumulative reward is `-300/-320`, score is `-70/-80`, and transition
+  count is `526/524`; the negative result is explicit.
+- Ten focused tests pass in `139.407s`. No second update, replay, search,
+  persistence, real data, production self-play, strength or P9-P12 was added.
+
 ## 2026-07-20 - v4.70
 
 - Added `04AW`; review accepts the exact mixed half-game implementation after

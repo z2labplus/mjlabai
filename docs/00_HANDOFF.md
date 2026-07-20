@@ -27,14 +27,14 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current exact code task after `04AW`: run one sampled seed-0 project-seat-0
-half-game versus bundled rule seats, then apply exactly one fixed `0.01`
-seat-0 cumulative-raw-return/100 update and greedily evaluate initial/updated
-policies on disjoint seed 1 with zero evaluation updates. The review fixed a
-supervised-first circular import using lazy environment exports. A fixed probe
-moves all four parameter arrays but degrades seed-1 seat-0 cumulative reward
-`-300 -> -320` and score `-70 -> -80`; that negative result must remain visible.
-No second update, search, persistence, strength, Tenhou or P9-P12 is approved.
+Current exact task is a lightweight review of the implemented `04AW` half-game
+update. Seed-0 training executes 427 legal transitions and 102 sampled project
+decisions, uses seat-0 raw return scale `-0.53`, and applies one fixed `0.01`
+update with four nonzero parameter deltas. Disjoint greedy seed-1 evaluation
+uses zero updates and degrades seat-0 cumulative reward `-300 -> -320` and score
+`-70 -> -80`. Review must retain this negative result and directly approve or
+defer one material variance/credit-assignment executable task without another
+proposal chain. No persistence, strength, Tenhou or P9-P12 is approved.
 ```
 
 ```text

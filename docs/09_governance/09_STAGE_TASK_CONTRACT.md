@@ -2,14 +2,15 @@
 
 ## Current stage
 
-P4/P8 exact `04AW` half-game raw-outcome update and disjoint evaluation smoke.
-Reuse reviewed in-memory categorical-MLP parameters/882-feature encoder. On
-seed 0, sample legal seat-0 actions versus bundled rule seats 1/2/3 and apply
-one fixed `0.01` seat-0 cumulative-raw-return/100 update. Evaluate initial and
-updated policies greedily on disjoint seed 1 with zero evaluation updates and
-retain the exact negative result. Use only strict PON75-to-PON_RED76 legality
-normalization. No second update/replay, search, selection, persistence, real
-data, production self-play/league, strength, Tenhou or P9-P12.
+P4/P8 lightweight review of the exact `04AW` seat-0 half-game raw-outcome
+update and disjoint evaluation implementation. Verify complete legal traces,
+seed/RNG/seat identity, one cumulative-raw-return/100 objective, exactly one
+fixed `0.01` update, four nonzero parameter deltas, zero evaluation updates and
+retained seed-1 degradation `-300 -> -320` reward / `-70 -> -80` score. Reuse
+passing evidence unless a blocker requires rerun. If review closes, directly
+approve/defer one material variance or credit-assignment task without another
+proposal chain. No persistence, real data, production self-play/league,
+strength, Tenhou or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition

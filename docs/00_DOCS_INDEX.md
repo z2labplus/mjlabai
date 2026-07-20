@@ -604,6 +604,14 @@ blocker fix`. It directly approves one exact sampled seed-0 half-game raw-
 outcome update plus disjoint seed-1 read-only evaluation. The probe's negative
 result is retained; this is mechanism-task approval, not strength evidence.
 
+The approved one-update half-game implementation is in
+`src/mjlabai/rl/mahjax_categorical_mlp_seat0_half_game_policy_gradient_smoke.py`,
+with focused coverage in
+`tests/rl/test_mahjax_categorical_mlp_seat0_half_game_policy_gradient_smoke.py`.
+It runs one seed-0 raw-outcome update and disjoint seed-1 zero-update evaluation,
+retaining the observed negative change. This is P8 local mechanism/failure
+evidence, not strength or candidate-promotion evidence.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

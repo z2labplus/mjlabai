@@ -28,14 +28,14 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P4/P8 exact `04AW` one-update half-game implementation. Review closes the
-read-only mixed path after a lazy-export import-order fix. The next code uses
-one seed-0 sampled project-seat trajectory and exactly one fixed `0.01` raw-
-outcome update, then compares initial/updated greedy policies on disjoint seed
-1 with zero evaluation updates. The probe moves all parameter groups but
-degrades seat-0 cumulative reward `-300 -> -320`; this negative result is fixed
-evidence, not a selection trigger. No second update, search, persistence,
-strength, Tenhou or P9-P12 evidence is approved.
+P4/P8 lightweight review of the implemented exact `04AW` one-update half-game
+task. Seed-0 training uses 427 legal transitions, 102 project decisions and one
+fixed `0.01` raw-return update that moves all parameter groups. Disjoint greedy
+seed-1 evaluation has zero updates and degrades seat-0 cumulative reward
+`-300 -> -320` and score `-70 -> -80`. Review must keep the failure visible and
+directly approve/defer one bounded variance or credit-assignment executable
+task without another proposal chain. No persistence, strength, Tenhou or
+P9-P12 evidence is approved.
 ```
 
 ```text

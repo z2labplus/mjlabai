@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement one exact MahJax categorical-MLP-seat-0 half-game raw-outcome
-  update and disjoint read-only evaluation smoke.
+- [ ] Review the exact MahJax categorical-MLP-seat-0 half-game raw-outcome
+  update and disjoint read-only evaluation implementation.
 
 Current execution charter:
 
@@ -23,20 +23,29 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Add only the exact `04AW` source/test, direct RL exports and governance. No
-  definition/proposal/review gate remains before code.
-- Reuse reviewed in-memory categorical-MLP parameters and exact 882-feature
-  encoder. Train once on seed 0: sampled legal-masked seat 0, rule seats 1/2/3,
-  independent RNG streams and exact strict PON-to-PON_RED normalization.
-- Apply exactly one fixed `0.01` update using seat-0 cumulative raw return /100
-  on all seat-0 selected log probabilities. No second update or replay.
-- Evaluate initial/updated greedily on disjoint seed 1 with identical runtime/
-  rule RNG and zero evaluation updates. Pin all `04AW` probe values, including
-  the negative updated seed-1 result; no selection or rollback.
-- No persistence, real data, general self-play/league, tuning, strength claim,
-  Tenhou or P9-P12.
+- Review only the exact `04AW` implementation commit: public/frozen array-free
+  API, seed/RNG/seat identities, full legal traces and round boundaries, raw-
+  return objective, exactly one update and strict train/evaluation separation.
+- Verify all four nonzero parameter deltas and retain the disjoint seed-1
+  negative change `-300 -> -320` cumulative reward and `-70 -> -80` score.
+- Reuse passing evidence unless a blocker requires rerun; change code only for
+  a genuine blocker. Do not add another proposal or boundary chain.
+- If review closes, directly approve or defer one material executable P8 task
+  that addresses single-trajectory variance or half-game learning signal.
+- No second update in review, persistence, real data, production self-play/
+  league, tuning, strength claim, Tenhou or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Implemented the exact `04AW` seat-0 half-game raw-outcome
+  update and disjoint evaluation smoke. Seed-0 training runs 427 legal
+  transitions and 102 sampled project decisions, uses return scale `-0.53` and
+  applies one fixed `0.01` update with four nonzero parameter deltas. Greedy
+  seed-1 initial/updated evaluation uses zero updates and changes from 526/132
+  to 524/130 transitions/project decisions, cumulative seat-0 reward
+  `-300 -> -320` and score `-70 -> -80`. Ten focused tests pass in `139.407s`.
+  The negative result is retained; no persistence, real data, strength or
+  P9-P12 was added.
 
 - [x] 2026-07-20 Reviewed commit `4af4784` in `04AW`. Found and fixed one
   import-order blocker by lazily exporting the mixed half-game API; a separate-

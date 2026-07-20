@@ -1,5 +1,15 @@
 """Minimal reinforcement-learning smoke helpers for MjLabAI."""
 
+from mjlabai.rl.mahjax_categorical_mlp_seat0_half_game_policy_gradient_smoke import (
+    MAHJAX_CATEGORICAL_MLP_SEAT0_HALF_GAME_EVALUATION_SEED,
+    MAHJAX_CATEGORICAL_MLP_SEAT0_HALF_GAME_LEARNING_RATE,
+    MAHJAX_CATEGORICAL_MLP_SEAT0_HALF_GAME_POLICY_GRADIENT_SMOKE_VERSION,
+    MAHJAX_CATEGORICAL_MLP_SEAT0_HALF_GAME_TRAINING_SEED,
+    MahJaxCategoricalMlpSeat0HalfGamePolicyGradientResult,
+    MahJaxCategoricalMlpSeat0HalfGamePolicyGradientSmokeError,
+    run_mahjax_categorical_mlp_seat0_half_game_policy_gradient_smoke,
+)
+
 from mjlabai.rl.synthetic_policy_update_smoke import (
     SYNTHETIC_LOCAL_SOURCE_KIND,
     SYNTHETIC_POLICY_UPDATE_SMOKE_VERSION,
@@ -85,6 +95,10 @@ from mjlabai.rl.synthetic_two_policy_interaction_smoke import (
 )
 
 __all__ = [
+    "MAHJAX_CATEGORICAL_MLP_SEAT0_HALF_GAME_EVALUATION_SEED",
+    "MAHJAX_CATEGORICAL_MLP_SEAT0_HALF_GAME_LEARNING_RATE",
+    "MAHJAX_CATEGORICAL_MLP_SEAT0_HALF_GAME_POLICY_GRADIENT_SMOKE_VERSION",
+    "MAHJAX_CATEGORICAL_MLP_SEAT0_HALF_GAME_TRAINING_SEED",
     "SYNTHETIC_LOCAL_SOURCE_KIND",
     "SYNTHETIC_POLICY_UPDATE_SMOKE_VERSION",
     "SYNTHETIC_POLICY_UPDATE_SEQUENCE_SMOKE_VERSION",
@@ -104,6 +118,8 @@ __all__ = [
     "SYNTHETIC_TWO_POLICY_INTERACTION_SMOKE_VERSION",
     "MAX_SYNTHETIC_TWO_POLICY_INTERACTION_TURNS",
     "SyntheticPolicyTableEntry",
+    "MahJaxCategoricalMlpSeat0HalfGamePolicyGradientResult",
+    "MahJaxCategoricalMlpSeat0HalfGamePolicyGradientSmokeError",
     "SyntheticPolicyTableUpdateResult",
     "SyntheticPolicyTableUpdateSmokeError",
     "SyntheticPolicyTableUpdateSequenceResult",
@@ -146,4 +162,5 @@ __all__ = [
     "run_synthetic_one_step_policy_improvement_smoke",
     "run_synthetic_policy_improvement_sequence_smoke",
     "run_synthetic_two_policy_interaction_smoke",
+    "run_mahjax_categorical_mlp_seat0_half_game_policy_gradient_smoke",
 ]
