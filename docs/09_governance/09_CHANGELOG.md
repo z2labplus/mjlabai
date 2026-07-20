@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.60
+
+- Added `04AR`; reviewed commit `757fe45` and recorded
+  `A. Review can close` without rerunning the expensive focused diagnostic.
+- Confirmed same 64 dots, signed-mean/aggregate-dot identity, fixed anonymous
+  concentration math, all-finite output and no identity/filter/reweight/update/
+  evaluation path.
+- Retained alternate `5.15/41.6%` versus reference `12.06/16.0%` effective-
+  count/largest-share values as concentration-risk evidence only.
+- Directly approved one exact unit-norm per-trajectory aggregate alignment
+  diagnostic over the same gradients. No search, strength claim or P9-P12.
+
 ## 2026-07-20 - v4.59
 
 - Added exact `04AQ` anonymous opposite-alignment magnitude-concentration

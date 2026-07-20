@@ -2,11 +2,12 @@
 
 ## Current stage
 
-P8 lightweight review of exact `04AQ` anonymous opposite-alignment magnitude-
-concentration summaries. Verify the same 64 dots, signed-mean/aggregate-dot
-invariant, fixed HHI/effective-count/top-share math, complete records and zero
-updates/evaluations. Preserve alternate concentration as risk evidence only.
-No identity/filter/reweight/search, expensive rerun, strength claim or P9-P12.
+P8 exact unit-norm per-trajectory aggregate alignment diagnostic approved by
+`04AR`. Reuse the same 64 already-computed gradients, normalize every finite
+nonzero full gradient uniformly, average 32 vectors per protocol and record
+fixed group/global norms plus cross-protocol dot/cosine. Preserve every raw
+result with zero updates/evaluations. No epsilon, identity/filter/reweight,
+threshold/search, new data, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition

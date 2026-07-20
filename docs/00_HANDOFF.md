@@ -1205,8 +1205,10 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is lightweight review of the exact `04AQ` anonymous
-  opposite-alignment magnitude-concentration summaries.
+- `04AR` review-closes the exact anonymous concentration summaries and retains
+  alternate `5.15/41.6%` versus reference `12.06/16.0%` only as bounded risk
+  evidence. Current next work is the directly approved unit-norm per-trajectory
+  aggregate alignment diagnostic over the same 64 gradients.
   P8 bounded local diagnostics are active;
   production self-play, evaluation, league, real data, Tenhou and P9-P12 remain
   unapproved. Do not make strength claims.

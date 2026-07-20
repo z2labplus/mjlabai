@@ -534,6 +534,12 @@ effective contribution count/largest share are about `12.06/16.0%`; alternate
 values are `5.15/41.6%`. This is anonymous concentration-risk evidence only,
 not permission to identify, remove or reweight any trajectory.
 
+`docs/04_rl_selfplay/04AR_P8_GRADIENT_INFLUENCE_CONCENTRATION_IMPLEMENTATION_REVIEW.md`
+reviews commit `757fe45`, records `A. Review can close`, preserves the exact
+anonymous concentration results as bounded risk evidence and directly approves
+one fixed unit-norm per-trajectory aggregate alignment diagnostic over the same
+64 gradients. It approves no filtering, reweighting, update or strength claim.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

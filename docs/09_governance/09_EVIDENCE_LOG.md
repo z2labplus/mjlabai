@@ -8,6 +8,19 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Influence-concentration review and unit-norm approval
+
+- Type: exact P8 implementation-review closure plus fixed objective-scale
+  diagnostic approval.
+- `04AR` records `A. Review can close` for commit `757fe45`; no blocker exists.
+- Same-dot provenance, signed-mean identity, fixed anonymous math, finite output
+  and the absence of identity/filter/reweight/update/evaluation all conform.
+- Alternate `5.15/41.6%` versus reference `12.06/16.0%` remains bounded
+  concentration-risk evidence, not causality or seed-removal permission.
+- One exact unit-norm per-trajectory aggregate alignment diagnostic is directly
+  approved over the same 64 gradients with zero updates/evaluations and zero
+  docs gates. It remains local objective-scale evidence, not strength.
+
 ### 2026-07-20 — Executable anonymous influence-concentration summaries
 
 - Type: executable P8 local descriptive magnitude-concentration evidence.

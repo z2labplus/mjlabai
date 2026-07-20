@@ -8,6 +8,8 @@
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |
+| Anonymous concentration evidence is turned into seed filtering or implicit reweighting | ML / Selection bias | Critical | High | `04AR` forbids identities, filtering and reweighting; the next diagnostic normalizes every one of the same 64 gradients uniformly and returns aggregate geometry only | Open |
+| Unit-norm diagnostic is mistaken for an approved training objective | Evidence / Scope | High | High | Apply zero updates/evaluations, preserve raw results and classify output only as fixed objective-scale diagnostic evidence | Open |
 
 ## 2026-07-18 — P8 five-round training/fixed-evaluation approval risks
 

@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact anonymous opposite-alignment magnitude-concentration
-  summaries implementation.
+- [ ] Add the exact unit-norm per-trajectory aggregate alignment diagnostic to
+  the existing first-pass influence smoke.
 
 Current execution charter:
 
@@ -23,18 +23,27 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review exact `04AQ` source/test changes and recorded probe/focused/fast
-  evidence only. Do not rerun the 601-second focused test, probe, prior
-  expensive smokes or full suite.
-- Verify same 64 dots, signed-mean/aggregate-dot invariant, fixed totals,
-  cancellation, HHI/effective count/top-1/4/8 math and all-finite output.
-- Preserve reference `12.06/16.0%` and alternate `5.15/41.6%` effective-count/
-  largest-share evidence as bounded concentration risk, not causality.
-- Confirm no seed identity, filtering, clipping, reweighting, selection, update
-  or evaluation. Directly approve/defer one fixed objective-scale diagnostic.
-- No threshold/search, new data, strength claim or P9-P12.
+- Modify only the existing first-pass per-trajectory influence source/test plus
+  direct governance synchronization.
+- Reuse the same 64 already-computed gradients. Normalize every finite nonzero
+  full gradient to unit global L2 norm, then average 32 vectors per protocol.
+- Record fixed group/global norms plus cross-protocol dot/cosine; preserve all
+  raw aggregate, trajectory and concentration outputs exactly.
+- Zero update/evaluation. No epsilon, clipping, threshold/search, identity,
+  filtering, ranking, reweighting, selection, new data/window or P9-P12.
+- Run one probe, focused and fast checks only; do not rerun prior expensive
+  diagnostics or the full suite. This remains objective-scale diagnostic
+  evidence, not improvement, robustness, strength or LuckyJ evidence.
 
 ## Completed
+
+- [x] 2026-07-20 Reviewed commit `757fe45` against the exact `04AQ`
+  concentration-summary approval in `04AR`. Decision: `A. Review can close.`
+  Confirmed same 64 dots, signed-mean invariant, fixed anonymous concentration
+  math, all-finite output and no identity/filter/reweight/update/evaluation.
+  Preserved alternate `5.15/41.6%` versus reference `12.06/16.0%` as bounded
+  concentration risk only. Directly approved one exact unit-norm aggregate
+  alignment diagnostic with zero docs gates before code.
 
 - [x] 2026-07-20 Added exact `04AQ` anonymous magnitude-concentration summaries
   over the same 64 opposite-alignment dots. Signed means reproduce aggregate
