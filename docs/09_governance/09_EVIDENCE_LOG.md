@@ -8,6 +8,19 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Four-pass projection review and influence approval
+
+- Type: exact P8 implementation-review closure plus materially different
+  diagnostic approval.
+- `04AP` records `A. Review can close` for commit `ad737a6`; no blocker exists.
+- Exact helper reuse, four-pass shared continuity, fixed method, final-only
+  windows, complete provenance and no selection conform.
+- Positive projected cosines plus primary no-change and replication `-77`
+  remain mechanism/negative behavior evidence only.
+- Another pass and all search are rejected. One exact first-pass per-trajectory
+  cross-protocol gradient influence diagnostic is directly approved with zero
+  updates/evaluations and zero docs gates. Evidence remains local, not strength.
+
 ### 2026-07-20 — Executable four-pass conflict-projected training diagnostic
 
 - Type: executable P8 local repeated robust-gradient mechanism diagnostic.

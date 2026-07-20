@@ -335,6 +335,13 @@ windows. Mitigation forbids adding a fifth pass or searching the projection/
 rate/windows; review must choose a materially different coverage or objective
 diagnostic and preserve the degradation as first-class evidence.
 
+Review status: `04AP` closes the four-pass implementation and chooses a no-
+update per-trajectory influence diagnostic. The open risk is post-hoc outlier
+removal after observing individual alignments. Mitigation predeclares all 64
+trajectories, retains every sign, forbids ranking/removal/selection and permits
+only descriptive own/opposite aggregate alignment counts. No update or
+evaluation may convert the diagnostic into an unapproved optimization search.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

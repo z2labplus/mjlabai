@@ -511,6 +511,12 @@ projected cosines are positive, while final primary rewards remain `-312` and
 replication rewards move from `-1056` to `-1133` at seed `92`. This is
 mechanism plus bounded negative behavior evidence, not improvement or strength.
 
+`docs/04_rl_selfplay/04AP_P8_FOUR_PASS_CONFLICT_PROJECTED_TRAINING_IMPLEMENTATION_REVIEW.md`
+reviews commit `ad737a6`, records `A. Review can close`, preserves the primary
+no-change/replication-degradation evidence and rejects another projected pass
+or search. It directly approves one no-update per-trajectory cross-protocol
+gradient influence diagnostic. Zero docs gates remain before that exact code.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

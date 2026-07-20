@@ -2,13 +2,12 @@
 
 ## Current stage
 
-P8 lightweight implementation review of the exact `04AO` four-pass shared-
-policy symmetric conflict-projected diagnostic. Verify one shared parameter
-branch, exact four batches per protocol, fixed simultaneous projection/rate,
-continuity, no intermediate evaluation/selection and final existing windows.
-Preserve positive projected cosines plus primary no-change and replication
-`-77` degradation as negative behavior evidence. No expensive rerun, fifth
-pass, formula/rate/seed/window search, real data, strength claim or P9-P12.
+P8 implementation of the exact `04AP` first-pass per-trajectory cross-protocol
+gradient influence diagnostic. From identical initial parameters, collect
+exact `0..31` and `116..147` once each, retain each already-computed other-31
+trajectory gradient and measure its alignment against own/opposite aggregate
+means. Record all 64 signs and select/remove nothing. Zero updates/evaluations;
+no new gradient formula, third protocol/window, real data, strength or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -588,10 +587,9 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04AO` four-pass shared-policy conflict-projected
-implementation using recorded evidence/lightweight checks only. Verify helper
-compatibility, exact four-pass continuity, fixed method, final-only windows,
-complete provenance and no selection. Preserve primary zero delta and
-replication `-77` without improvement claim. Directly approve one materially
-different bounded coverage/objective task or stage decision; no docs chain,
-expensive rerun, fifth pass/search, strength claim or P9-P12.
+Implement the exact `04AP` per-trajectory gradient influence diagnostic. Reuse
+the existing private per-trajectory gradients for exact first batches and
+record each seed's group/global norm plus dot/cosine with both protocol
+aggregate means. Return all signs/counts in frozen array-free output with zero
+updates/evaluations and no trajectory ranking/removal/selection. No docs gate,
+new formula, search, real data, strength claim or P9-P12.

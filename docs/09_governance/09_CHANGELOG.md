@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.56
+
+- Added `04AP`; reviewed commit `ad737a6` against exact `04AO` approval.
+- Decision: `A. Review can close.` Helper compatibility, four-pass continuity,
+  fixed formula/rate/batches, final-only windows, provenance and no selection
+  conform. Lightweight checks reuse passing evidence without expensive rerun.
+- Preserved primary zero delta and replication `-77` at seed `92` as bounded
+  negative behavior evidence, not improvement.
+- Rejected a fifth pass and all projection/rate/seed/window search. Directly
+  approved one exact no-update per-trajectory cross-protocol gradient influence
+  diagnostic with zero docs gates before code.
+
 ## 2026-07-20 - v4.55
 
 - Implemented the exact `04AO` four-pass shared-policy symmetric conflict-

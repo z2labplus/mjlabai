@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact four-pass shared-policy symmetric conflict-projected
-  training and fixed-window diagnostic implementation.
+- [ ] Implement the exact first-pass per-trajectory cross-protocol gradient
+  influence diagnostic with no update or evaluation.
 
 Current execution charter:
 
@@ -23,20 +23,30 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only exact `04AO` source/test changes and recorded probe/focused/fast
-  evidence. Do not rerun the 2294-second focused test, probe, prior expensive
-  smokes or the full suite.
-- Verify private-helper compatibility, one shared branch, exact four-pass
-  continuity, fixed simultaneous projection/rate/batches, no intermediate
-  evaluation and final-only existing windows with complete provenance.
-- Preserve all negative original/positive projected cosine signs, primary
-  zero delta and replication `-77` at seed `92`. This is negative behavior
-  evidence, not improvement.
-- Directly approve/defer one materially different P8 coverage/objective task
-  or stage decision with no docs chain. No fifth pass, projection/rate/seed/
-  window search, real data, strength claim or P9-P12.
+- Follow exact `04AP` approval with zero docs gates before code.
+- From identical initial parameters collect exact frozen batches `0..31` and
+  `116..147` once each. Preserve reviewed other-31 baselines/objectives and
+  reuse each already-computed trajectory gradient without a second formula.
+- For all 64 trajectories record protocol/seed/hash, group/global norm and
+  dot/cosine against own and opposite aggregate mean gradients. Record fixed
+  negative/zero/positive opposite-alignment counts and retain every sign.
+- Apply zero updates and zero evaluations. Return frozen array-free output with
+  no seed ranking/removal, protocol/model/direction/checkpoint selection.
+- No fifth pass, projection/rate/optimizer/seed search, third protocol/window,
+  old expensive run, real data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Reviewed commit `ad737a6` against exact `04AO` approval in
+  `04AP`. Decision: `A. Review can close.` Confirmed private-helper
+  compatibility, one shared branch, exact four-pass continuity, fixed
+  projection/rate/batches, no intermediate evaluation, final-only windows,
+  complete provenance and no selection. Preserved primary zero delta and
+  replication `-77` at seed `92` as negative behavior evidence. Reused probe,
+  nine focused and 129 fast passing tests plus lightweight checks without
+  expensive rerun. Rejected another pass/search and directly approved one
+  exact no-update per-trajectory gradient influence diagnostic with zero docs
+  gates before code.
 
 - [x] 2026-07-20 Implemented the exact `04AO` four-pass shared-policy
   symmetric conflict-projected training/fixed-window diagnostic. One shared
