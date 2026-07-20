@@ -625,6 +625,12 @@ with focused coverage in
 It preserves two continuous updates and complete disjoint per-seed evaluation,
 including aggregate negative evidence. It is not strength evidence.
 
+`docs/04_rl_selfplay/04AY_P8_TWO_HALF_GAME_SEQUENCE_IMPLEMENTATION_REVIEW.md`
+reviews commit `191c243`, records `A. Review can close`, rejects further
+synthetic-only raw-return wrappers and activates a human decision gate for
+lawful replay data plus compute budget. It is review/resource-gate evidence,
+not strength or stage-promotion evidence.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

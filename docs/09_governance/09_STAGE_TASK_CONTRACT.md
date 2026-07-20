@@ -2,14 +2,14 @@
 
 ## Current stage
 
-P8 lightweight review of the exact `04AX` two-half-game sequential training and
-disjoint evaluation implementation. Verify existing-helper reuse, direct
-parameter continuity, exact ordered `(0,1)` updates, six legal full traces,
-zero evaluation updates, all terminal/objective/delta values and aggregate
-`-632 -> -634` with opposing seed changes. Reuse passing evidence unless a
-blocker requires rerun. If review closes, directly approve/defer a materially
-different learning mechanism or stop for human decision; a third raw-return
-game is prohibited. No persistence, real data, strength, Tenhou or P9-P12.
+Human decision gate after `04AY` review-closes the exact two-half-game sequence.
+No third synthetic-only raw-return game or reward wrapper is approved. The
+owner must identify a lawful project-provided/publicly licensed replay source
+with provenance/rights, choose local-only prototype or explicit external GPU/
+cloud budget and approve/reject controlled ingestion/feature/label/supervised-
+pretraining scope. Until recorded: no real/platform ingestion, unknown weights,
+expensive training, cloud use, production self-play/league, strength, Tenhou or
+P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition

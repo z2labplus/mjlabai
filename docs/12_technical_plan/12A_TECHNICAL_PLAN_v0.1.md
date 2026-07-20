@@ -28,12 +28,13 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 lightweight review of implemented exact `04AX` two-half-game sequential
-training/evaluation. Ordered `(0,1)` uses two continuous fixed `0.01` updates;
-disjoint `(2,3)` has zero updates and aggregate seat-0 raw sum `-632 -> -634`,
-with opposing per-seed changes retained. Review must prohibit blind third-game
-scale-up and directly choose a materially different mechanism or human gate.
-No persistence, strength, Tenhou or P9-P12 evidence is approved.
+Human data/compute decision gate after `04AY` review-closes exact two-half-game
+training at the synthetic-only evidence limit. Raw-return and causal-baseline
+variants retain aggregate `-632 -> -634`; a third wrapper is prohibited. The
+owner must approve a lawful replay source/provenance/rights record, local-only
+or external GPU/cloud budget/cap/artifact policy and controlled ingestion/
+feature/label/supervised-pretraining scope. Until then no material scale-up,
+strength, Tenhou or P9-P12 evidence is approved.
 ```
 
 ```text

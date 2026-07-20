@@ -27,13 +27,14 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current exact task is a lightweight review of implemented `04AX` two-half-game
-training. Ordered `(0,1)` directly carries parameters through two fixed `0.01`
-updates and 427/797 legal transitions. Disjoint greedy `(2,3)` evaluation has
-zero updates and records raw sum `-632 -> -634`: seed 2 degrades
-`-344 -> -387`, seed 3 improves `-288 -> -247`. Review must prohibit a blind
-third raw-return game and directly choose a materially different learning
-mechanism or stop for human decision. No strength, Tenhou or P9-P12 is approved.
+Current task is a human decision gate after `04AY` review-closed exact two-half-
+game training. Raw-return and causal-baseline probes preserve aggregate
+`-632 -> -634`; another synthetic wrapper is not justified. The repository has
+no training dataset/checkpoint/weight; local hardware is Apple M4 with 24 GB.
+The owner must approve a lawful replay source with provenance/rights, choose a
+local-only or explicit external GPU/cloud budget, and approve/reject controlled
+ingestion/feature/label/supervised-pretraining scope. Until then no real data,
+expensive training, strength, Tenhou or P9-P12 is approved.
 ```
 
 ```text

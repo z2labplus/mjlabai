@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact MahJax categorical-MLP-seat-0 two-half-game sequential
-  raw-outcome training and disjoint evaluation implementation.
+- [ ] Obtain human approval for a lawful training-data source and compute budget
+  before material P7/P8 scale-up.
 
 Current execution charter:
 
@@ -23,19 +23,26 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the exact `04AX` implementation commit: public/frozen array-free
-  API, existing-helper reuse, ordered seed identity, direct parameter
-  continuity, exact two updates, six complete legal traces and zero eval update.
-- Verify all per-game objective/delta/terminal values and retain aggregate
-  `-632 -> -634`, seed-2 degradation and seed-3 improvement without selection.
-- Reuse passing evidence unless a blocker requires rerun; change code only for
-  a genuine blocker. Do not add a proposal/boundary or a third game.
-- If review closes, directly approve/defer one materially different P8 learning
-  mechanism or stop P8 for a human decision; blind scale-up is prohibited.
-- No replay, search, persistence, real data, production self-play/league,
-  strength claim, Tenhou or P9-P12.
+- Human decision required: identify a project-provided or publicly licensed
+  riichi replay source with provenance, rights and permitted-use record.
+- Human decision required: choose local-only prototype compute or approve an
+  explicit external GPU/cloud budget, provider, cap and artifact policy.
+- Human decision required: approve or reject controlled real-data ingestion,
+  feature/label generation and supervised pretraining as the next material
+  path before returning to RL.
+- Until decided, do not add a third synthetic raw-return game, another reward
+  wrapper, real/platform ingestion, unknown weights, expensive training,
+  self-play, league, cloud resources, strength claims or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Reviewed commit `191c243` in `04AY`; decision
+  `A. Review can close.` Existing-helper reuse, direct parameter continuity,
+  exact two updates, all six legal traces, zero evaluation updates and opposing
+  per-seed outcomes conform. A fixed causal prior-only baseline probe changes
+  update magnitude but reproduces the same `-632 -> -634` evaluated behavior.
+  No third synthetic-only training task is approved. Material progress now
+  requires owner approval of lawful training data and compute budget.
 
 - [x] 2026-07-20 Implemented exact `04AX` two-half-game sequential training and
   disjoint evaluation. Ordered seeds `(0,1)` run 427/797 legal transitions,

@@ -8,6 +8,23 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Two-half-game review closure and material-resource gate
+
+- Type: P8 implementation-review closure, negative mechanism evidence and
+  human resource/authorization decision gate.
+- `04AY` finds no blocker in commit `191c243`; all exact sequential-training and
+  disjoint-evaluation evidence remains accepted.
+- A causal prior-only baseline changes the second update weight from `-2.59` to
+  `-2.06` but preserves the exact seeds 2/3 behavior and aggregate
+  `-632 -> -634`. No baseline branch is selected.
+- The repository is about 102 MB and contains no training dataset, checkpoint
+  or model weight. The local host is Apple M4 with 24 GB unified memory.
+- Synthetic-only raw-return work is paused at its useful evidence limit. Owner
+  approval is required for a lawful data source and compute budget before
+  material scale-up.
+- This is review/resource-gate evidence only, not model strength, Tenhou,
+  stable-dan, LuckyJ 10.68, promotion or P9-P12 evidence.
+
 ### 2026-07-20 — Executable two-half-game sequential training
 
 - Type: executable P8 local multi-half-game training and disjoint negative

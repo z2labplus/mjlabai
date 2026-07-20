@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.74
+
+- Added `04AY`; review accepts commit `191c243` with no implementation blocker
+  and reuses passing focused/neighboring evidence.
+- A causal prior-only baseline changes the second advantage to `-2.06` but
+  reproduces the same disjoint `-632 -> -634` evaluated behavior.
+- Stopped synthetic-only raw-return scale-up: no third half-game or additional
+  reward wrapper is approved without material new input.
+- Recorded a human decision gate for lawful replay-data provenance/rights and
+  compute budget. The local Apple M4/24 GB machine remains suitable for small
+  prototypes, not north-star-scale training by itself.
+
 ## 2026-07-20 - v4.73
 
 - Added the exact `04AX` two-half-game sequential seat-0 raw-outcome training

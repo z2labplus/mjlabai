@@ -27,7 +27,10 @@
 | One terminal return repeated over every seat-0 decision has high variance and weak credit assignment | ML / Objective | Critical | Realized | Keep exact negative result; next review must directly choose one bounded variance/credit-assignment task or defer, without seed/rate search | Open |
 | Two sequential half-games are mistaken for sufficient RL scale or robustness | ML / Scale | Critical | Realized | Implementation fixes two train/two eval seeds, retains aggregate `-632 -> -634` and opposing per-seed changes, and prohibits a third game or scale claim | Mitigated as bounded evidence |
 | Opposing seed-level changes are selectively reported | Evaluation / Integrity | Critical | Realized | Frozen output returns both complete per-seed initial/final traces and fixed aggregate; no selected model/seed or rollback field exists | Mitigated |
-| Repeating terminal raw-return updates is scaled despite no aggregate gain | Governance / Research | Critical | High | The implementation review must prohibit a third game and directly choose a materially different mechanism or human decision | Open |
+| Repeating terminal raw-return updates is scaled despite no aggregate gain | Governance / Research | Critical | Realized | `04AY` prohibits a third synthetic-only game/reward wrapper and moves to a human data/compute decision gate | Mitigated |
+| Synthetic-only smoke evidence is treated as sufficient input for the north-star model | Research / Data | Critical | High | Record that the repository has no training dataset/weight and require lawful replay-source approval before material P7/P8 scale-up | Open |
+| Local M4/24 GB development hardware is assumed sufficient for north-star-scale training | Infrastructure / Compute | Critical | High | Require explicit local-prototype versus external GPU/cloud budget decision with spend/time/artifact caps | Open |
+| Real replay acquisition bypasses rights, privacy or platform-policy review | Compliance / Data | Critical | High | Accept only owner-provided or publicly licensed data with provenance/rights record; forbid scraping, account automation and unapproved platform ingestion | Open |
 
 ## 2026-07-18 — P8 five-round training/fixed-evaluation approval risks
 
