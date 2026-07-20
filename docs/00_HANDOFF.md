@@ -27,6 +27,17 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
+Latest executable status: the exact pinned MahJax half-game rule-policy smoke
+is implemented. Seed 0 runs 938 legal transitions in one 2048-capped loop,
+records eight round boundaries and complete global/round-local provenance, then
+terminates naturally at round 8 without truncation. Final scores are
+`(203,441,76,280)` and cumulative raw rewards `(73,151,-284,10)`. Nine focused
+and 34 neighboring environment tests pass. Current task is one lightweight
+implementation review that must directly approve/defer a read-only project-
+model half-game diagnostic. This is environment evidence, not strength.
+```
+
+```text
 Current task after `04AU`: implement one exact pinned local MahJax half-game
 bundled-rule-policy rollout smoke. The prior four-pass unit-gradient branch is
 review-closed with primary delta 0 and replication delta -77 at seed 92; a

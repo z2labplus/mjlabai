@@ -2,14 +2,13 @@
 
 ## Current stage
 
-P4/P8 exact `04AU` pinned local MahJax half-game bundled-rule-policy rollout
-smoke. Add only the approved source/test plus optional direct exports and
-governance. Use `round_mode="half"`, seed 0, all four bundled rule seats, one
-2048-capped loop and environment-owned legal actions. Pin 938 transitions,
-natural round-8 termination, complete transition/round/reward/score provenance
-and final scores `(203,441,76,280)`. No project model, learning, update,
-optimizer, checkpoint, production self-play/league, real data, Tenhou,
-strength claim or P9-P12.
+P4/P8 lightweight code review of the exact implemented `04AU` pinned local
+MahJax half-game bundled-rule-policy rollout. Reuse passing evidence and verify
+runtime/mode/RNG pins, one hard-capped loop, all 938 legal transitions, eight
+round boundaries, exact terminal rewards/scores, errors, immutable API and
+forbidden scope. No project model, update, production self-play, real data,
+strength claim or P9-P12. Review must directly approve/defer one exact read-only
+project-model half-game diagnostic without another boundary/proposal chain.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition

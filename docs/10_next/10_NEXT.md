@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement one exact pinned MahJax half-game bundled-rule-policy rollout
-  smoke as the next P4/P8 environment prerequisite.
+- [ ] Review the exact pinned MahJax half-game bundled-rule-policy rollout
+  smoke implementation.
 
 Current execution charter:
 
@@ -23,21 +23,28 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Add only the exact `04AU` source/test pair, optional direct environment
-  exports and governance synchronization.
-- Pin MahJax `0.1.2`, red-mahjong `beta`, JAX CPU, `round_mode="half"`,
-  `next_round_style="auto"`, exact seed `0` and bundled rule policy at all four
-  seats.
-- One explicit loop, hard cap `2048`, environment-owned legal masks and one
-  step per selected legal action. Record full transition/round provenance,
-  round boundaries, raw/cumulative rewards and global final scores.
-- Pin the reviewed probe: 938 legal transitions, natural termination at round
-  8, no truncation, final scores `(203,441,76,280)`, final raw rewards
-  `(-3,-3,-5,21)` and cumulative raw rewards `(73,151,-284,10)`.
-- No project model, learning/update/optimizer/checkpoint, production self-play,
-  league, real data, Tenhou connection, strength claim or P9-P12.
+- Reuse the passing focused and neighboring environment evidence; rerun only
+  lightweight checks unless a concrete blocker appears.
+- Verify exact runtime pins, `half`/`auto`, seed/RNG lineage, one 2048-capped
+  loop, environment-owned legality, all 938 transitions, eight round
+  boundaries, raw/cumulative rewards, final scores and frozen array-free API.
+- Confirm exact terminal result `(203,441,76,280)`, natural round-8 termination,
+  no truncation and no illegal action.
+- Confirm no project model, learning/update/optimizer/checkpoint, production
+  self-play, league, real data, Tenhou connection, strength claim or P9-P12.
+- Review must directly approve/defer one exact project-model half-game read-only
+  rollout diagnostic; do not add another environment boundary or proposal.
 
 ## Completed
+
+- [x] 2026-07-20 Implemented the exact `04AU` pinned local MahJax half-game
+  bundled-rule-policy rollout. One seed-0 `half`/`auto` path executes 938 legal
+  transitions under a 2048 cap, records global/round-local trace and eight
+  boundaries, terminates naturally at round 8 without truncation, and records
+  final scores `(203,441,76,280)` plus cumulative rewards
+  `(73,151,-284,10)`. Nine focused tests pass in `55.282s`; 34 neighboring
+  environment tests pass in `72.974s`, plus compile/dependency/diff checks.
+  No project model, learning, production self-play, strength or P9-P12.
 
 - [x] 2026-07-20 Reviewed commit `4ccd386` in `04AU`; decision
   `A. Review can close.` Confirmed exact four-pass continuity, fixed batches,

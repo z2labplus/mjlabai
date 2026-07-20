@@ -40,6 +40,16 @@ from mjlabai.environment.mahjax_rule_based_single_round_smoke import (
     run_mahjax_rule_based_single_round_smoke,
 )
 
+from mjlabai.environment.mahjax_rule_based_half_game_smoke import (
+    MAHJAX_RULE_BASED_HALF_GAME_SMOKE_VERSION,
+    MAHJAX_RULE_BASED_HALF_GAME_TRANSITION_CAP,
+    MahJaxRuleBasedHalfGameResult,
+    MahJaxRuleBasedHalfGameRoundBoundary,
+    MahJaxRuleBasedHalfGameSmokeError,
+    MahJaxRuleBasedHalfGameStep,
+    run_mahjax_rule_based_half_game_smoke,
+)
+
 from mjlabai.environment.synthetic_transition_smoke import (
     SYNTHETIC_ENVIRONMENT_ID,
     SYNTHETIC_ENVIRONMENT_TRANSITION_SMOKE_VERSION,
@@ -59,6 +69,8 @@ __all__ = [
     "MAHJAX_LINEAR_POLICY_ROUND_SMOKE_VERSION",
     "MAHJAX_LINEAR_POLICY_TRANSITION_CAP",
     "MAHJAX_PACKAGE_VERSION",
+    "MAHJAX_RULE_BASED_HALF_GAME_SMOKE_VERSION",
+    "MAHJAX_RULE_BASED_HALF_GAME_TRANSITION_CAP",
     "MAHJAX_RULE_BASED_SINGLE_ROUND_SMOKE_VERSION",
     "MAHJAX_RULE_BASED_SINGLE_ROUND_TRANSITION_CAP",
     "MAHJAX_SINGLE_ROUND_ROLLOUT_SMOKE_VERSION",
@@ -76,6 +88,10 @@ __all__ = [
     "MahJaxLinearPolicyRoundResult",
     "MahJaxLinearPolicyRoundSmokeError",
     "MahJaxLinearPolicyStep",
+    "MahJaxRuleBasedHalfGameResult",
+    "MahJaxRuleBasedHalfGameRoundBoundary",
+    "MahJaxRuleBasedHalfGameSmokeError",
+    "MahJaxRuleBasedHalfGameStep",
     "MahJaxRuleBasedSingleRoundResult",
     "MahJaxRuleBasedSingleRoundSmokeError",
     "MahJaxRuleBasedSingleRoundStep",
@@ -86,6 +102,7 @@ __all__ = [
     "encode_mahjax_public_observation",
     "run_mahjax_integration_smoke",
     "run_mahjax_linear_policy_round_smoke",
+    "run_mahjax_rule_based_half_game_smoke",
     "run_mahjax_rule_based_single_round_smoke",
     "run_mahjax_single_round_rollout_smoke",
 ]

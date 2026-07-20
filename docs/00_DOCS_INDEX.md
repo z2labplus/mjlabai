@@ -576,6 +576,12 @@ rule-policy rollout smoke. A seed-0 feasibility probe terminates after 938
 legal transitions at round 8. This is environment-prerequisite approval only,
 not project-model training, self-play strength or P9-P12 evidence.
 
+That exact half-game smoke now exists in
+`src/mjlabai/environment/mahjax_rule_based_half_game_smoke.py` with direct
+environment exports and focused tests. Seed 0 records all 938 legal
+transitions, eight round boundaries and final scores `(203,441,76,280)` before
+natural termination. This is P4/P8 local environment smoke evidence only.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

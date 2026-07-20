@@ -28,6 +28,16 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
+P4/P8 lightweight review of the implemented exact pinned local MahJax half-
+game bundled-rule-policy rollout. Seed 0 executes 938 legal transitions in one
+2048-capped loop, records eight round boundaries and complete provenance, and
+terminates naturally at round 8 without truncation. Final scores are
+`(203,441,76,280)`; nine focused and 34 neighboring environment tests pass.
+Review must directly approve/defer one read-only project-model half-game
+diagnostic. No training, strength, Tenhou or P9-P12 conclusion follows.
+```
+
+```text
 P4/P8 implementation of the exact `04AU`-approved pinned local MahJax half-
 game bundled-rule-policy rollout smoke. `04AU` closes review of commit
 `4ccd386`, preserves primary 0 and replication -77 as negative fixed-window

@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.67
+
+- Added the exact `04AU` pinned MahJax half-game bundled-rule-policy rollout
+  module, environment exports and focused tests.
+- Seed 0 executes 938 environment-owned legal transitions in one 2048-capped
+  loop, records all round-local/global identities and eight round boundaries,
+  and terminates naturally at round 8 without truncation.
+- Exact final scores are `(203,441,76,280)`; final/cumulative raw rewards are
+  `(-3,-3,-5,21)` and `(73,151,-284,10)`.
+- Nine focused and 34 neighboring environment tests pass, plus compile,
+  dependency and diff checks. No model, learning, real data or strength claim.
+
 ## 2026-07-20 - v4.66
 
 - Added `04AU`; reviewed commit `4ccd386` and recorded

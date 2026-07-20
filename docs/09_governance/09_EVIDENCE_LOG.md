@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Executable pinned MahJax half-game environment smoke
+
+- Type: executable P4/P8 local full-game environment-prerequisite evidence.
+- Added one `round_mode="half"`, `next_round_style="auto"`, seed-0 bundled-
+  rule-policy rollout with one 2048-capped loop and environment-owned legality.
+- All 938 transitions include global and round-local identity, actor, legal
+  actions and selected action; eight round boundaries retain score lineage.
+- The game terminates naturally at round 8 without truncation or illegal
+  action. Final scores are `(203,441,76,280)`; final/cumulative raw rewards are
+  `(-3,-3,-5,21)` and `(73,151,-284,10)`.
+- Nine focused tests pass in `55.282s`; 34 neighboring environment tests pass
+  in `72.974s`, plus compile/dependency/diff checks.
+- Evidence is local rule-policy half-game environment smoke only, not project-
+  model behavior, training, self-play strength, Tenhou, LuckyJ or P9-P12.
+
 ### 2026-07-20 — Four-pass review closure and half-game prerequisite approval
 
 - Type: exact P8 implementation-review closure plus P4/P8 local environment-
