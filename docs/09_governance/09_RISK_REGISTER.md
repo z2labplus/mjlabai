@@ -350,6 +350,12 @@ their full scalar influence/provenance, forbids outlier ranking/removal and
 requires review to choose a predeclared data/objective diagnostic without
 turning observed seeds into a search space.
 
+Review status: `04AQ` approves only anonymous magnitude concentration over the
+same 64 dots. Fixed top-share summaries could still be misused as implicit
+outlier-selection rationale. Mitigation forbids returning ranked identities,
+threshold search, clipping, reweighting or removal; summaries are descriptive
+and must retain the signed-sum/aggregate-dot invariant.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

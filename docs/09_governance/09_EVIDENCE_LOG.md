@@ -8,6 +8,16 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Per-trajectory influence review and magnitude approval
+
+- Type: exact P8 implementation-review closure plus bounded descriptive
+  magnitude diagnostic approval.
+- `04AQ` records `A. Review can close` for commit `8e483ad`; no blocker exists.
+- All 64 records, mixed signs, zero updates/evaluations and no selection conform.
+- Sign counts do not establish magnitude causality. Fixed anonymous HHI,
+  effective-count/cancellation/top-share summaries are directly approved over
+  the same dots, with no seed identities, filtering or strength claim.
+
 ### 2026-07-20 — Executable per-trajectory gradient influence diagnostic
 
 - Type: executable P8 local training-signal heterogeneity diagnostic evidence.

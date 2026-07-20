@@ -524,6 +524,11 @@ aggregate `14` negative/`18` positive; alternate trajectories align `18`
 negative/`14` positive. All 64 are retained. This is heterogeneous training-
 signal evidence only, not a basis for removing seeds or claiming strength.
 
+`docs/04_rl_selfplay/04AQ_P8_PER_TRAJECTORY_GRADIENT_INFLUENCE_IMPLEMENTATION_REVIEW.md`
+reviews commit `8e483ad`, records `A. Review can close` and directly approves
+fixed anonymous magnitude-concentration summaries over the same 64 opposite-
+alignment dots. No seed filtering or identity ranking is approved.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact first-pass per-trajectory cross-protocol gradient
-  influence diagnostic implementation.
+- [ ] Add exact opposite-alignment magnitude-concentration summaries to the
+  existing per-trajectory gradient influence diagnostic.
 
 Current execution charter:
 
@@ -23,19 +23,25 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only exact `04AP` source/test changes and recorded probe/focused/fast
-  evidence. Do not rerun the 598-second focused test, probe, prior expensive
-  smokes or the full suite.
-- Verify existing batch accumulation is unchanged, exact first batches share
-  initial parameters, all 64 own/opposite alignments/provenance are retained,
-  aggregate geometry/sign counts are pinned and updates/evaluations are zero.
-- Preserve reference opposite `14-/18+` and alternate `18-/14+` as mixed
-  heterogeneity evidence. Do not claim magnitude causality or identify outliers.
-- Confirm no ranking/removal/selection and directly approve/defer one materially
-  different P8 data/objective task or stage decision with no docs chain.
-- No seed filtering/search, new protocol/window, real data, strength or P9-P12.
+- Follow exact `04AQ` approval with zero docs gates before code.
+- Reuse only the existing 64 opposite-aggregate dots. For each protocol record
+  signed sum, positive sum, absolute negative/total sum, net cancellation,
+  absolute-contribution HHI/effective count and fixed top-1/4/8 shares.
+- Verify signed sum divided by 32 equals the aggregate dot. Preserve every
+  trajectory and zero update/evaluation counts.
+- Internal sorting is only for anonymous fixed shares. Return no ranked seed
+  identity and provide no filtering, clipping, reweighting or selection API.
+- No threshold/search, new data/protocol/window, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Reviewed commit `8e483ad` against exact `04AP` approval in
+  `04AQ`. Decision: `A. Review can close.` Confirmed retained-gradient
+  compatibility, exact batches, all 64 own/opposite records and mixed counts,
+  zero updates/evaluations and no ranking/removal/selection. Reused passing
+  evidence without expensive rerun. Preserved sign heterogeneity without
+  magnitude-causality claim and directly approved anonymous fixed magnitude-
+  concentration summaries with zero docs gates before code.
 
 - [x] 2026-07-20 Implemented the exact `04AP` first-pass per-trajectory cross-
   protocol gradient influence diagnostic. Existing private batch computation

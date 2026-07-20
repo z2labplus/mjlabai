@@ -1,5 +1,14 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.58
+
+- Added `04AQ`; reviewed commit `8e483ad` and recorded `A. Review can close`.
+- Confirmed retained-gradient compatibility, exact 64 records, mixed pinned
+  signs, zero updates/evaluations and no ranking/removal/selection.
+- Preserved sign heterogeneity without claiming magnitude causality.
+- Directly approved fixed anonymous magnitude-concentration summaries over the
+  same dots. No seed filtering, search, strength claim or P9-P12 was added.
+
 ## 2026-07-20 - v4.57
 
 - Implemented the exact `04AP` first-pass per-trajectory cross-protocol

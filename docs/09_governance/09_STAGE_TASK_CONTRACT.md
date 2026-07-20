@@ -2,12 +2,11 @@
 
 ## Current stage
 
-P8 lightweight implementation review of the exact `04AP` first-pass per-
-trajectory cross-protocol gradient influence diagnostic. Verify retained-
-gradient compatibility, exact batches/initial parameters, all 64 complete own/
-opposite alignments and sign counts, zero updates/evaluations and no seed
-ranking/removal/selection. Preserve mixed signs without outlier or causality
-claim. No expensive rerun, data/search expansion, strength claim or P9-P12.
+P8 implementation of exact `04AQ` anonymous opposite-alignment magnitude-
+concentration summaries. Reuse only the existing 64 dots and record fixed
+signed/positive/negative/absolute sums, cancellation, HHI/effective count and
+top-1/4/8 absolute shares. Preserve all records and zero updates/evaluations.
+No seed identity ranking/filtering, threshold/search, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -587,9 +586,7 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04AP` per-trajectory influence implementation using recorded
-evidence/lightweight checks only. Verify unchanged batch accumulation, all 64
-records/provenance, exact aggregate geometry/sign counts, zero updates/
-evaluations and no ranking/removal/selection. Preserve heterogeneity without
-magnitude-causality claim. Directly approve one materially different bounded
-data/objective task or stage decision; no docs chain, rerun, search or P9-P12.
+Add the exact `04AQ` magnitude summaries to the existing per-trajectory result
+and test. Verify signed-sum/32 equals aggregate dot; expose no ranked seed
+identity. Use the same run and records with zero update/evaluation. No docs
+gate, filtering/reweighting, threshold search, new data, strength or P9-P12.
