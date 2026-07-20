@@ -238,6 +238,7 @@ class _BatchUpdate:
 @dataclass(frozen=True)
 class _BatchGradients:
     gradient_sums: tuple
+    trajectory_gradients: tuple
     leave_one_out_seat_baselines: Tuple[Tuple[float, ...], ...]
     advantage_seat_returns: Tuple[Tuple[float, ...], ...]
     decision_advantages: tuple
@@ -304,6 +305,7 @@ def _calculate_leave_one_out_batch_gradients(
     gradient_sums = tuple(jnp.zeros_like(value) for value in parameters)
     initial_objectives = []
     decision_advantages = []
+    trajectory_gradients = []
     for trajectory, seat_advantages in zip(trajectories, advantages):
         actor_advantages = jnp.asarray(seat_advantages, dtype=jnp.float32)[
             trajectory.actors
@@ -323,12 +325,14 @@ def _calculate_leave_one_out_batch_gradients(
             parameters
         )
         initial_objectives.append(float(initial_objective))
+        trajectory_gradients.append(gradients)
         gradient_sums = tuple(
             total + gradient for total, gradient in zip(gradient_sums, gradients)
         )
 
     return _BatchGradients(
         gradient_sums=gradient_sums,
+        trajectory_gradients=tuple(trajectory_gradients),
         leave_one_out_seat_baselines=baselines,
         advantage_seat_returns=advantages,
         decision_advantages=tuple(decision_advantages),

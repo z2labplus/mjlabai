@@ -517,6 +517,13 @@ no-change/replication-degradation evidence and rejects another projected pass
 or search. It directly approves one no-update per-trajectory cross-protocol
 gradient influence diagnostic. Zero docs gates remain before that exact code.
 
+That exact per-trajectory diagnostic now exists in
+`src/mjlabai/rl/mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influence_smoke.py`
+with matching focused tests. Reference trajectories align with the opposite
+aggregate `14` negative/`18` positive; alternate trajectories align `18`
+negative/`14` positive. All 64 are retained. This is heterogeneous training-
+signal evidence only, not a basis for removing seeds or claiming strength.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

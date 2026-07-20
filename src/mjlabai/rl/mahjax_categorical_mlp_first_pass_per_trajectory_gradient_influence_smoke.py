@@ -1,0 +1,457 @@
+"""Measure each fixed trajectory gradient against two protocol aggregates."""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+import math
+from typing import Optional, Tuple
+
+from mjlabai.environment.mahjax_integration_smoke import (
+    MAHJAX_ENVIRONMENT_ID as _MAHJAX_ENVIRONMENT_ID,
+    MAHJAX_ENVIRONMENT_VERSION as _MAHJAX_ENVIRONMENT_VERSION,
+    MAHJAX_PACKAGE_VERSION as _MAHJAX_PACKAGE_VERSION,
+)
+from mjlabai.rl.mahjax_categorical_mlp_all_project_policy_gradient_smoke import (
+    _collect_all_project_round,
+    _load_pinned_runtime,
+)
+from mjlabai.rl.mahjax_categorical_mlp_four_pass_leave_one_out_batch_training_protocol_smoke import (  # noqa: E501
+    MAHJAX_CATEGORICAL_MLP_FOUR_PASS_LEAVE_ONE_OUT_BATCH_ALTERNATE_TRAINING_SEEDS,
+    MAHJAX_CATEGORICAL_MLP_FOUR_PASS_LEAVE_ONE_OUT_BATCH_REFERENCE_TRAINING_SEEDS,
+    _calculate_leave_one_out_batch_gradients,
+    _trace_sha256,
+)
+from mjlabai.supervised.mahjax_categorical_mlp_imitation_training_smoke import (
+    _train_mahjax_categorical_mlp_parameters,
+)
+
+
+MAHJAX_CATEGORICAL_MLP_FIRST_PASS_PER_TRAJECTORY_GRADIENT_INFLUENCE_SMOKE_VERSION = (
+    "p8_mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influence_smoke_v0.1"
+)
+
+_TRAJECTORIES_PER_PROTOCOL = 32
+_REFERENCE_PROTOCOL_ID = "reference_ordered_0_31_per_trajectory_influence"
+_ALTERNATE_PROTOCOL_ID = "alternate_ordered_116_147_per_trajectory_influence"
+_EXPECTED_AGGREGATE_DOT_PRODUCT = -0.0001429308561853304
+_EXPECTED_AGGREGATE_COSINE_SIMILARITY = -0.18687683284469966
+_EXPECTED_REFERENCE_OWN_ALIGNMENT_SIGN_COUNTS = (13, 0, 19)
+_EXPECTED_REFERENCE_OPPOSITE_ALIGNMENT_SIGN_COUNTS = (14, 0, 18)
+_EXPECTED_ALTERNATE_OWN_ALIGNMENT_SIGN_COUNTS = (7, 0, 25)
+_EXPECTED_ALTERNATE_OPPOSITE_ALIGNMENT_SIGN_COUNTS = (18, 0, 14)
+_EVIDENCE_GRADE = (
+    "P8 local exact first-pass per-trajectory cross-protocol gradient influence "
+    "diagnostic evidence only"
+)
+_WARNINGS = (
+    "exact two predeclared first-pass batches from identical initial parameters",
+    "all 64 already-computed other-31 trajectory gradients are retained",
+    "each trajectory is compared with own and opposite aggregate mean gradients",
+    "negative, zero and positive signs are descriptive and no threshold is searched",
+    "no trajectory is ranked, removed, clipped, selected or promoted",
+    "zero parameter updates and zero policy evaluations",
+    "no third protocol, seed search, additional window or real data",
+    "no projection, rate, optimizer, entropy, temperature or exploration search",
+    "no replay buffer, persistence, artifact, external or real data",
+    "not robustness, generalization, policy-quality or model-strength evidence",
+    "not stable-dan, candidate-promotion, Tenhou or LuckyJ 10.68 evidence",
+)
+
+
+class MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeError(
+    RuntimeError
+):
+    """Raised when the exact per-trajectory influence contract fails."""
+
+
+@dataclass(frozen=True)
+class MahJaxCategoricalMlpTrajectoryGradientInfluenceResult:
+    protocol_id: str
+    seed: int
+    transition_count: int
+    action_trace_sha256: str
+    cumulative_raw_rewards: Tuple[float, ...]
+    final_scores: Tuple[int, ...]
+    parameter_group_gradient_l2: Tuple[float, ...]
+    global_gradient_l2: float
+    own_aggregate_dot_product: float
+    own_aggregate_cosine_similarity: Optional[float]
+    opposite_aggregate_dot_product: float
+    opposite_aggregate_cosine_similarity: Optional[float]
+    all_values_finite: bool
+
+
+@dataclass(frozen=True)
+class MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult:
+    protocol_id: str
+    training_seeds: Tuple[int, ...]
+    trajectory_count: int
+    parameter_group_shapes: Tuple[Tuple[int, ...], ...]
+    aggregate_parameter_group_gradient_l2: Tuple[float, ...]
+    aggregate_global_gradient_l2: float
+    batch_initial_objective: float
+    transition_counts: Tuple[int, ...]
+    action_trace_sha256: Tuple[str, ...]
+    cumulative_raw_rewards: Tuple[Tuple[float, ...], ...]
+    final_scores: Tuple[Tuple[int, ...], ...]
+    leave_one_out_seat_baselines: Tuple[Tuple[float, ...], ...]
+    advantage_seat_returns: Tuple[Tuple[float, ...], ...]
+    initial_trajectory_objectives: Tuple[float, ...]
+    trajectories: Tuple[MahJaxCategoricalMlpTrajectoryGradientInfluenceResult, ...]
+    own_alignment_sign_counts: Tuple[int, int, int]
+    opposite_alignment_sign_counts: Tuple[int, int, int]
+    all_training_actions_legal: bool
+    all_rounds_terminated: bool
+    all_advantage_sums_centered: bool
+
+
+@dataclass(frozen=True)
+class MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceResult:
+    smoke_version: str
+    package_version: str
+    environment_id: str
+    environment_version: str
+    trajectories_per_protocol: int
+    total_training_trajectory_count: int
+    training_update_count: int
+    evaluation_call_count: int
+    evaluation_update_count: int
+    reference: MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult
+    alternate: MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult
+    aggregate_global_gradient_dot_product: float
+    aggregate_global_gradient_cosine_similarity: float
+    selected_training_protocol_id: Optional[str]
+    selected_model_id: Optional[str]
+    selected_trajectory_seed: Optional[int]
+    selected_gradient_direction: Optional[str]
+    selected_checkpoint_id: Optional[str]
+    safety_guardrails_all_satisfied: bool
+    evidence_grade: str
+    warnings: Tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class _CollectedProtocolGradients:
+    protocol_id: str
+    training_seeds: Tuple[int, ...]
+    trajectories: tuple
+    batch_gradients: object
+    mean_gradients: tuple
+    parameter_group_shapes: Tuple[Tuple[int, ...], ...]
+    aggregate_parameter_group_gradient_l2: Tuple[float, ...]
+    aggregate_global_gradient_l2: float
+    all_training_actions_legal: bool
+    all_rounds_terminated: bool
+    all_advantage_sums_centered: bool
+
+
+def _group_norms(values, jnp):
+    return tuple(float(jnp.linalg.norm(value)) for value in values)
+
+
+def _global_norm(group_norms):
+    return math.sqrt(sum(value * value for value in group_norms))
+
+
+def _dot(left, right, jnp):
+    return sum(float(jnp.vdot(a, b)) for a, b in zip(left, right))
+
+
+def _cosine(dot_product, left_norm, right_norm):
+    denominator = left_norm * right_norm
+    return dot_product / denominator if denominator > 0.0 else None
+
+
+def _alignment_sign_counts(values):
+    return (
+        sum(value < 0.0 for value in values),
+        sum(value == 0.0 for value in values),
+        sum(value > 0.0 for value in values),
+    )
+
+
+def _all_finite(values):
+    return all(value is None or math.isfinite(value) for value in values)
+
+
+def _collect_protocol_gradients(
+    protocol_id,
+    training_seeds,
+    parameters,
+    jax,
+    jnp,
+    mahjax,
+):
+    trajectories = tuple(
+        _collect_all_project_round(seed, parameters, jax, jnp, mahjax)
+        for seed in training_seeds
+    )
+    batch_gradients = _calculate_leave_one_out_batch_gradients(
+        parameters,
+        trajectories,
+        jax,
+        jnp,
+    )
+    mean_gradients = tuple(
+        jax.block_until_ready(gradient / _TRAJECTORIES_PER_PROTOCOL)
+        for gradient in batch_gradients.gradient_sums
+    )
+    group_norms = _group_norms(mean_gradients, jnp)
+    return _CollectedProtocolGradients(
+        protocol_id=protocol_id,
+        training_seeds=training_seeds,
+        trajectories=trajectories,
+        batch_gradients=batch_gradients,
+        mean_gradients=mean_gradients,
+        parameter_group_shapes=tuple(tuple(value.shape) for value in parameters),
+        aggregate_parameter_group_gradient_l2=group_norms,
+        aggregate_global_gradient_l2=_global_norm(group_norms),
+        all_training_actions_legal=all(
+            action in legal
+            for trajectory in trajectories
+            for action, legal in zip(
+                trajectory.action_trace,
+                trajectory.legal_action_trace,
+            )
+        ),
+        all_rounds_terminated=all(
+            trajectory.final_scores is not None for trajectory in trajectories
+        ),
+        all_advantage_sums_centered=all(
+            abs(
+                sum(
+                    row[seat]
+                    for row in batch_gradients.advantage_seat_returns
+                )
+            )
+            <= 1e-9
+            for seat in range(4)
+        ),
+    )
+
+
+def _build_protocol_result(collected, opposite, jnp):
+    trajectory_results = []
+    for seed, trajectory, gradients in zip(
+        collected.training_seeds,
+        collected.trajectories,
+        collected.batch_gradients.trajectory_gradients,
+    ):
+        group_norms = _group_norms(gradients, jnp)
+        global_norm = _global_norm(group_norms)
+        own_dot = _dot(gradients, collected.mean_gradients, jnp)
+        opposite_dot = _dot(gradients, opposite.mean_gradients, jnp)
+        own_cosine = _cosine(
+            own_dot,
+            global_norm,
+            collected.aggregate_global_gradient_l2,
+        )
+        opposite_cosine = _cosine(
+            opposite_dot,
+            global_norm,
+            opposite.aggregate_global_gradient_l2,
+        )
+        trajectory_results.append(
+            MahJaxCategoricalMlpTrajectoryGradientInfluenceResult(
+                protocol_id=collected.protocol_id,
+                seed=seed,
+                transition_count=len(trajectory.action_trace),
+                action_trace_sha256=_trace_sha256(trajectory.action_trace),
+                cumulative_raw_rewards=trajectory.cumulative_rewards,
+                final_scores=trajectory.final_scores,
+                parameter_group_gradient_l2=group_norms,
+                global_gradient_l2=global_norm,
+                own_aggregate_dot_product=own_dot,
+                own_aggregate_cosine_similarity=own_cosine,
+                opposite_aggregate_dot_product=opposite_dot,
+                opposite_aggregate_cosine_similarity=opposite_cosine,
+                all_values_finite=_all_finite(
+                    (
+                        *group_norms,
+                        global_norm,
+                        own_dot,
+                        own_cosine,
+                        opposite_dot,
+                        opposite_cosine,
+                    )
+                ),
+            )
+        )
+    public_trajectories = tuple(trajectory_results)
+    return MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult(
+        protocol_id=collected.protocol_id,
+        training_seeds=collected.training_seeds,
+        trajectory_count=len(collected.trajectories),
+        parameter_group_shapes=collected.parameter_group_shapes,
+        aggregate_parameter_group_gradient_l2=(
+            collected.aggregate_parameter_group_gradient_l2
+        ),
+        aggregate_global_gradient_l2=collected.aggregate_global_gradient_l2,
+        batch_initial_objective=(
+            sum(collected.batch_gradients.initial_trajectory_objectives)
+            / _TRAJECTORIES_PER_PROTOCOL
+        ),
+        transition_counts=tuple(
+            len(trajectory.action_trace) for trajectory in collected.trajectories
+        ),
+        action_trace_sha256=tuple(
+            _trace_sha256(trajectory.action_trace)
+            for trajectory in collected.trajectories
+        ),
+        cumulative_raw_rewards=tuple(
+            trajectory.cumulative_rewards for trajectory in collected.trajectories
+        ),
+        final_scores=tuple(
+            trajectory.final_scores for trajectory in collected.trajectories
+        ),
+        leave_one_out_seat_baselines=(
+            collected.batch_gradients.leave_one_out_seat_baselines
+        ),
+        advantage_seat_returns=collected.batch_gradients.advantage_seat_returns,
+        initial_trajectory_objectives=(
+            collected.batch_gradients.initial_trajectory_objectives
+        ),
+        trajectories=public_trajectories,
+        own_alignment_sign_counts=_alignment_sign_counts(
+            tuple(item.own_aggregate_dot_product for item in public_trajectories)
+        ),
+        opposite_alignment_sign_counts=_alignment_sign_counts(
+            tuple(
+                item.opposite_aggregate_dot_product for item in public_trajectories
+            )
+        ),
+        all_training_actions_legal=collected.all_training_actions_legal,
+        all_rounds_terminated=collected.all_rounds_terminated,
+        all_advantage_sums_centered=collected.all_advantage_sums_centered,
+    )
+
+
+def run_mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influence_smoke(
+) -> MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceResult:
+    """Measure exact individual influence without update or evaluation."""
+
+    try:
+        jax, jnp, initial_parameters, _ = _train_mahjax_categorical_mlp_parameters()
+        _, _, mahjax = _load_pinned_runtime()
+        environment = mahjax.make(
+            _MAHJAX_ENVIRONMENT_ID,
+            round_mode="single",
+            observe_type="dict",
+            next_round_style="auto",
+        )
+    except Exception as exc:
+        raise MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeError(
+            "pinned per-trajectory gradient-influence runtime is unavailable"
+        ) from exc
+    if (
+        mahjax.__version__ != _MAHJAX_PACKAGE_VERSION
+        or environment.id != _MAHJAX_ENVIRONMENT_ID
+        or environment.version != _MAHJAX_ENVIRONMENT_VERSION
+        or environment.num_players != 4
+        or environment.num_actions != 87
+    ):
+        raise MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeError(
+            "per-trajectory gradient-influence runtime differs from the pinned contract"
+        )
+
+    reference_collected = _collect_protocol_gradients(
+        _REFERENCE_PROTOCOL_ID,
+        MAHJAX_CATEGORICAL_MLP_FOUR_PASS_LEAVE_ONE_OUT_BATCH_REFERENCE_TRAINING_SEEDS,
+        initial_parameters,
+        jax,
+        jnp,
+        mahjax,
+    )
+    alternate_collected = _collect_protocol_gradients(
+        _ALTERNATE_PROTOCOL_ID,
+        MAHJAX_CATEGORICAL_MLP_FOUR_PASS_LEAVE_ONE_OUT_BATCH_ALTERNATE_TRAINING_SEEDS,
+        initial_parameters,
+        jax,
+        jnp,
+        mahjax,
+    )
+    reference = _build_protocol_result(reference_collected, alternate_collected, jnp)
+    alternate = _build_protocol_result(alternate_collected, reference_collected, jnp)
+    aggregate_dot = _dot(
+        reference_collected.mean_gradients,
+        alternate_collected.mean_gradients,
+        jnp,
+    )
+    aggregate_cosine = _cosine(
+        aggregate_dot,
+        reference.aggregate_global_gradient_l2,
+        alternate.aggregate_global_gradient_l2,
+    )
+    contract_satisfied = (
+        reference.training_seeds == tuple(range(32))
+        and alternate.training_seeds == tuple(range(116, 148))
+        and not set(reference.training_seeds) & set(alternate.training_seeds)
+        and reference.trajectory_count == _TRAJECTORIES_PER_PROTOCOL
+        and alternate.trajectory_count == _TRAJECTORIES_PER_PROTOCOL
+        and reference.parameter_group_shapes == alternate.parameter_group_shapes
+        and reference.all_training_actions_legal
+        and alternate.all_training_actions_legal
+        and reference.all_rounds_terminated
+        and alternate.all_rounds_terminated
+        and reference.all_advantage_sums_centered
+        and alternate.all_advantage_sums_centered
+        and all(item.all_values_finite for item in reference.trajectories)
+        and all(item.all_values_finite for item in alternate.trajectories)
+        and all(item.global_gradient_l2 > 0.0 for item in reference.trajectories)
+        and all(item.global_gradient_l2 > 0.0 for item in alternate.trajectories)
+        and sum(reference.own_alignment_sign_counts) == 32
+        and sum(reference.opposite_alignment_sign_counts) == 32
+        and sum(alternate.own_alignment_sign_counts) == 32
+        and sum(alternate.opposite_alignment_sign_counts) == 32
+        and reference.own_alignment_sign_counts
+        == _EXPECTED_REFERENCE_OWN_ALIGNMENT_SIGN_COUNTS
+        and reference.opposite_alignment_sign_counts
+        == _EXPECTED_REFERENCE_OPPOSITE_ALIGNMENT_SIGN_COUNTS
+        and alternate.own_alignment_sign_counts
+        == _EXPECTED_ALTERNATE_OWN_ALIGNMENT_SIGN_COUNTS
+        and alternate.opposite_alignment_sign_counts
+        == _EXPECTED_ALTERNATE_OPPOSITE_ALIGNMENT_SIGN_COUNTS
+        and abs(aggregate_dot - _EXPECTED_AGGREGATE_DOT_PRODUCT) <= 1e-8
+        and aggregate_cosine is not None
+        and abs(aggregate_cosine - _EXPECTED_AGGREGATE_COSINE_SIMILARITY) <= 1e-6
+    )
+    if not contract_satisfied:
+        raise MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeError(
+            "per-trajectory gradient-influence diagnostic differs from the approved contract"
+        )
+
+    return MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceResult(
+        smoke_version=(
+            MAHJAX_CATEGORICAL_MLP_FIRST_PASS_PER_TRAJECTORY_GRADIENT_INFLUENCE_SMOKE_VERSION
+        ),
+        package_version=_MAHJAX_PACKAGE_VERSION,
+        environment_id=_MAHJAX_ENVIRONMENT_ID,
+        environment_version=_MAHJAX_ENVIRONMENT_VERSION,
+        trajectories_per_protocol=_TRAJECTORIES_PER_PROTOCOL,
+        total_training_trajectory_count=64,
+        training_update_count=0,
+        evaluation_call_count=0,
+        evaluation_update_count=0,
+        reference=reference,
+        alternate=alternate,
+        aggregate_global_gradient_dot_product=aggregate_dot,
+        aggregate_global_gradient_cosine_similarity=aggregate_cosine,
+        selected_training_protocol_id=None,
+        selected_model_id=None,
+        selected_trajectory_seed=None,
+        selected_gradient_direction=None,
+        selected_checkpoint_id=None,
+        safety_guardrails_all_satisfied=True,
+        evidence_grade=_EVIDENCE_GRADE,
+        warnings=_WARNINGS,
+    )
+
+
+__all__ = [
+    "MAHJAX_CATEGORICAL_MLP_FIRST_PASS_PER_TRAJECTORY_GRADIENT_INFLUENCE_SMOKE_VERSION",
+    "MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeError",
+    "MahJaxCategoricalMlpTrajectoryGradientInfluenceResult",
+    "MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult",
+    "MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceResult",
+    "run_mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influence_smoke",
+]

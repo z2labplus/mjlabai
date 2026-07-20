@@ -342,6 +342,14 @@ trajectories, retains every sign, forbids ranking/removal/selection and permits
 only descriptive own/opposite aggregate alignment counts. No update or
 evaluation may convert the diagnostic into an unapproved optimization search.
 
+Implementation status: opposite-aggregate signs are mixed across both exact
+batches (`14-/18+` and `18-/14+`), so conflict is not confined to a lone
+opposing trajectory by sign count. Counts alone do not establish magnitude
+causality or justify seed filtering. Mitigation keeps all 64 records, exposes
+their full scalar influence/provenance, forbids outlier ranking/removal and
+requires review to choose a predeclared data/objective diagnostic without
+turning observed seeds into a search space.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

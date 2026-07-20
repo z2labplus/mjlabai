@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact first-pass per-trajectory cross-protocol gradient
-  influence diagnostic with no update or evaluation.
+- [ ] Review the exact first-pass per-trajectory cross-protocol gradient
+  influence diagnostic implementation.
 
 Current execution charter:
 
@@ -23,19 +23,29 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Follow exact `04AP` approval with zero docs gates before code.
-- From identical initial parameters collect exact frozen batches `0..31` and
-  `116..147` once each. Preserve reviewed other-31 baselines/objectives and
-  reuse each already-computed trajectory gradient without a second formula.
-- For all 64 trajectories record protocol/seed/hash, group/global norm and
-  dot/cosine against own and opposite aggregate mean gradients. Record fixed
-  negative/zero/positive opposite-alignment counts and retain every sign.
-- Apply zero updates and zero evaluations. Return frozen array-free output with
-  no seed ranking/removal, protocol/model/direction/checkpoint selection.
-- No fifth pass, projection/rate/optimizer/seed search, third protocol/window,
-  old expensive run, real data, strength claim or P9-P12.
+- Review only exact `04AP` source/test changes and recorded probe/focused/fast
+  evidence. Do not rerun the 598-second focused test, probe, prior expensive
+  smokes or the full suite.
+- Verify existing batch accumulation is unchanged, exact first batches share
+  initial parameters, all 64 own/opposite alignments/provenance are retained,
+  aggregate geometry/sign counts are pinned and updates/evaluations are zero.
+- Preserve reference opposite `14-/18+` and alternate `18-/14+` as mixed
+  heterogeneity evidence. Do not claim magnitude causality or identify outliers.
+- Confirm no ranking/removal/selection and directly approve/defer one materially
+  different P8 data/objective task or stage decision with no docs chain.
+- No seed filtering/search, new protocol/window, real data, strength or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Implemented the exact `04AP` first-pass per-trajectory cross-
+  protocol gradient influence diagnostic. Existing private batch computation
+  retains each already-computed gradient without changing sums/updates. Exact
+  `0..31` and `116..147` run once from identical parameters; all 64 own/opposite
+  alignments and provenance are frozen with zero updates/evaluations. Reference
+  opposite signs are `14-/18+`; alternate signs are `18-/14+`. No trajectory is
+  ranked, removed or selected. One probe, nine focused tests in `597.768s`,
+  122 synthetic and seven claim-control tests plus compile/dependency/static/
+  diff checks pass. No real data, strength claim or P9-P12 was added.
 
 - [x] 2026-07-20 Reviewed commit `ad737a6` against exact `04AO` approval in
   `04AP`. Decision: `A. Review can close.` Confirmed private-helper

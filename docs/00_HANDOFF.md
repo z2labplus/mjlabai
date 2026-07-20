@@ -80,7 +80,12 @@ focused, 122 synthetic and seven claim-control tests pass. `04AP` review-closes
 commit `ad737a6`, preserves this as bounded negative behavior evidence, rejects
 another pass/search and directly approves one exact first-pass per-trajectory
 cross-protocol gradient influence diagnostic with zero updates/evaluations.
-Zero docs gates remain before that code.
+Zero docs gates remain before that code. The exact implementation is now
+complete: reference opposite-aggregate signs are `14` negative/`18` positive;
+alternate signs are `18` negative/`14` positive. Own-aggregate signs are also
+mixed at `13/19` and `7/25`. All 64 trajectories are retained with zero
+updates/evaluations; nine focused and 129 fast tests pass. Lightweight review
+is next.
 This is P8
 training-seed sensitivity work, not robust
 generalization, algorithm selection, production evaluation or strength:
@@ -1194,8 +1199,8 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is direct implementation of the exact `04AP` first-pass
-  per-trajectory cross-protocol gradient influence diagnostic.
+- Current next work is lightweight review of the exact `04AP` first-pass per-
+  trajectory cross-protocol gradient influence diagnostic.
   P8 bounded local diagnostics are active;
   production self-play, evaluation, league, real data, Tenhou and P9-P12 remain
   unapproved. Do not make strength claims.

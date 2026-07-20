@@ -8,6 +8,23 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Executable per-trajectory gradient influence diagnostic
+
+- Type: executable P8 local training-signal heterogeneity diagnostic evidence.
+- Exact first batches `0..31` and `116..147` run once from identical reviewed
+  initial parameters. Each already-computed other-31 trajectory gradient is
+  retained and compared with both protocol aggregate mean gradients.
+- Reference own/opposite sign counts are `13-/0/19+` and `14-/0/18+`.
+  Alternate counts are `7-/0/25+` and `18-/0/14+`. Conflicting signs occur
+  across many trajectories in both protocols; no seed is removed or selected.
+- Aggregate dot/cosine remain `-0.0001429308562/-0.1868768328`. Totals are 64
+  trajectories, zero updates and zero evaluations.
+- One deterministic probe completes; nine focused tests pass in `597.768s`;
+  122 synthetic and seven claim-control tests plus compile/dependency/static/
+  diff checks pass. Prior expensive smokes and full suite are not rerun.
+- Evidence grade: bounded heterogeneous training-signal evidence only; sign
+  counts do not prove magnitude causality, robustness, improvement or strength.
+
 ### 2026-07-20 — Four-pass projection review and influence approval
 
 - Type: exact P8 implementation-review closure plus materially different

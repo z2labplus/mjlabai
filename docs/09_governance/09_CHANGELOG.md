@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.57
+
+- Implemented the exact `04AP` first-pass per-trajectory cross-protocol
+  gradient influence diagnostic and matching focused tests.
+- The existing private batch-gradient result now retains each gradient already
+  computed in its unchanged accumulation loop; sum/update behavior is unchanged.
+- Exact `0..31` and `116..147` batches run once from identical initial
+  parameters with zero updates/evaluations and all 64 trajectories retained.
+- Reference opposite alignment is `14` negative/`18` positive; alternate is
+  `18` negative/`14` positive. Own alignments are also mixed at `13/19` and
+  `7/25`. No seed is ranked, removed or selected.
+- One deterministic probe, nine focused, 122 synthetic and seven claim-control
+  tests pass; compile/dependency/static/diff checks pass. This is heterogeneous
+  training-signal evidence only, not improvement, strength or P9-P12 evidence.
+
 ## 2026-07-20 - v4.56
 
 - Added `04AP`; reviewed commit `ad737a6` against exact `04AO` approval.

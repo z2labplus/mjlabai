@@ -67,7 +67,9 @@ stays `-312`, while replication degrades `-1056 -> -1133` at seed `92`.
 `04AP` review-closes that implementation, rejects another pass/search and
 directly approves one exact first-pass per-trajectory cross-protocol gradient
 influence diagnostic with zero updates/evaluations. Zero docs gates remain
-before code. This is bounded
+before code. That diagnostic is now implemented: opposite sign counts are
+`14-/18+` for reference and `18-/14+` for alternate; all 64 trajectories are
+retained with zero updates/evaluations. Lightweight review is next. This is bounded
 training-seed sensitivity work,
 not robust evaluation or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
