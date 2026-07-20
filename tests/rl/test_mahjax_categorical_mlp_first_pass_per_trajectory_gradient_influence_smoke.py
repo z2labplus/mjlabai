@@ -22,6 +22,7 @@ from mjlabai.rl.mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influe
     MahJaxCategoricalMlpOppositeAlignmentMagnitudeConcentrationResult,
     MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult,
     MahJaxCategoricalMlpTrajectoryGradientInfluenceResult,
+    MahJaxCategoricalMlpUnitNormAggregateAlignmentResult,
     run_mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influence_smoke,
 )
 
@@ -43,6 +44,7 @@ class MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeTests(
                 "MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeError",
                 "MahJaxCategoricalMlpTrajectoryGradientInfluenceResult",
                 "MahJaxCategoricalMlpOppositeAlignmentMagnitudeConcentrationResult",
+                "MahJaxCategoricalMlpUnitNormAggregateAlignmentResult",
                 "MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult",
                 "MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceResult",
                 "run_mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influence_smoke",
@@ -51,6 +53,10 @@ class MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeTests(
         self.assertIsInstance(
             self.result,
             MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceResult,
+        )
+        self.assertIsInstance(
+            self.result.unit_norm_aggregate_alignment,
+            MahJaxCategoricalMlpUnitNormAggregateAlignmentResult,
         )
         self.assertEqual(
             self.result.smoke_version,
@@ -78,6 +84,7 @@ class MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeTests(
             self.result,
             self.result.reference,
             self.result.alternate,
+            self.result.unit_norm_aggregate_alignment,
             *self.result.reference.trajectories,
             *self.result.alternate.trajectories,
         ):
@@ -192,6 +199,46 @@ class MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeTests(
             self.assertLessEqual(summary.top_four_absolute_share, 1.0)
             self.assertLessEqual(summary.top_eight_absolute_share, 1.0)
 
+    def test_unit_norm_aggregate_alignment_is_complete_and_finite(self) -> None:
+        alignment = self.result.unit_norm_aggregate_alignment
+        self.assertEqual(alignment.contribution_count_per_protocol, 32)
+        self.assertEqual(
+            len(alignment.reference_parameter_group_gradient_l2),
+            len(self.result.reference.parameter_group_shapes),
+        )
+        self.assertEqual(
+            len(alignment.alternate_parameter_group_gradient_l2),
+            len(self.result.alternate.parameter_group_shapes),
+        )
+        self.assertTrue(alignment.all_source_gradients_finite_and_nonzero)
+        self.assertTrue(alignment.all_values_finite)
+        self.assertGreater(alignment.reference_global_gradient_l2, 0.0)
+        self.assertGreater(alignment.alternate_global_gradient_l2, 0.0)
+        self.assertIsNotNone(alignment.cross_protocol_cosine_similarity)
+        self.assertGreaterEqual(alignment.cross_protocol_cosine_similarity, -1.0)
+        self.assertLessEqual(alignment.cross_protocol_cosine_similarity, 1.0)
+        self.assertAlmostEqual(
+            alignment.reference_global_gradient_l2,
+            0.16546103181537164,
+        )
+        self.assertAlmostEqual(
+            alignment.alternate_global_gradient_l2,
+            0.23798262889766802,
+        )
+        self.assertAlmostEqual(
+            alignment.cross_protocol_dot_product,
+            0.00927360774949193,
+        )
+        self.assertAlmostEqual(
+            alignment.cross_protocol_cosine_similarity,
+            0.2355091236577188,
+        )
+        self.assertLess(
+            self.result.aggregate_global_gradient_cosine_similarity,
+            0.0,
+        )
+        self.assertGreater(alignment.cross_protocol_cosine_similarity, 0.0)
+
     def test_all_64_trajectory_influences_and_provenance_are_retained(self) -> None:
         for protocol in (self.result.reference, self.result.alternate):
             self.assertEqual(protocol.trajectory_count, 32)
@@ -252,6 +299,8 @@ class MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeTests(
         for phrase in (
             "all 64 already-computed",
             "own and opposite aggregate mean gradients",
+            "unit-norm aggregation weights every one of the same 64 gradients equally",
+            "unit-norm geometry is objective-scale diagnosis, not an approved update rule",
             "no threshold is searched",
             "no trajectory is ranked, removed, clipped, selected or promoted",
             "zero parameter updates and zero policy evaluations",
@@ -278,6 +327,9 @@ class MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeTests(
         magnitude_source = inspect.getsource(
             smoke_module._build_magnitude_concentration
         )
+        unit_norm_source = inspect.getsource(
+            smoke_module._unit_norm_mean_gradients
+        )
         self.assertEqual(source.count("_collect_protocol_gradients("), 3)
         self.assertEqual(source.count("_calculate_leave_one_out_batch_gradients("), 1)
         self.assertNotIn("_evaluate(", source)
@@ -288,6 +340,10 @@ class MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeTests(
             "sorted(absolute_values, reverse=True)",
             magnitude_source,
         )
+        self.assertIn("value / global_norm", unit_norm_source)
+        self.assertIn("/ _TRAJECTORIES_PER_PROTOCOL", unit_norm_source)
+        self.assertNotIn("epsilon", unit_norm_source.lower())
+        self.assertNotIn("clip", unit_norm_source.lower())
         self.assertNotIn("while ", source)
         for forbidden in (
             "Path(",

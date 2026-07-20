@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.61
+
+- Added the exact `04AR` unit-norm per-trajectory aggregate alignment summary
+  to the existing influence module and focused tests.
+- The same 64 finite nonzero gradients are normalized uniformly and averaged;
+  raw cross-protocol cosine remains `-0.1868768`, while unit-norm cosine is
+  `+0.2355091` with dot `0.00927361`.
+- Original aggregate, per-trajectory and concentration outputs remain pinned;
+  training/evaluation counts remain zero.
+- One probe and 11 focused tests (`579.056s`) pass. 122 synthetic and seven
+  claim-control tests plus compile/dependency/diff checks pass. No identity,
+  filter, reweight, search, strength claim, real data or P9-P12 was added.
+
 ## 2026-07-20 - v4.60
 
 - Added `04AR`; reviewed commit `757fe45` and recorded

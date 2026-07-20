@@ -75,7 +75,10 @@ Those summaries are now implemented: alternate effective count/largest share
 are about `5.15/41.6%` versus reference `12.06/16.0%`. `04AR` review-closes
 the implementation and directly approves one exact unit-norm per-trajectory
 aggregate alignment diagnostic over the same 64 gradients with zero updates or
-evaluations. Zero docs gates remain before code. This is bounded
+evaluations. That exact code is now implemented: raw cosine remains `-0.1869`
+and unit-norm aggregation yields `+0.2355`, with all prior outputs unchanged.
+One probe, 11 focused and 129 fast tests pass. Lightweight review is next. This
+is bounded
 training-seed sensitivity work,
 not robust evaluation or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can

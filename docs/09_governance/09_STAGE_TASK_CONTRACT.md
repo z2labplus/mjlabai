@@ -2,12 +2,12 @@
 
 ## Current stage
 
-P8 exact unit-norm per-trajectory aggregate alignment diagnostic approved by
-`04AR`. Reuse the same 64 already-computed gradients, normalize every finite
-nonzero full gradient uniformly, average 32 vectors per protocol and record
-fixed group/global norms plus cross-protocol dot/cosine. Preserve every raw
-result with zero updates/evaluations. No epsilon, identity/filter/reweight,
-threshold/search, new data, strength claim or P9-P12.
+P8 lightweight review of the exact `04AR` unit-norm per-trajectory aggregate
+alignment diagnostic. Verify same 64 gradients, finite positive source norms,
+uniform normalization, fixed group/global norms/dot/cosine, preserved raw
+outputs and zero updates/evaluations. Preserve raw `-0.1869` versus normalized
+`+0.2355` as bounded magnitude sensitivity only. No expensive rerun, epsilon,
+identity/filter/reweight/search, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition

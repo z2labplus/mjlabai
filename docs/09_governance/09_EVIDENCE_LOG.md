@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Executable unit-norm aggregate alignment diagnostic
+
+- Type: executable P8 local objective-scale sensitivity evidence.
+- The same 64 already-computed finite nonzero trajectory gradients are each
+  divided by their full global L2 norm, then averaged 32 per protocol.
+- Raw aggregate dot/cosine remain `-0.0001429308562/-0.1868768328`.
+  Unit-norm aggregate dot/cosine are `0.00927360775/+0.2355091237`.
+- The sign reversal shows exact-batch aggregate conflict is sensitive to
+  contribution magnitudes. It does not establish general causality or approve
+  unit-normalized optimization.
+- One probe, 11 focused tests in `579.056s`, 122 synthetic and seven claim-
+  control tests plus compile/dependency/diff checks pass.
+- Evidence remains mechanism/objective-scale diagnostic only, not improvement,
+  robustness, model strength, promotion, Tenhou, stable-dan, LuckyJ or P9-P12.
+
 ### 2026-07-20 — Influence-concentration review and unit-norm approval
 
 - Type: exact P8 implementation-review closure plus fixed objective-scale

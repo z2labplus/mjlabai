@@ -540,6 +540,11 @@ anonymous concentration results as bounded risk evidence and directly approves
 one fixed unit-norm per-trajectory aggregate alignment diagnostic over the same
 64 gradients. It approves no filtering, reweighting, update or strength claim.
 
+That exact unit-norm diagnostic now lives in the existing per-trajectory
+influence module. It preserves raw cosine `-0.1869` and records normalized
+cosine `+0.2355` with zero updates/evaluations. This is exact-batch magnitude-
+sensitivity evidence only, not an approved optimizer or strength evidence.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

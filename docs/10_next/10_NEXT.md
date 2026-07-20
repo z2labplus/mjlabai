@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Add the exact unit-norm per-trajectory aggregate alignment diagnostic to
-  the existing first-pass influence smoke.
+- [ ] Review the exact unit-norm per-trajectory aggregate alignment diagnostic
+  implementation.
 
 Current execution charter:
 
@@ -23,19 +23,28 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Modify only the existing first-pass per-trajectory influence source/test plus
-  direct governance synchronization.
-- Reuse the same 64 already-computed gradients. Normalize every finite nonzero
-  full gradient to unit global L2 norm, then average 32 vectors per protocol.
-- Record fixed group/global norms plus cross-protocol dot/cosine; preserve all
-  raw aggregate, trajectory and concentration outputs exactly.
-- Zero update/evaluation. No epsilon, clipping, threshold/search, identity,
-  filtering, ranking, reweighting, selection, new data/window or P9-P12.
-- Run one probe, focused and fast checks only; do not rerun prior expensive
-  diagnostics or the full suite. This remains objective-scale diagnostic
-  evidence, not improvement, robustness, strength or LuckyJ evidence.
+- Review exact `04AR` source/test changes and recorded probe/focused/fast
+  evidence only. Do not rerun the 579-second focused test, probe, prior
+  expensive diagnostics or full suite.
+- Verify same 64 gradients, finite positive source norms, exact uniform unit-
+  norm means, fixed group/global norms, dot/cosine and preserved raw outputs.
+- Preserve raw cosine `-0.1869` versus unit-norm cosine `+0.2355` as bounded
+  magnitude-sensitivity evidence, not an approved training method or causality.
+- Confirm zero updates/evaluations and no epsilon, identity/filter/reweight,
+  threshold/search, selection, new data, strength claim or P9-P12.
+- Directly approve or defer one exact fixed unit-norm update diagnostic; do not
+  add another docs definition/review chain.
 
 ## Completed
+
+- [x] 2026-07-20 Added the exact `04AR` unit-norm per-trajectory aggregate
+  alignment diagnostic to the existing influence smoke. The same 64 finite
+  nonzero gradients are normalized uniformly and averaged with zero updates or
+  evaluations. Raw cosine remains `-0.1868768`; unit-norm cosine is
+  `+0.2355091` (dot `0.00927361`), showing exact-batch magnitude sensitivity
+  without proving causality or improvement. One probe, 11 focused, 122
+  synthetic and seven claim-control tests plus compile/dependency/diff checks
+  pass. No identity/filter/reweight/search, real data, strength or P9-P12.
 
 - [x] 2026-07-20 Reviewed commit `757fe45` against the exact `04AQ`
   concentration-summary approval in `04AR`. Decision: `A. Review can close.`

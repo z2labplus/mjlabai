@@ -65,6 +65,24 @@ _EXPECTED_ALTERNATE_MAGNITUDE_CONCENTRATION = (
     0.5942865543230846,
     0.7457630373122845,
 )
+_EXPECTED_UNIT_NORM_AGGREGATE_ALIGNMENT = (
+    (
+        0.0641569197177887,
+        0.011721663177013397,
+        0.15103819966316223,
+        0.01764390990138054,
+    ),
+    0.16546103181537164,
+    (
+        0.07713237404823303,
+        0.019064467400312424,
+        0.2229359894990921,
+        0.024948330596089363,
+    ),
+    0.23798262889766802,
+    0.00927360774949193,
+    0.2355091236577188,
+)
 _EVIDENCE_GRADE = (
     "P8 local exact first-pass per-trajectory cross-protocol gradient influence "
     "diagnostic evidence only"
@@ -73,6 +91,8 @@ _WARNINGS = (
     "exact two predeclared first-pass batches from identical initial parameters",
     "all 64 already-computed other-31 trajectory gradients are retained",
     "each trajectory is compared with own and opposite aggregate mean gradients",
+    "unit-norm aggregation weights every one of the same 64 gradients equally",
+    "unit-norm geometry is objective-scale diagnosis, not an approved update rule",
     "negative, zero and positive signs are descriptive and no threshold is searched",
     "no trajectory is ranked, removed, clipped, selected or promoted",
     "zero parameter updates and zero policy evaluations",
@@ -124,6 +144,19 @@ class MahJaxCategoricalMlpOppositeAlignmentMagnitudeConcentrationResult:
 
 
 @dataclass(frozen=True)
+class MahJaxCategoricalMlpUnitNormAggregateAlignmentResult:
+    contribution_count_per_protocol: int
+    reference_parameter_group_gradient_l2: Tuple[float, ...]
+    reference_global_gradient_l2: float
+    alternate_parameter_group_gradient_l2: Tuple[float, ...]
+    alternate_global_gradient_l2: float
+    cross_protocol_dot_product: float
+    cross_protocol_cosine_similarity: Optional[float]
+    all_source_gradients_finite_and_nonzero: bool
+    all_values_finite: bool
+
+
+@dataclass(frozen=True)
 class MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult:
     protocol_id: str
     training_seeds: Tuple[int, ...]
@@ -165,6 +198,9 @@ class MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceResult:
     alternate: MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult
     aggregate_global_gradient_dot_product: float
     aggregate_global_gradient_cosine_similarity: float
+    unit_norm_aggregate_alignment: (
+        MahJaxCategoricalMlpUnitNormAggregateAlignmentResult
+    )
     selected_training_protocol_id: Optional[str]
     selected_model_id: Optional[str]
     selected_trajectory_seed: Optional[int]
@@ -275,6 +311,88 @@ def _build_magnitude_concentration(values):
         largest_absolute_share=largest_share,
         top_four_absolute_share=top_four_share,
         top_eight_absolute_share=top_eight_share,
+    )
+
+
+def _unit_norm_mean_gradients(collected, jax, jnp):
+    normalized_trajectory_gradients = []
+    source_norms = []
+    for gradients in collected.batch_gradients.trajectory_gradients:
+        group_norms = _group_norms(gradients, jnp)
+        global_norm = _global_norm(group_norms)
+        if not math.isfinite(global_norm) or global_norm <= 0.0:
+            raise MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeError(
+                "unit-norm aggregate source gradient must be finite and nonzero"
+            )
+        source_norms.append(global_norm)
+        normalized_trajectory_gradients.append(
+            tuple(
+                jax.block_until_ready(value / global_norm)
+                for value in gradients
+            )
+        )
+    mean_gradients = tuple(
+        jax.block_until_ready(
+            sum(group_values) / _TRAJECTORIES_PER_PROTOCOL
+        )
+        for group_values in zip(*normalized_trajectory_gradients)
+    )
+    return mean_gradients, tuple(source_norms)
+
+
+def _build_unit_norm_aggregate_alignment(reference, alternate, jax, jnp):
+    reference_mean, reference_source_norms = _unit_norm_mean_gradients(
+        reference,
+        jax,
+        jnp,
+    )
+    alternate_mean, alternate_source_norms = _unit_norm_mean_gradients(
+        alternate,
+        jax,
+        jnp,
+    )
+    reference_group_norms = _group_norms(reference_mean, jnp)
+    alternate_group_norms = _group_norms(alternate_mean, jnp)
+    reference_global_norm = _global_norm(reference_group_norms)
+    alternate_global_norm = _global_norm(alternate_group_norms)
+    dot_product = _dot(reference_mean, alternate_mean, jnp)
+    cosine_similarity = _cosine(
+        dot_product,
+        reference_global_norm,
+        alternate_global_norm,
+    )
+    values = (
+        *reference_group_norms,
+        reference_global_norm,
+        *alternate_group_norms,
+        alternate_global_norm,
+        dot_product,
+        cosine_similarity,
+    )
+    return MahJaxCategoricalMlpUnitNormAggregateAlignmentResult(
+        contribution_count_per_protocol=_TRAJECTORIES_PER_PROTOCOL,
+        reference_parameter_group_gradient_l2=reference_group_norms,
+        reference_global_gradient_l2=reference_global_norm,
+        alternate_parameter_group_gradient_l2=alternate_group_norms,
+        alternate_global_gradient_l2=alternate_global_norm,
+        cross_protocol_dot_product=dot_product,
+        cross_protocol_cosine_similarity=cosine_similarity,
+        all_source_gradients_finite_and_nonzero=all(
+            math.isfinite(value) and value > 0.0
+            for value in (*reference_source_norms, *alternate_source_norms)
+        ),
+        all_values_finite=_all_finite(values),
+    )
+
+
+def _unit_norm_alignment_values(summary):
+    return (
+        *summary.reference_parameter_group_gradient_l2,
+        summary.reference_global_gradient_l2,
+        *summary.alternate_parameter_group_gradient_l2,
+        summary.alternate_global_gradient_l2,
+        summary.cross_protocol_dot_product,
+        summary.cross_protocol_cosine_similarity,
     )
 
 
@@ -490,6 +608,12 @@ def run_mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influence_smok
         reference.aggregate_global_gradient_l2,
         alternate.aggregate_global_gradient_l2,
     )
+    unit_norm_alignment = _build_unit_norm_aggregate_alignment(
+        reference_collected,
+        alternate_collected,
+        jax,
+        jnp,
+    )
     contract_satisfied = (
         reference.training_seeds == tuple(range(32))
         and alternate.training_seeds == tuple(range(116, 148))
@@ -560,6 +684,24 @@ def run_mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influence_smok
         and abs(aggregate_dot - _EXPECTED_AGGREGATE_DOT_PRODUCT) <= 1e-8
         and aggregate_cosine is not None
         and abs(aggregate_cosine - _EXPECTED_AGGREGATE_COSINE_SIMILARITY) <= 1e-6
+        and unit_norm_alignment.contribution_count_per_protocol == 32
+        and unit_norm_alignment.all_source_gradients_finite_and_nonzero
+        and unit_norm_alignment.all_values_finite
+        and unit_norm_alignment.reference_global_gradient_l2 > 0.0
+        and unit_norm_alignment.alternate_global_gradient_l2 > 0.0
+        and unit_norm_alignment.cross_protocol_cosine_similarity is not None
+        and all(
+            abs(actual - expected) <= 1e-6
+            for actual, expected in zip(
+                _unit_norm_alignment_values(unit_norm_alignment),
+                (
+                    *_EXPECTED_UNIT_NORM_AGGREGATE_ALIGNMENT[0],
+                    _EXPECTED_UNIT_NORM_AGGREGATE_ALIGNMENT[1],
+                    *_EXPECTED_UNIT_NORM_AGGREGATE_ALIGNMENT[2],
+                    *_EXPECTED_UNIT_NORM_AGGREGATE_ALIGNMENT[3:],
+                ),
+            )
+        )
     )
     if not contract_satisfied:
         raise MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeError(
@@ -582,6 +724,7 @@ def run_mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influence_smok
         alternate=alternate,
         aggregate_global_gradient_dot_product=aggregate_dot,
         aggregate_global_gradient_cosine_similarity=aggregate_cosine,
+        unit_norm_aggregate_alignment=unit_norm_alignment,
         selected_training_protocol_id=None,
         selected_model_id=None,
         selected_trajectory_seed=None,
@@ -598,6 +741,7 @@ __all__ = [
     "MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeError",
     "MahJaxCategoricalMlpTrajectoryGradientInfluenceResult",
     "MahJaxCategoricalMlpOppositeAlignmentMagnitudeConcentrationResult",
+    "MahJaxCategoricalMlpUnitNormAggregateAlignmentResult",
     "MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult",
     "MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceResult",
     "run_mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influence_smoke",
