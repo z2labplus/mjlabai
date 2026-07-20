@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.68
+
+- Added `04AV`; review found and fixed the half-game trace's round-step semantic
+  blocker by separating global MahJax step identity from true round-local index.
+- Nine focused tests pass after the exact fix in `56.366s`; terminal behavior
+  and all prior exact outputs remain unchanged.
+- Probed the reviewed 882-feature categorical MLP at seat 0 through a half-
+  game. Diagnosed one upstream bundled-policy `PON=75` output when only
+  `PON_RED=76`/`PASS=84` were legal.
+- With only strict `75 -> 76` normalization, the probe completes 825 legal
+  transitions, 200 project decisions and round-8 terminal scores
+  `(40,265,379,316)`. Direct exact implementation is approved; no fallback,
+  update, strength claim or P9-P12.
+
 ## 2026-07-20 - v4.67
 
 - Added the exact `04AU` pinned MahJax half-game bundled-rule-policy rollout

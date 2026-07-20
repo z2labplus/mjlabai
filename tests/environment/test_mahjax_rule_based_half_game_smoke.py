@@ -123,6 +123,13 @@ class MahJaxRuleBasedHalfGameSmokeTests(unittest.TestCase):
             tuple(sorted(set(item.round_index for item in self.result.trace))),
             tuple(range(9)),
         )
+        for round_index in range(9):
+            round_steps = tuple(
+                item.round_step_index
+                for item in self.result.trace
+                if item.round_index == round_index
+            )
+            self.assertEqual(round_steps, tuple(range(len(round_steps))))
         for item in self.result.trace:
             self.assertGreaterEqual(item.round_step_index, 0)
             self.assertIn(item.acting_player, range(4))

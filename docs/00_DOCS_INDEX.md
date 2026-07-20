@@ -582,6 +582,13 @@ environment exports and focused tests. Seed 0 records all 938 legal
 transitions, eight round boundaries and final scores `(203,441,76,280)` before
 natural termination. This is P4/P8 local environment smoke evidence only.
 
+`docs/04_rl_selfplay/04AV_P4_P8_MAHJAX_RULE_BASED_HALF_GAME_IMPLEMENTATION_REVIEW.md`
+reviews commit `a3bcaf5`, fixes the round-local step identity blocker and
+records `A. Review can close after the exact blocker fix`. It diagnoses one
+upstream bundled-policy PON/PON_RED mismatch in a model mixed-half-game probe
+and directly approves an exact strict-normalized read-only implementation.
+This is interface/environment task approval, not strength evidence.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

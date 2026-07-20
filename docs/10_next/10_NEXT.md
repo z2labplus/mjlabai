@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact pinned MahJax half-game bundled-rule-policy rollout
-  smoke implementation.
+- [ ] Implement one exact read-only MahJax categorical-MLP-seat-0 versus
+  rule-seats-1/2/3 half-game smoke.
 
 Current execution charter:
 
@@ -23,19 +23,28 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Reuse the passing focused and neighboring environment evidence; rerun only
-  lightweight checks unless a concrete blocker appears.
-- Verify exact runtime pins, `half`/`auto`, seed/RNG lineage, one 2048-capped
-  loop, environment-owned legality, all 938 transitions, eight round
-  boundaries, raw/cumulative rewards, final scores and frozen array-free API.
-- Confirm exact terminal result `(203,441,76,280)`, natural round-8 termination,
-  no truncation and no illegal action.
-- Confirm no project model, learning/update/optimizer/checkpoint, production
-  self-play, league, real data, Tenhou connection, strength claim or P9-P12.
-- Review must directly approve/defer one exact project-model half-game read-only
-  rollout diagnostic; do not add another environment boundary or proposal.
+- Add only exact `04AV` source/test, direct environment exports and governance.
+- Reuse reviewed in-memory categorical-MLP imitation parameters and exact
+  882-feature encoder; project greedy legal-masked seat 0, bundled rule seats
+  1/2/3, pinned seed-0 `half`/`auto` environment and one 2048-capped loop.
+- Only legal normalization: raw `PON=75` to `PON_RED=76` when 75 is illegal and
+  76 legal. Every other raw illegal action must fail; no general fallback.
+- Pin 825 transitions, 200 project decisions, sole normalization
+  `(450,3,75,76)`, eight boundaries, round-8 terminal, scores
+  `(40,265,379,316)`, final rewards `(-20,0,30,0)` and cumulative
+  `(-200,15,12,123)`.
+- Zero half-game gradient/update/optimizer/selection. No persistence, real
+  data, production self-play/league, strength claim, Tenhou or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Reviewed commit `a3bcaf5` in `04AV`. Found and fixed one
+  semantic blocker: MahJax step_count is global, so round-local step identity
+  now resets at each boundary while global identity is verified separately.
+  Nine focused tests pass in `56.366s`. Review closes after the fix. A model
+  half-game probe found exactly one upstream bundled-policy PON/PON_RED mismatch;
+  strict one-case normalization yields 825 legal transitions and final scores
+  `(40,265,379,316)`. Direct implementation is approved with zero docs gates.
 
 - [x] 2026-07-20 Implemented the exact `04AU` pinned local MahJax half-game
   bundled-rule-policy rollout. One seed-0 `half`/`auto` path executes 938 legal

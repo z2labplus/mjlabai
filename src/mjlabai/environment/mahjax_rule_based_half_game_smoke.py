@@ -178,6 +178,7 @@ def run_mahjax_rule_based_half_game_smoke(
     initial_scores = _four_ints(state.round_state.score, "initial scores")
     trace = []
     boundaries = []
+    round_start_transition_index = 0
     cumulative_rewards = (0.0, 0.0, 0.0, 0.0)
     step_fn = jax.jit(environment.step)
     policy_fn = jax.jit(rule_based_player)
@@ -188,7 +189,12 @@ def run_mahjax_rule_based_half_game_smoke(
                 "rollout attempted a policy action from a finished state"
             )
         round_index = int(state.round_state.round)
-        round_step_index = int(state.step_count)
+        environment_step_index = int(state.step_count)
+        if environment_step_index != transition_index:
+            raise MahJaxRuleBasedHalfGameSmokeError(
+                "MahJax step_count must match the global transition index"
+            )
+        round_step_index = transition_index - round_start_transition_index
         legal_actions = _legal_actions(
             state.legal_action_mask,
             environment.num_actions,
@@ -239,6 +245,7 @@ def run_mahjax_rule_based_half_game_smoke(
                     ),
                 )
             )
+            round_start_transition_index = transition_index + 1
         if bool(state.terminated) or bool(state.truncated):
             break
     else:

@@ -2,13 +2,13 @@
 
 ## Current stage
 
-P4/P8 lightweight code review of the exact implemented `04AU` pinned local
-MahJax half-game bundled-rule-policy rollout. Reuse passing evidence and verify
-runtime/mode/RNG pins, one hard-capped loop, all 938 legal transitions, eight
-round boundaries, exact terminal rewards/scores, errors, immutable API and
-forbidden scope. No project model, update, production self-play, real data,
-strength claim or P9-P12. Review must directly approve/defer one exact read-only
-project-model half-game diagnostic without another boundary/proposal chain.
+P4/P8 exact `04AV` read-only categorical-MLP-seat-0 versus bundled-rule-seats-
+1/2/3 half-game smoke. Reuse reviewed in-memory parameters/882-feature encoder,
+seed-0 `half`/`auto`, one 2048-capped loop and full provenance. Only map raw
+PON 75 to PON_RED 76 when 75 is illegal and 76 legal; fail every other illegal
+action. Pin 825 transitions, 200 project decisions, sole normalization at
+transition 450 actor 3, eight boundaries and scores `(40,265,379,316)`. Zero
+half-game update/selection, persistence, real data, strength, Tenhou or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition

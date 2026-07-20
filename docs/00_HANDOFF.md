@@ -27,6 +27,17 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
+Current exact code task after `04AV`: run the reviewed categorical MLP at seat
+0 versus bundled rule seats 1/2/3 through one pinned local half-game, read-only.
+The rule-policy half-game review found and fixed only round-local step naming;
+all 938 terminal outputs remain unchanged. The model probe uses the correct
+882-feature encoder and found one upstream MahJax PON/PON_RED mismatch at
+transition 450. Only explicit 75-to-76 normalization is approved. That probe
+then completes 825 legal transitions and scores `(40,265,379,316)`. No half-
+game update, selection, model-strength claim, Tenhou or P9-P12 is approved.
+```
+
+```text
 Latest executable status: the exact pinned MahJax half-game rule-policy smoke
 is implemented. Seed 0 runs 938 legal transitions in one 2048-capped loop,
 records eight round boundaries and complete global/round-local provenance, then

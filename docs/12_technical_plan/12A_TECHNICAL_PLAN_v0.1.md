@@ -28,6 +28,17 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
+P4/P8 exact `04AV` read-only project-model mixed half-game implementation.
+`04AV` review-closes the rule-policy half-game after fixing true round-local
+step identity. A correct 882-feature categorical-MLP seat-0 probe exposed one
+MahJax bundled-rule output PON 75 when only PON_RED 76/PASS 84 were legal.
+With only explicit 75-to-76 normalization, the half-game completes 825 legal
+transitions, 200 project decisions and round-8 scores `(40,265,379,316)`.
+The next code pins this path with zero half-game update/selection. It is not
+strength, Tenhou or P9-P12 evidence.
+```
+
+```text
 P4/P8 lightweight review of the implemented exact pinned local MahJax half-
 game bundled-rule-policy rollout. Seed 0 executes 938 legal transitions in one
 2048-capped loop, records eight round boundaries and complete provenance, and

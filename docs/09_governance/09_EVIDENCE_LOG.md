@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Half-game review fix and project-model probe
+
+- Type: P4/P8 implementation-review closure, exact local blocker evidence and
+  next executable task approval.
+- Review corrected `round_step_index` to reset at each boundary while separately
+  proving global MahJax `step_count == transition_index`. Exact outputs remain
+  unchanged; nine focused tests pass in `56.366s`.
+- The reviewed 882-feature categorical MLP seat-0 mixed half-game probe found
+  one upstream bundled-policy mismatch at transition 450/actor 3: raw PON 75
+  while only PON_RED 76 and PASS 84 were legal.
+- One strict 75-to-76 normalization and no fallback produces 825 legal
+  transitions, 200 project decisions, round-8 terminal scores
+  `(40,265,379,316)` and cumulative rewards `(-200,15,12,123)`.
+- The exact read-only mixed half-game implementation is approved. This is
+  interface/environment evidence only, not improvement or strength evidence.
+
 ### 2026-07-20 — Executable pinned MahJax half-game environment smoke
 
 - Type: executable P4/P8 local full-game environment-prerequisite evidence.

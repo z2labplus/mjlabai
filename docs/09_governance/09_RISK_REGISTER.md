@@ -18,6 +18,8 @@
 | Single-round training is scaled before a full-game environment path is verified | Research / Goal alignment | Critical | High | Exact pinned MahJax `round_mode="half"` environment smoke now executes 938 legal transitions to natural termination; require review before project-model half-game use | Mitigated |
 | Half-game environment smoke is mistaken for production self-play or strength | Evidence / Scope | Critical | High | `04AU` permits only all-rule-policy seed-0 local rollout with frozen provenance; no project model/update/comparison, and warnings deny strength/promotion/Tenhou claims | Open |
 | Half-game auto round transitions hide legality or RNG discontinuity | Environment / Correctness | High | Medium | Record every global transition plus round/round-step identity, legal mask/action, round boundaries, separate init/policy RNG and exact deterministic terminal result | Open |
+| MahJax bundled rule policy emits normal PON when only red PON is legal | Dependency / Legality | Critical | Realized | Permit only explicit audited `75 -> 76` normalization when 75 illegal and 76 legal; record raw/applied action and fail every other illegal output | Mitigated for exact next task |
+| Project-model half-game smoke is mistaken for training success | Evidence / Interpretation | Critical | High | Zero half-game updates, one seed, no branch comparison/selection; retain full result and warnings deny quality/strength/promotion | Open |
 
 ## 2026-07-18 — P8 five-round training/fixed-evaluation approval risks
 
