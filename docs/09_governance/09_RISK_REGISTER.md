@@ -11,6 +11,7 @@
 | Anonymous concentration evidence is turned into seed filtering or implicit reweighting | ML / Selection bias | Critical | High | `04AR` forbids identities, filtering and reweighting; the next diagnostic normalizes every one of the same 64 gradients uniformly and returns aggregate geometry only | Open |
 | Unit-norm diagnostic is mistaken for an approved training objective | Evidence / Scope | High | High | Apply zero updates/evaluations, preserve raw results and classify output only as fixed objective-scale diagnostic evidence | Open |
 | Positive unit-norm cosine is overclaimed as proof that normalized updates improve behavior | Research / Causality | Critical | High | Preserve raw negative and normalized positive geometry together; require a separate fixed update/evaluation diagnostic before any behavioral conclusion | Open |
+| Unit-normalized update changes direction and scale simultaneously | ML / Attribution | Critical | Medium | `04AS` requires one deterministic global norm match to the same raw combined mean before the fixed update; record pre/post scale geometry | Open |
 
 ## 2026-07-18 — P8 five-round training/fixed-evaluation approval risks
 

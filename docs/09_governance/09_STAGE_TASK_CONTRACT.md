@@ -2,12 +2,12 @@
 
 ## Current stage
 
-P8 lightweight review of the exact `04AR` unit-norm per-trajectory aggregate
-alignment diagnostic. Verify same 64 gradients, finite positive source norms,
-uniform normalization, fixed group/global norms/dot/cosine, preserved raw
-outputs and zero updates/evaluations. Preserve raw `-0.1869` versus normalized
-`+0.2355` as bounded magnitude sensitivity only. No expensive rerun, epsilon,
-identity/filter/reweight/search, strength claim or P9-P12.
+P8 exact `04AS` norm-matched unit-normalized aggregate one-step update and
+fixed-window diagnostic. Reuse exact 64 gradients, uniformly normalize, average
+and scale the combined unit direction once to the same raw combined global L2.
+Apply one fixed `0.32` update and evaluate only `52..83`/`84..115`, retaining
+all outcomes. No second update, projection, epsilon/clipping, identity/filter/
+weight, search, selection, real data, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition

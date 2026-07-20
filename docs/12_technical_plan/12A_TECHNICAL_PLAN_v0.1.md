@@ -77,7 +77,9 @@ the implementation and directly approves one exact unit-norm per-trajectory
 aggregate alignment diagnostic over the same 64 gradients with zero updates or
 evaluations. That exact code is now implemented: raw cosine remains `-0.1869`
 and unit-norm aggregation yields `+0.2355`, with all prior outputs unchanged.
-One probe, 11 focused and 129 fast tests pass. Lightweight review is next. This
+One probe, 11 focused and 129 fast tests pass. `04AS` review-closes the code and
+directly approves one norm-matched unit-normalized shared update at fixed `0.32`
+followed only by the existing windows. Zero docs gates remain before code. This
 is bounded
 training-seed sensitivity work,
 not robust evaluation or strength.

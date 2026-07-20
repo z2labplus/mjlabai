@@ -545,6 +545,11 @@ influence module. It preserves raw cosine `-0.1869` and records normalized
 cosine `+0.2355` with zero updates/evaluations. This is exact-batch magnitude-
 sensitivity evidence only, not an approved optimizer or strength evidence.
 
+`docs/04_rl_selfplay/04AS_P8_UNIT_NORM_GRADIENT_ALIGNMENT_IMPLEMENTATION_REVIEW.md`
+reviews commit `795c2c0`, records `A. Review can close` and directly approves
+one norm-matched unit-normalized shared update followed only by the two existing
+fixed windows. It approves no search, selection, broad training or strength.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

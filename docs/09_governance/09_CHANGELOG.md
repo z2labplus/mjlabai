@@ -1,5 +1,16 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.62
+
+- Added `04AS`; reviewed commit `795c2c0` and recorded
+  `A. Review can close` without rerunning the expensive diagnostic.
+- Confirmed exact 64-gradient reuse, finite positive norms, uniform no-epsilon
+  normalization, pinned geometry, preserved raw outputs and zero update/eval.
+- Preserved raw `-0.1869` versus unit-norm `+0.2355` as exact-batch magnitude-
+  sensitivity evidence only.
+- Directly approved one exact norm-matched unit-normalized aggregate update at
+  fixed `0.32` plus only existing evaluation windows. No search or P9-P12.
+
 ## 2026-07-20 - v4.61
 
 - Added the exact `04AR` unit-norm per-trajectory aggregate alignment summary

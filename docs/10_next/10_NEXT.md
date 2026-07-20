@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact unit-norm per-trajectory aggregate alignment diagnostic
-  implementation.
+- [ ] Run one exact norm-matched unit-normalized aggregate update followed by
+  the two existing fixed evaluation windows.
 
 Current execution charter:
 
@@ -23,19 +23,27 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review exact `04AR` source/test changes and recorded probe/focused/fast
-  evidence only. Do not rerun the 579-second focused test, probe, prior
-  expensive diagnostics or full suite.
-- Verify same 64 gradients, finite positive source norms, exact uniform unit-
-  norm means, fixed group/global norms, dot/cosine and preserved raw outputs.
-- Preserve raw cosine `-0.1869` versus unit-norm cosine `+0.2355` as bounded
-  magnitude-sensitivity evidence, not an approved training method or causality.
-- Confirm zero updates/evaluations and no epsilon, identity/filter/reweight,
-  threshold/search, selection, new data, strength claim or P9-P12.
-- Directly approve or defer one exact fixed unit-norm update diagnostic; do not
-  add another docs definition/review chain.
+- Add only the exact `04AS` source/test files plus optional package export and
+  direct governance synchronization.
+- Exact batches `0..31` and `116..147`; uniformly unit-normalize all 64 full
+  gradients, average per protocol and combine once.
+- Match the combined unit direction's global L2 to the same batches' raw
+  combined mean global L2, then apply exactly one fixed-rate `0.32` update.
+- Evaluate only existing zero-update windows `52..83` and `84..115`; retain all
+  outcomes. One probe, focused and fast checks only; no full suite.
+- No second update, projection, epsilon/clipping, identity/filter/per-seed
+  weight, scale/rate/seed/window search, selection, real data, strength or
+  P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Reviewed commit `795c2c0` against exact `04AR` approval in
+  `04AS`. Decision: `A. Review can close.` Confirmed same 64 gradients, finite
+  positive norms, uniform normalization, pinned geometry, preserved raw output
+  and zero updates/evaluations. Retained raw `-0.1869` versus normalized
+  `+0.2355` only as magnitude-sensitivity evidence. Directly approved one
+  norm-matched fixed-rate update and existing-window evaluation with zero docs
+  gates before code.
 
 - [x] 2026-07-20 Added the exact `04AR` unit-norm per-trajectory aggregate
   alignment diagnostic to the existing influence smoke. The same 64 finite

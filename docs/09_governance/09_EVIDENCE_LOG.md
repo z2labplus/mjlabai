@@ -8,6 +8,20 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Unit-norm alignment review and norm-matched update approval
+
+- Type: exact P8 implementation-review closure plus fixed behavioral diagnostic
+  approval.
+- `04AS` records `A. Review can close` for commit `795c2c0`; no blocker exists.
+- Exact same-gradient reuse, finite positive source norms, uniform no-epsilon
+  normalization, pinned values, preserved raw evidence and zero update/eval
+  conform.
+- Raw negative versus normalized positive cosine remains magnitude-sensitivity
+  evidence only, not normalized-optimizer approval or general causality.
+- One norm-matched shared update at fixed `0.32` followed by only the two
+  existing windows is directly approved with zero docs gates. No search,
+  selection, strength claim or P9-P12 is approved.
+
 ### 2026-07-20 — Executable unit-norm aggregate alignment diagnostic
 
 - Type: executable P8 local objective-scale sensitivity evidence.
