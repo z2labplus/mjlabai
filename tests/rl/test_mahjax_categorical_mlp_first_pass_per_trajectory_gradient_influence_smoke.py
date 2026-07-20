@@ -19,6 +19,7 @@ from mjlabai.rl.mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influe
     MAHJAX_CATEGORICAL_MLP_FIRST_PASS_PER_TRAJECTORY_GRADIENT_INFLUENCE_SMOKE_VERSION,
     MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceResult,
     MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeError,
+    MahJaxCategoricalMlpOppositeAlignmentMagnitudeConcentrationResult,
     MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult,
     MahJaxCategoricalMlpTrajectoryGradientInfluenceResult,
     run_mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influence_smoke,
@@ -41,6 +42,7 @@ class MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeTests(
                 "MAHJAX_CATEGORICAL_MLP_FIRST_PASS_PER_TRAJECTORY_GRADIENT_INFLUENCE_SMOKE_VERSION",
                 "MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeError",
                 "MahJaxCategoricalMlpTrajectoryGradientInfluenceResult",
+                "MahJaxCategoricalMlpOppositeAlignmentMagnitudeConcentrationResult",
                 "MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult",
                 "MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceResult",
                 "run_mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influence_smoke",
@@ -67,6 +69,10 @@ class MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeTests(
                     )
                     for item in protocol.trajectories
                 )
+            )
+            self.assertIsInstance(
+                protocol.opposite_alignment_magnitude_concentration,
+                MahJaxCategoricalMlpOppositeAlignmentMagnitudeConcentrationResult,
             )
         for value in (
             self.result,
@@ -152,6 +158,40 @@ class MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeTests(
             self.assertGreater(protocol.opposite_alignment_sign_counts[0], 0)
             self.assertGreater(protocol.opposite_alignment_sign_counts[2], 0)
 
+    def test_opposite_alignment_magnitude_concentration_is_pinned(self) -> None:
+        reference = self.result.reference.opposite_alignment_magnitude_concentration
+        alternate = self.result.alternate.opposite_alignment_magnitude_concentration
+        self.assertEqual(reference.contribution_count, 32)
+        self.assertEqual(alternate.contribution_count, 32)
+        self.assertAlmostEqual(
+            reference.signed_mean,
+            self.result.aggregate_global_gradient_dot_product,
+            places=8,
+        )
+        self.assertAlmostEqual(
+            alternate.signed_mean,
+            self.result.aggregate_global_gradient_dot_product,
+            places=8,
+        )
+        self.assertAlmostEqual(reference.effective_contribution_count, 12.063341748289508)
+        self.assertAlmostEqual(alternate.effective_contribution_count, 5.153621597928097)
+        self.assertAlmostEqual(reference.largest_absolute_share, 0.16033531920600053)
+        self.assertAlmostEqual(alternate.largest_absolute_share, 0.4158428046888921)
+        self.assertAlmostEqual(reference.top_four_absolute_share, 0.4870449948159291)
+        self.assertAlmostEqual(alternate.top_four_absolute_share, 0.5942865543230846)
+        self.assertAlmostEqual(reference.top_eight_absolute_share, 0.7174696416854126)
+        self.assertAlmostEqual(alternate.top_eight_absolute_share, 0.7457630373122845)
+        for summary in (reference, alternate):
+            self.assertAlmostEqual(
+                summary.absolute_sum,
+                summary.positive_sum + summary.absolute_negative_sum,
+            )
+            self.assertGreater(summary.net_cancellation_ratio, 0.0)
+            self.assertLess(summary.net_cancellation_ratio, 1.0)
+            self.assertGreater(summary.absolute_contribution_hhi, 0.0)
+            self.assertLessEqual(summary.top_four_absolute_share, 1.0)
+            self.assertLessEqual(summary.top_eight_absolute_share, 1.0)
+
     def test_all_64_trajectory_influences_and_provenance_are_retained(self) -> None:
         for protocol in (self.result.reference, self.result.alternate):
             self.assertEqual(protocol.trajectory_count, 32)
@@ -235,11 +275,19 @@ class MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeTests(
     def test_source_reuses_individual_gradients_and_forbids_open_work(self) -> None:
         source = inspect.getsource(smoke_module)
         batch_source = inspect.getsource(batch_module)
+        magnitude_source = inspect.getsource(
+            smoke_module._build_magnitude_concentration
+        )
         self.assertEqual(source.count("_collect_protocol_gradients("), 3)
         self.assertEqual(source.count("_calculate_leave_one_out_batch_gradients("), 1)
         self.assertNotIn("_evaluate(", source)
         self.assertIn("trajectory_gradients.append(gradients)", batch_source)
         self.assertIn("trajectory_gradients=tuple(trajectory_gradients)", batch_source)
+        self.assertEqual(source.count("sorted("), 1)
+        self.assertIn(
+            "sorted(absolute_values, reverse=True)",
+            magnitude_source,
+        )
         self.assertNotIn("while ", source)
         for forbidden in (
             "Path(",
@@ -250,7 +298,6 @@ class MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeTests(
             "subprocess",
             "replay_buffer",
             "selected_trajectory =",
-            "sorted(",
             "ranking",
             "learning_rate_candidates",
             "projection_candidates",

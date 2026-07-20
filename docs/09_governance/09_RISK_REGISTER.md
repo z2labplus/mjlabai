@@ -356,6 +356,13 @@ outlier-selection rationale. Mitigation forbids returning ranked identities,
 threshold search, clipping, reweighting or removal; summaries are descriptive
 and must retain the signed-sum/aggregate-dot invariant.
 
+Implementation status: alternate effective contribution count is about `5.15`
+and largest share `41.6%`, versus reference `12.06` and `16.0%`. This raises a
+predeclared objective/reward-scale robustness risk but does not identify a
+cause or justify filtering. Mitigation retains anonymous summaries/all 64
+records and requires any later normalization/robust-objective diagnostic to be
+fixed before execution, with no observed-seed threshold tuning.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

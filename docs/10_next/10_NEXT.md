@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Add exact opposite-alignment magnitude-concentration summaries to the
-  existing per-trajectory gradient influence diagnostic.
+- [ ] Review the exact anonymous opposite-alignment magnitude-concentration
+  summaries implementation.
 
 Current execution charter:
 
@@ -23,17 +23,27 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Follow exact `04AQ` approval with zero docs gates before code.
-- Reuse only the existing 64 opposite-aggregate dots. For each protocol record
-  signed sum, positive sum, absolute negative/total sum, net cancellation,
-  absolute-contribution HHI/effective count and fixed top-1/4/8 shares.
-- Verify signed sum divided by 32 equals the aggregate dot. Preserve every
-  trajectory and zero update/evaluation counts.
-- Internal sorting is only for anonymous fixed shares. Return no ranked seed
-  identity and provide no filtering, clipping, reweighting or selection API.
-- No threshold/search, new data/protocol/window, strength claim or P9-P12.
+- Review exact `04AQ` source/test changes and recorded probe/focused/fast
+  evidence only. Do not rerun the 601-second focused test, probe, prior
+  expensive smokes or full suite.
+- Verify same 64 dots, signed-mean/aggregate-dot invariant, fixed totals,
+  cancellation, HHI/effective count/top-1/4/8 math and all-finite output.
+- Preserve reference `12.06/16.0%` and alternate `5.15/41.6%` effective-count/
+  largest-share evidence as bounded concentration risk, not causality.
+- Confirm no seed identity, filtering, clipping, reweighting, selection, update
+  or evaluation. Directly approve/defer one fixed objective-scale diagnostic.
+- No threshold/search, new data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Added exact `04AQ` anonymous magnitude-concentration summaries
+  over the same 64 opposite-alignment dots. Signed means reproduce aggregate
+  dot; reference effective count/largest share are `12.0633/0.1603`, alternate
+  values `5.1536/0.4158`. No ranked identity/filter/reweight/update/evaluation
+  path exists. First focused run exposed one obsolete test-only `sorted` guard;
+  after exact correction ten tests pass in `600.576s`. 122 synthetic and seven
+  claim-control tests plus compile/dependency/static/diff checks pass. No
+  strength claim, real data or P9-P12 was added.
 
 - [x] 2026-07-20 Reviewed commit `8e483ad` against exact `04AP` approval in
   `04AQ`. Decision: `A. Review can close.` Confirmed retained-gradient

@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.59
+
+- Added exact `04AQ` anonymous opposite-alignment magnitude-concentration
+  summaries to the existing per-trajectory diagnostic and focused tests.
+- Signed means reproduce the aggregate dot. Reference effective count/largest
+  share are `12.0633/0.1603`; alternate values are `5.1536/0.4158`.
+- The first focused run passed all numerical/behavior tests but exposed one
+  obsolete static guard against any sorting. The test now permits exactly one
+  approved anonymous absolute-value sort; rerun passes 10 tests in `600.576s`.
+- 122 synthetic and seven claim-control tests plus compile/dependency/static/
+  diff checks pass. No identity ranking, filtering, reweighting, update,
+  evaluation, strength claim or P9-P12 was added.
+
 ## 2026-07-20 - v4.58
 
 - Added `04AQ`; reviewed commit `8e483ad` and recorded `A. Review can close`.

@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Executable anonymous influence-concentration summaries
+
+- Type: executable P8 local descriptive magnitude-concentration evidence.
+- The same 64 opposite-alignment dots produce fixed signed/positive/negative/
+  absolute totals, cancellation, HHI/effective count and top-1/4/8 shares.
+- Reference effective count/largest/top-4/top-8 shares are approximately
+  `12.0633/0.1603/0.4870/0.7175`; alternate values are
+  `5.1536/0.4158/0.5943/0.7458`.
+- Alternate conflict magnitude is more concentrated under these exact samples.
+  No ranked identity is exposed and no filtering/reweighting is authorized.
+- One probe completes. First focused run finds one test-only stale static guard;
+  after its exact correction, ten tests pass in `600.576s`. 122 synthetic and
+  seven claim-control tests plus compile/dependency/static/diff checks pass.
+- Evidence is concentration-risk evidence only, not causality, improvement,
+  robustness, strength, promotion, Tenhou, stable-dan, LuckyJ or P9-P12.
+
 ### 2026-07-20 — Per-trajectory influence review and magnitude approval
 
 - Type: exact P8 implementation-review closure plus bounded descriptive

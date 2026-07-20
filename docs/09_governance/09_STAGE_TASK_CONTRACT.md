@@ -2,11 +2,11 @@
 
 ## Current stage
 
-P8 implementation of exact `04AQ` anonymous opposite-alignment magnitude-
-concentration summaries. Reuse only the existing 64 dots and record fixed
-signed/positive/negative/absolute sums, cancellation, HHI/effective count and
-top-1/4/8 absolute shares. Preserve all records and zero updates/evaluations.
-No seed identity ranking/filtering, threshold/search, strength claim or P9-P12.
+P8 lightweight review of exact `04AQ` anonymous opposite-alignment magnitude-
+concentration summaries. Verify the same 64 dots, signed-mean/aggregate-dot
+invariant, fixed HHI/effective-count/top-share math, complete records and zero
+updates/evaluations. Preserve alternate concentration as risk evidence only.
+No identity/filter/reweight/search, expensive rerun, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition
@@ -586,7 +586,8 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Add the exact `04AQ` magnitude summaries to the existing per-trajectory result
-and test. Verify signed-sum/32 equals aggregate dot; expose no ranked seed
-identity. Use the same run and records with zero update/evaluation. No docs
-gate, filtering/reweighting, threshold search, new data, strength or P9-P12.
+Review the exact `04AQ` magnitude summaries using recorded evidence/lightweight
+checks only. Verify anonymous fixed math and no identity/filter/reweight path.
+Preserve `5.15/41.6%` alternate versus `12.06/16.0%` reference as bounded risk,
+not causality. Directly approve one fixed objective-scale diagnostic or stage
+decision; no docs chain, expensive rerun, search, strength claim or P9-P12.

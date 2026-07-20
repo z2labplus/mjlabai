@@ -529,6 +529,11 @@ reviews commit `8e483ad`, records `A. Review can close` and directly approves
 fixed anonymous magnitude-concentration summaries over the same 64 opposite-
 alignment dots. No seed filtering or identity ranking is approved.
 
+Those summaries now live in the existing per-trajectory diagnostic. Reference
+effective contribution count/largest share are about `12.06/16.0%`; alternate
+values are `5.15/41.6%`. This is anonymous concentration-risk evidence only,
+not permission to identify, remove or reweight any trajectory.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

@@ -39,6 +39,32 @@ _EXPECTED_REFERENCE_OWN_ALIGNMENT_SIGN_COUNTS = (13, 0, 19)
 _EXPECTED_REFERENCE_OPPOSITE_ALIGNMENT_SIGN_COUNTS = (14, 0, 18)
 _EXPECTED_ALTERNATE_OWN_ALIGNMENT_SIGN_COUNTS = (7, 0, 25)
 _EXPECTED_ALTERNATE_OPPOSITE_ALIGNMENT_SIGN_COUNTS = (18, 0, 14)
+_EXPECTED_REFERENCE_MAGNITUDE_CONCENTRATION = (
+    -0.004573782261788395,
+    -0.00014293069568088734,
+    0.006063447269466948,
+    0.010637229531255343,
+    0.01670067680072229,
+    0.27386807830390336,
+    0.08289576975151124,
+    12.063341748289508,
+    0.16033531920600053,
+    0.4870449948159291,
+    0.7174696416854126,
+)
+_EXPECTED_ALTERNATE_MAGNITUDE_CONCENTRATION = (
+    -0.004573783610487325,
+    -0.00014293073782772892,
+    0.002875172451524577,
+    0.007448956062011902,
+    0.010324128513536479,
+    0.4430188566996633,
+    0.19403830510218845,
+    5.153621597928097,
+    0.4158428046888921,
+    0.5942865543230846,
+    0.7457630373122845,
+)
 _EVIDENCE_GRADE = (
     "P8 local exact first-pass per-trajectory cross-protocol gradient influence "
     "diagnostic evidence only"
@@ -82,6 +108,22 @@ class MahJaxCategoricalMlpTrajectoryGradientInfluenceResult:
 
 
 @dataclass(frozen=True)
+class MahJaxCategoricalMlpOppositeAlignmentMagnitudeConcentrationResult:
+    contribution_count: int
+    signed_sum: float
+    signed_mean: float
+    positive_sum: float
+    absolute_negative_sum: float
+    absolute_sum: float
+    net_cancellation_ratio: Optional[float]
+    absolute_contribution_hhi: Optional[float]
+    effective_contribution_count: Optional[float]
+    largest_absolute_share: Optional[float]
+    top_four_absolute_share: Optional[float]
+    top_eight_absolute_share: Optional[float]
+
+
+@dataclass(frozen=True)
 class MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult:
     protocol_id: str
     training_seeds: Tuple[int, ...]
@@ -100,6 +142,9 @@ class MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult:
     trajectories: Tuple[MahJaxCategoricalMlpTrajectoryGradientInfluenceResult, ...]
     own_alignment_sign_counts: Tuple[int, int, int]
     opposite_alignment_sign_counts: Tuple[int, int, int]
+    opposite_alignment_magnitude_concentration: (
+        MahJaxCategoricalMlpOppositeAlignmentMagnitudeConcentrationResult
+    )
     all_training_actions_legal: bool
     all_rounds_terminated: bool
     all_advantage_sums_centered: bool
@@ -172,6 +217,65 @@ def _alignment_sign_counts(values):
 
 def _all_finite(values):
     return all(value is None or math.isfinite(value) for value in values)
+
+
+def _summary_all_finite(summary):
+    return _all_finite(tuple(vars(summary).values()))
+
+
+def _magnitude_values(summary):
+    return (
+        summary.signed_sum,
+        summary.signed_mean,
+        summary.positive_sum,
+        summary.absolute_negative_sum,
+        summary.absolute_sum,
+        summary.net_cancellation_ratio,
+        summary.absolute_contribution_hhi,
+        summary.effective_contribution_count,
+        summary.largest_absolute_share,
+        summary.top_four_absolute_share,
+        summary.top_eight_absolute_share,
+    )
+
+
+def _build_magnitude_concentration(values):
+    signed_sum = sum(values)
+    positive_sum = sum(value for value in values if value > 0.0)
+    absolute_negative_sum = -sum(value for value in values if value < 0.0)
+    absolute_values = tuple(abs(value) for value in values)
+    absolute_sum = sum(absolute_values)
+    if absolute_sum > 0.0:
+        shares = tuple(
+            value / absolute_sum for value in sorted(absolute_values, reverse=True)
+        )
+        hhi = sum(value * value for value in shares)
+        cancellation = abs(signed_sum) / absolute_sum
+        effective_count = 1.0 / hhi if hhi > 0.0 else None
+        largest_share = shares[0]
+        top_four_share = sum(shares[:4])
+        top_eight_share = sum(shares[:8])
+    else:
+        hhi = None
+        cancellation = None
+        effective_count = None
+        largest_share = None
+        top_four_share = None
+        top_eight_share = None
+    return MahJaxCategoricalMlpOppositeAlignmentMagnitudeConcentrationResult(
+        contribution_count=len(values),
+        signed_sum=signed_sum,
+        signed_mean=signed_sum / len(values),
+        positive_sum=positive_sum,
+        absolute_negative_sum=absolute_negative_sum,
+        absolute_sum=absolute_sum,
+        net_cancellation_ratio=cancellation,
+        absolute_contribution_hhi=hhi,
+        effective_contribution_count=effective_count,
+        largest_absolute_share=largest_share,
+        top_four_absolute_share=top_four_share,
+        top_eight_absolute_share=top_eight_share,
+    )
 
 
 def _collect_protocol_gradients(
@@ -278,6 +382,9 @@ def _build_protocol_result(collected, opposite, jnp):
             )
         )
     public_trajectories = tuple(trajectory_results)
+    opposite_dots = tuple(
+        item.opposite_aggregate_dot_product for item in public_trajectories
+    )
     return MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult(
         protocol_id=collected.protocol_id,
         training_seeds=collected.training_seeds,
@@ -316,9 +423,10 @@ def _build_protocol_result(collected, opposite, jnp):
             tuple(item.own_aggregate_dot_product for item in public_trajectories)
         ),
         opposite_alignment_sign_counts=_alignment_sign_counts(
-            tuple(
-                item.opposite_aggregate_dot_product for item in public_trajectories
-            )
+            opposite_dots
+        ),
+        opposite_alignment_magnitude_concentration=(
+            _build_magnitude_concentration(opposite_dots)
         ),
         all_training_actions_legal=collected.all_training_actions_legal,
         all_rounds_terminated=collected.all_rounds_terminated,
@@ -411,6 +519,44 @@ def run_mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influence_smok
         == _EXPECTED_ALTERNATE_OWN_ALIGNMENT_SIGN_COUNTS
         and alternate.opposite_alignment_sign_counts
         == _EXPECTED_ALTERNATE_OPPOSITE_ALIGNMENT_SIGN_COUNTS
+        and reference.opposite_alignment_magnitude_concentration.contribution_count
+        == 32
+        and alternate.opposite_alignment_magnitude_concentration.contribution_count
+        == 32
+        and abs(
+            reference.opposite_alignment_magnitude_concentration.signed_mean
+            - aggregate_dot
+        )
+        <= 1e-8
+        and abs(
+            alternate.opposite_alignment_magnitude_concentration.signed_mean
+            - aggregate_dot
+        )
+        <= 1e-8
+        and _summary_all_finite(
+            reference.opposite_alignment_magnitude_concentration
+        )
+        and _summary_all_finite(
+            alternate.opposite_alignment_magnitude_concentration
+        )
+        and all(
+            abs(actual - expected) <= 1e-6
+            for actual, expected in zip(
+                _magnitude_values(
+                    reference.opposite_alignment_magnitude_concentration
+                ),
+                _EXPECTED_REFERENCE_MAGNITUDE_CONCENTRATION,
+            )
+        )
+        and all(
+            abs(actual - expected) <= 1e-6
+            for actual, expected in zip(
+                _magnitude_values(
+                    alternate.opposite_alignment_magnitude_concentration
+                ),
+                _EXPECTED_ALTERNATE_MAGNITUDE_CONCENTRATION,
+            )
+        )
         and abs(aggregate_dot - _EXPECTED_AGGREGATE_DOT_PRODUCT) <= 1e-8
         and aggregate_cosine is not None
         and abs(aggregate_cosine - _EXPECTED_AGGREGATE_COSINE_SIMILARITY) <= 1e-6
@@ -451,6 +597,7 @@ __all__ = [
     "MAHJAX_CATEGORICAL_MLP_FIRST_PASS_PER_TRAJECTORY_GRADIENT_INFLUENCE_SMOKE_VERSION",
     "MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceSmokeError",
     "MahJaxCategoricalMlpTrajectoryGradientInfluenceResult",
+    "MahJaxCategoricalMlpOppositeAlignmentMagnitudeConcentrationResult",
     "MahJaxCategoricalMlpProtocolTrajectoryGradientInfluenceResult",
     "MahJaxCategoricalMlpFirstPassPerTrajectoryGradientInfluenceResult",
     "run_mahjax_categorical_mlp_first_pass_per_trajectory_gradient_influence_smoke",
