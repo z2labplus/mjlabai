@@ -79,8 +79,11 @@ evaluations. That exact code is now implemented: raw cosine remains `-0.1869`
 and unit-norm aggregation yields `+0.2355`, with all prior outputs unchanged.
 One probe, 11 focused and 129 fast tests pass. `04AS` review-closes the code and
 directly approves one norm-matched unit-normalized shared update at fixed `0.32`
-followed only by the existing windows. Zero docs gates remain before code. This
-is bounded
+followed only by the existing windows. That exact update is now implemented:
+all four parameter groups change, but both reward vectors and transition counts
+remain exact initial behavior at `-312/-1056`, with zero changed reward seeds.
+One probe, eight focused and 129 fast tests pass. Lightweight review is next.
+This is bounded
 training-seed sensitivity work,
 not robust evaluation or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can

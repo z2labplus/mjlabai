@@ -1,5 +1,18 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.63
+
+- Added the exact `04AS` norm-matched unit-normalized aggregate one-step update
+  module and focused tests.
+- Raw/unit-combined/scaled global norms are
+  `0.01765190/0.16012520/0.01765190`; fixed scale is `0.11023811`, fixed rate is
+  `0.32`, and every parameter group changes.
+- Both existing fixed-window reward vectors and transition counts remain exact
+  initial behavior: `-312/-1056`, with no changed reward seed.
+- One probe and eight focused tests pass in `722.427s`; 122 synthetic and seven
+  claim-control tests plus compile/dependency/diff checks pass. No search,
+  selection, real data, strength claim or P9-P12 was added.
+
 ## 2026-07-20 - v4.62
 
 - Added `04AS`; reviewed commit `795c2c0` and recorded

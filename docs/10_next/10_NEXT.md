@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Run one exact norm-matched unit-normalized aggregate update followed by
-  the two existing fixed evaluation windows.
+- [ ] Review the exact norm-matched unit-normalized aggregate one-step update
+  and fixed-window implementation.
 
 Current execution charter:
 
@@ -23,19 +23,30 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Add only the exact `04AS` source/test files plus optional package export and
-  direct governance synchronization.
-- Exact batches `0..31` and `116..147`; uniformly unit-normalize all 64 full
-  gradients, average per protocol and combine once.
-- Match the combined unit direction's global L2 to the same batches' raw
-  combined mean global L2, then apply exactly one fixed-rate `0.32` update.
-- Evaluate only existing zero-update windows `52..83` and `84..115`; retain all
-  outcomes. One probe, focused and fast checks only; no full suite.
-- No second update, projection, epsilon/clipping, identity/filter/per-seed
-  weight, scale/rate/seed/window search, selection, real data, strength or
-  P9-P12.
+- Review exact `04AS` source/test changes and recorded probe/focused/fast
+  evidence only. Do not rerun the 722-second focused test, probe, prior
+  expensive diagnostics or full suite.
+- Verify exact 64-gradient reuse, raw/unit combined geometry, deterministic
+  norm match, one `0.32` update, nonzero parameter deltas, only existing fixed
+  windows and complete retained outputs.
+- Preserve exact zero behavior delta (`-312/-1056`, no changed seed or
+  transition count) as negative one-step evidence, not normalized-training
+  success or failure in general.
+- Confirm no projection, second update, epsilon/clipping, identity/filter/
+  weight, search, selection, real data, strength claim or P9-P12.
+- Directly approve or defer at most one fixed continuation/alternative; do not
+  add a docs chain or rate/scale/window search.
 
 ## Completed
+
+- [x] 2026-07-20 Implemented the exact `04AS` norm-matched unit-normalized
+  aggregate one-step update and fixed-window diagnostic. Raw/unit-combined/
+  scaled global norms are `0.01765190/0.16012520/0.01765190`; scale is
+  `0.11023811`; all four parameter groups change. After one fixed `0.32`
+  update, primary/replication remain exact `-312/-1056`, with no changed reward
+  seed or transition count. One probe, eight focused (`722.427s`), 122
+  synthetic and seven claim-control tests plus compile/dependency/diff checks
+  pass. No search, selection, real data, strength claim or P9-P12 was added.
 
 - [x] 2026-07-20 Reviewed commit `795c2c0` against exact `04AR` approval in
   `04AS`. Decision: `A. Review can close.` Confirmed same 64 gradients, finite

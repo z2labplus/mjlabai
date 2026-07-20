@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Executable norm-matched unit-gradient one-step diagnostic
+
+- Type: executable P8 local one-step update plus fixed-window negative behavior
+  evidence.
+- Exact 64 gradients receive uniform unit-norm treatment. Their combined unit
+  direction is scaled once by `0.11023811` so global L2 matches the raw combined
+  mean at approximately `0.01765190`.
+- One shared fixed-rate `0.32` update changes all four parameter groups.
+- Primary and replication reward vectors and transition counts remain exact
+  initial behavior: sums `-312/-1056`, zero changed reward seeds.
+- One probe, eight focused tests in `722.427s`, 122 synthetic and seven claim-
+  control tests plus compile/dependency/diff checks pass.
+- Evidence is norm-matched one-step no-behavior-change evidence only, not
+  normalized-training success/failure, robustness, strength, promotion,
+  Tenhou, stable-dan, LuckyJ or P9-P12 evidence.
+
 ### 2026-07-20 — Unit-norm alignment review and norm-matched update approval
 
 - Type: exact P8 implementation-review closure plus fixed behavioral diagnostic

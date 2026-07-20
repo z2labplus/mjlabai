@@ -550,6 +550,12 @@ reviews commit `795c2c0`, records `A. Review can close` and directly approves
 one norm-matched unit-normalized shared update followed only by the two existing
 fixed windows. It approves no search, selection, broad training or strength.
 
+The exact update now exists in
+`src/mjlabai/rl/mahjax_categorical_mlp_first_pass_norm_matched_unit_gradient_update_smoke.py`
+with focused tests. It changes all parameter groups at matched global norm but
+leaves both fixed windows exact at `-312/-1056` with zero changed reward seeds.
+This is bounded negative one-step behavior evidence, not strength.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust
