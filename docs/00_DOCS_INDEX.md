@@ -562,6 +562,13 @@ no-behavior-change result and directly approves one four-pass shared-policy
 continuation with final-only existing-window evaluation. No search or strength
 claim is approved.
 
+That exact continuation now exists in
+`src/mjlabai/rl/mahjax_categorical_mlp_four_pass_norm_matched_unit_gradient_training_smoke.py`
+with focused tests. Four continuous fixed updates retain primary `-312` and
+degrade replication `-1056 -> -1133` only at seed `92`. This is bounded P8
+mechanism/fixed-window negative evidence, not strength or permission for a
+fifth pass/search.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

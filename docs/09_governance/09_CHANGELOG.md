@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.65
+
+- Added the exact `04AT` four-pass shared norm-matched unit-gradient training
+  module and focused tests.
+- Every pass recomputes exact `0..31` and `116..147` gradients at current
+  parameters, uniformly normalizes all 64 gradients, matches the combined
+  direction once to that pass raw global norm and applies fixed rate `0.32`.
+- Four passes change every parameter group. Final-only primary remains `-312`;
+  replication degrades `-1056 -> -1133`, with only seed `92` changing.
+- A first focused run found only a test tolerance mismatch; after aligning the
+  assertion with the approved `1e-8` contract, eight tests pass in `2383.115s`.
+  122 synthetic and seven claim-control tests plus compile/dependency/diff
+  checks pass. No fifth pass, search, real data, strength claim or P9-P12.
+
 ## 2026-07-20 - v4.64
 
 - Added `04AT`; reviewed commit `986f4ad` and recorded

@@ -2,12 +2,15 @@
 
 ## Current stage
 
-P8 exact `04AT` four-pass shared-policy norm-matched unit-gradient training and
-final-only fixed-window diagnostic. One branch, exact `0..31`/`116..147` every
-pass, uniform normalization, per-pass raw global norm match and four fixed
-`0.32` updates. Record complete pass geometry/provenance and evaluate only
-`52..83`/`84..115` after pass four. No fifth pass, intermediate evaluation,
-projection, epsilon/filter/weight/search, selection, strength claim or P9-P12.
+P8 lightweight review of the exact implemented `04AT` four-pass shared-policy
+norm-matched unit-gradient training/final-only fixed-window diagnostic. Reuse
+passing evidence; verify one continuous branch, exact batches, uniform
+normalization, per-pass norm match, four fixed updates, complete provenance and
+final-only windows. Preserve primary `-312` and replication
+`-1056 -> -1133` at seed `92` as negative behavior evidence. No expensive
+rerun absent a concrete blocker, fifth pass, mechanism/parameter search,
+selection, strength claim or P9-P12. Review must directly choose a materially
+different P8 signal/environment prerequisite or a stage decision.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition

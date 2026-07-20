@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Run one exact four-pass shared-policy continuation of the norm-matched
-  unit-gradient update with final-only existing-window evaluation.
+- [ ] Review the exact four-pass shared norm-matched unit-gradient training and
+  final-only fixed-window implementation.
 
 Current execution charter:
 
@@ -23,19 +23,32 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Add only exact `04AT` source/test files plus optional package export and
-  direct governance synchronization.
-- One shared branch, exactly four ordered passes, exact batches `0..31` and
-  `116..147` at each pass, same uniform unit normalization and per-pass raw-
-  combined global norm match.
-- Exactly four fixed `0.32` updates with continuous parameter lineage; record
-  all pass geometry/provenance and perform no intermediate evaluation.
-- Final-only existing zero-update windows `52..83` and `84..115`; retain all
-  outcomes. One probe, focused and fast checks only; no full suite.
-- No fifth pass, projection, epsilon/clipping, identity/filter/weight, rate/
-  scale/pass/seed/window search, selection, real data, strength or P9-P12.
+- Reuse the recorded probe, eight focused tests, 122 synthetic tests, seven
+  claim-control tests and lightweight checks; do not rerun the expensive
+  four-pass diagnostic unless a concrete blocker requires it.
+- Verify exactly four continuous passes over `0..31` and `116..147`, uniform
+  unit normalization, one per-pass raw-global norm match, four fixed `0.32`
+  updates, complete geometry/provenance and final-only evaluation.
+- Preserve the exact behavior result: primary stays `-312`; replication moves
+  `-1056 -> -1133`, with only seed `92` changing. This is bounded negative
+  behavior evidence, not improvement, robustness or strength.
+- Reject a fifth pass and all rate/scale/pass/seed/window/formula search.
+  Review must directly select a materially different P8 signal/environment
+  prerequisite or a stage decision, not another unit-gradient continuation.
+- No production self-play, real data, Tenhou, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Implemented the exact `04AT` four-pass shared norm-matched
+  unit-gradient continuation. Four continuous fixed `0.32` updates use exact
+  `0..31` and `116..147` batches with per-pass uniform normalization and raw-
+  global norm matching; all pass geometry/provenance is retained and only the
+  final fixed windows are evaluated. Primary remains `-312`; replication
+  degrades `-1056 -> -1133` at seed `92`. The first focused run exposed only a
+  test tolerance mismatch with the approved `1e-8` norm contract; after that
+  test-only correction, eight focused tests pass in `2383.115s`, plus 122
+  synthetic and seven claim-control tests, compile/dependency/diff checks.
+  No fifth pass, search, selection, real data, strength claim or P9-P12.
 
 - [x] 2026-07-20 Reviewed commit `986f4ad` against exact `04AS` approval in
   `04AT`. Decision: `A. Review can close.` Confirmed exact batches, uniform

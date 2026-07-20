@@ -28,6 +28,18 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
+P8 lightweight review of the implemented exact four-pass shared norm-matched
+unit-gradient continuation. Four continuous passes use exact `0..31` and
+`116..147` batches, uniform normalization, per-pass raw-global norm matching
+and fixed rate `0.32`, with final-only `52..83`/`84..115` evaluation. Primary
+stays `-312`; replication degrades `-1056 -> -1133` at seed `92`. Eight focused
+tests pass in `2383.115s`; 129 fast tests and lightweight checks pass. Review
+must reject a fifth pass/search and directly move to a materially different
+P8 signal/environment prerequisite or a stage decision. No strength or
+P9-P12 claim follows.
+```
+
+```text
 P8 validation of the implemented `04AI`-approved alternate-training-seed
 sensitivity diagnostic. `04AI` accepts the second-window implementation after
 11 focused and all 499 tests pass, rejects another evaluation window/fifth

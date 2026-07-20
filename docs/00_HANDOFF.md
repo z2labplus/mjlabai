@@ -27,6 +27,20 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
+Latest executable status: the exact `04AT` four-pass shared norm-matched
+unit-gradient continuation is implemented. Four continuous passes use exact
+training batches `0..31` and `116..147`, uniform per-trajectory normalization,
+one raw-global norm match and one fixed `0.32` update per pass. Evaluation is
+final-only on `52..83` and `84..115`. Primary remains `-312`; replication
+degrades `-1056 -> -1133`, with only seed `92` changing. Eight focused tests
+pass in `2383.115s`; 122 synthetic and seven claim-control tests plus compile,
+dependency and diff checks pass. The current task is one lightweight review
+that must reject a fifth pass/search and directly move to a materially
+different P8 signal/environment prerequisite or stage decision. This remains
+local fixed-window negative behavior evidence, not model strength.
+```
+
+```text
 Current active stage is validation of the implemented `04AI`-approved alternate
 training-seed sensitivity diagnostic after review-accepting the second predeclared
 replication evaluation for the exact four-pass causal-baseline policy. Exact

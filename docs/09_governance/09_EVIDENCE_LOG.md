@@ -8,6 +8,25 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Executable four-pass norm-matched unit-gradient continuation
+
+- Type: executable P8 local four-pass training plus fixed-window negative
+  behavior evidence.
+- One shared branch recomputes exact `0..31` and `116..147` trajectory
+  gradients at current parameters for four ordered passes. All 64 gradients
+  receive uniform unit normalization; each pass matches once to its raw
+  combined global norm and applies fixed rate `0.32`.
+- Per-pass normalized cross-protocol cosine values are approximately
+  `+0.2355`, `-0.0164`, `+0.2697` and `+0.3167`; every parameter group changes.
+- Final-only primary reward remains `-312`. Replication changes
+  `-1056 -> -1133`; only seed `92` changes. No outcome is selected or hidden.
+- After one test-only tolerance correction, eight focused tests pass in
+  `2383.115s`; 122 synthetic and seven claim-control tests plus compile,
+  dependency and diff checks pass.
+- This is bounded mechanism/fixed-window negative behavior evidence only, not
+  improvement, robustness, strength, promotion, Tenhou, stable-dan, LuckyJ or
+  P9-P12 evidence. It does not justify a fifth pass or parameter search.
+
 ### 2026-07-20 — Norm-matched one-step review and four-pass approval
 
 - Type: exact P8 implementation-review closure plus fixed continued-training

@@ -14,6 +14,8 @@
 | Unit-normalized update changes direction and scale simultaneously | ML / Attribution | Critical | Medium | `04AS` requires one deterministic global norm match to the same raw combined mean before the fixed update; record pre/post scale geometry | Open |
 | Nonzero parameter changes are overclaimed as behavioral learning | ML / Interpretation | Critical | Realized | Pin complete fixed-window rewards and transition counts; exact one-step result has zero changed seeds despite four nonzero parameter-group deltas | Mitigated |
 | Four-pass continuation becomes open-ended pass-count search | Governance / Selection | Critical | High | `04AT` fixes exactly four passes, final-only evaluation and no fifth pass/branch/rollback; retain all outcomes regardless of sign | Open |
+| Norm-matched unit-gradient geometry is mistaken for behavioral improvement | ML / Interpretation | Critical | Realized | Preserve all four nonzero updates alongside primary `0` delta and replication `-77` at seed `92`; classify as negative fixed-window evidence and prohibit a fifth pass/search | Mitigated |
+| Single-round training is scaled before a full-game environment path is verified | Research / Goal alignment | Critical | High | After lightweight implementation review, prefer an exact pinned MahJax `round_mode="half"` environment prerequisite over another gradient-mechanism continuation | Open |
 
 ## 2026-07-18 — P8 five-round training/fixed-evaluation approval risks
 
