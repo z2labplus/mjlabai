@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.52
+
+- Added `04AN`; reviewed commit `e94e4fe` against exact `04AM` approval.
+- Decision: `A. Review can close.` Existing update arithmetic remains explicit;
+  new exact two-batch path has no update/evaluation, complete legal/provenance/
+  gradient geometry and no selection.
+- Global dot `-0.0001429308562` and cosine `-0.1868768328` are retained as
+  conflicting-signal evidence only, not a winning protocol or direction.
+- Reused the 596.96-second probe, nine focused, 122 synthetic and seven claim-
+  control passing tests; lightweight checks pass without expensive reruns.
+- Rejected search and directly approved one fixed symmetric conflict-projected
+  one-step update at reviewed effective rate `0.32`, followed only by existing
+  fixed windows. No strength claim or P9-P12 work was added.
+
 ## 2026-07-20 - v4.51
 
 - Implemented the exact `04AM` no-update first-pass two-protocol aggregate-

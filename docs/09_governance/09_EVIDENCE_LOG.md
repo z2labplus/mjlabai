@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Gradient-alignment review and conflict-projection approval
+
+- Type: exact P8 implementation-review closure plus material robust-gradient
+  diagnostic approval.
+- `04AN` records `A. Review can close` for commit `e94e4fe`; no blocker exists.
+- Exact helper compatibility, two batches, other-31 gradients, zero update/
+  evaluation, complete provenance, finite geometry and no selection conform.
+- Dot `-0.0001429308562` and cosine `-0.1868768328` remain conflicting-signal
+  evidence only; no protocol, model or direction is promoted.
+- Recorded probe/focused/fast evidence is reused and lightweight checks pass
+  without an expensive rerun.
+- One exact symmetric conflict-projected one-step update at fixed reviewed rate
+  `0.32`, followed by only existing windows, is directly approved with zero
+  docs gates. It remains local P8 diagnostic evidence, not strength.
+
 ### 2026-07-20 — Executable first-pass aggregate-gradient alignment diagnostic
 
 - Type: executable P8 local training-signal geometry diagnostic evidence.

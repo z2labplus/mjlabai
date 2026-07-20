@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact first-pass two-protocol aggregate-gradient alignment
-  diagnostic implementation.
+- [ ] Implement one exact symmetric conflict-projected aggregate-gradient
+  update and fixed-window diagnostic from the reviewed two first-pass batches.
 
 Current execution charter:
 
@@ -23,19 +23,29 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only exact `04AM`-approved source/test changes and recorded probe,
-  focused and fast evidence. Do not rerun the 599-second diagnostic, either
-  2400-second four-pass smoke or the full suite.
-- Verify the existing update helper keeps its reviewed arithmetic, while the
-  new path uses exact two first batches, no update/evaluation and complete
-  per-group/global norm/dot/cosine plus trajectory/legality provenance.
-- Preserve the observed global dot `-0.0001429308561853304` and cosine
-  `-0.18687683284469966` as conflicting-signal evidence only; select nothing.
-- Directly approve/defer one material robust-gradient/data-distribution task
-  without a docs chain. No scale/seed/optimizer/exploration search, third
-  protocol, extra pass/window, real data, strength claim or P9-P12.
+- Follow exact `04AN` approval with zero documentation gates before code.
+- Reuse identical initialization and exact first batches `0..31`/`116..147`.
+  Apply the one fixed symmetric projection formula to the original negative-
+  dot gradient pair, average the projected gradients and apply one update at
+  the already reviewed effective mean-gradient rate `0.32`.
+- Run only final zero-update `52..83` and `84..115` evaluations; pin any result
+  sign with complete geometry/provenance and no selection.
+- Do not call old public four-pass/mean/32x runs or the full suite.
+- No alternate projection/order/coefficient, multiplier/rate/optimizer/
+  exploration search, third protocol, second pass/update, third window,
+  replay, artifact, real data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Reviewed commit `e94e4fe` against exact `04AM` approval in
+  `04AN`. Decision: `A. Review can close.` Confirmed helper compatibility,
+  exact two first batches, other-31 gradients, zero update/evaluation, complete
+  provenance, finite nonzero group/global norms and no selection. Global dot
+  `-0.0001429308562` and cosine `-0.1868768328` are retained as conflicting-
+  signal evidence only. Reused probe, nine focused, 122 synthetic and seven
+  claim-control passing tests plus lightweight checks without expensive rerun.
+  Rejected search and directly approved one fixed symmetric conflict-projected
+  one-step update/fixed-window diagnostic with zero docs gates before code.
 
 - [x] 2026-07-20 Implemented the exact `04AM` first-pass two-protocol
   aggregate-gradient alignment diagnostic. Identical initial parameters use

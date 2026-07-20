@@ -483,6 +483,13 @@ evaluation calls. Reference/alternate global gradient norms are
 `0.0284640377/0.0268703934`; global dot/cosine are
 `-0.0001429308562/-0.1868768328`. This is conflicting-signal evidence only,
 not protocol selection, robust improvement or strength.
+
+`docs/04_rl_selfplay/04AN_P8_FIRST_PASS_GRADIENT_ALIGNMENT_IMPLEMENTATION_REVIEW.md`
+reviews commit `e94e4fe`, records `A. Review can close`, confirms exact no-
+update geometry/provenance and directly approves one fixed simultaneous
+symmetric conflict-projected one-step aggregate update at reviewed rate `0.32`
+with only existing windows. No docs gate remains before that exact code; no
+protocol, direction, projection or model is selected.
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

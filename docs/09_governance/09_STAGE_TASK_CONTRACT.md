@@ -2,14 +2,13 @@
 
 ## Current stage
 
-P8 lightweight review of the implemented `04AM` first-pass two-protocol
-aggregate-gradient alignment diagnostic. Identical initial parameters use
-exact `0..31` and `116..147` batches with no update/evaluation. Reference/
-alternate global norms are `0.0284640377/0.0268703934`; dot is
-`-0.0001429308562` and cosine is `-0.1868768328`, exposing conflicting first-
-step signals. Nothing is selected. Review must reuse recorded evidence and
-directly approve/defer one robust-gradient/data-distribution task. No scale/
-seed/optimizer/exploration search, expensive rerun, third
+P8 implementation of the exact `04AN` symmetric conflict-projected one-step
+aggregate-gradient diagnostic. Reuse identical initialization and exact first
+batches `0..31`/`116..147`; simultaneously project the original negative-dot
+pair with the single approved formula, average it and apply one update at fixed
+reviewed effective rate `0.32`. Evaluate only final `52..83` and `84..115`,
+retain all signs and select nothing. No alternate projection/order/coefficient,
+scale/seed/optimizer/exploration search, old public run, third
 protocol/window/pass, real data, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
@@ -590,10 +589,9 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04AM` first-pass aggregate-gradient implementation using
-recorded evidence and lightweight checks only. Verify helper compatibility,
-exact batches, no update/evaluation, complete norms/dot/cosine/provenance and
-no selection. Preserve negative cosine as conflict evidence only and directly
-approve/defer one robust-gradient/data-distribution task without docs chain.
-No expensive rerun, search, third protocol/window/pass, strength claim or
-P9-P12.
+Implement the exact `04AN` symmetric conflict-projected aggregate-gradient
+one-step update/fixed-window diagnostic. Use only exact reviewed first batches,
+the simultaneous original-pair projection formula, one average/update at
+`0.32` and existing final windows. Pin every sign with complete geometry/
+provenance and no selection. No docs gate, alternate formula/order/coefficient,
+search, old public run, second update/pass, third window, strength or P9-P12.

@@ -61,7 +61,11 @@ other-31 gradients, but applies no update or evaluation. That code is now
 implemented: reference/alternate global norms are
 `0.0284640377/0.0268703934`, dot is `-0.0001429308562` and cosine is
 `-0.1868768328`, exposing conflicting first-step signals. Nine focused, 122
-synthetic and seven claim-control tests pass. One lightweight review is next.
+synthetic and seven claim-control tests pass. `04AN` review-closes commit
+`e94e4fe`, selects nothing and directly approves one exact simultaneous
+symmetric conflict-projected aggregate update, one step at fixed reviewed
+effective rate `0.32`, followed only by the two existing windows. Zero docs
+gates remain before that code.
 This is P8
 training-seed sensitivity work, not robust
 generalization, algorithm selection, production evaluation or strength:
@@ -1175,9 +1179,8 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is lightweight review of the exact `04AM` first-pass
-  two-protocol aggregate-gradient alignment diagnostic. Reuse recorded evidence
-  and directly approve/defer one robust-gradient/data-distribution task.
+- Current next work is direct implementation of the exact `04AN` symmetric
+  conflict-projected one-step aggregate-gradient update/fixed-window diagnostic.
   P8 bounded local diagnostics are active;
   production self-play, evaluation, league, real data, Tenhou and P9-P12 remain
   unapproved. Do not make strength claims.

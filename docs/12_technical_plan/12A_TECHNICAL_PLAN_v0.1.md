@@ -53,7 +53,10 @@ diagnostic from identical initial parameters. That diagnostic is implemented:
 reference/alternate global gradient norms are `0.0284640377/0.0268703934`,
 global dot/cosine are `-0.0001429308562/-0.1868768328`, exposing conflicting
 first-step signals with no selection. Nine focused, 122 synthetic and seven
-claim-control tests pass; one lightweight review is next. This is bounded
+claim-control tests pass. `04AN` review-closes that implementation and directly
+approves one exact simultaneous symmetric conflict projection, one aggregate
+update at fixed reviewed effective rate `0.32` and only the existing windows.
+Zero docs gates remain before code. This is bounded
 training-seed sensitivity work,
 not robust evaluation or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
