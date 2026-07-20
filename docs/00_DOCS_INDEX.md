@@ -475,6 +475,14 @@ without selection and rejects multiplier/seed/window/pass search. It directly
 approves one no-update first-pass two-protocol aggregate-gradient alignment
 diagnostic from identical initial parameters. Zero docs gates remain before
 that exact code; its future output is training-signal geometry evidence only.
+
+That exact diagnostic now exists in
+`src/mjlabai/rl/mahjax_categorical_mlp_first_pass_training_protocol_gradient_alignment_smoke.py`
+with matching focused tests. It uses 64 trajectories, zero updates and zero
+evaluation calls. Reference/alternate global gradient norms are
+`0.0284640377/0.0268703934`; global dot/cosine are
+`-0.0001429308562/-0.1868768328`. This is conflicting-signal evidence only,
+not protocol selection, robust improvement or strength.
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

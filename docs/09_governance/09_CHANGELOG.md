@@ -1,5 +1,21 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.51
+
+- Implemented the exact `04AM` no-update first-pass two-protocol aggregate-
+  gradient alignment diagnostic and matching focused tests.
+- Identical reviewed parameters use exact `0..31` and `116..147` once each,
+  32 frozen-policy trajectories per batch, other-31 baselines and no parameter
+  update or evaluation call.
+- Reference/alternate global gradient norms are `0.0284640377/0.0268703934`;
+  dot is `-0.0001429308562` and cosine is `-0.1868768328`. The first-step
+  aggregate signals conflict, explaining protocol sensitivity without selecting
+  either protocol, model or gradient direction.
+- Probe completes in `596.96s`; nine focused tests pass in `598.815s`
+  (`603.98s` wall); 122 synthetic and seven claim-control tests pass. Compile,
+  dependency, static scope and diff checks pass. No old expensive run, search,
+  real data, strength claim or P9-P12 work was added.
+
 ## 2026-07-20 - v4.50
 
 - Added `04AM`; reviewed commit `8df8d9d` against exact `04AL` approval.

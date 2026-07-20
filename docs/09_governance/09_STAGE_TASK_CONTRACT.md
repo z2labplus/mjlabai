@@ -2,14 +2,14 @@
 
 ## Current stage
 
-P8 implementation of the exact `04AM` first-pass two-protocol aggregate-
-gradient alignment diagnostic. `04AM` review-closes the fixed `32x` result:
-reference `+54/+121` versus alternate `-60/0` remains protocol-sensitive and
-nothing is selected. The next code uses identical initial parameters, exact
-`0..31` and `116..147` once each, reviewed other-31 baselines and aggregate
-mean gradients. It applies no update and performs no evaluation. Record per-
-group/global norms, dot/cosine and exact provenance in frozen array-free output.
-No scale/seed/optimizer/exploration search, expensive four-pass rerun, third
+P8 lightweight review of the implemented `04AM` first-pass two-protocol
+aggregate-gradient alignment diagnostic. Identical initial parameters use
+exact `0..31` and `116..147` batches with no update/evaluation. Reference/
+alternate global norms are `0.0284640377/0.0268703934`; dot is
+`-0.0001429308562` and cosine is `-0.1868768328`, exposing conflicting first-
+step signals. Nothing is selected. Review must reuse recorded evidence and
+directly approve/defer one robust-gradient/data-distribution task. No scale/
+seed/optimizer/exploration search, expensive rerun, third
 protocol/window/pass, real data, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
@@ -590,9 +590,10 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Implement the exact `04AM`-approved first-pass two-protocol aggregate-gradient
-alignment diagnostic. Use identical initial parameters and only exact `0..31`
-and `116..147` 32-trajectory batches; reuse reviewed leave-one-out gradients,
-apply no update/evaluation and record per-group/global norm/dot/cosine with no
-selection. No docs gate, scale/seed/optimizer search, expensive four-pass
-rerun, third protocol/window/pass, strength claim or P9-P12.
+Review the exact `04AM` first-pass aggregate-gradient implementation using
+recorded evidence and lightweight checks only. Verify helper compatibility,
+exact batches, no update/evaluation, complete norms/dot/cosine/provenance and
+no selection. Preserve negative cosine as conflict evidence only and directly
+approve/defer one robust-gradient/data-distribution task without docs chain.
+No expensive rerun, search, third protocol/window/pass, strength claim or
+P9-P12.

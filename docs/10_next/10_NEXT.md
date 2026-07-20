@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement the exact first-pass two-protocol aggregate-gradient alignment
-  diagnostic from identical initial parameters.
+- [ ] Review the exact first-pass two-protocol aggregate-gradient alignment
+  diagnostic implementation.
 
 Current execution charter:
 
@@ -23,18 +23,31 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Follow exact `04AM` approval with zero documentation gates before code.
-- Use identical reviewed initial parameters and only exact ordered seeds
-  `0..31` and `116..147`, one 32-trajectory frozen-policy batch each.
-- Reuse the reviewed other-31 baseline/objective and compute aggregate mean
-  gradients without applying an update or running any evaluation window.
-- Record per-group/global norms, dot product and cosine, exact trajectory/
-  legality provenance, frozen array-free output and no selection.
-- Do not rerun either 2400-second four-pass smoke or the full suite.
-- No multiplier/rate/optimizer/exploration search, third protocol, extra pass/
-  window, replay, artifact, real data, strength claim or P9-P12.
+- Review only exact `04AM`-approved source/test changes and recorded probe,
+  focused and fast evidence. Do not rerun the 599-second diagnostic, either
+  2400-second four-pass smoke or the full suite.
+- Verify the existing update helper keeps its reviewed arithmetic, while the
+  new path uses exact two first batches, no update/evaluation and complete
+  per-group/global norm/dot/cosine plus trajectory/legality provenance.
+- Preserve the observed global dot `-0.0001429308561853304` and cosine
+  `-0.18687683284469966` as conflicting-signal evidence only; select nothing.
+- Directly approve/defer one material robust-gradient/data-distribution task
+  without a docs chain. No scale/seed/optimizer/exploration search, third
+  protocol, extra pass/window, real data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Implemented the exact `04AM` first-pass two-protocol
+  aggregate-gradient alignment diagnostic. Identical initial parameters use
+  only exact `0..31` and `116..147` frozen-policy batches, 32 trajectories
+  each, reviewed other-31 baselines and mean gradients with zero update and
+  zero evaluation. Reference/alternate global gradient L2 norms are
+  `0.0284640377/0.0268703934`; global dot is `-0.0001429308562` and cosine is
+  `-0.1868768328`, exposing conflicting first-step signals. No protocol/model/
+  direction is selected. Probe completes in `596.96s`; nine focused tests pass
+  in `598.815s` (`603.98s` wall); 122 synthetic and seven claim-control tests,
+  compile, dependency, static scope and diff checks pass. No old expensive
+  run, update/evaluation, search, real data, strength claim or P9-P12 was added.
 
 - [x] 2026-07-20 Reviewed commit `8df8d9d` against exact `04AL` approval in
   `04AM`. Decision: `A. Review can close.` Confirmed preserved explicit `1.0`

@@ -291,6 +291,16 @@ whole-model cancellation. Mitigations require finite/nonzero checks, per-group
 norms plus global dot/cosine, frozen exact inputs and no protocol/model/
 direction selection. The result is training-signal geometry evidence only.
 
+Implementation status: exact first-pass aggregate gradients are finite and
+nonzero, but their global dot `-0.0001429308562` and cosine `-0.1868768328`
+show conflicting directions across the two predeclared batches. This realizes
+training-distribution/gradient-conflict risk and explains why simply increasing
+update magnitude can produce opposite outcomes. Whole-model cosine can hide
+group-level cancellation, so the result also retains all four group norms.
+No direction/protocol is selected. Review must not respond with multiplier,
+rate, seed or optimizer search; it must approve/defer one predeclared robust-
+gradient or distribution mechanism with explicit anti-selection controls.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

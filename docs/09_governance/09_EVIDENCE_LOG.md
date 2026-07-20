@@ -8,6 +8,24 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Executable first-pass aggregate-gradient alignment diagnostic
+
+- Type: executable P8 local training-signal geometry diagnostic evidence.
+- Identical reviewed initial parameters use exact `0..31` and `116..147`, one
+  frozen 32-trajectory batch each, reviewed other-31 baselines and aggregate
+  mean gradients. Training/evaluation update counts and evaluation calls are
+  all zero.
+- Reference/alternate global L2 norms are `0.0284640377/0.0268703934`.
+  Global dot product is `-0.0001429308562`; cosine is `-0.1868768328`.
+  The predeclared protocol batches therefore produce conflicting first-step
+  aggregate learning signals.
+- Probe completes in `596.96s`; nine focused tests pass in `598.815s`; 122
+  synthetic and seven claim-control tests plus compile/dependency/static/diff
+  checks pass. Neither four-pass smoke nor the full suite is rerun.
+- Evidence grade: bounded training-signal geometry/protocol-sensitivity
+  evidence only; not robust improvement, model strength, promotion, Tenhou,
+  stable-dan, LuckyJ or P9-P12 evidence.
+
 ### 2026-07-20 — Fixed-32x review and gradient-alignment task approval
 
 - Type: exact P8 implementation-review closure plus material structural

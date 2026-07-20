@@ -49,8 +49,12 @@ alternate `-60/0`; behavior changes but protocol sensitivity persists. `04AM`
 now review-closes that implementation,
 selects no branch, rejects scale/seed/window/pass search and directly approves
 one exact no-update first-pass two-protocol aggregate-gradient alignment
-diagnostic from identical initial parameters. Zero docs gates remain before
-code. This is bounded training-seed sensitivity work,
+diagnostic from identical initial parameters. That diagnostic is implemented:
+reference/alternate global gradient norms are `0.0284640377/0.0268703934`,
+global dot/cosine are `-0.0001429308562/-0.1868768328`, exposing conflicting
+first-step signals with no selection. Nine focused, 122 synthetic and seven
+claim-control tests pass; one lightweight review is next. This is bounded
+training-seed sensitivity work,
 not robust evaluation or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted

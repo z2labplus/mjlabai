@@ -235,6 +235,15 @@ class _BatchUpdate:
     parameter_delta_l2: Tuple[float, ...]
 
 
+@dataclass(frozen=True)
+class _BatchGradients:
+    gradient_sums: tuple
+    leave_one_out_seat_baselines: Tuple[Tuple[float, ...], ...]
+    advantage_seat_returns: Tuple[Tuple[float, ...], ...]
+    decision_advantages: tuple
+    initial_trajectory_objectives: Tuple[float, ...]
+
+
 def _trace_sha256(trace: Tuple[int, ...]) -> str:
     return hashlib.sha256(",".join(map(str, trace)).encode("ascii")).hexdigest()
 
@@ -267,10 +276,9 @@ def _trajectory_objective(parameters, trajectory, decision_advantages, jax, jnp)
     return -jnp.mean(decision_advantages * selected_log_probabilities)
 
 
-def _apply_leave_one_out_batch_update(
+def _calculate_leave_one_out_batch_gradients(
     parameters,
     trajectories,
-    gradient_multiplier,
     jax,
     jnp,
 ):
@@ -319,9 +327,31 @@ def _apply_leave_one_out_batch_update(
             total + gradient for total, gradient in zip(gradient_sums, gradients)
         )
 
+    return _BatchGradients(
+        gradient_sums=gradient_sums,
+        leave_one_out_seat_baselines=baselines,
+        advantage_seat_returns=advantages,
+        decision_advantages=tuple(decision_advantages),
+        initial_trajectory_objectives=tuple(initial_objectives),
+    )
+
+
+def _apply_leave_one_out_batch_update(
+    parameters,
+    trajectories,
+    gradient_multiplier,
+    jax,
+    jnp,
+):
+    batch_gradients = _calculate_leave_one_out_batch_gradients(
+        parameters,
+        trajectories,
+        jax,
+        jnp,
+    )
     mean_gradients = tuple(
         gradient_multiplier * gradient / _TRAJECTORIES_PER_PASS
-        for gradient in gradient_sums
+        for gradient in batch_gradients.gradient_sums
     )
     updated_parameters = jax.block_until_ready(
         tuple(
@@ -339,15 +369,25 @@ def _apply_leave_one_out_batch_update(
                 jnp,
             )
         )
-        for trajectory, actor_advantages in zip(trajectories, decision_advantages)
+        for trajectory, actor_advantages in zip(
+            trajectories,
+            batch_gradients.decision_advantages,
+        )
     )
     return _BatchUpdate(
         parameters=updated_parameters,
-        leave_one_out_seat_baselines=baselines,
-        advantage_seat_returns=advantages,
-        initial_trajectory_objectives=tuple(initial_objectives),
+        leave_one_out_seat_baselines=(
+            batch_gradients.leave_one_out_seat_baselines
+        ),
+        advantage_seat_returns=batch_gradients.advantage_seat_returns,
+        initial_trajectory_objectives=(
+            batch_gradients.initial_trajectory_objectives
+        ),
         post_update_trajectory_objectives=post_objectives,
-        batch_initial_objective=(sum(initial_objectives) / _TRAJECTORIES_PER_PASS),
+        batch_initial_objective=(
+            sum(batch_gradients.initial_trajectory_objectives)
+            / _TRAJECTORIES_PER_PASS
+        ),
         batch_post_update_objective=(sum(post_objectives) / _TRAJECTORIES_PER_PASS),
         parameter_delta_l2=tuple(
             float(jnp.linalg.norm(updated - initial))
