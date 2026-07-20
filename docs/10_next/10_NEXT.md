@@ -12,7 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact fixed-32x batch-size-compensated leave-one-out gradient diagnostic implementation.
+- [ ] Implement the exact first-pass two-protocol aggregate-gradient alignment
+  diagnostic from identical initial parameters.
 
 Current execution charter:
 
@@ -22,18 +23,29 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the exact `04AL`-approved changes and recorded probe/focused/fast
-  evidence; do not rerun any 2400-second execution or the full suite.
-- Verify existing `1.0x` behavior remains explicit, new multiplier is only
-  `32.0`, exact two protocols/four passes/final windows and no selection.
-- Preserve both outcomes: reference `+54/+121`, alternate `-60/0`. Do not
-  promote the favorable branch or call the multiplier robust.
-- Use lightweight source/provenance checks and directly approve/defer one
-  material structural exploration/policy-distribution task without docs chain.
-- No multiplier/rate search, third protocol, seed search, fifth pass, third
+- Follow exact `04AM` approval with zero documentation gates before code.
+- Use identical reviewed initial parameters and only exact ordered seeds
+  `0..31` and `116..147`, one 32-trajectory frozen-policy batch each.
+- Reuse the reviewed other-31 baseline/objective and compute aggregate mean
+  gradients without applying an update or running any evaluation window.
+- Record per-group/global norms, dot product and cosine, exact trajectory/
+  legality provenance, frozen array-free output and no selection.
+- Do not rerun either 2400-second four-pass smoke or the full suite.
+- No multiplier/rate/optimizer/exploration search, third protocol, extra pass/
   window, replay, artifact, real data, strength claim or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Reviewed commit `8df8d9d` against exact `04AL` approval in
+  `04AM`. Decision: `A. Review can close.` Confirmed preserved explicit `1.0`
+  mean behavior, only fixed `32.0` compensation, exact two protocols/four
+  frozen-batch passes/final windows, complete legal diagnostics and no
+  selection. Reference `+54/+121` is not reproduced by alternate `-60/0`, so
+  update magnitude changes behavior but remains protocol-sensitive. Reused
+  recorded probe/ten focused/122 fast passing evidence and lightweight source/
+  provenance checks without expensive reruns. Rejected scale/seed/window/pass
+  search and directly approved one exact no-update first-pass two-protocol
+  aggregate-gradient alignment diagnostic with zero docs gates before code.
 
 - [x] 2026-07-19 Implemented the exact `04AL` fixed `32x` batch-size-
   compensated leave-one-out gradient diagnostic. The reviewed private helpers

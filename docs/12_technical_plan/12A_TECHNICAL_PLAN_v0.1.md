@@ -45,8 +45,12 @@ diagnostic. That implementation changes both branches' parameters but leaves
 both fixed reward vectors at initial `-312/-1056`. `04AL` closes review and
 directly approves one fixed `32x` batch-size-compensated diagnostic over the
 same protocols. That implementation yields reference `+54/+121` versus
-alternate `-60/0`; behavior changes but protocol sensitivity persists and one
-lightweight review is next. This is bounded training-seed sensitivity work,
+alternate `-60/0`; behavior changes but protocol sensitivity persists. `04AM`
+now review-closes that implementation,
+selects no branch, rejects scale/seed/window/pass search and directly approves
+one exact no-update first-pass two-protocol aggregate-gradient alignment
+diagnostic from identical initial parameters. Zero docs gates remain before
+code. This is bounded training-seed sensitivity work,
 not robust evaluation or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope: accepted

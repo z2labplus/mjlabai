@@ -8,6 +8,21 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Fixed-32x review and gradient-alignment task approval
+
+- Type: exact P8 implementation-review closure plus material structural
+  training-signal diagnostic approval.
+- `04AM` records `A. Review can close` for commit `8df8d9d`; no blocker exists.
+- Explicit `1.0` mean behavior, only fixed `32.0`, exact branches/batches/
+  windows, complete legal diagnostics and no selection conform to `04AL`.
+- Reference `+54/+121` is not reproduced by alternate `-60/0`; the favorable
+  branch is not selected and the multiplier is not classified as robust.
+- Recorded probe/focused/fast evidence is reused and lightweight checks pass
+  without an expensive rerun.
+- One exact no-update first-pass two-protocol aggregate-gradient alignment
+  diagnostic is directly approved with zero docs gates. Evidence remains
+  local P8 training-signal geometry evidence only, not strength or promotion.
+
 ### 2026-07-19 — Executable fixed-32x batch-size compensation diagnostic
 
 - Type: executable P8 local update-scale/behavior-change diagnostic evidence.

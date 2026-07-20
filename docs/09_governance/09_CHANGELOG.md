@@ -1,5 +1,20 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.50
+
+- Added `04AM`; reviewed commit `8df8d9d` against exact `04AL` approval.
+- Decision: `A. Review can close.` Explicit `1.0` mean behavior, only fixed
+  `32.0`, exact two protocols/four passes/final windows, complete diagnostics
+  and no selection conform.
+- Reference `+54/+121` versus alternate `-60/0` is retained as protocol-
+  sensitivity evidence, not a robust improvement or favorable-branch selection.
+- Reused the recorded 2421.62-second probe, ten focused and 122 fast passing
+  tests; lightweight commit/source/provenance checks pass without expensive
+  reruns.
+- Rejected scale/seed/window/pass search and directly approved one exact first-
+  pass two-protocol aggregate-gradient alignment diagnostic with no update,
+  evaluation or docs gates before code. No strength claim or P9-P12 work.
+
 ## 2026-07-19 - v4.49
 
 - Implemented the exact `04AL` fixed `32x` batch-size-compensated leave-one-out

@@ -53,7 +53,12 @@ initial fixed-window rewards `-312/-1056`; ten focused and 122 fast tests pass.
 compensated gradient diagnostic over the same two protocols. That diagnostic
 is now implemented: reference changes `+54/+121`, alternate changes `-60/0`,
 so larger updates alter behavior but remain protocol-sensitive. Ten focused
-and 122 fast tests pass; one lightweight review is next. This is P8
+and 122 fast tests pass. `04AM` review-closes commit `8df8d9d`, selects no
+branch, rejects scale/seed/window/pass search and directly approves one exact
+first-pass two-protocol aggregate-gradient alignment diagnostic. It uses the
+same initial parameters, exact `0..31` and `116..147` batches and reviewed
+other-31 gradients, but applies no update or evaluation. Zero docs gates remain
+before that code. This is P8
 training-seed sensitivity work, not robust
 generalization, algorithm selection, production evaluation or strength:
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
@@ -1166,8 +1171,9 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- Current next work is lightweight review of the exact `04AL` fixed `32x`
-  batch-size-compensated leave-one-out gradient diagnostic.
+- Current next work is direct implementation of the exact `04AM` first-pass
+  two-protocol aggregate-gradient alignment diagnostic. It measures norms,
+  dot product and cosine without updating or evaluating either policy.
   P8 bounded local diagnostics are active;
   production self-play, evaluation, league, real data, Tenhou and P9-P12 remain
   unapproved. Do not make strength claims.

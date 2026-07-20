@@ -281,6 +281,16 @@ improves both fixed windows by `+54/+121`, while alternate degrades primary by
 selection-bias risks; the favorable branch must not be promoted. Scale search
 is prohibited. Ten focused and 122 fast tests pass; no full-suite rerun.
 
+Review status: `04AM` closes the exact implementation review with no blocker.
+The favorable reference branch remains unselected because alternate outcomes
+do not reproduce it. Multiplier/rate, third-protocol, seed, pass and window
+search remain prohibited. The next exact task measures first-pass aggregate-
+gradient alignment at identical initial parameters with no update/evaluation.
+Open risks are near-zero gradients, numerically unstable cosine and misleading
+whole-model cancellation. Mitigations require finite/nonzero checks, per-group
+norms plus global dot/cosine, frozen exact inputs and no protocol/model/
+direction selection. The result is training-signal geometry evidence only.
+
 ## 2026-07-18 — P8 categorical MLP two-round sequence implementation risks
 
 | Risk | Category | Severity | Probability | Mitigation | Status |

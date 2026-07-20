@@ -468,6 +468,13 @@ with matching focused tests. It preserves explicit `1x` mean behavior, runs
 only fixed `32x`, and records reference `+54/+121` versus alternate `-60/0`.
 This proves update magnitude can change behavior but does not establish a
 robust protocol or strength.
+
+`docs/04_rl_selfplay/04AM_P8_BATCH_SIZE_COMPENSATED_TRAINING_PROTOCOL_IMPLEMENTATION_REVIEW.md`
+reviews commit `8df8d9d`, records `A. Review can close`, preserves both signs
+without selection and rejects multiplier/seed/window/pass search. It directly
+approves one no-update first-pass two-protocol aggregate-gradient alignment
+diagnostic from identical initial parameters. Zero docs gates remain before
+that exact code; its future output is training-signal geometry evidence only.
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

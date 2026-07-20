@@ -2,13 +2,14 @@
 
 ## Current stage
 
-P8 lightweight review of the implemented `04AL` fixed `32x` batch-size-
-compensated leave-one-out gradient diagnostic. Existing mean behavior remains
-explicit at `1.0`; new exact two-protocol branches use only `32.0`. Reference
-changes `+54/+121`, alternate `-60/0`, so behavior changes but protocol
-sensitivity persists and nothing is selected. Ten focused and 122 fast tests
-pass. Review must reuse evidence and directly approve/defer one structural
-exploration/policy-distribution task. No scale search, expensive rerun, third
+P8 implementation of the exact `04AM` first-pass two-protocol aggregate-
+gradient alignment diagnostic. `04AM` review-closes the fixed `32x` result:
+reference `+54/+121` versus alternate `-60/0` remains protocol-sensitive and
+nothing is selected. The next code uses identical initial parameters, exact
+`0..31` and `116..147` once each, reviewed other-31 baselines and aggregate
+mean gradients. It applies no update and performs no evaluation. Record per-
+group/global norms, dot/cosine and exact provenance in frozen array-free output.
+No scale/seed/optimizer/exploration search, expensive four-pass rerun, third
 protocol/window/pass, real data, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
@@ -589,8 +590,9 @@ If a blocker or project risk is discovered, update:
 
 ## Only next step
 
-Review the exact `04AL` fixed-32x implementation once using recorded evidence
-and lightweight source/provenance checks. Verify explicit mean preservation,
-only fixed `32x`, exact branches/windows, both favorable/adverse outcomes and
-no selection. Directly approve/defer one structural exploration task; no scale
-search, expensive rerun, third protocol/window/pass, strength claim or P9-P12.
+Implement the exact `04AM`-approved first-pass two-protocol aggregate-gradient
+alignment diagnostic. Use identical initial parameters and only exact `0..31`
+and `116..147` 32-trajectory batches; reuse reviewed leave-one-out gradients,
+apply no update/evaluation and record per-group/global norm/dot/cosine with no
+selection. No docs gate, scale/seed/optimizer search, expensive four-pass
+rerun, third protocol/window/pass, strength claim or P9-P12.
