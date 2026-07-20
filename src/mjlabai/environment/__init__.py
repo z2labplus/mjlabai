@@ -1,5 +1,14 @@
 """Minimal environment-contract smoke helpers for MjLabAI."""
 
+from mjlabai.environment.mahjax_categorical_mlp_mixed_half_game_smoke import (
+    MAHJAX_CATEGORICAL_MLP_MIXED_HALF_GAME_PROJECT_SEAT,
+    MAHJAX_CATEGORICAL_MLP_MIXED_HALF_GAME_SMOKE_VERSION,
+    MahJaxCategoricalMlpMixedHalfGameResult,
+    MahJaxCategoricalMlpMixedHalfGameSmokeError,
+    MahJaxCategoricalMlpMixedHalfGameStep,
+    run_mahjax_categorical_mlp_mixed_half_game_smoke,
+)
+
 from mjlabai.environment.mahjax_integration_smoke import (
     MAHJAX_ENVIRONMENT_ID,
     MAHJAX_ENVIRONMENT_VERSION,
@@ -62,6 +71,8 @@ from mjlabai.environment.synthetic_transition_smoke import (
 )
 
 __all__ = [
+    "MAHJAX_CATEGORICAL_MLP_MIXED_HALF_GAME_PROJECT_SEAT",
+    "MAHJAX_CATEGORICAL_MLP_MIXED_HALF_GAME_SMOKE_VERSION",
     "MAHJAX_ENVIRONMENT_ID",
     "MAHJAX_ENVIRONMENT_VERSION",
     "MAHJAX_INTEGRATION_SMOKE_VERSION",
@@ -85,6 +96,9 @@ __all__ = [
     "SyntheticEnvironmentTransitionSmokeError",
     "MahJaxIntegrationSmokeError",
     "MahJaxIntegrationSmokeResult",
+    "MahJaxCategoricalMlpMixedHalfGameResult",
+    "MahJaxCategoricalMlpMixedHalfGameSmokeError",
+    "MahJaxCategoricalMlpMixedHalfGameStep",
     "MahJaxLinearPolicyRoundResult",
     "MahJaxLinearPolicyRoundSmokeError",
     "MahJaxLinearPolicyStep",
@@ -101,6 +115,7 @@ __all__ = [
     "apply_synthetic_environment_transition_smoke",
     "encode_mahjax_public_observation",
     "run_mahjax_integration_smoke",
+    "run_mahjax_categorical_mlp_mixed_half_game_smoke",
     "run_mahjax_linear_policy_round_smoke",
     "run_mahjax_rule_based_half_game_smoke",
     "run_mahjax_rule_based_single_round_smoke",

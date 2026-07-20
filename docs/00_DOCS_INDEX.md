@@ -589,6 +589,14 @@ upstream bundled-policy PON/PON_RED mismatch in a model mixed-half-game probe
 and directly approves an exact strict-normalized read-only implementation.
 This is interface/environment task approval, not strength evidence.
 
+The approved read-only mixed half-game implementation is in
+`src/mjlabai/environment/mahjax_categorical_mlp_mixed_half_game_smoke.py`, with
+focused coverage in
+`tests/environment/test_mahjax_categorical_mlp_mixed_half_game_smoke.py`.
+It pins 825 legal transitions, 200 project-seat decisions, one audited
+PON-to-PON_RED normalization, eight round boundaries and zero updates. This is
+P4/P7/P8 local model/environment interface smoke evidence, not strength.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement one exact read-only MahJax categorical-MLP-seat-0 versus
-  rule-seats-1/2/3 half-game smoke.
+- [ ] Review the exact read-only MahJax categorical-MLP-seat-0 versus
+  rule-seats-1/2/3 half-game smoke implementation.
 
 Current execution charter:
 
@@ -23,20 +23,30 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Add only exact `04AV` source/test, direct environment exports and governance.
-- Reuse reviewed in-memory categorical-MLP imitation parameters and exact
-  882-feature encoder; project greedy legal-masked seat 0, bundled rule seats
-  1/2/3, pinned seed-0 `half`/`auto` environment and one 2048-capped loop.
-- Only legal normalization: raw `PON=75` to `PON_RED=76` when 75 is illegal and
-  76 legal. Every other raw illegal action must fail; no general fallback.
-- Pin 825 transitions, 200 project decisions, sole normalization
-  `(450,3,75,76)`, eight boundaries, round-8 terminal, scores
-  `(40,265,379,316)`, final rewards `(-20,0,30,0)` and cumulative
-  `(-200,15,12,123)`.
-- Zero half-game gradient/update/optimizer/selection. No persistence, real
-  data, production self-play/league, strength claim, Tenhou or P9-P12.
+- Review only the exact implementation commit against `04AV`: API, pinned
+  runtime/model identity, one-loop control flow, strict legal masking, complete
+  transition/round provenance and immutable array-free output.
+- Verify the sole raw `PON=75` to legal `PON_RED=76` normalization at
+  `(450,3,75,76)` and rejection of every other illegal rule-policy output.
+- Reuse the passing focused evidence unless a blocker requires a rerun; do not
+  repeat expensive training or add another boundary/proposal chain.
+- Preserve zero half-game gradient/update/optimizer/selection and all non-
+  strength warnings. If review closes, directly approve or defer one material
+  P8 executable learning task using the existing half-game path.
+- No persistence, real data, production self-play/league, strength claim,
+  Tenhou or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Implemented the exact `04AV` read-only mixed MahJax half-game
+  smoke. The reviewed 882-feature categorical MLP drives seat 0 and bundled
+  rule policy drives seats 1/2/3. Seed 0 completes 825 legal transitions and
+  200 project decisions, with only the audited transition-450 actor-3 raw
+  `PON=75` to legal `PON_RED=76` normalization. Eight boundaries, round-8
+  terminal scores `(40,265,379,316)`, final rewards `(-20,0,30,0)` and
+  cumulative rewards `(-200,15,12,123)` are pinned. Eleven focused tests pass
+  in `206.526s`; no half-game update, persistence, real data, strength claim or
+  P9-P12 was added.
 
 - [x] 2026-07-20 Reviewed commit `a3bcaf5` in `04AV`. Found and fixed one
   semantic blocker: MahJax step_count is global, so round-local step identity

@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.69
+
+- Added the exact `04AV` read-only categorical-MLP-seat-0 versus bundled-rule-
+  seats-1/2/3 MahJax half-game module, environment exports and focused tests.
+- Seed 0 executes 825 legal transitions in one 2048-capped loop, including 200
+  project decisions and eight retained round boundaries, then terminates at
+  round 8 with scores `(40,265,379,316)`.
+- The only rule-policy normalization is the audited transition-450 actor-3 raw
+  `PON=75` to legal `PON_RED=76`; every other illegal output fails explicitly.
+- Eleven focused tests pass in `206.526s`. The half-game has zero model updates
+  and no persistence, real data, production self-play, strength or P9-P12.
+
 ## 2026-07-20 - v4.68
 
 - Added `04AV`; review found and fixed the half-game trace's round-step semantic

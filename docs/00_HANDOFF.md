@@ -27,14 +27,14 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current exact code task after `04AV`: run the reviewed categorical MLP at seat
-0 versus bundled rule seats 1/2/3 through one pinned local half-game, read-only.
-The rule-policy half-game review found and fixed only round-local step naming;
-all 938 terminal outputs remain unchanged. The model probe uses the correct
-882-feature encoder and found one upstream MahJax PON/PON_RED mismatch at
-transition 450. Only explicit 75-to-76 normalization is approved. That probe
-then completes 825 legal transitions and scores `(40,265,379,316)`. No half-
-game update, selection, model-strength claim, Tenhou or P9-P12 is approved.
+Current exact task is a lightweight review of the implemented `04AV` mixed
+half-game smoke. The reviewed categorical MLP drives seat 0 and bundled rule
+policy drives seats 1/2/3 through 825 legal transitions; 200 decisions belong
+to the project model. The only normalization is transition-450 actor-3 raw
+PON 75 to legal PON_RED 76. Eight boundaries and round-8 terminal scores
+`(40,265,379,316)` are pinned, with zero half-game updates. Review must directly
+approve or defer one material P8 executable learning task, without another
+proposal chain. This is not model-strength, Tenhou or P9-P12 evidence.
 ```
 
 ```text

@@ -8,6 +8,23 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Executable read-only project-model mixed half-game smoke
+
+- Type: executable P4/P7/P8 local model/environment interface evidence.
+- The reviewed in-memory 882-feature categorical MLP greedily drives seat 0
+  under the environment legal mask; bundled MahJax rule policy drives seats
+  1/2/3. No half-game parameter update occurs.
+- Seed 0 completes 825 legal transitions and 200 project decisions, retains
+  every raw/applied action plus eight round boundaries, and terminates at round
+  8 with scores `(40,265,379,316)`, final rewards `(-20,0,30,0)` and cumulative
+  rewards `(-200,15,12,123)`.
+- Exactly one upstream legality mismatch is normalized: transition 450, actor
+  3, raw PON 75 to legal PON_RED 76. All other illegal outputs are errors.
+- Eleven focused tests pass in `206.526s` plus compile/import checks.
+- Evidence is one pinned read-only local mixed-half-game smoke only, not
+  learning, improvement, model strength, production self-play, Tenhou,
+  stable-dan, LuckyJ 10.68, candidate promotion or P9-P12 evidence.
+
 ### 2026-07-20 — Half-game review fix and project-model probe
 
 - Type: P4/P8 implementation-review closure, exact local blocker evidence and
