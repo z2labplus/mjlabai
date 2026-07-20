@@ -1,5 +1,17 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.72
+
+- Added `04AX`; review accepts commit `930b15e` with no blocker and reuses its
+  passing focused/neighboring evidence.
+- Rejected two standalone one-step variants because terminal-gradient averaging
+  and round-local returns both preserve the same negative seed-1 greedy path.
+- Probed exact sequential training seeds `(0,1)` with two direct updates and
+  disjoint zero-update evaluation `(2,3)`. Aggregate seat-0 raw sum is
+  `-632 -> -634`, with seed 2 degrading and seed 3 improving.
+- Direct implementation is approved with zero docs gates. No third update,
+  search, selection, persistence, strength or P9-P12 is approved.
+
 ## 2026-07-20 - v4.71
 
 - Added the exact `04AW` categorical-MLP seat-0 half-game raw-outcome update

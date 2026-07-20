@@ -28,14 +28,13 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P4/P8 lightweight review of the implemented exact `04AW` one-update half-game
-task. Seed-0 training uses 427 legal transitions, 102 project decisions and one
-fixed `0.01` raw-return update that moves all parameter groups. Disjoint greedy
-seed-1 evaluation has zero updates and degrades seat-0 cumulative reward
-`-300 -> -320` and score `-70 -> -80`. Review must keep the failure visible and
-directly approve/defer one bounded variance or credit-assignment executable
-task without another proposal chain. No persistence, strength, Tenhou or
-P9-P12 evidence is approved.
+P8 exact `04AX` two-half-game sequential training/evaluation implementation.
+Train ordered seeds `(0,1)` with direct parameter continuity and one fixed
+`0.01` raw-outcome update after each; evaluate initial/final arrays greedily on
+disjoint `(2,3)` with zero updates. The fixed probe yields aggregate seat-0 raw
+sum `-632 -> -634`, with one seed degrading and one improving. All outcomes
+must remain visible; no third update, search, selection, persistence, strength,
+Tenhou or P9-P12 evidence is approved.
 ```
 
 ```text

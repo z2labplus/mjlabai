@@ -2,15 +2,14 @@
 
 ## Current stage
 
-P4/P8 lightweight review of the exact `04AW` seat-0 half-game raw-outcome
-update and disjoint evaluation implementation. Verify complete legal traces,
-seed/RNG/seat identity, one cumulative-raw-return/100 objective, exactly one
-fixed `0.01` update, four nonzero parameter deltas, zero evaluation updates and
-retained seed-1 degradation `-300 -> -320` reward / `-70 -> -80` score. Reuse
-passing evidence unless a blocker requires rerun. If review closes, directly
-approve/defer one material variance or credit-assignment task without another
-proposal chain. No persistence, real data, production self-play/league,
-strength, Tenhou or P9-P12.
+P8 exact `04AX` two-half-game sequential seat-0 raw-outcome training and
+disjoint evaluation smoke. Reuse the reviewed collector/update helper, train
+ordered seeds `(0,1)` with direct parameter continuity and exactly two fixed
+`0.01` updates, then greedily evaluate initial/final arrays on disjoint seeds
+`(2,3)` with zero updates. Pin full legal provenance and all probe results,
+including aggregate seat-0 raw sum `-632 -> -634` and opposing seed changes.
+No third game/update, replay, search, selection, persistence, real data,
+production self-play/league, strength, Tenhou or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition

@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact MahJax categorical-MLP-seat-0 half-game raw-outcome
-  update and disjoint read-only evaluation implementation.
+- [ ] Implement exact MahJax categorical-MLP-seat-0 two-half-game sequential
+  raw-outcome training and disjoint evaluation smoke.
 
 Current execution charter:
 
@@ -23,19 +23,26 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review only the exact `04AW` implementation commit: public/frozen array-free
-  API, seed/RNG/seat identities, full legal traces and round boundaries, raw-
-  return objective, exactly one update and strict train/evaluation separation.
-- Verify all four nonzero parameter deltas and retain the disjoint seed-1
-  negative change `-300 -> -320` cumulative reward and `-70 -> -80` score.
-- Reuse passing evidence unless a blocker requires rerun; change code only for
-  a genuine blocker. Do not add another proposal or boundary chain.
-- If review closes, directly approve or defer one material executable P8 task
-  that addresses single-trajectory variance or half-game learning signal.
-- No second update in review, persistence, real data, production self-play/
-  league, tuning, strength claim, Tenhou or P9-P12.
+- Add only exact `04AX` source/test, direct RL exports and governance. Reuse the
+  existing reviewed half-game collector and one-update helper.
+- Train exact ordered seeds `(0,1)` with direct parameter continuity and one
+  fixed `0.01` seat-0 raw-outcome update after each; two updates total.
+- Evaluate initial/final arrays greedily on exact disjoint seeds `(2,3)` with
+  identical per-seed RNG construction and zero evaluation updates.
+- Pin every `04AX` probe value and retain aggregate seat-0 raw sum
+  `-632 -> -634`, including opposing per-seed changes; no selection/rollback.
+- No third game/update, replay, search, persistence, real data, production
+  self-play/league, strength claim, Tenhou or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Reviewed commit `930b15e` in `04AX`; decision
+  `A. Review can close.` Exact one-update objective, legal/full provenance,
+  train/eval separation, nonzero deltas and negative seed-1 result conform.
+  Two one-step gradient variants were rejected after reproducing the same
+  greedy behavior plateau. A direct two-half-game sequential probe on train
+  seeds `(0,1)` and disjoint evaluation `(2,3)` yields raw sum `-632 -> -634`.
+  That exact negative task is approved with zero additional docs gates.
 
 - [x] 2026-07-20 Implemented the exact `04AW` seat-0 half-game raw-outcome
   update and disjoint evaluation smoke. Seed-0 training runs 427 legal

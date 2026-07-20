@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Half-game one-update review and sequential probe
+
+- Type: P8 implementation-review closure and exact multi-half-game task
+  approval evidence.
+- `04AX` finds no blocker in commit `930b15e`; exact one-update and disjoint
+  negative evaluation evidence remains accepted.
+- Terminal-gradient averaging over seeds 0/2 and seed-0 round-local credit both
+  move parameters but reproduce the same seed-1 greedy behavior. They are not
+  promoted as separate tasks or used for selection.
+- Exact ordered training seeds `(0,1)` perform two continuous updates. Disjoint
+  greedy evaluation seeds `(2,3)` change seat-0 raw sum `-632 -> -634`: seed 2
+  changes `-344 -> -387`, while seed 3 changes `-288 -> -247`.
+- The exact sequence implementation is approved. This is local bounded
+  training/failure evidence only, not improvement, robustness, strength,
+  Tenhou, stable-dan, LuckyJ 10.68, promotion or P9-P12 evidence.
+
 ### 2026-07-20 — Executable seat-0 half-game raw-outcome update
 
 - Type: executable P4/P7/P8 local half-game training and disjoint negative

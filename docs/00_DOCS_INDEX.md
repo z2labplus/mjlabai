@@ -612,6 +612,12 @@ It runs one seed-0 raw-outcome update and disjoint seed-1 zero-update evaluation
 retaining the observed negative change. This is P8 local mechanism/failure
 evidence, not strength or candidate-promotion evidence.
 
+`docs/04_rl_selfplay/04AX_P8_SEAT0_HALF_GAME_POLICY_GRADIENT_IMPLEMENTATION_REVIEW.md`
+reviews commit `930b15e`, records `A. Review can close`, rejects two same-path
+one-step variants and directly approves exact two-half-game continuous training
+plus disjoint two-seed evaluation. Its fixed aggregate result is slightly
+negative and is task-approval evidence only, not strength.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

@@ -27,14 +27,13 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current exact task is a lightweight review of the implemented `04AW` half-game
-update. Seed-0 training executes 427 legal transitions and 102 sampled project
-decisions, uses seat-0 raw return scale `-0.53`, and applies one fixed `0.01`
-update with four nonzero parameter deltas. Disjoint greedy seed-1 evaluation
-uses zero updates and degrades seat-0 cumulative reward `-300 -> -320` and score
-`-70 -> -80`. Review must retain this negative result and directly approve or
-defer one material variance/credit-assignment executable task without another
-proposal chain. No persistence, strength, Tenhou or P9-P12 is approved.
+Current exact code task after `04AX`: train project seat 0 through ordered
+MahJax half-games `(0,1)` with direct parameter continuity and one fixed `0.01`
+raw-outcome update after each. Evaluate initial/final arrays greedily on
+disjoint seeds `(2,3)` with zero updates. The exact probe yields aggregate
+seat-0 raw sum `-632 -> -634`: seed 2 degrades `-344 -> -387`, while seed 3
+improves `-288 -> -247`; neither may be selected or hidden. No third update,
+search, persistence, strength, Tenhou or P9-P12 is approved.
 ```
 
 ```text
