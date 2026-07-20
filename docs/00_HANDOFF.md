@@ -1205,11 +1205,11 @@ Fourth Akochan F2 real executable workflow run:
 - The final metric is not action prediction accuracy.
 - The final metric is Tenhou-like strength: stable dan, pt EV, average placement and fourth-place control.
 - No candidate can be promoted without evidence and a rollback path.
-- The exact `04AS` norm-matched unit-gradient update is implemented. All four
-  parameter groups change at matched global L2 `0.0176519`, but primary and
-  replication remain `-312/-1056` with zero changed reward seeds or transition
-  counts. Current next work is lightweight implementation review. No rate/
-  scale search, normalized-training conclusion or strength claim is approved.
+- `04AT` review-closes the exact norm-matched one-step no-change result. Current
+  next work is one directly approved four-pass shared continuation with exact
+  fixed batches/rate, per-pass norm matching and final-only existing windows.
+  No fifth pass, search, branch selection, normalized-training conclusion or
+  strength claim is approved.
   P8 bounded local diagnostics are active;
   production self-play, evaluation, league, real data, Tenhou and P9-P12 remain
   unapproved. Do not make strength claims.

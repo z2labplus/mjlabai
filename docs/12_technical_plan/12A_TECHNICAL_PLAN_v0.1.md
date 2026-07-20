@@ -83,7 +83,9 @@ followed only by the existing windows. That exact update is now implemented:
 all four parameter groups change, but both reward vectors and transition counts
 remain exact initial behavior at `-312/-1056`, with zero changed reward seeds.
 One probe, eight focused and 129 fast tests pass. Lightweight review is next.
-This is bounded
+`04AT` review-closes the code and directly approves one exact four-pass shared
+continuation using the same fixed method with final-only existing windows. Zero
+docs gates remain before code. This is bounded
 training-seed sensitivity work,
 not robust evaluation or strength.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can

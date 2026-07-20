@@ -8,6 +8,19 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Norm-matched one-step review and four-pass approval
+
+- Type: exact P8 implementation-review closure plus fixed continued-training
+  diagnostic approval.
+- `04AT` records `A. Review can close` for commit `986f4ad`; no blocker exists.
+- Exact source gradients, deterministic norm match, one fixed update, complete
+  windows and no search/selection conform.
+- Nonzero parameter movement plus zero changed behavior remains bounded
+  negative one-step evidence, not a general normalized-training conclusion.
+- One exact four-pass continuous shared branch using the same method with no
+  intermediate evaluation is directly approved with zero docs gates. No fifth
+  pass, search, strength claim or P9-P12 is approved.
+
 ### 2026-07-20 — Executable norm-matched unit-gradient one-step diagnostic
 
 - Type: executable P8 local one-step update plus fixed-window negative behavior

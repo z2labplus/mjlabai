@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Review the exact norm-matched unit-normalized aggregate one-step update
-  and fixed-window implementation.
+- [ ] Run one exact four-pass shared-policy continuation of the norm-matched
+  unit-gradient update with final-only existing-window evaluation.
 
 Current execution charter:
 
@@ -23,21 +23,26 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Review exact `04AS` source/test changes and recorded probe/focused/fast
-  evidence only. Do not rerun the 722-second focused test, probe, prior
-  expensive diagnostics or full suite.
-- Verify exact 64-gradient reuse, raw/unit combined geometry, deterministic
-  norm match, one `0.32` update, nonzero parameter deltas, only existing fixed
-  windows and complete retained outputs.
-- Preserve exact zero behavior delta (`-312/-1056`, no changed seed or
-  transition count) as negative one-step evidence, not normalized-training
-  success or failure in general.
-- Confirm no projection, second update, epsilon/clipping, identity/filter/
-  weight, search, selection, real data, strength claim or P9-P12.
-- Directly approve or defer at most one fixed continuation/alternative; do not
-  add a docs chain or rate/scale/window search.
+- Add only exact `04AT` source/test files plus optional package export and
+  direct governance synchronization.
+- One shared branch, exactly four ordered passes, exact batches `0..31` and
+  `116..147` at each pass, same uniform unit normalization and per-pass raw-
+  combined global norm match.
+- Exactly four fixed `0.32` updates with continuous parameter lineage; record
+  all pass geometry/provenance and perform no intermediate evaluation.
+- Final-only existing zero-update windows `52..83` and `84..115`; retain all
+  outcomes. One probe, focused and fast checks only; no full suite.
+- No fifth pass, projection, epsilon/clipping, identity/filter/weight, rate/
+  scale/pass/seed/window search, selection, real data, strength or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Reviewed commit `986f4ad` against exact `04AS` approval in
+  `04AT`. Decision: `A. Review can close.` Confirmed exact batches, uniform
+  normalization, deterministic norm match, one fixed update, complete existing
+  windows and zero behavior delta. Preserved `-312/-1056` with no changed seed
+  as negative one-step evidence. Directly approved one exact four-pass shared
+  continuation with final-only evaluation and zero docs gates before code.
 
 - [x] 2026-07-20 Implemented the exact `04AS` norm-matched unit-normalized
   aggregate one-step update and fixed-window diagnostic. Raw/unit-combined/

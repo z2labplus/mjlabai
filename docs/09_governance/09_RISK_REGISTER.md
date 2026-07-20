@@ -13,6 +13,7 @@
 | Positive unit-norm cosine is overclaimed as proof that normalized updates improve behavior | Research / Causality | Critical | High | Preserve raw negative and normalized positive geometry together; require a separate fixed update/evaluation diagnostic before any behavioral conclusion | Open |
 | Unit-normalized update changes direction and scale simultaneously | ML / Attribution | Critical | Medium | `04AS` requires one deterministic global norm match to the same raw combined mean before the fixed update; record pre/post scale geometry | Open |
 | Nonzero parameter changes are overclaimed as behavioral learning | ML / Interpretation | Critical | Realized | Pin complete fixed-window rewards and transition counts; exact one-step result has zero changed seeds despite four nonzero parameter-group deltas | Mitigated |
+| Four-pass continuation becomes open-ended pass-count search | Governance / Selection | Critical | High | `04AT` fixes exactly four passes, final-only evaluation and no fifth pass/branch/rollback; retain all outcomes regardless of sign | Open |
 
 ## 2026-07-18 — P8 five-round training/fixed-evaluation approval risks
 

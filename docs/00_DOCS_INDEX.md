@@ -556,6 +556,12 @@ with focused tests. It changes all parameter groups at matched global norm but
 leaves both fixed windows exact at `-312/-1056` with zero changed reward seeds.
 This is bounded negative one-step behavior evidence, not strength.
 
+`docs/04_rl_selfplay/04AT_P8_NORM_MATCHED_UNIT_GRADIENT_UPDATE_IMPLEMENTATION_REVIEW.md`
+reviews commit `986f4ad`, records `A. Review can close`, preserves its exact
+no-behavior-change result and directly approves one four-pass shared-policy
+continuation with final-only existing-window evaluation. No search or strength
+claim is approved.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

@@ -2,12 +2,12 @@
 
 ## Current stage
 
-P8 lightweight review of the exact `04AS` norm-matched unit-normalized one-step
-update and fixed-window diagnostic. Verify same 64 gradients, deterministic
-norm match, one fixed `0.32` update, nonzero deltas, only existing windows and
-complete outputs. Preserve exact `-312/-1056` and zero changed seeds/counts as
-negative one-step behavior evidence. No expensive rerun, projection, second
-update, epsilon/filter/weight/search, strength claim or P9-P12.
+P8 exact `04AT` four-pass shared-policy norm-matched unit-gradient training and
+final-only fixed-window diagnostic. One branch, exact `0..31`/`116..147` every
+pass, uniform normalization, per-pass raw global norm match and four fixed
+`0.32` updates. Record complete pass geometry/provenance and evaluate only
+`52..83`/`84..115` after pass four. No fifth pass, intermediate evaluation,
+projection, epsilon/filter/weight/search, selection, strength claim or P9-P12.
 `03BL` ran the final full P7 closure review gate and recorded `A. Full P7 can
 close` only for the documented P7 supervised-learning scope. `12F` completed
 the post-full-P7 transition review and recorded `A. No post-full-P7 transition

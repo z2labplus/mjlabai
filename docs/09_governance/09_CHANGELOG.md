@@ -1,5 +1,16 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.64
+
+- Added `04AT`; reviewed commit `986f4ad` and recorded
+  `A. Review can close` without rerunning the expensive diagnostic.
+- Confirmed exact batches, uniform normalization, deterministic norm match, one
+  fixed `0.32` update, complete existing windows and no selection/search.
+- Preserved four nonzero parameter deltas plus exact `-312/-1056` and no
+  changed seed/count as negative one-step behavior evidence.
+- Directly approved one exact four-pass shared continuation with per-pass norm
+  match and final-only existing-window evaluation. No fifth pass or P9-P12.
+
 ## 2026-07-20 - v4.63
 
 - Added the exact `04AS` norm-matched unit-normalized aggregate one-step update
