@@ -27,13 +27,13 @@ The project documentation now includes:
 Current stage interpretation:
 
 ```text
-Current exact code task after `04AX`: train project seat 0 through ordered
-MahJax half-games `(0,1)` with direct parameter continuity and one fixed `0.01`
-raw-outcome update after each. Evaluate initial/final arrays greedily on
-disjoint seeds `(2,3)` with zero updates. The exact probe yields aggregate
-seat-0 raw sum `-632 -> -634`: seed 2 degrades `-344 -> -387`, while seed 3
-improves `-288 -> -247`; neither may be selected or hidden. No third update,
-search, persistence, strength, Tenhou or P9-P12 is approved.
+Current exact task is a lightweight review of implemented `04AX` two-half-game
+training. Ordered `(0,1)` directly carries parameters through two fixed `0.01`
+updates and 427/797 legal transitions. Disjoint greedy `(2,3)` evaluation has
+zero updates and records raw sum `-632 -> -634`: seed 2 degrades
+`-344 -> -387`, seed 3 improves `-288 -> -247`. Review must prohibit a blind
+third raw-return game and directly choose a materially different learning
+mechanism or stop for human decision. No strength, Tenhou or P9-P12 is approved.
 ```
 
 ```text

@@ -28,13 +28,12 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-P8 exact `04AX` two-half-game sequential training/evaluation implementation.
-Train ordered seeds `(0,1)` with direct parameter continuity and one fixed
-`0.01` raw-outcome update after each; evaluate initial/final arrays greedily on
-disjoint `(2,3)` with zero updates. The fixed probe yields aggregate seat-0 raw
-sum `-632 -> -634`, with one seed degrading and one improving. All outcomes
-must remain visible; no third update, search, selection, persistence, strength,
-Tenhou or P9-P12 evidence is approved.
+P8 lightweight review of implemented exact `04AX` two-half-game sequential
+training/evaluation. Ordered `(0,1)` uses two continuous fixed `0.01` updates;
+disjoint `(2,3)` has zero updates and aggregate seat-0 raw sum `-632 -> -634`,
+with opposing per-seed changes retained. Review must prohibit blind third-game
+scale-up and directly choose a materially different mechanism or human gate.
+No persistence, strength, Tenhou or P9-P12 evidence is approved.
 ```
 
 ```text

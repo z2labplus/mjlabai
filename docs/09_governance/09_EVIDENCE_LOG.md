@@ -8,6 +8,22 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-20 — Executable two-half-game sequential training
+
+- Type: executable P8 local multi-half-game training and disjoint negative
+  behavior diagnostic evidence.
+- Ordered training seeds `(0,1)` carry parameters directly across 427/797 legal
+  transitions and 102/196 project decisions. Each terminal raw return drives
+  exactly one fixed `0.01` update; all per-update parameter deltas are nonzero.
+- Initial/final greedy evaluation on disjoint seeds `(2,3)` performs zero
+  updates and retains all six complete traces. Seat-0 raw sums are
+  `-632/-634`; seed 2 changes `-344 -> -387` and seed 3 `-288 -> -247`.
+- All games terminate naturally without truncation or legality normalization.
+  Eight focused tests pass in `267.337s`.
+- This is bounded sequential-training/failure evidence only, not improvement,
+  robustness, model strength, production self-play, Tenhou, stable-dan, LuckyJ
+  10.68, candidate promotion or P9-P12 evidence.
+
 ### 2026-07-20 — Half-game one-update review and sequential probe
 
 - Type: P8 implementation-review closure and exact multi-half-game task

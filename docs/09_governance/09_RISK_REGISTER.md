@@ -25,8 +25,9 @@
 | One half-game raw-return update is overclaimed as learning success | ML / Evidence | Critical | Realized | Implementation pins nonzero deltas together with disjoint seed-1 reward `-300 -> -320` and score `-70 -> -80`; no selection/rollback/second update and warnings deny strength | Mitigated as negative evidence |
 | Half-game terminal bankruptcy is mislabeled truncation or complete eight-round play | Environment / Semantics | High | Medium | Record terminated/truncated/final round and scores; classify early round-5 termination as environment-owned bankruptcy behavior | Open |
 | One terminal return repeated over every seat-0 decision has high variance and weak credit assignment | ML / Objective | Critical | Realized | Keep exact negative result; next review must directly choose one bounded variance/credit-assignment task or defer, without seed/rate search | Open |
-| Two sequential half-games are mistaken for sufficient RL scale or robustness | ML / Scale | Critical | High | Fix exactly two train/two eval seeds, retain aggregate `-632 -> -634` and opposing per-seed changes, and prohibit a third game or scale claim | Open |
-| Opposing seed-level changes are selectively reported | Evaluation / Integrity | Critical | High | Return both complete per-seed initial/final traces and fixed aggregate; no selected model/seed or rollback field | Open |
+| Two sequential half-games are mistaken for sufficient RL scale or robustness | ML / Scale | Critical | Realized | Implementation fixes two train/two eval seeds, retains aggregate `-632 -> -634` and opposing per-seed changes, and prohibits a third game or scale claim | Mitigated as bounded evidence |
+| Opposing seed-level changes are selectively reported | Evaluation / Integrity | Critical | Realized | Frozen output returns both complete per-seed initial/final traces and fixed aggregate; no selected model/seed or rollback field exists | Mitigated |
+| Repeating terminal raw-return updates is scaled despite no aggregate gain | Governance / Research | Critical | High | The implementation review must prohibit a third game and directly choose a materially different mechanism or human decision | Open |
 
 ## 2026-07-18 — P8 five-round training/fixed-evaluation approval risks
 

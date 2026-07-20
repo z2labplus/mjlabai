@@ -618,6 +618,13 @@ one-step variants and directly approves exact two-half-game continuous training
 plus disjoint two-seed evaluation. Its fixed aggregate result is slightly
 negative and is task-approval evidence only, not strength.
 
+The approved two-half-game sequence implementation is in
+`src/mjlabai/rl/mahjax_categorical_mlp_two_half_game_policy_gradient_sequence_smoke.py`,
+with focused coverage in
+`tests/rl/test_mahjax_categorical_mlp_two_half_game_policy_gradient_sequence_smoke.py`.
+It preserves two continuous updates and complete disjoint per-seed evaluation,
+including aggregate negative evidence. It is not strength evidence.
+
 It pins four passes/128 attempts with no intermediate selection and records
 fixed evaluation `-312 -> -297`, one fewer negative round and no added positive
 round. This is bounded deterministic improvement evidence only, not robust

@@ -9,6 +9,17 @@ from mjlabai.rl.mahjax_categorical_mlp_seat0_half_game_policy_gradient_smoke imp
     MahJaxCategoricalMlpSeat0HalfGamePolicyGradientSmokeError,
     run_mahjax_categorical_mlp_seat0_half_game_policy_gradient_smoke,
 )
+from mjlabai.rl.mahjax_categorical_mlp_two_half_game_policy_gradient_sequence_smoke import (
+    MAHJAX_CATEGORICAL_MLP_TWO_HALF_GAME_EVALUATION_SEEDS,
+    MAHJAX_CATEGORICAL_MLP_TWO_HALF_GAME_LEARNING_RATE,
+    MAHJAX_CATEGORICAL_MLP_TWO_HALF_GAME_SEQUENCE_SMOKE_VERSION,
+    MAHJAX_CATEGORICAL_MLP_TWO_HALF_GAME_TRAINING_SEEDS,
+    MahJaxCategoricalMlpTwoHalfGameEvaluationRecord,
+    MahJaxCategoricalMlpTwoHalfGameSequenceResult,
+    MahJaxCategoricalMlpTwoHalfGameSequenceSmokeError,
+    MahJaxCategoricalMlpTwoHalfGameTrainingRecord,
+    run_mahjax_categorical_mlp_two_half_game_sequence_smoke,
+)
 
 from mjlabai.rl.synthetic_policy_update_smoke import (
     SYNTHETIC_LOCAL_SOURCE_KIND,
@@ -99,6 +110,10 @@ __all__ = [
     "MAHJAX_CATEGORICAL_MLP_SEAT0_HALF_GAME_LEARNING_RATE",
     "MAHJAX_CATEGORICAL_MLP_SEAT0_HALF_GAME_POLICY_GRADIENT_SMOKE_VERSION",
     "MAHJAX_CATEGORICAL_MLP_SEAT0_HALF_GAME_TRAINING_SEED",
+    "MAHJAX_CATEGORICAL_MLP_TWO_HALF_GAME_EVALUATION_SEEDS",
+    "MAHJAX_CATEGORICAL_MLP_TWO_HALF_GAME_LEARNING_RATE",
+    "MAHJAX_CATEGORICAL_MLP_TWO_HALF_GAME_SEQUENCE_SMOKE_VERSION",
+    "MAHJAX_CATEGORICAL_MLP_TWO_HALF_GAME_TRAINING_SEEDS",
     "SYNTHETIC_LOCAL_SOURCE_KIND",
     "SYNTHETIC_POLICY_UPDATE_SMOKE_VERSION",
     "SYNTHETIC_POLICY_UPDATE_SEQUENCE_SMOKE_VERSION",
@@ -120,6 +135,10 @@ __all__ = [
     "SyntheticPolicyTableEntry",
     "MahJaxCategoricalMlpSeat0HalfGamePolicyGradientResult",
     "MahJaxCategoricalMlpSeat0HalfGamePolicyGradientSmokeError",
+    "MahJaxCategoricalMlpTwoHalfGameEvaluationRecord",
+    "MahJaxCategoricalMlpTwoHalfGameSequenceResult",
+    "MahJaxCategoricalMlpTwoHalfGameSequenceSmokeError",
+    "MahJaxCategoricalMlpTwoHalfGameTrainingRecord",
     "SyntheticPolicyTableUpdateResult",
     "SyntheticPolicyTableUpdateSmokeError",
     "SyntheticPolicyTableUpdateSequenceResult",
@@ -163,4 +182,5 @@ __all__ = [
     "run_synthetic_policy_improvement_sequence_smoke",
     "run_synthetic_two_policy_interaction_smoke",
     "run_mahjax_categorical_mlp_seat0_half_game_policy_gradient_smoke",
+    "run_mahjax_categorical_mlp_two_half_game_sequence_smoke",
 ]

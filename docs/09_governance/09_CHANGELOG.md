@@ -1,5 +1,16 @@
 # 09_CHANGELOG
 
+## 2026-07-20 - v4.73
+
+- Added the exact `04AX` two-half-game sequential seat-0 raw-outcome training
+  module, direct RL exports and focused tests.
+- Ordered seeds `(0,1)` execute 427/797 legal transitions, 102/196 project
+  decisions and exactly two continuous fixed-rate `0.01` updates.
+- Disjoint greedy evaluation `(2,3)` performs zero updates and retains aggregate
+  seat-0 raw sum `-632 -> -634`; seed 2 degrades and seed 3 improves.
+- Eight focused tests pass in `267.337s`. No third game, search, selection,
+  persistence, real data, production self-play, strength or P9-P12 was added.
+
 ## 2026-07-20 - v4.72
 
 - Added `04AX`; review accepts commit `930b15e` with no blocker and reuses its

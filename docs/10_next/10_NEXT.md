@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement exact MahJax categorical-MLP-seat-0 two-half-game sequential
-  raw-outcome training and disjoint evaluation smoke.
+- [ ] Review the exact MahJax categorical-MLP-seat-0 two-half-game sequential
+  raw-outcome training and disjoint evaluation implementation.
 
 Current execution charter:
 
@@ -23,18 +23,27 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Add only exact `04AX` source/test, direct RL exports and governance. Reuse the
-  existing reviewed half-game collector and one-update helper.
-- Train exact ordered seeds `(0,1)` with direct parameter continuity and one
-  fixed `0.01` seat-0 raw-outcome update after each; two updates total.
-- Evaluate initial/final arrays greedily on exact disjoint seeds `(2,3)` with
-  identical per-seed RNG construction and zero evaluation updates.
-- Pin every `04AX` probe value and retain aggregate seat-0 raw sum
-  `-632 -> -634`, including opposing per-seed changes; no selection/rollback.
-- No third game/update, replay, search, persistence, real data, production
-  self-play/league, strength claim, Tenhou or P9-P12.
+- Review only the exact `04AX` implementation commit: public/frozen array-free
+  API, existing-helper reuse, ordered seed identity, direct parameter
+  continuity, exact two updates, six complete legal traces and zero eval update.
+- Verify all per-game objective/delta/terminal values and retain aggregate
+  `-632 -> -634`, seed-2 degradation and seed-3 improvement without selection.
+- Reuse passing evidence unless a blocker requires rerun; change code only for
+  a genuine blocker. Do not add a proposal/boundary or a third game.
+- If review closes, directly approve/defer one materially different P8 learning
+  mechanism or stop P8 for a human decision; blind scale-up is prohibited.
+- No replay, search, persistence, real data, production self-play/league,
+  strength claim, Tenhou or P9-P12.
 
 ## Completed
+
+- [x] 2026-07-20 Implemented exact `04AX` two-half-game sequential training and
+  disjoint evaluation. Ordered seeds `(0,1)` run 427/797 legal transitions,
+  102/196 project decisions and two continuous fixed `0.01` updates. Initial/
+  final greedy evaluation on disjoint `(2,3)` uses zero updates and retains
+  raw sums `-632/-634`: seed 2 `-344 -> -387`, seed 3 `-288 -> -247`. All six
+  paths terminate naturally with zero normalization. Eight focused tests pass
+  in `267.337s`; no third game, selection, persistence, strength or P9-P12.
 
 - [x] 2026-07-20 Reviewed commit `930b15e` in `04AX`; decision
   `A. Review can close.` Exact one-update objective, legal/full provenance,
