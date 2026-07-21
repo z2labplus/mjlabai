@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-21 - v4.76
+
+- Added a network-free GitHub Mahjong Soul sample inspector with immutable
+  repository/commit/path identity, size/SHA-256 verification, bounded format and
+  identifier-risk classification, metadata-only reports and eight tests.
+- Ran the inspector against one public fixed-commit sample. It verified at
+  34,020 bytes with 999 action markers but is a parsed analysis transcript, not
+  raw protobuf/MJAI and not structurally training-ready.
+- Retained `rights_status=unverified`, `training_use_approved=false` and
+  `platform_accessed=false`; no replay content/player name is returned, retained
+  or committed.
+- Set the next task to a genuine human/source-rights gate. No additional docs
+  chain, crawler, labels, dataset, training, cloud spend or P9-P12 was added.
+
 ## 2026-07-21 - v4.75
 
 - Recorded owner approval for a local read-only feasibility smoke over at most

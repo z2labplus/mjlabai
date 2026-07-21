@@ -12,8 +12,9 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Implement one local read-only Mahjong Soul replay-ingestion feasibility
-  smoke from at most 100 explicitly GitHub-published sample records.
+- [ ] Obtain a written Mahjong Soul training-data permission record or provide
+  one explicitly licensed raw Mahjong Soul/MJAI replay corpus before real P7
+  dataset construction and material P8 scale-up.
 
 Current execution charter:
 
@@ -23,26 +24,33 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Owner approval is limited to GitHub files that are already explicitly public,
-  local read-only technical validation and at most 100 records. Record immutable
-  repository/commit/path provenance and SHA-256 for every sampled file.
-- Do not log in to Mahjong Soul, use an account/token/cookie, call a hidden or
-  platform API, open a WebSocket, crawl a ranking/site, automate a browser or
-  fetch records from Mahjong Soul or amae-koromo.
-- Keep sampled raw records outside Git in an ignored temporary/cache directory;
-  do not commit replay data, player identifiers, secrets or third-party
-  artifacts. Tests must use project-authored synthetic fixtures or structural
-  stubs rather than copied real records.
-- The smoke may inspect, parse, validate, deduplicate and report conversion
-  readiness only. It must not create training labels/datasets, train/evaluate a
-  model, select a source, claim rights, spend cloud budget, run self-play/league
-  or enter P9-P12.
-- GitHub visibility is not a license. Material acquisition and P7/P8 scale-up
-  remain blocked until source rights and permitted use are recorded. AutoDL and
-  the owner's indicated CNY 10,000 ceiling remain planning inputs only; no paid
-  resource may be started without a separate explicit spend approval.
+- The permission/source record must cover acquisition method, permitted volume,
+  storage, model training, derived features/models, retention/deletion and any
+  publication or commercial-use restrictions.
+- A GitHub URL, public replay link, parser license or crawler license is not a
+  license for the underlying game records. Do not infer replay rights from tool
+  licensing.
+- Until the record exists, do not access Mahjong Soul or amae-koromo accounts,
+  APIs, WebSockets or bulk record endpoints; do not crawl, ingest real records,
+  build labels/datasets, train on real records or spend cloud budget.
+- If Mahjong Soul permission is refused or unavailable, the owner must choose a
+  separately licensed corpus or project-owned simulator-generated interim data.
+  Do not create another synthetic reward wrapper or claim source approval.
+- AutoDL and the indicated CNY 10,000 ceiling remain planning inputs only; no
+  paid resource may start without separate explicit run/provider/spend approval.
 
 ## Completed
+
+- [x] 2026-07-21 Implemented the bounded local GitHub Mahjong Soul sample
+  inspection smoke in `src/mjlabai/data/github_majsoul_sample_smoke.py` with
+  eight focused tests. It accepts immutable GitHub provenance, expected size and
+  SHA-256, reads only local bytes/files, enforces the 100-record/5 MiB boundary,
+  emits no content or player names and contains no network/process path. The
+  exact public sample `canuse/majsoul-record-parser@33e7e42:example/example.txt`
+  verifies at 34,020 bytes and SHA-256 `5abf4166...07af`, contains 999 action
+  markers and potential identifiers, and is classified as an analysis transcript
+  rather than raw protobuf/MJAI. It is not structurally training-ready and its
+  rights remain unverified. No replay data was committed or retained.
 
 - [x] 2026-07-21 Obtained owner approval for one bounded data feasibility step:
   inspect at most 100 explicitly GitHub-published Mahjong Soul sample records

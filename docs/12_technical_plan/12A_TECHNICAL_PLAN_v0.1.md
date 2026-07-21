@@ -28,16 +28,16 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-Bounded P6/P7 data-feasibility execution after `04AY` review-closes exact two-
-half-game P8 training at the synthetic-only evidence limit. Raw-return and
-causal-baseline variants retain aggregate `-632 -> -634`; a third wrapper is
-prohibited. The owner approved local read-only inspection of at most 100
-explicitly GitHub-published Mahjong Soul sample records. The next executable
-task validates immutable provenance/hash, structure, parsing and conversion
-readiness only, with no platform/API/account access, crawler, committed raw
-data, labels, training or cloud spend. Material acquisition and P7/P8 scale-up
-remain blocked until source rights and permitted use are recorded; no strength,
-Tenhou or P9-P12 evidence is approved.
+P6/P7 source-rights gate after bounded executable data-feasibility inspection.
+The `04AY` P8 result remains negative at aggregate `-632 -> -634`; a third
+synthetic wrapper is prohibited. The network-free GitHub sample inspector and
+eight tests now verify one fixed public file at 34,020 bytes and SHA-256. It is
+a parsed analysis transcript with 999 action markers and potential identifiers,
+not raw protobuf/MJAI, so it is not structurally training-ready. No raw replay
+was retained/committed and no platform endpoint was accessed. The next required
+input is written Mahjong Soul training-data permission or an explicitly
+licensed raw Mahjong Soul/MJAI corpus. Real labels/datasets/training, AutoDL
+spend, strength, Tenhou and P9-P12 remain blocked.
 ```
 
 ```text

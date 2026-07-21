@@ -28,14 +28,15 @@ Current stage interpretation:
 
 ```text
 The `04AY` two-half-game result remains negative at aggregate `-632 -> -634`,
-so another synthetic reward wrapper is not justified. On 2026-07-21 the owner
-approved one bounded executable data-feasibility step: inspect at most 100
-explicitly GitHub-published Mahjong Soul sample records locally and read-only.
-The next task must validate provenance, hashes, structure, parsing and
-conversion readiness without platform/API/account access, browser automation,
-bulk acquisition, committed raw data, labels, training or cloud spend. GitHub
-visibility is not source-rights approval; material P7/P8 scale-up remains
-blocked pending a permitted-use record and separate paid-compute approval.
+so another synthetic reward wrapper is not justified. A bounded executable
+GitHub sample inspector and eight tests are now implemented. One immutable
+public sample verifies at 34,020 bytes/SHA-256, contains 999 action markers and
+potential player identifiers, but is an analysis transcript rather than raw
+protobuf/MJAI and is not structurally training-ready. No raw replay was retained
+or committed, and no platform endpoint was accessed. The current blocker is a
+written Mahjong Soul training-data permission record or an explicitly licensed
+raw Mahjong Soul/MJAI corpus. Material P7/P8 scale-up and paid compute remain
+closed until source rights and a separate spend approval are recorded.
 ```
 
 ```text

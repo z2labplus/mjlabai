@@ -8,6 +8,26 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-21 — Executable GitHub Mahjong Soul sample feasibility smoke
+
+- Type: P6/P7 local read-only data-format feasibility and blocker evidence; not
+  source-rights, training or strength evidence.
+- Added `src/mjlabai/data/github_majsoul_sample_smoke.py` and eight focused
+  tests. The implementation has no network/process execution path, enforces an
+  immutable GitHub repository/commit/path plus size/SHA-256 contract, caps the
+  input at 100 records and 5 MiB per file, and emits content-free summaries.
+- Inspected `canuse/majsoul-record-parser` commit
+  `33e7e42c5e852e44f4be8e79f6af07737b4f43af`, path `example/example.txt`, via
+  GitHub only. Exact size is 34,020 bytes and SHA-256 is
+  `5abf416634444559f8c1d7a3ab744140c57efd1d4886dee32bfd013e4fce07af`.
+- The sample is UTF-8, contains 999 deal/discard markers and potential player
+  identifiers, and is classified `majsoul_analysis_transcript`. It is not raw
+  protobuf/MJAI, so `structurally_training_ready=false`.
+- `rights_verified=false`, `training_use_approved=false` and
+  `platform_accessed=false`. The temporary sample was deleted and no replay or
+  identifier was committed. The result creates a real source/permission gate;
+  it is not model strength, Tenhou, stable-dan, LuckyJ 10.68 or P9-P12 evidence.
+
 ### 2026-07-21 — GitHub Mahjong Soul data availability and bounded owner approval
 
 - Type: external-source availability screening and internal execution approval;
