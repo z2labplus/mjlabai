@@ -8,6 +8,27 @@ Internal governance decisions that affect execution should also be noted here, b
 
 ## Evidence entries
 
+### 2026-07-21 — GitHub Mahjong Soul data availability and bounded owner approval
+
+- Type: external-source availability screening and internal execution approval;
+  not dataset-rights, training or strength evidence.
+- GitHub screening found `SAPikachu/amae-koromo-scripts`,
+  `zyr17/MajsoulPaipuAnalyzer`, `jeff39389327/MajsoulPaipuConvert` and
+  `Cryolite/kanachan` as relevant enumeration, download, conversion, annotation
+  or training-tool paths. No large training-ready raw replay corpus was found
+  hosted in the inspected repositories or their releases.
+- `xieyuchen13/majsoulAI` documents collection of 103,200 replay identifiers for
+  2020-05-01 through 2020-05-28, which is technical availability evidence only;
+  the raw corpus is not committed there.
+- The owner approved local read-only inspection of at most 100 sample records
+  already explicitly published on GitHub. The approval excludes Mahjong Soul /
+  amae-koromo requests, accounts, tokens, cookies, hidden APIs, WebSockets,
+  browser automation, crawling, bulk collection, training and cloud spend.
+- GitHub publication is not treated as a license or permitted-use decision.
+  Material acquisition and P7/P8 scale-up remain blocked pending source-rights
+  review. This is not model strength, Tenhou, stable-dan, LuckyJ 10.68,
+  promotion or P9-P12 evidence.
+
 ### 2026-07-20 — Two-half-game review closure and material-resource gate
 
 - Type: P8 implementation-review closure, negative mechanism evidence and

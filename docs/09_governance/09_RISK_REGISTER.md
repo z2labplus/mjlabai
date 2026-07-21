@@ -5,6 +5,7 @@
 | Evaluation overclaims | Research | High | Medium | Require documented sample size and uncertainty | Open |
 | Platform automation compliance | Compliance | High | Medium | Offline/self-play first; compliance review before integration | Open |
 | Data rights ambiguity | Data | Medium | Medium | Track source, rights and allowed use | Open |
+| GitHub-visible Mahjong Soul samples are mistaken for licensed training data | Compliance / Data | Critical | High | Permit only <=100-record local read-only feasibility with immutable GitHub provenance/hash; prohibit platform access, bulk acquisition, committed raw logs and training until permitted use is recorded | Open |
 | Hidden information leakage | Evaluation | High | Medium | Add leakage tests to regression suite | Open |
 | Optimizing loss instead of Tenhou EV | Research | High | High | Every experiment reports Tenhou-oriented metrics | Open |
 | Endless docs-only planning delays executable learning evidence | Governance / Delivery | High | High | Enforce the `AGENTS.md` anti-overdocumentation limits: one definition plus one review per boundary, explicit approval after four consecutive docs-only tasks, and mandatory transition to minimal execution, closure/deferment or a human decision when no genuine blocker exists | Open |

@@ -12,8 +12,8 @@ human decision gate unless a documented genuine blocker justifies otherwise.
 
 ## Current next task
 
-- [ ] Obtain human approval for a lawful training-data source and compute budget
-  before material P7/P8 scale-up.
+- [ ] Implement one local read-only Mahjong Soul replay-ingestion feasibility
+  smoke from at most 100 explicitly GitHub-published sample records.
 
 Current execution charter:
 
@@ -23,18 +23,35 @@ docs/12_technical_plan/12A_TECHNICAL_PLAN_v0.1.md
 
 Limits:
 
-- Human decision required: identify a project-provided or publicly licensed
-  riichi replay source with provenance, rights and permitted-use record.
-- Human decision required: choose local-only prototype compute or approve an
-  explicit external GPU/cloud budget, provider, cap and artifact policy.
-- Human decision required: approve or reject controlled real-data ingestion,
-  feature/label generation and supervised pretraining as the next material
-  path before returning to RL.
-- Until decided, do not add a third synthetic raw-return game, another reward
-  wrapper, real/platform ingestion, unknown weights, expensive training,
-  self-play, league, cloud resources, strength claims or P9-P12.
+- Owner approval is limited to GitHub files that are already explicitly public,
+  local read-only technical validation and at most 100 records. Record immutable
+  repository/commit/path provenance and SHA-256 for every sampled file.
+- Do not log in to Mahjong Soul, use an account/token/cookie, call a hidden or
+  platform API, open a WebSocket, crawl a ranking/site, automate a browser or
+  fetch records from Mahjong Soul or amae-koromo.
+- Keep sampled raw records outside Git in an ignored temporary/cache directory;
+  do not commit replay data, player identifiers, secrets or third-party
+  artifacts. Tests must use project-authored synthetic fixtures or structural
+  stubs rather than copied real records.
+- The smoke may inspect, parse, validate, deduplicate and report conversion
+  readiness only. It must not create training labels/datasets, train/evaluate a
+  model, select a source, claim rights, spend cloud budget, run self-play/league
+  or enter P9-P12.
+- GitHub visibility is not a license. Material acquisition and P7/P8 scale-up
+  remain blocked until source rights and permitted use are recorded. AutoDL and
+  the owner's indicated CNY 10,000 ceiling remain planning inputs only; no paid
+  resource may be started without a separate explicit spend approval.
 
 ## Completed
+
+- [x] 2026-07-21 Obtained owner approval for one bounded data feasibility step:
+  inspect at most 100 explicitly GitHub-published Mahjong Soul sample records
+  locally and read-only. GitHub screening found mature enumeration, download,
+  conversion and annotation tools but no repository-hosted large training-ready
+  corpus. This approval does not establish source rights, permit platform/API/
+  account access, authorize bulk acquisition or training, or authorize cloud
+  spend. The next task is executable ingestion validation, not another docs
+  boundary.
 
 - [x] 2026-07-20 Reviewed commit `191c243` in `04AY`; decision
   `A. Review can close.` Existing-helper reuse, direct parameter continuity,

@@ -28,13 +28,16 @@ Minimum benchmark: above Tenhou 10 dan and stable dan > 10.68.
 当前项目处于：
 
 ```text
-Human data/compute decision gate after `04AY` review-closes exact two-half-game
-training at the synthetic-only evidence limit. Raw-return and causal-baseline
-variants retain aggregate `-632 -> -634`; a third wrapper is prohibited. The
-owner must approve a lawful replay source/provenance/rights record, local-only
-or external GPU/cloud budget/cap/artifact policy and controlled ingestion/
-feature/label/supervised-pretraining scope. Until then no material scale-up,
-strength, Tenhou or P9-P12 evidence is approved.
+Bounded P6/P7 data-feasibility execution after `04AY` review-closes exact two-
+half-game P8 training at the synthetic-only evidence limit. Raw-return and
+causal-baseline variants retain aggregate `-632 -> -634`; a third wrapper is
+prohibited. The owner approved local read-only inspection of at most 100
+explicitly GitHub-published Mahjong Soul sample records. The next executable
+task validates immutable provenance/hash, structure, parsing and conversion
+readiness only, with no platform/API/account access, crawler, committed raw
+data, labels, training or cloud spend. Material acquisition and P7/P8 scale-up
+remain blocked until source rights and permitted use are recorded; no strength,
+Tenhou or P9-P12 evidence is approved.
 ```
 
 ```text

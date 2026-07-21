@@ -1,5 +1,19 @@
 # 09_CHANGELOG
 
+## 2026-07-21 - v4.75
+
+- Recorded owner approval for a local read-only feasibility smoke over at most
+  100 explicitly GitHub-published Mahjong Soul sample records.
+- GitHub screening confirmed mature replay enumeration, conversion and
+  annotation tooling but found no repository-hosted large training-ready
+  Mahjong Soul corpus.
+- Moved the next task directly to executable ingestion validation with immutable
+  GitHub provenance and hashes. No additional boundary/review document is
+  required before that code.
+- Kept platform/API/account access, scraping, bulk acquisition, committed raw
+  records, source-rights claims, training and cloud spend prohibited. AutoDL and
+  the indicated CNY 10,000 ceiling remain planning inputs only.
+
 ## 2026-07-20 - v4.74
 
 - Added `04AY`; review accepts commit `191c243` with no implementation blocker
